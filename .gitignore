@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+.open-next/
+.wrangler/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+cloudflare-env.d.ts
+
+# الأسرار — لا تُرفع أبدًا
+.env
+.env*.local
+.dev.vars
+*.pem
+service-account*.json
+
+.DS_Store
+npm-debug.log*

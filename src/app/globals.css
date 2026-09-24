@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────
+   نظام التصميم — ألوان مأخوذة من شعار «مساعد الأستاذ».
+   اللون الأساسي للنصوص والأزرار brand-700 (تباين 5.9:1 على الأبيض).
+   brand-400/500 والأزرق السماوي للإبراز والزخرفة لا للنصوص الصغيرة.
+───────────────────────────────────────────────────────────── */
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", system-ui, "Segoe UI", Tahoma, sans-serif;
+  --font-display: "Alexandria Variable", "IBM Plex Sans Arabic", system-ui, sans-serif;
+
+  --color-ink: #022125;
+
+  --color-brand-50: #effbf8;
+  --color-brand-100: #d6f5ec;
+  --color-brand-200: #aeead9;
+  --color-brand-300: #6fd9bf;
+  --color-brand-400: #13c29e;
+  --color-brand-500: #0a9e85;
+  --color-brand-600: #0a8670;
+  --color-brand-700: #09715b;
+  --color-brand-800: #065a49;
+  --color-brand-900: #043e3a;
+  --color-brand-950: #022125;
+
+  --color-accent-100: #d7f6fd;
+  --color-accent-300: #38dfff;
+  --color-accent-500: #0fb2e2;
+  --color-accent-700: #0a6f8f;
+
+  /* أسطح ونصوص */
+  --color-canvas: #f5f8f7;
+  --color-surface: #ffffff;
+  --color-line: #e2e9e7;
+  --color-muted: #5b6b6e;
+
+  /* حالات الحضور — كل حالة لها رمز مختلف أيضًا (لا اعتماد على اللون وحده) */
+  --color-present: #16a34a;
+  --color-absent: #dc2626;
+  --color-late: #b45309;
+  --color-excused: #2563eb;
+
+  --radius-card: 1.25rem;
+  --shadow-card: 0 1px 2px rgb(2 33 37 / 0.04), 0 4px 16px rgb(2 33 37 / 0.06);
+  --shadow-float: 0 -4px 24px rgb(2 33 37 / 0.08);
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-accent-500);
+    outline-offset: 2px;
+  }
+
+  /* 16px على الأقل في الحقول: يمنع iOS من التكبير التلقائي عند التركيز */
+  input,
+  select,
+  textarea {
+    font-size: max(16px, 1rem);
+  }
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

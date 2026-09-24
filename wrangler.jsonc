@@ -1,0 +1,15 @@
+{
+  // مساعد الأستاذ — Worker مستقل عن BacZone في نفس حساب Cloudflare
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "prof-baczone",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": { "enabled": true }
+  // الدومين (prof.baczone.app) يُربط من لوحة Cloudflare → Workers → Custom Domains
+  // الأسرار تُضاف بـ: npx wrangler secret put CHARGILY_SECRET_KEY  (لا تُكتب هنا أبدًا)
+}

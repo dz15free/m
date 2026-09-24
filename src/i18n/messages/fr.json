@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "مساعد الأستاذ",
+    "description": "Le bureau numérique de l'enseignant : classes, élèves, présences, leçons, progressions, documents et ressources pédagogiques au même endroit."
+  },
+  "brand": {
+    "name": "مساعد الأستاذ",
+    "tagline": "Votre plateforme pour organiser le travail pédagogique"
+  },
+  "nav": {
+    "main": "Navigation principale",
+    "today": "Aujourd'hui",
+    "classes": "Mes classes",
+    "session": "Séance",
+    "sessionHint": "Ouvrir la séance en cours",
+    "library": "Bibliothèque",
+    "more": "Plus",
+    "schedule": "Emploi du temps",
+    "logbook": "Cahier de textes",
+    "planning": "Progressions",
+    "documents": "Documents et affiches",
+    "billing": "Abonnement",
+    "settings": "Paramètres"
+  },
+  "common": {
+    "language": "Langue",
+    "comingSoonTitle": "En construction",
+    "comingSoonBody": "Cette page fait partie des prochaines étapes et sera bientôt disponible.",
+    "backToToday": "Retour à aujourd'hui",
+    "skipToContent": "Aller au contenu"
+  },
+  "landing": {
+    "login": "Se connecter",
+    "start": "Commencer gratuitement",
+    "heroTitle": "Tout ce dont l'enseignant a besoin, au même endroit",
+    "heroSubtitle": "Saisissez vos données une seule fois… la plateforme fait le reste.",
+    "heroNote": "Gratuit pour toujours, avec un essai gratuit de l'offre Premium.",
+    "featuresTitle": "Votre bureau quotidien, pas un simple site de fichiers",
+    "features": {
+      "import": {
+        "title": "La liste des élèves en une minute",
+        "body": "Photographiez la liste, importez un fichier Excel ou collez les noms, vérifiez, validez."
+      },
+      "attendance": {
+        "title": "L'appel en quelques secondes",
+        "body": "« Tous présents », puis modifiez seulement les exceptions, même hors ligne."
+      },
+      "schedule": {
+        "title": "Vos séances préparées automatiquement",
+        "body": "Saisissez l'emploi du temps une fois, et les séances de chaque jour apparaissent."
+      },
+      "planning": {
+        "title": "Où en suis-je ?",
+        "body": "La progression annuelle est liée à ce que vous avez réalisé, classe par classe."
+      },
+      "library": {
+        "title": "Des ressources organisées",
+        "body": "Fiches, progressions, exercices, évaluations et affiches pour le primaire, en arabe et en français."
+      },
+      "documents": {
+        "title": "Des documents prêts à imprimer",
+        "body": "Vos informations professionnelles remplissent automatiquement chaque document."
+      }
+    },
+    "importTitle": "Une longue liste ?",
+    "importBody": "Photographiez-la, vérifiez-la, validez-la. La reconnaissance se fait sur votre téléphone : l'image n'est envoyée à aucun serveur.",
+    "importSteps": ["Photographier", "Vérifier", "Valider"],
+    "ctaTitle": "Commencez l'année scolaire bien organisé",
+    "footer": "مساعد الأستاذ"
+  },
+  "auth": {
+    "loginTitle": "Connexion",
+    "registerTitle": "Créer un compte",
+    "soon": "Les inscriptions ouvrent bientôt. Nous préparons votre bureau numérique.",
+    "backHome": "Retour à l'accueil"
+  },
+  "today": {
+    "greeting": "Bienvenue 👋",
+    "nextSteps": "Préparons votre bureau",
+    "steps": {
+      "classes": {
+        "title": "Ajoutez votre première classe",
+        "body": "Le niveau, le groupe et les matières que vous enseignez."
+      },
+      "students": {
+        "title": "Ajoutez vos élèves",
+        "body": "Une longue liste ? Inutile de saisir les noms un par un."
+      },
+      "schedule": {
+        "title": "Saisissez l'emploi du temps",
+        "body": "Une seule fois, pour voir vos séances ici chaque jour."
+      }
+    },
+    "quickActions": "Actions rapides",
+    "search": "Chercher dans la bibliothèque",
+    "print": "Imprimer un document"
+  },
+  "more": {
+    "title": "Plus"
+  }
+}
