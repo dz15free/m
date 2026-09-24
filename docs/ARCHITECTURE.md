@@ -775,6 +775,13 @@ Chargily ─► POST /api/webhooks/chargily
 5. تسجيل `fees` و`net` إن توفّرت في الحمولة.
 6. الوصول للقاعدة بـ **Service Account** (OAuth) لا «سرّ قاعدة البيانات» القديم (مهجور).
 
+### 24.4 ملاحظات من مراجعة حزمة `@chargily/chargily-pay` v2.1.0
+- الحزمة غلاف رقيق فوق REST (`https://pay.chargily.net/api/v2` و`/test/api/v2`)، وتحققها من التوقيع = HMAC-SHA256 للجسم الخام بالمفتاح السري ومقارنته بالترويسة `signature` بـ `timingSafeEqual` — مطابق لما في BacZone.
+- **لن نضيفها كتبعية**: تعتمد على `crypto` الخاص بـ Node؛ نكتب نفس المنطق (≈ 30 سطرًا) بـ `fetch` و`crypto.subtle` ليعمل على Workers وVercel وNode دون تغيير.
+- كائن الـ Checkout يحمل `fees` و`pass_fees_to_customer` ⇒ نسجّل `fees` الحقيقية من الـ webhook لا تقديرًا، ونحسب `net = amount - fees` (أو `net = amount` إذا حُمّلت الرسوم على الزبون).
+- حالات الـ Checkout: `pending | processing | paid | failed | canceled` ⇒ نعالج `paid` للتفعيل، و`failed`/`canceled` لإغلاق الطلب.
+- **المفاتيح:** المفتاح السري (`live_sk_…`) يوضع **فقط** كـ Worker secret (`CHARGILY_SECRET_KEY`) ولا يُكتب في أي ملف أو مستودع. المفتاح العام (`live_pk_…`) غير مطلوب في هذا التدفق لأن الدفع يُنشأ من الخادم.
+
 **التجديد:** Chargily Pay V2 يعمل بدفعات لمرة واحدة؛ «التجديد» = دفعة جديدة تمدّد الفترة. لا خصم تلقائي متكرر.
 
 ---
