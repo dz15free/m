@@ -5,6 +5,7 @@ import { MORE_ITEMS } from "@/components/layout/nav-items";
 import { LocaleSwitcher } from "@/components/ui/locale-switcher";
 import { localeDir } from "@/i18n/config";
 import { AccountCard } from "@/features/auth/account";
+import { EditorLink } from "@/features/library/editor-link";
 
 export async function generateMetadata() {
   const t = await getTranslations("more");
@@ -35,6 +36,8 @@ export default async function MorePage() {
           </li>
         ))}
       </ul>
+
+      <EditorLink />
 
       <div className="flex items-center justify-between gap-4 rounded-card bg-surface p-4 shadow-card">
         <span className="font-medium">{t("common.language")}</span>

@@ -1,5 +1,5 @@
 import "server-only";
-import { createRemoteJWKSet, jwtVerify, type JWTPayload } from "jose";
+import { createRemoteJWKSet, decodeJwt, jwtVerify, type JWTPayload } from "jose";
 
 /* التحقق من رمز هوية Firebase على الخادم محليًا (توقيع RS256 + المُصدِر + الجمهور)
    بمفاتيح Google العامّة المُكاشة — بلا نداء شبكة لكل طلب، وبلا firebase-admin،
@@ -32,9 +32,23 @@ function projectId() {
   return id;
 }
 
+/** محاكي Auth المحلي يُصدر رموزًا غير موقّعة. نقبلها أثناء التطوير فقط:
+    الشرطان يُقيَّمان وقت البناء، فلا يمكن تفعيل هذا في نسخة الإنتاج. */
+export const usingEmulators = () =>
+  process.env.NODE_ENV !== "production" && process.env.NEXT_PUBLIC_FIREBASE_EMULATORS === "true";
+
 export async function verifyIdToken(token: string): Promise<AuthUser> {
   const project = projectId();
   let payload: JWTPayload & Record<string, unknown>;
+  if (usingEmulators()) {
+    try {
+      payload = decodeJwt(token) as JWTPayload & Record<string, unknown>;
+    } catch {
+      throw new HttpError(401, "invalid token");
+    }
+    if (payload.aud !== project) throw new HttpError(401, "invalid token");
+    return toUser(payload);
+  }
   try {
     ({ payload } = await jwtVerify(token, JWKS, {
       issuer: `https://securetoken.google.com/${project}`,
@@ -50,6 +64,11 @@ export async function verifyIdToken(token: string): Promise<AuthUser> {
     throw new HttpError(401, "invalid token");
   }
 
+  return toUser(payload);
+}
+
+function toUser(payload: JWTPayload & Record<string, unknown>): AuthUser {
+  if (!payload.sub) throw new HttpError(401, "invalid token");
   return {
     uid: payload.sub,
     email: typeof payload.email === "string" ? payload.email : null,
@@ -64,10 +83,20 @@ export async function verifyIdToken(token: string): Promise<AuthUser> {
 
 /** يقرأ `Authorization: Bearer <ID token>` ويتحقق منه، وإلا يرمي 401. */
 export async function requireUser(req: Request): Promise<AuthUser> {
+  return verifyIdToken(bearer(req));
+}
+
+/** كالسابق مع الرمز نفسه، لقراءة Firestore بصلاحيات المستخدم. */
+export async function requireUserWithToken(req: Request): Promise<AuthUser & { token: string }> {
+  const token = bearer(req);
+  return { ...(await verifyIdToken(token)), token };
+}
+
+function bearer(req: Request): string {
   const header = req.headers.get("authorization") ?? "";
   const match = /^Bearer\s+(.+)$/i.exec(header);
   if (!match?.[1]) throw new HttpError(401, "missing token");
-  return verifyIdToken(match[1]);
+  return match[1];
 }
 
 /** رد JSON موحّد للأخطاء — بلا تفاصيل تقنية للعميل. */

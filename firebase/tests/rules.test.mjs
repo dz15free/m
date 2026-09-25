@@ -16,6 +16,8 @@ const B = { uid: "teacherB", email: "b@example.com" };
 const dbAs = (user, claims = {}) =>
   env.authenticatedContext(user.uid, { email: user.email, ...claims }).firestore();
 
+const anon = () => env.unauthenticatedContext().firestore();
+
 const newUser = (user, extra = {}) => ({
   displayName: "أستاذ",
   email: user.email,
@@ -360,6 +362,35 @@ describe("دفاتر الأستاذ", () => {
     await assertFails(setDoc(ref, { ...prep, phases: { ...prep.phases, build: { situation: "x".repeat(4001), assessment: "" } } }));
     await assertFails(setDoc(ref, { ...prep, secret: 1 }));
     await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "preps", "p1")));
+  });
+});
+
+describe("مكتبة المحتوى", () => {
+  const content = (extra = {}) => ({
+    title: { ar: "مذكرة الألوان", fr: "" }, stage: "primary", level: "3AP", subject: "fr", language: "fr", type: "fiche",
+    term: 1, unit: "", tags: [], excerpt: "", access: "free", author: "فريق المنصة", license: "original",
+    files: [{ key: "content/a.pdf", name: "a.pdf", mime: "application/pdf", size: 1000 }], previewKey: "",
+    status: "published", publishedAt: 1, updatedAt: serverTimestamp(), ...extra,
+  });
+
+  it("المحرّر وحده ينشر؛ المنشور عام والمسودة خاصة بالمحرّرين", async () => {
+    const editor = dbAs(A, { contentEditor: true });
+    await assertFails(setDoc(doc(dbAs(A), "contents", "c1"), content()));
+    await assertSucceeds(setDoc(doc(editor, "contents", "c1"), content()));
+    await assertSucceeds(setDoc(doc(editor, "contents", "d1"), content({ status: "draft", publishedAt: null })));
+    await assertFails(setDoc(doc(editor, "contents", "c2"), content({ access: "gift" })));
+    await assertFails(setDoc(doc(editor, "contents", "c2"), content({ title: { ar: "", fr: "" } })));
+    await assertSucceeds(getDoc(doc(anon(), "contents", "c1")));
+    await assertFails(getDoc(doc(dbAs(B), "contents", "d1")));
+    await assertSucceeds(getDoc(doc(editor, "contents", "d1")));
+  });
+
+  it("فهرس المكتبة: قراءة عامة وكتابة للمحرّرين", async () => {
+    const entry = { id: "c1", t: { ar: "x", fr: "" } };
+    await assertFails(setDoc(doc(dbAs(A), "contentIndex", "primary"), { entries: [entry], updatedAt: serverTimestamp() }));
+    await assertSucceeds(setDoc(doc(dbAs(A, { contentEditor: true }), "contentIndex", "primary"), { entries: [entry], updatedAt: serverTimestamp() }));
+    await assertFails(setDoc(doc(dbAs(A, { contentEditor: true }), "contentIndex", "college"), { entries: [], updatedAt: serverTimestamp() }));
+    await assertSucceeds(getDoc(doc(anon(), "contentIndex", "primary")));
   });
 });
 

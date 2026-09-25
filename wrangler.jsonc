@@ -9,7 +9,9 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+  // ملفات المكتبة (خاصة): لا تُقدَّم إلا عبر /api/files بعد التحقق من الحساب والاشتراك
+  "r2_buckets": [{ "binding": "CONTENT", "bucket_name": "prof-baczone-content" }]
   // الدومين (prof.baczone.app) يُربط من لوحة Cloudflare → Workers → Custom Domains
   // الأسرار تُضاف بـ: npx wrangler secret put CHARGILY_SECRET_KEY  (لا تُكتب هنا أبدًا)
 }

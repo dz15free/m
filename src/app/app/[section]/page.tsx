@@ -8,7 +8,7 @@ import { NAV, type NavKey } from "@/components/layout/nav-items";
 /* صفحات مؤقتة لأقسام التطبيق حتى تُبنى في مراحلها.
    كل قسم يُنشأ لاحقًا كمجلّد مستقل (مثل app/app/classes/) فيأخذ الأولوية
    على هذا المسار الديناميكي تلقائيًا، دون حذف أو تعديل هنا. */
-const SECTIONS = ["library", "planning", "documents", "billing"] as const satisfies readonly NavKey[];
+const SECTIONS = ["planning", "documents", "billing"] as const satisfies readonly NavKey[];
 type Section = (typeof SECTIONS)[number];
 
 const isSection = (value: string): value is Section => (SECTIONS as readonly string[]).includes(value);

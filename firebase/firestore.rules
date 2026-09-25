@@ -317,6 +317,44 @@ service cloud.firestore {
       allow read: if true;
       allow write: if isAdmin();
     }
+    // ── مكتبة المحتوى ──
+    // البيانات الوصفية للمنشور عامة (للتصفّح والتسويق)؛ الملفات نفسها لا تُقدَّم
+    // إلا عبر /api/files بعد التحقق من الحساب والاشتراك على الخادم.
+    match /contents/{id} {
+      function validContent(d) {
+        return d.keys().hasOnly(['title', 'stage', 'level', 'subject', 'language', 'type', 'term', 'unit', 'tags', 'excerpt',
+                                 'access', 'author', 'license', 'files', 'previewKey', 'status', 'publishedAt', 'updatedAt'])
+          && d.title is map && isShortString(d.title.ar, 200) && isShortString(d.title.fr, 200)
+          && (d.title.ar.size() > 0 || d.title.fr.size() > 0)
+          && d.stage in ['primary', 'middle', 'secondary']
+          && isShortString(d.level, 16) && isShortString(d.subject, 32)
+          && d.language in ['ar', 'fr', 'en']
+          && isShortString(d.type, 32)
+          && d.term in [0, 1, 2, 3]
+          && isShortString(d.unit, 120) && isShortString(d.excerpt, 1000)
+          && d.tags is list && d.tags.size() <= 20
+          && d.access in ['free', 'premium']
+          && isShortString(d.author, 120) && d.license in ['original', 'licensed', 'public']
+          && d.files is list && d.files.size() <= 10
+          && isShortString(d.previewKey, 200)
+          && d.status in ['draft', 'published', 'archived']
+          && (d.publishedAt == null || d.publishedAt is int)
+          && d.updatedAt == request.time;
+      }
+      allow read: if resource.data.status == 'published' || isEditor();
+      allow create, update: if isEditor() && validContent(request.resource.data);
+      allow delete: if isEditor();
+    }
+    // فهرس البحث: وثيقة واحدة لكل مرحلة تحمل سطرًا مختصرًا لكل محتوى منشور
+    match /contentIndex/{stage} {
+      allow read: if true;
+      allow write: if isEditor()
+        && stage in ['primary', 'middle', 'secondary']
+        && request.resource.data.keys().hasOnly(['entries', 'updatedAt'])
+        && request.resource.data.entries is list && request.resource.data.entries.size() <= 3000
+        && request.resource.data.updatedAt == request.time;
+    }
+
     match /contentCategories/{doc} {
       allow read: if true;
       allow write: if isEditor();
