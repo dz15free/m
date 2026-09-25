@@ -393,7 +393,7 @@ service cloud.firestore {
           && d.title is map && isShortString(d.title.ar, 140) && isShortString(d.title.fr, 140)
           && (d.title.ar.size() > 0 || d.title.fr.size() > 0)
           && d.body is map && isShortString(d.body.ar, 1000) && isShortString(d.body.fr, 1000)
-          && isShortString(d.link, 300)
+          && isShortString(d.link, 300) && (d.link == '' || d.link.matches('^(/[^/\\\\].*|/|https://.+)$'))
           && d.kind in ['news', 'update', 'content', 'offer']
           && d.createdAt == request.time && d.createdBy == request.auth.uid;
       }

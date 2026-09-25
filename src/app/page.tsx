@@ -27,6 +27,7 @@ const FEATURES = [
 export default async function LandingPage() {
   const t = await getTranslations("landing");
   const brand = await getTranslations("brand");
+  const legal = await getTranslations("legal");
   const steps = t.raw("importSteps") as string[];
 
   return (
@@ -69,7 +70,7 @@ export default async function LandingPage() {
               <p className="mt-4 text-sm text-muted">{t("heroNote")}</p>
             </div>
             <div className="order-1 flex justify-center md:order-2">
-              <Logo variant="full" className="h-56 sm:h-72 lg:h-96" priority />
+              <Logo variant="full" className="h-56 sm:h-72 lg:h-96" sizes="(min-width: 1024px) 384px, (min-width: 640px) 288px, 224px" priority />
             </div>
           </div>
         </section>
@@ -141,6 +142,10 @@ export default async function LandingPage() {
               © {new Date().getFullYear()} {t("footer")}
             </span>
           </div>
+          <nav className="flex gap-5 text-sm text-muted">
+            <Link href="/terms" className="hover:underline">{legal("terms")}</Link>
+            <Link href="/privacy" className="hover:underline">{legal("privacy")}</Link>
+          </nav>
           <div className="sm:hidden">
             <LocaleSwitcher />
           </div>

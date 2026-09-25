@@ -173,7 +173,12 @@ export function RegisterForm() {
         />
         <ErrorMessage error={error} />
         <SubmitButton pending={pending} label={t("submitRegister")} />
-        <p className="text-center text-xs text-muted">{t("terms")}</p>
+        <p className="text-center text-xs text-muted">
+          {t.rich("terms", {
+            terms: (c) => <Link href="/terms" target="_blank" className="font-semibold text-brand-700 underline">{c}</Link>,
+            privacy: (c) => <Link href="/privacy" target="_blank" className="font-semibold text-brand-700 underline">{c}</Link>,
+          })}
+        </p>
       </form>
       <p className="text-center text-sm text-muted">
         {t("hasAccount")}{" "}

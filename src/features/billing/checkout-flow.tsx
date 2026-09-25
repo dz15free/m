@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { CreditCard, LoaderCircle, MessageCircle, ShieldCheck } from "lucide-react";
@@ -84,6 +85,9 @@ export function CheckoutFlow({ planId }: { planId: string }) {
           <p className="flex items-center justify-center gap-1.5 text-xs text-muted">
             <ShieldCheck aria-hidden className="size-4" />
             {t("secure")}
+          </p>
+          <p className="text-center text-xs text-muted">
+            {t.rich("agree", { terms: (c) => <Link href="/terms" target="_blank" className="underline">{c}</Link> })}
           </p>
           {cardState !== "idle" && cardState !== "busy" && (
             <p role="alert" className="text-sm text-red-700">

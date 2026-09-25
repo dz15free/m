@@ -39,6 +39,11 @@ await Promise.all([
   crop("full").resize({ width: 720 }).webp({ quality: 82 }).toFile("public/brand/logo.webp"),
   crop("mark").resize({ height: 256 }).webp({ quality: 92 }).toFile("public/brand/mark.webp"),
   crop("wordmark").resize({ width: 640 }).webp({ quality: 92 }).toFile("public/brand/wordmark.webp"),
+  // نسخ أصغر للهاتف (srcset): الشعار الكامل في الصفحة الرئيسية والرؤوس
+  crop("full").resize({ width: 360 }).webp({ quality: 80 }).toFile("public/brand/logo-360.webp"),
+  crop("full").resize({ width: 560 }).webp({ quality: 78 }).toFile("public/brand/logo-560.webp"),
+  crop("mark").resize({ height: 128 }).webp({ quality: 90 }).toFile("public/brand/mark-128.webp"),
+  crop("wordmark").resize({ width: 320 }).webp({ quality: 90 }).toFile("public/brand/wordmark-320.webp"),
 
   // أيقونات PWA — `maskable` تحتاج منطقة آمنة (~80%) فالهامش أكبر
   squareMark(192, 0.1, WHITE).then((i) => i.toFile("public/icons/icon-192.png")),

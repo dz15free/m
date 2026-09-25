@@ -12,7 +12,7 @@ import {
   updateProfile,
   type User,
 } from "firebase/auth";
-import { doc, getDoc, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
+import { clearIndexedDbPersistence, doc, getDoc, serverTimestamp, setDoc, terminate, updateDoc, waitForPendingWrites } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
 import type { Locale } from "@/i18n/config";
 
@@ -64,8 +64,27 @@ export async function resendVerification(locale: Locale) {
   if (user && !user.emailVerified) await sendEmailVerification(user);
 }
 
-export async function signOut() {
-  await fbSignOut(getFirebase().auth);
+/** الخروج يمسح بيانات الأستاذ المحفوظة على الجهاز (كاش Firestore وصفحات عامل الخدمة)،
+ *  فلا يبقى شيء من أسماء التلاميذ على جهاز مشترك. إن بقيت تغييرات لم تُرسل بعد
+ *  (دون إنترنت) نُرجع "pending" ليؤكّد المستخدم، لأن المسح يُضيّعها. */
+export async function signOut({ force = false } = {}): Promise<"ok" | "pending"> {
+  const { auth, db } = getFirebase();
+  const flushed = await Promise.race([
+    waitForPendingWrites(db).then(() => true),
+    new Promise<boolean>((r) => setTimeout(() => r(false), 4000)),
+  ]);
+  if (!flushed && !force) return "pending";
+  await fbSignOut(auth);
+  await terminate(db).catch(() => {});
+  await clearIndexedDbPersistence(db).catch(() => {});
+  if ("caches" in window) {
+    const keys = await caches.keys().catch(() => [] as string[]);
+    await Promise.all(keys.filter((k) => k.startsWith("pages-")).map((k) => caches.delete(k)));
+  }
+  // تحميل كامل مقصود: نسخة Firestore أُنهيت، ونبدأ بحالة نظيفة
+  // eslint-disable-next-line @next/next/no-location-assign-relative-destination
+  window.location.assign("/login");
+  return "ok";
 }
 
 export type AccountInfo = { onboardingDone: boolean };

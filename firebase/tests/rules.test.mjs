@@ -460,6 +460,11 @@ describe("الإشعارات", () => {
     await assertSucceeds(setDoc(doc(dbAs(B, { contentEditor: true }), "announcements", "a3"), ann(B.uid, { kind: "content" })));
     await assertFails(setDoc(doc(dbAs(B), "announcements", "a4"), ann(B.uid)));
     await assertSucceeds(getDoc(doc(dbAs(B), "announcements", "a1")));
+    const adm = dbAs(A, { admin: true });
+    await assertSucceeds(setDoc(doc(adm, "announcements", "l1"), ann(A.uid, { link: "/app/billing" })));
+    await assertSucceeds(setDoc(doc(adm, "announcements", "l2"), ann(A.uid, { link: "https://example.com" })));
+    await assertFails(setDoc(doc(adm, "announcements", "l3"), ann(A.uid, { link: "javascript:alert(1)" })));
+    await assertFails(setDoc(doc(adm, "announcements", "l4"), ann(A.uid, { link: "//evil.com" })));
     await assertFails(getDoc(doc(anon(), "announcements", "a1")));
   });
   it("الإشعارات الشخصية وتاريخ القراءة لصاحبها", async () => {

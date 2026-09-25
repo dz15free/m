@@ -95,7 +95,7 @@
     "toLogin": "Connectez-vous",
     "backToLogin": "Retour à la connexion",
     "resetSent": "Si cet e-mail est inscrit, vous recevrez un message dans quelques minutes. Pensez à vérifier les spams.",
-    "terms": "En créant un compte, vous acceptez les conditions d'utilisation et la politique de confidentialité.",
+    "terms": "En créant un compte, vous acceptez les <terms>conditions d'utilisation</terms> et la <privacy>politique de confidentialité</privacy>.",
     "signOut": "Se déconnecter",
     "loading": "Chargement…",
     "verifyTitle": "Confirmez votre e-mail",
@@ -115,7 +115,8 @@
       "unauthorizedDomain": "Ce domaine n'est pas encore autorisé pour la connexion.",
       "notConfigured": "Le service n'est pas encore configuré.",
       "generic": "Une erreur inattendue s'est produite. Réessayez."
-    }
+    },
+    "signOutPending": "Certaines modifications n'ont pas encore été envoyées (pas de connexion) et seront perdues. Reconnectez-vous et attendez la synchronisation, ou appuyez sur OK pour vous déconnecter quand même."
   },
   "today": {
     "greeting": "Bienvenue 👋",
@@ -1103,7 +1104,8 @@
       "unavailable": "Cette formule n'est pas en vente pour le moment.",
       "secure": "Le paiement se fait sur la page sécurisée de Chargily ; nous ne voyons pas votre carte.",
       "contactBody": "Premium à {price}. Écrivez-nous : nous vous indiquons comment payer et activons votre abonnement dès confirmation.",
-      "contactCta": "Écrire à l'administration"
+      "contactCta": "Écrire à l'administration",
+      "agree": "En continuant, vous acceptez les <terms>conditions d'utilisation</terms>."
     },
     "return": {
       "checking": "Confirmation du paiement…",
@@ -1337,5 +1339,20 @@
         "admin_roles": "Modification des rôles"
       }
     }
+  },
+  "legal": {
+    "terms": "Conditions d'utilisation",
+    "privacy": "Confidentialité",
+    "home": "Accueil",
+    "updated": "Dernière mise à jour : {date}"
+  },
+  "errors": {
+    "notFoundTitle": "Page introuvable",
+    "notFoundBody": "Le lien a peut-être changé ou la page a été supprimée.",
+    "errorTitle": "Une erreur inattendue est survenue",
+    "errorBody": "Vos données ne sont pas perdues. Réessayez ; si l'erreur persiste, contactez l'administration.",
+    "retry": "Réessayer",
+    "goApp": "Retour à l'application",
+    "goHome": "Accueil"
   }
 }

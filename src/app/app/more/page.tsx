@@ -43,6 +43,11 @@ export default async function MorePage() {
         <span className="font-medium">{t("common.language")}</span>
         <LocaleSwitcher />
       </div>
+
+      <nav className="flex justify-center gap-5 text-sm text-muted">
+        <Link href="/terms" className="hover:underline">{t("legal.terms")}</Link>
+        <Link href="/privacy" className="hover:underline">{t("legal.privacy")}</Link>
+      </nav>
     </div>
   );
 }

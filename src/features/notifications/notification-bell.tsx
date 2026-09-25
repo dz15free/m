@@ -9,6 +9,7 @@ import { Bell, BellRing, BookOpen, CreditCard, Gift, LoaderCircle, Megaphone, Sp
 import { enablePush, getPushState, refreshPush, type PushState } from "@/features/pwa/push";
 import { useUid } from "@/features/classes/hooks";
 import { cn } from "@/lib/utils/cn";
+import { linkKind } from "@/lib/utils/links";
 import { getNotificationState, listNotices, markAllRead, type Kind } from "./repo";
 
 const ICON: Record<Kind, typeof Bell> = { news: Megaphone, update: Sparkles, content: BookOpen, offer: Gift, billing: CreditCard };
@@ -120,9 +121,9 @@ function Panel({ uid, readAt, onClose }: { uid: string; readAt: number; onClose:
                 const cls = cn("flex gap-3 px-4 py-3", isNew && "bg-brand-50/50");
                 return (
                   <li key={`${n.personal ? "p" : "a"}-${n.id}`}>
-                    {n.link.startsWith("/") ? (
+                    {linkKind(n.link) === "internal" ? (
                       <Link href={n.link} onClick={onClose} className={cn(cls, "hover:bg-canvas")}>{body}</Link>
-                    ) : n.link ? (
+                    ) : linkKind(n.link) === "external" ? (
                       <a href={n.link} target="_blank" rel="noopener" className={cn(cls, "hover:bg-canvas")}>{body}</a>
                     ) : (
                       <div className={cls}>{body}</div>

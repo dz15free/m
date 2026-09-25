@@ -37,7 +37,12 @@ export async function POST(req: Request) {
     const max = kind === "preview" ? PREVIEW_MAX : MAX_FILE_BYTES;
     if (body.byteLength === 0 || body.byteLength > max) throw new HttpError(413, "bad size");
 
-    const name = safeFileName(decodeURIComponent(req.headers.get("x-file-name") ?? "file"));
+    let name = "file";
+    try {
+      name = safeFileName(decodeURIComponent(req.headers.get("x-file-name") ?? "file"));
+    } catch {
+      /* اسم غير صالح الترميز */
+    }
     const key = `${kind === "preview" ? "previews" : "content"}/${new Date().getUTCFullYear()}/${crypto.randomUUID()}.${EXT[mime]}`;
     await (await contentBucket()).put(key, body, { httpMetadata: { contentType: mime } });
     return Response.json({ key, name, mime, size: body.byteLength });

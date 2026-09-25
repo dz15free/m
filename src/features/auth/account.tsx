@@ -84,7 +84,9 @@ export function AccountCard({ compact = false }: { compact?: boolean }) {
       </div>
       <button
         type="button"
-        onClick={() => signOut()}
+        onClick={async () => {
+          if ((await signOut()) === "pending" && window.confirm(t("signOutPending"))) await signOut({ force: true });
+        }}
         aria-label={t("signOut")}
         title={t("signOut")}
         className="grid size-11 shrink-0 place-items-center rounded-full text-muted hover:bg-red-50 hover:text-red-700"

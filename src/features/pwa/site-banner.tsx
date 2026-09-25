@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { ChevronLeft, ChevronRight, Info, Megaphone, PartyPopper, TriangleAlert, X } from "lucide-react";
 import { getAppConfig } from "@/features/billing/repo";
 import { cn } from "@/lib/utils/cn";
+import { linkKind } from "@/lib/utils/links";
 import type { Banner } from "@/shared/billing/plans";
 
 const TONE: Record<Banner["tone"], { cls: string; icon: typeof Info }> = {
@@ -67,8 +68,8 @@ function BannerView({ banner: b, text, onDismiss }: { banner: Banner; text: stri
   );
   return (
     <div role="region" aria-label={t("banner")} className={cn("flex items-center gap-2 px-4 py-2.5 print:hidden lg:px-10", cls)}>
-      {b.link ? (
-        b.link.startsWith("/") ? (
+      {linkKind(b.link) ? (
+        linkKind(b.link) === "internal" ? (
           <Link href={b.link} className="flex min-w-0 flex-1 items-center gap-2 hover:underline">{content}</Link>
         ) : (
           <a href={b.link} target="_blank" rel="noopener" className="flex min-w-0 flex-1 items-center gap-2 hover:underline">{content}</a>
