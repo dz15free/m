@@ -480,6 +480,105 @@
     "ended": "Les séances du jour sont terminées.",
     "current": "Maintenant",
     "upcoming": "À venir",
-    "done": "Terminée"
+    "done": "Terminée",
+    "dailyNotebook": "Cahier journal"
+  },
+  "logbook": {
+    "title": "Cahiers de l'enseignant",
+    "subtitle": "Vos cahiers officiels, organisés et prêts à imprimer, remplis à partir de l'emploi du temps.",
+    "notebooks": {
+      "daily": {
+        "title": "Cahier journal",
+        "body": "Ce qui a été fait à chaque séance : sujet, objectif, matériel, observations."
+      },
+      "training": {
+        "title": "Cahier de formation et séminaires",
+        "body": "Séminaires pédagogiques, journées de formation, visites et réunions."
+      },
+      "prep": {
+        "title": "Cahier de préparation (fiches)",
+        "body": "Fiches avec le déroulement de la séance — avec les progressions."
+      },
+      "grades": {
+        "title": "Cahier de notes",
+        "body": "Notes et moyennes — avec l'évaluation."
+      },
+      "soon": "Bientôt"
+    },
+    "daily": {
+      "title": "Cahier journal",
+      "week": "Semaine",
+      "prevWeek": "Semaine précédente",
+      "nextWeek": "Semaine suivante",
+      "thisWeek": "Cette semaine",
+      "print": "Imprimer la semaine",
+      "noSchedule": "Saisissez d'abord l'emploi du temps : les lignes du cahier en sont générées.",
+      "setSchedule": "Emploi du temps",
+      "dayOff": "Pas de séance ce jour",
+      "empty": "Appuyez pour noter ce qui a été fait",
+      "addHint": "Notez le sujet et ce qui a été fait pendant cette séance.",
+      "time": "Horaire",
+      "class": "Classe",
+      "subject": "Matière",
+      "fields": {
+        "unit": "Projet / Séquence",
+        "title": "Sujet",
+        "objective": "Objectif d'apprentissage",
+        "materials": "Matériel",
+        "notes": "Observations"
+      },
+      "placeholders": {
+        "unit": "Ex. : Projet 1 — Séquence 2",
+        "title": "Ex. : Lecture : ma famille",
+        "objective": "Ex. : Lire un texte de façon fluide",
+        "materials": "Ex. : manuel, tableau, cartes",
+        "notes": ""
+      },
+      "status": "Réalisation",
+      "statuses": {
+        "done": "Réalisé",
+        "partial": "Partiellement",
+        "notDone": "Non réalisé"
+      },
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "clear": "Effacer",
+      "saved": "Enregistré",
+      "error": "Enregistrement impossible. Réessayez.",
+      "fromDay": "Aujourd'hui"
+    },
+    "training": {
+      "title": "Cahier de formation et séminaires",
+      "add": "Ajouter",
+      "empty": "Aucune entrée pour l'instant.",
+      "date": "Date",
+      "kind": "Type",
+      "kinds": {
+        "seminar": "Séminaire pédagogique",
+        "trainingDay": "Journée de formation",
+        "inspection": "Visite d'inspection",
+        "meeting": "Réunion",
+        "other": "Autre"
+      },
+      "topic": "Sujet",
+      "supervisor": "Encadreur / Inspecteur",
+      "place": "Lieu",
+      "notes": "Synthèse et recommandations",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "deleteConfirm": "Supprimer cette entrée ?",
+      "print": "Imprimer le cahier",
+      "error": "Enregistrement impossible. Réessayez.",
+      "edit": "Modifier"
+    },
+    "print": {
+      "teacher": "Enseignant(e)",
+      "school": "Établissement",
+      "year": "Année scolaire",
+      "from": "Du",
+      "to": "au"
+    },
+    "back": "Cahiers"
   }
 }

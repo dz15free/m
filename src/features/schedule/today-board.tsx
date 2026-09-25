@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useQueries } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { CalendarClock, Check, ChevronLeft, ChevronRight, ClipboardCheck, Coffee, LoaderCircle, UserPlus, Users } from "lucide-react";
+import { CalendarClock, Check, ChevronLeft, ChevronRight, ClipboardCheck, Coffee, LoaderCircle, NotebookPen, UserPlus, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useClasses, useTaxonomy, useTeacher, useUid } from "@/features/classes/hooks";
 import { countMarks, sessionKey, todayInAlgiers } from "@/features/attendance/logic";
@@ -66,7 +66,13 @@ export function TodayBoard() {
     <div className="space-y-8">
       {schedule.data.length > 0 && (
         <section aria-labelledby="today-sessions" className="space-y-3">
-          <h2 id="today-sessions" className="text-lg font-semibold">{t("sessionsToday")}</h2>
+          <div className="flex items-center justify-between gap-3">
+            <h2 id="today-sessions" className="text-lg font-semibold">{t("sessionsToday")}</h2>
+            <Link href={`/app/logbook/daily?date=${today}`} className="inline-flex min-h-11 items-center gap-1.5 text-sm font-medium text-brand-700">
+              <NotebookPen aria-hidden className="size-4" />
+              {t("dailyNotebook")}
+            </Link>
+          </div>
           {daySlots.length === 0 ? (
             <Card className="flex items-center gap-3 text-muted">
               <Coffee aria-hidden className="size-5" />

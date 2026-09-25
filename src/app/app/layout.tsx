@@ -29,7 +29,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
               {/* مسافة سفلية تكفي الشريط السفلي والزرّ البارز على الهاتف */}
               <main
                 id="content"
-                className="mx-auto w-full max-w-5xl flex-1 px-4 pb-32 pt-5 sm:px-6 lg:px-10 lg:pb-12 lg:pt-10"
+                className="mx-auto w-full max-w-5xl flex-1 px-4 pb-32 pt-5 sm:px-6 lg:px-10 lg:pb-12 lg:pt-10 print:max-w-none print:p-0"
               >
                 <VerifyEmailBanner />
                 {children}

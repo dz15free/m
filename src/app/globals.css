@@ -59,6 +59,14 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* الوثائق المطبوعة: ورق أبيض وحبر أسود مهما كانت سمة الشاشة */
+  @media print {
+    body {
+      background: #fff;
+      color: #000;
+    }
+  }
+
   h1,
   h2,
   h3 {

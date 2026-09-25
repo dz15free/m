@@ -8,7 +8,7 @@ export async function BottomNav() {
   return (
     <nav
       aria-label={t("main")}
-      className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface/95 pb-safe shadow-float backdrop-blur lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-30 print:hidden border-t border-line bg-surface/95 pb-safe shadow-float backdrop-blur lg:hidden"
     >
       <ul className="mx-auto grid max-w-lg grid-cols-5">
         {BOTTOM_NAV.map(({ key, href, icon: Icon }) =>

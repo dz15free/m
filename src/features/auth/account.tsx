@@ -18,7 +18,7 @@ export function VerifyEmailBanner() {
   const { user } = auth;
 
   return (
-    <div role="status" className="mb-5 flex flex-wrap items-center gap-3 rounded-card bg-accent-100 p-4 text-sm">
+    <div role="status" className="mb-5 flex flex-wrap items-center gap-3 print:hidden rounded-card bg-accent-100 p-4 text-sm">
       <MailCheck aria-hidden className="size-5 shrink-0 text-accent-700" />
       <div className="min-w-0 flex-1">
         <p className="font-semibold">{t("verifyTitle")}</p>

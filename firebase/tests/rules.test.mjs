@@ -293,6 +293,32 @@ describe("جدول التوقيت", () => {
   });
 });
 
+describe("دفاتر الأستاذ", () => {
+  const lesson = (extra = {}) => ({
+    date: "2026-09-27", classId: "c1", subjectId: "ar", start: "08:00", end: "09:00",
+    unit: "المقطع 1", title: "قراءة: المدرسة", objective: "يقرأ نصًا قراءة سليمة", materials: "الكتاب", notes: "", status: "done",
+    updatedAt: serverTimestamp(), ...extra,
+  });
+
+  it("سطر الدفتر اليومي: مفتاح مطابق وحقول محدودة", async () => {
+    const col = (db) => (key) => doc(db, "teachers", A.uid, "lessons", key);
+    await assertSucceeds(setDoc(col(dbAs(A))("2026-09-27_c1_ar_0800"), lesson()));
+    await assertFails(setDoc(col(dbAs(A))("2026-09-27_c1_ar_0900"), lesson()));
+    await assertFails(setDoc(col(dbAs(A))("2026-09-27_c1_ar_0800"), lesson({ status: "maybe" })));
+    await assertFails(setDoc(col(dbAs(A))("2026-09-27_c1_ar_0800"), lesson({ notes: "x".repeat(401) })));
+    await assertFails(getDoc(col(dbAs(B))("2026-09-27_c1_ar_0800")));
+  });
+
+  it("دفتر التكوين والندوات", async () => {
+    const ref = doc(dbAs(A), "teachers", A.uid, "trainings", "t1");
+    const entry = { date: "2026-10-12", kind: "seminar", topic: "المقاربة بالكفاءات", supervisor: "المفتش", place: "المدرسة", notes: "", updatedAt: serverTimestamp() };
+    await assertSucceeds(setDoc(ref, entry));
+    await assertFails(setDoc(ref, { ...entry, kind: "party" }));
+    await assertFails(setDoc(ref, { ...entry, topic: "" }));
+    await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "trainings", "t1")));
+  });
+});
+
 describe("المال والاشتراكات", () => {
   it("لا يستطيع أحد من المتصفح كتابة الاشتراك — ولا الأدمن", async () => {
     await assertFails(setDoc(doc(dbAs(A), "entitlements", A.uid), { planId: "premium" }));

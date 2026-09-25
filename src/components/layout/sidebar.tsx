@@ -26,7 +26,7 @@ export async function Sidebar() {
     ));
 
   return (
-    <aside className="sticky top-0 hidden h-dvh w-72 shrink-0 flex-col border-e border-line bg-surface lg:flex">
+    <aside className="sticky top-0 hidden h-dvh print:hidden! w-72 shrink-0 flex-col border-e border-line bg-surface lg:flex">
       <div className="px-6 pb-4 pt-6">
         <Link href="/app" aria-label={t("today")}>
           <Logo variant="lockup" className="h-12" priority />
