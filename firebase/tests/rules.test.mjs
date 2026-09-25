@@ -349,6 +349,16 @@ describe("دفاتر الأستاذ", () => {
     await assertFails(getDoc(doc(dbAs(A, { admin: true }), "teachers", B.uid, "grades", "c1__t1")));
   });
 
+  it("التوزيع السنوي", async () => {
+    const ref = doc(dbAs(A), "teachers", A.uid, "progressions", "c1__ar");
+    const prog = { classId: "c1", subjectId: "ar", startDate: "2026-09-20", rows: [{ w: 1, unit: "", content: "عائلتي", done: false }], updatedAt: serverTimestamp() };
+    await assertSucceeds(setDoc(ref, prog));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "progressions", "c1__fr"), prog));
+    await assertFails(setDoc(ref, { ...prog, startDate: "20/09/2026" }));
+    await assertFails(setDoc(ref, { ...prog, rows: Array(201).fill(prog.rows[0]) }));
+    await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "progressions", "c1__ar")));
+  });
+
   it("دفتر التحضير (المذكرات)", async () => {
     const ref = doc(dbAs(A), "teachers", A.uid, "preps", "p1");
     const phase = { situation: "نص", assessment: "" };

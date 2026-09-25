@@ -114,3 +114,57 @@
     background-position: left 0.85rem center;
   }
 }
+
+/* الوثائق الجاهزة: صفحات A4 حقيقية تُعرض مصغّرة على الشاشة وبحجمها عند الطباعة */
+@layer components {
+  .doc-sheet {
+    background: #fff;
+    color: #000;
+    width: 210mm;
+    height: 297mm;
+    padding: 12mm;
+    margin: 0 auto 8mm;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgb(0 0 0 / 0.12);
+  }
+  .doc-landscape .doc-sheet {
+    width: 297mm;
+    height: 210mm;
+  }
+  .doc-preview {
+    zoom: 0.4;
+  }
+  .doc-preview.doc-landscape {
+    zoom: 0.29;
+  }
+  @media (min-width: 640px) {
+    .doc-preview {
+      zoom: 0.6;
+    }
+    .doc-preview.doc-landscape {
+      zoom: 0.45;
+    }
+  }
+  @media (min-width: 1024px) {
+    .doc-preview {
+      zoom: 0.75;
+    }
+    .doc-preview.doc-landscape {
+      zoom: 0.55;
+    }
+  }
+  @media print {
+    .doc-preview,
+    .doc-preview.doc-landscape {
+      zoom: 1;
+    }
+    .doc-sheet {
+      box-shadow: none;
+      margin: 0;
+      break-after: page;
+    }
+    .doc-sheet:last-child {
+      break-after: auto;
+    }
+  }
+}

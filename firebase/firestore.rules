@@ -283,6 +283,20 @@ service cloud.firestore {
         allow create, update: if isOwner(uid) && validGrades(request.resource.data);
       }
 
+      // التوزيع السنوي لكل قسم ومادة
+      match /progressions/{pid} {
+        function validProgression(d) {
+          return d.keys().hasOnly(['classId', 'subjectId', 'startDate', 'rows', 'updatedAt'])
+            && isShortString(d.classId, 40) && isShortString(d.subjectId, 32)
+            && pid == d.classId + '__' + d.subjectId
+            && d.startDate is string && d.startDate.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+            && d.rows is list && d.rows.size() <= 200
+            && d.updatedAt == request.time;
+        }
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid) && validProgression(request.resource.data);
+      }
+
       // السنوات الدراسية للأستاذ — المعرّف هو معرّف السنة نفسه (2026-2027)
       match /years/{yearId} {
         allow read: if isOwner(uid);

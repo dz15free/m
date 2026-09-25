@@ -905,5 +905,140 @@
     "needFile": "Ajoutez au moins un fichier avant de publier.",
     "publishedAt": "Publié",
     "count": "{n} éléments"
+  },
+  "documents": {
+    "title": "Documents",
+    "subtitle": "Des documents prêts, remplis depuis vos classes, vos élèves et votre profil, à imprimer directement.",
+    "templates": {
+      "certificates": {
+        "title": "Diplômes d'encouragement et félicitations",
+        "body": "Un diplôme nominatif par élève, avec sa moyenne si les notes sont saisies."
+      },
+      "absences": {
+        "title": "Relevé mensuel des absences",
+        "body": "Depuis le registre d'appel : jour par jour, avec les totaux."
+      },
+      "convocation": {
+        "title": "Convocation des parents",
+        "body": "Deux convocations par page, avec date, heure et motif."
+      },
+      "classSign": {
+        "title": "Affiche de la classe",
+        "body": "Grande affiche pour la porte : niveau, groupe et enseignant."
+      },
+      "nameCards": {
+        "title": "Chevalets des élèves",
+        "body": "Cartes à plier et à poser sur les tables."
+      }
+    },
+    "back": "Documents",
+    "print": "Imprimer",
+    "preview": "Aperçu",
+    "class": "Classe",
+    "students": "Élèves",
+    "all": "Tous",
+    "none": "Aucun",
+    "noClasses": "Ajoutez d'abord une classe et ses élèves.",
+    "noStudents": "Aucun élève dans cette classe.",
+    "kind": "Type de diplôme",
+    "kinds": {
+      "encouragement": "Diplôme d'encouragement",
+      "congratulations": "Diplôme de félicitations",
+      "honor": "Tableau d'honneur"
+    },
+    "term": "Trimestre",
+    "terms": {
+      "1": "1er trimestre",
+      "2": "2e trimestre",
+      "3": "3e trimestre"
+    },
+    "withAverage": "Afficher la moyenne",
+    "average": "Moyenne",
+    "minAverage": "Sélection auto : moyenne ≥",
+    "certBody": {
+      "encouragement": "pour l'encourager dans les efforts fournis durant le {term}",
+      "congratulations": "pour le féliciter de ses bons résultats du {term}",
+      "honor": "pour ses résultats remarquables au {term}"
+    },
+    "awardedTo": "Ce diplôme est décerné à",
+    "ofClass": "classe",
+    "atSchool": "école",
+    "teacherSign": "L'enseignant(e)",
+    "directorSign": "Le directeur / la directrice",
+    "doneAt": "Fait à",
+    "on": "le",
+    "month": "Mois",
+    "absTitle": "Relevé des absences — {month}",
+    "absences": "Absences",
+    "justified": "dont justifiées",
+    "late": "Retards",
+    "num": "N°",
+    "student": "Nom et prénom",
+    "legend": "A : absence — J : absence justifiée — R : retard. Chaque symbole = une demi-journée ou une séance.",
+    "noSessions": "Aucun appel enregistré pour cette classe ce mois-ci.",
+    "sessionsCount": "{n, plural, one {# séance enregistrée} other {# séances enregistrées}}",
+    "convTitle": "Convocation",
+    "convTo": "À M./Mme le parent de",
+    "convBody": "Vous êtes prié(e) de vous présenter à l'école le {date} à {time}, au sujet de :",
+    "reason": "Motif",
+    "reasonDefault": "Suivi des résultats scolaires de votre enfant.",
+    "date": "Date",
+    "time": "Heure",
+    "pickStudents": "Choisir les élèves",
+    "selected": "{n} sélectionné(s)",
+    "signTeacher": "Enseignant(e)",
+    "signYear": "Année scolaire",
+    "republic": "République Algérienne Démocratique et Populaire",
+    "ministry": "Ministère de l'Éducation Nationale",
+    "pages": "{n, plural, one {# page} other {# pages}}"
+  },
+  "planning": {
+    "title": "Progressions",
+    "subtitle": "Progression annuelle par classe et matière, avec le suivi « Où en suis-je ? » semaine après semaine.",
+    "whereAmI": "Où en suis-je ?",
+    "week": "Semaine {n}",
+    "currentWeek": "Nous sommes en semaine scolaire {n}",
+    "beforeStart": "L'année n'a pas encore commencé.",
+    "status": {
+      "empty": "Pas encore de progression",
+      "done": "Progression terminée",
+      "onTrack": "Dans les temps",
+      "late": "En retard de {n, plural, one {# semaine} other {# semaines}}",
+      "ahead": "En avance de {n, plural, one {# semaine} other {# semaines}}"
+    },
+    "next": "Suivant : {content}",
+    "progress": "{done}/{total} faits",
+    "open": "Ouvrir",
+    "create": "Créer la progression",
+    "noClasses": "Ajoutez d'abord une classe.",
+    "back": "Progressions",
+    "startDate": "Date de la rentrée",
+    "startHint": "Les semaines sont comptées à partir de cette date, hors vacances.",
+    "unit": "Séquence / unité",
+    "content": "Contenu / thème",
+    "weekCol": "Semaine",
+    "done": "Fait",
+    "addRow": "Ajouter une ligne",
+    "paste": "Coller une progression",
+    "pasteHint": "Une ligne par thème : « n° semaine | séquence | contenu », ou copiez directement un tableau Word ou Excel.",
+    "pastePlaceholder": "1 | Séquence 1 | Ma famille\n2 | Séquence 1 | À la maison",
+    "pasteAdd": "Ajouter {n} lignes",
+    "pasteReplace": "Remplacer la progression",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "saved": "Enregistré",
+    "saving": "Enregistrement…",
+    "error": "Échec de l'enregistrement.",
+    "remove": "Supprimer la ligne",
+    "print": "Imprimer",
+    "annual": "Annuelle",
+    "monthly": "Mensuelle",
+    "annualTitle": "Progression annuelle — {subject}",
+    "monthlyTitle": "Progression mensuelle — {subject}",
+    "thisWeek": "Cette semaine",
+    "empty": "Aucune ligne. Ajoutez une ligne ou collez une progression.",
+    "markHint": "Cochez ce qui est fait : « Où en suis-je ? » se met à jour.",
+    "fromLibrary": "Chercher une progression dans la bibliothèque",
+    "edit": "Modifier"
   }
 }
