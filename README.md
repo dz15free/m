@@ -27,21 +27,40 @@ npm run dev                  # http://localhost:3000
 | `npm run test:rules` | اختبارات قواعد Firestore على المحاكي (تتطلب Java) |
 | `npm run vendor` | نسخ محرّكات OCR وPDF إلى `public/vendor` (تلقائي قبل dev/build) |
 | `npm run brand` | إعادة توليد أصول الشعار من `brand/logo-full.webp` |
+| `npm run build:cf` | بناء نسخة Cloudflare (OpenNext) في `.open-next/` |
+| `npm run deploy` | نشر ما بُني بـ `build:cf` على Cloudflare Workers |
 | `npm run preview` | بناء Cloudflare وتشغيله محليًا |
-| `npm run deploy` | النشر على Cloudflare Workers |
 
 ## النشر (Cloudflare)
 
-1. `npx wrangler login` بحساب Cloudflare الذي يحمل `baczone.app`.
-2. `npm run deploy` — يُنشئ Worker باسم `prof-baczone`.
-3. من لوحة Cloudflare: Workers ← `prof-baczone` ← Settings ← Domains ← إضافة `prof.baczone.app`.
-4. متغيّرات البناء العامة (`NEXT_PUBLIC_*`) تُضبط في بيئة البناء، والأسرار كـ Worker secrets:
+الموقع يعمل على **`https://prof.baczone.app`** وحده، في Worker مستقل اسمه `prof-baczone` (لا علاقة له بـ BacZone ولا بـ `baczone.app`).
+
+**Workers Builds (من GitHub، بلا أوامر محلية):**
+
+| الإعداد | القيمة |
+|---|---|
+| Branch | الفرع الذي يحمل المشروع (`package.json` في جذره) |
+| Root directory | `/` |
+| Build command | `npm run build:cf` |
+| Deploy command | `npm run deploy` |
+
+- التثبيت يتم تلقائيًا بـ `npm ci` من `package-lock.json` (مع devDependencies التي تضم `@opennextjs/cloudflare` و`wrangler`).
+- `prebuild` ينسخ أصول OCR/PDF ويولّد أنواع Cloudflare (`cloudflare-env.d.ts`) قبل `next build`.
+- اسم الـ Worker في لوحة Cloudflare يجب أن يطابق `name` في `wrangler.jsonc` (`prof-baczone`).
+
+**قبل أول نشر:** حاوية R2 باسم `prof-baczone-content` (R2 ← Create bucket)، لأن `wrangler.jsonc` يربطها.
+
+**بعد النشر:**
+1. الدومين: Workers ← `prof-baczone` ← Settings ← Domains & Routes ← Add ← **Custom domain** ← `prof.baczone.app` (لا Route ولا `*.baczone.app`).
+2. Firebase ← Authentication ← Settings ← Authorized domains ← `prof.baczone.app`.
+3. الأسرار (Settings ← Variables and Secrets ← نوع Secret)، أو بالأوامر:
    ```bash
+   npx wrangler secret put FIREBASE_SERVICE_ACCOUNT   # محتوى ملف JSON لحساب الخدمة كاملًا
    npx wrangler secret put CHARGILY_SECRET_KEY
-   npx wrangler secret put FIREBASE_SERVICE_ACCOUNT   # الصق محتوى ملف JSON لحساب الخدمة كاملًا
    ```
-   **لا يُكتب أي سرّ في ملف داخل المستودع.** حساب الخدمة يحتاجه الخادم لكتابة الاشتراكات (التجربة، الدفع).
-5. حاوية R2 باسم `prof-baczone-content` لملفات المكتبة (الربط في `wrangler.jsonc`).
+   **لا يُكتب أي سرّ في ملف داخل المستودع.**
+
+محليًا: `npx wrangler login` ثم `npm run build:cf && npm run deploy`.
 
 ## Firebase
 

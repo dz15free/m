@@ -11,14 +11,15 @@
     "typecheck": "npm run cf-typegen --silent >/dev/null && next typegen && tsc --noEmit",
     "seed:billing": "node scripts/seed-billing.mjs",
     "brand": "node scripts/generate-brand-assets.mjs",
+    "build:cf": "opennextjs-cloudflare build",
+    "deploy": "opennextjs-cloudflare deploy",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "test:rules": "firebase emulators:exec --only firestore --project prof-baczone-rules-test \"node --test firebase/tests/*.test.mjs\"",
     "test:unit": "node --test \"src/**/*.test.ts\"",
     "vendor": "node scripts/copy-vendor-assets.mjs",
     "predev": "npm run vendor",
-    "prebuild": "npm run vendor"
+    "prebuild": "npm run vendor && npm run cf-typegen --silent"
   },
   "engines": {
     "node": ">=20.9"
