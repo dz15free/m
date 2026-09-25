@@ -9,9 +9,11 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "observability": { "enabled": true },
-  // ملفات المكتبة (خاصة): لا تُقدَّم إلا عبر /api/files بعد التحقق من الحساب والاشتراك
-  "r2_buckets": [{ "binding": "CONTENT", "bucket_name": "prof-baczone-content" }]
+  "observability": { "enabled": true }
+  // ملفات المكتبة (R2): بعد إنشاء الحاوية `prof-baczone-content` من لوحة Cloudflare (R2 ← Create bucket)
+  // أضف هذا السطر إلى الإعدادات أعلاه (بعد observability مع فاصلة):
+  //   "r2_buckets": [{ "binding": "CONTENT", "bucket_name": "prof-baczone-content" }]
+  // دونه يعمل الموقع كاملًا، وتردّ ميزات ملفات المكتبة فقط بـ «غير متاح» (503) بدل أن يفشل النشر.
   // الدومين (prof.baczone.app) يُربط من لوحة Cloudflare → Workers → Custom Domains
   // الأسرار تُضاف بـ: npx wrangler secret put CHARGILY_SECRET_KEY  (لا تُكتب هنا أبدًا)
 }

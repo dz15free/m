@@ -5,6 +5,8 @@ import { HttpError } from "./auth";
 /** حاوية R2 لملفات المكتبة (ربط Worker، بلا مفاتيح وصول). */
 export async function contentBucket(): Promise<R2Bucket> {
   const { env } = await getCloudflareContext({ async: true });
-  if (!env.CONTENT) throw new HttpError(503, "storage not configured");
-  return env.CONTENT;
+  // الربط اختياري: يُضاف في wrangler.jsonc بعد إنشاء الحاوية (وإلا 503 بدل فشل النشر)
+  const bucket = (env as { CONTENT?: R2Bucket }).CONTENT;
+  if (!bucket) throw new HttpError(503, "storage not configured");
+  return bucket;
 }
