@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { MORE_ITEMS } from "@/components/layout/nav-items";
 import { LocaleSwitcher } from "@/components/ui/locale-switcher";
 import { localeDir } from "@/i18n/config";
+import { AccountCard } from "@/features/auth/account";
 
 export async function generateMetadata() {
   const t = await getTranslations("more");
@@ -18,6 +19,8 @@ export default async function MorePage() {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-bold">{t("more.title")}</h1>
+
+      <AccountCard />
 
       <ul className="divide-y divide-line overflow-hidden rounded-card bg-surface shadow-card">
         {MORE_ITEMS.map(({ key, href, icon: Icon }) => (

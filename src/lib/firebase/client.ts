@@ -1,8 +1,9 @@
 "use client";
 
 import { getApp, getApps, initializeApp, type FirebaseApp } from "firebase/app";
-import { getAuth, type Auth } from "firebase/auth";
+import { connectAuthEmulator, getAuth, type Auth } from "firebase/auth";
 import {
+  connectFirestoreEmulator,
   getFirestore,
   initializeFirestore,
   persistentLocalCache,
@@ -45,6 +46,14 @@ export function getFirebase(): FirebaseClients {
     db = getFirestore(app);
   }
 
-  clients = { app, auth: getAuth(app), db };
+  const auth = getAuth(app);
+
+  // التطوير والاختبار على المحاكيات المحلية بدل المشروع الحقيقي
+  if (process.env.NEXT_PUBLIC_FIREBASE_EMULATORS === "true") {
+    connectAuthEmulator(auth, "http://127.0.0.1:9099", { disableWarnings: true });
+    connectFirestoreEmulator(db, "127.0.0.1", 8080);
+  }
+
+  clients = { app, auth, db };
   return clients;
 }

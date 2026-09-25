@@ -23,6 +23,7 @@ npm run dev                  # http://localhost:3000
 | `npm run lint` | ESLint |
 | `npm run typecheck` | أنواع المسارات + TypeScript |
 | `npm run build` | بناء Next.js |
+| `npm run test:rules` | اختبارات قواعد Firestore على المحاكي (تتطلب Java) |
 | `npm run brand` | إعادة توليد أصول الشعار من `brand/logo-full.webp` |
 | `npm run preview` | بناء Cloudflare وتشغيله محليًا |
 | `npm run deploy` | النشر على Cloudflare Workers |
@@ -37,6 +38,16 @@ npm run dev                  # http://localhost:3000
    npx wrangler secret put CHARGILY_SECRET_KEY
    ```
    **لا يُكتب أي سرّ في ملف داخل المستودع.**
+
+## Firebase
+
+- المشروع: `prof-baczone` (إعداد عام في `.env.production` / `.env.development` — قيم عامّة بطبيعتها).
+- القواعد والفهارس: `firebase/` — النشر: `npx firebase login` ثم `npx firebase deploy --only firestore`.
+- التطوير على المحاكيات: `npx firebase emulators:start --only auth,firestore` مع `NEXT_PUBLIC_FIREBASE_EMULATORS=true` في `.env.local`.
+- منح دور أدمن:
+  ```bash
+  GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/set-role.mjs you@example.com admin
+  ```
 
 ## الهيكل
 
@@ -54,6 +65,6 @@ src/lib/          firebase/ (المتصفح) · server/ (الخادم فقط) ·
 ## المراحل
 
 - [x] Phase 1 — الأساس: المشروع، الهوية، نظام التصميم، i18n، هيكل التطبيق، PWA manifest، CI، إعداد Cloudflare
-- [ ] Phase 2 — المصادقة
+- [x] Phase 2 — المصادقة: Google + بريد، تأكيد البريد، الاستعادة، حراسة المسارات، الأدوار، قواعد Firestore + اختبارات
 - [ ] Phase 3 — الملف المهني / المؤسسة / السنة الدراسية
 - [ ] Phase 4–16 — انظر `docs/ARCHITECTURE.md` §39

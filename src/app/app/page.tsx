@@ -4,6 +4,7 @@ import { CalendarClock, ChevronLeft, ChevronRight, Printer, Search, UserPlus, Us
 import { Card } from "@/components/ui/card";
 import { localeDir } from "@/i18n/config";
 import { formatLongDate } from "@/i18n/dates";
+import { Greeting } from "@/features/auth/account";
 
 /* «اليوم» — الشاشة الرئيسية. في هذه المرحلة تعرض خطوات التجهيز الأولى؛
    حصص اليوم والحضور والتقدّم تُملأ من البيانات بدءًا من Phase 5–10. */
@@ -27,7 +28,7 @@ export default async function TodayPage() {
     <div className="space-y-8">
       <header>
         <p className="text-sm text-muted">{formatLongDate(new Date(), locale)}</p>
-        <h1 className="mt-1 text-2xl font-bold sm:text-3xl">{t("greeting")}</h1>
+        <Greeting className="mt-1 text-2xl font-bold sm:text-3xl" />
       </header>
 
       <section aria-labelledby="next-steps" className="space-y-3">

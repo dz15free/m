@@ -1,11 +1,11 @@
 import { getTranslations } from "next-intl/server";
-import { LoginForm } from "@/features/auth/auth-forms";
+import { ResetForm } from "@/features/auth/auth-forms";
 
 export async function generateMetadata() {
   const t = await getTranslations("auth");
-  return { title: t("loginTitle") };
+  return { title: t("resetTitle") };
 }
 
 export default function Page() {
-  return <LoginForm />;
+  return <ResetForm />;
 }

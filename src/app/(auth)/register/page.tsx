@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { AuthSoon } from "../auth-soon";
+import { RegisterForm } from "@/features/auth/auth-forms";
 
 export async function generateMetadata() {
   const t = await getTranslations("auth");
@@ -7,5 +7,5 @@ export async function generateMetadata() {
 }
 
 export default function Page() {
-  return <AuthSoon titleKey="registerTitle" />;
+  return <RegisterForm />;
 }

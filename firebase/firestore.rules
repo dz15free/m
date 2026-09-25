@@ -1,0 +1,103 @@
+rules_version = '2';
+
+// ─────────────────────────────────────────────────────────────
+// مساعد الأستاذ — قواعد Firestore
+// المبدأ: كل شيء مغلق افتراضيًا، ثم يُفتح صراحةً.
+// الأدوار في Custom Claims (admin / contentEditor / finance)، لا في المستندات.
+// المال والاشتراكات تكتبها الخوادم وحدها (Service Account يتجاوز القواعد).
+// ─────────────────────────────────────────────────────────────
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
+    function isAdmin() { return signedIn() && request.auth.token.admin == true; }
+    function isEditor() { return isAdmin() || (signedIn() && request.auth.token.contentEditor == true); }
+
+    function isShortString(v, max) { return v is string && v.size() <= max; }
+    function changedOnly(keys) {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(keys);
+    }
+
+    // ── حساب المستخدم ────────────────────────────────────────
+    match /users/{uid} {
+      function validUser(d) {
+        return isShortString(d.displayName, 80)
+          && d.locale in ['ar', 'fr']
+          && d.onboardingDone is bool
+          && d.updatedAt == request.time;
+      }
+
+      allow read: if isOwner(uid) || isAdmin();
+
+      allow create: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(
+             ['displayName', 'email', 'locale', 'onboardingDone', 'createdAt', 'updatedAt'])
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.onboardingDone == false
+        && validUser(request.resource.data);
+
+      // email وcreatedAt ثابتان؛ onboardingDone لا يعود إلى false
+      allow update: if isOwner(uid)
+        && changedOnly(['displayName', 'locale', 'onboardingDone', 'updatedAt'])
+        && validUser(request.resource.data)
+        && (resource.data.onboardingDone == false || request.resource.data.onboardingDone == true);
+
+      allow delete: if false; // حذف الحساب عبر الخادم فقط (مع مهلة تراجع)
+    }
+
+    // ── مساحة الأستاذ: عزل تام، لا يصل إليها إلا صاحبها ──────
+    // (Validators لكل مجموعة تُضاف في مرحلتها: الأقسام، الحضور...)
+    match /teachers/{uid} {
+      allow read, create, update: if isOwner(uid);
+      allow delete: if false;
+
+      match /{document=**} {
+        allow read, write: if isOwner(uid);
+      }
+    }
+
+    // ── بيانات مرجعية عامّة يديرها الأدمن ────────────────────
+    match /config/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    match /taxonomy/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    match /academicYears/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    match /plans/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    match /contentCategories/{doc} {
+      allow read: if true;
+      allow write: if isEditor();
+    }
+
+    // ── الاشتراك والمال: قراءة للمالك، والكتابة للخادم وحده ──
+    match /entitlements/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow write: if false;
+    }
+    match /orders/{id} {
+      allow read: if isOwner(resource.data.uid) || isAdmin();
+      allow write: if false;
+    }
+    match /payments/{id} {
+      allow read: if isOwner(resource.data.uid) || isAdmin();
+      allow write: if false;
+    }
+    match /auditLogs/{id} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    // كل ما لم يُذكر أعلاه مغلق.
+  }
+}

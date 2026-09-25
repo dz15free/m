@@ -64,15 +64,58 @@
     },
     "importTitle": "Une longue liste ?",
     "importBody": "Photographiez-la, vérifiez-la, validez-la. La reconnaissance se fait sur votre téléphone : l'image n'est envoyée à aucun serveur.",
-    "importSteps": ["Photographier", "Vérifier", "Valider"],
+    "importSteps": [
+      "Photographier",
+      "Vérifier",
+      "Valider"
+    ],
     "ctaTitle": "Commencez l'année scolaire bien organisé",
     "footer": "مساعد الأستاذ"
   },
   "auth": {
     "loginTitle": "Connexion",
+    "loginSubtitle": "Heureux de vous retrouver dans votre bureau numérique.",
     "registerTitle": "Créer un compte",
-    "soon": "Les inscriptions ouvrent bientôt. Nous préparons votre bureau numérique.",
-    "backHome": "Retour à l'accueil"
+    "registerSubtitle": "Gratuit pour toujours. Moins d'une minute.",
+    "resetTitle": "Mot de passe oublié",
+    "resetSubtitle": "Saisissez votre e-mail, nous vous enverrons un lien pour choisir un nouveau mot de passe.",
+    "google": "Continuer avec Google",
+    "or": "ou",
+    "name": "Nom et prénom",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "passwordHint": "8 caractères minimum",
+    "submitLogin": "Se connecter",
+    "submitRegister": "Créer le compte",
+    "submitReset": "Envoyer le lien",
+    "forgot": "Mot de passe oublié ?",
+    "noAccount": "Pas encore de compte ?",
+    "hasAccount": "Déjà un compte ?",
+    "toRegister": "Créez un compte gratuit",
+    "toLogin": "Connectez-vous",
+    "backToLogin": "Retour à la connexion",
+    "resetSent": "Si cet e-mail est inscrit, vous recevrez un message dans quelques minutes. Pensez à vérifier les spams.",
+    "terms": "En créant un compte, vous acceptez les conditions d'utilisation et la politique de confidentialité.",
+    "signOut": "Se déconnecter",
+    "loading": "Chargement…",
+    "verifyTitle": "Confirmez votre e-mail",
+    "verifyBody": "Nous avons envoyé un lien de confirmation à",
+    "verifyResend": "Renvoyer",
+    "verifySent": "Envoyé",
+    "verifyDone": "C'est fait",
+    "errors": {
+      "invalidCredentials": "E-mail ou mot de passe incorrect.",
+      "emailInUse": "Cet e-mail est déjà inscrit. Connectez-vous plutôt.",
+      "weakPassword": "Mot de passe trop court : 8 caractères minimum.",
+      "invalidEmail": "Adresse e-mail invalide.",
+      "tooManyRequests": "Trop de tentatives. Patientez un peu puis réessayez.",
+      "network": "Connexion impossible. Vérifiez Internet puis réessayez.",
+      "popupClosed": "La fenêtre Google a été fermée avant la fin de la connexion.",
+      "accountExists": "Cet e-mail utilise une autre méthode de connexion. Essayez e-mail et mot de passe.",
+      "unauthorizedDomain": "Ce domaine n'est pas encore autorisé pour la connexion.",
+      "notConfigured": "Le service n'est pas encore configuré.",
+      "generic": "Une erreur inattendue s'est produite. Réessayez."
+    }
   },
   "today": {
     "greeting": "Bienvenue 👋",
@@ -93,7 +136,8 @@
     },
     "quickActions": "Actions rapides",
     "search": "Chercher dans la bibliothèque",
-    "print": "Imprimer un document"
+    "print": "Imprimer un document",
+    "greetingName": "Bonjour {name} 👋"
   },
   "more": {
     "title": "Plus"

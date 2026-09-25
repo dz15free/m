@@ -17,3 +17,9 @@ service-account*.json
 
 .DS_Store
 npm-debug.log*
+
+# Firebase
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+.firebase/

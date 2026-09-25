@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Logo } from "@/components/brand/logo";
 import { buttonClass } from "@/components/ui/button";
 import { LocaleSwitcher } from "@/components/ui/locale-switcher";
+import { AccountCard } from "@/features/auth/account";
 import { NAV, SIDEBAR_PRIMARY, SIDEBAR_SECONDARY, type NavItem } from "./nav-items";
 import { NavLink } from "./nav-link";
 
@@ -44,6 +45,7 @@ export async function Sidebar() {
         <div className="space-y-4 border-t border-line pt-4">
           <ul className="space-y-1">{renderItems(SIDEBAR_SECONDARY)}</ul>
           <LocaleSwitcher />
+          <AccountCard compact />
         </div>
       </nav>
     </aside>
