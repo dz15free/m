@@ -8,6 +8,11 @@ import { serverEnv } from "./env";
 function secret(): string {
   const key = serverEnv().CHARGILY_SECRET_KEY;
   if (!key) throw new HttpError(503, "payments not configured");
+  // خطأ شائع: وضع المفتاح العام (pk) بدل السري (sk)
+  if (!/^(test|live)_sk_/.test(key) && !usingEmulators()) {
+    console.error("[chargily] CHARGILY_SECRET_KEY must be the secret key (test_sk_… / live_sk_…), not the public key");
+    throw new HttpError(503, "payments misconfigured");
+  }
   return key;
 }
 
