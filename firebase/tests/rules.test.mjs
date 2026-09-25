@@ -324,6 +324,17 @@ describe("دفاتر الأستاذ", () => {
     await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "trainings", "t1")));
   });
 
+  it("بطاقة الحالة الشخصية والمهنية: لصاحبها فقط", async () => {
+    const keys = ["birthDate", "birthPlace", "birthWilaya", "familyStatus", "spouseJob", "address", "phone", "teachingLanguage", "firstDay", "schoolAppointment", "lastInspection", "inspector", "step", "stepDate"];
+    const card = { ...Object.fromEntries(keys.map((k) => [k, ""])), phone: "0555", updatedAt: serverTimestamp() };
+    await assertSucceeds(setDoc(doc(dbAs(A), "teachers", A.uid, "private", "card"), card));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "private", "other"), card));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "private", "card"), { ...card, salary: "1" }));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "private", "card"), { ...card, address: "x".repeat(121) }));
+    await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "private", "card")));
+    await assertFails(getDoc(doc(dbAs(A, { admin: true }), "teachers", B.uid, "private", "card")));
+  });
+
   it("دفتر التحضير (المذكرات)", async () => {
     const ref = doc(dbAs(A), "teachers", A.uid, "preps", "p1");
     const phase = { situation: "نص", assessment: "" };

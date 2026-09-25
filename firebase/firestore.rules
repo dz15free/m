@@ -251,6 +251,24 @@ service cloud.firestore {
         allow create, update: if isOwner(uid) && validPrep(request.resource.data);
       }
 
+      // بطاقة الحالة الشخصية والمهنية: بيانات خاصة لا يقرؤها إلا صاحبها
+      match /private/{docId} {
+        function validCard(d) {
+          return docId == 'card'
+            && d.keys().hasOnly(['birthDate', 'birthPlace', 'birthWilaya', 'familyStatus', 'spouseJob', 'address', 'phone', 'teachingLanguage', 'firstDay', 'schoolAppointment', 'lastInspection', 'inspector', 'step', 'stepDate', 'updatedAt'])
+            && d.keys().hasAll(['birthDate', 'birthPlace', 'birthWilaya', 'familyStatus', 'spouseJob', 'address', 'phone', 'teachingLanguage', 'firstDay', 'schoolAppointment', 'lastInspection', 'inspector', 'step', 'stepDate'])
+            && isShortString(d.birthDate, 10) && isShortString(d.birthPlace, 120) && isShortString(d.birthWilaya, 120)
+            && isShortString(d.familyStatus, 120) && isShortString(d.spouseJob, 120) && isShortString(d.address, 120)
+            && isShortString(d.phone, 120) && isShortString(d.teachingLanguage, 120) && isShortString(d.firstDay, 10)
+            && isShortString(d.schoolAppointment, 10) && isShortString(d.lastInspection, 10) && isShortString(d.inspector, 120)
+            && isShortString(d.step, 120) && isShortString(d.stepDate, 10)
+            && d.updatedAt == request.time;
+        }
+        allow read: if isOwner(uid) && docId == 'card';
+        allow create, update: if isOwner(uid) && validCard(request.resource.data);
+        allow delete: if isOwner(uid);
+      }
+
       // السنوات الدراسية للأستاذ — المعرّف هو معرّف السنة نفسه (2026-2027)
       match /years/{yearId} {
         allow read: if isOwner(uid);

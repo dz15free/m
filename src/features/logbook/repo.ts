@@ -16,6 +16,7 @@ import {
   where,
 } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
+import { cleanCard, type TeacherCard } from "./front-logic";
 import {
   cleanLesson,
   cleanPrep,
@@ -117,4 +118,17 @@ export async function savePrep(uid: string, p: PrepEntry, id?: string): Promise<
 
 export async function removePrep(uid: string, id: string) {
   await deleteDoc(doc(prepsCol(uid), id));
+}
+
+// ── بطاقة الحالة الشخصية والمهنية (خاصة بالأستاذ وحده) ──
+
+const cardRef = (uid: string) => doc(db(), "teachers", uid, "private", "card");
+
+export async function getCard(uid: string): Promise<TeacherCard> {
+  const snap = await getDoc(cardRef(uid));
+  return cleanCard(snap.exists() ? (snap.data() as Partial<TeacherCard>) : {});
+}
+
+export async function saveCard(uid: string, card: TeacherCard) {
+  await setDoc(cardRef(uid), { ...cleanCard(card), updatedAt: serverTimestamp() });
 }

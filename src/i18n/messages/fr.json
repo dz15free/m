@@ -503,7 +503,11 @@
         "title": "Cahier de notes",
         "body": "Relevé de notes et résultats de chaque trimestre — avec l'évaluation."
       },
-      "soon": "Bientôt"
+      "soon": "Bientôt",
+      "front": {
+        "title": "Pages de garde",
+        "body": "Couverture, fiche de renseignements, listes d'élèves, emploi du temps, volume horaire, vacances."
+      }
     },
     "daily": {
       "title": "Cahier journal",
@@ -667,6 +671,87 @@
         "assessment": "Ce que vous vérifiez…"
       },
       "updated": "Modifiée le"
+    },
+    "front": {
+      "title": "Pages de garde des cahiers",
+      "intro": "Choisissez le cahier et les pages : elles sont remplies depuis votre profil, vos classes et votre emploi du temps ; le reste s'imprime en pointillés à compléter à la main.",
+      "notebook": "Cahier",
+      "pages": "Pages",
+      "print": "Imprimer les pages choisies",
+      "sections": {
+        "cover": "Couverture",
+        "card": "Fiche de renseignements",
+        "students": "Listes des élèves",
+        "timetable": "Emploi du temps hebdomadaire",
+        "load": "Répartition des matières et volume horaire",
+        "holidays": "Vacances scolaires",
+        "surahs": "Liste des sourates",
+        "songs": "Liste des chants et récitations"
+      },
+      "cardTitle": "Fiche de renseignements personnels et professionnels",
+      "cardHint": "Données privées : vous seul(e) y avez accès, et elles ne s'impriment que si vous le choisissez.",
+      "cardSave": "Enregistrer la fiche",
+      "cardSaved": "Fiche enregistrée",
+      "edit": "Modifier la fiche",
+      "close": "Fermer",
+      "groups": {
+        "personal": "Situation personnelle",
+        "career": "Situation professionnelle",
+        "inspection": "Inspection",
+        "step": "Échelon"
+      },
+      "fields": {
+        "lastName": "Nom",
+        "firstName": "Prénom",
+        "birthDate": "Date de naissance",
+        "birthPlace": "Lieu de naissance",
+        "birthWilaya": "Wilaya",
+        "familyStatus": "Situation familiale",
+        "spouseJob": "Profession du conjoint",
+        "address": "Adresse personnelle",
+        "phone": "Téléphone",
+        "grade": "Grade",
+        "teachingLanguage": "Langue d'enseignement",
+        "firstDay": "Date de première prise de fonction",
+        "schoolAppointment": "Date d'affectation à l'école",
+        "lastInspection": "Date de la dernière inspection",
+        "inspector": "Par M./Mme l'inspecteur(trice)",
+        "step": "Échelon actuel",
+        "stepDate": "Date d'effet"
+      },
+      "republic": "République Algérienne Démocratique et Populaire",
+      "ministry": "Ministère de l'Éducation Nationale",
+      "yearLabel": "Année scolaire",
+      "coverTitles": {
+        "daily": "Cahier journal",
+        "prep": "Cahier de préparation",
+        "grades": "Cahier de notes",
+        "training": "Cahier de formation et séminaires"
+      },
+      "studentsTitle": "Liste des élèves",
+      "num": "N°",
+      "fullName": "Nom et prénom",
+      "birth": "Date de naissance",
+      "remarks": "Observations",
+      "class": "Classe",
+      "morning": "Matinée",
+      "afternoon": "Après-midi",
+      "time": "Horaire",
+      "noSchedule": "Emploi du temps vide : la grille s'imprime vierge.",
+      "subject": "Matière",
+      "sessions": "Séances",
+      "weekly": "Volume horaire hebdomadaire",
+      "total": "Total",
+      "holidaysTitle": "Vacances scolaires",
+      "holiday": "Vacances / occasion",
+      "from": "Du",
+      "to": "Au",
+      "autumn": "Vacances d'automne",
+      "winter": "Vacances d'hiver",
+      "spring": "Vacances de printemps",
+      "surah": "Sourate",
+      "song": "Chant / récitation",
+      "page": "Page"
     }
   }
 }
