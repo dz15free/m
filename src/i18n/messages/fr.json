@@ -904,7 +904,8 @@
     "needTitle": "Saisissez au moins un titre.",
     "needFile": "Ajoutez au moins un fichier avant de publier.",
     "publishedAt": "Publié",
-    "count": "{n} éléments"
+    "count": "{n} éléments",
+    "notify": "Notifier tous les enseignants"
   },
   "documents": {
     "title": "Documents",
@@ -1082,21 +1083,16 @@
     "guarantee": "À la fin d'un abonnement rien n'est supprimé : classes, élèves et cahiers restent ; seules la création au-delà des limites gratuites et le contenu payant sont bloqués.",
     "checkout": {
       "title": "S'abonner à {plan}",
-      "amount": "Montant",
       "method": "Moyen de paiement",
       "back": "Abonnement",
       "methods": {
         "chargily": {
           "title": "Carte Edahabia ou CIB",
-          "body": "Paiement sécurisé instantané via Chargily, activation automatique."
+          "body": "Paiement sécurisé instantané via Chargily, activation automatique en quelques secondes."
         },
-        "baridimob": {
-          "title": "BaridiMob",
-          "body": "Virement depuis votre téléphone puis envoi de la capture du reçu."
-        },
-        "ccp": {
-          "title": "Compte CCP",
-          "body": "Paiement au bureau de poste puis envoi de la photo du reçu."
+        "contact": {
+          "title": "Contacter l'administration",
+          "body": "Écrivez-nous pour un autre moyen de paiement ou toute question ; nous activons votre abonnement manuellement."
         }
       },
       "payCard": "Payer par carte",
@@ -1105,36 +1101,9 @@
       "tooMany": "Trop de tentatives. Réessayez dans une heure.",
       "notConfigured": "Ce moyen n'est pas disponible pour le moment.",
       "unavailable": "Cette formule n'est pas en vente pour le moment.",
-      "steps": "Étapes",
-      "copy": "Copier",
-      "copied": "Copié",
-      "rip": "RIP",
-      "holder": "Titulaire",
-      "account": "N° de compte",
-      "key": "Clé",
-      "ref": "Référence de paiement",
-      "refHint": "Indiquez-la dans le motif si possible, pour faciliter la vérification.",
-      "baridiSteps": [
-        "Ouvrez BaridiMob → Virement.",
-        "Collez le RIP ci-dessus et saisissez le montant exact.",
-        "Validez et gardez une capture du reçu."
-      ],
-      "ccpSteps": [
-        "Au bureau de poste : mandat ou chèque vers le compte ci-dessus, montant exact.",
-        "Photographiez clairement le reçu."
-      ],
-      "proof": "Envoyer la preuve de paiement",
-      "declared": "Montant payé (DA)",
-      "paidAt": "Date du paiement",
-      "txRef": "N° d'opération / reçu (facultatif)",
-      "receipt": "Photo du reçu (ou PDF)",
-      "pickReceipt": "Choisir la photo du reçu",
-      "submit": "Envoyer pour vérification",
-      "sending": "Envoi…",
-      "sendError": "Échec de l'envoi. Vérifiez la connexion et réessayez.",
-      "receiptTooBig": "Fichier trop lourd (max 5 Mo).",
-      "sent": "Preuve de paiement reçue ✓",
-      "sentBody": "Nous la vérifions et activons votre abonnement, généralement sous 24 h. Suivez son état sur la page Abonnement."
+      "secure": "Le paiement se fait sur la page sécurisée de Chargily ; nous ne voyons pas votre carte.",
+      "contactBody": "Premium à {price}. Écrivez-nous : nous vous indiquons comment payer et activons votre abonnement dès confirmation.",
+      "contactCta": "Écrire à l'administration"
     },
     "return": {
       "checking": "Confirmation du paiement…",
@@ -1147,36 +1116,216 @@
       "toBilling": "Page Abonnement",
       "retry": "Réessayer",
       "continue": "Continuer"
-    },
-    "myPayments": "Mes demandes",
-    "mpStatus": {
-      "pending": "En vérification",
-      "approved": "Acceptée",
-      "rejected": "Refusée"
-    },
-    "resend": "Renvoyer",
-    "adminNote": "Note du vérificateur"
+    }
   },
-  "paymentsAdmin": {
-    "title": "Vérification des paiements",
-    "link": "Vérifier les paiements",
-    "forbidden": "Page réservée aux finances et à l'admin.",
-    "empty": "Aucun paiement en attente. 👌",
-    "pending": "{n} en attente",
-    "expected": "Attendu",
-    "declared": "Déclaré",
-    "paidAt": "Payé le",
-    "txRef": "N° d'opération",
-    "ref": "Référence",
-    "viewReceipt": "Voir le reçu",
-    "warnAmount": "Le montant déclaré diffère du prix de la formule",
-    "warnReceipt": "Le même reçu figure dans {n} autre(s) demande(s)",
-    "warnRef": "Le même n° d'opération figure dans {n} autre(s) demande(s)",
-    "note": "Note (obligatoire en cas de refus)",
-    "approve": "Accepter et activer",
-    "reject": "Refuser",
-    "done": "Vérifié",
-    "error": "Échec de l'opération. Réessayez.",
-    "needNote": "Indiquez le motif du refus."
+  "support": {
+    "fab": "Contacter l'administration",
+    "title": "Contacter l'administration",
+    "subtitle": "Posez-nous toute question : abonnement, utilisation ou suggestion.",
+    "hours": "Nous répondons généralement sous un jour ouvré.",
+    "placeholder": "Écrivez votre message…",
+    "send": "Envoyer",
+    "empty": "Bonjour 👋 Comment pouvons-nous vous aider ?",
+    "you": "Vous",
+    "admin": "Administration",
+    "close": "Fermer",
+    "error": "Échec de l'envoi. Réessayez.",
+    "whatsapp": "WhatsApp",
+    "email": "E-mail",
+    "newReply": "Nouvelle réponse de l'administration",
+    "subscribeText": "Bonjour, je souhaite m'abonner à Premium. Comment payer ?"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "titleUnread": "Notifications — nouveau",
+    "empty": "Aucune notification.",
+    "close": "Fermer",
+    "new": "Nouveau"
+  },
+  "pwa": {
+    "install": "Installer l'application",
+    "installShort": "Installer",
+    "guideTitle": "Installez Assistant du prof",
+    "guideBody": "Ouvrez-la depuis votre écran d'accueil comme une application, plus rapide et sans barre de navigateur.",
+    "ios1": "Touchez le bouton Partager en bas de Safari",
+    "ios2": "Choisissez « Sur l'écran d'accueil »",
+    "ios3": "Touchez « Ajouter » — l'application apparaît avec vos applis",
+    "iosNote": "Sur iPhone, l'installation se fait depuis Safari.",
+    "manual1": "Ouvrez le menu du navigateur (⋮)",
+    "manual2": "Choisissez « Installer l'application » ou « Ajouter à l'écran d'accueil »",
+    "ok": "Compris",
+    "close": "Fermer",
+    "banner": "Annonce de l'administration"
+  },
+  "admin": {
+    "title": "Administration",
+    "backToApp": "Retour à l'application",
+    "forbidden": "Espace réservé à l'équipe d'administration.",
+    "link": "Administration",
+    "nav": {
+      "dashboard": "Accueil",
+      "teachers": "Enseignants",
+      "content": "Contenu",
+      "plans": "Formules et prix",
+      "payments": "Paiements",
+      "notifications": "Notifications",
+      "settings": "Bandeau et contact",
+      "support": "Messages",
+      "audit": "Journal"
+    },
+    "dash": {
+      "teachers": "Enseignants inscrits",
+      "newWeek": "Nouveaux cette semaine",
+      "activeSubs": "Abonnements et essais en cours",
+      "trials": "Essais démarrés (total)",
+      "unread": "Messages non lus",
+      "monthGross": "Revenus du mois",
+      "yearGross": "Revenus des 12 derniers mois",
+      "net": "Net",
+      "fees": "Frais de paiement",
+      "revenueChart": "Revenus mensuels (DA)",
+      "count": "{n} paiements",
+      "noRevenue": "Aucun revenu pour l'instant."
+    },
+    "teachers": {
+      "search": "Rechercher par e-mail (début)",
+      "joined": "Inscrit",
+      "onboarded": "Configuré",
+      "notOnboarded": "Non configuré",
+      "more": "Charger plus",
+      "empty": "Aucun résultat.",
+      "open": "Gérer",
+      "plan": "Abonnement",
+      "until": "jusqu'au {date}",
+      "free": "Gratuit",
+      "trial": "Essai",
+      "active": "Premium",
+      "school": "École",
+      "grade": "Grade",
+      "wilaya": "Wilaya",
+      "grant": "Activer Premium manuellement",
+      "days": "Durée (jours)",
+      "amount": "Montant reçu (DA, 0 = offert)",
+      "note": "Note",
+      "grantCta": "Activer",
+      "granted": "Activé jusqu'au {date}",
+      "revoke": "Annuler l'abonnement",
+      "revokeConfirm": "Annuler l'abonnement maintenant ? Toutes ses données restent.",
+      "revoked": "Abonnement annulé",
+      "roles": "Rôles",
+      "roleNames": {
+        "admin": "Admin (tous les droits)",
+        "contentEditor": "Éditeur de contenu",
+        "finance": "Finances"
+      },
+      "saveRoles": "Enregistrer les rôles",
+      "rolesSaved": "Rôles enregistrés (effectifs à sa prochaine connexion)",
+      "selfAdmin": "Vous ne pouvez pas retirer votre propre rôle admin.",
+      "message": "Lui écrire",
+      "privacy": "Les classes, élèves et notes de l'enseignant n'apparaissent pas ici : ils lui sont privés."
+    },
+    "plans": {
+      "free": "Formule gratuite",
+      "premium": "Premium",
+      "name": "Nom",
+      "description": "Description",
+      "price": "Prix (DA)",
+      "days": "Durée (jours)",
+      "maxClasses": "Limite de classes",
+      "active": "En vente",
+      "trialEligible": "Éligible à l'essai",
+      "trialDays": "Durée de l'essai gratuit (jours)",
+      "save": "Enregistrer",
+      "saved": "Enregistré"
+    },
+    "payments": {
+      "recent": "Derniers paiements",
+      "date": "Date",
+      "teacher": "Enseignant",
+      "method": "Moyen",
+      "gross": "Montant",
+      "fees": "Frais",
+      "net": "Net",
+      "until": "Valable jusqu'au",
+      "methods": {
+        "chargily": "Chargily",
+        "admin": "Manuel (admin)"
+      },
+      "csv": "Exporter CSV",
+      "empty": "Aucun paiement.",
+      "orders": "Dernières commandes Chargily",
+      "status": {
+        "pending": "En attente",
+        "paid": "Payée",
+        "failed": "Échouée",
+        "mismatch": "Montant non conforme"
+      }
+    },
+    "notif": {
+      "compose": "Nouvelle notification pour tous",
+      "titleAr": "Titre en arabe",
+      "titleFr": "Titre en français",
+      "bodyAr": "Texte en arabe",
+      "bodyFr": "Texte en français",
+      "link": "Lien (facultatif, ex. /app/library)",
+      "kind": "Type",
+      "kinds": {
+        "news": "Actualité",
+        "update": "Nouveauté",
+        "content": "Nouveau contenu",
+        "offer": "Offre"
+      },
+      "publish": "Publier",
+      "published": "Publiée ✓",
+      "history": "Notifications publiées",
+      "delete": "Supprimer",
+      "deleteConfirm": "Supprimer cette notification ?",
+      "empty": "Aucune notification."
+    },
+    "settings": {
+      "banner": "Bandeau sous l'en-tête",
+      "enabled": "Activé",
+      "textAr": "Texte en arabe",
+      "textFr": "Texte en français",
+      "link": "Lien au clic (facultatif)",
+      "tone": "Couleur",
+      "tones": {
+        "info": "Information",
+        "success": "Succès",
+        "warning": "Alerte",
+        "promo": "Offre"
+      },
+      "preview": "Aperçu",
+      "contact": "Contact",
+      "whatsapp": "Numéro WhatsApp (format international, ex. 213555000000)",
+      "email": "E-mail de contact",
+      "hoursAr": "Horaires de réponse (arabe)",
+      "hoursFr": "Horaires de réponse (français)",
+      "save": "Enregistrer",
+      "saved": "Enregistré"
+    },
+    "support": {
+      "threads": "Conversations",
+      "empty": "Aucun message.",
+      "pick": "Choisissez une conversation.",
+      "reply": "Votre réponse…",
+      "send": "Envoyer",
+      "close": "Clôturer",
+      "reopen": "Rouvrir",
+      "closed": "Clôturée",
+      "teacher": "Enseignant",
+      "back": "Conversations"
+    },
+    "audit": {
+      "empty": "Aucune opération.",
+      "actions": {
+        "trial_start": "Début d'essai",
+        "payment_activate": "Activation après paiement",
+        "payment_mismatch": "Paiement non conforme",
+        "admin_grant": "Activation manuelle",
+        "admin_revoke": "Annulation",
+        "admin_roles": "Modification des rôles"
+      }
+    }
   }
 }

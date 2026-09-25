@@ -168,3 +168,10 @@
     }
   }
 }
+
+/* زر التواصل العائم يرتفع فوق أشرطة الحفظ الثابتة حين تكون في الصفحة */
+@media (max-width: 1023px) {
+  body:has([data-sticky-bar]) .contact-fab {
+    bottom: 11rem;
+  }
+}

@@ -11,22 +11,25 @@ export type PaymentInput = {
   uid: string;
   planId: string;
   paymentId: string;
-  method: "chargily" | "baridimob" | "ccp";
+  method: "chargily" | "admin";
   gross: number;
   fees: number;
   feesPassedToCustomer?: boolean;
-  sourceId: string; // معرّف الطلب أو الدفعة اليدوية
+  sourceId: string; // معرّف الطلب أو عملية الأدمن
+  /** مدة مخصّصة (تفعيل يدوي من الأدمن)؛ وإلا مدة الخطة */
+  days?: number;
 };
 
 export async function activationWrites(p: PaymentInput, now = Date.now()): Promise<{ writes: Write[]; until: number }> {
   const plan = (await adminGet(`plans/${p.planId}`))?.data as Partial<Plan> | undefined;
-  if (!plan || !plan.durationDays) throw new HttpError(409, "plan unavailable");
+  const days = p.days ?? plan?.durationDays;
+  if (!plan || !days) throw new HttpError(409, "plan unavailable");
 
   const current = await adminGet(`entitlements/${p.uid}`);
   const ent = (current?.data ?? null) as Partial<Entitlement> | null;
   const eff = effectivePlan(ent, null, now);
   // التجديد المبكر أو الانتقال من التجربة يُضاف فوق الأيام المتبقية
-  const until = renewEnd(eff.status === "free" ? null : eff.endsAt, now, plan.durationDays);
+  const until = renewEnd(eff.status === "free" ? null : eff.endsAt, now, days);
   const net = netOf(p.gross, p.fees, !!p.feesPassedToCustomer);
   const month = revenueMonth(now);
 
@@ -41,7 +44,7 @@ export async function activationWrites(p: PaymentInput, now = Date.now()): Promi
         features: plan.features ?? [],
         contentAccess: plan.contentAccess ?? "premium",
         trialUsedAt: typeof ent?.trialUsedAt === "number" ? new Date(ent.trialUsedAt) : null,
-        source: p.method === "chargily" ? "chargily" : "manual",
+        source: p.method === "chargily" ? "chargily" : "admin",
         lastPaymentId: p.paymentId,
         updatedAt: new Date(now),
       },
@@ -75,6 +78,21 @@ export async function activationWrites(p: PaymentInput, now = Date.now()): Promi
         [`byPlan.${p.planId}`]: p.gross,
       },
     },
+    // إشعار شخصي للأستاذ + تاريخ آخر إشعار (يضيء الجرس)
+    {
+      path: `teachers/${p.uid}/notifications/${p.paymentId}`,
+      data: {
+        kind: "billing",
+        title: { ar: "تم تفعيل اشتراكك 🎉", fr: "Votre abonnement est activé 🎉" },
+        body: {
+          ar: `اشتراكك صالح حتى ${new Date(until).toISOString().slice(0, 10).split("-").reverse().join("/")}. شكرًا لثقتك!`,
+          fr: `Votre abonnement est valable jusqu'au ${new Date(until).toISOString().slice(0, 10).split("-").reverse().join("/")}. Merci !`,
+        },
+        link: "/app/billing",
+        createdAt: new Date(now),
+      },
+    },
+    { path: `teachers/${p.uid}/prefs/notifications`, data: { personalLatestAt: new Date(now) }, merge: true },
     {
       path: `auditLogs/${p.paymentId}`,
       data: { action: "payment.activate", uid: p.uid, planId: p.planId, method: p.method, gross: p.gross, until: new Date(until), at: new Date(now) },

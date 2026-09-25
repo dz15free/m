@@ -10,7 +10,8 @@ import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field, SelectField } from "@/components/ui/field";
 import { useAuth } from "@/features/auth/auth-provider";
-import { useTaxonomy } from "@/features/classes/hooks";
+import { useTaxonomy, useUid } from "@/features/classes/hooks";
+import { publishAnnouncement } from "@/features/notifications/repo";
 import { STAGES, type Stage } from "@/shared/dz/education";
 import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
@@ -64,7 +65,7 @@ function AdminList() {
             <option key={s} value={s}>{tp(s)}</option>
           ))}
         </SelectField>
-        <Link href={`/app/manage/content/new?stage=${stage}`} className={buttonClass("primary")}>
+        <Link href={`/admin/content/new?stage=${stage}`} className={buttonClass("primary")}>
           <Plus aria-hidden className="size-4" />
           {t("new")}
         </Link>
@@ -81,7 +82,7 @@ function AdminList() {
           <ul className="divide-y divide-line overflow-hidden rounded-card bg-surface shadow-card">
             {list.data.map((c) => (
               <li key={c.id}>
-                <Link href={`/app/manage/content/${c.id}`} className="flex items-center gap-3 px-4 py-3 hover:bg-brand-50">
+                <Link href={`/admin/content/${c.id}`} className="flex items-center gap-3 px-4 py-3 hover:bg-brand-50">
                   <span className="min-w-0 flex-1">
                     <span dir="auto" className="block truncate font-medium">{titleOf(c.title, locale)}</span>
                     <span className="block truncate text-xs text-muted">
@@ -160,12 +161,15 @@ function EditorForm({ id, initial }: { id?: string; initial: ContentDoc }) {
   const locale = useLocale() as "ar" | "fr";
   const router = useRouter();
   const queryClient = useQueryClient();
+  const uid = useUid();
   const [draft, setDraft] = useState<ContentDoc>(initial);
   const [tags, setTags] = useState(initial.tags.join("، "));
   // بعد الإنشاء ننتقل إلى الرابط الدائم مع ?saved=1 ليبقى تأكيد الحفظ ظاهرًا
   const [state, setState] = useState<"idle" | "saving" | "saved" | "error">(useSearchParams().get("saved") === "1" ? "saved" : "idle");
   const [problem, setProblem] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
+  // إشعار الأساتذة عند أول نشر (أو عند الطلب)
+  const [notify, setNotify] = useState(initial.status !== "published");
   const fileInput = useRef<HTMLInputElement>(null);
   const previewInput = useRef<HTMLInputElement>(null);
   const tax = useTaxonomy(draft.stage);
@@ -208,11 +212,20 @@ function EditorForm({ id, initial }: { id?: string; initial: ContentDoc }) {
     setState("saving");
     try {
       const newId = await saveContent(next, id);
+      if (notify && next.status === "published" && uid) {
+        await publishAnnouncement(uid, {
+          kind: "content",
+          title: { ar: next.title.ar ? `جديد في المكتبة: ${next.title.ar}` : "", fr: next.title.fr ? `Nouveau : ${next.title.fr}` : "" },
+          body: { ar: next.excerpt, fr: "" },
+          link: `/app/library/${newId}`,
+        }).catch(() => {});
+        setNotify(false);
+      }
       await queryClient.invalidateQueries({ queryKey: ["contentsAdmin"] });
       await queryClient.invalidateQueries({ queryKey: ["contentIndex", next.stage] });
       queryClient.removeQueries({ queryKey: ["content", newId] });
       setState("saved");
-      if (!id) router.replace(`/app/manage/content/${newId}?saved=1`);
+      if (!id) router.replace(`/admin/content/${newId}?saved=1`);
     } catch {
       setState("error");
     }
@@ -222,7 +235,7 @@ function EditorForm({ id, initial }: { id?: string; initial: ContentDoc }) {
     if (!id || !window.confirm(t("deleteConfirm"))) return;
     await deleteContent(id, initial.stage, draft.files, draft.previewKey);
     await queryClient.invalidateQueries({ queryKey: ["contentsAdmin"] });
-    router.replace("/app/manage/content");
+    router.replace("/admin/content");
   }
 
   const taxonomy = tax.data;
@@ -356,7 +369,14 @@ function EditorForm({ id, initial }: { id?: string; initial: ContentDoc }) {
       {problem && <p role="alert" className="text-sm font-medium text-red-700">{problem}</p>}
       {state === "error" && <p role="alert" className="text-sm font-medium text-red-700">{t("saveError")}</p>}
 
-      <div className="sticky bottom-24 z-10 flex flex-wrap items-center gap-2 rounded-card bg-surface/95 p-3 shadow-float backdrop-blur lg:bottom-4">
+      {draft.status === "published" && (
+        <label className="flex min-h-11 items-center gap-2 text-sm font-medium">
+          <input type="checkbox" checked={notify} onChange={(e) => setNotify(e.target.checked)} className="size-5 accent-brand-700" />
+          {t("notify")}
+        </label>
+      )}
+
+      <div data-sticky-bar className="sticky bottom-24 z-10 flex flex-wrap items-center gap-2 rounded-card bg-surface/95 p-3 shadow-float backdrop-blur lg:bottom-4">
         <select
           value={draft.status}
           onChange={(e) => set("status", e.target.value as ContentDoc["status"])}

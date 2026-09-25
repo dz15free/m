@@ -134,7 +134,7 @@ export function SettingsForm() {
         </div>
       </Card>
 
-      <div className="sticky bottom-24 z-10 flex items-center gap-3 lg:bottom-6">
+      <div data-sticky-bar className="sticky bottom-24 z-10 flex items-center gap-3 lg:bottom-6">
         <button type="submit" disabled={state === "saving"} className={buttonClass("primary", "lg", "shadow-lg")}>
           {state === "saving" && <LoaderCircle aria-hidden className="size-5 animate-spin" />}
           {t("save")}

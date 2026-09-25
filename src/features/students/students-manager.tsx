@@ -286,7 +286,7 @@ function Manager({ cls }: { cls: ClassDoc }) {
 
       {/* شريط الإجراءات الجماعية */}
       {selecting && (
-        <div className="sticky bottom-24 z-10 flex flex-wrap items-center gap-2 rounded-card bg-ink p-3 text-white shadow-lg lg:bottom-6">
+        <div data-sticky-bar className="sticky bottom-24 z-10 flex flex-wrap items-center gap-2 rounded-card bg-ink p-3 text-white shadow-lg lg:bottom-6">
           <span className="px-2 text-sm font-medium">{t("selected", { count: selected.size })}</span>
           <button
             type="button"

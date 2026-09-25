@@ -154,13 +154,14 @@ describe("teachers/{uid} — الملف المهني", () => {
     await assertFails(updateDoc(doc(db, "teachers", A.uid, "years", "2026-2027"), { label: "x" }));
   });
 
-  it("أستاذ آخر لا يقرأ ولا يكتب — ولا الأدمن", async () => {
+  it("أستاذ آخر لا يقرأ ولا يكتب؛ الأدمن يرى الملف المهني وحده", async () => {
     await setDoc(doc(dbAs(A), "teachers", A.uid), teacher());
     await setDoc(doc(dbAs(A), "teachers", A.uid, "schools", "s1"), school());
     await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid)));
     await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "schools", "s1")));
     await assertFails(setDoc(doc(dbAs(B), "teachers", A.uid, "schools", "s9"), school()));
-    await assertFails(getDoc(doc(dbAs(B, { admin: true }), "teachers", A.uid)));
+    await assertSucceeds(getDoc(doc(dbAs(B, { admin: true }), "teachers", A.uid)));
+    await assertFails(getDoc(doc(dbAs(B, { admin: true }), "teachers", A.uid, "schools", "s1")));
   });
 
   it("المجموعات الفرعية غير المعرّفة بعد مغلقة حتى للمالك", async () => {
@@ -425,33 +426,81 @@ describe("حدود الخطة", () => {
   });
 });
 
-describe("الدفع اليدوي", () => {
-  const asAdmin = (fn) => env.withSecurityRulesDisabled((ctx) => fn(ctx.firestore()));
-  const mp = (extra = {}) => ({
-    uid: A.uid, teacherName: "كريم", email: A.email, planId: "premium", expectedAmount: 2500, declaredAmount: 2500,
-    method: "baridimob", paidAt: "2026-09-25", transactionRef: "123456",
-    receiptKey: `receipts/${A.uid}/2026/0f8fad5b-d9cb-469f-a165-70867728950e.jpg`, receiptHash: "a".repeat(64),
-    payRef: "P-7K3QX", status: "pending", createdAt: serverTimestamp(), ...extra,
-  });
-
-  it("الأستاذ ينشئ طلبه بالسعر الصحيح فقط، ولا يقبله بنفسه", async () => {
-    await asAdmin((f) => setDoc(doc(f, "plans", "premium"), { active: true, priceDzd: 2500 }));
-    const db = dbAs(A);
-    await assertSucceeds(setDoc(doc(db, "manualPayments", "m1"), mp()));
-    await assertFails(setDoc(doc(db, "manualPayments", "m2"), mp({ expectedAmount: 100 })));
-    await assertFails(setDoc(doc(db, "manualPayments", "m3"), mp({ uid: B.uid })));
-    await assertFails(setDoc(doc(db, "manualPayments", "m4"), mp({ status: "approved" })));
-    await assertFails(setDoc(doc(db, "manualPayments", "m5"), mp({ receiptKey: `receipts/${B.uid}/2026/0f8fad5b-d9cb-469f-a165-70867728950e.jpg` })));
-    await assertFails(updateDoc(doc(db, "manualPayments", "m1"), { status: "approved" }));
-    await assertFails(getDoc(doc(dbAs(B), "manualPayments", "m1")));
-    await assertSucceeds(getDoc(doc(dbAs(B, { finance: true }), "manualPayments", "m1")));
-  });
-
+describe("المال", () => {
   it("الإيرادات للمالية فقط، والطلبات لا يكتبها أحد من المتصفح", async () => {
     await assertFails(getDoc(doc(dbAs(A), "stats", "revenue_2026-09")));
     await assertSucceeds(getDoc(doc(dbAs(A, { finance: true }), "stats", "revenue_2026-09")));
     await assertFails(setDoc(doc(dbAs(A), "orders", "o1"), { uid: A.uid, status: "paid" }));
     await assertFails(setDoc(doc(dbAs(A, { admin: true }), "payments", "p1"), { uid: A.uid }));
+  });
+});
+
+describe("خصوصية بيانات الأستاذ أمام الأدمن", () => {
+  it("الأدمن يرى الملف المهني فقط، لا الأقسام ولا التلاميذ", async () => {
+    await env.withSecurityRulesDisabled(async (ctx) => {
+      await setDoc(doc(ctx.firestore(), "teachers", A.uid), { firstName: "كريم" });
+      await setDoc(doc(ctx.firestore(), "teachers", A.uid, "classes", "c1"), { roster: [{ last: "x" }] });
+      await setDoc(doc(ctx.firestore(), "teachers", A.uid, "grades", "c1__t1"), { marks: {} });
+    });
+    const admin = dbAs(B, { admin: true });
+    await assertSucceeds(getDoc(doc(admin, "teachers", A.uid)));
+    await assertFails(getDoc(doc(admin, "teachers", A.uid, "classes", "c1")));
+    await assertFails(getDoc(doc(admin, "teachers", A.uid, "grades", "c1__t1")));
+  });
+});
+
+describe("الإشعارات", () => {
+  const ann = (uid, extra = {}) => ({
+    title: { ar: "تحديث جديد", fr: "" }, body: { ar: "ميزة جديدة", fr: "" }, link: "", kind: "update",
+    createdAt: serverTimestamp(), createdBy: uid, ...extra,
+  });
+  it("الأدمن ينشر، والمحرّر ينشر إشعار محتوى فقط، والأستاذ يقرأ", async () => {
+    await assertSucceeds(setDoc(doc(dbAs(A, { admin: true }), "announcements", "a1"), ann(A.uid)));
+    await assertFails(setDoc(doc(dbAs(B, { contentEditor: true }), "announcements", "a2"), ann(B.uid)));
+    await assertSucceeds(setDoc(doc(dbAs(B, { contentEditor: true }), "announcements", "a3"), ann(B.uid, { kind: "content" })));
+    await assertFails(setDoc(doc(dbAs(B), "announcements", "a4"), ann(B.uid)));
+    await assertSucceeds(getDoc(doc(dbAs(B), "announcements", "a1")));
+    await assertFails(getDoc(doc(anon(), "announcements", "a1")));
+  });
+  it("الإشعارات الشخصية وتاريخ القراءة لصاحبها", async () => {
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "notifications", "n1"), { title: "x" }));
+    await assertSucceeds(setDoc(doc(dbAs(A), "teachers", A.uid, "prefs", "notifications"), { readAt: serverTimestamp() }));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "prefs", "notifications"), { readAt: serverTimestamp(), personalLatestAt: serverTimestamp() }));
+    await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "prefs", "notifications")));
+  });
+  it("المحرّر يحدّث تاريخ آخر إعلان فقط", async () => {
+    await env.withSecurityRulesDisabled((ctx) => setDoc(doc(ctx.firestore(), "config", "app"), { trialDays: 7 }));
+    const ed = dbAs(B, { contentEditor: true });
+    await assertSucceeds(updateDoc(doc(ed, "config", "app"), { latestAnnouncementAt: serverTimestamp() }));
+    await assertFails(updateDoc(doc(ed, "config", "app"), { trialDays: 90 }));
+  });
+});
+
+describe("التواصل مع الإدارة", () => {
+  const thread = (extra = {}) => ({
+    uid: A.uid, name: "كريم", email: A.email, lastMessage: "سؤال", lastMessageAt: serverTimestamp(),
+    lastFrom: "teacher", unreadAdmin: true, unreadTeacher: false, status: "open", ...extra,
+  });
+  const msg = (from, text = "سلام") => ({ from, text, at: serverTimestamp() });
+
+  it("الأستاذ يراسل الإدارة في محادثته فقط", async () => {
+    const db = dbAs(A);
+    await assertSucceeds(setDoc(doc(db, "supportThreads", A.uid), thread()));
+    await assertSucceeds(setDoc(doc(db, "supportThreads", A.uid, "messages", "m1"), msg("teacher")));
+    await assertFails(setDoc(doc(db, "supportThreads", A.uid, "messages", "m2"), msg("admin")));
+    await assertFails(setDoc(doc(db, "supportThreads", A.uid, "messages", "m3"), msg("teacher", "x".repeat(2001))));
+    await assertFails(setDoc(doc(db, "supportThreads", A.uid), thread({ unreadTeacher: true })));
+    await assertFails(getDoc(doc(dbAs(B), "supportThreads", A.uid)));
+    await assertFails(setDoc(doc(dbAs(B), "supportThreads", A.uid, "messages", "m4"), msg("teacher")));
+    await assertSucceeds(updateDoc(doc(db, "supportThreads", A.uid), { unreadTeacher: false }));
+  });
+
+  it("الأدمن يقرأ ويرد", async () => {
+    await setDoc(doc(dbAs(A), "supportThreads", A.uid), thread());
+    const admin = dbAs(B, { admin: true });
+    await assertSucceeds(getDoc(doc(admin, "supportThreads", A.uid)));
+    await assertSucceeds(setDoc(doc(admin, "supportThreads", A.uid, "messages", "r1"), msg("admin", "مرحبًا")));
+    await assertSucceeds(updateDoc(doc(admin, "supportThreads", A.uid), { unreadTeacher: true, lastFrom: "admin" }));
   });
 });
 

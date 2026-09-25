@@ -198,7 +198,7 @@ export function OnboardingWizard() {
 
       {/* أزرار التنقّل — في أسفل الشاشة على الهاتف، قريبة من الإبهام */}
       {step !== "preset" && (
-        <div className="sticky bottom-0 -mx-4 flex gap-3 border-t border-line bg-surface/95 px-4 py-3 pb-safe backdrop-blur sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:p-0">
+        <div data-sticky-bar className="sticky bottom-0 -mx-4 flex gap-3 border-t border-line bg-surface/95 px-4 py-3 pb-safe backdrop-blur sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:p-0">
           <button
             type="button"
             onClick={() => {

@@ -723,7 +723,7 @@ function Review(props: {
 
       {props.errorBox}
 
-      <div className="sticky bottom-24 z-10 flex flex-wrap gap-2 lg:bottom-6">
+      <div data-sticky-bar className="sticky bottom-24 z-10 flex flex-wrap gap-2 lg:bottom-6">
         <button
           type="button"
           disabled={props.saving || props.toImport === 0}

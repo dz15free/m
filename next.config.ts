@@ -15,6 +15,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // مؤشر التطوير العائم يغطي أزرار الزاوية (مثل إرسال الرسالة) أثناء التطوير
+  devIndicators: false,
   images: {
     // الصور المحسّنة تُقدَّم جاهزة من `public/brand` (مولّدة بـ npm run brand)،
     // فلا نحتاج خدمة تحسين صور على الخادم — يبقى النشر محمولًا ومجانيًا.

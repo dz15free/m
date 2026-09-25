@@ -4,6 +4,8 @@ import { Logo } from "@/components/brand/logo";
 import { buttonClass } from "@/components/ui/button";
 import { LocaleSwitcher } from "@/components/ui/locale-switcher";
 import { AccountCard } from "@/features/auth/account";
+import { NotificationBell } from "@/features/notifications/notification-bell";
+import { InstallButton } from "@/features/pwa/install-button";
 import { NAV, SIDEBAR_PRIMARY, SIDEBAR_SECONDARY, type NavItem } from "./nav-items";
 import { NavLink } from "./nav-link";
 
@@ -27,10 +29,11 @@ export async function Sidebar() {
 
   return (
     <aside className="sticky top-0 hidden h-dvh print:hidden! w-72 shrink-0 flex-col border-e border-line bg-surface lg:flex">
-      <div className="px-6 pb-4 pt-6">
+      <div className="flex items-center justify-between gap-2 ps-6 pe-3 pb-4 pt-6">
         <Link href="/app" aria-label={t("today")}>
           <Logo variant="lockup" className="h-12" priority />
         </Link>
+        <NotificationBell />
       </div>
 
       <div className="px-4 pb-4">
@@ -44,6 +47,7 @@ export async function Sidebar() {
         <ul className="space-y-1">{renderItems(SIDEBAR_PRIMARY)}</ul>
         <div className="space-y-4 border-t border-line pt-4">
           <ul className="space-y-1">{renderItems(SIDEBAR_SECONDARY)}</ul>
+          <InstallButton />
           <LocaleSwitcher />
           <AccountCard compact />
         </div>

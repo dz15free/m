@@ -57,6 +57,6 @@ export function RedirectIfSignedIn({ children }: { children: React.ReactNode }) 
 
 /** يقبل مسارات داخلية فقط، لمنع إعادة التوجيه إلى موقع خارجي (open redirect). */
 export function safeNext(value: string | null): string {
-  if (!value || !value.startsWith("/app") || value.startsWith("//")) return "/app";
+  if (!value || !(value.startsWith("/app") || value.startsWith("/admin")) || value.startsWith("//")) return "/app";
   return value;
 }

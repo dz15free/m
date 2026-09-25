@@ -24,16 +24,19 @@ const docsRoot = () => `projects/${projectId()}/databases/(default)/documents`;
 const apiBase = () =>
   usingEmulators() ? `http://${process.env.FIRESTORE_EMULATOR_HOST ?? "127.0.0.1:8080"}/v1` : "https://firestore.googleapis.com/v1";
 
-let cached: { token: string; exp: number } | null = null;
+const cached = new Map<string, { token: string; exp: number }>();
+const DATASTORE = "https://www.googleapis.com/auth/datastore";
 
-async function accessToken(): Promise<string> {
+/** رمز OAuth لحساب الخدمة بالنطاق المطلوب (Firestore أو إدارة الحسابات). */
+export async function accessToken(scope = DATASTORE): Promise<string> {
   if (usingEmulators()) return "owner";
-  if (cached && cached.exp > Date.now() + 60_000) return cached.token;
+  const hit = cached.get(scope);
+  if (hit && hit.exp > Date.now() + 60_000) return hit.token;
   const raw = serverEnv().FIREBASE_SERVICE_ACCOUNT;
   if (!raw) throw new HttpError(503, "server credentials not configured");
   const sa = JSON.parse(raw) as { client_email: string; private_key: string };
   const key = await importPKCS8(sa.private_key, "RS256");
-  const assertion = await new SignJWT({ scope: "https://www.googleapis.com/auth/datastore" })
+  const assertion = await new SignJWT({ scope })
     .setProtectedHeader({ alg: "RS256", typ: "JWT" })
     .setIssuer(sa.client_email)
     .setSubject(sa.client_email)
@@ -48,8 +51,8 @@ async function accessToken(): Promise<string> {
   });
   if (!res.ok) throw new Error(`oauth ${res.status}`);
   const body = (await res.json()) as { access_token: string; expires_in: number };
-  cached = { token: body.access_token, exp: Date.now() + body.expires_in * 1000 };
-  return cached.token;
+  cached.set(scope, { token: body.access_token, exp: Date.now() + body.expires_in * 1000 });
+  return body.access_token;
 }
 
 // ── الترميز ──

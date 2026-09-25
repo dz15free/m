@@ -187,7 +187,7 @@ function PrepForm({
 
         {state === "error" && <p role="alert" className="text-sm text-red-700">{t("error")}</p>}
         {/* شريط الحفظ ثابت فوق الشريط السفلي على الهاتف */}
-        <div className="sticky bottom-24 z-10 flex flex-wrap items-center gap-2 rounded-card bg-surface/95 p-3 shadow-float backdrop-blur lg:bottom-4">
+        <div data-sticky-bar className="sticky bottom-24 z-10 flex flex-wrap items-center gap-2 rounded-card bg-surface/95 p-3 shadow-float backdrop-blur lg:bottom-4">
           <button type="button" onClick={save} disabled={state === "saving"} className={buttonClass("primary")}>
             {state === "saving" ? <LoaderCircle aria-hidden className="size-4 animate-spin" /> : state === "saved" ? <Check aria-hidden className="size-4" /> : null}
             {state === "saved" ? t("saved") : t("save")}

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { Logo } from "@/components/brand/logo";
+import { NotificationBell } from "@/features/notifications/notification-bell";
+import { InstallButton } from "@/features/pwa/install-button";
 
 export async function MobileHeader() {
   const t = await getTranslations("nav");
@@ -11,7 +13,10 @@ export async function MobileHeader() {
         <Link href="/app" aria-label={t("today")}>
           <Logo variant="lockup" className="h-9" priority />
         </Link>
-        {/* مكان الإشعارات وصورة الحساب — Phase 2 */}
+        <div className="flex items-center gap-1">
+          <InstallButton compact />
+          <NotificationBell />
+        </div>
       </div>
     </header>
   );

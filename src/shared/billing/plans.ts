@@ -32,7 +32,21 @@ export type Entitlement = {
   source: "trial" | "chargily" | "manual" | "admin";
 };
 
-export type AppConfig = { trialDays: number; trialPlanId: string };
+export type Banner = {
+  enabled: boolean;
+  text: { ar: string; fr: string };
+  link: string;
+  tone: "info" | "success" | "warning" | "promo";
+  /** يتغير مع كل تعديل لتظهر النسخة الجديدة حتى لمن أغلق السابقة */
+  version: number;
+};
+
+export type AppConfig = {
+  trialDays: number;
+  trialPlanId: string;
+  contact?: { whatsapp?: string; email?: string; hours?: { ar: string; fr: string } };
+  banner?: Banner;
+};
 
 /** قيم احتياطية إن لم تُضبط وثيقة `plans/free` بعد (القرار المعتمد: قسمان). */
 export const FREE_FALLBACK: Pick<Plan, "limits" | "features" | "contentAccess"> = {

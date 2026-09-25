@@ -227,7 +227,7 @@ function Form({
         </p>
       )}
 
-      <div className="sticky bottom-24 z-10 lg:bottom-6">
+      <div data-sticky-bar className="sticky bottom-24 z-10 lg:bottom-6">
         <button
           type="button"
           onClick={create}
