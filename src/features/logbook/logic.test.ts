@@ -20,3 +20,28 @@ test("أيام الأسبوع الدراسي (الأحد–الخميس) لأي 
   assert.deepEqual(weekDates("2026-09-30", days), ["2026-09-27", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01"]);
   assert.deepEqual(weekDates("2026-09-27", days)[0], "2026-09-27");
 });
+
+test("مدة الحصة والفترة", async () => {
+  const { durationMinutes, periodOf } = await import("./logic.ts");
+  assert.equal(durationMinutes("08:00", "08:45"), 45);
+  assert.equal(periodOf("11:15"), "am");
+  assert.equal(periodOf("13:00"), "pm");
+});
+
+test("تسجيلات التكوين القديمة تُطبَّع", async () => {
+  const { normalizeTraining } = await import("./logic.ts");
+  const t = normalizeTraining({ date: "2026-09-20", kind: "trainingDay", topic: "x", supervisor: "", place: "", notes: "" });
+  assert.equal(t.kind, "studyDay");
+  assert.equal(t.domain, "");
+  assert.equal(normalizeTraining({ kind: "meeting" }).kind, "seminar");
+});
+
+test("تنظيف المذكّرة", async () => {
+  const { cleanPrep, emptyPrep } = await import("./logic.ts");
+  const p = emptyPrep("ar", "3AP");
+  p.content = "  عائلتي  ";
+  p.phases.build.situation = "أ\n\n\n\nب";
+  const c = cleanPrep(p);
+  assert.equal(c.content, "عائلتي");
+  assert.equal(c.phases.build.situation, "أ\n\nب");
+});

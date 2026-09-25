@@ -196,12 +196,13 @@ service cloud.firestore {
       // الدفتر اليومي: سطر لكل حصة (مفتاحه التاريخ_القسم_المادة_الساعة)
       match /lessons/{lessonKey} {
         function validLesson(d) {
-          return d.keys().hasOnly(['date', 'classId', 'subjectId', 'start', 'end', 'unit', 'title', 'objective', 'materials', 'notes', 'status', 'updatedAt'])
+          return d.keys().hasOnly(['date', 'classId', 'subjectId', 'start', 'end', 'activity', 'unit', 'title', 'objective', 'materials', 'notes', 'status', 'updatedAt'])
             && d.date is string && d.date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
             && isShortString(d.classId, 40) && isShortString(d.subjectId, 32)
             && d.start is string && d.start.matches('^[0-2][0-9]:[0-5][0-9]$')
             && d.end is string && d.end.matches('^[0-2][0-9]:[0-5][0-9]$')
             && lessonKey == d.date + '_' + d.classId + '_' + d.subjectId + '_' + d.start.replace(':', '')
+            && (!('activity' in d) || isShortString(d.activity, 120))
             && isShortString(d.unit, 120) && isShortString(d.title, 200) && isShortString(d.objective, 300)
             && isShortString(d.materials, 200) && isShortString(d.notes, 400)
             && d.status in ['done', 'partial', 'notDone']
@@ -214,15 +215,40 @@ service cloud.firestore {
       // دفتر التكوين والندوات
       match /trainings/{trainingId} {
         function validTraining(d) {
-          return d.keys().hasOnly(['date', 'kind', 'topic', 'supervisor', 'place', 'notes', 'updatedAt'])
+          return d.keys().hasOnly(['date', 'kind', 'topic', 'place', 'lesson', 'practitioner', 'level', 'supervisor', 'domain', 'notes', 'updatedAt'])
             && d.date is string && d.date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
-            && d.kind in ['seminar', 'trainingDay', 'inspection', 'meeting', 'other']
+            && d.kind in ['seminar', 'studyDay', 'internship']
             && isShortString(d.topic, 200) && d.topic.size() > 0
-            && isShortString(d.supervisor, 120) && isShortString(d.place, 120) && isShortString(d.notes, 1000)
+            && isShortString(d.place, 120) && isShortString(d.lesson, 200) && isShortString(d.practitioner, 120)
+            && isShortString(d.level, 60) && isShortString(d.supervisor, 120)
+            && d.domain in ['', 'legislation', 'classManagement', 'pedagogy', 'ethics', 'ict', 'didactics', 'mediation', 'system']
+            && isShortString(d.notes, 3000)
             && d.updatedAt == request.time;
         }
         allow read, delete: if isOwner(uid);
         allow create, update: if isOwner(uid) && validTraining(request.resource.data);
+      }
+
+      // دفتر التحضير: مذكرات الدروس بمراحلها الثلاث
+      match /preps/{prepId} {
+        function validPhase(p) {
+          return p is map && p.keys().hasOnly(['situation', 'assessment'])
+            && isShortString(p.situation, 4000) && isShortString(p.assessment, 1500);
+        }
+        function validPrep(d) {
+          return d.keys().hasOnly(['subjectId', 'gradeId', 'domain', 'sequence', 'activity', 'week', 'content', 'session',
+                                   'objective', 'values', 'materials', 'phases', 'date', 'updatedAt'])
+            && isShortString(d.subjectId, 32) && isShortString(d.gradeId, 32)
+            && isShortString(d.domain, 120) && isShortString(d.sequence, 120) && isShortString(d.activity, 120)
+            && isShortString(d.week, 20) && isShortString(d.content, 200) && isShortString(d.session, 20)
+            && isShortString(d.objective, 500) && isShortString(d.values, 300) && isShortString(d.materials, 300)
+            && d.phases is map && d.phases.keys().hasOnly(['launch', 'build', 'invest'])
+            && validPhase(d.phases.launch) && validPhase(d.phases.build) && validPhase(d.phases.invest)
+            && (d.date == '' || (d.date is string && d.date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')))
+            && d.updatedAt == request.time;
+        }
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid) && validPrep(request.resource.data);
       }
 
       // السنوات الدراسية للأستاذ — المعرّف هو معرّف السنة نفسه (2026-2027)

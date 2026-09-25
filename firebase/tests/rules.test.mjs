@@ -296,7 +296,7 @@ describe("جدول التوقيت", () => {
 describe("دفاتر الأستاذ", () => {
   const lesson = (extra = {}) => ({
     date: "2026-09-27", classId: "c1", subjectId: "ar", start: "08:00", end: "09:00",
-    unit: "المقطع 1", title: "قراءة: المدرسة", objective: "يقرأ نصًا قراءة سليمة", materials: "الكتاب", notes: "", status: "done",
+    activity: "قراءة", unit: "فهم المكتوب", title: "المدرسة", objective: "يقرأ نصًا قراءة سليمة", materials: "الكتاب", notes: "", status: "done",
     updatedAt: serverTimestamp(), ...extra,
   });
 
@@ -306,16 +306,37 @@ describe("دفاتر الأستاذ", () => {
     await assertFails(setDoc(col(dbAs(A))("2026-09-27_c1_ar_0900"), lesson()));
     await assertFails(setDoc(col(dbAs(A))("2026-09-27_c1_ar_0800"), lesson({ status: "maybe" })));
     await assertFails(setDoc(col(dbAs(A))("2026-09-27_c1_ar_0800"), lesson({ notes: "x".repeat(401) })));
+    await assertFails(setDoc(col(dbAs(A))("2026-09-27_c1_ar_0800"), lesson({ activity: "x".repeat(121) })));
     await assertFails(getDoc(col(dbAs(B))("2026-09-27_c1_ar_0800")));
   });
 
   it("دفتر التكوين والندوات", async () => {
     const ref = doc(dbAs(A), "teachers", A.uid, "trainings", "t1");
-    const entry = { date: "2026-10-12", kind: "seminar", topic: "المقاربة بالكفاءات", supervisor: "المفتش", place: "المدرسة", notes: "", updatedAt: serverTimestamp() };
+    const entry = {
+      date: "2026-10-12", kind: "seminar", topic: "المقاربة بالكفاءات", place: "المدرسة", lesson: "قراءة", practitioner: "أ. سعاد",
+      level: "3AP", supervisor: "المفتش", domain: "didactics", notes: "", updatedAt: serverTimestamp(),
+    };
     await assertSucceeds(setDoc(ref, entry));
+    await assertSucceeds(setDoc(ref, { ...entry, kind: "internship", domain: "" }));
     await assertFails(setDoc(ref, { ...entry, kind: "party" }));
+    await assertFails(setDoc(ref, { ...entry, domain: "cooking" }));
     await assertFails(setDoc(ref, { ...entry, topic: "" }));
     await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "trainings", "t1")));
+  });
+
+  it("دفتر التحضير (المذكرات)", async () => {
+    const ref = doc(dbAs(A), "teachers", A.uid, "preps", "p1");
+    const phase = { situation: "نص", assessment: "" };
+    const prep = {
+      subjectId: "ar", gradeId: "3AP", domain: "فهم المكتوب", sequence: "1", activity: "قراءة", week: "2", content: "عائلتي",
+      session: "1", objective: "يقرأ", values: "", materials: "", phases: { launch: phase, build: phase, invest: phase }, date: "",
+      updatedAt: serverTimestamp(),
+    };
+    await assertSucceeds(setDoc(ref, prep));
+    await assertFails(setDoc(ref, { ...prep, phases: { launch: phase, build: phase } }));
+    await assertFails(setDoc(ref, { ...prep, phases: { ...prep.phases, build: { situation: "x".repeat(4001), assessment: "" } } }));
+    await assertFails(setDoc(ref, { ...prep, secret: 1 }));
+    await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "preps", "p1")));
   });
 });
 

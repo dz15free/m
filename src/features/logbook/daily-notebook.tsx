@@ -12,13 +12,26 @@ import type { ClassDoc } from "@/features/classes/repo";
 import { isIsoDate, shiftDate, todayInAlgiers } from "@/features/attendance/logic";
 import { holidayOf, slotsForDate, type Slot } from "@/features/schedule/logic";
 import { useCalendar, useSchedule } from "@/features/schedule/repo";
-import { formatLongDate } from "@/i18n/dates";
+import { formatHijri, formatLongDate } from "@/i18n/dates";
 import { subjectById, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
-import { emptyLesson, isBlank, lessonKey, LESSON_TEXT_FIELDS, FIELD_MAX, type LessonEntry, type LessonStatus } from "./logic";
-import { weekDates } from "./logic";
-import { listLessons, saveLesson } from "./repo";
-import { PrintHeader } from "./print-header";
+import {
+  durationMinutes,
+  emptyLesson,
+  FIELD_MAX,
+  isBlank,
+  LESSON_TEXT_FIELDS,
+  lessonKey,
+  periodOf,
+  prepTitle,
+  weekDates,
+  type LessonEntry,
+  type LessonStatus,
+} from "./logic";
+import { listLessons, listPreps, saveLesson } from "./repo";
+
+// أعمدة الدفتر اليومي الرسمي بعد المدة
+const PRINT_FIELDS = ["activity", "unit", "title", "objective", "notes"] as const;
 
 const STATUS_STYLE: Record<LessonStatus, string> = {
   done: "bg-green-50 text-green-800",
@@ -62,6 +75,8 @@ export function DailyNotebook({ initialDate }: { initialDate?: string }) {
   const taxonomy = tax.data;
   const cal = calendar.data;
   const entries = lessons.data;
+  // أستاذ المادة يدرّس عدة أقسام: نضيف عمود القسم عند الطباعة
+  const multiClass = new Set(schedule.data.map((s) => s.classId)).size > 1;
 
   async function save(entry: LessonEntry) {
     if (!uid) return;
@@ -151,7 +166,7 @@ export function DailyNotebook({ initialDate }: { initialDate?: string }) {
                               <span className="block text-sm text-muted/80">{t("empty")}</span>
                             ) : (
                               <>
-                                <span className="block font-semibold">{entry.title || entry.unit}</span>
+                                <span className="block font-semibold">{[entry.activity, entry.title].filter(Boolean).join(": ") || entry.unit}</span>
                                 {entry.objective && <span className="block text-sm text-muted">{entry.objective}</span>}
                               </>
                             )}
@@ -172,39 +187,54 @@ export function DailyNotebook({ initialDate }: { initialDate?: string }) {
         })}
       </div>
 
-      {/* ── الطباعة: جدول الدفتر اليومي (A4 أفقي) ── */}
+      {/* ── الطباعة: صفحة لكل يوم بنموذج الدفتر اليومي (A4 أفقي) ── */}
       <div className="hidden print:block">
-        <style>{"@page { size: A4 landscape; margin: 10mm; }"}</style>
-        <PrintHeader title={t("title")} subtitle={range} />
+        <style>{"@page { size: A4 landscape; margin: 9mm; }"}</style>
         {days.map((date) => {
           const rows = rowsOf(date);
           if (!rows.length) return null;
+          const periods = (["am", "pm"] as const).map((p) => ({ p, rows: rows.filter((r) => periodOf(r.slot.start) === p) })).filter((x) => x.rows.length);
           return (
-            <table key={date} className="mb-4 w-full break-inside-avoid border-collapse text-[9.5pt]">
-              <caption className="border border-ink bg-canvas py-1 text-start font-bold ps-2">{formatLongDate(new Date(`${date}T12:00:00`), locale)}</caption>
-              <thead>
-                <tr className="bg-canvas">
-                  {[t("time"), t("class"), t("subject"), ...LESSON_TEXT_FIELDS.map((f) => t(`fields.${f}`))].map((h) => (
-                    <th key={h} className="border border-ink px-1.5 py-1 text-start font-semibold">{h}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map(({ slot, key, entry }) => (
-                  <tr key={key} className="align-top">
-                    <td className="border border-ink px-1.5 py-1 whitespace-nowrap"><bdi dir="ltr">{slot.start}–{slot.end}</bdi></td>
-                    <td className="border border-ink px-1.5 py-1"><bdi dir="ltr">{classById.get(slot.classId)?.displayName}</bdi></td>
-                    <td className="border border-ink px-1.5 py-1">{subjectById(taxonomy, slot.subjectId)?.label[locale]}</td>
-                    {LESSON_TEXT_FIELDS.map((f) => (
-                      <td key={f} className="h-9 border border-ink px-1.5 py-1">
-                        {f === "notes" && !isBlank(entry) && entry.status !== "done" ? `${t(`statuses.${entry.status}`)}${entry.notes ? " — " : ""}` : ""}
-                        {entry[f]}
-                      </td>
+            <section key={date} className="break-after-page text-[10pt] last:break-after-auto">
+              <div className="mb-2 flex justify-between gap-6">
+                <p><b>{t("date")}:</b> {formatLongDate(new Date(`${date}T12:00:00`), locale)}</p>
+                {locale === "ar" && formatHijri(date) && <p><b>{t("hijri")}:</b> {formatHijri(date)}</p>}
+              </div>
+              {periods.map(({ p, rows: pr }) => (
+                <table key={p} className="mb-3 w-full border-collapse">
+                  <caption className="pb-1 text-center text-[11pt] font-bold">{t(p === "am" ? "morning" : "afternoon")}</caption>
+                  <thead>
+                    <tr className="bg-canvas">
+                      {[t("duration"), ...(multiClass ? [t("class")] : []), ...PRINT_FIELDS.map((f) => t(`fields.${f}`))].map((h) => (
+                        <th key={h} className="border border-ink px-1.5 py-1 text-center font-semibold">{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {pr.map(({ slot, key, entry }) => (
+                      <tr key={key} className="break-inside-avoid align-top">
+                        <td className="w-14 border border-ink px-1 py-1 text-center whitespace-nowrap">
+                          {t("minutes", { n: durationMinutes(slot.start, slot.end) })}
+                        </td>
+                        {multiClass && <td className="border border-ink px-1.5 py-1"><bdi dir="ltr">{classById.get(slot.classId)?.displayName}</bdi></td>}
+                        <td className="w-[13%] border border-ink px-1.5 py-1"><bdi>{entry.activity || subjectById(taxonomy, slot.subjectId)?.label[locale]}</bdi></td>
+                        <td className="w-[13%] border border-ink px-1.5 py-1"><bdi>{entry.unit}</bdi></td>
+                        <td className="w-[16%] border border-ink px-1.5 py-1"><bdi>{entry.title}</bdi></td>
+                        <td className="h-10 border border-ink px-1.5 py-1"><bdi>{entry.objective}</bdi></td>
+                        <td className="w-[14%] border border-ink px-1.5 py-1">
+                          {!isBlank(entry) && entry.status !== "done" ? `${t(`statuses.${entry.status}`)}${entry.notes ? " — " : ""}` : ""}
+                          <bdi>{entry.notes}</bdi>
+                        </td>
+                      </tr>
                     ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                  </tbody>
+                </table>
+              ))}
+              <div className="mt-4 flex justify-between gap-6">
+                <p className="flex-1"><b>{t("remarks")}:</b> ..............................................................</p>
+                <p className="flex-1 text-end"><b>{t("reviewedBy")}:</b> ....................................</p>
+              </div>
+            </section>
           );
         })}
       </div>
@@ -231,6 +261,9 @@ function LessonEditor({
   const locale = useLocale() as "ar" | "fr";
   const [draft, setDraft] = useState(entry);
   const [state, setState] = useState<"idle" | "saving" | "error">("idle");
+  const uid = useUid();
+  const preps = useQuery({ queryKey: ["preps", uid ?? ""], queryFn: () => listPreps(uid!), enabled: !!uid, staleTime: 60_000 });
+  const matching = (preps.data ?? []).filter((p) => p.subjectId === slot.subjectId);
 
   async function submit(next: LessonEntry) {
     setState("saving");
@@ -247,6 +280,24 @@ function LessonEditor({
         <bdi dir="ltr" className="font-semibold tabular-nums">{slot.start}–{slot.end}</bdi> · <bdi dir="ltr" className="font-bold">{cls?.displayName}</bdi> ·{" "}
         {subjectById(taxonomy, slot.subjectId)?.label[locale]}
       </p>
+      {matching.length > 0 && (
+        <label className="block space-y-1">
+          <span className="text-sm font-medium">{t("fromPrep")}</span>
+          <select
+            value=""
+            onChange={(e) => {
+              const p = matching.find((x) => x.id === e.target.value);
+              if (p) setDraft({ ...draft, activity: p.activity, unit: p.domain, title: p.content, objective: p.objective, materials: p.materials });
+            }}
+            className="block min-h-11 w-full rounded-xl border border-line bg-surface px-3 outline-none focus:border-brand-600"
+          >
+            <option value="">—</option>
+            {matching.map((p) => (
+              <option key={p.id} value={p.id}>{prepTitle(p) || p.domain}{p.week ? ` · ${p.week}` : ""}</option>
+            ))}
+          </select>
+        </label>
+      )}
       {LESSON_TEXT_FIELDS.map((f) => (
         <label key={f} className="block space-y-1">
           <span className="text-sm font-medium">{t(`fields.${f}`)}</span>
@@ -255,9 +306,9 @@ function LessonEditor({
             onChange={(e) => setDraft({ ...draft, [f]: e.target.value })}
             placeholder={t(`placeholders.${f}`)}
             maxLength={FIELD_MAX[f]}
-            rows={f === "notes" || f === "objective" ? 2 : 1}
+            rows={f === "notes" || f === "objective" || f === "materials" ? 2 : 1}
             dir="auto"
-            autoFocus={f === "title" && isBlank(entry)}
+            autoFocus={f === "activity" && isBlank(entry)}
             className="block w-full resize-y rounded-xl border border-line bg-surface px-3 py-2.5 outline-none focus:border-brand-600 focus:ring-3 focus:ring-brand-100"
           />
         </label>
@@ -286,7 +337,7 @@ function LessonEditor({
         {!isBlank(entry) && (
           <button
             type="button"
-            onClick={() => submit({ ...draft, unit: "", title: "", objective: "", materials: "", notes: "" })}
+            onClick={() => submit({ ...draft, activity: "", unit: "", title: "", objective: "", materials: "", notes: "" })}
             className={buttonClass("ghost", "md", "ms-auto text-red-700")}
           >
             {t("clear")}

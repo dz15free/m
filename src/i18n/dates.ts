@@ -39,3 +39,27 @@ export function formatLongDate(date: Date, locale: Locale): string {
   const { year, month, day, weekday } = partsInAlgiers(date);
   return `${WEEKDAYS_AR[weekday]} ${day} ${MONTHS_DZ[month - 1]} ${year}`;
 }
+
+const HIJRI_MONTHS = [
+  "محرّم", "صفر", "ربيع الأول", "ربيع الثاني", "جمادى الأولى", "جمادى الثانية",
+  "رجب", "شعبان", "رمضان", "شوّال", "ذو القعدة", "ذو الحجة",
+] as const;
+
+/** التاريخ الهجري التقريبي (تقويم أم القرى) لخانة «الموافق لـ» في الدفاتر:
+    قد يختلف بيوم عن الإعلان الرسمي في الجزائر حسب رؤية الهلال. */
+export function formatHijri(iso: string): string {
+  try {
+    const parts = new Intl.DateTimeFormat("en-u-ca-islamic-umalqura-nu-latn", {
+      timeZone: TZ,
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+    }).formatToParts(new Date(`${iso}T12:00:00Z`));
+    const get = (type: string) => Number.parseInt(parts.find((p) => p.type === type)?.value ?? "", 10);
+    const [day, month, year] = [get("day"), get("month"), get("year")];
+    if (!day || !month || !year) return "";
+    return `${day} ${HIJRI_MONTHS[month - 1]} ${year} هـ`;
+  } catch {
+    return "";
+  }
+}

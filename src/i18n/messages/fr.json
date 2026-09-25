@@ -485,23 +485,23 @@
   },
   "logbook": {
     "title": "Cahiers de l'enseignant",
-    "subtitle": "Vos cahiers officiels, organisés et prêts à imprimer, remplis à partir de l'emploi du temps.",
+    "subtitle": "Vos cahiers officiels selon le modèle du primaire, remplis depuis l'emploi du temps et prêts à imprimer.",
     "notebooks": {
       "daily": {
         "title": "Cahier journal",
-        "body": "Ce qui a été fait à chaque séance : sujet, objectif, matériel, observations."
+        "body": "Chaque séance : activité, domaine, contenu, composantes de la compétence — matin et après-midi."
       },
       "training": {
         "title": "Cahier de formation et séminaires",
-        "body": "Séminaires pédagogiques, journées de formation, visites et réunions."
+        "body": "Séminaires mensuels, journées d'étude, stages et synthèses par domaine de formation."
       },
       "prep": {
         "title": "Cahier de préparation (fiches)",
-        "body": "Fiches avec le déroulement de la séance — avec les progressions."
+        "body": "Fiches de séance : situation de départ, construction des apprentissages, réinvestissement."
       },
       "grades": {
         "title": "Cahier de notes",
-        "body": "Notes et moyennes — avec l'évaluation."
+        "body": "Relevé de notes et résultats de chaque trimestre — avec l'évaluation."
       },
       "soon": "Bientôt"
     },
@@ -521,17 +521,19 @@
       "class": "Classe",
       "subject": "Matière",
       "fields": {
-        "unit": "Projet / Séquence",
-        "title": "Sujet",
-        "objective": "Objectif d'apprentissage",
+        "activity": "Activité",
+        "unit": "Domaine",
+        "title": "Contenu",
+        "objective": "Composantes de la compétence / objectif",
         "materials": "Matériel",
         "notes": "Observations"
       },
       "placeholders": {
-        "unit": "Ex. : Projet 1 — Séquence 2",
-        "title": "Ex. : Lecture : ma famille",
-        "objective": "Ex. : Lire un texte de façon fluide",
-        "materials": "Ex. : manuel, tableau, cartes",
+        "activity": "Ex. : lecture",
+        "unit": "Ex. : compréhension de l'écrit",
+        "title": "Ex. : ma famille",
+        "objective": "Ex. : lit le texte de manière fluide",
+        "materials": "Ex. : livre, tableau, cartes",
         "notes": ""
       },
       "status": "Réalisation",
@@ -545,7 +547,16 @@
       "clear": "Effacer",
       "saved": "Enregistré",
       "error": "Enregistrement impossible. Réessayez.",
-      "fromDay": "Aujourd'hui"
+      "fromDay": "Aujourd'hui",
+      "duration": "Durée",
+      "minutes": "{n} min",
+      "morning": "Matinée",
+      "afternoon": "Après-midi",
+      "date": "Date",
+      "hijri": "Correspondant au",
+      "remarks": "Observations",
+      "reviewedBy": "Vu par M./Mme",
+      "fromPrep": "Depuis une fiche"
     },
     "training": {
       "title": "Cahier de formation et séminaires",
@@ -553,24 +564,49 @@
       "empty": "Aucune entrée pour l'instant.",
       "date": "Date",
       "kind": "Type",
-      "kinds": {
-        "seminar": "Séminaire pédagogique",
-        "trainingDay": "Journée de formation",
-        "inspection": "Visite d'inspection",
-        "meeting": "Réunion",
-        "other": "Autre"
-      },
-      "topic": "Sujet",
-      "supervisor": "Encadreur / Inspecteur",
-      "place": "Lieu",
-      "notes": "Synthèse et recommandations",
       "save": "Enregistrer",
       "cancel": "Annuler",
       "delete": "Supprimer",
       "deleteConfirm": "Supprimer cette entrée ?",
       "print": "Imprimer le cahier",
       "error": "Enregistrement impossible. Réessayez.",
-      "edit": "Modifier"
+      "edit": "Modifier",
+      "calendarTitle": "Calendrier des séminaires, journées d'étude et stages",
+      "kinds": {
+        "seminar": "Séminaire mensuel",
+        "studyDay": "Journée d'étude",
+        "internship": "Stage"
+      },
+      "sections": {
+        "seminar": "Séminaires mensuels",
+        "studyDay": "Journées d'étude",
+        "internship": "Stages"
+      },
+      "topic": {
+        "seminar": "Thème du séminaire",
+        "studyDay": "Thème de la journée",
+        "internship": "Type de stage"
+      },
+      "place": "Lieu",
+      "lesson": "Leçon pratique",
+      "practitioner": "Enseignant(e) animateur(trice)",
+      "level": "Niveau",
+      "supervisor": "Encadrant / inspecteur",
+      "num": "N°",
+      "domain": "Domaine de formation",
+      "noDomain": "— Sans domaine —",
+      "domains": {
+        "legislation": "Législation scolaire",
+        "classManagement": "Techniques de gestion de classe",
+        "pedagogy": "Ingénierie de formation et pédagogie",
+        "ethics": "Éthique et déontologie",
+        "ict": "Informatique et TIC",
+        "didactics": "Didactique de la discipline",
+        "mediation": "Médiation scolaire",
+        "system": "Système éducatif algérien et programmes"
+      },
+      "notes": "Synthèse",
+      "summaries": "Synthèses de formation par domaine"
     },
     "print": {
       "teacher": "Enseignant(e)",
@@ -579,6 +615,58 @@
       "from": "Du",
       "to": "au"
     },
-    "back": "Cahiers"
+    "back": "Cahiers",
+    "prep": {
+      "title": "Cahier de préparation (fiches)",
+      "new": "Nouvelle fiche",
+      "empty": "Aucune fiche. Rédigez votre première fiche et réutilisez-la chaque année.",
+      "search": "Rechercher une fiche",
+      "allSubjects": "Toutes les matières",
+      "duplicate": "Dupliquer",
+      "duplicated": "Copie d'une fiche",
+      "print": "Imprimer",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "deleteConfirm": "Supprimer définitivement cette fiche ?",
+      "save": "Enregistrer",
+      "saved": "Enregistré",
+      "saving": "Enregistrement…",
+      "error": "Échec de l'enregistrement. Réessayez.",
+      "notFound": "Fiche introuvable.",
+      "back": "Fiches",
+      "untitled": "Fiche sans titre",
+      "subject": "Matière",
+      "grade": "Niveau",
+      "date": "Jour",
+      "hijri": "Correspondant au",
+      "teacher": "Enseignant(e)",
+      "fields": {
+        "domain": "Domaine",
+        "sequence": "Séquence",
+        "activity": "Activité",
+        "week": "Semaine",
+        "content": "Contenu",
+        "session": "Séance",
+        "objective": "Objectif d'apprentissage",
+        "values": "Valeurs",
+        "materials": "Matériel"
+      },
+      "phasesTitle": "Déroulement",
+      "stages": "Étapes",
+      "situation": "Situation d'enseignement-apprentissage",
+      "assessment": "Évaluation",
+      "phases": {
+        "launch": "Situation de départ",
+        "build": "Construction des apprentissages",
+        "invest": "Réinvestissement"
+      },
+      "placeholders": {
+        "launch": "La situation qui suscite l'intérêt des élèves…",
+        "build": "Activités, questions et progression…",
+        "invest": "Exercices d'application et d'intégration…",
+        "assessment": "Ce que vous vérifiez…"
+      },
+      "updated": "Modifiée le"
+    }
   }
 }
