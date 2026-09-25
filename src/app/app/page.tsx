@@ -14,7 +14,7 @@ export default async function TodayPage() {
   const Chevron = localeDir[locale] === "rtl" ? ChevronLeft : ChevronRight;
 
   const steps = [
-    { key: "classes", href: "/app/classes", icon: Users },
+    { key: "classes", href: "/app/classes/new", icon: Users },
     { key: "students", href: "/app/classes", icon: UserPlus },
     { key: "schedule", href: "/app/schedule", icon: CalendarClock },
   ] as const;

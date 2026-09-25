@@ -45,6 +45,11 @@ npm run dev                  # http://localhost:3000
 - المشروع: `prof-baczone` (إعداد عام في `.env.production` / `.env.development` — قيم عامّة بطبيعتها).
 - القواعد والفهارس: `firebase/` — النشر: `npx firebase login` ثم `npx firebase deploy --only firestore`.
 - التطوير على المحاكيات: `npx firebase emulators:start --only auth,firestore` مع `NEXT_PUBLIC_FIREBASE_EMULATORS=true` في `.env.local`.
+- رفع المستويات والمواد (taxonomy) إلى القاعدة لتصبح قابلة للتعديل:
+  ```bash
+  GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/seed-taxonomy.mjs
+  ```
+  قبل ذلك يستعمل التطبيق القيم الافتراضية في `src/shared/taxonomy/defaults.json`.
 - منح دور أدمن:
   ```bash
   GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/set-role.mjs you@example.com admin
@@ -68,4 +73,5 @@ src/lib/          firebase/ (المتصفح) · server/ (الخادم فقط) ·
 - [x] Phase 1 — الأساس: المشروع، الهوية، نظام التصميم، i18n، هيكل التطبيق، PWA manifest، CI، إعداد Cloudflare
 - [x] Phase 2 — المصادقة: Google + بريد، تأكيد البريد، الاستعادة، حراسة المسارات، الأدوار، قواعد Firestore + اختبارات
 - [x] Phase 3 — معالج البداية (طريقة التدريس، الملف المهني، المؤسسة، السنة الدراسية) + صفحة الإعدادات
-- [ ] Phase 4–16 — انظر `docs/ARCHITECTURE.md` §39
+- [x] Phase 4–5 — الأقسام والإسنادات: إنشاء جماعي حسب المستويات والأفواج، المواد لكل قسم، النسخ، الأرشفة، الحذف
+- [ ] Phase 6–16 — انظر `docs/ARCHITECTURE.md` §39

@@ -101,6 +101,52 @@ service cloud.firestore {
           && validSchool(request.resource.data);
       }
 
+      // الأقسام/الأفواج — قائمة التلاميذ (roster) مضمّنة وتُفتح كتابتها في مرحلة التلاميذ
+      match /classes/{classId} {
+        function validClass(d) {
+          return d.yearId is string && d.yearId.matches('^[0-9]{4}-[0-9]{4}$')
+            && isShortString(d.schoolId, 40)
+            && d.stage in ['primary', 'middle', 'secondary']
+            && isShortString(d.level, 8) && d.level.size() > 0
+            && isShortString(d.section, 8)
+            && isShortString(d.displayName, 40) && d.displayName.size() > 0
+            && d.subjectIds is list && d.subjectIds.size() <= 20
+            && d.archived is bool
+            && (d.copiedFrom == null || isShortString(d.copiedFrom, 40))
+            && d.updatedAt == request.time;
+        }
+        allow read: if isOwner(uid);
+        allow create: if isOwner(uid)
+          && request.resource.data.keys().hasOnly([
+               'yearId', 'schoolId', 'stage', 'level', 'section', 'displayName', 'subjectIds',
+               'roster', 'studentCount', 'archived', 'copiedFrom', 'createdAt', 'updatedAt'])
+          && request.resource.data.roster == []
+          && request.resource.data.studentCount == 0
+          && request.resource.data.archived == false
+          && request.resource.data.createdAt == request.time
+          && validClass(request.resource.data);
+        allow update: if isOwner(uid)
+          && changedOnly(['displayName', 'subjectIds', 'archived', 'updatedAt'])
+          && validClass(request.resource.data);
+        // الحذف النهائي لقسم فارغ فقط؛ غير ذلك أرشفة
+        allow delete: if isOwner(uid) && resource.data.studentCount == 0;
+      }
+
+      // الإسنادات: قسم × مادة، بمعرّف ثابت {classId}__{subjectId}
+      match /assignments/{assignmentId} {
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && request.resource.data.keys().hasOnly([
+               'yearId', 'schoolId', 'stage', 'classId', 'level', 'subjectId', 'createdAt', 'updatedAt'])
+          && assignmentId == request.resource.data.classId + '__' + request.resource.data.subjectId
+          && request.resource.data.yearId is string && request.resource.data.yearId.matches('^[0-9]{4}-[0-9]{4}$')
+          && isShortString(request.resource.data.schoolId, 40)
+          && request.resource.data.stage in ['primary', 'middle', 'secondary']
+          && isShortString(request.resource.data.level, 8)
+          && isShortString(request.resource.data.subjectId, 32)
+          && request.resource.data.updatedAt == request.time;
+      }
+
       // السنوات الدراسية للأستاذ — المعرّف هو معرّف السنة نفسه (2026-2027)
       match /years/{yearId} {
         allow read: if isOwner(uid);

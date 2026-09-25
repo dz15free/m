@@ -1,0 +1,80 @@
+{
+  "primary": {
+    "levels": [
+      { "id": "1AP", "order": 1, "label": { "ar": "السنة الأولى ابتدائي", "fr": "1re année primaire" }, "short": { "ar": "1 ابتدائي", "fr": "1AP" } },
+      { "id": "2AP", "order": 2, "label": { "ar": "السنة الثانية ابتدائي", "fr": "2e année primaire" }, "short": { "ar": "2 ابتدائي", "fr": "2AP" } },
+      { "id": "3AP", "order": 3, "label": { "ar": "السنة الثالثة ابتدائي", "fr": "3e année primaire" }, "short": { "ar": "3 ابتدائي", "fr": "3AP" } },
+      { "id": "4AP", "order": 4, "label": { "ar": "السنة الرابعة ابتدائي", "fr": "4e année primaire" }, "short": { "ar": "4 ابتدائي", "fr": "4AP" } },
+      { "id": "5AP", "order": 5, "label": { "ar": "السنة الخامسة ابتدائي", "fr": "5e année primaire" }, "short": { "ar": "5 ابتدائي", "fr": "5AP" } }
+    ],
+    "subjects": [
+      { "id": "ar", "label": { "ar": "اللغة العربية", "fr": "Langue arabe" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "math", "label": { "ar": "الرياضيات", "fr": "Mathématiques" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "islamic", "label": { "ar": "التربية الإسلامية", "fr": "Éducation islamique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "science", "label": { "ar": "التربية العلمية والتكنولوجية", "fr": "Éducation scientifique et technologique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "civic", "label": { "ar": "التربية المدنية", "fr": "Éducation civique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "history", "label": { "ar": "التاريخ", "fr": "Histoire" }, "levels": ["3AP", "4AP", "5AP"] },
+      { "id": "geography", "label": { "ar": "الجغرافيا", "fr": "Géographie" }, "levels": ["3AP", "4AP", "5AP"] },
+      { "id": "fr", "label": { "ar": "اللغة الفرنسية", "fr": "Langue française" }, "levels": ["3AP", "4AP", "5AP"] },
+      { "id": "en", "label": { "ar": "اللغة الإنجليزية", "fr": "Langue anglaise" }, "levels": ["3AP", "4AP", "5AP"] },
+      { "id": "tamazight", "label": { "ar": "اللغة الأمازيغية", "fr": "Tamazight" }, "levels": ["3AP", "4AP", "5AP"] },
+      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation artistique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "music", "label": { "ar": "التربية الموسيقية", "fr": "Éducation musicale" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "pe", "label": { "ar": "التربية البدنية", "fr": "Éducation physique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] }
+    ]
+  },
+  "middle": {
+    "levels": [
+      { "id": "1AM", "order": 1, "label": { "ar": "السنة الأولى متوسط", "fr": "1re année moyenne" }, "short": { "ar": "1 متوسط", "fr": "1AM" } },
+      { "id": "2AM", "order": 2, "label": { "ar": "السنة الثانية متوسط", "fr": "2e année moyenne" }, "short": { "ar": "2 متوسط", "fr": "2AM" } },
+      { "id": "3AM", "order": 3, "label": { "ar": "السنة الثالثة متوسط", "fr": "3e année moyenne" }, "short": { "ar": "3 متوسط", "fr": "3AM" } },
+      { "id": "4AM", "order": 4, "label": { "ar": "السنة الرابعة متوسط", "fr": "4e année moyenne" }, "short": { "ar": "4 متوسط", "fr": "4AM" } }
+    ],
+    "subjects": [
+      { "id": "ar", "label": { "ar": "اللغة العربية", "fr": "Langue arabe" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "fr", "label": { "ar": "اللغة الفرنسية", "fr": "Langue française" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "en", "label": { "ar": "اللغة الإنجليزية", "fr": "Langue anglaise" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "math", "label": { "ar": "الرياضيات", "fr": "Mathématiques" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "science", "label": { "ar": "علوم الطبيعة والحياة", "fr": "Sciences de la nature et de la vie" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "physics", "label": { "ar": "العلوم الفيزيائية والتكنولوجيا", "fr": "Sciences physiques et technologie" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "islamic", "label": { "ar": "التربية الإسلامية", "fr": "Éducation islamique" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "civic", "label": { "ar": "التربية المدنية", "fr": "Éducation civique" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "histgeo", "label": { "ar": "التاريخ والجغرافيا", "fr": "Histoire-géographie" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "tamazight", "label": { "ar": "اللغة الأمازيغية", "fr": "Tamazight" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "informatics", "label": { "ar": "الإعلام الآلي", "fr": "Informatique" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation artistique" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "music", "label": { "ar": "التربية الموسيقية", "fr": "Éducation musicale" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "pe", "label": { "ar": "التربية البدنية والرياضية", "fr": "Éducation physique et sportive" }, "levels": ["1AM", "2AM", "3AM", "4AM"] }
+    ]
+  },
+  "secondary": {
+    "levels": [
+      { "id": "1AS", "order": 1, "label": { "ar": "السنة الأولى ثانوي", "fr": "1re année secondaire" }, "short": { "ar": "1 ثانوي", "fr": "1AS" } },
+      { "id": "2AS", "order": 2, "label": { "ar": "السنة الثانية ثانوي", "fr": "2e année secondaire" }, "short": { "ar": "2 ثانوي", "fr": "2AS" } },
+      { "id": "3AS", "order": 3, "label": { "ar": "السنة الثالثة ثانوي", "fr": "3e année secondaire" }, "short": { "ar": "3 ثانوي", "fr": "3AS" } }
+    ],
+    "subjects": [
+      { "id": "ar", "label": { "ar": "اللغة العربية وآدابها", "fr": "Langue et littérature arabes" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "fr", "label": { "ar": "اللغة الفرنسية", "fr": "Langue française" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "en", "label": { "ar": "اللغة الإنجليزية", "fr": "Langue anglaise" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "math", "label": { "ar": "الرياضيات", "fr": "Mathématiques" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "science", "label": { "ar": "علوم الطبيعة والحياة", "fr": "Sciences de la nature et de la vie" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "physics", "label": { "ar": "العلوم الفيزيائية", "fr": "Sciences physiques" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "islamic", "label": { "ar": "العلوم الإسلامية", "fr": "Sciences islamiques" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "histgeo", "label": { "ar": "التاريخ والجغرافيا", "fr": "Histoire-géographie" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "philosophy", "label": { "ar": "الفلسفة", "fr": "Philosophie" }, "levels": ["2AS", "3AS"] },
+      { "id": "economics", "label": { "ar": "الاقتصاد والمناجمنت", "fr": "Économie et management" }, "levels": ["2AS", "3AS"] },
+      { "id": "accounting", "label": { "ar": "التسيير المحاسبي والمالي", "fr": "Gestion comptable et financière" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "law", "label": { "ar": "القانون", "fr": "Droit" }, "levels": ["2AS", "3AS"] },
+      { "id": "engineering", "label": { "ar": "التكنولوجيا (الهندسة)", "fr": "Technologie (génie)" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "german", "label": { "ar": "اللغة الألمانية", "fr": "Langue allemande" }, "levels": ["2AS", "3AS"] },
+      { "id": "spanish", "label": { "ar": "اللغة الإسبانية", "fr": "Langue espagnole" }, "levels": ["2AS", "3AS"] },
+      { "id": "italian", "label": { "ar": "اللغة الإيطالية", "fr": "Langue italienne" }, "levels": ["2AS", "3AS"] },
+      { "id": "tamazight", "label": { "ar": "اللغة الأمازيغية", "fr": "Tamazight" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "informatics", "label": { "ar": "الإعلام الآلي", "fr": "Informatique" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation artistique" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "music", "label": { "ar": "التربية الموسيقية", "fr": "Éducation musicale" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "pe", "label": { "ar": "التربية البدنية والرياضية", "fr": "Éducation physique et sportive" }, "levels": ["1AS", "2AS", "3AS"] }
+    ]
+  }
+}

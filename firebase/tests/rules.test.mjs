@@ -162,7 +162,75 @@ describe("teachers/{uid} — الملف المهني", () => {
   });
 
   it("المجموعات الفرعية غير المعرّفة بعد مغلقة حتى للمالك", async () => {
-    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "classes", "c1"), { displayName: "3AP-01" }));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "sessions", "x"), { a: 1 }));
+  });
+});
+
+const cls = (extra = {}) => ({
+  yearId: "2026-2027",
+  schoolId: "s1",
+  stage: "primary",
+  level: "3AP",
+  section: "01",
+  displayName: "3AP-01",
+  subjectIds: ["fr"],
+  roster: [],
+  studentCount: 0,
+  archived: false,
+  copiedFrom: null,
+  createdAt: serverTimestamp(),
+  updatedAt: serverTimestamp(),
+  ...extra,
+});
+
+const assignment = (classId, subjectId, extra = {}) => ({
+  yearId: "2026-2027",
+  schoolId: "s1",
+  stage: "primary",
+  classId,
+  level: "3AP",
+  subjectId,
+  createdAt: serverTimestamp(),
+  updatedAt: serverTimestamp(),
+  ...extra,
+});
+
+describe("الأقسام والإسنادات", () => {
+  it("المالك ينشئ قسمًا صحيحًا وإسناده", async () => {
+    const db = dbAs(A);
+    await assertSucceeds(setDoc(doc(db, "teachers", A.uid, "classes", "c1"), cls()));
+    await assertSucceeds(setDoc(doc(db, "teachers", A.uid, "assignments", "c1__fr"), assignment("c1", "fr")));
+  });
+
+  it("يرفض قسمًا بتلاميذ أو حقول غريبة أو سنة خاطئة", async () => {
+    const db = dbAs(A);
+    await assertFails(setDoc(doc(db, "teachers", A.uid, "classes", "c2"), cls({ roster: [{ id: "x" }] })));
+    await assertFails(setDoc(doc(db, "teachers", A.uid, "classes", "c3"), cls({ studentCount: 5 })));
+    await assertFails(setDoc(doc(db, "teachers", A.uid, "classes", "c4"), cls({ yearId: "2026" })));
+    await assertFails(setDoc(doc(db, "teachers", A.uid, "classes", "c5"), cls({ hack: true })));
+  });
+
+  it("معرّف الإسناد يجب أن يطابق القسم والمادة", async () => {
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "assignments", "other"), assignment("c1", "fr")));
+  });
+
+  it("التعديل: الاسم والمواد والأرشفة فقط، والحذف لقسم فارغ فقط", async () => {
+    const db = dbAs(A);
+    await setDoc(doc(db, "teachers", A.uid, "classes", "c1"), cls());
+    await assertSucceeds(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { displayName: "3AP-A", updatedAt: serverTimestamp() }));
+    await assertFails(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { level: "5AP", updatedAt: serverTimestamp() }));
+    await assertFails(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { studentCount: 3, updatedAt: serverTimestamp() }));
+    await assertSucceeds(deleteDoc(doc(db, "teachers", A.uid, "classes", "c1")));
+    await env.withSecurityRulesDisabled((ctx) =>
+      setDoc(doc(ctx.firestore(), "teachers", A.uid, "classes", "c9"), { ...cls(), studentCount: 30 }),
+    );
+    await assertFails(deleteDoc(doc(db, "teachers", A.uid, "classes", "c9")));
+  });
+
+  it("أستاذ آخر لا يرى أقسام غيره", async () => {
+    await setDoc(doc(dbAs(A), "teachers", A.uid, "classes", "c1"), cls());
+    await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "classes", "c1")));
+    await assertFails(setDoc(doc(dbAs(B), "teachers", A.uid, "assignments", "c1__fr"), assignment("c1", "fr")));
   });
 });
 

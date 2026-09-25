@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
 import { CircleCheck, LoaderCircle } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
@@ -26,6 +27,7 @@ export function SettingsForm() {
   const tc = useTranslations("common");
   const locale = useLocale();
   const auth = useAuth();
+  const queryClient = useQueryClient();
   const uid = auth.status === "signedIn" ? auth.user.uid : null;
 
   const [data, setData] = useState<Loaded | null>(null);
@@ -84,6 +86,8 @@ export function SettingsForm() {
         { ...data.school, stage: data.profile.stage },
       );
       setState("saved");
+      // الصفحات الأخرى (الأقسام، الوثائق) تقرأ الملف من الكاش المشترك
+      await queryClient.invalidateQueries({ queryKey: ["teacher", uid] });
     } catch {
       setState("error");
     }

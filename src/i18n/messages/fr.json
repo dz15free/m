@@ -211,5 +211,59 @@
     "saved": "Enregistré",
     "error": "Enregistrement impossible. Réessayez.",
     "yearSection": "Année scolaire en cours"
+  },
+  "classes": {
+    "title": "Mes classes",
+    "add": "Ajouter des classes",
+    "empty": "Aucune classe pour l'instant.",
+    "emptyHint": "Ajoutez vos classes en une fois : choisissez les niveaux et le nombre de groupes.",
+    "students": "{count, plural, =0 {Aucun élève} one {# élève} other {# élèves}}",
+    "loadError": "Impossible de charger les classes. Vérifiez Internet.",
+    "new": {
+      "title": "Ajouter des classes",
+      "subtitle": "Choisissez les niveaux et le nombre de groupes, nous les créons en une fois.",
+      "levels": "Niveaux",
+      "groups": "Nombre de groupes",
+      "subjects": "Matières enseignées dans ces classes",
+      "subjectsHintGeneralist": "Toutes les matières du niveau sont présélectionnées. Retirez celles que vous n'enseignez pas.",
+      "subjectsHintSubject": "Choisissez la ou les matières que vous enseignez à ces groupes.",
+      "pickLevel": "Choisissez au moins un niveau.",
+      "pickSubject": "Choisissez au moins une matière.",
+      "preview": "Seront créées :",
+      "create": "Créer {count, plural, one {# classe} other {# classes}}",
+      "creating": "Création…",
+      "error": "Impossible de créer les classes. Réessayez.",
+      "decrease": "Diminuer",
+      "increase": "Augmenter"
+    },
+    "detail": {
+      "notFound": "Cette classe n'existe pas.",
+      "back": "Mes classes",
+      "subjects": "Matières",
+      "editSubjects": "Modifier les matières",
+      "rename": "Renommer",
+      "name": "Nom de la classe",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "copy": "Dupliquer la classe",
+      "copyHint": "Nouvelle classe avec le même niveau et les mêmes matières, sans les élèves.",
+      "copied": "{name} créée",
+      "archive": "Archiver la classe",
+      "archiveConfirm": "Masquer la classe des listes ? Toutes ses données restent conservées.",
+      "delete": "Supprimer la classe",
+      "deleteConfirm": "Supprimer définitivement cette classe ?",
+      "actions": "Actions",
+      "saved": "Enregistré",
+      "error": "Enregistrement impossible. Réessayez.",
+      "tabs": {
+        "students": "Élèves",
+        "attendance": "Présences",
+        "lessons": "Leçons",
+        "schedule": "Emploi du temps",
+        "documents": "Documents",
+        "stats": "Statistiques"
+      },
+      "soon": "Bientôt"
+    }
   }
 }
