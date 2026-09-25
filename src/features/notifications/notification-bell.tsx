@@ -1,5 +1,6 @@
 "use client";
 
+import { Portal } from "@/components/ui/portal";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -45,7 +46,11 @@ export function NotificationBell({ className }: { className?: string }) {
         <Bell aria-hidden className="size-6" />
         {unread && <span className="absolute end-2 top-2 size-2.5 rounded-full bg-red-600 ring-2 ring-surface" />}
       </button>
-      {open && uid && <Panel uid={uid} readAt={s?.readAt ?? 0} onClose={close} />}
+      {open && uid && (
+        <Portal>
+          <Panel uid={uid} readAt={s?.readAt ?? 0} onClose={close} />
+        </Portal>
+      )}
     </>
   );
 }

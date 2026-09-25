@@ -1,5 +1,6 @@
 "use client";
 
+import { Portal } from "@/components/ui/portal";
 import { useEffect, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
@@ -47,7 +48,11 @@ export function SupportFab() {
         <MessageCircle aria-hidden className="size-7" />
         {unread && <span className="absolute end-0.5 top-0.5 size-3.5 rounded-full bg-red-600 ring-2 ring-white" />}
       </button>
-      {open && uid && <SupportPanel uid={uid} draft={draft} setDraft={setDraft} unread={unread} onClose={() => setOpen(false)} />}
+      {open && uid && (
+        <Portal>
+          <SupportPanel uid={uid} draft={draft} setDraft={setDraft} unread={unread} onClose={() => setOpen(false)} />
+        </Portal>
+      )}
     </>
   );
 }

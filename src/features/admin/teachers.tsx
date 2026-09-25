@@ -1,5 +1,6 @@
 "use client";
 
+import { Portal } from "@/components/ui/portal";
 import { useState } from "react";
 import {
   useInfiniteQuery,
@@ -132,7 +133,11 @@ export function AdminTeachers() {
           {t("more")}
         </button>
       )}
-      {open && <TeacherSheet user={open} onClose={() => setOpen(null)} />}
+      {open && (
+        <Portal>
+          <TeacherSheet user={open} onClose={() => setOpen(null)} />
+        </Portal>
+      )}
     </div>
   );
 }

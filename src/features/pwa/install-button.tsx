@@ -1,5 +1,6 @@
 "use client";
 
+import { Portal } from "@/components/ui/portal";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
 import { Download, EllipsisVertical, Share, SquarePlus, X } from "lucide-react";
@@ -54,7 +55,11 @@ export function InstallButton({ compact = false, className }: { compact?: boolea
           {t("install")}
         </button>
       )}
-      {guide && <Guide kind={guide} onClose={() => setGuide(null)} />}
+      {guide && (
+        <Portal>
+          <Guide kind={guide} onClose={() => setGuide(null)} />
+        </Portal>
+      )}
     </>
   );
 }
