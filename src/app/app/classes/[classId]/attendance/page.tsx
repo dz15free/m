@@ -8,8 +8,9 @@ export async function generateMetadata() {
   return { title: t("title") };
 }
 
-export default async function AttendancePage({ params }: PageProps<"/app/classes/[classId]/attendance">) {
+export default async function AttendancePage({ params, searchParams }: PageProps<"/app/classes/[classId]/attendance">) {
   const { classId } = await params;
+  const { date, part } = await searchParams;
   const t = await getTranslations();
   const Back = (await getLocale()) === "ar" ? ChevronRight : ChevronLeft;
   return (
@@ -21,7 +22,11 @@ export default async function AttendancePage({ params }: PageProps<"/app/classes
         </Link>
         <h1 className="text-2xl font-bold">{t("attendance.title")}</h1>
       </div>
-      <AttendanceSheet classId={classId} />
+      <AttendanceSheet
+        classId={classId}
+        initialDate={typeof date === "string" ? date : undefined}
+        initialPart={typeof part === "string" ? part : undefined}
+      />
     </div>
   );
 }

@@ -51,7 +51,7 @@ const STATUS_UI: Record<Status, { icon: typeof Check; on: string; row: string }>
 };
 const LABEL: Record<Status, "present" | "absent" | "late" | "excused"> = { P: "present", A: "absent", L: "late", E: "excused" };
 
-export function AttendanceSheet({ classId }: { classId: string }) {
+export function AttendanceSheet({ classId, initialDate, initialPart }: { classId: string; initialDate?: string; initialPart?: string }) {
   const cls = useClass(classId);
   const teacher = useTeacher();
   const tax = useTaxonomy(cls.data?.stage);
@@ -67,12 +67,12 @@ export function AttendanceSheet({ classId }: { classId: string }) {
   const parts = halfDays
     ? [{ id: "am", label: null }, { id: "pm", label: null }]
     : cls.data.subjectIds.map((s) => ({ id: s, label: subjectById(tax.data!, s)?.label ?? null }));
-  return <Sheet cls={cls.data} parts={parts} />;
+  return <Sheet cls={cls.data} parts={parts} initialDate={initialDate} initialPart={initialPart} />;
 }
 
 type Part = { id: string; label: { ar: string; fr: string } | null };
 
-function Sheet({ cls, parts }: { cls: ClassDoc; parts: Part[] }) {
+function Sheet({ cls, parts, initialDate, initialPart }: { cls: ClassDoc; parts: Part[]; initialDate?: string; initialPart?: string }) {
   const t = useTranslations("attendance");
   const locale = useLocale() as Locale;
   const uid = useUid();
@@ -82,10 +82,11 @@ function Sheet({ cls, parts }: { cls: ClassDoc; parts: Part[] }) {
   const Prev = locale === "ar" ? ChevronRight : ChevronLeft;
   const Next = locale === "ar" ? ChevronLeft : ChevronRight;
 
-  const [date, setDate] = useState(todayInAlgiers());
-  const [part, setPart] = useState(() =>
-    parts.length === 2 && parts[0]!.id === "am" ? (new Date().getHours() < 12 ? "am" : "pm") : parts[0]!.id,
-  );
+  const [date, setDate] = useState(() => (initialDate && isIsoDate(initialDate) ? initialDate : todayInAlgiers()));
+  const [part, setPart] = useState(() => {
+    if (initialPart && parts.some((p) => p.id === initialPart)) return initialPart;
+    return parts.length === 2 && parts[0]!.id === "am" ? (new Date().getHours() < 12 ? "am" : "pm") : parts[0]!.id;
+  });
   const [map, setMap] = useState<AttendanceMap>({});
   const [held, setHeld] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -110,6 +111,7 @@ function Sheet({ cls, parts }: { cls: ClassDoc; parts: Part[] }) {
       .then(() => {
         setSaveState((st) => (st === "saving" || st === "offline" ? "saved" : st));
         queryClient.invalidateQueries({ queryKey: ["attendanceStats", uid, cls.id] });
+        queryClient.invalidateQueries({ queryKey: ["session", uid, job.key] });
       })
       .catch(() => setSaveState("error"));
   }

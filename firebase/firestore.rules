@@ -181,6 +181,18 @@ service cloud.firestore {
         allow delete: if false;
       }
 
+      // جدول التوقيت: مستند واحد لكل سنة، الحصص في قائمة
+      match /schedules/{yearId} {
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && yearId.matches('^[0-9]{4}-[0-9]{4}$')
+          && request.resource.data.keys().hasOnly(['yearId', 'slots', 'updatedAt'])
+          && request.resource.data.yearId == yearId
+          && request.resource.data.slots is list
+          && request.resource.data.slots.size() <= 80
+          && request.resource.data.updatedAt == request.time;
+      }
+
       // السنوات الدراسية للأستاذ — المعرّف هو معرّف السنة نفسه (2026-2027)
       match /years/{yearId} {
         allow read: if isOwner(uid);

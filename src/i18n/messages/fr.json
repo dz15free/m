@@ -427,5 +427,59 @@
     "mostAbsent": "Les plus absents d'abord",
     "noStats": "Pas encore de statistiques. Faites l'appel lors de la première séance.",
     "student": "Élève"
+  },
+  "schedule": {
+    "title": "Emploi du temps",
+    "subtitle": "Saisissez vos séances hebdomadaires une fois, les séances de chaque jour apparaissent automatiquement.",
+    "days": [
+      "Dimanche",
+      "Lundi",
+      "Mardi",
+      "Mercredi",
+      "Jeudi",
+      "Vendredi",
+      "Samedi"
+    ],
+    "empty": "Aucune séance ce jour-là.",
+    "add": "Ajouter une séance",
+    "edit": "Modifier la séance",
+    "start": "De",
+    "end": "À",
+    "class": "Classe",
+    "subject": "Matière",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "saving": "Enregistrement…",
+    "saved": "Enregistré",
+    "error": "Enregistrement impossible. Réessayez.",
+    "overlap": "Chevauche une autre séance le même jour.",
+    "invalidTime": "L'heure de fin doit être après le début.",
+    "copyDay": "Copier ce jour vers…",
+    "copyConfirm": "Remplacer les séances du {day} par une copie de ce jour ?",
+    "noClasses": "Ajoutez d'abord vos classes pour construire l'emploi du temps.",
+    "addClasses": "Ajouter des classes",
+    "perWeek": "{count, plural, =0 {Aucune séance} one {# séance} other {# séances}} par semaine"
+  },
+  "session": {
+    "title": "Séance",
+    "now": "Maintenant",
+    "next": "Suivante",
+    "noneToday": "Pas de séance aujourd'hui.",
+    "holiday": "Vacances",
+    "noSchedule": "Vous n'avez pas encore saisi l'emploi du temps.",
+    "setSchedule": "Saisir l'emploi du temps",
+    "pickClass": "Ou choisissez une classe pour faire l'appel :",
+    "opening": "Ouverture de la séance…"
+  },
+  "todayBoard": {
+    "sessionsToday": "Séances du jour",
+    "attendanceDone": "Présences : {p}/{total}",
+    "takeAttendance": "Faire l'appel",
+    "dayOff": "Pas de cours aujourd'hui.",
+    "ended": "Les séances du jour sont terminées.",
+    "current": "Maintenant",
+    "upcoming": "À venir",
+    "done": "Terminée"
   }
 }

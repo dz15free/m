@@ -282,6 +282,17 @@ describe("الحضور", () => {
   });
 });
 
+describe("جدول التوقيت", () => {
+  it("المالك يحفظ جدوله، ويُرفض الخاطئ أو الكبير", async () => {
+    const ref = doc(dbAs(A), "teachers", A.uid, "schedules", "2026-2027");
+    const slot = { id: "a", day: 0, start: "08:00", end: "09:00", classId: "c1", subjectId: "fr" };
+    await assertSucceeds(setDoc(ref, { yearId: "2026-2027", slots: [slot], updatedAt: serverTimestamp() }));
+    await assertFails(setDoc(ref, { yearId: "2027-2028", slots: [], updatedAt: serverTimestamp() }));
+    await assertFails(setDoc(ref, { yearId: "2026-2027", slots: Array(81).fill(slot), updatedAt: serverTimestamp() }));
+    await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "schedules", "2026-2027")));
+  });
+});
+
 describe("المال والاشتراكات", () => {
   it("لا يستطيع أحد من المتصفح كتابة الاشتراك — ولا الأدمن", async () => {
     await assertFails(setDoc(doc(dbAs(A), "entitlements", A.uid), { planId: "premium" }));
