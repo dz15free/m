@@ -151,6 +151,36 @@ service cloud.firestore {
           && request.resource.data.updatedAt == request.time;
       }
 
+      // الحصص (حضور + لاحقًا الدرس): الاستثناءات فقط في خريطة attendance
+      match /sessions/{sessionKey} {
+        function validSession(d) {
+          return d.keys().hasOnly(['date', 'classId', 'part', 'status', 'attendance', 'counts', 'rosterSize', 'lesson', 'createdAt', 'updatedAt'])
+            && d.date is string && d.date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+            && isShortString(d.classId, 40)
+            && isShortString(d.part, 60)
+            && sessionKey == d.date + '_' + d.classId + '_' + d.part
+            && d.status in ['held', 'cancelled']
+            && d.attendance is map && d.attendance.size() <= 60
+            && d.counts is map && d.counts.keys().hasOnly(['p', 'a', 'l', 'e'])
+            && d.rosterSize is int && d.rosterSize >= 0 && d.rosterSize <= 60
+            && d.updatedAt == request.time;
+        }
+        allow read, delete: if isOwner(uid);
+        allow create: if isOwner(uid) && request.resource.data.createdAt == request.time
+          && validSession(request.resource.data);
+        allow update: if isOwner(uid) && request.resource.data.createdAt == resource.data.createdAt
+          && validSession(request.resource.data);
+      }
+
+      // إحصائيات الحضور التراكمية لكل قسم (زيادات increment)
+      match /attendanceStats/{classId} {
+        allow read: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && request.resource.data.keys().hasOnly(['sessions', 's', 'm', 'updatedAt'])
+          && request.resource.data.updatedAt == request.time;
+        allow delete: if false;
+      }
+
       // السنوات الدراسية للأستاذ — المعرّف هو معرّف السنة نفسه (2026-2027)
       match /years/{yearId} {
         allow read: if isOwner(uid);

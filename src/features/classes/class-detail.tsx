@@ -38,6 +38,9 @@ const TABS = [
   { key: "stats", icon: BarChart3 },
 ] as const;
 
+/** أقسام صفحة القسم المفعّلة ومساراتها. */
+const LINKS = { students: "students", attendance: "attendance", stats: "attendance/stats" } as const;
+
 export function ClassDetail({ classId }: { classId: string }) {
   const t = useTranslations("classes.detail");
   const locale = useLocale() as "ar" | "fr";
@@ -80,13 +83,15 @@ export function ClassDetail({ classId }: { classId: string }) {
           const tile = "flex min-h-24 flex-col items-center justify-center gap-2 rounded-card bg-surface p-4 text-center shadow-card";
           return (
             <li key={key}>
-              {key === "students" ? (
-                <Link href={`/app/classes/${c.id}/students`} className={`${tile} transition-shadow hover:shadow-md`}>
+              {key in LINKS ? (
+                <Link href={`/app/classes/${c.id}/${LINKS[key as keyof typeof LINKS]}`} className={`${tile} transition-shadow hover:shadow-md`}>
                   <Icon aria-hidden className="size-6 text-brand-700" />
                   <span className="text-sm font-medium">{t(`tabs.${key}`)}</span>
-                  <span className="rounded-full bg-brand-50 px-2 text-xs font-semibold text-brand-800 tabular-nums">
-                    {c.studentCount}
-                  </span>
+                  {key === "students" && (
+                    <span className="rounded-full bg-brand-50 px-2 text-xs font-semibold text-brand-800 tabular-nums">
+                      {c.studentCount}
+                    </span>
+                  )}
                 </Link>
               ) : (
                 <div className={tile}>

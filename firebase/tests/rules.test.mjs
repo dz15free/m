@@ -162,7 +162,7 @@ describe("teachers/{uid} — الملف المهني", () => {
   });
 
   it("المجموعات الفرعية غير المعرّفة بعد مغلقة حتى للمالك", async () => {
-    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "sessions", "x"), { a: 1 }));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "homework", "x"), { a: 1 }));
   });
 });
 
@@ -238,6 +238,47 @@ describe("الأقسام والإسنادات", () => {
     await setDoc(doc(dbAs(A), "teachers", A.uid, "classes", "c1"), cls());
     await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "classes", "c1")));
     await assertFails(setDoc(doc(dbAs(B), "teachers", A.uid, "assignments", "c1__fr"), assignment("c1", "fr")));
+  });
+});
+
+const session = (extra = {}) => ({
+  date: "2026-09-24",
+  classId: "c1",
+  part: "am",
+  status: "held",
+  attendance: { s1: "A" },
+  counts: { p: 29, a: 1, l: 0, e: 0 },
+  rosterSize: 30,
+  createdAt: serverTimestamp(),
+  updatedAt: serverTimestamp(),
+  ...extra,
+});
+
+describe("الحضور", () => {
+  it("المالك يحفظ حصة صحيحة ويعدّلها", async () => {
+    const db = dbAs(A);
+    const ref = doc(db, "teachers", A.uid, "sessions", "2026-09-24_c1_am");
+    await assertSucceeds(setDoc(ref, session()));
+    await assertSucceeds(updateDoc(ref, { attendance: {}, counts: { p: 30, a: 0, l: 0, e: 0 }, updatedAt: serverTimestamp() }));
+  });
+
+  it("المفتاح يجب أن يطابق التاريخ والقسم والجزء", async () => {
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "sessions", "2026-09-25_c1_am"), session()));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "sessions", "bad_c1_am"), session({ date: "bad" })));
+  });
+
+  it("يرفض حقولًا غريبة أو قوائم كبيرة", async () => {
+    const big = Object.fromEntries(Array.from({ length: 61 }, (_, i) => [`s${i}`, "A"]));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "sessions", "2026-09-24_c1_am"), session({ attendance: big })));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "sessions", "2026-09-24_c1_am"), session({ grade: 20 })));
+  });
+
+  it("الإحصائيات: المالك فقط، وبحقول محددة", async () => {
+    const ref = (db) => doc(db, "teachers", A.uid, "attendanceStats", "c1");
+    await assertSucceeds(setDoc(ref(dbAs(A)), { sessions: 1, s: { s1: { a: 1 } }, m: {}, updatedAt: serverTimestamp() }));
+    await assertFails(setDoc(ref(dbAs(A)), { hack: 1, updatedAt: serverTimestamp() }));
+    await assertFails(getDoc(ref(dbAs(B))));
+    await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "sessions", "2026-09-24_c1_am")));
   });
 });
 
