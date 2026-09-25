@@ -220,6 +220,13 @@ describe("الأقسام والإسنادات", () => {
     await assertSucceeds(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { displayName: "3AP-A", updatedAt: serverTimestamp() }));
     await assertFails(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { level: "5AP", updatedAt: serverTimestamp() }));
     await assertFails(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { studentCount: 3, updatedAt: serverTimestamp() }));
+    const roster = [{ id: "s1", last: "بن عمر", first: "ياسين", gender: "M" }];
+    await assertSucceeds(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { roster, studentCount: 1, updatedAt: serverTimestamp() }));
+    await assertFails(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { roster, studentCount: 5, updatedAt: serverTimestamp() }));
+    const big = Array.from({ length: 61 }, (_, i) => ({ id: `s${i}`, last: "x", first: "y", gender: null }));
+    await assertFails(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { roster: big, studentCount: 61, updatedAt: serverTimestamp() }));
+    await assertFails(deleteDoc(doc(db, "teachers", A.uid, "classes", "c1")));
+    await assertSucceeds(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { roster: [], studentCount: 0, updatedAt: serverTimestamp() }));
     await assertSucceeds(deleteDoc(doc(db, "teachers", A.uid, "classes", "c1")));
     await env.withSecurityRulesDisabled((ctx) =>
       setDoc(doc(ctx.firestore(), "teachers", A.uid, "classes", "c9"), { ...cls(), studentCount: 30 }),

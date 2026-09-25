@@ -101,7 +101,7 @@ service cloud.firestore {
           && validSchool(request.resource.data);
       }
 
-      // الأقسام/الأفواج — قائمة التلاميذ (roster) مضمّنة وتُفتح كتابتها في مرحلة التلاميذ
+      // الأقسام/الأفواج — قائمة التلاميذ (roster) مضمّنة: فتح القسم = قراءة واحدة
       match /classes/{classId} {
         function validClass(d) {
           return d.yearId is string && d.yearId.matches('^[0-9]{4}-[0-9]{4}$')
@@ -125,8 +125,12 @@ service cloud.firestore {
           && request.resource.data.archived == false
           && request.resource.data.createdAt == request.time
           && validClass(request.resource.data);
+        // القائمة: حتى 60 تلميذًا، والعدّاد يطابق طولها دائمًا
         allow update: if isOwner(uid)
-          && changedOnly(['displayName', 'subjectIds', 'archived', 'updatedAt'])
+          && changedOnly(['displayName', 'subjectIds', 'archived', 'roster', 'studentCount', 'updatedAt'])
+          && request.resource.data.roster is list
+          && request.resource.data.roster.size() <= 60
+          && request.resource.data.studentCount == request.resource.data.roster.size()
           && validClass(request.resource.data);
         // الحذف النهائي لقسم فارغ فقط؛ غير ذلك أرشفة
         allow delete: if isOwner(uid) && resource.data.studentCount == 0;

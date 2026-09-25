@@ -13,6 +13,7 @@ import {
 } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
 import type { Stage } from "@/shared/dz/education";
+import type { Student } from "@/features/students/roster";
 import { classDisplayName } from "./naming";
 
 /* الأقسام والإسنادات. الإسناد = (قسم × مادة): الوحدة التي سيُبنى عليها
@@ -28,6 +29,7 @@ export type ClassDoc = {
   section: string;
   displayName: string;
   subjectIds: string[];
+  roster: Student[];
   studentCount: number;
   archived: boolean;
   copiedFrom: string | null;
