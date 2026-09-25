@@ -23,6 +23,7 @@ npm run dev                  # http://localhost:3000
 | `npm run lint` | ESLint |
 | `npm run typecheck` | أنواع المسارات + TypeScript |
 | `npm run build` | بناء Next.js |
+| `npm run test:unit` | اختبارات المنطق (Node test runner) |
 | `npm run test:rules` | اختبارات قواعد Firestore على المحاكي (تتطلب Java) |
 | `npm run brand` | إعادة توليد أصول الشعار من `brand/logo-full.webp` |
 | `npm run preview` | بناء Cloudflare وتشغيله محليًا |
@@ -66,5 +67,5 @@ src/lib/          firebase/ (المتصفح) · server/ (الخادم فقط) ·
 
 - [x] Phase 1 — الأساس: المشروع، الهوية، نظام التصميم، i18n، هيكل التطبيق، PWA manifest، CI، إعداد Cloudflare
 - [x] Phase 2 — المصادقة: Google + بريد، تأكيد البريد، الاستعادة، حراسة المسارات، الأدوار، قواعد Firestore + اختبارات
-- [ ] Phase 3 — الملف المهني / المؤسسة / السنة الدراسية
+- [x] Phase 3 — معالج البداية (طريقة التدريس، الملف المهني، المؤسسة، السنة الدراسية) + صفحة الإعدادات
 - [ ] Phase 4–16 — انظر `docs/ARCHITECTURE.md` §39

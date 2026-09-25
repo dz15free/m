@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { getIdTokenResult, onIdTokenChanged, type User } from "firebase/auth";
 import { useLocale } from "next-intl";
 import { getFirebase, isFirebaseConfigured } from "@/lib/firebase/client";
@@ -11,9 +11,20 @@ export type Role = "admin" | "contentEditor" | "finance";
 export type AuthState =
   | { status: "loading" }
   | { status: "signedOut" }
-  | { status: "signedIn"; user: User; roles: Role[] };
+  | {
+      status: "signedIn";
+      user: User;
+      roles: Role[];
+      /** null أثناء قراءة حالة الحساب */
+      onboardingDone: boolean | null;
+    };
 
-const AuthContext = createContext<AuthState>({ status: "loading" });
+type AuthContextValue = AuthState & {
+  /** يُستدعى بعد إنهاء معالج البداية دون انتظار قراءة جديدة */
+  markOnboarded: () => void;
+};
+
+const AuthContext = createContext<AuthContextValue>({ status: "loading", markOnboarded: () => {} });
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const locale = useLocale();
@@ -33,13 +44,34 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       const { claims } = await getIdTokenResult(user);
       const roles = (["admin", "contentEditor", "finance"] as const).filter((r) => claims[r] === true);
-      setState({ status: "signedIn", user, roles });
-      // مستند الحساب يُنشأ مرة واحدة؛ فشله (مثلًا دون إنترنت) لا يمنع الدخول
-      ensureUserDoc(user, locale).catch(() => {});
+      setState((prev) => ({
+        status: "signedIn",
+        user,
+        roles,
+        // تحديث الرمز لا يعيد حالة الحساب إلى «مجهول» إن كانت معروفة
+        onboardingDone: prev.status === "signedIn" && prev.user.uid === user.uid ? prev.onboardingDone : null,
+      }));
+
+      let onboardingDone: boolean;
+      try {
+        ({ onboardingDone } = await ensureUserDoc(user, locale));
+      } catch {
+        // دون إنترنت ولا كاش: لا نحبس الأستاذ في المعالج (يُعاد التحقق في الجلسة التالية).
+        // مع وجود الإنترنت نعامله كحساب جديد: المعالج يعرض خطأ الحفظ بوضوح إن استمرّ الفشل.
+        onboardingDone = !navigator.onLine;
+      }
+      setState((prev) =>
+        prev.status === "signedIn" && prev.user.uid === user.uid ? { ...prev, onboardingDone } : prev,
+      );
     });
   }, [locale]);
 
-  return <AuthContext.Provider value={state}>{children}</AuthContext.Provider>;
+  const markOnboarded = useCallback(() => {
+    setState((prev) => (prev.status === "signedIn" ? { ...prev, onboardingDone: true } : prev));
+  }, []);
+
+  const value = useMemo(() => ({ ...state, markOnboarded }), [state, markOnboarded]);
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
 export function useAuth() {

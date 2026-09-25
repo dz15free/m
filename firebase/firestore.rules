@@ -48,13 +48,73 @@ service cloud.firestore {
     }
 
     // ── مساحة الأستاذ: عزل تام، لا يصل إليها إلا صاحبها ──────
-    // (Validators لكل مجموعة تُضاف في مرحلتها: الأقسام، الحضور...)
+    // كل مجموعة فرعية مُعرّفة صراحةً بمدقّقاتها؛ ما لم يُعرَّف بعد مغلق.
     match /teachers/{uid} {
-      allow read, create, update: if isOwner(uid);
+      function validTeacher(d) {
+        return isShortString(d.firstName, 60) && d.firstName.size() > 0
+          && isShortString(d.lastName, 60) && d.lastName.size() > 0
+          && d.stage in ['primary', 'middle', 'secondary']
+          && isShortString(d.gradeId, 32)
+          && isShortString(d.get('gradeCustom', ''), 80)
+          && d.wilayaCode is int && d.wilayaCode >= 1 && d.wilayaCode <= 99
+          && isShortString(d.directorate, 120)
+          && d.presetType in ['primaryGeneralist', 'primarySubject', 'middleSecondary']
+          && d.activeYearId is string && d.activeYearId.matches('^[0-9]{4}-[0-9]{4}$')
+          && isShortString(d.primarySchoolId, 40)
+          && d.updatedAt == request.time;
+      }
+
+      allow read: if isOwner(uid);
+
+      allow create: if isOwner(uid)
+        && request.resource.data.keys().hasOnly([
+             'firstName', 'lastName', 'stage', 'gradeId', 'gradeCustom', 'wilayaCode', 'directorate',
+             'presetType', 'activeYearId', 'primarySchoolId', 'counters', 'createdAt', 'updatedAt'])
+        && request.resource.data.counters == { 'classes': 0, 'assignments': 0, 'students': 0 }
+        && request.resource.data.createdAt == request.time
+        && validTeacher(request.resource.data);
+
+      // العدّادات وتاريخ الإنشاء لا يعدّلها الملف المهني (تُحدَّث مع إنشاء الأقسام في مراحلها)
+      allow update: if isOwner(uid)
+        && changedOnly([
+             'firstName', 'lastName', 'stage', 'gradeId', 'gradeCustom', 'wilayaCode', 'directorate',
+             'presetType', 'activeYearId', 'primarySchoolId', 'updatedAt'])
+        && validTeacher(request.resource.data);
+
       allow delete: if false;
 
-      match /{document=**} {
-        allow read, write: if isOwner(uid);
+      // المؤسسات (واحدة أو أكثر)
+      match /schools/{schoolId} {
+        function validSchool(d) {
+          return d.keys().hasOnly(['name', 'wilayaCode', 'commune', 'stage', 'directorate', 'createdAt', 'updatedAt'])
+            && isShortString(d.name, 120) && d.name.size() > 1
+            && d.wilayaCode is int && d.wilayaCode >= 1 && d.wilayaCode <= 99
+            && isShortString(d.commune, 80)
+            && d.stage in ['primary', 'middle', 'secondary']
+            && isShortString(d.directorate, 120)
+            && d.updatedAt == request.time;
+        }
+        allow read, delete: if isOwner(uid);
+        allow create: if isOwner(uid) && request.resource.data.createdAt == request.time
+          && validSchool(request.resource.data);
+        allow update: if isOwner(uid) && request.resource.data.createdAt == resource.data.createdAt
+          && validSchool(request.resource.data);
+      }
+
+      // السنوات الدراسية للأستاذ — المعرّف هو معرّف السنة نفسه (2026-2027)
+      match /years/{yearId} {
+        allow read: if isOwner(uid);
+        allow create: if isOwner(uid)
+          && yearId.matches('^[0-9]{4}-[0-9]{4}$')
+          && request.resource.data.keys().hasOnly(['academicYearId', 'label', 'status', 'createdAt'])
+          && request.resource.data.academicYearId == yearId
+          && isShortString(request.resource.data.label, 16)
+          && request.resource.data.status == 'active'
+          && request.resource.data.createdAt == request.time;
+        allow update: if isOwner(uid)
+          && changedOnly(['status'])
+          && request.resource.data.status in ['active', 'archived'];
+        allow delete: if false;
       }
     }
 

@@ -141,5 +141,75 @@
   },
   "more": {
     "title": "Plus"
+  },
+  "onboarding": {
+    "title": "Préparons votre bureau",
+    "step": "Étape {current} sur {total}",
+    "back": "Retour",
+    "next": "Suivant",
+    "finish": "Commencer",
+    "saving": "Enregistrement…",
+    "preset": {
+      "title": "Comment enseignez-vous ?",
+      "subtitle": "Nous adaptons la plateforme à votre façon de travailler. Modifiable plus tard.",
+      "primaryGeneralist": {
+        "title": "Enseignant(e) de classe au primaire",
+        "body": "J'enseigne la plupart des matières à une classe (ou plus)."
+      },
+      "primarySubject": {
+        "title": "Enseignant(e) d'une matière au primaire",
+        "body": "J'enseigne une matière (français, anglais…) à plusieurs groupes."
+      },
+      "middleSecondary": {
+        "title": "Professeur au moyen ou au secondaire",
+        "body": "J'enseigne une ou plusieurs matières à plusieurs groupes."
+      }
+    },
+    "profileStep": {
+      "title": "Vos informations professionnelles",
+      "subtitle": "Saisies une seule fois, elles apparaissent automatiquement dans vos documents."
+    },
+    "schoolStep": {
+      "title": "Votre établissement",
+      "subtitle": "L'établissement où vous enseignez cette année."
+    },
+    "yearStep": {
+      "title": "Année scolaire",
+      "subtitle": "Vérifiez vos informations avant de commencer.",
+      "yearLabel": "Année scolaire",
+      "yearHint": "Calculée automatiquement à partir de la date.",
+      "summary": "Récapitulatif"
+    },
+    "error": "Enregistrement impossible. Vérifiez Internet puis réessayez."
+  },
+  "profile": {
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "stage": "Cycle",
+    "grade": "Grade",
+    "gradeOther": "Autre (à saisir)",
+    "gradeCustom": "Grade tel qu'il doit apparaître",
+    "stages": {
+      "primary": "Primaire",
+      "middle": "Moyen",
+      "secondary": "Secondaire"
+    },
+    "wilaya": "Wilaya",
+    "wilayaPlaceholder": "Choisir la wilaya",
+    "commune": "Commune",
+    "schoolName": "Nom de l'établissement",
+    "schoolNamePlaceholder": "Ex. : École du Chahid …",
+    "directorate": "Direction de l'éducation",
+    "directorateHint": "Proposée automatiquement ; modifiez-la si votre wilaya compte plusieurs directions.",
+    "required": "Ce champ est obligatoire."
+  },
+  "settings": {
+    "title": "Paramètres",
+    "profileSection": "Profil professionnel",
+    "schoolSection": "Établissement",
+    "save": "Enregistrer",
+    "saved": "Enregistré",
+    "error": "Enregistrement impossible. Réessayez.",
+    "yearSection": "Année scolaire en cours"
   }
 }

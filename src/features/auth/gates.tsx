@@ -17,20 +17,27 @@ export function Splash() {
   );
 }
 
-/** يحرس مساحة الأستاذ: غير المسجّل يُحوَّل إلى الدخول ثم يعود إلى الصفحة نفسها.
+/** يحرس مساحة الأستاذ: غير المسجّل يُحوَّل إلى الدخول ثم يعود إلى الصفحة نفسها،
+ *  ومن لم يُكمل معالج البداية يُحوَّل إليه.
  *  (هذه راحة للواجهة فقط؛ حماية البيانات الحقيقية في قواعد Firestore والخادم.) */
-export function RequireAuth({ children }: { children: React.ReactNode }) {
+export function RequireAuth({ children, onboarding = false }: { children: React.ReactNode; onboarding?: boolean }) {
   const auth = useAuth();
   const router = useRouter();
   const pathname = usePathname();
+  const onboardingDone = auth.status === "signedIn" ? auth.onboardingDone : null;
 
   useEffect(() => {
     if (auth.status === "signedOut") {
       router.replace(`/login?next=${encodeURIComponent(pathname)}`);
+    } else if (onboardingDone === false && !onboarding) {
+      router.replace("/onboarding");
+    } else if (onboardingDone === true && onboarding) {
+      router.replace("/app");
     }
-  }, [auth.status, pathname, router]);
+  }, [auth.status, onboardingDone, onboarding, pathname, router]);
 
-  if (auth.status !== "signedIn") return <Splash />;
+  const ready = auth.status === "signedIn" && onboardingDone === !onboarding;
+  if (!ready) return <Splash />;
   return <>{children}</>;
 }
 

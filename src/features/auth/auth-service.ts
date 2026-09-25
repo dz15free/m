@@ -68,9 +68,11 @@ export async function signOut() {
   await fbSignOut(getFirebase().auth);
 }
 
-/** ينشئ `users/{uid}` عند أول دخول. قراءة واحدة (من الكاش غالبًا) في كل دخول.
+export type AccountInfo = { onboardingDone: boolean };
+
+/** ينشئ `users/{uid}` عند أول دخول ويعيد حالة الحساب. قراءة واحدة (من الكاش غالبًا).
  *  عند التسجيل بالبريد قد يسبق مستمعُ الجلسة حفظَ الاسم، فنكمل الاسم إن كان فارغًا. */
-export async function ensureUserDoc(user: User, locale: Locale, name?: string) {
+export async function ensureUserDoc(user: User, locale: Locale, name?: string): Promise<AccountInfo> {
   const { db } = getFirebase();
   const ref = doc(db, "users", user.uid);
   const snap = await getDoc(ref);
@@ -78,15 +80,27 @@ export async function ensureUserDoc(user: User, locale: Locale, name?: string) {
     if (name && !snap.data().displayName) {
       await updateDoc(ref, { displayName: name.slice(0, 80), updatedAt: serverTimestamp() });
     }
-    return;
+    return { onboardingDone: snap.data().onboardingDone === true };
   }
-  if (!user.email) return;
-  await setDoc(ref, {
-    displayName: (name ?? user.displayName ?? "").slice(0, 80),
-    email: user.email,
-    locale,
-    onboardingDone: false,
-    createdAt: serverTimestamp(),
-    updatedAt: serverTimestamp(),
-  });
+  if (!user.email) return { onboardingDone: false };
+  try {
+    await setDoc(ref, {
+      displayName: (name ?? user.displayName ?? "").slice(0, 80),
+      email: user.email,
+      locale,
+      onboardingDone: false,
+      createdAt: serverTimestamp(),
+      updatedAt: serverTimestamp(),
+    });
+  } catch (error) {
+    // عند التسجيل ينشئ المستندَ مساران في اللحظة نفسها (النموذج ومستمع الجلسة)؛
+    // الكتابة الثانية تُرفض لأنها صارت «تعديلًا»، فنقرأ ما أنشأه الأول.
+    const again = await getDoc(ref);
+    if (!again.exists()) throw error;
+    if (name && !again.data().displayName) {
+      await updateDoc(ref, { displayName: name.slice(0, 80), updatedAt: serverTimestamp() });
+    }
+    return { onboardingDone: again.data().onboardingDone === true };
+  }
+  return { onboardingDone: false };
 }
