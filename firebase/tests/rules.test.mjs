@@ -6,7 +6,7 @@ import {
   assertSucceeds,
   initializeTestEnvironment,
 } from "@firebase/rules-unit-testing";
-import { doc, getDoc, serverTimestamp, setDoc, updateDoc, deleteDoc } from "firebase/firestore";
+import { doc, getDoc, serverTimestamp, setDoc, updateDoc, deleteDoc, writeBatch, Timestamp } from "firebase/firestore";
 
 let env;
 
@@ -197,11 +197,21 @@ const assignment = (classId, subjectId, extra = {}) => ({
   ...extra,
 });
 
+/** إنشاء قسم كما يفعل التطبيق: القسم + فهرس السنة في دفعة واحدة. */
+const createClass = (db, id, indexIds = [id], extra = {}) => {
+  const b = writeBatch(db);
+  b.set(doc(db, "teachers", A.uid, "yearIndex", "2026-2027"), { classIds: indexIds, updatedAt: serverTimestamp() });
+  b.set(doc(db, "teachers", A.uid, "classes", id), cls(extra));
+  return b.commit();
+};
+
 describe("الأقسام والإسنادات", () => {
   it("المالك ينشئ قسمًا صحيحًا وإسناده", async () => {
     const db = dbAs(A);
-    await assertSucceeds(setDoc(doc(db, "teachers", A.uid, "classes", "c1"), cls()));
+    await assertSucceeds(createClass(db, "c1"));
     await assertSucceeds(setDoc(doc(db, "teachers", A.uid, "assignments", "c1__fr"), assignment("c1", "fr")));
+    // قسم خارج الفهرس مرفوض
+    await assertFails(setDoc(doc(db, "teachers", A.uid, "classes", "c2"), cls()));
   });
 
   it("يرفض قسمًا بتلاميذ أو حقول غريبة أو سنة خاطئة", async () => {
@@ -218,7 +228,7 @@ describe("الأقسام والإسنادات", () => {
 
   it("التعديل: الاسم والمواد والأرشفة فقط، والحذف لقسم فارغ فقط", async () => {
     const db = dbAs(A);
-    await setDoc(doc(db, "teachers", A.uid, "classes", "c1"), cls());
+    await createClass(db, "c1");
     await assertSucceeds(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { displayName: "3AP-A", updatedAt: serverTimestamp() }));
     await assertFails(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { level: "5AP", updatedAt: serverTimestamp() }));
     await assertFails(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { studentCount: 3, updatedAt: serverTimestamp() }));
@@ -237,7 +247,7 @@ describe("الأقسام والإسنادات", () => {
   });
 
   it("أستاذ آخر لا يرى أقسام غيره", async () => {
-    await setDoc(doc(dbAs(A), "teachers", A.uid, "classes", "c1"), cls());
+    await createClass(dbAs(A), "c1");
     await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "classes", "c1")));
     await assertFails(setDoc(doc(dbAs(B), "teachers", A.uid, "assignments", "c1__fr"), assignment("c1", "fr")));
   });
@@ -372,6 +382,46 @@ describe("دفاتر الأستاذ", () => {
     await assertFails(setDoc(ref, { ...prep, phases: { ...prep.phases, build: { situation: "x".repeat(4001), assessment: "" } } }));
     await assertFails(setDoc(ref, { ...prep, secret: 1 }));
     await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "preps", "p1")));
+  });
+});
+
+describe("حدود الخطة", () => {
+  const future = () => Timestamp.fromMillis(Date.now() + 86_400_000);
+  const past = () => Timestamp.fromMillis(Date.now() - 86_400_000);
+  const asAdmin = (fn) => env.withSecurityRulesDisabled((ctx) => fn(ctx.firestore()));
+
+  it("المجاني: قسمان افتراضيًا، أو ما تحدّده plans/free", async () => {
+    const db = dbAs(A);
+    await assertSucceeds(createClass(db, "c1", ["c1"]));
+    await assertSucceeds(createClass(db, "c2", ["c1", "c2"]));
+    await assertFails(createClass(db, "c3", ["c1", "c2", "c3"]));
+    await asAdmin((f) => setDoc(doc(f, "plans", "free"), { limits: { maxClasses: 3 } }));
+    await assertSucceeds(createClass(db, "c3", ["c1", "c2", "c3"]));
+  });
+
+  it("التجربة أو الاشتراك الساري يرفع الحد، والمنتهي يعيده", async () => {
+    const db = dbAs(A);
+    const ent = (end) => ({ planId: "premium", status: "trial", currentPeriodEnd: end, limits: { maxClasses: 10 } });
+    await asAdmin((f) => setDoc(doc(f, "entitlements", A.uid), ent(future())));
+    await assertSucceeds(createClass(db, "c5", ["c1", "c2", "c3", "c4", "c5"]));
+    await asAdmin((f) => setDoc(doc(f, "entitlements", A.uid), ent(past())));
+    await assertFails(createClass(db, "c6", ["c1", "c2", "c3", "c4", "c5", "c6"]));
+    // بعد الانتهاء: الأقسام الموجودة تبقى تعمل، والنقصان مسموح
+    await assertSucceeds(updateDoc(doc(db, "teachers", A.uid, "classes", "c5"), { displayName: "X", updatedAt: serverTimestamp() }));
+    await assertSucceeds(setDoc(doc(db, "teachers", A.uid, "yearIndex", "2026-2027"), { classIds: ["c1", "c2", "c3", "c5"], updatedAt: serverTimestamp() }));
+  });
+
+  it("قسم نشط أُخرج من الفهرس يصبح للقراءة فقط، والمؤرشف مسموح", async () => {
+    const db = dbAs(A);
+    await createClass(db, "c1", ["c1"]);
+    await setDoc(doc(db, "teachers", A.uid, "yearIndex", "2026-2027"), { classIds: [], updatedAt: serverTimestamp() });
+    await assertFails(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { displayName: "X", updatedAt: serverTimestamp() }));
+    await assertSucceeds(updateDoc(doc(db, "teachers", A.uid, "classes", "c1"), { archived: true, updatedAt: serverTimestamp() }));
+  });
+
+  it("أحد لا يكتب اشتراكه بنفسه", async () => {
+    await assertFails(setDoc(doc(dbAs(A), "entitlements", A.uid), { status: "active" }));
+    await assertFails(setDoc(doc(dbAs(A), "yearIndex", "x"), { classIds: [] }));
   });
 });
 

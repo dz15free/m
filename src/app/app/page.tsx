@@ -4,6 +4,7 @@ import { Printer, Search } from "lucide-react";
 import { formatLongDate } from "@/i18n/dates";
 import { Greeting } from "@/features/auth/account";
 import { TodayBoard } from "@/features/schedule/today-board";
+import { TrialOffer } from "@/features/billing/trial-offer";
 
 /* «اليوم» — الشاشة الرئيسية: حصص اليوم من جدول التوقيت وحالة الحضور لكل حصة،
    وخطوات التجهيز الناقصة فقط (الأقسام، التلاميذ، الجدول). */
@@ -22,6 +23,9 @@ export default async function TodayPage() {
         <p className="text-sm text-muted">{formatLongDate(new Date(), locale)}</p>
         <Greeting className="mt-1 text-2xl font-bold sm:text-3xl" />
       </header>
+
+      {/* عرض التجربة بعد إكمال المعالج (القرار المعتمد) حتى تُستعمل أو تُؤجَّل */}
+      <TrialOffer />
 
       <TodayBoard />
 

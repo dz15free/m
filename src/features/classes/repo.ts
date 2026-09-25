@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  arrayRemove,
   collection,
   doc,
   getDoc,
@@ -40,6 +41,22 @@ export type ClassDraft = { level: string; section: string; subjectIds: string[];
 
 const db = () => getFirebase().db;
 const classesCol = (uid: string) => collection(db(), "teachers", uid, "classes");
+/** فهرس الأقسام النشطة للسنة: به تفرض القواعد حدّ الخطة (عدد الأقسام). */
+const yearIndexRef = (uid: string, yearId: string) => doc(db(), "teachers", uid, "yearIndex", yearId);
+
+export class ClassLimitError extends Error {}
+
+/** معرّفات الأقسام النشطة في الفهرس، أو من القائمة نفسها إن لم يُنشأ الفهرس بعد (حسابات قديمة). */
+async function indexedIds(uid: string, yearId: string): Promise<{ ids: string[]; exists: boolean }> {
+  const snap = await getDoc(yearIndexRef(uid, yearId));
+  if (snap.exists()) return { ids: (snap.data().classIds as string[]) ?? [], exists: true };
+  return { ids: (await listClasses(uid, yearId)).map((c) => c.id), exists: false };
+}
+
+export async function activeClassCount(uid: string, yearId: string): Promise<number> {
+  return (await indexedIds(uid, yearId)).ids.length;
+}
+
 const assignmentRef = (uid: string, classId: string, subjectId: string) =>
   doc(db(), "teachers", uid, "assignments", `${classId}__${subjectId}`);
 
@@ -67,6 +84,7 @@ export async function createClasses(uid: string, ctx: ClassContext, drafts: Clas
   const now = serverTimestamp();
   const ids: string[] = [];
   const ops: ((b: WriteBatch) => void)[] = [];
+  const current = await indexedIds(uid, ctx.yearId);
 
   for (const d of drafts) {
     const ref = doc(classesCol(uid));
@@ -93,7 +111,14 @@ export async function createClasses(uid: string, ctx: ClassContext, drafts: Clas
     }
   }
 
-  await commitInChunks(ops);
+  // الفهرس في أول دفعة (القواعد تتحقق أن كل قسم جديد مُدرج فيه وأن العدد ضمن الحد)
+  ops.unshift((b) => b.set(yearIndexRef(uid, ctx.yearId), { classIds: [...current.ids, ...ids], updatedAt: now }));
+  try {
+    await commitInChunks(ops);
+  } catch (e) {
+    if ((e as { code?: string }).code === "permission-denied") throw new ClassLimitError();
+    throw e;
+  }
   return ids;
 }
 
@@ -121,10 +146,17 @@ export async function renameClass(uid: string, classId: string, displayName: str
 }
 
 /** الأرشفة تُبقي كل شيء (للسنوات السابقة والإحصائيات) وتخفي القسم من القوائم. */
-export async function archiveClass(uid: string, classId: string) {
+export async function archiveClass(uid: string, classId: string, yearId: string) {
   const batch = writeBatch(db());
   batch.update(doc(classesCol(uid), classId), { archived: true, updatedAt: serverTimestamp() });
+  await releaseSlot(batch, uid, yearId, classId);
   await batch.commit();
+}
+
+/** إخراج قسم من الفهرس (يحرّر مكانه ضمن حدّ الخطة). */
+async function releaseSlot(batch: WriteBatch, uid: string, yearId: string, classId: string) {
+  const idx = await getDoc(yearIndexRef(uid, yearId)).catch(() => null);
+  if (idx?.exists()) batch.update(yearIndexRef(uid, yearId), { classIds: arrayRemove(classId), updatedAt: serverTimestamp() });
 }
 
 /** الحذف النهائي متاح فقط لقسم بلا تلاميذ (القواعد تفرض ذلك أيضًا). */
@@ -132,5 +164,6 @@ export async function deleteClass(uid: string, cls: ClassDoc) {
   const batch = writeBatch(db());
   cls.subjectIds.forEach((s) => batch.delete(assignmentRef(uid, cls.id, s)));
   batch.delete(doc(classesCol(uid), cls.id));
+  await releaseSlot(batch, uid, cls.yearId, cls.id);
   await batch.commit();
 }

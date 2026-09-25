@@ -6,6 +6,7 @@ import { QueryProvider } from "@/components/query-provider";
 import { AuthProvider } from "@/features/auth/auth-provider";
 import { RequireAuth } from "@/features/auth/gates";
 import { VerifyEmailBanner } from "@/features/auth/account";
+import { BillingBanner } from "@/features/billing/billing-banner";
 
 /* مساحة الأستاذ: لا تُعرض إلا بعد تسجيل الدخول.
    الحماية الحقيقية للبيانات في قواعد Firestore والخادم، لا في هذا التخطيط. */
@@ -32,6 +33,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
                 className="mx-auto w-full max-w-5xl flex-1 px-4 pb-32 pt-5 sm:px-6 lg:px-10 lg:pb-12 lg:pt-10 print:max-w-none print:p-0"
               >
                 <VerifyEmailBanner />
+                <BillingBanner />
                 {children}
               </main>
             </div>

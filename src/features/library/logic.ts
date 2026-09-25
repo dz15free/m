@@ -138,15 +138,6 @@ export function search(entries: IndexEntry[], query: string, f: Filters = {}): I
   return scored.sort((a, b) => b.score - a.score || b.e.at - a.e.at).map((x) => x.e);
 }
 
-// ── الاشتراك (الحد الأدنى الذي يحتاجه الخادم الآن؛ يكتمل في مرحلة الاشتراك) ──
-
-export type Entitlement = { status?: string; currentPeriodEnd?: number | null };
-
-export function isPremiumActive(e: Entitlement | null, now = Date.now()): boolean {
-  if (!e) return false;
-  return (e.status === "active" || e.status === "trialing") && typeof e.currentPeriodEnd === "number" && e.currentPeriodEnd > now;
-}
-
 /** اسم ملف آمن للتحميل (Content-Disposition). */
 export function safeFileName(name: string): string {
   const clean = name.replace(/[\\/:*?"<>|\u0000-\u001f]+/g, " ").replace(/\s+/g, " ").trim().slice(0, 120);

@@ -26,7 +26,7 @@ import { Field } from "@/components/ui/field";
 import { levelById, subjectById, subjectsForLevel, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
 import { keys, useClass, useClasses, useTaxonomy, useUid } from "./hooks";
 import { nextSections } from "./naming";
-import { archiveClass, createClasses, deleteClass, renameClass, updateClassSubjects, type ClassDoc } from "./repo";
+import { archiveClass, ClassLimitError, createClasses, deleteClass, renameClass, updateClassSubjects, type ClassDoc } from "./repo";
 import { SubjectChips, SubjectTags } from "./subject-chips";
 
 const TABS = [
@@ -171,6 +171,7 @@ function SubjectsCard({ cls, labels, taxonomy }: { cls: ClassDoc; labels: string
 
 function ActionsCard({ cls }: { cls: ClassDoc }) {
   const t = useTranslations("classes.detail");
+  const tb = useTranslations("billing");
   const uid = useUid();
   const router = useRouter();
   const queryClient = useQueryClient();
@@ -191,8 +192,8 @@ function ActionsCard({ cls }: { cls: ClassDoc }) {
     setMessage(null);
     try {
       await action();
-    } catch {
-      setMessage(t("error"));
+    } catch (e) {
+      setMessage(e instanceof ClassLimitError ? tb("limitBody") : t("error"));
     } finally {
       setBusy(false);
     }
@@ -259,7 +260,7 @@ function ActionsCard({ cls }: { cls: ClassDoc }) {
               uid &&
               confirm(t("archiveConfirm")) &&
               run(async () => {
-                await archiveClass(uid, cls.id);
+                await archiveClass(uid, cls.id, cls.yearId);
                 await refresh();
                 router.push("/app/classes");
               })

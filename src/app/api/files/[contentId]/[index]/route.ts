@@ -1,7 +1,8 @@
 import { errorResponse, HttpError, requireUserWithToken } from "@/lib/server/auth";
 import { getDocAs } from "@/lib/server/firestore-rest";
 import { contentBucket } from "@/lib/server/storage";
-import { isPremiumActive, safeFileName, type ContentFile, type Entitlement } from "@/features/library/logic";
+import { safeFileName, type ContentFile } from "@/features/library/logic";
+import { effectivePlan, type Entitlement } from "@/shared/billing/plans";
 
 /* تحميل ملف من المكتبة. الحماية هنا على الخادم، لا في إخفاء الأزرار:
    1) مستخدم مسجَّل  2) المحتوى منشور (أو القارئ محرّر)  3) Premium ⇐ اشتراك فعّال. */
@@ -18,8 +19,8 @@ export async function GET(req: Request, { params }: RouteContext<"/api/files/[co
 
     const editor = user.roles.admin || user.roles.contentEditor;
     if (content.access === "premium" && !editor) {
-      const ent = (await getDocAs(`entitlements/${user.uid}`, user.token)) as Entitlement | null;
-      if (!isPremiumActive(ent)) throw new HttpError(402, "premium required");
+      const ent = (await getDocAs(`entitlements/${user.uid}`, user.token)) as Partial<Entitlement> | null;
+      if (effectivePlan(ent, null).contentAccess !== "premium") throw new HttpError(402, "premium required");
     }
 
     const object = await (await contentBucket()).get(file.key);

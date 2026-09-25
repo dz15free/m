@@ -19,6 +19,24 @@ service cloud.firestore {
       return request.resource.data.diff(resource.data).affectedKeys().hasOnly(keys);
     }
 
+    // ── حدود الخطة ──
+    // نفس منطق effectivePlan في الكود: اشتراك/تجربة سارية ⇐ حدودها، وإلا حدود plans/free (أو 2).
+    function entPath(uid) { return /databases/$(database)/documents/entitlements/$(uid); }
+    function freeMaxClasses() {
+      let p = /databases/$(database)/documents/plans/free;
+      return exists(p) ? get(p).data.limits.maxClasses : 2;
+    }
+    function paidActive(uid) {
+      return exists(entPath(uid))
+        && get(entPath(uid)).data.status in ['trial', 'active']
+        && request.time < get(entPath(uid)).data.currentPeriodEnd;
+    }
+    function maxClasses(uid) {
+      return paidActive(uid) && get(entPath(uid)).data.limits.maxClasses > freeMaxClasses()
+        ? get(entPath(uid)).data.limits.maxClasses
+        : freeMaxClasses();
+    }
+
     // ── حساب المستخدم ────────────────────────────────────────
     match /users/{uid} {
       function validUser(d) {
@@ -102,7 +120,29 @@ service cloud.firestore {
       }
 
       // الأقسام/الأفواج — قائمة التلاميذ (roster) مضمّنة: فتح القسم = قراءة واحدة
+      // فهرس الأقسام النشطة لكل سنة: وسيلة القواعد لعدّ الأقسام دون مسح المجموعة
+      match /yearIndex/{yearId} {
+        allow read: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && yearId.matches('^[0-9]{4}-[0-9]{4}$')
+          && request.resource.data.keys().hasOnly(['classIds', 'updatedAt'])
+          && request.resource.data.classIds is list
+          && request.resource.data.updatedAt == request.time
+          && (
+            // النقصان حر (أرشفة/حذف)، والزيادة حتى حدّ الخطة
+            (resource != null && resource.data.classIds.hasAll(request.resource.data.classIds))
+            || request.resource.data.classIds.size() <= maxClasses(uid)
+          );
+        allow delete: if false;
+      }
+
       match /classes/{classId} {
+        // قسم نشط أُخرج من الفهرس يصبح للقراءة فقط (لا فائدة من التحايل على الحد)؛
+        // الأقسام القديمة قبل وجود الفهرس تبقى تعمل.
+        function inIndexOrArchived(d) {
+          let idx = /databases/$(database)/documents/teachers/$(uid)/yearIndex/$(d.yearId);
+          return d.archived == true || !existsAfter(idx) || getAfter(idx).data.classIds.hasAny([classId]);
+        }
         function validClass(d) {
           return d.yearId is string && d.yearId.matches('^[0-9]{4}-[0-9]{4}$')
             && isShortString(d.schoolId, 40)
@@ -124,14 +164,17 @@ service cloud.firestore {
           && request.resource.data.studentCount == 0
           && request.resource.data.archived == false
           && request.resource.data.createdAt == request.time
-          && validClass(request.resource.data);
+          && validClass(request.resource.data)
+          // حدّ الخطة: القسم الجديد مُدرج في فهرس السنة (الذي لا يتجاوز الحد) في نفس الدفعة
+          && getAfter(/databases/$(database)/documents/teachers/$(uid)/yearIndex/$(request.resource.data.yearId)).data.classIds.hasAny([classId]);
         // القائمة: حتى 60 تلميذًا، والعدّاد يطابق طولها دائمًا
         allow update: if isOwner(uid)
           && changedOnly(['displayName', 'subjectIds', 'archived', 'roster', 'studentCount', 'updatedAt'])
           && request.resource.data.roster is list
           && request.resource.data.roster.size() <= 60
           && request.resource.data.studentCount == request.resource.data.roster.size()
-          && validClass(request.resource.data);
+          && validClass(request.resource.data)
+          && inIndexOrArchived(request.resource.data);
         // الحذف النهائي لقسم فارغ فقط؛ غير ذلك أرشفة
         allow delete: if isOwner(uid) && resource.data.studentCount == 0;
       }

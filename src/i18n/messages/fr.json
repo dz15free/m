@@ -1040,5 +1040,46 @@
     "markHint": "Cochez ce qui est fait : « Où en suis-je ? » se met à jour.",
     "fromLibrary": "Chercher une progression dans la bibliothèque",
     "edit": "Modifier"
+  },
+  "billing": {
+    "title": "Abonnement",
+    "subtitle": "Votre formule et ce qu'elle permet. Vos données vous appartiennent et restent toujours conservées.",
+    "current": "Votre formule",
+    "status": {
+      "free": "Gratuit",
+      "trial": "Essai gratuit",
+      "active": "Abonné"
+    },
+    "endsOn": "Se termine le {date}",
+    "daysLeft": "{n, plural, one {# jour restant} other {# jours restants}}",
+    "classesLimit": "{n, plural, one {# classe} other {# classes}}",
+    "contentPremium": "Toute la bibliothèque (Premium)",
+    "contentFree": "Contenu gratuit de la bibliothèque",
+    "trialTitle": "Essayez Premium gratuitement pendant {n, plural, one {# jour} other {# jours}}",
+    "trialBody": "Plus de classes, toute la bibliothèque et toutes les fonctions. Sans carte, sans renouvellement automatique.",
+    "trialCta": "Commencer l'essai gratuit",
+    "trialStarted": "Votre essai a commencé ! Profitez de toutes les fonctions.",
+    "later": "Plus tard",
+    "trialErrors": {
+      "used": "Vous avez déjà utilisé l'essai gratuit.",
+      "unverified": "Confirmez d'abord votre adresse e-mail pour activer l'essai.",
+      "unavailable": "L'essai n'est pas disponible pour le moment.",
+      "subscribed": "Vous avez déjà un abonnement actif.",
+      "network": "Connexion impossible. Réessayez."
+    },
+    "plans": "Formules",
+    "perPeriod": "{price} DA / {days, plural, =365 {an} =30 {mois} other {# jours}}",
+    "freeForever": "Gratuit pour toujours",
+    "yourPlan": "Votre formule",
+    "subscribe": "S'abonner",
+    "paySoon": "Le paiement (Edahabia/CIB, BaridiMob, CCP) ouvre bientôt.",
+    "expiring": "Votre abonnement se termine dans {n, plural, one {# jour} other {# jours}}.",
+    "expired": "Votre abonnement est terminé — vos données et vos classes restent intactes.",
+    "renew": "Renouveler",
+    "limitTitle": "Limite de votre formule atteinte ({n})",
+    "limitBody": "Vos classes actuelles restent pleinement fonctionnelles. Pour en ajouter, essayez Premium ou abonnez-vous.",
+    "seePlans": "Voir les formules",
+    "slots": "{used} sur {max} classes",
+    "guarantee": "À la fin d'un abonnement rien n'est supprimé : classes, élèves et cahiers restent ; seules la création au-delà des limites gratuites et le contenu payant sont bloqués."
   }
 }

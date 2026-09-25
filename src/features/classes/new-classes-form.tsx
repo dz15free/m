@@ -11,7 +11,9 @@ import { subjectsForLevel, type StageTaxonomy } from "@/shared/taxonomy/taxonomy
 import { cn } from "@/lib/utils/cn";
 import { keys, useClasses, useTaxonomy, useTeacher, useUid } from "./hooks";
 import { classDisplayName, nextSections } from "./naming";
-import { createClasses, type ClassDoc, type ClassDraft } from "./repo";
+import { ClassLimitError, createClasses, type ClassDoc, type ClassDraft } from "./repo";
+import { useBilling } from "@/features/billing/repo";
+import { ClassLimitNotice } from "@/features/billing/class-limit";
 import { SubjectChips } from "./subject-chips";
 
 const MAX_GROUPS_PER_LEVEL = 15;
@@ -55,6 +57,7 @@ function Form({
   ctx: Parameters<typeof createClasses>[1];
 }) {
   const t = useTranslations("classes.new");
+  const tb = useTranslations("billing");
   const locale = useLocale() as "ar" | "fr";
   const router = useRouter();
   const uid = useUid();
@@ -63,8 +66,10 @@ function Form({
   /** عدد الأفواج لكل مستوى (0 = غير مختار) */
   const [counts, setCounts] = useState<Record<string, number>>({});
   const [subjects, setSubjects] = useState<Set<string>>(new Set());
-  const [error, setError] = useState<"pickLevel" | "pickSubject" | "error" | null>(null);
+  const [error, setError] = useState<"pickLevel" | "pickSubject" | "error" | "limit" | null>(null);
   const [creating, setCreating] = useState(false);
+  const billing = useBilling();
+  const max = billing.effective.limits.maxClasses;
 
   const levels = [...taxonomy.levels].sort((a, b) => a.order - b.order);
   const chosen = levels.filter((l) => (counts[l.id] ?? 0) > 0);
@@ -82,6 +87,8 @@ function Form({
     })),
   );
   const total = drafts.length;
+  // حدّ الخطة (للعرض؛ القواعد تفرضه فعلًا)
+  const overLimit = billing.ready && existing.length + total > max;
 
   function toggleLevel(levelId: string) {
     setError(null);
@@ -116,8 +123,8 @@ function Form({
       await createClasses(uid, ctx, drafts);
       await queryClient.invalidateQueries({ queryKey: keys.classes(uid, ctx.yearId) });
       router.push("/app/classes");
-    } catch {
-      setError("error");
+    } catch (e) {
+      setError(e instanceof ClassLimitError ? "limit" : "error");
       setCreating(false);
     }
   }
@@ -212,7 +219,9 @@ function Form({
         </Card>
       )}
 
-      {error && (
+      {billing.ready && <p className="text-sm text-muted">{tb("slots", { used: existing.length, max })}</p>}
+      {(overLimit || error === "limit") && <ClassLimitNotice max={max} />}
+      {error && error !== "limit" && (
         <p role="alert" className="rounded-xl bg-red-50 p-3 text-sm text-red-800">
           {t(error)}
         </p>
@@ -222,7 +231,7 @@ function Form({
         <button
           type="button"
           onClick={create}
-          disabled={creating || total === 0}
+          disabled={creating || total === 0 || overLimit}
           className={buttonClass("primary", "lg", "w-full shadow-lg sm:w-auto")}
         >
           {creating ? <LoaderCircle aria-hidden className="size-5 animate-spin" /> : <Plus aria-hidden className="size-5" />}

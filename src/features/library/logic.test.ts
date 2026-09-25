@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { isPremiumActive, safeFileName, search, type IndexEntry } from "./logic.ts";
+import { safeFileName, search, type IndexEntry } from "./logic.ts";
 
 const e = (id: string, ar: string, fr: string, extra: Partial<IndexEntry> = {}): IndexEntry => ({
   id, t: { ar, fr }, l: "3AP", s: "fr", ty: "fiche", tm: 1, a: "free", lang: "fr", tags: [], u: "", pk: "", at: 1, ...extra,
@@ -24,14 +24,6 @@ test("بحث بلا همزات ولا «ال» ولا نبرات", () => {
 test("التصفية: ما لا مستوى له يظهر في كل المستويات", () => {
   assert.deepEqual(search(entries, "", { level: "3AP" }).map((x) => x.id), ["2", "4", "1"]);
   assert.deepEqual(search(entries, "", { access: "premium" }).map((x) => x.id), ["2"]);
-});
-
-test("الاشتراك الفعّال", () => {
-  const now = 1_000;
-  assert.equal(isPremiumActive({ status: "active", currentPeriodEnd: 2_000 }, now), true);
-  assert.equal(isPremiumActive({ status: "trialing", currentPeriodEnd: 500 }, now), false);
-  assert.equal(isPremiumActive({ status: "canceled", currentPeriodEnd: 2_000 }, now), false);
-  assert.equal(isPremiumActive(null, now), false);
 });
 
 test("اسم ملف آمن", () => {

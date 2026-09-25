@@ -38,8 +38,10 @@ npm run dev                  # http://localhost:3000
 4. متغيّرات البناء العامة (`NEXT_PUBLIC_*`) تُضبط في بيئة البناء، والأسرار كـ Worker secrets:
    ```bash
    npx wrangler secret put CHARGILY_SECRET_KEY
+   npx wrangler secret put FIREBASE_SERVICE_ACCOUNT   # الصق محتوى ملف JSON لحساب الخدمة كاملًا
    ```
-   **لا يُكتب أي سرّ في ملف داخل المستودع.**
+   **لا يُكتب أي سرّ في ملف داخل المستودع.** حساب الخدمة يحتاجه الخادم لكتابة الاشتراكات (التجربة، الدفع).
+5. حاوية R2 باسم `prof-baczone-content` لملفات المكتبة (الربط في `wrangler.jsonc`).
 
 ## Firebase
 
@@ -51,6 +53,10 @@ npm run dev                  # http://localhost:3000
   GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/seed-taxonomy.mjs
   ```
   قبل ذلك يستعمل التطبيق القيم الافتراضية في `src/shared/taxonomy/defaults.json`.
+- الخطط ومدة التجربة (مرة واحدة؛ السعر يُمرَّر هنا ولا يُكتب في الكود):
+  ```bash
+  GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/seed-billing.mjs --trial-days=7 --premium-price=<السعر> --premium-days=365
+  ```
 - منح دور أدمن:
   ```bash
   GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/set-role.mjs you@example.com admin
@@ -81,4 +87,5 @@ src/lib/          firebase/ (المتصفح) · server/ (الخادم فقط) ·
 - [x] Phase 9 — جدول التوقيت: محرّر أسبوعي (نسخ يوم، تنبيه التداخل)، حصص افتراضية حسب الرزنامة، «اليوم» الديناميكي، زرّ «الحصة» يفتح الحصة الجارية
 - [x] Phase 10 — دفاتر الأستاذ وفق النموذج الجزائري للابتدائي: الدفتر اليومي، دفتر التحضير (المذكرات)، دفتر التنقيط (مركّبات العربية والرياضيات، المعدلات، الترتيب، المعدل السنوي، كشف النقاط ونتائج الفصل)، دفتر التكوين والندوات، والصفحات الأولى (الغلاف، بطاقة الحالة، قوائم التلاميذ، التوزيع الزمني، الحجم الساعي، العطل) — كلها جاهزة للطباعة A4
 - [x] Phase 11 — المكتبة (فهرس بقراءة واحدة، بحث محلي فوري، ملفات R2 محمية بالخادم، Premium، إدارة المحتوى للمحرّرين)، الوثائق الجاهزة (شهادات، غيابات شهرية، استدعاءات، لافتة القسم، بطاقات الطاولة)، التوزيعات السنوية والشهرية و«أين أنا الآن؟»
-- [ ] Phase 12–16 — انظر `docs/ARCHITECTURE.md` §39
+- [x] Phase 12 — الاشتراك: الخطط وإعداداتها في القاعدة (لا أسعار في الكود)، التجربة المجانية بنقرة بعد المعالج (مرة واحدة، بريد مؤكد)، حدّ الأقسام تفرضه قواعد Firestore، الانتهاء الكسول دون حذف أي بيانات، تنبيه قرب الانتهاء
+- [ ] Phase 13–16 — انظر `docs/ARCHITECTURE.md` §39

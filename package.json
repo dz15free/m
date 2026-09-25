@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "npm run cf-typegen --silent >/dev/null && next typegen && tsc --noEmit",
+    "seed:billing": "node scripts/seed-billing.mjs",
     "brand": "node scripts/generate-brand-assets.mjs",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
