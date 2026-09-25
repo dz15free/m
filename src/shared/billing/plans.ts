@@ -86,3 +86,17 @@ export function renewEnd(currentEnd: number | null, now: number, days: number): 
 }
 
 export const hasFeature = (e: Effective, key: string) => e.features.includes(key);
+
+/** صافي الدفعة: إن حُمّلت الرسوم على الزبون فالمبلغ كله صافٍ. */
+export function netOf(amount: number, fees: number, feesPassedToCustomer: boolean): number {
+  return feesPassedToCustomer ? amount : Math.max(0, amount - fees);
+}
+
+/** شهر الإيرادات (توقيت الجزائر) لمفتاح stats/revenue_{YYYY-MM}. */
+export const revenueMonth = (t: number) => new Intl.DateTimeFormat("en-CA", { timeZone: "Africa/Algiers", year: "numeric", month: "2-digit" }).format(new Date(t));
+
+/** مرجع دفع قصير يكتبه الأستاذ في ملاحظة الحوالة (بلا أحرف ملتبسة). */
+export function payRef(random: Uint8Array): string {
+  const alphabet = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+  return `P-${Array.from(random.slice(0, 5), (b) => alphabet[b % alphabet.length]).join("")}`;
+}

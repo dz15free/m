@@ -1072,7 +1072,6 @@
     "freeForever": "Gratuit pour toujours",
     "yourPlan": "Votre formule",
     "subscribe": "S'abonner",
-    "paySoon": "Le paiement (Edahabia/CIB, BaridiMob, CCP) ouvre bientôt.",
     "expiring": "Votre abonnement se termine dans {n, plural, one {# jour} other {# jours}}.",
     "expired": "Votre abonnement est terminé — vos données et vos classes restent intactes.",
     "renew": "Renouveler",
@@ -1080,6 +1079,104 @@
     "limitBody": "Vos classes actuelles restent pleinement fonctionnelles. Pour en ajouter, essayez Premium ou abonnez-vous.",
     "seePlans": "Voir les formules",
     "slots": "{used} sur {max} classes",
-    "guarantee": "À la fin d'un abonnement rien n'est supprimé : classes, élèves et cahiers restent ; seules la création au-delà des limites gratuites et le contenu payant sont bloqués."
+    "guarantee": "À la fin d'un abonnement rien n'est supprimé : classes, élèves et cahiers restent ; seules la création au-delà des limites gratuites et le contenu payant sont bloqués.",
+    "checkout": {
+      "title": "S'abonner à {plan}",
+      "amount": "Montant",
+      "method": "Moyen de paiement",
+      "back": "Abonnement",
+      "methods": {
+        "chargily": {
+          "title": "Carte Edahabia ou CIB",
+          "body": "Paiement sécurisé instantané via Chargily, activation automatique."
+        },
+        "baridimob": {
+          "title": "BaridiMob",
+          "body": "Virement depuis votre téléphone puis envoi de la capture du reçu."
+        },
+        "ccp": {
+          "title": "Compte CCP",
+          "body": "Paiement au bureau de poste puis envoi de la photo du reçu."
+        }
+      },
+      "payCard": "Payer par carte",
+      "redirecting": "Redirection vers la page de paiement…",
+      "cardError": "Impossible de démarrer le paiement. Réessayez ou choisissez un autre moyen.",
+      "tooMany": "Trop de tentatives. Réessayez dans une heure.",
+      "notConfigured": "Ce moyen n'est pas disponible pour le moment.",
+      "unavailable": "Cette formule n'est pas en vente pour le moment.",
+      "steps": "Étapes",
+      "copy": "Copier",
+      "copied": "Copié",
+      "rip": "RIP",
+      "holder": "Titulaire",
+      "account": "N° de compte",
+      "key": "Clé",
+      "ref": "Référence de paiement",
+      "refHint": "Indiquez-la dans le motif si possible, pour faciliter la vérification.",
+      "baridiSteps": [
+        "Ouvrez BaridiMob → Virement.",
+        "Collez le RIP ci-dessus et saisissez le montant exact.",
+        "Validez et gardez une capture du reçu."
+      ],
+      "ccpSteps": [
+        "Au bureau de poste : mandat ou chèque vers le compte ci-dessus, montant exact.",
+        "Photographiez clairement le reçu."
+      ],
+      "proof": "Envoyer la preuve de paiement",
+      "declared": "Montant payé (DA)",
+      "paidAt": "Date du paiement",
+      "txRef": "N° d'opération / reçu (facultatif)",
+      "receipt": "Photo du reçu (ou PDF)",
+      "pickReceipt": "Choisir la photo du reçu",
+      "submit": "Envoyer pour vérification",
+      "sending": "Envoi…",
+      "sendError": "Échec de l'envoi. Vérifiez la connexion et réessayez.",
+      "receiptTooBig": "Fichier trop lourd (max 5 Mo).",
+      "sent": "Preuve de paiement reçue ✓",
+      "sentBody": "Nous la vérifions et activons votre abonnement, généralement sous 24 h. Suivez son état sur la page Abonnement."
+    },
+    "return": {
+      "checking": "Confirmation du paiement…",
+      "checkingBody": "Cela peut prendre quelques instants. Ne fermez pas la page.",
+      "paid": "Paiement reçu, abonnement activé 🎉",
+      "paidUntil": "Valable jusqu'au {date}",
+      "failed": "Paiement non abouti",
+      "failedBody": "Rien n'a été débité, ou le montant sera remboursé automatiquement. Vous pouvez réessayer.",
+      "slow": "La confirmation n'est pas encore arrivée. Votre abonnement sera activé automatiquement dès réception ; vous pouvez continuer.",
+      "toBilling": "Page Abonnement",
+      "retry": "Réessayer",
+      "continue": "Continuer"
+    },
+    "myPayments": "Mes demandes",
+    "mpStatus": {
+      "pending": "En vérification",
+      "approved": "Acceptée",
+      "rejected": "Refusée"
+    },
+    "resend": "Renvoyer",
+    "adminNote": "Note du vérificateur"
+  },
+  "paymentsAdmin": {
+    "title": "Vérification des paiements",
+    "link": "Vérifier les paiements",
+    "forbidden": "Page réservée aux finances et à l'admin.",
+    "empty": "Aucun paiement en attente. 👌",
+    "pending": "{n} en attente",
+    "expected": "Attendu",
+    "declared": "Déclaré",
+    "paidAt": "Payé le",
+    "txRef": "N° d'opération",
+    "ref": "Référence",
+    "viewReceipt": "Voir le reçu",
+    "warnAmount": "Le montant déclaré diffère du prix de la formule",
+    "warnReceipt": "Le même reçu figure dans {n} autre(s) demande(s)",
+    "warnRef": "Le même n° d'opération figure dans {n} autre(s) demande(s)",
+    "note": "Note (obligatoire en cas de refus)",
+    "approve": "Accepter et activer",
+    "reject": "Refuser",
+    "done": "Vérifié",
+    "error": "Échec de l'opération. Réessayez.",
+    "needNote": "Indiquez le motif du refus."
   }
 }

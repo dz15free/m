@@ -425,6 +425,36 @@ describe("حدود الخطة", () => {
   });
 });
 
+describe("الدفع اليدوي", () => {
+  const asAdmin = (fn) => env.withSecurityRulesDisabled((ctx) => fn(ctx.firestore()));
+  const mp = (extra = {}) => ({
+    uid: A.uid, teacherName: "كريم", email: A.email, planId: "premium", expectedAmount: 2500, declaredAmount: 2500,
+    method: "baridimob", paidAt: "2026-09-25", transactionRef: "123456",
+    receiptKey: `receipts/${A.uid}/2026/0f8fad5b-d9cb-469f-a165-70867728950e.jpg`, receiptHash: "a".repeat(64),
+    payRef: "P-7K3QX", status: "pending", createdAt: serverTimestamp(), ...extra,
+  });
+
+  it("الأستاذ ينشئ طلبه بالسعر الصحيح فقط، ولا يقبله بنفسه", async () => {
+    await asAdmin((f) => setDoc(doc(f, "plans", "premium"), { active: true, priceDzd: 2500 }));
+    const db = dbAs(A);
+    await assertSucceeds(setDoc(doc(db, "manualPayments", "m1"), mp()));
+    await assertFails(setDoc(doc(db, "manualPayments", "m2"), mp({ expectedAmount: 100 })));
+    await assertFails(setDoc(doc(db, "manualPayments", "m3"), mp({ uid: B.uid })));
+    await assertFails(setDoc(doc(db, "manualPayments", "m4"), mp({ status: "approved" })));
+    await assertFails(setDoc(doc(db, "manualPayments", "m5"), mp({ receiptKey: `receipts/${B.uid}/2026/0f8fad5b-d9cb-469f-a165-70867728950e.jpg` })));
+    await assertFails(updateDoc(doc(db, "manualPayments", "m1"), { status: "approved" }));
+    await assertFails(getDoc(doc(dbAs(B), "manualPayments", "m1")));
+    await assertSucceeds(getDoc(doc(dbAs(B, { finance: true }), "manualPayments", "m1")));
+  });
+
+  it("الإيرادات للمالية فقط، والطلبات لا يكتبها أحد من المتصفح", async () => {
+    await assertFails(getDoc(doc(dbAs(A), "stats", "revenue_2026-09")));
+    await assertSucceeds(getDoc(doc(dbAs(A, { finance: true }), "stats", "revenue_2026-09")));
+    await assertFails(setDoc(doc(dbAs(A), "orders", "o1"), { uid: A.uid, status: "paid" }));
+    await assertFails(setDoc(doc(dbAs(A, { admin: true }), "payments", "p1"), { uid: A.uid }));
+  });
+});
+
 describe("مكتبة المحتوى", () => {
   const content = (extra = {}) => ({
     title: { ar: "مذكرة الألوان", fr: "" }, stage: "primary", level: "3AP", subject: "fr", language: "fr", type: "fiche",

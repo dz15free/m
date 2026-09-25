@@ -76,6 +76,12 @@ npm run dev                  # http://localhost:3000
   ```bash
   GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/seed-billing.mjs --trial-days=7 --premium-price=<السعر> --premium-days=365
   ```
+- معلومات الدفع اليدوي (تُعرض للأستاذ في صفحة الدفع):
+  ```bash
+  GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/seed-billing.mjs --premium-price=<السعر> \
+    --rip=<20 رقمًا> --holder="<الاسم>" --ccp=<رقم الحساب> --ccp-key=<المفتاح>
+  ```
+- Chargily: السرّ `CHARGILY_SECRET_KEY` (Worker secret) يحدد الوضع تلقائيًا (`test_sk_…` أو `live_sk_…`). رابط الـ webhook يُرسَل مع كل دفعة: `https://prof.baczone.app/api/webhooks/chargily`.
 - منح دور أدمن:
   ```bash
   GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/set-role.mjs you@example.com admin
@@ -107,4 +113,5 @@ src/lib/          firebase/ (المتصفح) · server/ (الخادم فقط) ·
 - [x] Phase 10 — دفاتر الأستاذ وفق النموذج الجزائري للابتدائي: الدفتر اليومي، دفتر التحضير (المذكرات)، دفتر التنقيط (مركّبات العربية والرياضيات، المعدلات، الترتيب، المعدل السنوي، كشف النقاط ونتائج الفصل)، دفتر التكوين والندوات، والصفحات الأولى (الغلاف، بطاقة الحالة، قوائم التلاميذ، التوزيع الزمني، الحجم الساعي، العطل) — كلها جاهزة للطباعة A4
 - [x] Phase 11 — المكتبة (فهرس بقراءة واحدة، بحث محلي فوري، ملفات R2 محمية بالخادم، Premium، إدارة المحتوى للمحرّرين)، الوثائق الجاهزة (شهادات، غيابات شهرية، استدعاءات، لافتة القسم، بطاقات الطاولة)، التوزيعات السنوية والشهرية و«أين أنا الآن؟»
 - [x] Phase 12 — الاشتراك: الخطط وإعداداتها في القاعدة (لا أسعار في الكود)، التجربة المجانية بنقرة بعد المعالج (مرة واحدة، بريد مؤكد)، حدّ الأقسام تفرضه قواعد Firestore، الانتهاء الكسول دون حذف أي بيانات، تنبيه قرب الانتهاء
-- [ ] Phase 13–16 — انظر `docs/ARCHITECTURE.md` §39
+- [x] Phase 13 — الدفع: Chargily (البطاقة الذهبية/CIB) بطلب يُنشئه الخادم وسعر من القاعدة، webhook موقّع HMAC ومعالَج مرة واحدة ذرّيًا مع التحقق من المبلغ؛ BaridiMob/CCP بإيصال مضغوط ببصمة SHA-256 ومراجعة من الأدمن/المالية مع تنبيهات التكرار؛ إحصائيات الإيرادات الشهرية (Gross/Fees/Net)
+- [ ] Phase 14–16 — انظر `docs/ARCHITECTURE.md` §39

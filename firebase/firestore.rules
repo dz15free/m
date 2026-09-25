@@ -13,6 +13,7 @@ service cloud.firestore {
     function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
     function isAdmin() { return signedIn() && request.auth.token.admin == true; }
     function isEditor() { return isAdmin() || (signedIn() && request.auth.token.contentEditor == true); }
+    function isFinance() { return isAdmin() || (signedIn() && request.auth.token.finance == true); }
 
     function isShortString(v, max) { return v is string && v.size() <= max; }
     function changedOnly(keys) {
@@ -423,11 +424,40 @@ service cloud.firestore {
       allow write: if false;
     }
     match /orders/{id} {
-      allow read: if isOwner(resource.data.uid) || isAdmin();
+      allow read: if isOwner(resource.data.uid) || isFinance();
       allow write: if false;
     }
     match /payments/{id} {
-      allow read: if isOwner(resource.data.uid) || isAdmin();
+      allow read: if isOwner(resource.data.uid) || isFinance();
+      allow write: if false;
+    }
+    // الدفع اليدوي (BaridiMob / CCP): الأستاذ ينشئ طلبه بقواعد صارمة، والمراجعة عبر الخادم فقط
+    match /manualPayments/{id} {
+      function validManual(d) {
+        let plan = get(/databases/$(database)/documents/plans/$(d.planId)).data;
+        return d.keys().hasOnly(['uid', 'teacherName', 'email', 'planId', 'expectedAmount', 'declaredAmount', 'method', 'paidAt',
+                                 'transactionRef', 'receiptKey', 'receiptHash', 'payRef', 'status', 'createdAt'])
+          && d.uid == request.auth.uid
+          && isShortString(d.teacherName, 130) && isShortString(d.email, 200)
+          && isShortString(d.planId, 32) && plan.active == true
+          && d.expectedAmount == plan.priceDzd
+          && d.declaredAmount is int && d.declaredAmount > 0 && d.declaredAmount <= 10000000
+          && d.method in ['baridimob', 'ccp']
+          && d.paidAt is string && d.paidAt.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+          && isShortString(d.transactionRef, 60)
+          && d.receiptKey is string && d.receiptKey.matches('^receipts/' + request.auth.uid + '/[0-9]{4}/[0-9a-f-]{36}[.](jpg|png|webp|pdf)$')
+          && d.receiptHash is string && d.receiptHash.matches('^[0-9a-f]{64}$')
+          && d.payRef is string && d.payRef.matches('^P-[2-9A-Z]{5}$')
+          && d.status == 'pending'
+          && d.createdAt == request.time;
+      }
+      allow read: if isOwner(resource.data.uid) || isFinance();
+      allow create: if signedIn() && validManual(request.resource.data);
+      allow update, delete: if false;
+    }
+    // الإيرادات المجمّعة شهريًا (يكتبها الخادم عند كل دفعة مؤكّدة)
+    match /stats/{id} {
+      allow read: if isFinance();
       allow write: if false;
     }
     match /auditLogs/{id} {

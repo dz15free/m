@@ -9,6 +9,10 @@
  *   FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 node scripts/seed-billing.mjs --premium-price=1000
  *
  * بدون --premium-price تُنشأ خطة Premium غير مفعّلة للبيع (التجربة تعمل).
+ *
+ * معلومات الدفع اليدوي (تُكتب فقط إن مُرّرت):
+ *   --rip=00799999xxxxxxxxxxxx --holder="الاسم"            (BaridiMob)
+ *   --ccp=0012345678 --ccp-key=12 --ccp-holder="الاسم"      (CCP)
  */
 import { putDoc } from "./lib/firestore.mjs";
 
@@ -58,3 +62,16 @@ console.log(`✓ plans/premium${price === null ? " (غير مفعّلة للبي
 
 await putDoc("config/app", { trialDays: num("trial-days", 7), trialPlanId: "premium" });
 console.log("✓ config/app");
+
+const rip = arg("rip", null);
+const ccp = arg("ccp", null);
+if (rip || ccp) {
+  const billing = {};
+  if (rip) {
+    if (!/^\d{20}$/.test(rip)) throw new Error("--rip must be 20 digits");
+    billing.baridimob = { rip, holder: arg("holder", ""), note: "" };
+  }
+  if (ccp) billing.ccp = { account: ccp, key: arg("ccp-key", ""), holder: arg("ccp-holder", arg("holder", "")) };
+  await putDoc("config/billing", billing);
+  console.log("✓ config/billing");
+}

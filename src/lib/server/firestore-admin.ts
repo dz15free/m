@@ -9,7 +9,15 @@ import { serverEnv } from "./env";
 
 type Value = Record<string, unknown>;
 export type Precondition = { exists: boolean } | { updateTime: string };
-export type Write = { path: string; data: Record<string, unknown>; precondition?: Precondition };
+export type Write = {
+  path: string;
+  data: Record<string, unknown>;
+  /** دمج الحقول المذكورة فقط (بدل استبدال الوثيقة كاملة) */
+  merge?: boolean;
+  /** زيادات ذرّية: { "gross": 1500, "byMethod.chargily": 1 } */
+  increments?: Record<string, number>;
+  precondition?: Precondition;
+};
 
 const projectId = () => process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID!;
 const docsRoot = () => `projects/${projectId()}/databases/(default)/documents`;
@@ -93,6 +101,11 @@ export async function adminCommit(writes: Write[]): Promise<void> {
     body: JSON.stringify({
       writes: writes.map((w) => ({
         update: { name: `${docsRoot()}/${w.path}`, fields: encodeFields(w.data) },
+        // مع الزيادات أو الدمج: نحدّث الحقول المذكورة فقط ونترك الباقي
+        ...(w.merge || w.increments ? { updateMask: { fieldPaths: Object.keys(w.data) } } : {}),
+        ...(w.increments
+          ? { updateTransforms: Object.entries(w.increments).map(([fieldPath, n]) => ({ fieldPath, increment: encode(n) })) }
+          : {}),
         ...(w.precondition ? { currentDocument: w.precondition } : {}),
       })),
     }),

@@ -26,3 +26,11 @@ test("التجديد المبكر يضيف فوق المتبقي", () => {
   assert.equal(renewEnd(now - 5 * DAY, now, 30), now + 30 * DAY);
   assert.equal(renewEnd(null, now, 7), now + 7 * DAY);
 });
+
+test("الصافي، شهر الإيرادات، ومرجع الدفع", async () => {
+  const { netOf, revenueMonth, payRef } = await import("./plans.ts");
+  assert.equal(netOf(2500, 100, false), 2400);
+  assert.equal(netOf(2500, 100, true), 2500);
+  assert.equal(revenueMonth(Date.parse("2026-09-30T23:30:00Z")), "2026-10"); // منتصف الليل في الجزائر
+  assert.match(payRef(new Uint8Array([0, 1, 2, 3, 250])), /^P-[2-9A-Z]{5}$/);
+});

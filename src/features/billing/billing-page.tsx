@@ -1,6 +1,11 @@
 "use client";
 
+import Link from "next/link";
+import { useQuery } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
+import { buttonClass } from "@/components/ui/button";
+import { useUid } from "@/features/classes/hooks";
+import { listMyManualPayments } from "./payments";
 import { Check, LoaderCircle, ShieldCheck } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { formatLongDate } from "@/i18n/dates";
@@ -76,17 +81,66 @@ export function BillingPage() {
                       {p.contentAccess === "premium" ? t("contentPremium") : t("contentFree")}
                     </li>
                   </ul>
-                  {p.priceDzd > 0 && <p className="mt-auto rounded-xl bg-canvas p-3 text-xs text-muted">{t("paySoon")}</p>}
+                  {p.priceDzd > 0 && (
+                    <Link href={`/app/billing/checkout?plan=${p.id}`} className={buttonClass("primary", "md", "mt-auto")}>
+                      {effective.planId === p.id ? t("renew") : t("subscribe")}
+                    </Link>
+                  )}
                 </Card>
               </li>
             ))}
         </ul>
       </section>
 
+      <MyPayments />
+
       <p className="flex items-start gap-2 rounded-card bg-surface p-4 text-sm text-muted shadow-card">
         <ShieldCheck aria-hidden className="mt-0.5 size-5 shrink-0 text-brand-700" />
         {t("guarantee")}
       </p>
     </div>
+  );
+}
+
+function MyPayments() {
+  const t = useTranslations("billing");
+  const locale = useLocale() as "ar" | "fr";
+  const uid = useUid();
+  const list = useQuery({ queryKey: ["myManualPayments", uid ?? ""], queryFn: () => listMyManualPayments(uid!), enabled: !!uid });
+  if (!list.data?.length) return null;
+  return (
+    <section aria-labelledby="my-payments" className="space-y-2">
+      <h2 id="my-payments" className="text-lg font-semibold">{t("myPayments")}</h2>
+      <ul className="space-y-2">
+        {list.data.map((m) => (
+          <li key={m.id}>
+            <Card className="space-y-1 p-4">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <p className="font-medium">
+                  {t(`checkout.methods.${m.method}.title`)} · <bdi dir="ltr">{m.declaredAmount} {locale === "ar" ? "دج" : "DA"}</bdi>
+                </p>
+                <span
+                  className={cn(
+                    "rounded-full px-2.5 py-0.5 text-xs font-semibold",
+                    m.status === "approved" ? "bg-green-50 text-green-800" : m.status === "rejected" ? "bg-red-50 text-red-800" : "bg-amber-50 text-amber-900",
+                  )}
+                >
+                  {t(`mpStatus.${m.status}`)}
+                </span>
+              </div>
+              <p className="text-xs text-muted">
+                {formatLongDate(new Date(m.createdAt), locale)} · <bdi dir="ltr">{m.payRef}</bdi>
+              </p>
+              {m.status === "rejected" && (
+                <>
+                  {m.adminNote && <p className="text-sm"><b>{t("adminNote")}:</b> {m.adminNote}</p>}
+                  <Link href={`/app/billing/checkout?plan=${m.planId}`} className="text-sm font-semibold text-brand-700">{t("resend")}</Link>
+                </>
+              )}
+            </Card>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
