@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { errorResponse, HttpError, requireUser } from "@/lib/server/auth";
-import { activationWrites } from "@/lib/server/activation";
+import { activationWrites, notifyActivated } from "@/lib/server/activation";
 import { adminCommit, adminGet, newId } from "@/lib/server/firestore-admin";
 import { getAccount, setRoles } from "@/lib/server/identity";
 
@@ -51,6 +51,7 @@ export async function POST(req: Request, { params }: RouteContext<"/api/admin/us
       // بلا مبلغ: لا يُحتسب في الإيرادات (هدية/تعويض)
       const kept = body.amount > 0 ? writes : writes.filter((w) => !w.path.startsWith("stats/") && !w.path.startsWith("payments/"));
       await adminCommit([...kept, { path: `auditLogs/grant_${id}`, data: { action: "admin.grant", uid, by: admin.uid, days: body.days, amount: body.amount, note: body.note, at: new Date(now) } }]);
+      await notifyActivated(uid, until);
       return Response.json({ until });
     }
 

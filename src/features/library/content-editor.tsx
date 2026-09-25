@@ -213,7 +213,7 @@ function EditorForm({ id, initial }: { id?: string; initial: ContentDoc }) {
     try {
       const newId = await saveContent(next, id);
       if (notify && next.status === "published" && uid) {
-        await publishAnnouncement(uid, {
+        await publishAnnouncement({
           kind: "content",
           title: { ar: next.title.ar ? `جديد في المكتبة: ${next.title.ar}` : "", fr: next.title.fr ? `Nouveau : ${next.title.fr}` : "" },
           body: { ar: next.excerpt, fr: "" },

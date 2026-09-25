@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Bell, BookOpen, CreditCard, Gift, LoaderCircle, Megaphone, Sparkles, X } from "lucide-react";
+import { Bell, BellRing, BookOpen, CreditCard, Gift, LoaderCircle, Megaphone, Sparkles, X } from "lucide-react";
+import { enablePush, getPushState, refreshPush, type PushState } from "@/features/pwa/push";
 import { useUid } from "@/features/classes/hooks";
 import { cn } from "@/lib/utils/cn";
 import { getNotificationState, listNotices, markAllRead, type Kind } from "./repo";
@@ -25,6 +26,10 @@ export function NotificationBell({ className }: { className?: string }) {
   });
   const [open, setOpen] = useState(false);
   const s = state.data;
+  const locale = useLocale();
+  useEffect(() => {
+    if (uid) refreshPush(locale);
+  }, [uid, locale]);
   const unread = !!s && Math.max(s.latestAnnouncementAt, s.personalLatestAt) > s.readAt;
 
   function close() {
@@ -85,6 +90,7 @@ function Panel({ uid, readAt, onClose }: { uid: string; readAt: number; onClose:
           </button>
         </header>
         <div className="overflow-y-auto">
+          <PushCard />
           {!list.data ? (
             <div className="grid place-items-center py-10">
               <LoaderCircle aria-hidden className="size-6 animate-spin text-brand-700" />
@@ -128,6 +134,54 @@ function Panel({ uid, readAt, onClose }: { uid: string; readAt: number; onClose:
           )}
         </div>
       </section>
+    </div>
+  );
+}
+
+function PushCard() {
+  const t = useTranslations("notifications");
+  const locale = useLocale();
+  const [state, setState] = useState<PushState>(getPushState);
+  const [busy, setBusy] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [justEnabled, setJustEnabled] = useState(false);
+
+  if (state === "off" || state === "unsupported" || (state === "granted" && !justEnabled)) return null;
+
+  async function enable() {
+    setBusy(true);
+    setFailed(false);
+    try {
+      const next = await enablePush(locale);
+      setState(next);
+      setJustEnabled(next === "granted");
+    } catch {
+      setFailed(true);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <div className="m-3 rounded-2xl bg-brand-50 p-3 text-sm">
+      {state === "granted" ? (
+        <p className="font-semibold text-brand-800">{t("pushOn")}</p>
+      ) : (
+        <div className="flex items-start gap-3">
+          <BellRing aria-hidden className="mt-0.5 size-5 shrink-0 text-brand-700" />
+          <div className="min-w-0 flex-1 space-y-2">
+            <p className="font-semibold">{t("pushTitle")}</p>
+            <p className="text-muted">{state === "needsInstall" ? t("pushIos") : state === "denied" ? t("pushDenied") : t("pushBody")}</p>
+            {state === "default" && (
+              <button type="button" onClick={enable} disabled={busy} className="inline-flex min-h-10 items-center gap-2 rounded-full bg-brand-700 px-4 font-semibold text-white disabled:opacity-60">
+                {busy && <LoaderCircle aria-hidden className="size-4 animate-spin" />}
+                {t("pushEnable")}
+              </button>
+            )}
+            {failed && <p role="alert" className="text-red-700">{t("pushError")}</p>}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -347,6 +347,10 @@ service cloud.firestore {
         allow read: if isOwner(uid);
         allow write: if false;
       }
+      // رموز أجهزة إشعارات الهاتف: يديرها الخادم وحده (لا قراءة ولا كتابة من المتصفح)
+      match /pushTokens/{tokenId} {
+        allow read, write: if false;
+      }
       // تاريخ آخر قراءة للإشعارات (والخادم يحدّث تاريخ آخر إشعار شخصي)
       match /prefs/{docId} {
         allow read: if isOwner(uid);

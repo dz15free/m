@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  addDoc,
   collection,
   deleteDoc,
   doc,
@@ -15,6 +14,7 @@ import {
   Timestamp,
   updateDoc,
 } from "firebase/firestore";
+import { authedFetch } from "@/lib/firebase/api";
 import { getFirebase } from "@/lib/firebase/client";
 
 /* الإشعارات: عامة من الإدارة `announcements` + شخصية من الخادم `teachers/{uid}/notifications`.
@@ -58,16 +58,14 @@ export async function markAllRead(uid: string) {
 
 // ── النشر (الأدمن، أو المحرّر لإشعار محتوى) ──
 
-export async function publishAnnouncement(uid: string, a: Omit<Notice, "id" | "createdAt" | "personal">) {
-  await addDoc(collection(db(), "announcements"), {
-    title: { ar: a.title.ar.trim().slice(0, 140), fr: a.title.fr.trim().slice(0, 140) },
-    body: { ar: a.body.ar.trim().slice(0, 1000), fr: a.body.fr.trim().slice(0, 1000) },
-    link: a.link.trim().slice(0, 300),
-    kind: a.kind,
-    createdAt: serverTimestamp(),
-    createdBy: uid,
+/** يمرّ عبر الخادم: يكتب الإعلان ويرسله إلى الهواتف المشتركة. */
+export async function publishAnnouncement(a: Omit<Notice, "id" | "createdAt" | "personal">) {
+  const res = await authedFetch("/api/admin/announce", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ title: a.title, body: a.body, link: a.link, kind: a.kind }),
   });
-  await updateDoc(doc(db(), "config", "app"), { latestAnnouncementAt: serverTimestamp() });
+  if (!res.ok) throw new Error(`announce ${res.status}`);
 }
 
 export async function listAnnouncements(): Promise<Notice[]> {

@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { ChevronLeft, ChevronRight, LoaderCircle, Send } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { authedFetch } from "@/lib/firebase/api";
 import { cn } from "@/lib/utils/cn";
 import {
   markReadByAdmin,
@@ -102,6 +103,12 @@ function Conversation({ thread, onBack }: { thread: Thread; onBack: () => void }
     setBusy(true);
     try {
       await sendAdminMessage(thread.uid, draft);
+      // إشعار هاتف للأستاذ (لا يعطّل الإرسال إن فشل)
+      void authedFetch("/api/admin/support-notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ uid: thread.uid, preview: draft.trim().slice(0, 140) }),
+      }).catch(() => {});
       setDraft("");
     } finally {
       setBusy(false);

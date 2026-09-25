@@ -9,6 +9,7 @@ import { VerifyEmailBanner } from "@/features/auth/account";
 import { BillingBanner } from "@/features/billing/billing-banner";
 import { SupportFab } from "@/features/support/support-fab";
 import { SiteBanner } from "@/features/pwa/site-banner";
+import { ConnectionStatus } from "@/features/pwa/connection-status";
 
 /* مساحة الأستاذ: لا تُعرض إلا بعد تسجيل الدخول.
    الحماية الحقيقية للبيانات في قواعد Firestore والخادم، لا في هذا التخطيط. */
@@ -29,6 +30,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
             <Sidebar />
             <div className="flex min-w-0 flex-1 flex-col">
               <MobileHeader />
+              <ConnectionStatus />
               <SiteBanner />
               {/* مسافة سفلية تكفي الشريط السفلي والزرّ البارز على الهاتف */}
               <main

@@ -1140,7 +1140,14 @@
     "titleUnread": "Notifications — nouveau",
     "empty": "Aucune notification.",
     "close": "Fermer",
-    "new": "Nouveau"
+    "new": "Nouveau",
+    "pushTitle": "Activez les notifications sur votre téléphone",
+    "pushBody": "Recevez les annonces, les réponses de l'administration et l'activation de votre abonnement, même application fermée.",
+    "pushEnable": "Activer",
+    "pushIos": "Sur iPhone : installez d'abord l'application sur l'écran d'accueil, puis ouvrez-la depuis celui-ci.",
+    "pushDenied": "Les notifications sont bloquées pour ce site dans les réglages du navigateur.",
+    "pushOn": "Notifications activées sur cet appareil ✓",
+    "pushError": "Activation impossible, réessayez plus tard."
   },
   "pwa": {
     "install": "Installer l'application",
@@ -1155,7 +1162,10 @@
     "manual2": "Choisissez « Installer l'application » ou « Ajouter à l'écran d'accueil »",
     "ok": "Compris",
     "close": "Fermer",
-    "banner": "Annonce de l'administration"
+    "banner": "Annonce de l'administration",
+    "offline": "Hors ligne — vos modifications sont gardées sur l'appareil et envoyées au retour d'internet",
+    "syncing": "Connexion rétablie — envoi des modifications…",
+    "synced": "Synchronisé ✓"
   },
   "admin": {
     "title": "Administration",

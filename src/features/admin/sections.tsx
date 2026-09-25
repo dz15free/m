@@ -41,7 +41,7 @@ export function AdminNotifications() {
     if (!uid || (!a.title.ar.trim() && !a.title.fr.trim())) return;
     setState("busy");
     try {
-      await publishAnnouncement(uid, a);
+      await publishAnnouncement(a);
       setA(blank);
       setState("done");
       await queryClient.invalidateQueries({ queryKey: ["adminAnnouncements"] });

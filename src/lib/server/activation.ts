@@ -1,4 +1,5 @@
 import "server-only";
+import { sendToUser } from "./push";
 import { effectivePlan, netOf, renewEnd, revenueMonth, type Entitlement, type Plan } from "@/shared/billing/plans";
 import { adminGet, type Write } from "./firestore-admin";
 import { HttpError } from "./auth";
@@ -100,4 +101,13 @@ export async function activationWrites(p: PaymentInput, now = Date.now()): Promi
     },
   ];
   return { writes, until };
+}
+
+/** إشعار هاتف بعد التفعيل (لا يرمي أبدًا). */
+export async function notifyActivated(uid: string, until: number) {
+  const day = (l: string) => new Intl.DateTimeFormat(l, { dateStyle: "long", timeZone: "Africa/Algiers" }).format(until);
+  await sendToUser(uid, {
+    ar: { title: "تم تفعيل اشتراكك ✨", body: `Premium مفعّل حتى ${day("ar-DZ-u-nu-latn")}`, link: "/app/billing", tag: "billing" },
+    fr: { title: "Abonnement activé ✨", body: `Premium actif jusqu'au ${day("fr-DZ")}`, link: "/app/billing", tag: "billing" },
+  });
 }

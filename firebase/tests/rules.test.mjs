@@ -468,6 +468,11 @@ describe("الإشعارات", () => {
     await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "prefs", "notifications"), { readAt: serverTimestamp(), personalLatestAt: serverTimestamp() }));
     await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "prefs", "notifications")));
   });
+  it("رموز أجهزة الهاتف للخادم وحده", async () => {
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "pushTokens", "t1"), { token: "x" }));
+    await assertFails(getDoc(doc(dbAs(A), "teachers", A.uid, "pushTokens", "t1")));
+    await assertFails(getDoc(doc(dbAs(B, { admin: true }), "teachers", A.uid, "pushTokens", "t1")));
+  });
   it("المحرّر يحدّث تاريخ آخر إعلان فقط", async () => {
     await env.withSecurityRulesDisabled((ctx) => setDoc(doc(ctx.firestore(), "config", "app"), { trialDays: 7 }));
     const ed = dbAs(B, { contentEditor: true });

@@ -9,7 +9,7 @@ import { useAuth } from "@/features/auth/auth-provider";
 import { useTeacher, useUid } from "@/features/classes/hooks";
 import { getAppConfig } from "@/features/billing/repo";
 import { cn } from "@/lib/utils/cn";
-import { markReadByTeacher, OPEN_SUPPORT, sendTeacherMessage, watchMessages, watchThread, type Message, type Thread } from "./repo";
+import { markReadByTeacher, OPEN_SUPPORT, openSupport, sendTeacherMessage, watchMessages, watchThread, type Message, type Thread } from "./repo";
 
 /* زر عائم للتواصل مع الإدارة. على الهاتف يرتفع فوق الشريط السفلي (وفوق أشرطة الحفظ
    الثابتة عبر CSS :has)، وعلى الحاسوب في الزاوية. يفتح لوحة محادثة كاملة الشاشة على الهاتف. */
@@ -32,6 +32,13 @@ export function SupportFab() {
       setOpen(true);
     };
     window.addEventListener(OPEN_SUPPORT, onOpen);
+    // فتح مباشر من إشعار الهاتف: /app?support=1
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("support") === "1") {
+      url.searchParams.delete("support");
+      window.history.replaceState(window.history.state, "", url);
+      openSupport();
+    }
     return () => window.removeEventListener(OPEN_SUPPORT, onOpen);
   }, []);
 

@@ -1,5 +1,5 @@
 import { HttpError } from "@/lib/server/auth";
-import { activationWrites } from "@/lib/server/activation";
+import { activationWrites, notifyActivated } from "@/lib/server/activation";
 import { verifySignature } from "@/lib/server/chargily";
 import { adminCommit, adminGet, type Write } from "@/lib/server/firestore-admin";
 
@@ -91,6 +91,7 @@ export async function POST(req: Request) {
       now,
     );
     await adminCommit([orderWrite({ status: "paid", checkoutId: c.id, fees, paidAt: new Date(now), periodEnd: new Date(until) }), eventWrite, ...writes]);
+    await notifyActivated(o.uid, until);
     return ok("activated");
   } catch (error) {
     // تزامن مع نسخة أخرى من نفس الحدث: إن سُجّل الحدث فقد عولج، وإلا نطلب إعادة الإرسال
