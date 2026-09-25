@@ -25,6 +25,7 @@ npm run dev                  # http://localhost:3000
 | `npm run build` | بناء Next.js |
 | `npm run test:unit` | اختبارات المنطق (Node test runner) |
 | `npm run test:rules` | اختبارات قواعد Firestore على المحاكي (تتطلب Java) |
+| `npm run vendor` | نسخ محرّكات OCR وPDF إلى `public/vendor` (تلقائي قبل dev/build) |
 | `npm run brand` | إعادة توليد أصول الشعار من `brand/logo-full.webp` |
 | `npm run preview` | بناء Cloudflare وتشغيله محليًا |
 | `npm run deploy` | النشر على Cloudflare Workers |
@@ -75,4 +76,5 @@ src/lib/          firebase/ (المتصفح) · server/ (الخادم فقط) ·
 - [x] Phase 3 — معالج البداية (طريقة التدريس، الملف المهني، المؤسسة، السنة الدراسية) + صفحة الإعدادات
 - [x] Phase 4–5 — الأقسام والإسنادات: إنشاء جماعي حسب المستويات والأفواج، المواد لكل قسم، النسخ، الأرشفة، الحذف
 - [x] Phase 6 — التلاميذ: إضافة سريعة بلوحة المفاتيح، تعديل، حذف ونقل وتحديد الجنس جماعيًا، ترتيب أبجدي، بحث، كشف التكرار، تصدير CSV
-- [ ] Phase 7–16 — انظر `docs/ARCHITECTURE.md` §39
+- [x] Phase 7 — الاستيراد الذكي: لصق، Excel (عدة أوراق)، PDF نصّي، صور وPDF ممسوح بـ OCR محلي (عربي/فرنسي، عدة صفحات)، مراجعة موحّدة 🟢🟡🔴
+- [ ] Phase 8–16 — انظر `docs/ARCHITECTURE.md` §39

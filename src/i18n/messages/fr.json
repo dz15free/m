@@ -302,5 +302,92 @@
     "duplicates": "{count, plural, one {# doublon possible} other {# doublons possibles}}",
     "saving": "Enregistrement…",
     "saved": "Enregistré"
+  },
+  "import": {
+    "title": "Ajoutez vos élèves",
+    "subtitle": "Une longue liste ? Inutile de saisir les noms un par un.",
+    "privacy": "Tout est traité sur votre appareil. Les images et fichiers ne sont envoyés à aucun serveur.",
+    "sources": {
+      "camera": {
+        "title": "Photographier la liste",
+        "body": "Une ou plusieurs pages avec l'appareil photo"
+      },
+      "file": {
+        "title": "Image ou PDF",
+        "body": "Depuis vos fichiers ou la galerie, plusieurs pages"
+      },
+      "excel": {
+        "title": "Fichier Excel",
+        "body": "xlsx ou csv — colonnes détectées automatiquement"
+      },
+      "paste": {
+        "title": "Coller les noms",
+        "body": "Depuis Word, WhatsApp ou ailleurs"
+      },
+      "manual": {
+        "title": "Saisie manuelle",
+        "body": "Ajout rapide au clavier"
+      }
+    },
+    "listLang": "Langue de la liste",
+    "langAr": "العربية",
+    "langFr": "Français",
+    "langBoth": "Les deux",
+    "pages": "Pages",
+    "addPage": "Ajouter une page",
+    "rotate": "Pivoter",
+    "removePage": "Retirer la page",
+    "startOcr": "Lancer la reconnaissance",
+    "photoTips": "Pour un meilleur résultat : bon éclairage, feuille bien à plat, liste qui remplit la photo.",
+    "pasteTitle": "Collez la liste ici",
+    "pastePlaceholder": "BENAMAR Yacine\nHAMDANI Nour El Houda\n…",
+    "pasteHint": "Une ligne par élève. Numéros et symboles supprimés automatiquement.",
+    "analyze": "Analyser",
+    "loadingEngine": "Préparation du moteur de reconnaissance… (une seule fois)",
+    "reading": "Lecture du fichier…",
+    "page": "Page {current} sur {total}",
+    "cancel": "Annuler",
+    "found": "{count, plural, =0 {Aucun nom trouvé} one {# élève trouvé} other {# élèves trouvés}}",
+    "statusOk": "Clair",
+    "statusCheck": "À vérifier",
+    "statusBad": "Non reconnu",
+    "needsReview": "{count, plural, one {# nom à vérifier} other {# noms à vérifier}}",
+    "mostlyOk": "La plupart des noms ont été reconnus, mais {count, plural, one {# nom doit} other {# noms doivent}} être vérifié(s).",
+    "orderLastFirst": "Nom puis prénom",
+    "orderFirstLast": "Prénom puis nom",
+    "swap": "Inverser nom et prénom",
+    "reviewFirst": "À vérifier en premier",
+    "group": "Classe dans le fichier",
+    "allGroups": "Toutes les classes",
+    "include": "Importer",
+    "addRow": "Ajouter une ligne",
+    "deleteRow": "Supprimer la ligne",
+    "reasons": {
+      "lowConfidence": "Lecture incertaine",
+      "veryLowConfidence": "Lecture très faible",
+      "missingFirst": "Prénom manquant",
+      "missingLast": "Nom manquant",
+      "strangeChars": "Chiffres ou symboles retirés",
+      "mixedScripts": "Lettres arabes et latines mélangées",
+      "shortWord": "Lettre isolée",
+      "tooLong": "Trop long",
+      "duplicate": "Doublon dans la liste",
+      "existsInClass": "Déjà dans la classe"
+    },
+    "modeAppend": "Ajouter aux élèves actuels",
+    "modeReplace": "Remplacer la liste actuelle",
+    "confirm": "{count, plural, =0 {Rien à importer} one {Valider et importer # élève} other {Valider et importer # élèves}}",
+    "saving": "Importation…",
+    "tooMany": "Le total dépasse le maximum de la classe (60). Retirez des lignes ou répartissez sur deux classes.",
+    "failTitle": "Certaines données n'ont pas pu être reconnues avec précision.",
+    "failBody": "Essayez une photo plus nette, ou une autre méthode :",
+    "xlsUnsupported": "L'ancien format Excel (.xls) n'est pas pris en charge. Enregistrez en .xlsx, ou copiez les cellules et collez-les ici.",
+    "readError": "Lecture du fichier impossible. Vérifiez qu'il n'est pas endommagé, ou essayez une autre méthode.",
+    "saveError": "Enregistrement impossible. Vérifiez Internet puis réessayez.",
+    "restore": "Vous avez une vérification non terminée pour cette liste.",
+    "restoreYes": "Continuer",
+    "restoreNo": "Ignorer",
+    "back": "Retour",
+    "startOver": "Recommencer"
   }
 }
