@@ -335,6 +335,18 @@ describe("دفاتر الأستاذ", () => {
     await assertFails(getDoc(doc(dbAs(A, { admin: true }), "teachers", B.uid, "private", "card")));
   });
 
+  it("دفتر التنقيط: كشف القسم في الفصل", async () => {
+    const ref = doc(dbAs(A), "teachers", A.uid, "grades", "c1__t1");
+    const sheet = { classId: "c1", term: 1, marks: { s1: { ar_oral: 7.5 } }, updatedAt: serverTimestamp() };
+    await assertSucceeds(setDoc(ref, sheet));
+    await assertSucceeds(setDoc(ref, { marks: { s2: { math_numbers: 9 } }, updatedAt: serverTimestamp() }, { merge: true }));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "grades", "c1__t2"), sheet));
+    await assertFails(setDoc(doc(dbAs(A), "teachers", A.uid, "grades", "c1__t4"), { ...sheet, term: 4 }));
+    await assertFails(setDoc(ref, { ...sheet, extra: true }));
+    await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "grades", "c1__t1")));
+    await assertFails(getDoc(doc(dbAs(A, { admin: true }), "teachers", B.uid, "grades", "c1__t1")));
+  });
+
   it("دفتر التحضير (المذكرات)", async () => {
     const ref = doc(dbAs(A), "teachers", A.uid, "preps", "p1");
     const phase = { situation: "نص", assessment: "" };

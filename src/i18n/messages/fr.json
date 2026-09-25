@@ -501,7 +501,7 @@
       },
       "grades": {
         "title": "Cahier de notes",
-        "body": "Relevé de notes et résultats de chaque trimestre — avec l'évaluation."
+        "body": "Notes par composante (arabe, maths), moyennes, rangs, relevés et résultats de chaque trimestre."
       },
       "soon": "Bientôt",
       "front": {
@@ -752,6 +752,59 @@
       "surah": "Sourate",
       "song": "Chant / récitation",
       "page": "Page"
+    },
+    "grades": {
+      "title": "Cahier de notes",
+      "class": "Classe",
+      "term": "Trimestre",
+      "terms": {
+        "1": "1er trimestre",
+        "2": "2e trimestre",
+        "3": "3e trimestre"
+      },
+      "noClasses": "Ajoutez d'abord une classe et ses élèves.",
+      "noStudents": "Aucun élève dans cette classe.",
+      "addStudents": "Ajouter les élèves",
+      "tabs": {
+        "entry": "Saisie des notes",
+        "results": "Résultats"
+      },
+      "column": "Colonne",
+      "outOf": "sur {n}",
+      "invalid": "Note invalide (de 0 à {n})",
+      "saving": "Enregistrement…",
+      "saved": "Enregistré",
+      "error": "Échec de l'enregistrement",
+      "entryHint": "Tapez la note puis Entrée pour passer à l'élève suivant. Chaque note est enregistrée aussitôt.",
+      "filled": "{done}/{total} saisies",
+      "components": {
+        "ar_oral": "Expression et communication orale",
+        "ar_reading": "Lecture et récitation",
+        "ar_writing": "Écriture et dictée",
+        "math_numbers": "Nombres et calcul",
+        "math_measures": "Grandeurs et mesures",
+        "math_data": "Organisation de données",
+        "math_geometry": "Espace et géométrie"
+      },
+      "average": "Moyenne",
+      "subjectAvg": "Moyenne {subject}",
+      "general": "Moyenne générale",
+      "rank": "Rang",
+      "annual": "Moyenne annuelle",
+      "remarks": "Observations",
+      "num": "N°",
+      "student": "Nom et prénom",
+      "printSheet": "Imprimer le relevé",
+      "printResults": "Imprimer les résultats",
+      "sheetTitleArMath": "Relevé de notes : arabe et mathématiques",
+      "sheetTitle": "Relevé de notes",
+      "resultsTitle": "Résultats du {term}",
+      "evaluation": "Évaluation : {subject}",
+      "school": "École",
+      "teacher": "Enseignant(e)",
+      "season": "Année scolaire",
+      "level": "Niveau",
+      "privacy": "Vos notes sont privées : personne d'autre ne les voit, pas même l'administration de la plateforme."
     }
   }
 }

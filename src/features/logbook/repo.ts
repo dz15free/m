@@ -4,6 +4,7 @@ import {
   addDoc,
   collection,
   deleteDoc,
+  deleteField,
   doc,
   getDoc,
   getDocs,
@@ -17,6 +18,7 @@ import {
 } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
 import { cleanCard, type TeacherCard } from "./front-logic";
+import { cleanSheet, gradesDocId, type MarksSheet, type Term } from "./grades-logic";
 import {
   cleanLesson,
   cleanPrep,
@@ -131,4 +133,22 @@ export async function getCard(uid: string): Promise<TeacherCard> {
 
 export async function saveCard(uid: string, card: TeacherCard) {
   await setDoc(cardRef(uid), { ...cleanCard(card), updatedAt: serverTimestamp() });
+}
+
+// ── دفتر التنقيط ──
+
+const gradesRef = (uid: string, classId: string, term: Term) => doc(db(), "teachers", uid, "grades", gradesDocId(classId, term));
+
+export async function getGrades(uid: string, classId: string, term: Term, scale: number): Promise<MarksSheet> {
+  const snap = await getDoc(gradesRef(uid, classId, term));
+  return cleanSheet(snap.exists() ? snap.data().marks : null, scale);
+}
+
+/** علامة واحدة (null = مسح). الدمج يحفظ بقية الكشف كما هو. */
+export async function setMark(uid: string, classId: string, term: Term, studentId: string, column: string, value: number | null) {
+  await setDoc(
+    gradesRef(uid, classId, term),
+    { classId, term, marks: { [studentId]: { [column]: value === null ? deleteField() : value } }, updatedAt: serverTimestamp() },
+    { merge: true },
+  );
 }

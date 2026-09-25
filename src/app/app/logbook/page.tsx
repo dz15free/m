@@ -6,7 +6,7 @@ const NOTEBOOKS = [
   { key: "daily", href: "/app/logbook/daily", icon: NotebookPen },
   { key: "training", href: "/app/logbook/training", icon: Users },
   { key: "prep", href: "/app/logbook/prep", icon: BookOpenCheck },
-  { key: "grades", href: null, icon: ClipboardList },
+  { key: "grades", href: "/app/logbook/grades", icon: ClipboardList },
   { key: "front", href: "/app/logbook/front", icon: IdCard },
 ] as const;
 

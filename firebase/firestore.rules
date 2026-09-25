@@ -269,6 +269,20 @@ service cloud.firestore {
         allow delete: if isOwner(uid);
       }
 
+      // دفتر التنقيط: كشف علامات قسم في فصل — لا يقرؤه إلا الأستاذ
+      match /grades/{docId} {
+        function validGrades(d) {
+          return d.keys().hasOnly(['classId', 'term', 'marks', 'updatedAt'])
+            && isShortString(d.classId, 40)
+            && d.term in [1, 2, 3]
+            && docId == d.classId + '__t' + string(d.term)
+            && d.marks is map && d.marks.size() <= 60
+            && d.updatedAt == request.time;
+        }
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid) && validGrades(request.resource.data);
+      }
+
       // السنوات الدراسية للأستاذ — المعرّف هو معرّف السنة نفسه (2026-2027)
       match /years/{yearId} {
         allow read: if isOwner(uid);
