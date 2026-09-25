@@ -1,5 +1,6 @@
-/* الولايات الجزائرية بترميزها الرسمي. بيانات مرجعية ثابتة (لا تتغيّر سنويًا)،
-   وإن أُضيفت ولايات جديدة تُضاف هنا فقط. */
+/* الولايات الجزائرية بترميزها الرسمي (69 ولاية). بيانات مرجعية ثابتة،
+   وإن أُضيفت ولايات جديدة تُضاف هنا فقط. الرموز لا يُعاد ترقيمها أبدًا:
+   ملفات الأساتذة تحفظ الولاية برقمها. */
 export type Wilaya = { code: number; ar: string; fr: string };
 
 export const WILAYAS: readonly Wilaya[] = [
@@ -61,6 +62,17 @@ export const WILAYAS: readonly Wilaya[] = [
   { code: 56, ar: "جانت", fr: "Djanet" },
   { code: 57, ar: "المغير", fr: "El M'Ghair" },
   { code: 58, ar: "المنيعة", fr: "El Meniaa" },
+  { code: 59, ar: "أفلو", fr: "Aflou" },
+  { code: 60, ar: "بريكة", fr: "Barika" },
+  { code: 61, ar: "القنطرة", fr: "El Kantara" },
+  { code: 62, ar: "بئر العاتر", fr: "Bir El Ater" },
+  { code: 63, ar: "العريشة", fr: "El Aricha" },
+  { code: 64, ar: "قصر الشلالة", fr: "Ksar Chellala" },
+  { code: 65, ar: "عين وسارة", fr: "Aïn Oussera" },
+  { code: 66, ar: "مسعد", fr: "Messaad" },
+  { code: 67, ar: "قصر البخاري", fr: "Ksar El Boukhari" },
+  { code: 68, ar: "بوسعادة", fr: "Bou Saâda" },
+  { code: 69, ar: "الأبيض سيدي الشيخ", fr: "El Abiodh Sidi Cheikh" },
 ];
 
 export function wilayaByCode(code: number): Wilaya | undefined {
