@@ -50,7 +50,7 @@ export class OcrEngine {
   /** يتعرّف على صفحة ويعيدها جدولًا (أسطر × خلايا) مع ثقة كل خلية.
    *  جدول بخطوط مرسومة (قوائم الرقمنة المصوّرة): قراءة «متفرّقة» للصفحة، ثم بناء الشبكة من الخطوط،
    *  ثم إعادة قراءة خلايا الاسم واللقب والجنس منفردة (أدق بكثير، وتلتقط الأسماء على سطرين). */
-  async recognize(canvas: OcrCanvas): Promise<{ table: Table; group?: string; confidence: number }> {
+  async recognize(canvas: OcrCanvas, opts: { refine?: "students" | "all" } = {}): Promise<{ table: Table; group?: string; confidence: number }> {
     if (!this.worker || !this.psm) throw new Error("OCR not initialised");
     const rules = canvas.rules;
     const ruled = !!rules && rules.h.length >= 3 && rules.v.length >= 2;
@@ -72,20 +72,22 @@ export class OcrEngine {
       }
     }
     const grid = smartTable(pieces, ruled ? rules : undefined);
-    if (grid.cells) await this.refineCells(canvas, grid);
+    if (grid.cells) await this.refineCells(canvas, grid, opts.refine ?? "students");
     return { table: grid.table, group: groupFromTitle(grid.title), confidence: data.confidence };
   }
 
   /** إعادة قراءة الخلايا المهمّة منفردة: قصّ بهامش أبيض، أبيض/أسود (يمحو بقايا الأطر الفاتحة)، كتلة واحدة. */
-  private async refineCells(canvas: OcrCanvas, grid: GridResult) {
+  private async refineCells(canvas: OcrCanvas, grid: GridResult, refine: "students" | "all") {
+    const width = Math.max(0, ...grid.table.map((r) => r.length));
     const columns = detectHeader(grid.table)?.columns ?? [];
-    const targets = columns.flatMap((f, c) => (KEY_FIELDS.has(f) ? [c] : []));
+    // جداول التوقيت: كل الخلايا (المواد والأوقات)؛ قوائم التلاميذ: الاسم واللقب والجنس فقط
+    const targets = refine === "all" ? Array.from({ length: width }, (_, c) => c) : columns.flatMap((f, c) => (KEY_FIELDS.has(f) ? [c] : []));
     if (!targets.length || !this.worker || !this.psm) return;
     await this.worker.setParameters({ tessedit_pageseg_mode: this.psm.SINGLE_BLOCK });
     const crop = document.createElement("canvas");
     const ctx = crop.getContext("2d", { willReadFrequently: true })!;
     const margin = 16;
-    for (let r = 1; r < grid.table.length; r++) {
+    for (let r = refine === "all" ? 0 : 1; r < grid.table.length; r++) {
       for (const c of targets) {
         const b = grid.cells![r]?.[c];
         if (!b) continue;

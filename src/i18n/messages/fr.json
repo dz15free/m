@@ -482,7 +482,9 @@
     "copyConfirm": "Remplacer les séances du {day} par une copie de ce jour ?",
     "noClasses": "Ajoutez d'abord vos classes pour construire l'emploi du temps.",
     "addClasses": "Ajouter des classes",
-    "perWeek": "{count, plural, =0 {Aucune séance} one {# séance} other {# séances}} par semaine"
+    "perWeek": "{count, plural, =0 {Aucune séance} one {# séance} other {# séances}} par semaine",
+    "importTitle": "Importer depuis Excel, PDF ou photo",
+    "importHint": "Photographiez ou chargez votre emploi du temps : il est converti en séances à vérifier avant l'enregistrement."
   },
   "session": {
     "title": "Séance",
@@ -1391,5 +1393,59 @@
     "retry": "Réessayer",
     "goApp": "Retour à l'application",
     "goHome": "Accueil"
+  },
+  "scheduleImport": {
+    "title": "Importer l'emploi du temps",
+    "subtitle": "Depuis un fichier Excel, un PDF ou une photo — puis vérification de chaque séance.",
+    "back": "Emploi du temps",
+    "sources": {
+      "camera": {
+        "title": "Photographier",
+        "hint": "Avec la caméra du téléphone"
+      },
+      "file": {
+        "title": "Image ou PDF",
+        "hint": "Depuis les fichiers ou la galerie"
+      },
+      "excel": {
+        "title": "Fichier Excel",
+        "hint": "xlsx ou csv"
+      },
+      "manual": {
+        "title": "Saisie manuelle",
+        "hint": "Séance par séance dans l'éditeur"
+      }
+    },
+    "templateHint": "Pas de fichier ? Téléchargez un modèle, remplissez-le dans Excel (matière ou classe dans chaque case), puis importez-le.",
+    "template": {
+      "download": "Télécharger le modèle",
+      "day": "Jour"
+    },
+    "privacy": "Les fichiers et photos sont lus sur votre téléphone uniquement, sans envoi à un serveur.",
+    "reading": "Lecture du fichier…",
+    "recognizing": "Reconnaissance… page {current} sur {total}",
+    "cancel": "Annuler",
+    "found": "{count, plural, =0 {Aucune séance} one {# séance} other {# séances}} trouvée(s)",
+    "toCheck": "{count, plural, one {# séance demande} other {# séances demandent}} de choisir la classe ou la matière (encadrées en jaune).",
+    "allGood": "Toutes les séances ont été reconnues. Vérifiez puis enregistrez.",
+    "include": "Inclure la séance",
+    "chooseClass": "Choisir la classe",
+    "chooseSubject": "Choisir la matière",
+    "modeTitle": "Votre emploi du temps actuel compte {count} séances :",
+    "mode": {
+      "add": "Ajouter les séances importées à l'emploi du temps actuel",
+      "replace": "Remplacer entièrement l'emploi du temps actuel"
+    },
+    "save": "Enregistrer {count} séances",
+    "fixFirst": "Complétez d'abord les séances encadrées en jaune",
+    "restart": "Recommencer",
+    "errors": {
+      "noDays": "Jours de la semaine introuvables (dimanche, lundi…). Vérifiez qu'il s'agit d'un emploi du temps, ou utilisez le modèle.",
+      "noTimes": "Jours trouvés mais pas les horaires (ex. 08:00-09:00). Ajoutez-les en en-tête ou utilisez le modèle.",
+      "empty": "Le tableau est vide.",
+      "read": "Lecture impossible. Essayez une photo plus nette ou un autre fichier.",
+      "xls": "L'ancien format Excel (xls) n'est pas pris en charge : enregistrez en xlsx.",
+      "save": "Enregistrement impossible. Réessayez."
+    }
   }
 }
