@@ -1,6 +1,6 @@
 "use client";
 
-import { grayToRgba, preprocess, rgbaToGray } from "./preprocess";
+import { grayToRgba, preprocess, rgbaToGray, type RuleLines } from "./preprocess";
 
 /* تجهيز صورة القائمة قبل التعرّف (كله في المتصفح):
    - تدوير حسب EXIF (صور الهاتف) + تدوير يدوي بمضاعفات 90°
@@ -13,7 +13,10 @@ export async function loadImage(file: Blob): Promise<ImageBitmap> {
   return createImageBitmap(file, { imageOrientation: "from-image" });
 }
 
-export function prepareForOcr(source: CanvasImageSource & { width: number; height: number }, rotation = 0): HTMLCanvasElement {
+/** لوحة جاهزة للتعرّف، مع خطوط الجدول المكتشفة (بإحداثياتها بعد التقويم) لإعادة بناء الخلايا. */
+export type OcrCanvas = HTMLCanvasElement & { rules?: RuleLines };
+
+export function prepareForOcr(source: CanvasImageSource & { width: number; height: number }, rotation = 0): OcrCanvas {
   const scale = Math.min(3, TARGET / Math.max(source.width, source.height));
   const w = Math.round(source.width * scale);
   const h = Math.round(source.height * scale);
@@ -32,10 +35,10 @@ export function prepareForOcr(source: CanvasImageSource & { width: number; heigh
 
   const image = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const gray = rgbaToGray(image.data, canvas.width, canvas.height);
-  preprocess(gray);
+  const { rules } = preprocess(gray);
   grayToRgba(gray, image.data);
   ctx.putImageData(image, 0, 0);
-  return canvas;
+  return Object.assign(canvas, { rules });
 }
 
 /** صورة مصغّرة للمعاينة في الواجهة. */

@@ -36,7 +36,7 @@ import { loadImage, prepareForOcr, thumbnail } from "./image";
 import { OcrEngine, type OcrLang } from "./ocr";
 import { pasteToTable } from "./paste";
 import { editRow, reorderAll, summary, toReviewRows, type ReviewRow, type RowStatus } from "./review";
-import { readPdf, readSpreadsheet, UnsupportedFileError } from "./sources";
+import { readPdf, readSpreadsheet, UnsupportedFileError, type PdfPage } from "./sources";
 import type { NameOrder } from "./split-name";
 import { parseTable, type Candidate, type Table } from "./table";
 import { listQuality, looksBroken } from "./quality";
@@ -47,6 +47,12 @@ type Draft = { rows: ReviewRow[]; order: NameOrder; savedAt: number };
 
 const DRAFT_TTL = 24 * 60 * 60 * 1000;
 const draftKey = (classId: string) => `import-draft:${classId}`;
+
+/** القسم لكل صفحة لا يُعرض إلا إن احتوى الملف أكثر من قسم (القوائم الرسمية: صفحة لكل قسم). */
+function withGroups(pages: PdfPage[]): PdfPage[] {
+  const distinct = new Set(pages.map((p) => p.group).filter(Boolean));
+  return distinct.size > 1 ? pages : pages.map((p) => ({ table: p.table }));
+}
 
 function readDraft(classId: string): Draft | null {
   try {
@@ -149,19 +155,19 @@ function Wizard({ cls }: { cls: ClassDoc }) {
           if (pdf.kind === "text") {
             // PDF نصّي: استخراج مباشر دقيق دون OCR — إلا إن بدا النص مشوّهًا (خط بترميز خاص):
             // عندها نقرأ صورة الصفحة ونختار الأفضل من القراءتين
-            const textQ = listQuality(pdf.pages);
+            const textQ = listQuality(pdf.pages.map((pg) => pg.table));
             pdfRender.current = pdf.render;
             if (!looksBroken(textQ)) {
               setFromImage(false);
-              finish(pdf.pages.map((table) => ({ table })));
+              finish(withGroups(pdf.pages));
               return;
             }
             const ocr = await ocrPdf(pdf.render);
             if (!ocr) return;
-            const ocrQ = listQuality(ocr);
+            const ocrQ = listQuality(ocr.map((pg) => pg.table));
             const useOcr = ocrQ.score > textQ.score;
             setFromImage(useOcr);
-            finish((useOcr ? ocr : pdf.pages).map((table) => ({ table })));
+            finish(withGroups(useOcr ? ocr : pdf.pages));
             return;
           }
           pdf.pages.forEach((canvas) =>
@@ -202,22 +208,22 @@ function Wizard({ cls }: { cls: ClassDoc }) {
   }
 
   /** قراءة صفحات PDF كصور (OCR). null عند الإلغاء أو الخطأ. */
-  async function ocrPdf(render: () => Promise<HTMLCanvasElement[]>): Promise<Table[] | null> {
+  async function ocrPdf(render: () => Promise<HTMLCanvasElement[]>): Promise<PdfPage[] | null> {
     cancelled.current = false;
     setStage("processing");
     setProgress({ label: t("readingAsImage"), pct: 0 });
     try {
       const canvases = await render();
       engine.current ??= new OcrEngine();
-      const tables: Table[] = [];
+      const tables: PdfPage[] = [];
       for (let i = 0; i < canvases.length; i++) {
         const label = `${t("readingAsImage")} — ${t("page", { current: i + 1, total: canvases.length })}`;
         await engine.current.init(lang, (p) => setProgress({ label, pct: (i + p) / canvases.length }));
         setProgress({ label, pct: i / canvases.length });
         const canvas = prepareForOcr(canvases[i]!, 0);
-        const { table } = await engine.current.recognize(canvas);
+        const { table, group } = await engine.current.recognize(canvas);
         if (cancelled.current) return null;
-        tables.push(table);
+        tables.push({ table, group });
         canvas.width = canvas.height = 0;
         canvases[i]!.width = canvases[i]!.height = 0;
       }
@@ -243,7 +249,7 @@ function Wizard({ cls }: { cls: ClassDoc }) {
       return;
     }
     setFromImage(true);
-    finish(ocr.map((table) => ({ table })));
+    finish(withGroups(ocr));
   }
 
   async function runOcr() {
@@ -252,22 +258,22 @@ function Wizard({ cls }: { cls: ClassDoc }) {
     setProgress({ label: t("loadingEngine"), pct: 0 });
     try {
       engine.current ??= new OcrEngine();
-      const tables: { table: Table }[] = [];
+      const tables: PdfPage[] = [];
       for (let i = 0; i < pages.length; i++) {
         const label = t("page", { current: i + 1, total: pages.length });
         await engine.current.init(lang, (p) => setProgress({ label, pct: (i + p) / pages.length }));
         setProgress({ label, pct: i / pages.length });
         const page = pages[i]!;
         const canvas = prepareForOcr(page.source, page.rotation);
-        const { table } = await engine.current.recognize(canvas);
+        const { table, group } = await engine.current.recognize(canvas);
         if (cancelled.current) return;
-        tables.push({ table });
+        tables.push({ table, group });
         canvas.width = canvas.height = 0; // تحرير الذاكرة فورًا
       }
       // لا نحتفظ بالصور: تُحرَّر بعد التعرّف
       pages.forEach((p) => "close" in p.source && p.source.close());
       setPages([]);
-      finish(tables);
+      finish(withGroups(tables));
     } catch {
       if (!cancelled.current) {
         setError(t("readError"));

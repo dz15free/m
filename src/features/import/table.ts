@@ -83,7 +83,11 @@ const GENDER_VALUES: Record<string, Gender> = {
 
 export function parseGender(text: string): Gender | null {
   const k = nameKey(text).replace(/\s/g, "");
-  return GENDER_VALUES[k] ?? null;
+  if (GENDER_VALUES[k]) return GENDER_VALUES[k];
+  // أخطاء التعرّف الشائعة: «ذكد»، «أنثتى»، «انتي»
+  if (/^ذك.?$/.test(k)) return "M";
+  if (/^ان[ثت].{0,2}$/.test(k)) return "F";
+  return null;
 }
 
 export function classifyByContent(table: Table, fromRow: number): Field[] {

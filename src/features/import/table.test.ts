@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { pasteToTable } from "./paste.ts";
-import { detectHeader, parseTable, type Table } from "./table.ts";
+import { detectHeader, parseGender, parseTable, type Table } from "./table.ts";
 import { reorderAll, summary, toReviewRows } from "./review.ts";
 
 const t = (rows: string[][]): Table => rows.map((r) => r.map((text) => ({ text })));
@@ -156,4 +156,11 @@ test("عنوان «قائمة التلاميذ» فوق صف العناوين ل
   ];
   const res = parseTable(table);
   assert.deepEqual(res.candidates.map((x) => `${x.last}/${x.first}`), ["طاهري/هدى", "قرنازي/معاذ"]);
+});
+
+test("الجنس يتسامح مع أخطاء التعرّف", () => {
+  assert.equal(parseGender("ذكد"), "M");
+  assert.equal(parseGender("أنثتى"), "F");
+  assert.equal(parseGender("أنتى"), "F");
+  assert.equal(parseGender("انس"), null);
 });

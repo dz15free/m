@@ -1,7 +1,7 @@
 "use client";
 
-import type { Piece } from "./layout";
-import { piecesToTable } from "./layout";
+import { groupFromTitle, smartTable } from "./grid";
+import { piecesFromTextContent, type TextItemLike } from "./pdf-text";
 import { pasteToTable } from "./paste";
 import type { Table } from "./table";
 
@@ -35,9 +35,12 @@ export async function readSpreadsheet(file: File): Promise<SheetTable[]> {
 
 // ── PDF ───────────────────────────────────────────────────────
 
+/** صفحة مقروءة: جدولها، والقسم إن ذكره عنوانها (القوائم الرسمية: صفحة لكل قسم). */
+export type PdfPage = { table: Table; group?: string };
+
 export type PdfResult =
   /** PDF نصّي؛ render يرسم الصفحات صورًا إن تبيّن أن النص مشوّه (ترميز خط خاص) */
-  | { kind: "text"; pages: Table[]; render: () => Promise<HTMLCanvasElement[]> }
+  | { kind: "text"; pages: PdfPage[]; render: () => Promise<HTMLCanvasElement[]> }
   /** PDF ممسوح (صور بلا نص): صفحات جاهزة لـ OCR */
   | { kind: "scanned"; pages: HTMLCanvasElement[] };
 
@@ -46,24 +49,17 @@ export async function readPdf(file: File, onProgress?: (page: number, total: num
   pdfjs.GlobalWorkerOptions.workerSrc = "/vendor/pdf/pdf.worker.min.mjs";
   const doc = await pdfjs.getDocument({ data: await file.arrayBuffer() }).promise;
 
-  const pages: Table[] = [];
+  const pages: PdfPage[] = [];
   let chars = 0;
   for (let n = 1; n <= doc.numPages; n++) {
     onProgress?.(n, doc.numPages);
     const page = await doc.getPage(n);
     const { height } = page.getViewport({ scale: 1 });
-    const content = await page.getTextContent();
-    const pieces: Piece[] = [];
-    for (const item of content.items) {
-      if (!("str" in item) || !item.str.trim()) continue;
-      const [, , , scaleY, x, y] = item.transform as number[];
-      const h = Math.abs(scaleY ?? item.height) || item.height || 10;
-      // إحداثيات PDF من الأسفل؛ نقلبها لتكون من الأعلى كالصور
-      const top = height - (y ?? 0) - h;
-      pieces.push({ text: item.str, box: { x0: x ?? 0, x1: (x ?? 0) + item.width, y0: top, y1: top + h } });
-      chars += item.str.trim().length;
-    }
-    pages.push(piecesToTable(pieces));
+    const content = await page.getTextContent({ includeMarkedContent: true });
+    const pieces = piecesFromTextContent(content.items as TextItemLike[], height);
+    chars += pieces.reduce((n, p) => n + p.text.trim().length, 0);
+    const grid = smartTable(pieces);
+    pages.push({ table: grid.table, group: groupFromTitle(grid.title) });
   }
 
   // صفحات بدقة كافية للتعرّف (الرسم يستعمل أشكال الحروف، فيبقى صحيحًا حتى لو كان النص المخزّن مشوّهًا)
