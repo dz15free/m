@@ -33,7 +33,7 @@ export type ParseResult = { candidates: Candidate[]; columns: Field[]; headerRow
 // ── العناوين ────────────────────────────────────────────────
 
 /* أسطر العناوين الإدارية أعلى القوائم — كلمات لا تظهر في أسماء التلاميذ. */
-const TITLE = /(قائمه|كشف|الجمهوريه|وزاره|مديريه|المؤسسه|ابتدائيه|متوسطه|ثانويه|السنه الدراسيه|الموسم الدراسي|liste|republique|ministere|direction|etablissement|ecole|annee scolaire)/;
+const TITLE = /(قايمه|قائمه|لايحه|كشف|الجمهوريه|وزاره|مديريه|المؤسسه|ابتدائيه|متوسطه|ثانويه|السنه الدراسيه|الموسم الدراسي|liste|republique|ministere|direction|etablissement|ecole|annee scolaire)/;
 
 function classifyHeader(text: string): Field | null {
   const k = nameKey(text);

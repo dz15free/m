@@ -16,7 +16,7 @@ const files = [
   ["node_modules/tesseract.js-core/tesseract-core-relaxedsimd-lstm.wasm.js", "tesseract/core/tesseract-core-relaxedsimd-lstm.wasm.js"],
   ["node_modules/@tesseract.js-data/ara/4.0.0_best_int/ara.traineddata.gz", "tesseract/lang/ara.traineddata.gz"],
   ["node_modules/@tesseract.js-data/fra/4.0.0_best_int/fra.traineddata.gz", "tesseract/lang/fra.traineddata.gz"],
-  ["node_modules/pdfjs-dist/build/pdf.worker.min.mjs", "pdf/pdf.worker.min.mjs"],
+  ["node_modules/pdfjs-dist/legacy/build/pdf.worker.min.mjs", "pdf/pdf.worker.min.mjs"],
 ];
 
 for (const [from, to] of files) {

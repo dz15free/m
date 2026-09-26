@@ -3,7 +3,7 @@
    - الصفحات وبيانات التنقّل (RSC): من الشبكة أولًا، ومن الكاش عند انقطاعها.
    - /api وطلبات Firebase: لا تُلمس (البيانات لها كاش Firestore الدائم).
    - إشعارات الهاتف (FCM Web Push): عرضها وفتح الرابط عند الضغط. */
-const VERSION = "v2";
+const VERSION = "v3";
 const STATIC = `static-${VERSION}`;
 const PAGES = `pages-${VERSION}`;
 const SHELL = ["/app", "/offline.html", "/icons/icon-192.png"];

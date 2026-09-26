@@ -145,3 +145,15 @@ test("عنوان القائمة الذي يحوي «التلاميذ» ليس ص
   assert.equal(res.headerRow, 3);
   assert.deepEqual(names(res.candidates), ["بن عمر/ياسين", "آيت علي/فاطمة الزهراء"]);
 });
+
+test("عنوان «قائمة التلاميذ» فوق صف العناوين لا يُعدّ عنوان عمود", () => {
+  const c = (text: string) => ({ text });
+  const table = [
+    [c("قائمة التلاميذ")],
+    [c("الرقم"), c("اللقب"), c("الاسم")],
+    [c("1"), c("طاهري"), c("هدى")],
+    [c("2"), c("قرنازي"), c("معاذ")],
+  ];
+  const res = parseTable(table);
+  assert.deepEqual(res.candidates.map((x) => `${x.last}/${x.first}`), ["طاهري/هدى", "قرنازي/معاذ"]);
+});

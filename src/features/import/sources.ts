@@ -36,12 +36,13 @@ export async function readSpreadsheet(file: File): Promise<SheetTable[]> {
 // ── PDF ───────────────────────────────────────────────────────
 
 export type PdfResult =
-  | { kind: "text"; pages: Table[] }
+  /** PDF نصّي؛ render يرسم الصفحات صورًا إن تبيّن أن النص مشوّه (ترميز خط خاص) */
+  | { kind: "text"; pages: Table[]; render: () => Promise<HTMLCanvasElement[]> }
   /** PDF ممسوح (صور بلا نص): صفحات جاهزة لـ OCR */
   | { kind: "scanned"; pages: HTMLCanvasElement[] };
 
 export async function readPdf(file: File, onProgress?: (page: number, total: number) => void): Promise<PdfResult> {
-  const pdfjs = await import("pdfjs-dist");
+  const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
   pdfjs.GlobalWorkerOptions.workerSrc = "/vendor/pdf/pdf.worker.min.mjs";
   const doc = await pdfjs.getDocument({ data: await file.arrayBuffer() }).promise;
 
@@ -65,19 +66,23 @@ export async function readPdf(file: File, onProgress?: (page: number, total: num
     pages.push(piecesToTable(pieces));
   }
 
-  if (chars >= 20) return { kind: "text", pages };
+  // صفحات بدقة كافية للتعرّف (الرسم يستعمل أشكال الحروف، فيبقى صحيحًا حتى لو كان النص المخزّن مشوّهًا)
+  const render = async () => {
+    const canvases: HTMLCanvasElement[] = [];
+    for (let n = 1; n <= doc.numPages; n++) {
+      const page = await doc.getPage(n);
+      const base = page.getViewport({ scale: 1 });
+      const viewport = page.getViewport({ scale: Math.min(3, 2200 / Math.max(base.width, base.height)) });
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.round(viewport.width);
+      canvas.height = Math.round(viewport.height);
+      await page.render({ canvas, viewport }).promise;
+      canvases.push(canvas);
+    }
+    return canvases;
+  };
 
-  // لا نص تقريبًا ⇒ صفحات ممسوحة: نرسمها بدقة كافية للتعرّف
-  const canvases: HTMLCanvasElement[] = [];
-  for (let n = 1; n <= doc.numPages; n++) {
-    const page = await doc.getPage(n);
-    const base = page.getViewport({ scale: 1 });
-    const viewport = page.getViewport({ scale: Math.min(3, 2200 / Math.max(base.width, base.height)) });
-    const canvas = document.createElement("canvas");
-    canvas.width = Math.round(viewport.width);
-    canvas.height = Math.round(viewport.height);
-    await page.render({ canvas, viewport }).promise;
-    canvases.push(canvas);
-  }
-  return { kind: "scanned", pages: canvases };
+  if (chars >= 20) return { kind: "text", pages, render };
+  // لا نص تقريبًا ⇒ صفحات ممسوحة
+  return { kind: "scanned", pages: await render() };
 }

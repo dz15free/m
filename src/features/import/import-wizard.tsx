@@ -13,11 +13,13 @@ import {
   ChevronRight,
   ClipboardPaste,
   FileSpreadsheet,
+  FileWarning,
   Images,
   Keyboard,
   LoaderCircle,
   Plus,
   RotateCw,
+  ScanText,
   ShieldCheck,
   Trash2,
   TriangleAlert,
@@ -37,6 +39,7 @@ import { editRow, reorderAll, summary, toReviewRows, type ReviewRow, type RowSta
 import { readPdf, readSpreadsheet, UnsupportedFileError } from "./sources";
 import type { NameOrder } from "./split-name";
 import { parseTable, type Candidate, type Table } from "./table";
+import { listQuality, looksBroken } from "./quality";
 
 type Page = { id: string; source: ImageBitmap | HTMLCanvasElement; rotation: number; thumb: string };
 type Stage = "source" | "pages" | "paste" | "processing" | "review";
@@ -100,6 +103,9 @@ function Wizard({ cls }: { cls: ClassDoc }) {
   const [draft, setDraft] = useState<Draft | null>(() => readDraft(cls.id));
 
   const engine = useRef<OcrEngine | null>(null);
+  // آخر PDF نصّي: لإعادة قراءته كصورة من شاشة المراجعة
+  const pdfRender = useRef<(() => Promise<HTMLCanvasElement[]>) | null>(null);
+  const [fromImage, setFromImage] = useState<boolean | null>(null);
   const cancelled = useRef(false);
   const cameraInput = useRef<HTMLInputElement>(null);
   const fileInput = useRef<HTMLInputElement>(null);
@@ -141,18 +147,34 @@ function Wizard({ cls }: { cls: ClassDoc }) {
           setProgress({ label: t("reading"), pct: 0 });
           const pdf = await readPdf(file, (n, total) => setProgress({ label: t("page", { current: n, total }), pct: n / total }));
           if (pdf.kind === "text") {
-            // PDF نصّي: استخراج مباشر دقيق دون OCR
-            finish(pdf.pages.map((table) => ({ table })));
+            // PDF نصّي: استخراج مباشر دقيق دون OCR — إلا إن بدا النص مشوّهًا (خط بترميز خاص):
+            // عندها نقرأ صورة الصفحة ونختار الأفضل من القراءتين
+            const textQ = listQuality(pdf.pages);
+            pdfRender.current = pdf.render;
+            if (!looksBroken(textQ)) {
+              setFromImage(false);
+              finish(pdf.pages.map((table) => ({ table })));
+              return;
+            }
+            const ocr = await ocrPdf(pdf.render);
+            if (!ocr) return;
+            const ocrQ = listQuality(ocr);
+            const useOcr = ocrQ.score > textQ.score;
+            setFromImage(useOcr);
+            finish((useOcr ? ocr : pdf.pages).map((table) => ({ table })));
             return;
           }
           pdf.pages.forEach((canvas) =>
             added.push({ id: crypto.randomUUID(), source: canvas, rotation: 0, thumb: thumbnail(canvas, 0) }),
           );
         } else if (file.type.startsWith("image/")) {
+          pdfRender.current = null;
+          setFromImage(null);
           const bitmap = await loadImage(file);
           added.push({ id: crypto.randomUUID(), source: bitmap, rotation: 0, thumb: thumbnail(bitmap, 0) });
         }
-      } catch {
+      } catch (e) {
+        console.error("[import] file", e);
         setError(t("readError"));
       }
     }
@@ -164,6 +186,8 @@ function Wizard({ cls }: { cls: ClassDoc }) {
   async function readExcel(files: FileList | null) {
     const file = files?.[0];
     if (!file) return;
+    pdfRender.current = null;
+    setFromImage(null);
     setError(null);
     setStage("processing");
     setProgress({ label: t("reading"), pct: 0 });
@@ -175,6 +199,51 @@ function Wizard({ cls }: { cls: ClassDoc }) {
       setProgress(null);
       setStage(e instanceof UnsupportedFileError ? "paste" : "source");
     }
+  }
+
+  /** قراءة صفحات PDF كصور (OCR). null عند الإلغاء أو الخطأ. */
+  async function ocrPdf(render: () => Promise<HTMLCanvasElement[]>): Promise<Table[] | null> {
+    cancelled.current = false;
+    setStage("processing");
+    setProgress({ label: t("readingAsImage"), pct: 0 });
+    try {
+      const canvases = await render();
+      engine.current ??= new OcrEngine();
+      const tables: Table[] = [];
+      for (let i = 0; i < canvases.length; i++) {
+        const label = `${t("readingAsImage")} — ${t("page", { current: i + 1, total: canvases.length })}`;
+        await engine.current.init(lang, (p) => setProgress({ label, pct: (i + p) / canvases.length }));
+        setProgress({ label, pct: i / canvases.length });
+        const canvas = prepareForOcr(canvases[i]!, 0);
+        const { table } = await engine.current.recognize(canvas);
+        if (cancelled.current) return null;
+        tables.push(table);
+        canvas.width = canvas.height = 0;
+        canvases[i]!.width = canvases[i]!.height = 0;
+      }
+      return tables;
+    } catch (e) {
+      console.error("[import] pdf as image", e);
+      if (!cancelled.current) {
+        setError(t("readError"));
+        setStage("source");
+        setProgress(null);
+      }
+      return null;
+    }
+  }
+
+  /** من شاشة المراجعة: «الأسماء غير صحيحة؟» ⇒ إعادة قراءة PDF من صورة الصفحة. */
+  async function rereadAsImage() {
+    const render = pdfRender.current;
+    if (!render) return;
+    const ocr = await ocrPdf(render);
+    if (!ocr) {
+      setStage("review");
+      return;
+    }
+    setFromImage(true);
+    finish(ocr.map((table) => ({ table })));
   }
 
   async function runOcr() {
@@ -217,6 +286,8 @@ function Wizard({ cls }: { cls: ClassDoc }) {
   }
 
   function reset() {
+    pdfRender.current = null;
+    setFromImage(null);
     writeDraft(cls.id, null);
     setRows([]);
     setPages([]);
@@ -304,9 +375,27 @@ function Wizard({ cls }: { cls: ClassDoc }) {
   }
 
   if (stage === "review") {
+    const pdfNotice =
+      pdfRender.current && fromImage !== null ? (
+        <div className={cn("flex flex-wrap items-center gap-3 rounded-2xl p-3 text-sm", fromImage ? "bg-amber-50 text-amber-900" : "bg-brand-50 text-brand-900")}>
+          <FileWarning aria-hidden className="size-5 shrink-0" />
+          <p className="min-w-0 flex-1">{fromImage ? t("pdfReadAsImage") : t("pdfWrongNames")}</p>
+          {!fromImage && (
+            <button type="button" onClick={rereadAsImage} className={buttonClass("secondary", "md")}>
+              <ScanText aria-hidden className="size-4" />
+              {t("pdfRereadImage")}
+            </button>
+          )}
+        </div>
+      ) : null;
     return (
       <Review
-        header={header}
+        header={
+          <>
+            {header}
+            {pdfNotice}
+          </>
+        }
         rows={rows}
         setRows={setRows}
         order={order}

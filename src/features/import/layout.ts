@@ -32,7 +32,9 @@ export function groupLines(pieces: Piece[]): Piece[][] {
       lines.push({ pieces: [p], y0: p.box.y0, y1: p.box.y1 });
     }
   }
-  return lines.sort((a, b) => a.y0 - b.y0).map((l) => l.pieces);
+  // ترتيب الأسطر بمنتصفها الوسيط لا بأعلى قطعة: مربّع واحد طويل (خط جدول قرأه OCR) لا يقلب الترتيب
+  const mid = (l: { pieces: Piece[] }) => median(l.pieces.map((p) => (p.box.y0 + p.box.y1) / 2));
+  return lines.sort((a, b) => mid(a) - mid(b)).map((l) => l.pieces);
 }
 
 /**

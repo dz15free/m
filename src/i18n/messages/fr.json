@@ -407,7 +407,11 @@
     "restoreYes": "Continuer",
     "restoreNo": "Ignorer",
     "back": "Retour",
-    "startOver": "Recommencer"
+    "startOver": "Recommencer",
+    "readingAsImage": "Texte du fichier illisible, lecture depuis l'image de la page…",
+    "pdfReadAsImage": "Le texte de ce fichier est mal encodé : il a été lu depuis l'image de la page. Vérifiez les noms avant de valider.",
+    "pdfWrongNames": "Noms déformés ou incomplets ? Lisez le fichier depuis l'image de la page plutôt que son texte.",
+    "pdfRereadImage": "Lire comme image"
   },
   "attendance": {
     "title": "Présences",
