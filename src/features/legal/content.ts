@@ -4,13 +4,13 @@
 export type LegalSection = { h: string; p: string[] };
 export type LegalDoc = { title: string; intro: string; sections: LegalSection[] };
 
-export const LEGAL_UPDATED = "2026-09-25";
+export const LEGAL_UPDATED = "2026-09-26";
 
 export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
   ar: {
     title: "سياسة الخصوصية",
     intro:
-      "تشرح هذه السياسة كيف يتعامل «مساعد الأستاذ» (prof.baczone.app) مع بياناتك وبيانات تلاميذك. نلتزم بأحكام القانون رقم 18-07 المؤرخ في 10 يونيو 2018 المتعلق بحماية الأشخاص الطبيعيين في مجال معالجة المعطيات ذات الطابع الشخصي.",
+      "تشرح هذه السياسة كيف تتعامل شركة baczonedz، المشغّلة لتطبيق «مساعد الأستاذ» (prof.baczone.app)، مع بياناتك وبيانات تلاميذك. نلتزم بأحكام القانون رقم 18-07 المؤرخ في 10 يونيو 2018 المتعلق بحماية الأشخاص الطبيعيين في مجال معالجة المعطيات ذات الطابع الشخصي.",
     sections: [
       {
         h: "1. البيانات التي نجمعها",
@@ -50,14 +50,14 @@ export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
         h: "5. مدة الحفظ",
         p: [
           "نحتفظ ببياناتك ما دام حسابك قائمًا. انتهاء الاشتراك لا يحذف أي بيانات: تبقى محفوظة وتعود كاملة عند التجديد.",
-          "عند طلب حذف الحساب نحذف بياناتك خلال 30 يومًا، إلا ما يُلزمنا القانون بحفظه من سجلات الدفع.",
+          "عند حذف حسابك من «الإعدادات ← حذف الحساب» تُحذف بياناتك فورًا ونهائيًا، إلا سجلات الدفع التي يُلزمنا القانون بحفظها. وإن تعذّر عليك ذلك، راسلنا فنحذفها خلال 30 يومًا.",
         ],
       },
       {
         h: "6. حقوقك",
         p: [
           "لك حق الاطلاع على بياناتك وتصحيحها وحذفها والاعتراض على معالجتها. أغلب ذلك متاح مباشرة داخل التطبيق (تعديل الملف، حذف التلاميذ والأقسام، تصدير القوائم).",
-          "لأي طلب آخر (ومنه حذف الحساب كاملًا) راسلنا عبر زر «تواصل مع الإدارة» داخل التطبيق. ويمكنك أيضًا تقديم شكوى إلى السلطة الوطنية لحماية المعطيات ذات الطابع الشخصي.",
+          "حذف الحساب كاملًا متاح من «الإعدادات». ولأي طلب آخر راسلنا عبر زر «تواصل مع الإدارة» أو على البريد baczonedz@gmail.com. ويمكنك أيضًا تقديم شكوى إلى السلطة الوطنية لحماية المعطيات ذات الطابع الشخصي.",
         ],
       },
       {
@@ -76,12 +76,16 @@ export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
         h: "9. تعديل هذه السياسة",
         p: ["قد نحدّث هذه السياسة، وسننبّهك داخل التطبيق عند أي تغيير جوهري. يظهر تاريخ آخر تحديث أعلى الصفحة."],
       },
+      {
+        h: "10. المشغّل والتواصل",
+        p: ["الخدمة تشغّلها شركة baczonedz. للتواصل: زر «تواصل مع الإدارة» داخل التطبيق، أو البريد الإلكتروني baczonedz@gmail.com."],
+      },
     ],
   },
   fr: {
     title: "Politique de confidentialité",
     intro:
-      "Cette politique explique comment « مساعد الأستاذ » (prof.baczone.app) traite vos données et celles de vos élèves, conformément à la loi n° 18-07 du 10 juin 2018 relative à la protection des personnes physiques dans le traitement des données à caractère personnel.",
+      "Cette politique explique comment la société baczonedz, éditrice de « مساعد الأستاذ » (prof.baczone.app), traite vos données et celles de vos élèves, conformément à la loi n° 18-07 du 10 juin 2018 relative à la protection des personnes physiques dans le traitement des données à caractère personnel.",
     sections: [
       {
         h: "1. Données collectées",
@@ -121,14 +125,14 @@ export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
         h: "5. Durée de conservation",
         p: [
           "Vos données sont conservées tant que votre compte existe. L'expiration de l'abonnement ne supprime rien : tout est retrouvé au renouvellement.",
-          "Sur demande de suppression du compte, vos données sont effacées sous 30 jours, sauf les pièces de paiement que la loi impose de conserver.",
+          "La suppression du compte depuis « Paramètres → Supprimer le compte » efface vos données immédiatement et définitivement, sauf les pièces de paiement que la loi impose de conserver. À défaut, écrivez-nous : l'effacement a lieu sous 30 jours.",
         ],
       },
       {
         h: "6. Vos droits",
         p: [
           "Vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition. L'essentiel est disponible directement dans l'application (modifier le profil, supprimer élèves et classes, exporter les listes).",
-          "Pour toute autre demande (dont la suppression complète du compte), écrivez-nous via le bouton « Contacter l'administration ». Vous pouvez aussi saisir l'Autorité nationale de protection des données à caractère personnel.",
+          "La suppression complète du compte est disponible dans « Paramètres ». Pour toute autre demande, écrivez-nous via le bouton « Contacter l'administration » ou à baczonedz@gmail.com. Vous pouvez aussi saisir l'Autorité nationale de protection des données à caractère personnel.",
         ],
       },
       {
@@ -145,6 +149,10 @@ export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
         h: "9. Modifications",
         p: ["Nous pouvons mettre à jour cette politique et vous en informerons dans l'application en cas de changement important. La date de mise à jour figure en haut de la page."],
       },
+      {
+        h: "10. Éditeur et contact",
+        p: ["Le service est édité par la société baczonedz. Contact : bouton « Contacter l'administration » dans l'application, ou baczonedz@gmail.com."],
+      },
     ],
   },
 };
@@ -152,7 +160,7 @@ export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
 export const TERMS: Record<"ar" | "fr", LegalDoc> = {
   ar: {
     title: "شروط الاستخدام",
-    intro: "باستعمالك «مساعد الأستاذ» (prof.baczone.app) فإنك توافق على هذه الشروط. اقرأها مع سياسة الخصوصية.",
+    intro: "تنظّم هذه الشروط استعمال «مساعد الأستاذ» (prof.baczone.app) الذي تشغّله شركة baczonedz. باستعمالك التطبيق فإنك توافق عليها. اقرأها مع سياسة الخصوصية.",
     sections: [
       {
         h: "1. الخدمة",
@@ -180,7 +188,8 @@ export const TERMS: Record<"ar" | "fr", LegalDoc> = {
         p: [
           "الخطة المجانية تتيح عددًا محدودًا من الأقسام وميزات أساسية. خطة Premium تفتح كل الميزات ومحتوى المكتبة المدفوع، بالسعر والمدة المعروضين في صفحة الاشتراك وقت الدفع.",
           "الدفع يتم عبر Chargily Pay (البطاقة الذهبية أو CIB) أو بالاتفاق مع الإدارة عبر زر التواصل. لا يوجد تجديد تلقائي: عند انتهاء المدة تعود إلى الخطة المجانية دون حذف أي بيانات، ويمكنك التجديد متى شئت.",
-          "التجربة المجانية تُمنح مرة واحدة لكل حساب. لأي مشكلة في الدفع أو طلب استرجاع، راسل الإدارة وستُدرس كل حالة على حدة.",
+          "التجربة المجانية تُمنح مرة واحدة لكل حساب.",
+          "الاسترجاع: يمكنك طلب استرجاع كامل المبلغ خلال 7 أيام من تاريخ الدفع، عبر زر «تواصل مع الإدارة» أو على البريد baczonedz@gmail.com، ويُلغى الاشتراك عند الاسترجاع. بعد 7 أيام لا يُسترجع المبلغ، إلا إذا منعك خلل تقني من جهتنا من استعمال الخدمة.",
         ],
       },
       {
@@ -211,11 +220,15 @@ export const TERMS: Record<"ar" | "fr", LegalDoc> = {
           "تخضع هذه الشروط للقانون الجزائري.",
         ],
       },
+      {
+        h: "9. المشغّل والتواصل",
+        p: ["الخدمة تشغّلها شركة baczonedz. للتواصل: زر «تواصل مع الإدارة» داخل التطبيق، أو البريد الإلكتروني baczonedz@gmail.com."],
+      },
     ],
   },
   fr: {
     title: "Conditions d'utilisation",
-    intro: "En utilisant « مساعد الأستاذ » (prof.baczone.app), vous acceptez les présentes conditions, à lire avec la politique de confidentialité.",
+    intro: "Les présentes conditions régissent l'utilisation de « مساعد الأستاذ » (prof.baczone.app), édité par la société baczonedz. En utilisant l'application, vous les acceptez, à lire avec la politique de confidentialité.",
     sections: [
       {
         h: "1. Le service",
@@ -243,7 +256,8 @@ export const TERMS: Record<"ar" | "fr", LegalDoc> = {
         p: [
           "La formule gratuite permet un nombre limité de classes et les fonctions de base. Premium débloque toutes les fonctions et les contenus payants, au prix et pour la durée affichés au moment du paiement.",
           "Paiement via Chargily Pay (carte Edahabia ou CIB) ou par accord avec l'administration via le bouton de contact. Pas de renouvellement automatique : à l'échéance vous repassez en gratuit sans perte de données, et pouvez renouveler à tout moment.",
-          "L'essai gratuit est accordé une seule fois par compte. Pour tout problème de paiement ou demande de remboursement, contactez l'administration : chaque cas est étudié individuellement.",
+          "L'essai gratuit est accordé une seule fois par compte.",
+          "Remboursement : vous pouvez demander le remboursement intégral dans les 7 jours suivant le paiement, via le bouton « Contacter l'administration » ou à baczonedz@gmail.com ; l'abonnement est alors annulé. Au-delà de 7 jours, aucun remboursement, sauf si un dysfonctionnement technique de notre fait vous a empêché d'utiliser le service.",
         ],
       },
       {
@@ -273,6 +287,10 @@ export const TERMS: Record<"ar" | "fr", LegalDoc> = {
           "Ces conditions peuvent évoluer ; nous vous informerons dans l'application en cas de changement important, et la poursuite de l'utilisation vaut acceptation.",
           "Les présentes conditions sont régies par le droit algérien.",
         ],
+      },
+      {
+        h: "9. Éditeur et contact",
+        p: ["Le service est édité par la société baczonedz. Contact : bouton « Contacter l'administration » dans l'application, ou baczonedz@gmail.com."],
       },
     ],
   },

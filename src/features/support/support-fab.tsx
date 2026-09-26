@@ -4,10 +4,11 @@ import { Portal } from "@/components/ui/portal";
 import { useEffect, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { LoaderCircle, Mail, MessageCircle, Send, X } from "lucide-react";
+import { Headset, LoaderCircle, Mail, MessageCircle, Send, X } from "lucide-react";
 import { useAuth } from "@/features/auth/auth-provider";
 import { useTeacher, useUid } from "@/features/classes/hooks";
 import { getAppConfig } from "@/features/billing/repo";
+import { authedFetch } from "@/lib/firebase/api";
 import { cn } from "@/lib/utils/cn";
 import { markReadByTeacher, OPEN_SUPPORT, openSupport, sendTeacherMessage, watchMessages, watchThread, type Message, type Thread } from "./repo";
 
@@ -50,10 +51,18 @@ export function SupportFab() {
         type="button"
         onClick={() => setOpen(true)}
         aria-label={unread ? `${t("fab")} — ${t("newReply")}` : t("fab")}
-        className="contact-fab fixed end-4 bottom-24 z-30 grid size-14 place-items-center rounded-full bg-accent-500 text-white shadow-float transition-transform hover:scale-105 active:scale-95 print:hidden lg:end-8 lg:bottom-8"
+        className="contact-fab group fixed end-4 bottom-24 z-30 inline-flex h-14 items-center gap-2.5 rounded-full bg-linear-to-br from-brand-600 to-brand-800 p-1.5 text-white shadow-[0_10px_28px_-6px_rgb(6_90_73/0.55)] ring-1 ring-white/25 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_32px_-6px_rgb(6_90_73/0.6)] focus-visible:outline-offset-4 active:translate-y-0 active:scale-95 print:hidden lg:end-8 lg:bottom-8 lg:pe-5"
       >
-        <MessageCircle aria-hidden className="size-7" />
-        {unread && <span className="absolute end-0.5 top-0.5 size-3.5 rounded-full bg-red-600 ring-2 ring-white" />}
+        <span className="grid size-11 place-items-center rounded-full bg-white/15 ring-1 ring-inset ring-white/25">
+          <Headset aria-hidden className="size-6" strokeWidth={1.9} />
+        </span>
+        <span className="hidden text-[15px] font-semibold lg:inline">{t("fabShort")}</span>
+        {unread && (
+          <span className="absolute -top-0.5 end-0 flex size-4">
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-red-500 opacity-60 motion-reduce:hidden" />
+            <span className="relative inline-flex size-4 rounded-full bg-red-600 ring-2 ring-white" />
+          </span>
+        )}
       </button>
       {open && uid && (
         <Portal>
@@ -113,6 +122,8 @@ function SupportPanel({
         },
         draft,
       );
+      // إشعار هاتف للإدارة (الخادم يقرأ المحادثة ويحدّ من التكرار)
+      void authedFetch("/api/support/notify", { method: "POST" }).catch(() => {});
       setDraft("");
       setState("idle");
     } catch {

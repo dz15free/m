@@ -39,3 +39,13 @@ export async function setRoles(uid: string, roles: Roles) {
   });
   if (!res.ok) throw new Error(`update ${res.status}`);
 }
+
+/** حذف حساب الدخول نهائيًا. */
+export async function deleteAccount(uid: string) {
+  const res = await fetch(`${base()}/accounts:delete`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${await accessToken(SCOPE)}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ localId: uid }),
+  });
+  if (!res.ok && res.status !== 404) throw new Error(`delete ${res.status}`);
+}

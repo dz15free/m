@@ -211,7 +211,25 @@
     "save": "Enregistrer",
     "saved": "Enregistré",
     "error": "Enregistrement impossible. Réessayez.",
-    "yearSection": "Année scolaire en cours"
+    "yearSection": "Année scolaire en cours",
+    "delete": {
+      "title": "Supprimer le compte",
+      "body": "Supprime définitivement votre compte et toutes vos données : classes, élèves, présences, cahiers, notes et messages. Action irréversible.",
+      "button": "Supprimer définitivement mon compte",
+      "confirmTitle": "Êtes-vous sûr ?",
+      "lose1": "Vos classes, élèves et cahiers seront supprimés immédiatement, sans récupération possible.",
+      "lose2": "Votre abonnement en cours (le cas échéant) est annulé sans remboursement automatique.",
+      "lose3": "Seules les pièces de paiement sont conservées, comme la loi l'exige.",
+      "word": "SUPPRIMER",
+      "typeWord": "Pour confirmer, tapez « {word} »",
+      "password": "Mot de passe",
+      "google": "Une fenêtre Google s'ouvrira pour confirmer votre identité.",
+      "confirm": "Supprimer définitivement",
+      "cancel": "Annuler",
+      "error": "Suppression impossible, réessayez plus tard ou contactez l'administration.",
+      "wrongPassword": "Mot de passe incorrect.",
+      "admin": "Un compte administrateur ne peut pas être supprimé ici. Retirez d'abord le rôle admin."
+    }
   },
   "classes": {
     "title": "Mes classes",
@@ -1135,7 +1153,8 @@
     "whatsapp": "WhatsApp",
     "email": "E-mail",
     "newReply": "Nouvelle réponse de l'administration",
-    "subscribeText": "Bonjour, je souhaite m'abonner à Premium. Comment payer ?"
+    "subscribeText": "Bonjour, je souhaite m'abonner à Premium. Comment payer ?",
+    "fabShort": "Nous contacter"
   },
   "notifications": {
     "title": "Notifications",

@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Settings } from "lucide-react";
 import { SettingsForm } from "@/features/profile/settings-form";
+import { DeleteAccount } from "@/features/profile/delete-account";
 
 export async function generateMetadata() {
   const t = await getTranslations("settings");
@@ -16,6 +17,7 @@ export default async function SettingsPage() {
         {t("title")}
       </h1>
       <SettingsForm />
+      <DeleteAccount />
     </div>
   );
 }

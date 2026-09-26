@@ -121,3 +121,58 @@ export async function adminCommit(writes: Write[]): Promise<void> {
 }
 
 export const newId = () => crypto.randomUUID().replace(/-/g, "").slice(0, 20);
+
+/** يحذف وثيقة وكل ما تحتها (كل المجموعات الفرعية بأي عمق) على دفعات من 500.
+ *  استعلام «بلا نوع» على الأبناء كما يفعل recursiveDelete في SDK الخادم. يُرجع عدد المحذوف. */
+export async function adminDeleteTree(path: string): Promise<number> {
+  const parent = `${docsRoot()}/${path}`;
+  let total = 0;
+  for (let round = 0; round < 40; round++) {
+    const res = await fetch(`${apiBase()}/${parent}:runQuery`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${await accessToken()}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ structuredQuery: { from: [{ allDescendants: true }], select: { fields: [{ fieldPath: "__name__" }] }, limit: 500 } }),
+    });
+    if (!res.ok) throw new Error(`firestore query ${res.status}`);
+    const names = ((await res.json()) as { document?: { name: string } }[]).flatMap((r) => (r.document ? [r.document.name] : []));
+    if (!names.length) break;
+    await deleteNames(names);
+    total += names.length;
+    if (names.length < 500) break;
+  }
+  await deleteNames([parent]);
+  return total;
+}
+
+/** حذف وثائق بمساراتها النسبية (لا يفشل إن لم تكن موجودة). */
+export async function adminDelete(paths: string[]) {
+  await deleteNames(paths.map((p) => `${docsRoot()}/${p}`));
+}
+
+async function deleteNames(names: string[]) {
+  if (!names.length) return;
+  const res = await fetch(`${apiBase()}/${docsRoot()}:commit`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${await accessToken()}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ writes: names.map((name) => ({ delete: name })) }),
+  });
+  if (!res.ok) throw new Error(`firestore delete ${res.status}`);
+}
+
+/** معرّفات وثائق مجموعة تحقق حقلًا منطقيًا = true (مثل staff حيث admin). */
+export async function adminIdsWhere(collection: string, field: string): Promise<string[]> {
+  const res = await fetch(`${apiBase()}/${docsRoot()}:runQuery`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${await accessToken()}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      structuredQuery: {
+        from: [{ collectionId: collection }],
+        where: { fieldFilter: { field: { fieldPath: field }, op: "EQUAL", value: { booleanValue: true } } },
+        select: { fields: [{ fieldPath: "__name__" }] },
+        limit: 20,
+      },
+    }),
+  });
+  if (!res.ok) return [];
+  return ((await res.json()) as { document?: { name: string } }[]).flatMap((r) => (r.document ? [r.document.name.split("/").pop()!] : []));
+}

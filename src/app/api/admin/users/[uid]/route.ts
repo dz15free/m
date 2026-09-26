@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { errorResponse, HttpError, requireUser } from "@/lib/server/auth";
 import { activationWrites, notifyActivated } from "@/lib/server/activation";
-import { adminCommit, adminGet, newId } from "@/lib/server/firestore-admin";
+import { adminCommit, adminDelete, adminGet, newId } from "@/lib/server/firestore-admin";
 import { getAccount, setRoles } from "@/lib/server/identity";
 
 /* إدارة أستاذ من لوحة الأدمن: قراءة الحساب والأدوار، تفعيل Premium يدويًا
@@ -73,6 +73,9 @@ export async function POST(req: Request, { params }: RouteContext<"/api/admin/us
     // الأدوار: لا يُسقط الأدمن صلاحيته عن نفسه (تجنّب إغلاق اللوحة على الجميع)
     if (uid === admin.uid && !body.roles.admin) throw new HttpError(409, "cannot remove own admin");
     await setRoles(uid, body.roles);
+    // قائمة الطاقم للخادم (مستقبلو إشعار رسائل الأساتذة)
+    if (Object.values(body.roles).some(Boolean)) await adminCommit([{ path: `staff/${uid}`, data: body.roles }]);
+    else await adminDelete([`staff/${uid}`]);
     await adminCommit([{ path: `auditLogs/roles_${newId()}`, data: { action: "admin.roles", uid, by: admin.uid, roles: body.roles, at: new Date(now) } }]);
     return Response.json({ ok: true });
   } catch (error) {

@@ -76,3 +76,16 @@ else claims[role] = true;
 
 await call("accounts:update", { localId: user.localId, customAttributes: JSON.stringify(claims) });
 console.log(`✓ ${email} (${user.localId}) claims:`, claims);
+
+// قائمة الطاقم للخادم (من يستقبل إشعار رسائل الأساتذة…): staff/{uid}
+const fsDoc = `https://firestore.googleapis.com/v1/projects/${sa.project_id}/databases/(default)/documents/staff/${user.localId}`;
+const any = ROLES.some((r) => claims[r]);
+const res = any
+  ? await fetch(fsDoc, {
+      method: "PATCH",
+      headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ fields: Object.fromEntries(ROLES.map((r) => [r, { booleanValue: claims[r] === true }])) }),
+    })
+  : await fetch(fsDoc, { method: "DELETE", headers: { Authorization: `Bearer ${token}` } });
+if (!res.ok) console.error("staff roster:", res.status, await res.text());
+else console.log("✓ staff roster updated");

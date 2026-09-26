@@ -14,6 +14,8 @@ export type AuthUser = {
   uid: string;
   email: string | null;
   emailVerified: boolean;
+  /** وقت آخر تسجيل دخول فعلي (بالثواني) — لطلب دخول حديث قبل العمليات الحساسة */
+  authTime: number;
   roles: { admin: boolean; contentEditor: boolean; finance: boolean };
 };
 
@@ -73,6 +75,7 @@ function toUser(payload: JWTPayload & Record<string, unknown>): AuthUser {
     uid: payload.sub,
     email: typeof payload.email === "string" ? payload.email : null,
     emailVerified: payload.email_verified === true,
+    authTime: Number(payload.auth_time) || 0,
     roles: {
       admin: payload.admin === true,
       contentEditor: payload.contentEditor === true,

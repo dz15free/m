@@ -9,6 +9,9 @@ import {
   signInWithPopup,
   signInWithRedirect,
   signOut as fbSignOut,
+  EmailAuthProvider,
+  reauthenticateWithCredential,
+  reauthenticateWithPopup,
   updateProfile,
   type User,
 } from "firebase/auth";
@@ -122,4 +125,28 @@ export async function ensureUserDoc(user: User, locale: Locale, name?: string): 
     return { onboardingDone: again.data().onboardingDone === true };
   }
   return { onboardingDone: false };
+}
+
+/** طريقة الدخول الحالية: لطلب كلمة المرور أو نافذة Google قبل العمليات الحساسة. */
+export function currentProvider(): "password" | "google" | null {
+  const user = getFirebase().auth.currentUser;
+  if (!user) return null;
+  return user.providerData.some((p) => p.providerId === "password") ? "password" : "google";
+}
+
+/** حذف الحساب نهائيًا: إعادة المصادقة (دخول حديث يطلبه الخادم)، ثم الحذف، ثم مسح الجهاز. */
+export async function deleteMyAccount(password: string, locale: Locale) {
+  const auth = authFor(locale);
+  const user = auth.currentUser;
+  if (!user) throw new Error("signed out");
+  if (currentProvider() === "password") {
+    await reauthenticateWithCredential(user, EmailAuthProvider.credential(user.email ?? "", password));
+  } else {
+    await reauthenticateWithPopup(user, new GoogleAuthProvider());
+  }
+  const token = await user.getIdToken(true);
+  const res = await fetch("/api/account", { method: "DELETE", headers: { Authorization: `Bearer ${token}` } });
+  if (res.status === 409) throw new Error("admin");
+  if (!res.ok) throw new Error(`delete ${res.status}`);
+  await signOut({ force: true });
 }
