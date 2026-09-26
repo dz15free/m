@@ -45,7 +45,7 @@ export async function POST(req: Request, { params }: RouteContext<"/api/admin/us
     if (body.action === "grant") {
       const id = `admin_${newId()}`;
       const { writes, until } = await activationWrites(
-        { uid, planId: body.planId, paymentId: id, method: "admin", gross: body.amount, fees: 0, sourceId: admin.uid, days: body.days },
+        { uid, planId: body.planId, paymentId: id, method: "admin", gross: body.amount, fees: 0, sourceId: admin.uid, days: body.days, email: (await getAccount(uid).catch(() => null))?.email },
         now,
       );
       // بلا مبلغ: لا يُحتسب في الإيرادات (هدية/تعويض)

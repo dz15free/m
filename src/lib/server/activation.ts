@@ -1,7 +1,7 @@
 import "server-only";
 import { sendToUser } from "./push";
 import { effectivePlan, netOf, renewEnd, revenueMonth, type Entitlement, type Plan } from "@/shared/billing/plans";
-import { adminGet, type Write } from "./firestore-admin";
+import { adminGet, adminIdsWhere, type Write } from "./firestore-admin";
 import { HttpError } from "./auth";
 
 /* تفعيل الاشتراك بعد دفعة مؤكَّدة (Chargily أو يدوية بعد المراجعة).
@@ -17,6 +17,8 @@ export type PaymentInput = {
   fees: number;
   feesPassedToCustomer?: boolean;
   sourceId: string; // معرّف الطلب أو عملية الأدمن
+  /** بريد الدافع وقت الدفع (للعرض في لوحة الإدارة) */
+  email?: string;
   /** مدة مخصّصة (تفعيل يدوي من الأدمن)؛ وإلا مدة الخطة */
   days?: number;
 };
@@ -62,6 +64,7 @@ export async function activationWrites(p: PaymentInput, now = Date.now()): Promi
         fees: p.fees,
         net,
         sourceId: p.sourceId,
+        email: (p.email ?? "").slice(0, 200),
         periodEnd: new Date(until),
         createdAt: new Date(now),
       },
@@ -110,4 +113,22 @@ export async function notifyActivated(uid: string, until: number) {
     ar: { title: "تم تفعيل اشتراكك ✨", body: `Premium مفعّل حتى ${day("ar-DZ-u-nu-latn")}`, link: "/app/billing", tag: "billing" },
     fr: { title: "Abonnement activé ✨", body: `Premium actif jusqu'au ${day("fr-DZ")}`, link: "/app/billing", tag: "billing" },
   });
+}
+
+/** إشعار هاتف لفريق الإدارة عند كل دفعة مؤكَّدة من Chargily (لا يرمي أبدًا). */
+export async function notifyAdminsPaid(email: string, amount: number) {
+  try {
+    const admins = await adminIdsWhere("staff", "admin");
+    const n = new Intl.NumberFormat("fr-DZ").format(amount);
+    await Promise.all(
+      admins.map((uid) =>
+        sendToUser(uid, {
+          ar: { title: `💳 دفعة جديدة: ${n} دج`, body: email, link: "/admin/payments", tag: "payment" },
+          fr: { title: `💳 Nouveau paiement : ${n} DA`, body: email, link: "/admin/payments", tag: "payment" },
+        }),
+      ),
+    );
+  } catch (e) {
+    console.error("[notify admins]", e);
+  }
 }

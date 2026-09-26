@@ -14,6 +14,7 @@ import {
   Lock,
   MessagesSquare,
   Search,
+  ShieldCheck,
   X,
 } from "lucide-react";
 import Link from "next/link";
@@ -28,9 +29,42 @@ import {
   adminApi,
   getPlansAdmin,
   getTeacherOverview,
+  listStaff,
   listUsers,
+  type StaffRow,
   type UserRow,
 } from "./repo";
+
+function StaffCard({ onOpen }: { onOpen: (m: StaffRow) => void }) {
+  const t = useTranslations("admin.teachers");
+  const staff = useQuery({ queryKey: ["adminStaff"], queryFn: listStaff });
+  return (
+    <Card className="space-y-2">
+      <h2 className="flex items-center gap-2 font-semibold">
+        <ShieldCheck aria-hidden className="size-5 text-brand-700" />
+        {t("staff")}
+      </h2>
+      {!staff.data ? (
+        <LoaderCircle aria-hidden className="size-5 animate-spin text-muted" />
+      ) : !staff.data.length ? (
+        <p className="text-sm text-muted">{t("staffEmpty")}</p>
+      ) : (
+        <ul className="flex flex-wrap gap-2">
+          {staff.data.map((m) => (
+            <li key={m.uid}>
+              <button type="button" onClick={() => onOpen(m)} className="inline-flex min-h-10 items-center gap-2 rounded-full bg-canvas px-3 text-sm hover:bg-brand-50">
+                <span dir="ltr">{m.email}</span>
+                <span className="rounded-full bg-brand-700 px-2 py-0.5 text-[11px] font-bold text-white">
+                  {(["admin", "finance", "contentEditor"] as const).filter((k) => m.roles[k]).map((k) => t(`roleNames.${k}`)).slice(0, 1)}
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </Card>
+  );
+}
 
 export function AdminTeachers() {
   const t = useTranslations("admin.teachers");
@@ -51,6 +85,7 @@ export function AdminTeachers() {
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-bold">{ta("nav.teachers")}</h1>
+      <StaffCard onOpen={(m) => setOpen({ uid: m.uid, email: m.email, displayName: "", createdAt: 0, onboardingDone: true })} />
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -180,6 +215,17 @@ function TeacherSheet({
   const ent = overview.data?.entitlement;
   const active = !!ent?.active;
   const p = overview.data?.profile;
+
+  const isSelf = auth.status === "signedIn" && auth.user.uid === user.uid;
+
+  function saveRoles(next: { admin: boolean; contentEditor: boolean; finance: boolean }) {
+    return run(async () => {
+      await adminApi(`/api/admin/users/${user.uid}`, { method: "POST", body: JSON.stringify({ action: "roles", roles: next }) });
+      setRoles(next);
+      await queryClient.invalidateQueries({ queryKey: ["adminStaff"] });
+      return t("rolesSaved");
+    });
+  }
 
   async function run(fn: () => Promise<string>) {
     setBusy(true);
@@ -364,47 +410,63 @@ function TeacherSheet({
           )}
         </Card>
 
-        <Card className="space-y-3">
-          <h3 className="font-semibold">{t("roles")}</h3>
+        <Card className="space-y-4">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="flex items-center gap-2 font-semibold">
+              <ShieldCheck aria-hidden className="size-5 text-brand-700" />
+              {t("roles")}
+            </h3>
+            {r && (
+              <span className={cn("rounded-full px-2.5 py-0.5 text-xs font-bold", r.admin ? "bg-brand-700 text-white" : "bg-canvas text-muted")}>
+                {r.admin ? t("roleNames.admin") : t("teacherRole")}
+              </span>
+            )}
+          </div>
           {!r ? (
-            <LoaderCircle
-              aria-hidden
-              className="size-5 animate-spin text-muted"
-            />
+            <LoaderCircle aria-hidden className="size-5 animate-spin text-muted" />
           ) : (
             <>
-              {(["admin", "contentEditor", "finance"] as const).map((k) => (
-                <label key={k} className="flex min-h-10 items-center gap-3">
-                  <input
-                    type="checkbox"
-                    checked={r[k]}
-                    disabled={
-                      k === "admin" &&
-                      auth.status === "signedIn" &&
-                      auth.user.uid === user.uid
-                    }
-                    onChange={(e) => setRoles({ ...r, [k]: e.target.checked })}
-                    className="size-5 accent-brand-700"
-                  />
-                  {t(`roleNames.${k}`)}
-                </label>
-              ))}
-              <button
-                type="button"
-                disabled={busy || !roles}
-                onClick={() =>
-                  run(async () => {
-                    await adminApi(`/api/admin/users/${user.uid}`, {
-                      method: "POST",
-                      body: JSON.stringify({ action: "roles", roles: r }),
-                    });
-                    return t("rolesSaved");
-                  })
-                }
-                className={buttonClass("secondary")}
-              >
-                {t("saveRoles")}
-              </button>
+              {!r.admin ? (
+                <button
+                  type="button"
+                  disabled={busy}
+                  onClick={() => window.confirm(t("promoteConfirm", { email: user.email })) && saveRoles({ ...r, admin: true })}
+                  className={buttonClass("primary", "md", "w-full")}
+                >
+                  <ShieldCheck aria-hidden className="size-4" />
+                  {t("promote")}
+                </button>
+              ) : !isSelf ? (
+                <button
+                  type="button"
+                  disabled={busy}
+                  onClick={() => window.confirm(t("demoteConfirm", { email: user.email })) && saveRoles({ ...r, admin: false })}
+                  className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-red-200 px-5 font-semibold text-red-700 hover:bg-red-50 disabled:opacity-50"
+                >
+                  {t("demote")}
+                </button>
+              ) : (
+                <p className="text-sm text-muted">{t("selfAdmin")}</p>
+              )}
+              <div className="space-y-1 border-t border-line pt-3">
+                <p className="text-sm font-semibold">{t("limitedRoles")}</p>
+                {(["contentEditor", "finance"] as const).map((k) => (
+                  <label key={k} className="flex min-h-12 items-center gap-3">
+                    <input
+                      type="checkbox"
+                      checked={r[k] || r.admin}
+                      disabled={busy || r.admin}
+                      onChange={(e) => saveRoles({ ...r, [k]: e.target.checked })}
+                      className="size-5 accent-brand-700"
+                    />
+                    <span>
+                      <span className="block">{t(`roleNames.${k}`)}</span>
+                      <span className="block text-xs text-muted">{t(`roleHints.${k}`)}</span>
+                    </span>
+                  </label>
+                ))}
+              </div>
+              <p className="text-xs text-muted">{t("rolesNote")}</p>
             </>
           )}
         </Card>

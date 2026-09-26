@@ -1,5 +1,5 @@
 import { HttpError } from "@/lib/server/auth";
-import { activationWrites, notifyActivated } from "@/lib/server/activation";
+import { activationWrites, notifyActivated, notifyAdminsPaid } from "@/lib/server/activation";
 import { verifySignature } from "@/lib/server/chargily";
 import { adminCommit, adminGet, type Write } from "@/lib/server/firestore-admin";
 
@@ -45,7 +45,7 @@ export async function POST(req: Request) {
     if (await adminGet(eventPath)) return ok("duplicate");
     const order = await adminGet(`orders/${orderId}`);
     if (!order) return ok("unknown order");
-    const o = order.data as { uid: string; planId: string; amount: number; mode: string; status: string };
+    const o = order.data as { uid: string; email?: string; planId: string; amount: number; mode: string; status: string };
     const now = Date.now();
     const eventWrite: Write = { path: eventPath, data: { type: event.type, orderId, at: new Date(now) }, precondition: { exists: false } };
     const orderWrite = (data: Record<string, unknown>): Write => ({
@@ -87,11 +87,13 @@ export async function POST(req: Request) {
         fees,
         feesPassedToCustomer: !!c.pass_fees_to_customer,
         sourceId: orderId,
+        email: o.email,
       },
       now,
     );
     await adminCommit([orderWrite({ status: "paid", checkoutId: c.id, fees, paidAt: new Date(now), periodEnd: new Date(until) }), eventWrite, ...writes]);
     await notifyActivated(o.uid, until);
+    await notifyAdminsPaid(String(o.email ?? ""), o.amount);
     return ok("activated");
   } catch (error) {
     // تزامن مع نسخة أخرى من نفس الحدث: إن سُجّل الحدث فقد عولج، وإلا نطلب إعادة الإرسال

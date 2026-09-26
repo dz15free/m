@@ -24,20 +24,27 @@ const ms = (v: unknown) => (v instanceof Timestamp ? v.toMillis() : typeof v ===
 
 // ── الرئيسية ──
 
-export type Kpis = { teachers: number; newWeek: number; activeSubs: number; trials: number; unread: number };
+export type Kpis = { teachers: number; newWeek: number; paidActive: number; trialsActive: number; unread: number };
 
 export async function getKpis(): Promise<Kpis> {
   const now = Timestamp.now();
   const weekAgo = Timestamp.fromMillis(Date.now() - 7 * 864e5);
   const c = async (q: Parameters<typeof getCountFromServer>[0]) => (await getCountFromServer(q).catch(() => null))?.data().count ?? 0;
-  const [teachers, newWeek, activeSubs, trials, unread] = await Promise.all([
+  const [teachers, newWeek, live, unread] = await Promise.all([
     c(collection(db(), "users")),
     c(query(collection(db(), "users"), where("createdAt", ">=", weekAgo))),
-    c(query(collection(db(), "entitlements"), where("currentPeriodEnd", ">", now))),
-    c(query(collection(db(), "entitlements"), where("source", "==", "trial"))),
+    // الاشتراكات السارية فقط، ثم نفصل المدفوع عن التجربة (الطلبات غير المدفوعة لا تُنشئ اشتراكًا)
+    getDocs(query(collection(db(), "entitlements"), where("currentPeriodEnd", ">", now))).catch(() => null),
     c(query(collection(db(), "supportThreads"), where("unreadAdmin", "==", true))),
   ]);
-  return { teachers, newWeek, activeSubs, trials, unread };
+  const statuses = live?.docs.map((d) => d.data().status) ?? [];
+  return {
+    teachers,
+    newWeek,
+    paidActive: statuses.filter((x) => x === "active").length,
+    trialsActive: statuses.filter((x) => x === "trial").length,
+    unread,
+  };
 }
 
 export type MonthRevenue = { month: string; gross: number; fees: number; net: number; count: number };
@@ -113,7 +120,7 @@ export async function saveAppConfig(patch: Partial<AppConfig>) {
 
 // ── المدفوعات والسجل ──
 
-export type PaymentRow = { id: string; uid: string; planId: string; method: string; gross: number; fees: number; net: number; createdAt: number; periodEnd: number };
+export type PaymentRow = { id: string; uid: string; email?: string; planId: string; method: string; gross: number; fees: number; net: number; createdAt: number; periodEnd: number };
 
 export async function listPayments(): Promise<PaymentRow[]> {
   const snap = await getDocs(query(collection(db(), "payments"), orderBy("createdAt", "desc"), limit(100)));
@@ -138,4 +145,14 @@ export async function emailsOf(uids: string[]): Promise<Map<string, string>> {
   const unique = [...new Set(uids)].slice(0, 100);
   const snaps = await Promise.all(unique.map((u) => getDoc(doc(db(), "users", u)).catch(() => null)));
   return new Map(unique.map((u, i) => [u, (snaps[i]?.data()?.email as string) ?? u]));
+}
+
+export type StaffRow = { uid: string; email: string; roles: { admin: boolean; contentEditor: boolean; finance: boolean } };
+export const listStaff = () => adminApi<StaffRow[]>("/api/admin/staff");
+
+/** الاسم والبريد لقائمة أساتذة (لجدول المدفوعات). */
+export async function peopleOf(uids: string[]): Promise<Map<string, { email: string; name: string }>> {
+  const unique = [...new Set(uids)].slice(0, 100);
+  const snaps = await Promise.all(unique.map((u) => getDoc(doc(db(), "users", u)).catch(() => null)));
+  return new Map(unique.map((u, i) => [u, { email: (snaps[i]?.data()?.email as string) ?? u, name: (snaps[i]?.data()?.displayName as string) ?? "" }]));
 }

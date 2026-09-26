@@ -176,3 +176,14 @@ export async function adminIdsWhere(collection: string, field: string): Promise<
   if (!res.ok) return [];
   return ((await res.json()) as { document?: { name: string } }[]).flatMap((r) => (r.document ? [r.document.name.split("/").pop()!] : []));
 }
+
+/** كل وثائق مجموعة صغيرة (حتى 100) مع حقولها. */
+export async function adminList(collection: string): Promise<{ id: string; data: Record<string, unknown> }[]> {
+  const res = await fetch(`${apiBase()}/${docsRoot()}/${collection}?pageSize=100`, {
+    headers: { Authorization: `Bearer ${await accessToken()}` },
+    cache: "no-store",
+  });
+  if (!res.ok) return [];
+  const body = (await res.json()) as { documents?: { name: string; fields?: Record<string, Value> }[] };
+  return (body.documents ?? []).map((d) => ({ id: d.name.split("/").pop()!, data: decodeFields(d.fields ?? {}) }));
+}

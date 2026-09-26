@@ -32,8 +32,8 @@ export function AdminDashboard() {
             [
               ["teachers", kpis.data?.teachers],
               ["newWeek", kpis.data?.newWeek],
-              ["activeSubs", kpis.data?.activeSubs],
-              ["trials", kpis.data?.trials],
+              ["paidActive", kpis.data?.paidActive],
+              ["trialsActive", kpis.data?.trialsActive],
               ["unread", kpis.data?.unread],
             ] as const
           ).map(([k, v]) => (

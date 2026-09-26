@@ -10,7 +10,7 @@ import { Field, SelectField } from "@/components/ui/field";
 import { useUid } from "@/features/classes/hooks";
 import { deleteAnnouncement, listAnnouncements, publishAnnouncement, type Kind } from "@/features/notifications/repo";
 import { cn } from "@/lib/utils/cn";
-import { emailsOf, listAudit, listOrders, listPayments } from "./repo";
+import { emailsOf, listAudit, listOrders, listPayments, peopleOf } from "./repo";
 
 const fmtDate = (locale: "ar" | "fr", at: number) =>
   at ? new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ", { dateStyle: "medium", timeStyle: "short" }).format(at) : "—";
@@ -132,9 +132,9 @@ export function AdminPayments() {
   const locale = useLocale() as "ar" | "fr";
   const payments = useQuery({ queryKey: ["adminPayments"], queryFn: listPayments });
   const orders = useQuery({ queryKey: ["adminOrders"], queryFn: listOrders });
-  const emails = useQuery({
-    queryKey: ["adminPaymentEmails", payments.data?.map((p) => p.uid).join(",")],
-    queryFn: () => emailsOf(payments.data!.map((p) => p.uid)),
+  const people = useQuery({
+    queryKey: ["adminPaymentPeople", payments.data?.map((p) => p.uid).join(",")],
+    queryFn: () => peopleOf(payments.data!.map((p) => p.uid)),
     enabled: !!payments.data?.length,
   });
   const nf = new Intl.NumberFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ");
@@ -142,7 +142,7 @@ export function AdminPayments() {
   function csv() {
     const rows = [["date", "email", "method", "plan", "gross", "fees", "net", "until"]];
     for (const p of payments.data ?? []) {
-      rows.push([new Date(p.createdAt).toISOString(), emails.data?.get(p.uid) ?? p.uid, p.method, p.planId, String(p.gross), String(p.fees), String(p.net), p.periodEnd ? new Date(p.periodEnd).toISOString().slice(0, 10) : ""]);
+      rows.push([new Date(p.createdAt).toISOString(), p.email || (people.data?.get(p.uid)?.email ?? p.uid), p.method, p.planId, String(p.gross), String(p.fees), String(p.net), p.periodEnd ? new Date(p.periodEnd).toISOString().slice(0, 10) : ""]);
     }
     const blob = new Blob(["﻿" + rows.map((r) => r.map((c) => `"${c.replace(/"/g, '""')}"`).join(",")).join("\n")], { type: "text/csv;charset=utf-8" });
     const a = document.createElement("a");
@@ -182,7 +182,10 @@ export function AdminPayments() {
                 {payments.data.map((p) => (
                   <tr key={p.id} className="border-t border-line">
                     <td className="px-3 py-2 whitespace-nowrap">{fmtDate(locale, p.createdAt)}</td>
-                    <td className="px-3 py-2" dir="ltr">{emails.data?.get(p.uid) ?? "…"}</td>
+                    <td className="px-3 py-2">
+                      <span className="block font-medium">{people.data?.get(p.uid)?.name || "—"}</span>
+                      <span className="block text-xs text-muted" dir="ltr">{p.email || (people.data?.get(p.uid)?.email ?? "…")}</span>
+                    </td>
                     <td className="px-3 py-2">{t(`methods.${p.method === "chargily" ? "chargily" : "admin"}`)}</td>
                     <td className="px-3 py-2 font-semibold tabular-nums">{nf.format(p.gross)}</td>
                     <td className="px-3 py-2 tabular-nums">{nf.format(p.fees)}</td>
@@ -195,30 +198,30 @@ export function AdminPayments() {
           </div>
         )}
       </section>
-      <section className="space-y-2">
-        <h2 className="font-semibold">{t("orders")}</h2>
-        {!orders.data ? (
-          <Loading />
-        ) : (
-          <ul className="divide-y divide-line overflow-hidden rounded-card bg-surface shadow-card">
-            {orders.data.map((o) => (
-              <li key={o.id} className="flex flex-wrap items-center gap-3 px-4 py-2.5 text-sm">
-                <span className="w-40 shrink-0 text-muted">{fmtDate(locale, o.createdAt)}</span>
-                <span dir="ltr" className="min-w-0 flex-1 truncate">{o.email}</span>
-                <span className="tabular-nums">{nf.format(o.amount)}</span>
-                <span
-                  className={cn(
-                    "rounded-full px-2 py-0.5 text-xs font-semibold",
-                    o.status === "paid" ? "bg-green-50 text-green-800" : o.status === "pending" ? "bg-amber-50 text-amber-900" : "bg-red-50 text-red-800",
-                  )}
-                >
-                  {t(`status.${(["pending", "paid", "failed", "mismatch"].includes(o.status) ? o.status : "failed") as "paid"}`)}
-                </span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+      {(() => {
+        const open = orders.data?.filter((o) => o.status !== "paid") ?? [];
+        if (!open.length) return null;
+        return (
+          <details className="rounded-card bg-surface shadow-card">
+            <summary className="cursor-pointer list-none px-4 py-3 font-semibold marker:hidden">
+              {t("attempts", { n: open.length })}
+              <span className="block text-xs font-normal text-muted">{t("attemptsHint")}</span>
+            </summary>
+            <ul className="divide-y divide-line border-t border-line">
+              {open.map((o) => (
+                <li key={o.id} className="flex flex-wrap items-center gap-3 px-4 py-2.5 text-sm">
+                  <span className="w-40 shrink-0 text-muted">{fmtDate(locale, o.createdAt)}</span>
+                  <span dir="ltr" className="min-w-0 flex-1 truncate">{o.email}</span>
+                  <span className="tabular-nums">{nf.format(o.amount)}</span>
+                  <span className={cn("rounded-full px-2 py-0.5 text-xs font-semibold", o.status === "pending" ? "bg-amber-50 text-amber-900" : "bg-red-50 text-red-800")}>
+                    {t(`status.${(["pending", "failed", "mismatch"].includes(o.status) ? o.status : "failed") as "failed"}`)}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </details>
+        );
+      })()}
     </div>
   );
 }

@@ -1207,8 +1207,6 @@
     "dash": {
       "teachers": "Enseignants inscrits",
       "newWeek": "Nouveaux cette semaine",
-      "activeSubs": "Abonnements et essais en cours",
-      "trials": "Essais démarrés (total)",
       "unread": "Messages non lus",
       "monthGross": "Revenus du mois",
       "yearGross": "Revenus des 12 derniers mois",
@@ -1216,7 +1214,9 @@
       "fees": "Frais de paiement",
       "revenueChart": "Revenus mensuels (DA)",
       "count": "{n} paiements",
-      "noRevenue": "Aucun revenu pour l'instant."
+      "noRevenue": "Aucun revenu pour l'instant.",
+      "paidActive": "Abonnés payants actifs",
+      "trialsActive": "En essai gratuit actuellement"
     },
     "teachers": {
       "search": "Rechercher par e-mail (début)",
@@ -1250,10 +1250,23 @@
         "finance": "Finances"
       },
       "saveRoles": "Enregistrer les rôles",
-      "rolesSaved": "Rôles enregistrés (effectifs à sa prochaine connexion)",
+      "rolesSaved": "Enregistré ✓",
       "selfAdmin": "Vous ne pouvez pas retirer votre propre rôle admin.",
       "message": "Lui écrire",
-      "privacy": "Les classes, élèves et notes de l'enseignant n'apparaissent pas ici : ils lui sont privés."
+      "privacy": "Les classes, élèves et notes de l'enseignant n'apparaissent pas ici : ils lui sont privés.",
+      "teacherRole": "Enseignant",
+      "promote": "Promouvoir administrateur",
+      "promoteConfirm": "Donner à {email} tous les droits d'administrateur ? Il pourra gérer tout le site : enseignants, abonnements, contenus, paramètres.",
+      "demote": "Retirer le rôle d'administrateur",
+      "demoteConfirm": "Retirer les droits d'administrateur à {email} ?",
+      "limitedRoles": "Rôles limités",
+      "roleHints": {
+        "contentEditor": "Ajoute et modifie les contenus de la bibliothèque uniquement",
+        "finance": "Voit les paiements et revenus uniquement"
+      },
+      "rolesNote": "Le nouveau rôle s'applique après déconnexion/reconnexion, ou automatiquement sous une heure.",
+      "staff": "Équipe d'administration",
+      "staffEmpty": "Personne pour le moment."
     },
     "plans": {
       "free": "Formule gratuite",
@@ -1270,7 +1283,7 @@
       "saved": "Enregistré"
     },
     "payments": {
-      "recent": "Derniers paiements",
+      "recent": "Paiements confirmés",
       "date": "Date",
       "teacher": "Enseignant",
       "method": "Moyen",
@@ -1284,13 +1297,14 @@
       },
       "csv": "Exporter CSV",
       "empty": "Aucun paiement.",
-      "orders": "Dernières commandes Chargily",
       "status": {
         "pending": "En attente",
         "paid": "Payée",
         "failed": "Échouée",
         "mismatch": "Montant non conforme"
-      }
+      },
+      "attempts": "Tentatives de paiement non abouties ({n})",
+      "attemptsHint": "Page de paiement ouverte sans aller au bout — non comptabilisées, aucun abonnement activé. Utile seulement si un enseignant dit avoir payé sans activation."
     },
     "notif": {
       "compose": "Nouvelle notification pour tous",
