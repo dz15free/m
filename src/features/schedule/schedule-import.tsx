@@ -34,6 +34,7 @@ import {
 import type { Table } from "@/features/import/table";
 import { subjectById, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
+import { reportClientError } from "@/lib/firebase/report";
 import {
   parseTimetable,
   type DraftSlot,
@@ -204,6 +205,7 @@ function Importer({
       }
     } catch (e) {
       console.error("[schedule import]", e);
+      if (!(e instanceof UnsupportedFileError)) reportClientError("schedule.import", e, { type: f.type, size: f.size });
       setError(
         e instanceof UnsupportedFileError ? t("errors.xls") : t("errors.read"),
       );

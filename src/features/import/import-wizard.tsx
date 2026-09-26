@@ -32,6 +32,7 @@ import type { ClassDoc } from "@/features/classes/repo";
 import { mutateRoster } from "@/features/students/repo";
 import { MAX_STUDENTS, addStudents } from "@/features/students/roster";
 import { cn } from "@/lib/utils/cn";
+import { reportClientError } from "@/lib/firebase/report";
 import { loadImage, prepareForOcr, thumbnail } from "./image";
 import { OcrEngine, type OcrLang } from "./ocr";
 import { pasteToTable } from "./paste";
@@ -181,6 +182,7 @@ function Wizard({ cls }: { cls: ClassDoc }) {
         }
       } catch (e) {
         console.error("[import] file", e);
+        reportClientError("import.file", e, { type: file.type, size: file.size });
         setError(t("readError"));
       }
     }
@@ -201,6 +203,7 @@ function Wizard({ cls }: { cls: ClassDoc }) {
       const sheets = await readSpreadsheet(file);
       finish(sheets.map((s) => ({ table: s.table, group: sheets.length > 1 ? s.name : undefined })));
     } catch (e) {
+      if (!(e instanceof UnsupportedFileError)) reportClientError("import.excel", e, { type: file.type, size: file.size });
       setError(e instanceof UnsupportedFileError ? t("xlsUnsupported") : t("readError"));
       setProgress(null);
       setStage(e instanceof UnsupportedFileError ? "paste" : "source");
@@ -230,6 +233,7 @@ function Wizard({ cls }: { cls: ClassDoc }) {
       return tables;
     } catch (e) {
       console.error("[import] pdf as image", e);
+      reportClientError("import.pdfAsImage", e);
       if (!cancelled.current) {
         setError(t("readError"));
         setStage("source");

@@ -46,7 +46,8 @@ export type PdfResult =
 
 export async function readPdf(file: File, onProgress?: (page: number, total: number) => void): Promise<PdfResult> {
   const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
-  pdfjs.GlobalWorkerOptions.workerSrc = "/vendor/pdf/pdf.worker.min.mjs";
+  // عنوان بإصدار: لا يبقى في أي هاتف عامل قديم (كاش المتصفح أو عامل الخدمة) لا يطابق المكتبة
+  pdfjs.GlobalWorkerOptions.workerSrc = `/vendor/pdf/pdf.worker.min.mjs?v=${pdfjs.version}-actualtext1`;
   const doc = await pdfjs.getDocument({ data: await file.arrayBuffer() }).promise;
 
   const pages: PdfPage[] = [];

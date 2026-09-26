@@ -511,6 +511,12 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // أخطاء ميدانية من الأجهزة: يكتبها الخادم وحده، ويقرؤها الأدمن للتشخيص
+    match /clientErrors/{id} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
     // كل ما لم يُذكر أعلاه مغلق.
   }
 }
