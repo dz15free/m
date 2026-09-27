@@ -1,4 +1,5 @@
 import {
+  BookOpenCheck,
   CalendarClock,
   ClipboardCheck,
   CreditCard,
@@ -21,6 +22,7 @@ export type NavKey =
   | "more"
   | "schedule"
   | "logbook"
+  | "lessons"
   | "planning"
   | "documents"
   | "billing"
@@ -38,6 +40,7 @@ export const NAV = {
   more: item("more", "/app/more", LayoutGrid),
   schedule: item("schedule", "/app/schedule", CalendarClock),
   logbook: item("logbook", "/app/logbook", NotebookPen),
+  lessons: item("lessons", "/app/lessons", BookOpenCheck),
   planning: item("planning", "/app/planning", ListChecks),
   documents: item("documents", "/app/documents", Printer),
   billing: item("billing", "/app/billing", CreditCard),
@@ -53,6 +56,7 @@ export const SIDEBAR_PRIMARY = [
   NAV.classes,
   NAV.schedule,
   NAV.logbook,
+  NAV.lessons,
   NAV.planning,
   NAV.library,
   NAV.documents,
@@ -60,7 +64,7 @@ export const SIDEBAR_PRIMARY = [
 export const SIDEBAR_SECONDARY = [NAV.billing, NAV.settings];
 
 /** صفحة «المزيد» على الهاتف: كل ما لا يتّسع له الشريط السفلي. */
-export const MORE_ITEMS = [NAV.schedule, NAV.logbook, NAV.planning, NAV.documents, NAV.billing, NAV.settings];
+export const MORE_ITEMS = [NAV.lessons, NAV.schedule, NAV.logbook, NAV.planning, NAV.documents, NAV.billing, NAV.settings];
 
 export function isActive(pathname: string, href: string) {
   return href === "/app" ? pathname === "/app" : pathname === href || pathname.startsWith(`${href}/`);

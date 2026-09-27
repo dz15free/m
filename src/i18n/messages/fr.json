@@ -20,7 +20,8 @@
     "planning": "Progressions",
     "documents": "Documents et affiches",
     "billing": "Abonnement",
-    "settings": "Paramètres"
+    "settings": "Paramètres",
+    "lessons": "Fiches"
   },
   "common": {
     "language": "Langue",
@@ -1460,5 +1461,32 @@
     "send": "Envoyer mon avis",
     "thanks": "Merci ! Votre avis a bien été reçu.",
     "error": "Envoi impossible. Réessayez."
+  },
+  "lessons": {
+    "title": "Fiches de préparation",
+    "subtitle": "La fiche de chaque séance par séquence et semaine : thème, matériel, objectifs et déroulement.",
+    "subjects": "Matières",
+    "soon": "Bientôt",
+    "noClasses": "Ajoutez d'abord votre classe et ses matières pour voir leurs fiches ici.",
+    "preparing": "Les fiches de vos matières sont en préparation et arriveront progressivement.",
+    "trialNote": "Pendant l'essai : objectifs et résumé de toutes les séances, et le déroulement complet des séances marquées « Fiche complète ». L'abonnement ouvre toutes les fiches.",
+    "sessions": "{n, plural, one {# séance} other {# séances}}",
+    "week": "Semaine {n}",
+    "day": "Jour {n}",
+    "sample": "Fiche complète",
+    "lockedBody": "Le déroulement complet est réservé aux abonnés.",
+    "lockedTitle": "Déroulement réservé aux abonnés",
+    "subscribe": "S'abonner pour tout ouvrir",
+    "source": "Source : {source}",
+    "notFound": "Cette fiche est introuvable.",
+    "back": "Fiches",
+    "print": "Imprimer",
+    "segment": "Séquence",
+    "unit": "Période",
+    "activity": "Activité",
+    "domain": "Domaine",
+    "materials": "Matériel",
+    "objectives": "Objectifs d'apprentissage",
+    "process": "Déroulement"
   }
 }
