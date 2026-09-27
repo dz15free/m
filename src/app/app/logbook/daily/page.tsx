@@ -8,7 +8,7 @@ export async function generateMetadata() {
 }
 
 export default async function DailyNotebookPage({ searchParams }: PageProps<"/app/logbook/daily">) {
-  const { date } = await searchParams;
+  const { date, print } = await searchParams;
   const t = await getTranslations("logbook.daily");
   return (
     <div className="space-y-4">
@@ -16,7 +16,7 @@ export default async function DailyNotebookPage({ searchParams }: PageProps<"/ap
         <BackToLogbook />
         <h1 className="text-2xl font-bold">{t("title")}</h1>
       </div>
-      <DailyNotebook initialDate={typeof date === "string" ? date : undefined} />
+      <DailyNotebook initialDate={typeof date === "string" ? date : undefined} autoPrint={print === "1"} />
     </div>
   );
 }

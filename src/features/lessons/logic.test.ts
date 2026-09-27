@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { groupCurriculum, lessonAccess, type CurriculumEntry } from "./logic.ts";
+import { curriculumWeeks, groupCurriculum, lessonAccess, suggestForWeek, type CurriculumEntry } from "./logic.ts";
 
 const e = (o: number, s: number, k: "week" | "day", u: number): CurriculumEntry => ({ id: `x_${o}`, o, s, k, u, a: "", d: "", t: `t${o}`, b: true, sm: false });
 
@@ -20,4 +20,21 @@ test("الوصول: المشترك كل شيء، التجربة الملخّص �
   assert.deepEqual(lessonAccess("trial", true), { summary: true, body: true });
   assert.deepEqual(lessonAccess("locked", true), { summary: false, body: false });
   assert.deepEqual(lessonAccess("locked", false, true), { summary: true, body: true });
+});
+
+test("أسابيع المنهاج: الأيام خمسة خمسة ثم أسابيع المقاطع", () => {
+  const entries = [...Array.from({ length: 10 }, (_, i) => e(i + 1, 1, "day", i + 1)), e(11, 2, "week", 1), e(12, 2, "week", 1), e(13, 2, "week", 2)];
+  const w = curriculumWeeks(entries);
+  assert.deepEqual(w.map((x) => [x.kind, x.entries.map((y) => y.o)]), [["day", [1, 2, 3, 4, 5]], ["day", [6, 7, 8, 9, 10]], ["week", [11, 12]], ["week", [13]]]);
+});
+
+test("الاقتراح: حصص الأسبوع بترتيبها، وأيام التمهيدية حسب اليوم", () => {
+  const entries = [...Array.from({ length: 5 }, (_, i) => e(i + 1, 1, "day", i + 1)), e(6, 2, "week", 1), e(7, 2, "week", 1)];
+  const w = curriculumWeeks(entries);
+  // 2026-10-04 أحد، 2026-10-05 إثنين
+  const prep = suggestForWeek(w, 1, [{ key: "a", date: "2026-10-05", start: "08:00" }, { key: "b", date: "2026-10-04", start: "09:00" }], [0, 1, 2, 3, 4]);
+  assert.deepEqual([prep.get("a")?.o, prep.get("b")?.o], [2, 1]);
+  const wk = suggestForWeek(w, 2, [{ key: "x", date: "2026-10-12", start: "10:00" }, { key: "y", date: "2026-10-11", start: "08:00" }, { key: "z", date: "2026-10-13", start: "08:00" }], [0, 1, 2, 3, 4]);
+  assert.deepEqual([wk.get("y")?.o, wk.get("x")?.o, wk.get("z")], [6, 7, undefined]);
+  assert.equal(suggestForWeek(w, 9, [{ key: "q", date: "2026-10-12", start: "10:00" }], [0, 1, 2, 3, 4]).size, 0);
 });

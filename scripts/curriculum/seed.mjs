@@ -76,6 +76,7 @@ for (const l of data.lessons) {
     topic: l.topic,
     materials: l.materials,
     objectives: l.objectives,
+    ...(l.objectiveParts ? { objectiveParts: l.objectiveParts.map((items) => ({ items })) } : {}),
     hasBody: !!l.body,
     sample,
     source,

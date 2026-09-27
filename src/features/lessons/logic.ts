@@ -47,6 +47,8 @@ export type LessonSummary = {
   topic: string;
   materials: string;
   objectives: string[];
+  /** أهداف كل نشاط على حدة (الفترة التمهيدية) */
+  objectiveParts?: { items: string[] }[];
   hasBody: boolean;
   sample: boolean;
   source: { ar: string; fr: string };
@@ -86,3 +88,45 @@ export function lessonAccess(access: Access, sample: boolean, staff = false): Le
 
 /** معرّف المنهاج لمستوى ومادة (1AP + ar ⇐ 1AP_ar). */
 export const curriculumId = (level: string, subject: string) => `${level}_${subject}`;
+
+/** أسابيع المنهاج بالترتيب: كل (مقطع، أسبوع) أسبوعٌ، وأيام الفترة التمهيدية تُجمع خمسةً خمسة. */
+export function curriculumWeeks(entries: CurriculumEntry[], daysPerWeek = 5): { kind: "day" | "week"; entries: CurriculumEntry[] }[] {
+  const out: { kind: "day" | "week"; entries: CurriculumEntry[] }[] = [];
+  for (const seg of groupCurriculum({ segments: [], entries })) {
+    const days = seg.units.filter((u) => u.kind === "day").flatMap((u) => u.entries);
+    for (let i = 0; i < days.length; i += daysPerWeek) out.push({ kind: "day", entries: days.slice(i, i + daysPerWeek) });
+    for (const u of seg.units.filter((x) => x.kind === "week")) out.push({ kind: "week", entries: u.entries });
+  }
+  return out;
+}
+
+export type SlotRef = { key: string; date: string; start: string };
+
+/** الحصة المقترحة لكل حصة من الجدول في أسبوع دراسي:
+ *  - أسبوع عادي: حصص المادة في الأسبوع بترتيبها (يوم ثم ساعة) ← حصص أسبوع المنهاج بترتيبها.
+ *  - الفترة التمهيدية: كل يوم دراسي ← «اليوم» المقابل (كل حصص اليوم لنفس اليوم). */
+export function suggestForWeek(
+  weeks: { kind: "day" | "week"; entries: CurriculumEntry[] }[],
+  weekNo: number,
+  slots: SlotRef[],
+  schoolDays: number[],
+): Map<string, CurriculumEntry> {
+  const out = new Map<string, CurriculumEntry>();
+  const week = weeks[weekNo - 1];
+  if (!week || weekNo < 1) return out;
+  const sorted = [...slots].sort((a, b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start));
+  if (week.kind === "day") {
+    const order = [...schoolDays].sort((a, b) => a - b);
+    for (const s of sorted) {
+      const idx = order.indexOf(new Date(`${s.date}T12:00:00Z`).getUTCDay());
+      const e = week.entries[idx];
+      if (e) out.set(s.key, e);
+    }
+    return out;
+  }
+  sorted.forEach((s, i) => {
+    const e = week.entries[i];
+    if (e) out.set(s.key, e);
+  });
+  return out;
+}

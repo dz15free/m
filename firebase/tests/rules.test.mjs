@@ -440,6 +440,13 @@ describe("التجربة والقفل", () => {
     await assertSucceeds(setDoc(doc(dbAs(A), "users", A.uid), newUser(A)));
   });
 
+  it("سطر الدفتر يقبل المقطع والأسبوع والحصة ومرجع المذكرة", async () => {
+    const full = { ...lesson, seq: "المقطع 3: الحي والقرية", week: "2", session: "3", ref: "1AP_ar_070" };
+    await assertSucceeds(setDoc(lessonRef(dbAs(A)), full));
+    await assertFails(setDoc(lessonRef(dbAs(A)), { ...full, seq: "x".repeat(81) }));
+    await assertFails(setDoc(lessonRef(dbAs(A)), { ...full, extra: 1 }));
+  });
+
   it("الاشتراك المدفوع يفتح الكتابة كالتجربة", async () => {
     await setEnt(A.uid, { status: "active" });
     await assertSucceeds(setDoc(lessonRef(dbAs(A)), lesson));

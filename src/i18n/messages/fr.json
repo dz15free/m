@@ -550,8 +550,8 @@
       "fields": {
         "activity": "Activité",
         "unit": "Domaine",
-        "title": "Contenu",
-        "objective": "Composantes de la compétence / objectif",
+        "title": "Thème",
+        "objective": "Objectif / indicateurs de compétence",
         "materials": "Matériel",
         "notes": "Observations"
       },
@@ -583,7 +583,27 @@
       "hijri": "Correspondant au",
       "remarks": "Observations",
       "reviewedBy": "Vu par M./Mme",
-      "fromPrep": "Depuis une fiche"
+      "fromPrep": "Depuis une fiche",
+      "printToday": "Cahier du jour prêt à imprimer",
+      "printDay": "Imprimer le jour",
+      "autoNote": "Les lignes « Proposé » sont remplies automatiquement depuis votre emploi du temps et les fiches, selon la semaine. Elles s'impriment telles quelles ; touchez une ligne pour la modifier.",
+      "suggested": "Proposé",
+      "pickLesson": "Choisir la séance dans les fiches",
+      "openLesson": "Ouvrir la fiche",
+      "dayN": "Jour {n}",
+      "weekN": "Semaine {n}",
+      "meta": {
+        "seq": "Séquence",
+        "week": "Semaine",
+        "session": "Séance"
+      },
+      "from": "De",
+      "to": "À",
+      "day": "Jour",
+      "prepWeek": "Période préparatoire : semaine {w} — jour {d}",
+      "schoolWeek": "Semaine scolaire {n}",
+      "directorSeen": "Vu par M. le Directeur le",
+      "signature": "Signature et cachet"
     },
     "print": {
       "teacher": "Enseignant(e)",

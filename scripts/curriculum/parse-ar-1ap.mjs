@@ -169,6 +169,7 @@ export function parse(pages) {
           topic: "",
           materials: "",
           objectives: [],
+          _groups: [],
           body: [],
         };
         lessons.push(current);
@@ -184,6 +185,7 @@ export function parse(pages) {
       const ob = OBJ_START.exec(line);
       if (ob) {
         current._inObj = true;
+        current._groups.push(current.objectives.length);
         if (ob[2]) current.objectives.push(ob[2]);
         continue;
       }
@@ -203,10 +205,14 @@ export function parse(pages) {
 
   // الأهداف: جمل منفصلة (قد تأتي في سطر واحد مفصولة بـ «.»)
   return lessons.map((l, index) => {
-    const objectives = l.objectives
-      .flatMap((o) => o.split(/(?<=\.)\s+(?=ي)/))
-      .map((o) => o.replace(/\s+/g, " ").trim())
-      .filter((o) => o.length > 6);
+    const norm = (list) =>
+      list
+        .flatMap((o) => o.split(/(?<=\.)\s+(?=ي)/))
+        .map((o) => o.replace(/^[-–]\s*/, "").replace(/\s+/g, " ").trim())
+        .filter((o) => o.length > 6);
+    const objectives = norm(l.objectives);
+    // أهداف كل نشاط على حدة (أيام الفترة التمهيدية: أسمع وأتحدث / أشاهد وأقرأ / أخطط وأكتب)
+    const objectiveParts = l._groups.map((start, i) => norm(l.objectives.slice(start, l._groups[i + 1]))).filter((g) => g.length);
     // أسطر مشوّهة (نص مشكول فقد ترميزه): تُستبدل بإحالة واحدة بدل عرض نص مكسور
     const kept = [];
     for (const line of l.body) {
@@ -216,13 +222,14 @@ export function parse(pages) {
     }
     const body = kept.join("\n");
     const ratio = garbledRatio(body);
-    const { _inObj, body: _b, ...rest } = l;
+    const { _inObj, _groups, body: _b, ...rest } = l;
     const headerOk = !!l.topic && objectives.length > 0 && garbledRatio(`${l.topic} ${objectives.join(" ")}`) < 0.06;
     return {
       ...rest,
       needsReview: !headerOk,
       order: index + 1,
       objectives,
+      ...(objectiveParts.length > 1 ? { objectiveParts } : {}),
       body: ratio < 0.04 ? body : "",
       bodyQuality: ratio < 0.04 ? "ok" : "garbled",
     };
@@ -250,6 +257,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const f = fixes[String(l.page)];
     if (!f) return l;
     const merged = { ...l, ...f, segmentTitle: SEGMENTS[f.segment ?? l.segment] };
+    if (f.objectives && !f.objectiveParts) delete merged.objectiveParts;
     return { ...merged, needsReview: false, reviewed: true };
   });
   const out = {

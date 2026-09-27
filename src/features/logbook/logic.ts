@@ -17,7 +17,16 @@ export type LessonEntry = {
   materials: string; // الوسائل
   notes: string; // الملاحظات
   status: LessonStatus;
+  /** المقطع / الأسبوع / الحصة (أعمدة الدفتر الرسمي) — اختيارية */
+  seq?: string;
+  week?: string;
+  session?: string;
+  /** المذكرة الجاهزة المصدر (lessonSummaries/<ref>) */
+  ref?: string;
 };
+
+export const LESSON_META_FIELDS = ["seq", "week", "session"] as const;
+export const META_MAX = { seq: 80, week: 20, session: 20, ref: 40 } as const;
 
 export const LESSON_TEXT_FIELDS = ["activity", "unit", "title", "objective", "materials", "notes"] as const;
 export type LessonTextField = (typeof LESSON_TEXT_FIELDS)[number];
@@ -40,6 +49,11 @@ export function isBlank(l: Pick<LessonEntry, LessonTextField>): boolean {
 export function cleanLesson(l: LessonEntry): LessonEntry {
   const out = { ...l };
   for (const f of LESSON_TEXT_FIELDS) out[f] = (l[f] ?? "").replace(/[ \t]+/g, " ").trim().slice(0, FIELD_MAX[f]);
+  for (const f of [...LESSON_META_FIELDS, "ref"] as const) {
+    const v = (l[f] ?? "").replace(/\s+/g, " ").trim().slice(0, META_MAX[f]);
+    if (v) out[f] = v;
+    else delete out[f];
+  }
   return out;
 }
 
