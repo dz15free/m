@@ -18,6 +18,11 @@ import { putDoc } from "../lib/firestore.mjs";
 
 const id = process.argv[2];
 const pdf = process.argv.find((a) => a.startsWith("--pdf="))?.slice(6) ?? null;
+/** وثائق إضافية: --pdf-b=<ملف> تقابل صفحات «b:N» في البيانات */
+const extraPdf = Object.fromEntries(process.argv.filter((a) => /^--pdf-[a-z]=/.test(a)).map((a) => [a[6], a.slice(8)]));
+const pdfOf = (key) => (key === "main" ? pdf : extraPdf[key]);
+/** صفحة: رقم في الوثيقة الأصلية، أو «b:N» في وثيقة إضافية */
+const parsePage = (p) => (typeof p === "number" ? { key: "main", n: p } : { key: p.split(":")[0], n: Number(p.split(":")[1]) });
 if (!/^[1-5]AP_[a-z]+$/.test(id ?? "")) {
   console.error("usage: seed.mjs <level_subject>, e.g. 1AP_ar");
   process.exit(1);
@@ -61,7 +66,10 @@ if (!pdf && data.lessons.some((l) => (Array.isArray(l.pages) && l.pages.length) 
   process.exit(1);
 }
 const pageMap = pdf ? pagesOf(data.lessons) : new Map();
-const pageId = (n) => `${id}_pg${String(n).padStart(3, "0")}`;
+const pageId = (p) => {
+  const { key, n } = parsePage(p);
+  return `${id}_${key === "main" ? "pg" : key}${String(n).padStart(3, "0")}`;
+};
 const hasBody = (l) => !!l.body || (pageMap.get(l.order)?.length ?? 0) > 0;
 const samples = pickSamples(data.lessons.map((l) => ({ ...l, body: hasBody(l) ? l.body || "pages" : "" })));
 const now = Date.now();
@@ -98,9 +106,12 @@ if (pdf) {
   for (const l of data.lessons) for (const p of pageMap.get(l.order) ?? []) pageSample.set(p, (pageSample.get(p) ?? false) || samples.has(l.order));
   const dir = mkdtempSync(join(tmpdir(), "pages-"));
   let k = 0;
-  for (const [page, sample] of [...pageSample].sort((a, b) => a[0] - b[0])) {
-    const base = join(dir, `p${page}`);
-    execFileSync("pdftoppm", ["-f", String(page), "-l", String(page), "-r", "110", "-jpeg", "-jpegopt", "quality=60", "-singlefile", pdf, base]);
+  for (const [page, sample] of [...pageSample].sort((a, b) => String(a[0]).localeCompare(String(b[0]), "en", { numeric: true }))) {
+    const { key, n: pn } = parsePage(page);
+    const file = pdfOf(key);
+    if (!file) throw new Error(`مرّر --pdf-${key}=<الملف> لصفحة ${page}`);
+    const base = join(dir, `p${key}${pn}`);
+    execFileSync("pdftoppm", ["-f", String(pn), "-l", String(pn), "-r", "110", "-jpeg", "-jpegopt", "quality=60", "-singlefile", file, base]);
     const bytes = readFileSync(`${base}.jpg`);
     // صفحة بيضاء (فاصل في الوثيقة): لا تُنشر وتُحذف من قوائم الحصص
     if (bytes.length < 12_000) {
@@ -109,7 +120,7 @@ if (pdf) {
     }
     const img = bytes.toString("base64");
     if (img.length > 900_000) throw new Error(`page ${page} too large`);
-    await putDoc(`lessonBodies/${pageId(page)}`, { curriculumId: id, sample, page, img, updatedAt: now });
+    await putDoc(`lessonBodies/${pageId(page)}`, { curriculumId: id, sample, page: pn, ...(key === "main" ? {} : { doc: key }), img, updatedAt: now });
     if (++k % 20 === 0) console.log(`  … ${k} صفحة`);
   }
   console.log(`✓ ${k} صفحة مصوّرة`);

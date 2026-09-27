@@ -47,6 +47,11 @@ const EVAL = { 1: "تقويم تشخيصي", 13: "التقويم البيداغ�
 const segOf = (w) => (w <= 13 ? 1 : w <= 22 ? 2 : 3);
 const SESSIONS = ["الحصة الأولى: الاكتشاف والتعرّف", "الحصة الثانية: الحفظ والتثبيت"];
 const SAMPLE_WEEKS = new Set([2, 3]);
+// «كتاب مذكراتي» (مشاركة عامة، صفحة لكل درس): الأسبوع ← صفحاته (b:N = صفحة من الوثيقة الثانية)
+const MUDAKKIRATI = {
+  3: [2], 4: [3], 16: [3], 5: [4], 6: [5], 7: [5], 8: [6], 9: [7], 10: [8], 11: [9],
+  14: [10], 15: [10], 20: [10], 17: [11], 18: [12], 19: [13], 23: [14], 27: [15], 28: [16, 18], 29: [17, 19], 30: [20],
+};
 
 const lessons = [];
 for (let w = 1; w <= 32; w++) {
@@ -58,7 +63,7 @@ for (let w = 1; w <= 32; w++) {
   const [, domain, topic, objectives, materials] = L[idx];
   const first = 19 + 2 * idx;
   SESSIONS.forEach((session) =>
-    lessons.push({ segment: segOf(w), unitKind: "week", unit: w, session, activity: "تربية إسلامية", domain, topic, materials, objectives, body: "", pages: [first, first + 1], sample: SAMPLE_WEEKS.has(w) }),
+    lessons.push({ segment: segOf(w), unitKind: "week", unit: w, session, activity: "تربية إسلامية", domain, topic, materials, objectives, body: "", pages: [first, first + 1, ...(MUDAKKIRATI[w] ?? []).map((n) => `b:${n}`)], sample: SAMPLE_WEEKS.has(w) }),
   );
 }
 const out = {
@@ -66,7 +71,7 @@ const out = {
   level: "1AP",
   subject: "islamic",
   title: "التربية الإسلامية — السنة الأولى ابتدائي",
-  source: { ar: "وزارة التربية الوطنية — مخطط حصص تعلّمية في التربية الإسلامية", fr: "Ministère de l'Éducation nationale" },
+  source: { ar: "وزارة التربية الوطنية — مخطط حصص تعلّمية في التربية الإسلامية؛ وكتاب «مذكراتي» (مشاركة عامة)", fr: "Ministère de l'Éducation nationale ; « Moudhakirati » (partage public)" },
   segments: { 1: "المقطع الأول", 2: "المقطع الثاني", 3: "المقطع الثالث" },
   lessons: lessons.map((l, i) => ({ ...l, order: i + 1, segmentTitle: ["", "المقطع الأول", "المقطع الثاني", "المقطع الثالث"][l.segment] })),
 };

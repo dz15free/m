@@ -80,7 +80,7 @@ export function LessonView({ id }: { id: string }) {
                 q.data ? (
                   // eslint-disable-next-line @next/next/no-img-element -- صفحة الوثيقة الأصلية (محمية بالقواعد)
                   <img
-                    key={q.data.page}
+                    key={i}
                     src={`data:image/jpeg;base64,${q.data.img}`}
                     alt={t("pageAlt", { n: q.data.page })}
                     className="w-full rounded-card bg-white shadow-card print:break-after-page print:shadow-none"

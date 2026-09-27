@@ -4,8 +4,8 @@
  "subject": "islamic",
  "title": "التربية الإسلامية — السنة الأولى ابتدائي",
  "source": {
-  "ar": "وزارة التربية الوطنية — مخطط حصص تعلّمية في التربية الإسلامية",
-  "fr": "Ministère de l'Éducation nationale"
+  "ar": "وزارة التربية الوطنية — مخطط حصص تعلّمية في التربية الإسلامية؛ وكتاب «مذكراتي» (مشاركة عامة)",
+  "fr": "Ministère de l'Éducation nationale ; « Moudhakirati » (partage public)"
  },
  "segments": {
   "1": "المقطع الأول",
@@ -91,7 +91,8 @@
    "body": "",
    "pages": [
     21,
-    22
+    22,
+    "b:2"
    ],
    "sample": true,
    "order": 4,
@@ -114,7 +115,8 @@
    "body": "",
    "pages": [
     21,
-    22
+    22,
+    "b:2"
    ],
    "sample": true,
    "order": 5,
@@ -137,7 +139,8 @@
    "body": "",
    "pages": [
     23,
-    24
+    24,
+    "b:3"
    ],
    "sample": false,
    "order": 6,
@@ -160,7 +163,8 @@
    "body": "",
    "pages": [
     23,
-    24
+    24,
+    "b:3"
    ],
    "sample": false,
    "order": 7,
@@ -183,7 +187,8 @@
    "body": "",
    "pages": [
     25,
-    26
+    26,
+    "b:4"
    ],
    "sample": false,
    "order": 8,
@@ -206,7 +211,8 @@
    "body": "",
    "pages": [
     25,
-    26
+    26,
+    "b:4"
    ],
    "sample": false,
    "order": 9,
@@ -229,7 +235,8 @@
    "body": "",
    "pages": [
     27,
-    28
+    28,
+    "b:5"
    ],
    "sample": false,
    "order": 10,
@@ -252,7 +259,8 @@
    "body": "",
    "pages": [
     27,
-    28
+    28,
+    "b:5"
    ],
    "sample": false,
    "order": 11,
@@ -275,7 +283,8 @@
    "body": "",
    "pages": [
     29,
-    30
+    30,
+    "b:5"
    ],
    "sample": false,
    "order": 12,
@@ -298,7 +307,8 @@
    "body": "",
    "pages": [
     29,
-    30
+    30,
+    "b:5"
    ],
    "sample": false,
    "order": 13,
@@ -321,7 +331,8 @@
    "body": "",
    "pages": [
     31,
-    32
+    32,
+    "b:6"
    ],
    "sample": false,
    "order": 14,
@@ -344,7 +355,8 @@
    "body": "",
    "pages": [
     31,
-    32
+    32,
+    "b:6"
    ],
    "sample": false,
    "order": 15,
@@ -367,7 +379,8 @@
    "body": "",
    "pages": [
     33,
-    34
+    34,
+    "b:7"
    ],
    "sample": false,
    "order": 16,
@@ -390,7 +403,8 @@
    "body": "",
    "pages": [
     33,
-    34
+    34,
+    "b:7"
    ],
    "sample": false,
    "order": 17,
@@ -413,7 +427,8 @@
    "body": "",
    "pages": [
     35,
-    36
+    36,
+    "b:8"
    ],
    "sample": false,
    "order": 18,
@@ -436,7 +451,8 @@
    "body": "",
    "pages": [
     35,
-    36
+    36,
+    "b:8"
    ],
    "sample": false,
    "order": 19,
@@ -459,7 +475,8 @@
    "body": "",
    "pages": [
     37,
-    38
+    38,
+    "b:9"
    ],
    "sample": false,
    "order": 20,
@@ -482,7 +499,8 @@
    "body": "",
    "pages": [
     37,
-    38
+    38,
+    "b:9"
    ],
    "sample": false,
    "order": 21,
@@ -566,7 +584,8 @@
    "body": "",
    "pages": [
     41,
-    42
+    42,
+    "b:10"
    ],
    "sample": false,
    "order": 25,
@@ -589,7 +608,8 @@
    "body": "",
    "pages": [
     41,
-    42
+    42,
+    "b:10"
    ],
    "sample": false,
    "order": 26,
@@ -612,7 +632,8 @@
    "body": "",
    "pages": [
     43,
-    44
+    44,
+    "b:10"
    ],
    "sample": false,
    "order": 27,
@@ -635,7 +656,8 @@
    "body": "",
    "pages": [
     43,
-    44
+    44,
+    "b:10"
    ],
    "sample": false,
    "order": 28,
@@ -658,7 +680,8 @@
    "body": "",
    "pages": [
     45,
-    46
+    46,
+    "b:3"
    ],
    "sample": false,
    "order": 29,
@@ -681,7 +704,8 @@
    "body": "",
    "pages": [
     45,
-    46
+    46,
+    "b:3"
    ],
    "sample": false,
    "order": 30,
@@ -704,7 +728,8 @@
    "body": "",
    "pages": [
     47,
-    48
+    48,
+    "b:11"
    ],
    "sample": false,
    "order": 31,
@@ -727,7 +752,8 @@
    "body": "",
    "pages": [
     47,
-    48
+    48,
+    "b:11"
    ],
    "sample": false,
    "order": 32,
@@ -750,7 +776,8 @@
    "body": "",
    "pages": [
     49,
-    50
+    50,
+    "b:12"
    ],
    "sample": false,
    "order": 33,
@@ -773,7 +800,8 @@
    "body": "",
    "pages": [
     49,
-    50
+    50,
+    "b:12"
    ],
    "sample": false,
    "order": 34,
@@ -796,7 +824,8 @@
    "body": "",
    "pages": [
     51,
-    52
+    52,
+    "b:13"
    ],
    "sample": false,
    "order": 35,
@@ -819,7 +848,8 @@
    "body": "",
    "pages": [
     51,
-    52
+    52,
+    "b:13"
    ],
    "sample": false,
    "order": 36,
@@ -842,7 +872,8 @@
    "body": "",
    "pages": [
     53,
-    54
+    54,
+    "b:10"
    ],
    "sample": false,
    "order": 37,
@@ -865,7 +896,8 @@
    "body": "",
    "pages": [
     53,
-    54
+    54,
+    "b:10"
    ],
    "sample": false,
    "order": 38,
@@ -947,7 +979,8 @@
    "body": "",
    "pages": [
     57,
-    58
+    58,
+    "b:14"
    ],
    "sample": false,
    "order": 42,
@@ -970,7 +1003,8 @@
    "body": "",
    "pages": [
     57,
-    58
+    58,
+    "b:14"
    ],
    "sample": false,
    "order": 43,
@@ -1131,7 +1165,8 @@
    "body": "",
    "pages": [
     65,
-    66
+    66,
+    "b:15"
    ],
    "sample": false,
    "order": 50,
@@ -1154,7 +1189,8 @@
    "body": "",
    "pages": [
     65,
-    66
+    66,
+    "b:15"
    ],
    "sample": false,
    "order": 51,
@@ -1177,7 +1213,9 @@
    "body": "",
    "pages": [
     67,
-    68
+    68,
+    "b:16",
+    "b:18"
    ],
    "sample": false,
    "order": 52,
@@ -1200,7 +1238,9 @@
    "body": "",
    "pages": [
     67,
-    68
+    68,
+    "b:16",
+    "b:18"
    ],
    "sample": false,
    "order": 53,
@@ -1223,7 +1263,9 @@
    "body": "",
    "pages": [
     69,
-    70
+    70,
+    "b:17",
+    "b:19"
    ],
    "sample": false,
    "order": 54,
@@ -1246,7 +1288,9 @@
    "body": "",
    "pages": [
     69,
-    70
+    70,
+    "b:17",
+    "b:19"
    ],
    "sample": false,
    "order": 55,
@@ -1269,7 +1313,8 @@
    "body": "",
    "pages": [
     71,
-    72
+    72,
+    "b:20"
    ],
    "sample": false,
    "order": 56,
@@ -1292,7 +1337,8 @@
    "body": "",
    "pages": [
     71,
-    72
+    72,
+    "b:20"
    ],
    "sample": false,
    "order": 57,
