@@ -101,6 +101,13 @@ export function renewEnd(currentEnd: number | null, now: number, days: number): 
 
 export const hasFeature = (e: Effective, key: string) => e.features.includes(key);
 
+/** مستوى الوصول (نفس الشرط في القواعد والخادم):
+ *  full   — مشترك: كل شيء.
+ *  trial  — التجربة المجانية: كل الأدوات، وملخّصات المحتوى ونماذج مختارة منه كاملة.
+ *  locked — لا اشتراك ساريًا: الأدوات والمحتوى مقفلة، وبيانات الأستاذ محفوظة لا تُحذف. */
+export type Access = "full" | "trial" | "locked";
+export const accessOf = (e: Pick<Effective, "status">): Access => (e.status === "active" ? "full" : e.status === "trial" ? "trial" : "locked");
+
 /** صافي الدفعة: إن حُمّلت الرسوم على الزبون فالمبلغ كله صافٍ. */
 export function netOf(amount: number, fees: number, feesPassedToCustomer: boolean): number {
   return feesPassedToCustomer ? amount : Math.max(0, amount - fees);

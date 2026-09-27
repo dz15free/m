@@ -2,10 +2,11 @@ import { errorResponse, HttpError, requireUserWithToken } from "@/lib/server/aut
 import { getDocAs } from "@/lib/server/firestore-rest";
 import { contentBucket } from "@/lib/server/storage";
 import { ALLOWED_MIME, safeFileName, type ContentFile } from "@/features/library/logic";
-import { effectivePlan, type Entitlement } from "@/shared/billing/plans";
+import { accessOf, effectivePlan, type Entitlement } from "@/shared/billing/plans";
 
 /* تحميل ملف من المكتبة. الحماية هنا على الخادم، لا في إخفاء الأزرار:
-   1) مستخدم مسجَّل  2) المحتوى منشور (أو القارئ محرّر)  3) Premium ⇐ اشتراك فعّال. */
+   1) مستخدم مسجَّل  2) المحتوى منشور (أو القارئ محرّر)
+   3) الاشتراك يفتح كل شيء، والتجربة تفتح المحتوى المتاح للتجربة (access=free) فقط، وبلا اشتراك لا تحميل. */
 export async function GET(req: Request, { params }: RouteContext<"/api/files/[contentId]/[index]">) {
   try {
     const user = await requireUserWithToken(req);
@@ -18,9 +19,10 @@ export async function GET(req: Request, { params }: RouteContext<"/api/files/[co
     if (!file) throw new HttpError(404, "not found");
 
     const editor = user.roles.admin || user.roles.contentEditor;
-    if (content.access === "premium" && !editor) {
+    if (!editor) {
       const ent = (await getDocAs(`entitlements/${user.uid}`, user.token)) as Partial<Entitlement> | null;
-      if (effectivePlan(ent, null).contentAccess !== "premium") throw new HttpError(402, "premium required");
+      const access = accessOf(effectivePlan(ent, null));
+      if (access === "locked" || (access === "trial" && content.access === "premium")) throw new HttpError(402, "premium required");
     }
 
     const object = await (await contentBucket()).get(file.key);

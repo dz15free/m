@@ -32,6 +32,17 @@ service cloud.firestore {
         && get(entPath(uid)).data.status in ['trial', 'active']
         && request.time < get(entPath(uid)).data.currentPeriodEnd;
     }
+    // أدوات الأستاذ تُكتب أثناء تجربة أو اشتراك ساريَين فقط؛ القراءة والحذف يبقيان له دائمًا
+    // (بياناته لا تُحذف ولا تُحجب عنه عند الانتهاء).
+    function canUse(uid) { return paidActive(uid) || isAdmin(); }
+    // المحتوى الجاهز: الاشتراك يفتح كل شيء، والتجربة تفتح الملخّصات والنماذج المختارة.
+    function fullAccess() {
+      return isEditor() || (signedIn()
+        && exists(entPath(request.auth.uid))
+        && get(entPath(request.auth.uid)).data.status == 'active'
+        && request.time < get(entPath(request.auth.uid)).data.currentPeriodEnd);
+    }
+    function trialAccess() { return isEditor() || (signedIn() && paidActive(request.auth.uid)); }
     function maxClasses(uid) {
       return paidActive(uid) && get(entPath(uid)).data.limits.maxClasses > freeMaxClasses()
         ? get(entPath(uid)).data.limits.maxClasses
@@ -125,7 +136,7 @@ service cloud.firestore {
       // فهرس الأقسام النشطة لكل سنة: وسيلة القواعد لعدّ الأقسام دون مسح المجموعة
       match /yearIndex/{yearId} {
         allow read: if isOwner(uid);
-        allow create, update: if isOwner(uid)
+        allow create, update: if isOwner(uid) && canUse(uid)
           && yearId.matches('^[0-9]{4}-[0-9]{4}$')
           && request.resource.data.keys().hasOnly(['classIds', 'updatedAt'])
           && request.resource.data.classIds is list
@@ -158,7 +169,7 @@ service cloud.firestore {
             && d.updatedAt == request.time;
         }
         allow read: if isOwner(uid);
-        allow create: if isOwner(uid)
+        allow create: if isOwner(uid) && canUse(uid)
           && request.resource.data.keys().hasOnly([
                'yearId', 'schoolId', 'stage', 'level', 'section', 'displayName', 'subjectIds',
                'roster', 'studentCount', 'archived', 'copiedFrom', 'createdAt', 'updatedAt'])
@@ -170,7 +181,7 @@ service cloud.firestore {
           // حدّ الخطة: القسم الجديد مُدرج في فهرس السنة (الذي لا يتجاوز الحد) في نفس الدفعة
           && getAfter(/databases/$(database)/documents/teachers/$(uid)/yearIndex/$(request.resource.data.yearId)).data.classIds.hasAny([classId]);
         // القائمة: حتى 60 تلميذًا، والعدّاد يطابق طولها دائمًا
-        allow update: if isOwner(uid)
+        allow update: if isOwner(uid) && canUse(uid)
           && changedOnly(['displayName', 'subjectIds', 'archived', 'roster', 'studentCount', 'updatedAt'])
           && request.resource.data.roster is list
           && request.resource.data.roster.size() <= 60
@@ -184,7 +195,7 @@ service cloud.firestore {
       // الإسنادات: قسم × مادة، بمعرّف ثابت {classId}__{subjectId}
       match /assignments/{assignmentId} {
         allow read, delete: if isOwner(uid);
-        allow create, update: if isOwner(uid)
+        allow create, update: if isOwner(uid) && canUse(uid)
           && request.resource.data.keys().hasOnly([
                'yearId', 'schoolId', 'stage', 'classId', 'level', 'subjectId', 'createdAt', 'updatedAt'])
           && assignmentId == request.resource.data.classId + '__' + request.resource.data.subjectId
@@ -211,16 +222,16 @@ service cloud.firestore {
             && d.updatedAt == request.time;
         }
         allow read, delete: if isOwner(uid);
-        allow create: if isOwner(uid) && request.resource.data.createdAt == request.time
+        allow create: if isOwner(uid) && canUse(uid) && request.resource.data.createdAt == request.time
           && validSession(request.resource.data);
-        allow update: if isOwner(uid) && request.resource.data.createdAt == resource.data.createdAt
+        allow update: if isOwner(uid) && canUse(uid) && request.resource.data.createdAt == resource.data.createdAt
           && validSession(request.resource.data);
       }
 
       // إحصائيات الحضور التراكمية لكل قسم (زيادات increment)
       match /attendanceStats/{classId} {
         allow read: if isOwner(uid);
-        allow create, update: if isOwner(uid)
+        allow create, update: if isOwner(uid) && canUse(uid)
           && request.resource.data.keys().hasOnly(['sessions', 's', 'm', 'updatedAt'])
           && request.resource.data.updatedAt == request.time;
         allow delete: if false;
@@ -229,7 +240,7 @@ service cloud.firestore {
       // جدول التوقيت: مستند واحد لكل سنة، الحصص في قائمة
       match /schedules/{yearId} {
         allow read, delete: if isOwner(uid);
-        allow create, update: if isOwner(uid)
+        allow create, update: if isOwner(uid) && canUse(uid)
           && yearId.matches('^[0-9]{4}-[0-9]{4}$')
           && request.resource.data.keys().hasOnly(['yearId', 'slots', 'updatedAt'])
           && request.resource.data.yearId == yearId
@@ -254,10 +265,9 @@ service cloud.firestore {
             && d.updatedAt == request.time;
         }
         allow read, delete: if isOwner(uid);
-        allow create, update: if isOwner(uid) && validLesson(request.resource.data);
+        allow create, update: if isOwner(uid) && canUse(uid) && validLesson(request.resource.data);
       }
 
-      // دفتر التكوين والندوات
       // دفتر التحضير: مذكرات الدروس بمراحلها الثلاث
       match /preps/{prepId} {
         function validPhase(p) {
@@ -277,7 +287,7 @@ service cloud.firestore {
             && d.updatedAt == request.time;
         }
         allow read, delete: if isOwner(uid);
-        allow create, update: if isOwner(uid) && validPrep(request.resource.data);
+        allow create, update: if isOwner(uid) && canUse(uid) && validPrep(request.resource.data);
       }
 
       // بطاقة الحالة الشخصية والمهنية: بيانات خاصة لا يقرؤها إلا صاحبها
@@ -294,7 +304,7 @@ service cloud.firestore {
             && d.updatedAt == request.time;
         }
         allow read: if isOwner(uid) && docId == 'card';
-        allow create, update: if isOwner(uid) && validCard(request.resource.data);
+        allow create, update: if isOwner(uid) && canUse(uid) && validCard(request.resource.data);
         allow delete: if isOwner(uid);
       }
 
@@ -309,7 +319,7 @@ service cloud.firestore {
             && d.updatedAt == request.time;
         }
         allow read, delete: if isOwner(uid);
-        allow create, update: if isOwner(uid) && validGrades(request.resource.data);
+        allow create, update: if isOwner(uid) && canUse(uid) && validGrades(request.resource.data);
       }
 
       // التوزيع السنوي لكل قسم ومادة
@@ -323,7 +333,7 @@ service cloud.firestore {
             && d.updatedAt == request.time;
         }
         allow read, delete: if isOwner(uid);
-        allow create, update: if isOwner(uid) && validProgression(request.resource.data);
+        allow create, update: if isOwner(uid) && canUse(uid) && validProgression(request.resource.data);
       }
 
       // إشعارات شخصية (تفعيل الاشتراك…) يكتبها الخادم وحده
@@ -439,6 +449,40 @@ service cloud.firestore {
     match /contentCategories/{doc} {
       allow read: if true;
       allow write: if isEditor();
+    }
+
+    // ── المذكرات الجاهزة (المنهاج) بثلاث طبقات ──
+    // curriculum: فهرس العناوين لكل مستوى ومادة — يراه كل مسجَّل (ليعرف ما ينتظره).
+    // lessonSummaries: الميدان والموضوع والأهداف والمؤشرات — للتجربة والمشتركين.
+    // lessonBodies: سير الحصة كاملًا — للمشتركين، وللتجربة في النماذج المختارة (sample) فقط.
+    match /curriculum/{id} {
+      allow read: if signedIn();
+      allow write: if isEditor();
+    }
+    match /lessonSummaries/{id} {
+      allow read: if trialAccess();
+      allow write: if isEditor();
+    }
+    match /lessonBodies/{id} {
+      allow read: if fullAccess() || (trialAccess() && resource.data.sample == true);
+      allow write: if isEditor();
+    }
+
+    // ── رأي الأستاذ في المنصة (وثيقة واحدة لكل أستاذ تُحدَّث) — يقرؤها الأدمن ──
+    match /feedback/{uid} {
+      function validFeedback(d) {
+        return d.keys().hasOnly(['rating', 'reasons', 'comment', 'context', 'locale', 'createdAt', 'updatedAt'])
+          && d.rating is int && d.rating >= 1 && d.rating <= 5
+          && d.reasons is list && d.reasons.size() <= 8
+          && isShortString(d.comment, 1000)
+          && d.context in ['trialEnd', 'trial', 'general']
+          && d.locale in ['ar', 'fr']
+          && d.updatedAt == request.time;
+      }
+      allow read: if isOwner(uid) || isAdmin();
+      allow create: if isOwner(uid) && request.resource.data.createdAt == request.time && validFeedback(request.resource.data);
+      allow update: if isOwner(uid) && request.resource.data.createdAt == resource.data.createdAt && validFeedback(request.resource.data);
+      allow delete: if false;
     }
 
     // ── الاشتراك والمال: قراءة للمالك، والكتابة للخادم وحده ──

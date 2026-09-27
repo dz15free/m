@@ -2,12 +2,17 @@ import { errorResponse, HttpError, requireUser } from "@/lib/server/auth";
 import { adminCommit, adminGet, newId } from "@/lib/server/firestore-admin";
 import { effectivePlan, renewEnd, type Entitlement, type Plan } from "@/shared/billing/plans";
 
-/* بدء التجربة المجانية: مرة واحدة لكل حساب، ببريد مؤكّد، ومدتها من إعدادات الأدمن.
+/* بدء التجربة المجانية (تلقائيًا عند أول دخول بعد الإعداد): مرة واحدة لكل حساب، ببريد مؤكّد،
+   ولأساتذة المرحلة المتاحة فقط (المتوسط والثانوي «قريبًا»: لا تُستهلك تجربتهم قبل جاهزية محتواهم).
    الكتابة ذرّية بشرط مسبق على نسخة وثيقة الاشتراك: طلبان متزامنان لا يمنحان تجربتين. */
 export async function POST(req: Request) {
   try {
     const user = await requireUser(req);
     if (!user.emailVerified) throw new HttpError(403, "email not verified");
+
+    const teacher = (await adminGet(`teachers/${user.uid}`))?.data;
+    if (!teacher) throw new HttpError(409, "onboarding required");
+    if (teacher.stage !== "primary") throw new HttpError(409, "stage unavailable");
 
     const config = (await adminGet("config/app"))?.data ?? {};
     const days = Number(config.trialDays);

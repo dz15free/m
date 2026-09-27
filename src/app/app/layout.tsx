@@ -11,6 +11,7 @@ import { SupportFab } from "@/features/support/support-fab";
 import { SiteBanner } from "@/features/pwa/site-banner";
 import { ConnectionStatus } from "@/features/pwa/connection-status";
 import { StageGate } from "@/features/onboarding/stage-gate";
+import { AccessGate } from "@/features/billing/access-gate";
 
 /* مساحة الأستاذ: لا تُعرض إلا بعد تسجيل الدخول.
    الحماية الحقيقية للبيانات في قواعد Firestore والخادم، لا في هذا التخطيط. */
@@ -40,7 +41,9 @@ export default async function AppLayout({ children }: { children: React.ReactNod
               >
                 <VerifyEmailBanner />
                 <BillingBanner />
-                <StageGate>{children}</StageGate>
+                <StageGate>
+                  <AccessGate>{children}</AccessGate>
+                </StageGate>
               </main>
             </div>
             <BottomNav />

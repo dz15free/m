@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { effectivePlan, renewEnd } from "./plans.ts";
+import { accessOf, effectivePlan, renewEnd } from "./plans.ts";
 
 const DAY = 86_400_000;
 const now = 1_000 * DAY;
@@ -33,4 +33,11 @@ test("الصافي، شهر الإيرادات، ومرجع الدفع", async (
   assert.equal(netOf(2500, 100, true), 2500);
   assert.equal(revenueMonth(Date.parse("2026-09-30T23:30:00Z")), "2026-10"); // منتصف الليل في الجزائر
   assert.match(payRef(new Uint8Array([0, 1, 2, 3, 250])), /^P-[2-9A-Z]{5}$/);
+});
+
+test("مستوى الوصول: مشترك كامل، تجربة جزئية، وما عداهما مقفل", () => {
+  assert.equal(accessOf(effectivePlan(premium, null, now)), "full");
+  assert.equal(accessOf(effectivePlan({ ...premium, status: "trial" }, null, now)), "trial");
+  assert.equal(accessOf(effectivePlan({ ...premium, currentPeriodEnd: now - 1 }, null, now)), "locked");
+  assert.equal(accessOf(effectivePlan(null, null, now)), "locked");
 });

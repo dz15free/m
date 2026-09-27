@@ -141,6 +141,16 @@ export async function listAudit(): Promise<AuditRow[]> {
   return snap.docs.map((d) => ({ ...(d.data() as Omit<AuditRow, "id" | "at">), id: d.id, action: String(d.data().action ?? ""), at: ms(d.data().at) }));
 }
 
+export type FeedbackRow = { uid: string; rating: number; reasons: string[]; comment: string; context: string; at: number };
+
+export async function listFeedback(): Promise<FeedbackRow[]> {
+  const snap = await getDocs(query(collection(db(), "feedback"), orderBy("updatedAt", "desc"), limit(200)));
+  return snap.docs.map((d) => {
+    const x = d.data();
+    return { uid: d.id, rating: Number(x.rating) || 0, reasons: Array.isArray(x.reasons) ? x.reasons : [], comment: String(x.comment ?? ""), context: String(x.context ?? ""), at: ms(x.updatedAt) };
+  });
+}
+
 export async function emailsOf(uids: string[]): Promise<Map<string, string>> {
   const unique = [...new Set(uids)].slice(0, 100);
   const snaps = await Promise.all(unique.map((u) => getDoc(doc(db(), "users", u)).catch(() => null)));

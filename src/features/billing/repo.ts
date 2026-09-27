@@ -5,7 +5,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { getFirebase } from "@/lib/firebase/client";
 import { authedFetch } from "@/lib/firebase/api";
 import { useUid } from "@/features/classes/hooks";
-import { effectivePlan, type AppConfig, type Entitlement, type Plan } from "@/shared/billing/plans";
+import { accessOf, effectivePlan, type AppConfig, type Entitlement, type Plan } from "@/shared/billing/plans";
 
 const db = () => getFirebase().db;
 const ms = (v: unknown) => (v instanceof Timestamp ? v.toMillis() : typeof v === "number" ? v : null);
@@ -41,6 +41,7 @@ export async function startTrial(): Promise<void> {
   if (error === "trial used") throw new TrialError("used");
   if (error === "email not verified") throw new TrialError("unverified");
   if (error === "already subscribed") throw new TrialError("subscribed");
+  if (error === "stage unavailable" || error === "onboarding required") throw new TrialError("unavailable");
   throw new TrialError(res.status === 503 ? "unavailable" : "network");
 }
 
@@ -56,7 +57,7 @@ export function useBilling() {
   const trialPlan = plans.data?.find((p) => p.id === (config.data?.trialPlanId ?? "premium"));
   const trialDays = config.data?.trialDays ?? 0;
   const trialAvailable = ready && !effective.trialUsed && effective.status === "free" && trialDays > 0 && !!trialPlan?.trialEligible;
-  return { ready, effective, plans: plans.data ?? [], trialDays, trialAvailable, entitlement: ent.data ?? null };
+  return { ready, effective, access: accessOf(effective), plans: plans.data ?? [], trialDays, trialAvailable, entitlement: ent.data ?? null };
 }
 
 export function useRefreshBilling() {

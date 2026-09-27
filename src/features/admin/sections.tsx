@@ -3,14 +3,15 @@
 import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Download, LoaderCircle, Send, Trash2 } from "lucide-react";
+import { Download, LoaderCircle, Send, Star, Trash2 } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field, SelectField } from "@/components/ui/field";
 import { useUid } from "@/features/classes/hooks";
 import { deleteAnnouncement, listAnnouncements, publishAnnouncement, type Kind } from "@/features/notifications/repo";
 import { cn } from "@/lib/utils/cn";
-import { emailsOf, listAudit, listOrders, listPayments, peopleOf } from "./repo";
+import { FEEDBACK_REASONS } from "@/features/billing/feedback";
+import { emailsOf, listAudit, listFeedback, listOrders, listPayments, peopleOf } from "./repo";
 
 const fmtDate = (locale: "ar" | "fr", at: number) =>
   at ? new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ", { dateStyle: "medium", timeStyle: "short" }).format(at) : "—";
@@ -264,6 +265,69 @@ export function AdminAudit() {
             </li>
           ))}
         </ul>
+      )}
+    </div>
+  );
+}
+
+// ── آراء الأساتذة ──
+
+export function AdminFeedback() {
+  const t = useTranslations("admin.feedback");
+  const tf = useTranslations("feedback");
+  const ta = useTranslations("admin");
+  const locale = useLocale() as "ar" | "fr";
+  const list = useQuery({ queryKey: ["adminFeedback"], queryFn: listFeedback });
+  const people = useQuery({
+    queryKey: ["adminFeedbackPeople", list.data?.length],
+    queryFn: () => peopleOf(list.data!.map((r) => r.uid)),
+    enabled: !!list.data?.length,
+  });
+  const rows = list.data ?? [];
+  const avg = rows.length ? rows.reduce((a, r) => a + r.rating, 0) / rows.length : 0;
+  const counts = FEEDBACK_REASONS.map((k) => [k, rows.filter((r) => r.reasons.includes(k)).length] as const).filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1]);
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl font-bold">{ta("nav.feedback")}</h1>
+      {!list.data ? (
+        <Loading />
+      ) : !rows.length ? (
+        <Card className="py-8 text-center text-muted">{t("empty")}</Card>
+      ) : (
+        <>
+          <Card className="space-y-3">
+            <p className="flex items-center gap-2 text-lg font-bold">
+              <Star aria-hidden className="size-5 fill-amber-400 text-amber-400" />
+              {t("average", { avg: avg.toFixed(1), n: rows.length })}
+            </p>
+            {counts.length > 0 && (
+              <ul className="flex flex-wrap gap-2 text-sm">
+                {counts.map(([k, n]) => (
+                  <li key={k} className="rounded-full bg-canvas px-3 py-1">{tf(`reasons.${k}`)} · <b className="tabular-nums">{n}</b></li>
+                ))}
+              </ul>
+            )}
+          </Card>
+          <ul className="divide-y divide-line overflow-hidden rounded-card bg-surface shadow-card">
+            {rows.map((r) => (
+              <li key={r.uid} className="space-y-1 px-4 py-3 text-sm">
+                <p className="flex flex-wrap items-center gap-2">
+                  <span className="font-semibold text-amber-600" aria-label={tf("stars", { n: r.rating })}>{"★".repeat(r.rating)}{"☆".repeat(5 - r.rating)}</span>
+                  <span className="font-medium">{people.data?.get(r.uid)?.name || ""}</span>
+                  <span className="text-muted" dir="ltr">{people.data?.get(r.uid)?.email ?? ""}</span>
+                  <span className="rounded-full bg-brand-50 px-2 py-0.5 text-xs text-brand-900">{t(`context.${r.context === "trialEnd" || r.context === "trial" ? r.context : "general"}`)}</span>
+                  <span className="text-muted">{fmtDate(locale, r.at)}</span>
+                </p>
+                {r.reasons.length > 0 && (
+                  <p className="text-muted">
+                    {r.reasons.filter((k) => (FEEDBACK_REASONS as readonly string[]).includes(k)).map((k) => tf(`reasons.${k}` as "reasons.price")).join(" · ")}
+                  </p>
+                )}
+                {r.comment && <p dir="auto" className="whitespace-pre-line">{r.comment}</p>}
+              </li>
+            ))}
+          </ul>
+        </>
       )}
     </div>
   );

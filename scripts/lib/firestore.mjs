@@ -58,3 +58,11 @@ export async function putDoc(path, data) {
   });
   if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text()}`);
 }
+
+/** قراءة وثيقة (بصيغة REST الخام) أو null. */
+export async function readDoc(path) {
+  const res = await fetch(`${base}/${path}`, { headers: { Authorization: authHeader } });
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text()}`);
+  return (await res.json()).fields ?? {};
+}

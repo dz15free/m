@@ -35,7 +35,18 @@ before(async () => {
   });
 });
 
-beforeEach(() => env.clearFirestore());
+// الأدوات تُكتب أثناء تجربة/اشتراك ساريَين: كل اختبار يبدأ والأستاذان في التجربة (حد الأقسام = المجاني)
+const setEnt = (uid, over = {}) =>
+  env.withSecurityRulesDisabled((ctx) =>
+    setDoc(doc(ctx.firestore(), "entitlements", uid), {
+      planId: "premium", status: "trial", currentPeriodEnd: Timestamp.fromMillis(Date.now() + 7 * 86_400_000), limits: { maxClasses: 2 }, ...over,
+    }),
+  );
+beforeEach(async () => {
+  await env.clearFirestore();
+  await setEnt(A.uid);
+  await setEnt(B.uid);
+});
 after(() => env.cleanup());
 
 describe("users/{uid}", () => {
@@ -377,7 +388,7 @@ describe("حدود الخطة", () => {
   const past = () => Timestamp.fromMillis(Date.now() - 86_400_000);
   const asAdmin = (fn) => env.withSecurityRulesDisabled((ctx) => fn(ctx.firestore()));
 
-  it("المجاني: قسمان افتراضيًا، أو ما تحدّده plans/free", async () => {
+  it("الحد الأدنى: قسمان افتراضيًا، أو ما تحدّده plans/free", async () => {
     const db = dbAs(A);
     await assertSucceeds(createClass(db, "c1", ["c1"]));
     await assertSucceeds(createClass(db, "c2", ["c1", "c2"]));
@@ -393,9 +404,9 @@ describe("حدود الخطة", () => {
     await assertSucceeds(createClass(db, "c5", ["c1", "c2", "c3", "c4", "c5"]));
     await asAdmin((f) => setDoc(doc(f, "entitlements", A.uid), ent(past())));
     await assertFails(createClass(db, "c6", ["c1", "c2", "c3", "c4", "c5", "c6"]));
-    // بعد الانتهاء: الأقسام الموجودة تبقى تعمل، والنقصان مسموح
-    await assertSucceeds(updateDoc(doc(db, "teachers", A.uid, "classes", "c5"), { displayName: "X", updatedAt: serverTimestamp() }));
-    await assertSucceeds(setDoc(doc(db, "teachers", A.uid, "yearIndex", "2026-2027"), { classIds: ["c1", "c2", "c3", "c5"], updatedAt: serverTimestamp() }));
+    // بعد الانتهاء: الأدوات مقفلة للكتابة، والبيانات تبقى مقروءة لصاحبها ولا تُحذف
+    await assertFails(updateDoc(doc(db, "teachers", A.uid, "classes", "c5"), { displayName: "X", updatedAt: serverTimestamp() }));
+    await assertSucceeds(getDoc(doc(db, "teachers", A.uid, "classes", "c5")));
   });
 
   it("قسم نشط أُخرج من الفهرس يصبح للقراءة فقط، والمؤرشف مسموح", async () => {
@@ -409,6 +420,68 @@ describe("حدود الخطة", () => {
   it("أحد لا يكتب اشتراكه بنفسه", async () => {
     await assertFails(setDoc(doc(dbAs(A), "entitlements", A.uid), { status: "active" }));
     await assertFails(setDoc(doc(dbAs(A), "yearIndex", "x"), { classIds: [] }));
+  });
+});
+
+describe("التجربة والقفل", () => {
+  const lesson = {
+    date: "2026-10-04", classId: "c1", subjectId: "ar", start: "08:00", end: "09:00", activity: "", unit: "", title: "عائلتي",
+    objective: "", materials: "", notes: "", status: "done", updatedAt: serverTimestamp(),
+  };
+  const lessonRef = (db) => doc(db, "teachers", A.uid, "lessons", "2026-10-04_c1_ar_0800");
+
+  it("بلا تجربة ولا اشتراك: الكتابة مقفلة، والقراءة والحذف لصاحب البيانات", async () => {
+    await assertSucceeds(setDoc(lessonRef(dbAs(A)), lesson));
+    await env.withSecurityRulesDisabled((ctx) => deleteDoc(doc(ctx.firestore(), "entitlements", A.uid)));
+    await assertFails(setDoc(lessonRef(dbAs(A)), { ...lesson, title: "المدرسة" }));
+    await assertSucceeds(getDoc(lessonRef(dbAs(A))));
+    await assertSucceeds(deleteDoc(lessonRef(dbAs(A))));
+    // الملف المهني والإعدادات تبقى قابلة للتعديل (لا تتبع القفل)
+    await assertSucceeds(setDoc(doc(dbAs(A), "users", A.uid), newUser(A)));
+  });
+
+  it("الاشتراك المدفوع يفتح الكتابة كالتجربة", async () => {
+    await setEnt(A.uid, { status: "active" });
+    await assertSucceeds(setDoc(lessonRef(dbAs(A)), lesson));
+    await setEnt(A.uid, { status: "active", currentPeriodEnd: Timestamp.fromMillis(Date.now() - 1000) });
+    await assertFails(setDoc(lessonRef(dbAs(A)), lesson));
+  });
+
+  it("المذكرات الجاهزة: الفهرس للجميع، الملخّص للتجربة، والكامل للمشترك أو للنماذج", async () => {
+    await env.withSecurityRulesDisabled(async (ctx) => {
+      const f = ctx.firestore();
+      await setDoc(doc(f, "curriculum", "1AP_ar"), { entries: [] });
+      await setDoc(doc(f, "lessonSummaries", "l1"), { topic: "عائلتي" });
+      await setDoc(doc(f, "lessonBodies", "l1"), { sample: true });
+      await setDoc(doc(f, "lessonBodies", "l2"), { sample: false });
+    });
+    const trial = dbAs(A);
+    await assertSucceeds(getDoc(doc(trial, "curriculum", "1AP_ar")));
+    await assertSucceeds(getDoc(doc(trial, "lessonSummaries", "l1")));
+    await assertSucceeds(getDoc(doc(trial, "lessonBodies", "l1")));
+    await assertFails(getDoc(doc(trial, "lessonBodies", "l2")));
+    await assertFails(setDoc(doc(trial, "lessonBodies", "l3"), { sample: true }));
+
+    await setEnt(A.uid, { status: "active" });
+    await assertSucceeds(getDoc(doc(dbAs(A), "lessonBodies", "l2")));
+
+    await env.withSecurityRulesDisabled((ctx) => deleteDoc(doc(ctx.firestore(), "entitlements", A.uid)));
+    await assertSucceeds(getDoc(doc(dbAs(A), "curriculum", "1AP_ar")));
+    await assertFails(getDoc(doc(dbAs(A), "lessonSummaries", "l1")));
+    await assertFails(getDoc(doc(dbAs(A), "lessonBodies", "l1")));
+    await assertFails(getDoc(doc(anon(), "curriculum", "1AP_ar")));
+    await assertSucceeds(getDoc(doc(dbAs(B, { contentEditor: true }), "lessonBodies", "l2")));
+  });
+
+  it("رأي الأستاذ: يكتبه صاحبه بصيغة صحيحة، ويقرؤه الأدمن وحده", async () => {
+    const fb = { rating: 4, reasons: ["price"], comment: "جيدة", context: "trialEnd", locale: "ar", createdAt: serverTimestamp(), updatedAt: serverTimestamp() };
+    const ref = (db) => doc(db, "feedback", A.uid);
+    await assertSucceeds(setDoc(ref(dbAs(A)), fb));
+    await assertFails(setDoc(ref(dbAs(A)), { ...fb, rating: 6 }));
+    await assertFails(setDoc(doc(dbAs(B), "feedback", A.uid), fb));
+    await assertFails(getDoc(ref(dbAs(B))));
+    await assertSucceeds(getDoc(ref(dbAs(B, { admin: true }))));
+    await assertFails(deleteDoc(ref(dbAs(A))));
   });
 });
 

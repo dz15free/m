@@ -4,7 +4,7 @@
 export type LegalSection = { h: string; p: string[] };
 export type LegalDoc = { title: string; intro: string; sections: LegalSection[] };
 
-export const LEGAL_UPDATED = "2026-09-26";
+export const LEGAL_UPDATED = "2026-09-27";
 
 export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
   ar: {
@@ -186,8 +186,8 @@ export const TERMS: Record<"ar" | "fr", LegalDoc> = {
       {
         h: "4. الاشتراك والدفع",
         p: [
-          "الخطة المجانية تتيح عددًا محدودًا من الأقسام وميزات أساسية. خطة Premium تفتح كل الميزات ومحتوى المكتبة المدفوع، بالسعر والمدة المعروضين في صفحة الاشتراك وقت الدفع.",
-          "الدفع يتم عبر Chargily Pay (البطاقة الذهبية أو CIB) أو بالاتفاق مع الإدارة عبر زر التواصل. لا يوجد تجديد تلقائي: عند انتهاء المدة تعود إلى الخطة المجانية دون حذف أي بيانات، ويمكنك التجديد متى شئت.",
+          "عند إنشاء الحساب تبدأ تجربة مجانية لمدة 7 أيام (بعد تأكيد البريد) تتيح كل الأدوات مع ملخّصات المحتوى ونماذج مختارة منه كاملة. بعد انتهائها تُقفل الأدوات والمحتوى حتى الاشتراك، بالسعر والمدة المعروضين في صفحة الاشتراك وقت الدفع.",
+          "الدفع يتم عبر Chargily Pay (البطاقة الذهبية أو CIB) أو بالاتفاق مع الإدارة عبر زر التواصل. لا يوجد تجديد تلقائي: عند انتهاء المدة تُقفل الأدوات دون حذف أي بيانات، وتعود كما هي فور التجديد.",
           "التجربة المجانية تُمنح مرة واحدة لكل حساب.",
           "الاسترجاع: يمكنك طلب استرجاع كامل المبلغ خلال 7 أيام من تاريخ الدفع، عبر زر «تواصل مع الإدارة» أو على البريد baczonedz@gmail.com، ويُلغى الاشتراك عند الاسترجاع. بعد 7 أيام لا يُسترجع المبلغ، إلا إذا منعك خلل تقني من جهتنا من استعمال الخدمة.",
         ],
@@ -254,8 +254,8 @@ export const TERMS: Record<"ar" | "fr", LegalDoc> = {
       {
         h: "4. Abonnement et paiement",
         p: [
-          "La formule gratuite permet un nombre limité de classes et les fonctions de base. Premium débloque toutes les fonctions et les contenus payants, au prix et pour la durée affichés au moment du paiement.",
-          "Paiement via Chargily Pay (carte Edahabia ou CIB) ou par accord avec l'administration via le bouton de contact. Pas de renouvellement automatique : à l'échéance vous repassez en gratuit sans perte de données, et pouvez renouveler à tout moment.",
+          "À l'inscription, un essai gratuit de 7 jours démarre (après confirmation de l'e-mail) : tous les outils, avec les résumés des contenus et une sélection complète. Ensuite, outils et contenus sont verrouillés jusqu'à l'abonnement, au prix et pour la durée affichés au moment du paiement.",
+          "Paiement via Chargily Pay (carte Edahabia ou CIB) ou par accord avec l'administration via le bouton de contact. Pas de renouvellement automatique : à l'échéance les outils sont verrouillés sans aucune perte de données, et tout revient dès le renouvellement.",
           "L'essai gratuit est accordé une seule fois par compte.",
           "Remboursement : vous pouvez demander le remboursement intégral dans les 7 jours suivant le paiement, via le bouton « Contacter l'administration » ou à baczonedz@gmail.com ; l'abonnement est alors annulé. Au-delà de 7 jours, aucun remboursement, sauf si un dysfonctionnement technique de notre fait vous a empêché d'utiliser le service.",
         ],

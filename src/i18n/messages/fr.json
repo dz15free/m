@@ -31,10 +31,10 @@
   },
   "landing": {
     "login": "Se connecter",
-    "start": "Commencer gratuitement",
+    "start": "Essai gratuit de 7 jours",
     "heroTitle": "Tout ce dont l'enseignant a besoin, au même endroit",
     "heroSubtitle": "Saisissez vos données une seule fois… la plateforme fait le reste.",
-    "heroNote": "Gratuit pour toujours, avec un essai gratuit de l'offre Premium.",
+    "heroNote": "7 jours d'essai gratuit sans carte bancaire, puis un abonnement annuel abordable.",
     "featuresTitle": "Votre bureau quotidien, pas un simple site de fichiers",
     "features": {
       "import": {
@@ -76,7 +76,7 @@
     "loginTitle": "Connexion",
     "loginSubtitle": "Heureux de vous retrouver dans votre bureau numérique.",
     "registerTitle": "Créer un compte",
-    "registerSubtitle": "Gratuit pour toujours. Moins d'une minute.",
+    "registerSubtitle": "Commencez votre essai gratuit de 7 jours. L'inscription prend moins d'une minute.",
     "resetTitle": "Mot de passe oublié",
     "resetSubtitle": "Saisissez votre e-mail, nous vous enverrons un lien pour choisir un nouveau mot de passe.",
     "google": "Continuer avec Google",
@@ -91,7 +91,7 @@
     "forgot": "Mot de passe oublié ?",
     "noAccount": "Pas encore de compte ?",
     "hasAccount": "Déjà un compte ?",
-    "toRegister": "Créez un compte gratuit",
+    "toRegister": "Créez votre compte et essayez gratuitement",
     "toLogin": "Connectez-vous",
     "backToLogin": "Retour à la connexion",
     "resetSent": "Si cet e-mail est inscrit, vous recevrez un message dans quelques minutes. Pensez à vérifier les spams.",
@@ -786,8 +786,8 @@
     "allLevels": "Tous les niveaux",
     "allSubjects": "Toutes les matières",
     "allTypes": "Tout",
-    "free": "Gratuit",
-    "premium": "Premium",
+    "free": "Inclus dans l'essai",
+    "premium": "Abonnés",
     "results": "{n, plural, =0 {Aucun résultat} one {# résultat} other {# résultats}}",
     "empty": "La bibliothèque se remplit de nouveaux contenus. Revenez bientôt !",
     "noResults": "Aucun résultat. Essayez un autre mot ou retirez des filtres.",
@@ -814,9 +814,9 @@
     "opening": "Ouverture…",
     "notFound": "Ce contenu n'est pas disponible.",
     "back": "Bibliothèque",
-    "premiumTitle": "Contenu Premium",
-    "premiumBody": "Ce fichier est réservé aux abonnés Premium. L'aperçu et la recherche restent gratuits.",
-    "upgrade": "Découvrir Premium",
+    "premiumTitle": "Contenu réservé aux abonnés",
+    "premiumBody": "Pendant l'essai, vous parcourez toute la bibliothèque et ouvrez les contenus marqués « Inclus dans l'essai ». Abonnez-vous pour tout ouvrir.",
+    "upgrade": "S'abonner",
     "fileError": "Impossible d'ouvrir le fichier. Vérifiez la connexion et réessayez.",
     "author": "Réalisé par",
     "manage": "Gérer le contenu"
@@ -1015,43 +1015,27 @@
   },
   "billing": {
     "title": "Abonnement",
-    "subtitle": "Votre formule et ce qu'elle permet. Vos données vous appartiennent et restent toujours conservées.",
+    "subtitle": "Votre formule et ce qu'elle permet. Vos données vous appartiennent et ne sont jamais supprimées.",
     "current": "Votre formule",
     "status": {
-      "free": "Gratuit",
+      "free": "Non abonné",
       "trial": "Essai gratuit",
       "active": "Abonné"
     },
     "endsOn": "Se termine le {date}",
     "daysLeft": "{n, plural, one {# jour restant} other {# jours restants}}",
     "classesLimit": "{n, plural, one {# classe} other {# classes}}",
-    "contentPremium": "Toute la bibliothèque (Premium)",
-    "contentFree": "Contenu gratuit de la bibliothèque",
-    "trialTitle": "Essayez Premium gratuitement pendant {n, plural, one {# jour} other {# jours}}",
-    "trialBody": "Plus de classes, toute la bibliothèque et toutes les fonctions. Sans carte, sans renouvellement automatique.",
-    "trialCta": "Commencer l'essai gratuit",
-    "trialStarted": "Votre essai a commencé ! Profitez de toutes les fonctions.",
-    "later": "Plus tard",
-    "trialErrors": {
-      "used": "Vous avez déjà utilisé l'essai gratuit.",
-      "unverified": "Confirmez d'abord votre adresse e-mail pour activer l'essai.",
-      "unavailable": "L'essai n'est pas disponible pour le moment.",
-      "subscribed": "Vous avez déjà un abonnement actif.",
-      "network": "Connexion impossible. Réessayez."
-    },
     "plans": "Formules",
     "perPeriod": "{price} DA / {days, plural, =365 {an} =30 {mois} other {# jours}}",
-    "freeForever": "Gratuit pour toujours",
     "yourPlan": "Votre formule",
     "subscribe": "S'abonner",
     "expiring": "Votre abonnement se termine dans {n, plural, one {# jour} other {# jours}}.",
-    "expired": "Votre abonnement est terminé — vos données et vos classes restent intactes.",
     "renew": "Renouveler",
     "limitTitle": "Limite de votre formule atteinte ({n})",
-    "limitBody": "Vos classes actuelles restent pleinement fonctionnelles. Pour en ajouter, essayez Premium ou abonnez-vous.",
+    "limitBody": "Vos classes actuelles continuent de fonctionner. Pour en ajouter, consultez les formules.",
     "seePlans": "Voir les formules",
     "slots": "{used} sur {max} classes",
-    "guarantee": "À la fin d'un abonnement rien n'est supprimé : classes, élèves et cahiers restent ; seules la création au-delà des limites gratuites et le contenu payant sont bloqués.",
+    "guarantee": "À la fin de l'essai ou de l'abonnement rien n'est supprimé : classes, élèves et cahiers restent conservés et reviennent dès l'abonnement.",
     "checkout": {
       "title": "S'abonner à {plan}",
       "method": "Moyen de paiement",
@@ -1088,7 +1072,19 @@
       "toBilling": "Page Abonnement",
       "retry": "Réessayer",
       "continue": "Continuer"
-    }
+    },
+    "accessNote": {
+      "full": "Tous les outils, les fiches et les contenus complets.",
+      "trial": "Tous les outils, avec les résumés de toutes les fiches et une sélection complète. L'abonnement ouvre tout.",
+      "locked": "Les outils et les contenus sont verrouillés. Vos données sont conservées et reviennent dès l'abonnement."
+    },
+    "includes": {
+      "notebook": "Cahier journal rempli automatiquement, prêt à imprimer",
+      "lessons": "Toutes les fiches de préparation complètes",
+      "tools": "Présences, notes, documents et tous les outils"
+    },
+    "trialLeft": "Essai gratuit : {n, plural, =0 {dernier jour} one {# jour restant} other {# jours restants}}.",
+    "subscribeNow": "S'abonner"
   },
   "support": {
     "fab": "Contacter l'administration",
@@ -1154,7 +1150,8 @@
       "notifications": "Notifications",
       "settings": "Bandeau et contact",
       "support": "Messages",
-      "audit": "Journal"
+      "audit": "Journal",
+      "feedback": "Avis des enseignants"
     },
     "dash": {
       "teachers": "Enseignants inscrits",
@@ -1323,6 +1320,15 @@
         "admin_revoke": "Annulation",
         "admin_roles": "Modification des rôles"
       }
+    },
+    "feedback": {
+      "empty": "Aucun avis pour le moment.",
+      "average": "Note moyenne {avg}/5 ({n, plural, one {# avis} other {# avis}})",
+      "context": {
+        "trialEnd": "Après l'essai",
+        "trial": "Pendant l'essai",
+        "general": "Général"
+      }
     }
   },
   "legal": {
@@ -1406,5 +1412,53 @@
     "contact": "Contacter l'administration",
     "settings": "Paramètres",
     "supportText": "Bonjour, j'enseigne au moyen/secondaire et j'attends les outils de mon cycle."
+  },
+  "access": {
+    "starting": "Préparation de votre essai gratuit…",
+    "startFailed": "Impossible de démarrer l'essai gratuit",
+    "retry": "Réessayer",
+    "contact": "Nous contacter",
+    "trialErrors": {
+      "used": "Vous avez déjà utilisé l'essai gratuit.",
+      "unverified": "Confirmez d'abord votre adresse e-mail.",
+      "unavailable": "L'essai n'est pas disponible pour le moment. Contactez-nous.",
+      "subscribed": "Vous avez déjà un abonnement actif.",
+      "network": "Connexion impossible. Vérifiez Internet et réessayez."
+    },
+    "verifyTitle": "Confirmez votre e-mail pour démarrer votre essai gratuit ({n, plural, one {# jour} other {# jours}})",
+    "verifyBody": "Nous avons envoyé un lien de confirmation. Ouvrez-le puis appuyez sur « J'ai confirmé » en haut : l'essai démarre aussitôt avec tous les outils.",
+    "endedTitle": "Votre essai gratuit est terminé",
+    "lockedTitle": "Votre abonnement n'est pas actif",
+    "endedBody": "Nous espérons que la plateforme vous a fait gagner du temps. Abonnez-vous pour continuer avec tous les outils et les fiches complètes :",
+    "perks": {
+      "notebook": "Le cahier journal se remplit depuis votre emploi du temps",
+      "lessons": "Toutes les fiches de préparation complètes",
+      "attendance": "Présences, notes et statistiques",
+      "documents": "Listes d'élèves et documents administratifs"
+    },
+    "subscribe": "Choisir mon abonnement",
+    "supportText": "Bonjour, mon essai est terminé et je souhaite des informations sur l'abonnement.",
+    "dataSafe": "Vos données sont conservées : classes, élèves et cahiers ne sont jamais supprimés et reviennent dès l'abonnement."
+  },
+  "feedback": {
+    "title": "Votre avis sur la plateforme",
+    "subtitle": "Votre avis nous parvient directement et nous aide à l'améliorer.",
+    "rating": "Votre note",
+    "stars": "{n, plural, one {# étoile} other {# étoiles}}",
+    "reasonsTitle": "Qu'est-ce qui décrit votre expérience ? (facultatif)",
+    "reasons": {
+      "useful": "Utile dans mon travail",
+      "saveTime": "Me fait gagner du temps",
+      "price": "Le prix",
+      "missingContent": "Il manque du contenu",
+      "hardToUse": "Difficile à utiliser",
+      "noTime": "Pas eu le temps d'essayer",
+      "otherLevel": "Mon niveau n'est pas disponible"
+    },
+    "comment": "Remarque ou suggestion",
+    "commentHint": "Qu'avez-vous aimé ? Que devrions-nous ajouter ou améliorer ?",
+    "send": "Envoyer mon avis",
+    "thanks": "Merci ! Votre avis a bien été reçu.",
+    "error": "Envoi impossible. Réessayez."
   }
 }
