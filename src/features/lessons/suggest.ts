@@ -8,7 +8,7 @@ import type { ClassDoc } from "@/features/classes/repo";
 import { defaultStart, schoolWeekOf } from "@/features/planning/logic";
 import type { Calendar, Slot } from "@/features/schedule/logic";
 import type { LessonEntry } from "@/features/logbook/logic";
-import { curriculumId, curriculumWeeks, suggestForWeek, type Curriculum, type CurriculumEntry, type LessonSummary } from "./logic";
+import { curriculumId, suggestForWeek, weeksOf, type Curriculum, type CurriculumEntry, type LessonSummary } from "./logic";
 
 export type Suggestion = {
   entry: CurriculumEntry;
@@ -41,7 +41,7 @@ export function suggestionToEntry(s: Suggestion, base: LessonEntry): LessonEntry
     title: s.entry.t,
     objective: objectives.join(" ▪ ").slice(0, 300),
     materials: (s.summary?.materials ?? "").slice(0, 200),
-    seq: `${s.entry.s}${seg ? ` — ${seg}` : ""}`.slice(0, 80),
+    seq: (/^(المقطع|الفصل)/.test(seg) ? seg : `${s.entry.s}${seg ? ` — ${seg}` : ""}`).slice(0, 80),
     week: String(day ? Math.ceil(s.entry.u / 5) : s.entry.u),
     session: String(day ? ((s.entry.u - 1) % 5) + 1 : s.sessionNo),
     ref: s.entry.id,
@@ -90,7 +90,7 @@ export function useNotebookSuggestions(args: {
     groups.set(gk, g);
   }
   for (const g of groups.values()) {
-    const weeks = curriculumWeeks(g.cur.entries);
+    const weeks = weeksOf(g.cur);
     const map = suggestForWeek(weeks, g.week, g.refs, args.calendar.schoolDays);
     const order = [...g.refs].sort((a, b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start));
     order.forEach((ref, i) => {

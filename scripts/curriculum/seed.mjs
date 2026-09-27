@@ -72,6 +72,7 @@ await putDoc(`curriculum/${id}`, {
   subject: data.subject,
   title: data.title,
   source,
+  ...(data.weekMode ? { weekMode: data.weekMode } : {}),
   segments: Object.entries(data.segments).map(([n, title]) => ({ n: Number(n), title })),
   entries: data.lessons.map((l) => ({
     id: lessonId(l),
@@ -89,6 +90,31 @@ await putDoc(`curriculum/${id}`, {
   updatedAt: now,
 });
 console.log(`✓ curriculum/${id} (${data.lessons.length} حصة، ${samples.size} نماذج للتجربة)`);
+
+// صور الصفحات: الصفحة نموذج للتجربة إن كانت تخص حصة نموذجية
+const blank = new Set();
+if (pdf) {
+  const pageSample = new Map();
+  for (const l of data.lessons) for (const p of pageMap.get(l.order) ?? []) pageSample.set(p, (pageSample.get(p) ?? false) || samples.has(l.order));
+  const dir = mkdtempSync(join(tmpdir(), "pages-"));
+  let k = 0;
+  for (const [page, sample] of [...pageSample].sort((a, b) => a[0] - b[0])) {
+    const base = join(dir, `p${page}`);
+    execFileSync("pdftoppm", ["-f", String(page), "-l", String(page), "-r", "110", "-jpeg", "-jpegopt", "quality=60", "-singlefile", pdf, base]);
+    const bytes = readFileSync(`${base}.jpg`);
+    // صفحة بيضاء (فاصل في الوثيقة): لا تُنشر وتُحذف من قوائم الحصص
+    if (bytes.length < 12_000) {
+      blank.add(page);
+      continue;
+    }
+    const img = bytes.toString("base64");
+    if (img.length > 900_000) throw new Error(`page ${page} too large`);
+    await putDoc(`lessonBodies/${pageId(page)}`, { curriculumId: id, sample, page, img, updatedAt: now });
+    if (++k % 20 === 0) console.log(`  … ${k} صفحة`);
+  }
+  console.log(`✓ ${k} صفحة مصوّرة`);
+}
+for (const [order, list] of pageMap) pageMap.set(order, list.filter((p) => !blank.has(p)));
 
 let n = 0;
 for (const l of data.lessons) {
@@ -122,19 +148,3 @@ for (const l of data.lessons) {
 }
 console.log(`✓ ${n} ملخّص`);
 
-// صور الصفحات: الصفحة نموذج للتجربة إن كانت تخص حصة نموذجية
-if (pdf) {
-  const pageSample = new Map();
-  for (const l of data.lessons) for (const p of pageMap.get(l.order) ?? []) pageSample.set(p, (pageSample.get(p) ?? false) || samples.has(l.order));
-  const dir = mkdtempSync(join(tmpdir(), "pages-"));
-  let k = 0;
-  for (const [page, sample] of [...pageSample].sort((a, b) => a[0] - b[0])) {
-    const base = join(dir, `p${page}`);
-    execFileSync("pdftoppm", ["-f", String(page), "-l", String(page), "-r", "110", "-jpeg", "-jpegopt", "quality=60", "-singlefile", pdf, base]);
-    const img = readFileSync(`${base}.jpg`).toString("base64");
-    if (img.length > 900_000) throw new Error(`page ${page} too large`);
-    await putDoc(`lessonBodies/${pageId(page)}`, { curriculumId: id, sample, page, img, updatedAt: now });
-    if (++k % 20 === 0) console.log(`  … ${k} صفحة`);
-  }
-  console.log(`✓ ${k} صفحة مصوّرة`);
-}

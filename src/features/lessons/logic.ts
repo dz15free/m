@@ -32,6 +32,8 @@ export type Curriculum = {
   source: { ar: string; fr: string };
   segments: { n: number; title: string }[];
   entries: CurriculumEntry[];
+  /** «absolute»: رقم الأسبوع في الحصة هو أسبوع السنة الدراسية نفسه (لا ترقيم داخل المقطع) */
+  weekMode?: "absolute";
 };
 
 export type LessonSummary = {
@@ -100,6 +102,13 @@ export function curriculumWeeks(entries: CurriculumEntry[], daysPerWeek = 5): { 
     for (const u of seg.units.filter((x) => x.kind === "week")) out.push({ kind: "week", entries: u.entries });
   }
   return out;
+}
+
+/** أسابيع المنهاج مرتبة بحيث يقابل العنصر n-1 الأسبوع الدراسي n. */
+export function weeksOf(c: Pick<Curriculum, "entries" | "weekMode">): { kind: "day" | "week"; entries: CurriculumEntry[] }[] {
+  if (c.weekMode !== "absolute") return curriculumWeeks(c.entries);
+  const max = Math.max(0, ...c.entries.map((e) => e.u));
+  return Array.from({ length: max }, (_, i) => ({ kind: "week" as const, entries: c.entries.filter((e) => e.u === i + 1).sort((a, b) => a.o - b.o) }));
 }
 
 export type SlotRef = { key: string; date: string; start: string };

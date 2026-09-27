@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { curriculumWeeks, groupCurriculum, lessonAccess, suggestForWeek, type CurriculumEntry } from "./logic.ts";
+import { weeksOf, curriculumWeeks, groupCurriculum, lessonAccess, suggestForWeek, type CurriculumEntry } from "./logic.ts";
 
 const e = (o: number, s: number, k: "week" | "day", u: number): CurriculumEntry => ({ id: `x_${o}`, o, s, k, u, a: "", d: "", t: `t${o}`, b: true, sm: false });
 
@@ -37,4 +37,9 @@ test("الاقتراح: حصص الأسبوع بترتيبها، وأيام ال
   const wk = suggestForWeek(w, 2, [{ key: "x", date: "2026-10-12", start: "10:00" }, { key: "y", date: "2026-10-11", start: "08:00" }, { key: "z", date: "2026-10-13", start: "08:00" }], [0, 1, 2, 3, 4]);
   assert.deepEqual([wk.get("y")?.o, wk.get("x")?.o, wk.get("z")], [6, 7, undefined]);
   assert.equal(suggestForWeek(w, 9, [{ key: "q", date: "2026-10-12", start: "10:00" }], [0, 1, 2, 3, 4]).size, 0);
+});
+
+test("الأسابيع المطلقة: الأسبوع n هو أسبوع السنة n حتى مع أسابيع فارغة", () => {
+  const w = weeksOf({ weekMode: "absolute", entries: [e(1, 1, "week", 1), e(2, 1, "week", 3), e(3, 2, "week", 3)] });
+  assert.deepEqual(w.map((x) => x.entries.map((y) => y.o)), [[1], [], [2, 3]]);
 });

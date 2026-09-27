@@ -12,7 +12,7 @@ import { getFirebase } from "@/lib/firebase/client";
 import { useClasses, useTaxonomy, useTeacher, useUid } from "@/features/classes/hooks";
 import type { ClassDoc } from "@/features/classes/repo";
 import { isIsoDate, shiftDate, todayInAlgiers } from "@/features/attendance/logic";
-import { curriculumWeeks, type LessonSummary } from "@/features/lessons/logic";
+import { weeksOf, type LessonSummary } from "@/features/lessons/logic";
 import { suggestionToEntry, useNotebookSuggestions, type Suggestion } from "@/features/lessons/suggest";
 import { defaultStart, schoolWeekOf } from "@/features/planning/logic";
 import { DEFAULT_CALENDAR, holidayOf, slotsForDate, type Slot } from "@/features/schedule/logic";
@@ -422,7 +422,7 @@ function LessonEditor({
   const matching = (preps.data ?? []).filter((p) => p.subjectId === slot.subjectId);
 
   // حصص أسبوع المنهاج الحالي والمجاور له (للاختيار السريع للموضوع)
-  const weeks = sug ? curriculumWeeks(sug.curriculum.entries) : [];
+  const weeks = sug ? weeksOf(sug.curriculum) : [];
   const nearby = sug ? weeks.slice(Math.max(0, sug.schoolWeek - 2), sug.schoolWeek + 1).flatMap((w) => w.entries) : [];
   const activities = [...new Set([...(cls?.subjectIds ?? []).map((s) => subjectById(taxonomy, s)?.label[locale] ?? ""), ...(sug?.curriculum.entries.map((e) => e.a) ?? [])])].filter(Boolean);
   const domains = [...new Set(sug?.curriculum.entries.map((e) => e.d) ?? [])];
