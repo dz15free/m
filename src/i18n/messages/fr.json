@@ -36,31 +36,43 @@
     "heroTitle": "Tout ce dont l'enseignant a besoin, au même endroit",
     "heroSubtitle": "Saisissez vos données une seule fois… la plateforme fait le reste.",
     "heroNote": "7 jours d'essai gratuit sans carte bancaire, puis un abonnement annuel abordable.",
-    "featuresTitle": "Votre bureau quotidien, pas un simple site de fichiers",
+    "featuresTitle": "Tout ce qu'il faut pour votre quotidien",
     "features": {
+      "notebook": {
+        "title": "Le cahier journal se remplit tout seul",
+        "body": "Depuis votre emploi du temps et les fiches : activité, domaine, thème et objectif à leur place, au modèle officiel arabe ou français."
+      },
+      "lessons": {
+        "title": "Fiches de préparation prêtes",
+        "body": "La fiche de chaque séance par séquence et semaine : thème, matériel, objectifs et déroulement, imprimables."
+      },
       "import": {
         "title": "La liste des élèves en une minute",
-        "body": "Photographiez la liste, importez un fichier Excel ou collez les noms, vérifiez, validez."
+        "body": "Depuis un fichier Excel, le PDF officiel ou une photo de la liste : vous vérifiez puis validez."
       },
       "attendance": {
-        "title": "L'appel en quelques secondes",
-        "body": "« Tous présents », puis modifiez seulement les exceptions, même hors ligne."
+        "title": "Les présences en quelques secondes",
+        "body": "« Tous présents », puis ne modifiez que les exceptions, même hors connexion."
       },
       "schedule": {
-        "title": "Vos séances préparées automatiquement",
-        "body": "Saisissez l'emploi du temps une fois, et les séances de chaque jour apparaissent."
+        "title": "L'emploi du temps une seule fois",
+        "body": "Saisi à la main ou importé depuis Excel, PDF ou photo : les séances de chaque jour sont prêtes."
       },
       "planning": {
-        "title": "Où en suis-je ?",
-        "body": "La progression annuelle est liée à ce que vous avez réalisé, classe par classe."
+        "title": "Progression annuelle : où en suis-je ?",
+        "body": "Liée à ce que vous avez fait, pour suivre chaque classe et matière semaine après semaine."
+      },
+      "grades": {
+        "title": "Carnet de notes",
+        "body": "Les notes de chaque trimestre par classe, avec moyennes et classement prêts à imprimer."
       },
       "library": {
-        "title": "Des ressources organisées",
-        "body": "Fiches, progressions, exercices, évaluations et affiches pour le primaire, en arabe et en français."
+        "title": "Bibliothèque pédagogique",
+        "body": "Progressions, exercices, évaluations et affiches pour le primaire, en arabe et en français."
       },
       "documents": {
-        "title": "Des documents prêts à imprimer",
-        "body": "Vos informations professionnelles remplissent automatiquement chaque document."
+        "title": "Documents prêts à imprimer",
+        "body": "Listes d'élèves, attestations et fiches administratives remplies automatiquement."
       }
     },
     "importTitle": "Une longue liste ?",
@@ -71,7 +83,75 @@
       "Valider"
     ],
     "ctaTitle": "Commencez l'année scolaire bien organisé",
-    "footer": "مساعد الأستاذ"
+    "footer": "مساعد الأستاذ",
+    "problemTitle": "Moins de temps dans la paperasse, plus de temps avec les élèves",
+    "problemBody": "Chaque jour, l'enseignant réécrit les mêmes informations : cahier journal, listes d'élèves, présences, notes et documents administratifs. Il cherche ses fiches dans des groupes et des sites éparpillés. La plateforme réunit tout au même endroit et relie les outils entre eux, pour ne jamais écrire deux fois la même chose.",
+    "pains": [
+      "Le cahier journal écrit à la main chaque jour",
+      "Des fiches éparpillées entre groupes et fichiers",
+      "Des listes d'élèves recopiées nom par nom",
+      "Des documents administratifs remplis à chaque fois"
+    ],
+    "spotTitle": "Le cahier journal se remplit tout seul",
+    "spotBody": "Il se remplit depuis votre emploi du temps, relié aux fiches et à la progression annuelle. Chaque matin, ouvrez le cahier du jour prêt : imprimez-le ou enregistrez-le en PDF pour la signature. Une ligne à changer ? Un geste suffit.",
+    "spotSteps": [
+      "Saisissez votre emploi du temps une fois",
+      "Chaque séance est reliée à la fiche de sa semaine",
+      "Ouvrez le cahier du jour prêt à imprimer et signer"
+    ],
+    "whyTitle": "Pourquoi nous choisir ?",
+    "why": {
+      "local": {
+        "title": "Pensé pour l'école algérienne",
+        "body": "Séquences, domaines, période préparatoire et modèles de cahiers tels que les connaissent l'enseignant, l'inspecteur et le directeur."
+      },
+      "bilingual": {
+        "title": "En arabe et en français",
+        "body": "Interface et documents dans les deux langues, et un modèle dédié pour le cahier de l'enseignant de français."
+      },
+      "mobile": {
+        "title": "Sur votre téléphone, même hors ligne",
+        "body": "Installable comme une application ; les présences s'enregistrent hors connexion puis se synchronisent."
+      },
+      "private": {
+        "title": "Les données des élèves restent privées",
+        "body": "Chaque enseignant ne voit que ses données ; l'administration n'accède ni aux noms ni aux notes des élèves."
+      },
+      "support": {
+        "title": "Un support direct",
+        "body": "Le bouton de contact dans l'application nous parvient directement, et nous vous répondons nous-mêmes."
+      }
+    },
+    "trialTitle": "Essayez avant de vous abonner",
+    "trialBody": "À l'inscription, votre essai gratuit de 7 jours démarre, sans carte bancaire : tous les outils, avec les résumés de toutes les fiches et une sélection complète. Ensuite, choisissez votre abonnement pour continuer et tout ouvrir. Vos données ne sont jamais supprimées.",
+    "faqTitle": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "À qui s'adresse la plateforme ?",
+        "a": "Aux enseignants du primaire pour le moment, en arabe et en français. Le moyen et le secondaire arrivent bientôt ; vous pouvez déjà vous inscrire."
+      },
+      {
+        "q": "Comment le cahier journal se remplit-il ?",
+        "a": "Vous saisissez votre emploi du temps une fois ; nous proposons pour chaque séance le thème et les objectifs tirés des fiches selon la semaine de l'année. Vous vérifiez, modifiez si besoin, puis imprimez."
+      },
+      {
+        "q": "Faut-il un ordinateur ou une imprimante particulière ?",
+        "a": "Non. La plateforme fonctionne sur téléphone et ordinateur ; l'impression ou l'enregistrement PDF se fait depuis le navigateur."
+      },
+      {
+        "q": "Que se passe-t-il après l'essai ?",
+        "a": "Les outils sont verrouillés jusqu'à l'abonnement ; toutes vos données restent conservées et reviennent dès l'abonnement."
+      },
+      {
+        "q": "Comment payer ?",
+        "a": "Par carte Edahabia ou CIB via Chargily, ou en nous contactant pour un autre moyen."
+      },
+      {
+        "q": "Qui voit les données de mes élèves ?",
+        "a": "Vous seul. Personne d'autre n'y accède, et elles ne servent à rien d'autre."
+      }
+    ],
+    "ctaBody": "Inscrivez-vous et démarrez votre essai gratuit. La configuration ne prend que quelques minutes."
   },
   "auth": {
     "loginTitle": "Connexion",
@@ -139,7 +219,8 @@
     "quickActions": "Actions rapides",
     "search": "Chercher dans la bibliothèque",
     "print": "Imprimer un document",
-    "greetingName": "Bonjour {name} 👋"
+    "greetingName": "Bonjour {name} 👋",
+    "lessons": "Fiches"
   },
   "more": {
     "title": "Plus"
@@ -1508,5 +1589,11 @@
     "materials": "Matériel",
     "objectives": "Objectifs d'apprentissage",
     "process": "Déroulement"
+  },
+  "welcome": {
+    "week": "Semaine scolaire {n}",
+    "printToday": "Ouvrir le cahier du jour",
+    "openNotebook": "Cahier journal",
+    "lessons": "Fiches"
   }
 }

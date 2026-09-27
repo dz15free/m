@@ -1,27 +1,48 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import {
+  BookOpenCheck,
   CalendarClock,
   Camera,
   Check,
   ClipboardCheck,
+  Headset,
+  Languages,
   LibraryBig,
   ListChecks,
+  Lock,
+  MapPin,
+  NotebookPen,
   Printer,
   ShieldCheck,
+  Smartphone,
+  Sparkles,
+  Table2,
   Users,
+  X,
 } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
 import { LinkButton } from "@/components/ui/button";
 import { LocaleSwitcher } from "@/components/ui/locale-switcher";
 
 const FEATURES = [
+  { key: "notebook", icon: NotebookPen },
+  { key: "lessons", icon: BookOpenCheck },
   { key: "import", icon: Users },
   { key: "attendance", icon: ClipboardCheck },
   { key: "schedule", icon: CalendarClock },
   { key: "planning", icon: ListChecks },
+  { key: "grades", icon: Table2 },
   { key: "library", icon: LibraryBig },
   { key: "documents", icon: Printer },
+] as const;
+
+const WHY = [
+  { key: "local", icon: MapPin },
+  { key: "bilingual", icon: Languages },
+  { key: "mobile", icon: Smartphone },
+  { key: "private", icon: Lock },
+  { key: "support", icon: Headset },
 ] as const;
 
 export default async function LandingPage() {
@@ -29,6 +50,9 @@ export default async function LandingPage() {
   const brand = await getTranslations("brand");
   const legal = await getTranslations("legal");
   const steps = t.raw("importSteps") as string[];
+  const pains = t.raw("pains") as string[];
+  const spotSteps = t.raw("spotSteps") as string[];
+  const faq = t.raw("faq") as { q: string; a: string }[];
 
   return (
     <div className="min-h-dvh bg-surface">
@@ -75,7 +99,48 @@ export default async function LandingPage() {
           </div>
         </section>
 
-        {/* الاستيراد الذكي — الميزة الأبرز */}
+        {/* المشكلة التي نحلها */}
+        <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <h2 className="text-2xl font-bold leading-snug sm:text-3xl">{t("problemTitle")}</h2>
+              <p className="mt-4 leading-relaxed text-muted">{t("problemBody")}</p>
+            </div>
+            <ul className="space-y-3">
+              {pains.map((pain) => (
+                <li key={pain} className="flex items-center gap-3 rounded-card bg-canvas p-4 ring-1 ring-line">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-red-50 text-red-700">
+                    <X aria-hidden className="size-4" />
+                  </span>
+                  <span className="font-medium">{pain}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* الرسالة الأساسية: الدفتر اليومي يكتب نفسه */}
+        <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+          <div className="grid items-center gap-8 rounded-[2rem] bg-brand-50 p-6 sm:p-10 md:grid-cols-2">
+            <div>
+              <span className="inline-grid size-12 place-items-center rounded-2xl bg-brand-700 text-white">
+                <NotebookPen aria-hidden className="size-6" />
+              </span>
+              <h2 className="mt-4 text-2xl font-bold sm:text-3xl">{t("spotTitle")}</h2>
+              <p className="mt-3 leading-relaxed text-ink/80">{t("spotBody")}</p>
+            </div>
+            <ol className="space-y-3">
+              {spotSteps.map((step, i) => (
+                <li key={step} className="flex items-center gap-3 rounded-card bg-surface p-4 shadow-card">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-full bg-brand-700 font-bold text-white">{i + 1}</span>
+                  <span className="font-semibold">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* الاستيراد الذكي */}
         <section className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid items-center gap-6 rounded-[2rem] bg-linear-to-br from-brand-950 via-brand-800 to-brand-600 p-6 text-white sm:p-10 md:grid-cols-[1fr_auto]">
             <div>
@@ -114,11 +179,53 @@ export default async function LandingPage() {
           </ul>
         </section>
 
+        {/* لماذا نحن */}
+        <section className="bg-canvas py-16">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <h2 className="text-center text-2xl font-bold sm:text-3xl">{t("whyTitle")}</h2>
+            <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {WHY.map(({ key, icon: Icon }) => (
+                <li key={key} className="rounded-card bg-surface p-5 shadow-card">
+                  <Icon aria-hidden className="size-6 text-brand-700" />
+                  <h3 className="mt-3 font-semibold">{t(`why.${key}.title`)}</h3>
+                  <p className="mt-1 text-sm text-muted">{t(`why.${key}.body`)}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* التجربة */}
+        <section className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+          <span className="mx-auto grid size-12 place-items-center rounded-2xl bg-accent-100 text-accent-700">
+            <Sparkles aria-hidden className="size-6" />
+          </span>
+          <h2 className="mt-4 text-2xl font-bold sm:text-3xl">{t("trialTitle")}</h2>
+          <p className="mt-3 leading-relaxed text-muted">{t("trialBody")}</p>
+        </section>
+
+        {/* أسئلة شائعة */}
+        <section className="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+          <h2 className="text-center text-2xl font-bold sm:text-3xl">{t("faqTitle")}</h2>
+          <div className="mt-8 divide-y divide-line overflow-hidden rounded-card bg-canvas ring-1 ring-line">
+            {faq.map(({ q, a }) => (
+              <details key={q} className="group px-5 py-4">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-semibold">
+                  {q}
+                  <span aria-hidden className="text-brand-700 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-2 leading-relaxed text-muted">{a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
         {/* دعوة أخيرة */}
         <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
           <div className="flex flex-col items-center gap-5 rounded-[2rem] bg-brand-50 px-6 py-12 text-center">
             <Logo variant="mark" className="h-16" />
             <h2 className="text-2xl font-bold sm:text-3xl">{t("ctaTitle")}</h2>
+            <p className="max-w-xl text-muted">{t("ctaBody")}</p>
             <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-brand-800">
               {[t("heroNote"), brand("tagline")].map((line) => (
                 <li key={line} className="flex items-center gap-2">

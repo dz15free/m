@@ -1,27 +1,23 @@
 import Link from "next/link";
-import { getLocale, getTranslations } from "next-intl/server";
-import { Printer, Search } from "lucide-react";
-import { formatLongDate } from "@/i18n/dates";
-import { Greeting } from "@/features/auth/account";
+import { getTranslations } from "next-intl/server";
+import { BookOpenCheck, Printer, Search } from "lucide-react";
+import { WelcomeCard } from "@/features/schedule/welcome-card";
 import { TodayBoard } from "@/features/schedule/today-board";
 
 /* «اليوم» — الشاشة الرئيسية: حصص اليوم من جدول التوقيت وحالة الحضور لكل حصة،
    وخطوات التجهيز الناقصة فقط (الأقسام، التلاميذ، الجدول). */
 export default async function TodayPage() {
   const t = await getTranslations("today");
-  const locale = await getLocale();
 
   const quick = [
+    { label: t("lessons"), href: "/app/lessons", icon: BookOpenCheck },
     { label: t("search"), href: "/app/library", icon: Search },
     { label: t("print"), href: "/app/documents", icon: Printer },
   ];
 
   return (
     <div className="space-y-8">
-      <header>
-        <p className="text-sm text-muted">{formatLongDate(new Date(), locale)}</p>
-        <Greeting className="mt-1 text-2xl font-bold sm:text-3xl" />
-      </header>
+      <WelcomeCard />
 
       <TodayBoard />
 
@@ -29,7 +25,7 @@ export default async function TodayPage() {
         <h2 id="quick" className="text-lg font-semibold">
           {t("quickActions")}
         </h2>
-        <div className="grid grid-cols-2 gap-3 sm:max-w-md">
+        <div className="grid grid-cols-3 gap-3 sm:max-w-lg">
           {quick.map(({ label, href, icon: Icon }) => (
             <Link
               key={href}
