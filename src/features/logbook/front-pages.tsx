@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils/cn";
 import { CARD_FIELDS, CARD_GROUPS, CARD_MAX, formatHours, subjectLoad, timetableGrid, type TeacherCard } from "./front-logic";
 import { getCard, saveCard } from "./repo";
 
-const NOTEBOOKS = ["daily", "prep", "grades", "training"] as const;
+const NOTEBOOKS = ["daily", "prep", "grades"] as const;
 type Notebook = (typeof NOTEBOOKS)[number];
 const SECTIONS = ["cover", "card", "students", "timetable", "load", "holidays", "surahs", "songs"] as const;
 type Section = (typeof SECTIONS)[number];
@@ -28,7 +28,6 @@ const DEFAULTS: Record<Notebook, Section[]> = {
   daily: ["cover", "card", "students", "timetable", "load", "holidays"],
   prep: ["cover", "card"],
   grades: ["cover", "card", "students"],
-  training: ["cover", "card"],
 };
 
 const dmy = (iso: string) => (iso ? iso.split("-").reverse().join("/") : "");

@@ -323,20 +323,6 @@ describe("دفاتر الأستاذ", () => {
     await assertFails(getDoc(col(dbAs(B))("2026-09-27_c1_ar_0800")));
   });
 
-  it("دفتر التكوين والندوات", async () => {
-    const ref = doc(dbAs(A), "teachers", A.uid, "trainings", "t1");
-    const entry = {
-      date: "2026-10-12", kind: "seminar", topic: "المقاربة بالكفاءات", place: "المدرسة", lesson: "قراءة", practitioner: "أ. سعاد",
-      level: "3AP", supervisor: "المفتش", domain: "didactics", notes: "", updatedAt: serverTimestamp(),
-    };
-    await assertSucceeds(setDoc(ref, entry));
-    await assertSucceeds(setDoc(ref, { ...entry, kind: "internship", domain: "" }));
-    await assertFails(setDoc(ref, { ...entry, kind: "party" }));
-    await assertFails(setDoc(ref, { ...entry, domain: "cooking" }));
-    await assertFails(setDoc(ref, { ...entry, topic: "" }));
-    await assertFails(getDoc(doc(dbAs(B), "teachers", A.uid, "trainings", "t1")));
-  });
-
   it("بطاقة الحالة الشخصية والمهنية: لصاحبها فقط", async () => {
     const keys = ["birthDate", "birthPlace", "birthWilaya", "familyStatus", "spouseJob", "address", "phone", "teachingLanguage", "firstDay", "schoolAppointment", "lastInspection", "inspector", "step", "stepDate"];
     const card = { ...Object.fromEntries(keys.map((k) => [k, ""])), phone: "0555", updatedAt: serverTimestamp() };

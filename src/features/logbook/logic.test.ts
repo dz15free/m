@@ -28,14 +28,6 @@ test("مدة الحصة والفترة", async () => {
   assert.equal(periodOf("13:00"), "pm");
 });
 
-test("تسجيلات التكوين القديمة تُطبَّع", async () => {
-  const { normalizeTraining } = await import("./logic.ts");
-  const t = normalizeTraining({ date: "2026-09-20", kind: "trainingDay", topic: "x", supervisor: "", place: "", notes: "" });
-  assert.equal(t.kind, "studyDay");
-  assert.equal(t.domain, "");
-  assert.equal(normalizeTraining({ kind: "meeting" }).kind, "seminar");
-});
-
 test("تنظيف المذكّرة", async () => {
   const { cleanPrep, emptyPrep } = await import("./logic.ts");
   const p = emptyPrep("ar", "3AP");

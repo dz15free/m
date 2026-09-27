@@ -66,56 +66,6 @@ export function weekDates(iso: string, schoolDays: number[]): string[] {
     });
 }
 
-// ── دفتر التكوين والندوات ─────────────────────────────────────
-// رزنامة الندوات والأيام الدراسية والتربصات، مع خلاصات مصنّفة حسب مجالات التكوين.
-
-export type TrainingKind = "seminar" | "studyDay" | "internship";
-export const TRAINING_KINDS: TrainingKind[] = ["seminar", "studyDay", "internship"];
-
-export const TRAINING_DOMAINS = [
-  "legislation",
-  "classManagement",
-  "pedagogy",
-  "ethics",
-  "ict",
-  "didactics",
-  "mediation",
-  "system",
-] as const;
-export type TrainingDomain = (typeof TRAINING_DOMAINS)[number];
-
-export type TrainingEntry = {
-  date: string;
-  kind: TrainingKind;
-  topic: string; // موضوع الندوة / اليوم الدراسي / نوع التربص
-  place: string; // المكان
-  lesson: string; // الدرس التطبيقي (ندوة)
-  practitioner: string; // الأستاذ(ة) المطبّق(ة) (ندوة)
-  level: string; // المستوى (ندوة)
-  supervisor: string; // المؤطر / المفتش
-  domain: TrainingDomain | ""; // مجال التكوين (لتصنيف الخلاصة)
-  notes: string; // الخلاصة
-};
-
-export const TRAINING_MAX = { topic: 200, place: 120, lesson: 200, practitioner: 120, level: 60, supervisor: 120, notes: 3000 } as const;
-
-/** تسجيلات قديمة (قبل مطابقة الدفتر الرسمي) تُقرأ بلا أخطاء. */
-export function normalizeTraining(raw: Omit<Partial<TrainingEntry>, "kind" | "domain"> & { kind?: string; domain?: string }): TrainingEntry {
-  const kind = (TRAINING_KINDS as string[]).includes(raw.kind ?? "") ? (raw.kind as TrainingKind) : raw.kind === "trainingDay" ? "studyDay" : "seminar";
-  return {
-    date: raw.date ?? "",
-    kind,
-    topic: raw.topic ?? "",
-    place: raw.place ?? "",
-    lesson: raw.lesson ?? "",
-    practitioner: raw.practitioner ?? "",
-    level: raw.level ?? "",
-    supervisor: raw.supervisor ?? "",
-    domain: (TRAINING_DOMAINS as readonly string[]).includes(raw.domain ?? "") ? (raw.domain as TrainingDomain) : "",
-    notes: raw.notes ?? "",
-  };
-}
-
 // ── دفتر التحضير (المذكرات) ─────────────────────────────────
 // مذكّرة درس بمراحله الثلاث؛ مستقلة عن التاريخ لتُعاد في السنوات التالية.
 

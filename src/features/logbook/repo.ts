@@ -13,7 +13,6 @@ import {
   query,
   serverTimestamp,
   setDoc,
-  updateDoc,
   where,
 } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
@@ -24,16 +23,12 @@ import {
   cleanPrep,
   isBlank,
   lessonKey,
-  normalizeTraining,
-  TRAINING_MAX,
   type LessonEntry,
   type PrepEntry,
-  type TrainingEntry,
 } from "./logic";
 
 const db = () => getFirebase().db;
 const lessonsCol = (uid: string) => collection(db(), "teachers", uid, "lessons");
-const trainingsCol = (uid: string) => collection(db(), "teachers", uid, "trainings");
 const prepsCol = (uid: string) => collection(db(), "teachers", uid, "preps");
 
 /** أسطر الدفتر لعدة أيام (أسبوع = استعلام واحد). */
@@ -55,43 +50,6 @@ export async function saveLesson(uid: string, entry: LessonEntry): Promise<void>
     return;
   }
   await setDoc(ref, { ...clean, updatedAt: serverTimestamp() });
-}
-
-export type TrainingDoc = TrainingEntry & { id: string };
-
-export async function listTrainings(uid: string): Promise<TrainingDoc[]> {
-  const snap = await getDocs(query(trainingsCol(uid), orderBy("date", "desc"), limit(200)));
-  return snap.docs.map((d) => ({ id: d.id, ...normalizeTraining(d.data()) }));
-}
-
-const cleanTraining = (e: TrainingEntry): TrainingEntry => {
-  const line = (v: string, max: number) => v.replace(/\s+/g, " ").trim().slice(0, max);
-  const seminar = e.kind === "seminar";
-  return {
-    date: e.date,
-    kind: e.kind,
-    topic: line(e.topic, TRAINING_MAX.topic),
-    place: line(e.place, TRAINING_MAX.place),
-    // حقول الندوة لا معنى لها في غيرها
-    lesson: seminar ? line(e.lesson, TRAINING_MAX.lesson) : "",
-    practitioner: seminar ? line(e.practitioner, TRAINING_MAX.practitioner) : "",
-    level: seminar ? line(e.level, TRAINING_MAX.level) : "",
-    supervisor: line(e.supervisor, TRAINING_MAX.supervisor),
-    domain: e.domain,
-    notes: e.notes.trim().slice(0, TRAINING_MAX.notes),
-  };
-};
-
-export async function addTraining(uid: string, e: TrainingEntry) {
-  await addDoc(trainingsCol(uid), { ...cleanTraining(e), updatedAt: serverTimestamp() });
-}
-
-export async function updateTraining(uid: string, id: string, e: TrainingEntry) {
-  await updateDoc(doc(trainingsCol(uid), id), { ...cleanTraining(e), updatedAt: serverTimestamp() });
-}
-
-export async function removeTraining(uid: string, id: string) {
-  await deleteDoc(doc(trainingsCol(uid), id));
 }
 
 // ── المذكرات ──

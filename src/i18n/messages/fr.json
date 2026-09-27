@@ -181,7 +181,8 @@
       "yearHint": "Calculée automatiquement à partir de la date.",
       "summary": "Récapitulatif"
     },
-    "error": "Enregistrement impossible. Vérifiez Internet puis réessayez."
+    "error": "Enregistrement impossible. Vérifiez Internet puis réessayez.",
+    "soon": "Bientôt"
   },
   "profile": {
     "firstName": "Prénom",
@@ -516,10 +517,6 @@
         "title": "Cahier journal",
         "body": "Chaque séance : activité, domaine, contenu, composantes de la compétence — matin et après-midi."
       },
-      "training": {
-        "title": "Cahier de formation et séminaires",
-        "body": "Séminaires mensuels, journées d'étude, stages et synthèses par domaine de formation."
-      },
       "prep": {
         "title": "Cahier de préparation (fiches)",
         "body": "Fiches de séance : situation de départ, construction des apprentissages, réinvestissement."
@@ -586,56 +583,6 @@
       "remarks": "Observations",
       "reviewedBy": "Vu par M./Mme",
       "fromPrep": "Depuis une fiche"
-    },
-    "training": {
-      "title": "Cahier de formation et séminaires",
-      "add": "Ajouter",
-      "empty": "Aucune entrée pour l'instant.",
-      "date": "Date",
-      "kind": "Type",
-      "save": "Enregistrer",
-      "cancel": "Annuler",
-      "delete": "Supprimer",
-      "deleteConfirm": "Supprimer cette entrée ?",
-      "print": "Imprimer le cahier",
-      "error": "Enregistrement impossible. Réessayez.",
-      "edit": "Modifier",
-      "calendarTitle": "Calendrier des séminaires, journées d'étude et stages",
-      "kinds": {
-        "seminar": "Séminaire mensuel",
-        "studyDay": "Journée d'étude",
-        "internship": "Stage"
-      },
-      "sections": {
-        "seminar": "Séminaires mensuels",
-        "studyDay": "Journées d'étude",
-        "internship": "Stages"
-      },
-      "topic": {
-        "seminar": "Thème du séminaire",
-        "studyDay": "Thème de la journée",
-        "internship": "Type de stage"
-      },
-      "place": "Lieu",
-      "lesson": "Leçon pratique",
-      "practitioner": "Enseignant(e) animateur(trice)",
-      "level": "Niveau",
-      "supervisor": "Encadrant / inspecteur",
-      "num": "N°",
-      "domain": "Domaine de formation",
-      "noDomain": "— Sans domaine —",
-      "domains": {
-        "legislation": "Législation scolaire",
-        "classManagement": "Techniques de gestion de classe",
-        "pedagogy": "Ingénierie de formation et pédagogie",
-        "ethics": "Éthique et déontologie",
-        "ict": "Informatique et TIC",
-        "didactics": "Didactique de la discipline",
-        "mediation": "Médiation scolaire",
-        "system": "Système éducatif algérien et programmes"
-      },
-      "notes": "Synthèse",
-      "summaries": "Synthèses de formation par domaine"
     },
     "print": {
       "teacher": "Enseignant(e)",
@@ -750,8 +697,7 @@
       "coverTitles": {
         "daily": "Cahier journal",
         "prep": "Cahier de préparation",
-        "grades": "Cahier de notes",
-        "training": "Cahier de formation et séminaires"
+        "grades": "Cahier de notes"
       },
       "studentsTitle": "Liste des élèves",
       "num": "N°",
@@ -1447,5 +1393,18 @@
       "xls": "L'ancien format Excel (xls) n'est pas pris en charge : enregistrez en xlsx.",
       "save": "Enregistrement impossible. Réessayez."
     }
+  },
+  "comingSoon": {
+    "title": "Les outils du {stage} arrivent bientôt",
+    "stages": {
+      "middle": "moyen",
+      "secondary": "secondaire",
+      "primary": "primaire"
+    },
+    "body": "Nous préparons les fiches, progressions et cahiers de votre cycle selon les programmes algériens. Votre compte et votre profil sont enregistrés.",
+    "notify": "Vous serez notifié dès que votre cycle sera prêt, sans vous réinscrire.",
+    "contact": "Contacter l'administration",
+    "settings": "Paramètres",
+    "supportText": "Bonjour, j'enseigne au moyen/secondaire et j'attends les outils de mon cycle."
   }
 }

@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { BookOpenCheck, ClipboardList, IdCard, NotebookPen, Users } from "lucide-react";
+import { BookOpenCheck, ClipboardList, IdCard, NotebookPen } from "lucide-react";
 
 const NOTEBOOKS = [
   { key: "daily", href: "/app/logbook/daily", icon: NotebookPen },
-  { key: "training", href: "/app/logbook/training", icon: Users },
   { key: "prep", href: "/app/logbook/prep", icon: BookOpenCheck },
   { key: "grades", href: "/app/logbook/grades", icon: ClipboardList },
   { key: "front", href: "/app/logbook/front", icon: IdCard },

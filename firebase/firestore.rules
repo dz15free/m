@@ -258,22 +258,6 @@ service cloud.firestore {
       }
 
       // دفتر التكوين والندوات
-      match /trainings/{trainingId} {
-        function validTraining(d) {
-          return d.keys().hasOnly(['date', 'kind', 'topic', 'place', 'lesson', 'practitioner', 'level', 'supervisor', 'domain', 'notes', 'updatedAt'])
-            && d.date is string && d.date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
-            && d.kind in ['seminar', 'studyDay', 'internship']
-            && isShortString(d.topic, 200) && d.topic.size() > 0
-            && isShortString(d.place, 120) && isShortString(d.lesson, 200) && isShortString(d.practitioner, 120)
-            && isShortString(d.level, 60) && isShortString(d.supervisor, 120)
-            && d.domain in ['', 'legislation', 'classManagement', 'pedagogy', 'ethics', 'ict', 'didactics', 'mediation', 'system']
-            && isShortString(d.notes, 3000)
-            && d.updatedAt == request.time;
-        }
-        allow read, delete: if isOwner(uid);
-        allow create, update: if isOwner(uid) && validTraining(request.resource.data);
-      }
-
       // دفتر التحضير: مذكرات الدروس بمراحلها الثلاث
       match /preps/{prepId} {
         function validPhase(p) {
