@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { ArrowRight, LoaderCircle, Lock, Printer, Sparkles } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { useCurriculum, useLesson, useLessonAccessFor } from "./repo";
+import { useCurriculum, useLesson, useLessonAccessFor, useLessonPages } from "./repo";
 
 /** مذكرة جاهزة: الرأس والأهداف (التجربة) والسير كاملًا (الاشتراك أو النماذج). قابلة للطباعة. */
 export function LessonView({ id }: { id: string }) {
@@ -16,6 +16,7 @@ export function LessonView({ id }: { id: string }) {
   const entry = cur.data?.entries.find((e) => e.id === id);
   const can = useLessonAccessFor(!!entry?.sm);
   const { summary, body } = useLesson(id, { summary: can.summary && !!entry, body: can.body && !!entry?.b });
+  const pages = useLessonPages(body.data?.pages ?? []);
 
   if (cur.isLoading || (can.summary && summary.isLoading)) {
     return (
@@ -65,10 +66,34 @@ export function LessonView({ id }: { id: string }) {
       ) : null}
 
       {can.body && body.data ? (
-        <Card className="space-y-2 print:shadow-none print:ring-1 print:ring-black/30">
-          <h2 className="font-bold">{t("process")}</h2>
-          <div dir="rtl" className="whitespace-pre-line leading-loose">{body.data.body}</div>
-        </Card>
+        <>
+          {body.data.body && (
+            <Card className="space-y-2 print:shadow-none print:ring-1 print:ring-black/30">
+              <h2 className="font-bold">{t("process")}</h2>
+              <div dir="rtl" className="whitespace-pre-line leading-loose">{body.data.body}</div>
+            </Card>
+          )}
+          {!!body.data.pages?.length && (
+            <section className="space-y-3">
+              <h2 className="font-bold print:hidden">{t("original")}</h2>
+              {pages.map((q, i) =>
+                q.data ? (
+                  // eslint-disable-next-line @next/next/no-img-element -- صفحة الوثيقة الأصلية (محمية بالقواعد)
+                  <img
+                    key={q.data.page}
+                    src={`data:image/jpeg;base64,${q.data.img}`}
+                    alt={t("pageAlt", { n: q.data.page })}
+                    className="w-full rounded-card bg-white shadow-card print:break-after-page print:shadow-none"
+                  />
+                ) : (
+                  <div key={i} className="grid aspect-[1/1.41] place-items-center rounded-card bg-surface shadow-card">
+                    <LoaderCircle aria-hidden className="size-7 animate-spin text-brand-700" />
+                  </div>
+                ),
+              )}
+            </section>
+          )}
+        </>
       ) : entry.b && !can.body ? (
         <Card className="flex flex-col items-center gap-3 border-2 border-accent-300 py-8 text-center print:hidden">
           <Lock aria-hidden className="size-7 text-accent-700" />

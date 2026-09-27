@@ -12,6 +12,8 @@ export type CurriculumEntry = {
   u: number;
   /** النشاط (نوع الحصة) */
   a: string;
+  /** الحصة من الدرس (مثل «الحصة الأولى: الاكتشاف»)، إن وُجدت */
+  ss?: string;
   /** الميدان */
   d: string;
   /** الموضوع */

@@ -6,11 +6,18 @@
  *
  *   FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 node scripts/curriculum/seed.mjs 1AP_ar
  *   GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/curriculum/seed.mjs 1AP_ar
+ *
+ * --pdf=<الوثيقة الأصلية>: صفحات الحصص التي لا نص سليمًا لها تُنشر صورًا (lessonBodies/<id>_pgNN)
+ * بنفس حماية السير المكتوب — تتطلب pdftoppm.
  */
-import { readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { mkdtempSync, readFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { putDoc } from "../lib/firestore.mjs";
 
 const id = process.argv[2];
+const pdf = process.argv.find((a) => a.startsWith("--pdf="))?.slice(6) ?? null;
 if (!/^[1-5]AP_[a-z]+$/.test(id ?? "")) {
   console.error("usage: seed.mjs <level_subject>, e.g. 1AP_ar");
   process.exit(1);
@@ -18,9 +25,26 @@ if (!/^[1-5]AP_[a-z]+$/.test(id ?? "")) {
 const data = JSON.parse(readFileSync(new URL(`../../content/curriculum/${id}.json`, import.meta.url), "utf8"));
 const lessonId = (l) => `${id}_${String(l.order).padStart(3, "0")}`;
 
+/** صفحات الوثيقة لكل حصة: محددة في البيانات، أو (للنص المشوّه) من صفحتها حتى الحصة التالية. */
+function pagesOf(lessons) {
+  const byOrder = [...lessons].sort((a, b) => a.order - b.order);
+  return new Map(
+    byOrder.map((l, i) => {
+      if (Array.isArray(l.pages)) return [l.order, l.pages];
+      if (l.bodyQuality !== "garbled" || !l.page) return [l.order, []];
+      const next = byOrder.slice(i + 1).find((x) => x.page > l.page)?.page ?? l.page + 1;
+      const out = [];
+      for (let p = l.page; p < next && out.length < 4; p++) out.push(p);
+      return [l.order, out];
+    }),
+  );
+}
+
 /** نماذج كاملة للتجربة: «بعض المحتوى الكامل» — أيام من الفترة التمهيدية وحصة من كل نوع رئيسي في مقطع واحد. */
 function pickSamples(lessons) {
   const picked = new Set();
+  // نماذج محددة صراحةً في البيانات
+  if (lessons.some((l) => l.sample === true)) return new Set(lessons.filter((l) => l.sample).map((l) => l.order));
   lessons.filter((l) => l.segment === 1 && l.unit <= 3 && l.body).forEach((l) => picked.add(l.order));
   const seg = lessons.find((l) => l.segment === 3 && l.body) ? 3 : lessons.find((l) => l.body)?.segment;
   const seen = new Set();
@@ -32,7 +56,14 @@ function pickSamples(lessons) {
   return picked;
 }
 
-const samples = pickSamples(data.lessons);
+if (!pdf && data.lessons.some((l) => (Array.isArray(l.pages) && l.pages.length) || l.bodyQuality === "garbled")) {
+  console.error("هذه المذكرات تحتاج صور صفحات: مرّر --pdf=<الوثيقة الأصلية>");
+  process.exit(1);
+}
+const pageMap = pdf ? pagesOf(data.lessons) : new Map();
+const pageId = (n) => `${id}_pg${String(n).padStart(3, "0")}`;
+const hasBody = (l) => !!l.body || (pageMap.get(l.order)?.length ?? 0) > 0;
+const samples = pickSamples(data.lessons.map((l) => ({ ...l, body: hasBody(l) ? l.body || "pages" : "" })));
 const now = Date.now();
 const source = data.source;
 
@@ -49,9 +80,10 @@ await putDoc(`curriculum/${id}`, {
     k: l.unitKind,
     u: l.unit,
     a: l.activity,
+    ...(l.activity !== l.session && !/الحص/.test(l.activity) && l.session && l.session !== l.activity && l.unitKind === "week" && !l.page ? { ss: l.session } : {}),
     d: l.domain,
     t: l.topic,
-    b: !!l.body,
+    b: hasBody(l),
     sm: samples.has(l.order),
   })),
   updatedAt: now,
@@ -77,14 +109,32 @@ for (const l of data.lessons) {
     materials: l.materials,
     objectives: l.objectives,
     ...(l.objectiveParts ? { objectiveParts: l.objectiveParts.map((items) => ({ items })) } : {}),
-    hasBody: !!l.body,
+    hasBody: hasBody(l),
     sample,
     source,
     updatedAt: now,
   });
-  if (l.body) {
-    await putDoc(`lessonBodies/${lessonId(l)}`, { curriculumId: id, sample, body: l.body, quality: l.bodyQuality, source, updatedAt: now });
+  if (hasBody(l)) {
+    const pages = (pageMap.get(l.order) ?? []).map(pageId);
+    await putDoc(`lessonBodies/${lessonId(l)}`, { curriculumId: id, sample, body: l.body ?? "", pages, quality: l.bodyQuality ?? "pages", source, updatedAt: now });
   }
   if (++n % 50 === 0) console.log(`  … ${n}`);
 }
 console.log(`✓ ${n} ملخّص`);
+
+// صور الصفحات: الصفحة نموذج للتجربة إن كانت تخص حصة نموذجية
+if (pdf) {
+  const pageSample = new Map();
+  for (const l of data.lessons) for (const p of pageMap.get(l.order) ?? []) pageSample.set(p, (pageSample.get(p) ?? false) || samples.has(l.order));
+  const dir = mkdtempSync(join(tmpdir(), "pages-"));
+  let k = 0;
+  for (const [page, sample] of [...pageSample].sort((a, b) => a[0] - b[0])) {
+    const base = join(dir, `p${page}`);
+    execFileSync("pdftoppm", ["-f", String(page), "-l", String(page), "-r", "110", "-jpeg", "-jpegopt", "quality=60", "-singlefile", pdf, base]);
+    const img = readFileSync(`${base}.jpg`).toString("base64");
+    if (img.length > 900_000) throw new Error(`page ${page} too large`);
+    await putDoc(`lessonBodies/${pageId(page)}`, { curriculumId: id, sample, page, img, updatedAt: now });
+    if (++k % 20 === 0) console.log(`  … ${k} صفحة`);
+  }
+  console.log(`✓ ${k} صفحة مصوّرة`);
+}

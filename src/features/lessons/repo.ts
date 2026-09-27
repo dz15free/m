@@ -1,7 +1,7 @@
 "use client";
 
 import { doc, getDoc } from "firebase/firestore";
-import { useQuery } from "@tanstack/react-query";
+import { useQueries, useQuery } from "@tanstack/react-query";
 import { getFirebase } from "@/lib/firebase/client";
 import { useAuth } from "@/features/auth/auth-provider";
 import { useBilling } from "@/features/billing/repo";
@@ -64,9 +64,20 @@ export function useLesson(lessonId: string, can: { summary: boolean; body: boole
   });
   const body = useQuery({
     queryKey: ["lessonBody", lessonId],
-    queryFn: () => getOrNull<{ body: string }>(`lessonBodies/${lessonId}`),
+    queryFn: () => getOrNull<{ body: string; pages?: string[] }>(`lessonBodies/${lessonId}`),
     enabled: can.body,
     staleTime: 60 * 60_000,
   });
   return { summary, body };
+}
+
+/** صور صفحات الوثيقة الأصلية لحصة (نفس حماية السير المكتوب). */
+export function useLessonPages(ids: string[]) {
+  return useQueries({
+    queries: ids.map((id) => ({
+      queryKey: ["lessonPage", id],
+      queryFn: () => getOrNull<{ img: string; page: number }>(`lessonBodies/${id}`),
+      staleTime: Infinity,
+    })),
+  });
 }

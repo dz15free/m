@@ -1588,7 +1588,9 @@
     "domain": "Domaine",
     "materials": "Matériel",
     "objectives": "Objectifs d'apprentissage",
-    "process": "Déroulement"
+    "process": "Déroulement",
+    "original": "La fiche telle que dans le document du ministère",
+    "pageAlt": "Page {n}"
   },
   "welcome": {
     "week": "Semaine scolaire {n}",

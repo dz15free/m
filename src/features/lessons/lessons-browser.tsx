@@ -99,7 +99,7 @@ function CurriculumView({ id }: { id: string }) {
                   <ul className="divide-y divide-line">
                     {u.entries.map((e) => (
                       <li key={e.id}>
-                        <EntryRow id={e.id} topic={e.t} activity={e.a} sample={e.sm} />
+                        <EntryRow id={e.id} topic={e.t} activity={e.ss ?? e.a} sample={e.sm} />
                       </li>
                     ))}
                   </ul>
