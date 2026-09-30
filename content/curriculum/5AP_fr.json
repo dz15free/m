@@ -9,6 +9,7 @@
  },
  "weekMode": "absolute",
  "segments": {
+  "0": "Évaluation diagnostique",
   "1": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
   "2": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?",
   "3": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée",
@@ -20,7 +21,216 @@
  },
  "lessons": [
   {
-   "order": 1,
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 1,
+   "session": "Oral compréhension (30 mn)",
+   "activity": "Français",
+   "domain": "Oral compréhension",
+   "topic": "Oral compréhension : Les animaux au parc — Évaluation diagnostique",
+   "materials": "Support audio/audiovisuel – dialogue – illustration",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de identifier les interlocuteurs, le lieu et deux informations essentielles d’un message oral."
+   ],
+   "body": "",
+   "pages": [
+    "b:2",
+    "b:3"
+   ],
+   "sample": true,
+   "order": 1
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 1,
+   "session": "Vocabulaire (30 mn)",
+   "activity": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : Les synonymes et les antonymes — Évaluation diagnostique",
+   "materials": "Exercices au tableau ou photocopies",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de identifier des mots de sens proche et relier correctement des mots à leur contraire."
+   ],
+   "body": "",
+   "pages": [
+    "b:4",
+    "b:5"
+   ],
+   "sample": true,
+   "order": 2
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 1,
+   "session": "Lecture 1 (30 mn)",
+   "activity": "Français",
+   "domain": "Lecture 1",
+   "topic": "Lecture 1 : Une tortue courageuse — Évaluation diagnostique",
+   "materials": "Illustration – texte transcrit ou photocopié",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de lire un texte court avec une articulation correcte et relever des informations explicites."
+   ],
+   "body": "",
+   "pages": [
+    "b:6",
+    "b:7",
+    "b:8"
+   ],
+   "sample": true,
+   "order": 3
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 1,
+   "session": "Grammaire (30 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : Les constituants de la phrase : S + V + COD — Évaluation diagnostique",
+   "materials": "Exercices au tableau ou photocopiés",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de identifier le sujet, le verbe et le COD dans au moins trois phrases simples."
+   ],
+   "body": "",
+   "pages": [
+    "b:9"
+   ],
+   "sample": true,
+   "order": 4
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 1,
+   "session": "Oral production 1 (30 mn)",
+   "activity": "Français",
+   "domain": "Oral production 1",
+   "topic": "Oral production 1 : Se présenter et parler de son lieu d’habitation — Évaluation diagnostique",
+   "materials": "Illustration – tableau",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de se présenter et dire simplement où il habite dans une courte interaction."
+   ],
+   "body": "",
+   "pages": [
+    "b:10",
+    "b:11"
+   ],
+   "sample": true,
+   "order": 5
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "Conjugaison (30 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Être et avoir au présent — Évaluation diagnostique",
+   "materials": "Exercices ecrit– tableau",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de associer les pronoms aux formes correctes de être et avoir au présent et les conjuguer dans des phrases simples."
+   ],
+   "body": "",
+   "pages": [
+    "b:12"
+   ],
+   "sample": true,
+   "order": 6
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "Lecture 2 (30 mn)",
+   "activity": "Français",
+   "domain": "Lecture 2",
+   "topic": "Lecture 2 : Une nouvelle camarade — Évaluation diagnostique",
+   "materials": "Illustration – texte transcrit ou photocopié",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de identifier les personnages, le lieu et plusieurs informations explicites d’un texte narratif court."
+   ],
+   "body": "",
+   "pages": [
+    "b:13",
+    "b:14",
+    "b:15"
+   ],
+   "sample": true,
+   "order": 7
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "Orthographe (30 mn)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe : Le féminin des noms et des adjectifs — Évaluation diagnostique",
+   "materials": "Exercices – tableau",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de former correctement le féminin de plusieurs noms et adjectifs courants."
+   ],
+   "body": "",
+   "pages": [
+    "b:16",
+    "b:17"
+   ],
+   "sample": true,
+   "order": 8
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "Oral production 2 (30 mn)",
+   "activity": "Français",
+   "domain": "Oral production 2",
+   "topic": "Oral production 2 : Les activités sportives — Évaluation diagnostique",
+   "materials": "Illustrations – tableau",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de participer à une courte interaction et parler simplement d’une activité sportive."
+   ],
+   "body": "",
+   "pages": [
+    "b:18",
+    "b:19"
+   ],
+   "sample": true,
+   "order": 9
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "Production écrite (30 mn)",
+   "activity": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite : Ma journée à l’école — Évaluation diagnostique",
+   "materials": "Tableau – double feuille – illustration",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de compléter puis rédiger un court texte cohérent d’environ trente mots sur sa journée à l’école."
+   ],
+   "body": "",
+   "pages": [
+    "b:20"
+   ],
+   "sample": true,
+   "order": 10
+  },
+  {
+   "order": 11,
    "segment": 1,
    "unitKind": "week",
    "unit": 3,
@@ -40,7 +250,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 2,
+   "order": 12,
    "segment": 1,
    "unitKind": "week",
    "unit": 3,
@@ -58,7 +268,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 3,
+   "order": 13,
    "segment": 1,
    "unitKind": "week",
    "unit": 3,
@@ -78,7 +288,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 4,
+   "order": 14,
    "segment": 1,
    "unitKind": "week",
    "unit": 3,
@@ -98,7 +308,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 5,
+   "order": 15,
    "segment": 1,
    "unitKind": "week",
    "unit": 3,
@@ -116,7 +326,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 6,
+   "order": 16,
    "segment": 1,
    "unitKind": "week",
    "unit": 3,
@@ -136,7 +346,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 7,
+   "order": 17,
    "segment": 1,
    "unitKind": "week",
    "unit": 4,
@@ -156,7 +366,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 8,
+   "order": 18,
    "segment": 1,
    "unitKind": "week",
    "unit": 4,
@@ -176,7 +386,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 9,
+   "order": 19,
    "segment": 1,
    "unitKind": "week",
    "unit": 4,
@@ -194,7 +404,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 10,
+   "order": 20,
    "segment": 1,
    "unitKind": "week",
    "unit": 4,
@@ -214,7 +424,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 11,
+   "order": 21,
    "segment": 1,
    "unitKind": "week",
    "unit": 4,
@@ -234,7 +444,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 12,
+   "order": 22,
    "segment": 1,
    "unitKind": "week",
    "unit": 4,
@@ -254,7 +464,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 13,
+   "order": 23,
    "segment": 1,
    "unitKind": "week",
    "unit": 4,
@@ -274,7 +484,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 14,
+   "order": 24,
    "segment": 1,
    "unitKind": "week",
    "unit": 5,
@@ -294,7 +504,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 15,
+   "order": 25,
    "segment": 1,
    "unitKind": "week",
    "unit": 5,
@@ -314,7 +524,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 16,
+   "order": 26,
    "segment": 1,
    "unitKind": "week",
    "unit": 5,
@@ -334,7 +544,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 17,
+   "order": 27,
    "segment": 1,
    "unitKind": "week",
    "unit": 5,
@@ -354,7 +564,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 18,
+   "order": 28,
    "segment": 1,
    "unitKind": "week",
    "unit": 5,
@@ -374,7 +584,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 19,
+   "order": 29,
    "segment": 1,
    "unitKind": "week",
    "unit": 5,
@@ -394,7 +604,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
   },
   {
-   "order": 20,
+   "order": 30,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -414,7 +624,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 21,
+   "order": 31,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -432,7 +642,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 22,
+   "order": 32,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -452,7 +662,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 23,
+   "order": 33,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -472,7 +682,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 24,
+   "order": 34,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -490,7 +700,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 25,
+   "order": 35,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -510,7 +720,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 26,
+   "order": 36,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -530,7 +740,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 27,
+   "order": 37,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -550,7 +760,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 28,
+   "order": 38,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -568,7 +778,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 29,
+   "order": 39,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -588,7 +798,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 30,
+   "order": 40,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -608,7 +818,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 31,
+   "order": 41,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -628,7 +838,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 32,
+   "order": 42,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -648,7 +858,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 33,
+   "order": 43,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -668,7 +878,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 34,
+   "order": 44,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -688,7 +898,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 35,
+   "order": 45,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -708,7 +918,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 36,
+   "order": 46,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -728,7 +938,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 37,
+   "order": 47,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -748,7 +958,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 38,
+   "order": 48,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -768,7 +978,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 39,
+   "order": 49,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -788,7 +998,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 40,
+   "order": 50,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -808,7 +1018,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 41,
+   "order": 51,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -826,7 +1036,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 42,
+   "order": 52,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -846,7 +1056,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 43,
+   "order": 53,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -866,7 +1076,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 44,
+   "order": 54,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -884,7 +1094,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 45,
+   "order": 55,
    "segment": 3,
    "unitKind": "week",
    "unit": 10,
@@ -904,7 +1114,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 46,
+   "order": 56,
    "segment": 3,
    "unitKind": "week",
    "unit": 10,
@@ -924,7 +1134,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 47,
+   "order": 57,
    "segment": 3,
    "unitKind": "week",
    "unit": 10,
@@ -944,7 +1154,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 48,
+   "order": 58,
    "segment": 3,
    "unitKind": "week",
    "unit": 10,
@@ -962,7 +1172,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 49,
+   "order": 59,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -982,7 +1192,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 50,
+   "order": 60,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -1002,7 +1212,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 51,
+   "order": 61,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -1022,7 +1232,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 52,
+   "order": 62,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -1042,7 +1252,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 53,
+   "order": 63,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -1062,7 +1272,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 54,
+   "order": 64,
    "segment": 3,
    "unitKind": "week",
    "unit": 12,
@@ -1082,7 +1292,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 55,
+   "order": 65,
    "segment": 3,
    "unitKind": "week",
    "unit": 12,
@@ -1102,7 +1312,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 56,
+   "order": 66,
    "segment": 3,
    "unitKind": "week",
    "unit": 12,
@@ -1122,7 +1332,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 57,
+   "order": 67,
    "segment": 3,
    "unitKind": "week",
    "unit": 12,
@@ -1142,7 +1352,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 58,
+   "order": 68,
    "segment": 3,
    "unitKind": "week",
    "unit": 12,
@@ -1162,7 +1372,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 59,
+   "order": 69,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1182,7 +1392,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 60,
+   "order": 70,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1200,7 +1410,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 61,
+   "order": 71,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1220,7 +1430,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 62,
+   "order": 72,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1240,7 +1450,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 63,
+   "order": 73,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1258,7 +1468,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 64,
+   "order": 74,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1278,7 +1488,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 65,
+   "order": 75,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1298,7 +1508,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 66,
+   "order": 76,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1316,7 +1526,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 67,
+   "order": 77,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1336,7 +1546,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 68,
+   "order": 78,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1356,7 +1566,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 69,
+   "order": 79,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1376,7 +1586,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 70,
+   "order": 80,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1396,7 +1606,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 71,
+   "order": 81,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1416,7 +1626,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 72,
+   "order": 82,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1436,7 +1646,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 73,
+   "order": 83,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1456,7 +1666,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 74,
+   "order": 84,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1476,7 +1686,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 75,
+   "order": 85,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1496,7 +1706,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 76,
+   "order": 86,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1516,7 +1726,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 77,
+   "order": 87,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1536,7 +1746,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 78,
+   "order": 88,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1554,7 +1764,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 79,
+   "order": 89,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1574,7 +1784,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 80,
+   "order": 90,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1594,7 +1804,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 81,
+   "order": 91,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1612,7 +1822,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 82,
+   "order": 92,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1632,7 +1842,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 83,
+   "order": 93,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1652,7 +1862,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 84,
+   "order": 94,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1670,7 +1880,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 85,
+   "order": 95,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1690,7 +1900,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 86,
+   "order": 96,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1710,7 +1920,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 87,
+   "order": 97,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1730,7 +1940,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 88,
+   "order": 98,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1750,7 +1960,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 89,
+   "order": 99,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1770,7 +1980,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 90,
+   "order": 100,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -1790,7 +2000,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 91,
+   "order": 101,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -1810,7 +2020,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 92,
+   "order": 102,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -1830,7 +2040,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 93,
+   "order": 103,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -1850,7 +2060,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 94,
+   "order": 104,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -1870,7 +2080,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 95,
+   "order": 105,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -1890,7 +2100,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 96,
+   "order": 106,
    "segment": 6,
    "unitKind": "week",
    "unit": 20,
@@ -1910,7 +2120,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 97,
+   "order": 107,
    "segment": 6,
    "unitKind": "week",
    "unit": 20,
@@ -1928,7 +2138,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 98,
+   "order": 108,
    "segment": 6,
    "unitKind": "week",
    "unit": 20,
@@ -1948,7 +2158,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 99,
+   "order": 109,
    "segment": 6,
    "unitKind": "week",
    "unit": 20,
@@ -1968,7 +2178,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 100,
+   "order": 110,
    "segment": 6,
    "unitKind": "week",
    "unit": 20,
@@ -1986,7 +2196,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 101,
+   "order": 111,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -2006,7 +2216,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 102,
+   "order": 112,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -2026,7 +2236,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 103,
+   "order": 113,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -2046,7 +2256,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 104,
+   "order": 114,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -2064,7 +2274,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 105,
+   "order": 115,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -2084,7 +2294,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 106,
+   "order": 116,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -2104,7 +2314,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 107,
+   "order": 117,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -2124,7 +2334,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 108,
+   "order": 118,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -2144,7 +2354,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 109,
+   "order": 119,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -2164,7 +2374,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 110,
+   "order": 120,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -2184,7 +2394,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 111,
+   "order": 121,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -2204,7 +2414,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 112,
+   "order": 122,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -2224,7 +2434,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 113,
+   "order": 123,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -2244,7 +2454,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 114,
+   "order": 124,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -2264,7 +2474,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 115,
+   "order": 125,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2284,7 +2494,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 116,
+   "order": 126,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2302,7 +2512,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 117,
+   "order": 127,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2322,7 +2532,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 118,
+   "order": 128,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2342,7 +2552,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 119,
+   "order": 129,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2360,7 +2570,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 120,
+   "order": 130,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2380,7 +2590,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 121,
+   "order": 131,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2400,7 +2610,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 122,
+   "order": 132,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2418,7 +2628,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 123,
+   "order": 133,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2438,7 +2648,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 124,
+   "order": 134,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2458,7 +2668,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 125,
+   "order": 135,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2478,7 +2688,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 126,
+   "order": 136,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2498,7 +2708,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 127,
+   "order": 137,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2518,7 +2728,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 128,
+   "order": 138,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2538,7 +2748,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 129,
+   "order": 139,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2558,7 +2768,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 130,
+   "order": 140,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2578,7 +2788,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 131,
+   "order": 141,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2598,7 +2808,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 132,
+   "order": 142,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2618,7 +2828,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 133,
+   "order": 143,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -2638,7 +2848,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 134,
+   "order": 144,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -2656,7 +2866,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 135,
+   "order": 145,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -2676,7 +2886,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 136,
+   "order": 146,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -2696,7 +2906,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 137,
+   "order": 147,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -2714,7 +2924,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 138,
+   "order": 148,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -2734,7 +2944,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 139,
+   "order": 149,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -2754,7 +2964,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 140,
+   "order": 150,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -2772,7 +2982,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 141,
+   "order": 151,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -2792,7 +3002,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 142,
+   "order": 152,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -2812,7 +3022,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 143,
+   "order": 153,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -2832,7 +3042,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 144,
+   "order": 154,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -2852,7 +3062,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 145,
+   "order": 155,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -2872,7 +3082,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 146,
+   "order": 156,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -2892,7 +3102,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 147,
+   "order": 157,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -2912,7 +3122,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 148,
+   "order": 158,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -2932,7 +3142,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 149,
+   "order": 159,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -2952,7 +3162,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 150,
+   "order": 160,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,

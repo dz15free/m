@@ -9,6 +9,7 @@
  },
  "weekMode": "absolute",
  "segments": {
+  "0": "Évaluation diagnostique",
   "1": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)",
   "2": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)",
   "3": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)",
@@ -20,7 +21,207 @@
  },
  "lessons": [
   {
-   "order": 1,
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 1,
+   "session": "Oral compréhension (30 min)",
+   "activity": "Français",
+   "domain": "Oral compréhension",
+   "topic": "Oral compréhension : Au marché — Évaluation diagnostique",
+   "materials": "Support audio ou lecture expressive – illustration.",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable d’identifier les interlocuteurs et de relever au moins deux informations explicites d’un court dialogue oral."
+   ],
+   "body": "",
+   "pages": [
+    "b:2"
+   ],
+   "sample": true,
+   "order": 1
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 1,
+   "session": "Vocabulaire (30 min)",
+   "activity": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : Les animaux de la ferme et de la maison — Évaluation diagnostique",
+   "materials": "Illustrations – tableau – ardoise.",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de nommer au moins quatre animaux et de classer correctement deux animaux selon leur milieu de vie."
+   ],
+   "body": "",
+   "pages": [
+    "b:3"
+   ],
+   "sample": true,
+   "order": 2
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 1,
+   "session": "Lecture syllabique (30 min)",
+   "activity": "Français",
+   "domain": "Lecture syllabique",
+   "topic": "Lecture syllabique : Les syllabes simples — Évaluation diagnostique",
+   "materials": "Tableau syllabique – ardoise – fiche.",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de lire correctement au moins six syllabes simples et d’en combiner deux pour former une suite sonore."
+   ],
+   "body": "",
+   "pages": [
+    "b:4"
+   ],
+   "sample": true,
+   "order": 3
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 1,
+   "session": "Grammaire (30 min)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : Les substituts : il / elle — Évaluation diagnostique",
+   "materials": "Illustrations – tableau – ardoise.",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de remplacer correctement au moins trois noms par « il » ou « elle »."
+   ],
+   "body": "",
+   "pages": [
+    "b:5"
+   ],
+   "sample": true,
+   "order": 4
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 1,
+   "session": "Oral production 1 (30 min)",
+   "activity": "Français",
+   "domain": "Oral production 1",
+   "topic": "Oral production 1 : Se repérer dans le temps et se presenter — Évaluation diagnostique",
+   "materials": "Illustrations – tableau – fiche.",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de citer les sept jours de la semaine et de se présenter en deux phrases simples."
+   ],
+   "body": "",
+   "pages": [
+    "b:6"
+   ],
+   "sample": true,
+   "order": 5
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "Conjugaison (30 min)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Les pronoms personnels sujets — Évaluation diagnostique",
+   "materials": "Fiche – tableau – ardoise.",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de reconnaître les huit pronoms personnels sujets et de les classer en singulier ou pluriel."
+   ],
+   "body": "",
+   "pages": [
+    "b:7"
+   ],
+   "sample": true,
+   "order": 6
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "Lecture (30 min)",
+   "activity": "Français",
+   "domain": "Lecture",
+   "topic": "Lecture : Une sortie au parc animalier — Évaluation diagnostique",
+   "materials": "Texte – illustration – tableau.",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable d’identifier le lieu, de citer deux animaux et de relever deux informations explicites dans un texte court."
+   ],
+   "body": "",
+   "pages": [
+    "b:8"
+   ],
+   "sample": true,
+   "order": 7
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "Orthographe (30 min)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe : Le féminin des noms — Évaluation diagnostique",
+   "materials": "Fiche – illustrations – tableau.",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de reconnaître au moins trois noms féminins et de former correctement deux féminins à partir de noms proposés."
+   ],
+   "body": "",
+   "pages": [
+    "b:9"
+   ],
+   "sample": true,
+   "order": 8
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "Oral production 2 (30 min)",
+   "activity": "Français",
+   "domain": "Oral production 2",
+   "topic": "Oral production 2 : Alphabet, nombres et saisons — Évaluation diagnostique",
+   "materials": "Illustrations – fiche – ardoise.",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de réciter une partie de l’alphabet, de compter de 0 à 10 et de citer les quatre saisons."
+   ],
+   "body": "",
+   "pages": [
+    "b:10"
+   ],
+   "sample": true,
+   "order": 9
+  },
+  {
+   "segment": 0,
+   "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "Copie (30 min)",
+   "activity": "Français",
+   "domain": "Copie",
+   "topic": "Copie : Respecter les conventions de l’écrit — Évaluation diagnostique",
+   "materials": "Tableau – cahier – ardoise – fiche.",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de copier lisiblement une phrase courte en respectant la majuscule initiale, les espaces entre les mots et le point final."
+   ],
+   "body": "",
+   "pages": [
+    "b:11"
+   ],
+   "sample": true,
+   "order": 10
+  },
+  {
+   "order": 11,
    "segment": 1,
    "unitKind": "week",
    "unit": 3,
@@ -41,7 +242,7 @@
    "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 2,
+   "order": 12,
    "segment": 1,
    "unitKind": "week",
    "unit": 3,
@@ -62,7 +263,7 @@
    "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 3,
+   "order": 13,
    "segment": 1,
    "unitKind": "week",
    "unit": 3,
@@ -83,7 +284,7 @@
    "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 4,
+   "order": 14,
    "segment": 1,
    "unitKind": "week",
    "unit": 4,
@@ -104,7 +305,7 @@
    "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 5,
+   "order": 15,
    "segment": 1,
    "unitKind": "week",
    "unit": 4,
@@ -126,7 +327,7 @@
    "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 6,
+   "order": 16,
    "segment": 1,
    "unitKind": "week",
    "unit": 5,
@@ -147,7 +348,7 @@
    "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 7,
+   "order": 17,
    "segment": 1,
    "unitKind": "week",
    "unit": 5,
@@ -168,7 +369,7 @@
    "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 8,
+   "order": 18,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -189,7 +390,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 9,
+   "order": 19,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -210,7 +411,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 10,
+   "order": 20,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -231,7 +432,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 11,
+   "order": 21,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -252,7 +453,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 12,
+   "order": 22,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -274,7 +475,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 13,
+   "order": 23,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -295,7 +496,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 14,
+   "order": 24,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -317,7 +518,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 15,
+   "order": 25,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -338,7 +539,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 16,
+   "order": 26,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -359,7 +560,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 17,
+   "order": 27,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -380,7 +581,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 18,
+   "order": 28,
    "segment": 3,
    "unitKind": "week",
    "unit": 10,
@@ -401,7 +602,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 19,
+   "order": 29,
    "segment": 3,
    "unitKind": "week",
    "unit": 10,
@@ -423,7 +624,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 20,
+   "order": 30,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -444,7 +645,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 21,
+   "order": 31,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -465,7 +666,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 22,
+   "order": 32,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -486,7 +687,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 23,
+   "order": 33,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -507,7 +708,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 24,
+   "order": 34,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -528,7 +729,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 25,
+   "order": 35,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -549,7 +750,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 26,
+   "order": 36,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -571,7 +772,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 27,
+   "order": 37,
    "segment": 4,
    "unitKind": "week",
    "unit": 15,
@@ -592,7 +793,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 28,
+   "order": 38,
    "segment": 4,
    "unitKind": "week",
    "unit": 15,
@@ -613,7 +814,7 @@
    "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
   },
   {
-   "order": 29,
+   "order": 39,
    "segment": 5,
    "unitKind": "week",
    "unit": 16,
@@ -634,7 +835,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
   },
   {
-   "order": 30,
+   "order": 40,
    "segment": 5,
    "unitKind": "week",
    "unit": 16,
@@ -655,7 +856,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
   },
   {
-   "order": 31,
+   "order": 41,
    "segment": 5,
    "unitKind": "week",
    "unit": 16,
@@ -676,7 +877,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
   },
   {
-   "order": 32,
+   "order": 42,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -697,7 +898,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
   },
   {
-   "order": 33,
+   "order": 43,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -718,7 +919,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
   },
   {
-   "order": 34,
+   "order": 44,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -739,7 +940,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
   },
   {
-   "order": 35,
+   "order": 45,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -760,7 +961,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
   },
   {
-   "order": 36,
+   "order": 46,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -781,7 +982,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
   },
   {
-   "order": 37,
+   "order": 47,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -802,7 +1003,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
   },
   {
-   "order": 38,
+   "order": 48,
    "segment": 5,
    "unitKind": "week",
    "unit": 20,
@@ -823,7 +1024,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
   },
   {
-   "order": 39,
+   "order": 49,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -844,7 +1045,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
   },
   {
-   "order": 40,
+   "order": 50,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -865,7 +1066,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
   },
   {
-   "order": 41,
+   "order": 51,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -886,7 +1087,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
   },
   {
-   "order": 42,
+   "order": 52,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -908,7 +1109,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
   },
   {
-   "order": 43,
+   "order": 53,
    "segment": 6,
    "unitKind": "week",
    "unit": 23,
@@ -929,7 +1130,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
   },
   {
-   "order": 44,
+   "order": 54,
    "segment": 6,
    "unitKind": "week",
    "unit": 23,
@@ -950,7 +1151,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
   },
   {
-   "order": 45,
+   "order": 55,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -971,7 +1172,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
   },
   {
-   "order": 46,
+   "order": 56,
    "segment": 6,
    "unitKind": "week",
    "unit": 23,
@@ -992,7 +1193,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
   },
   {
-   "order": 47,
+   "order": 57,
    "segment": 6,
    "unitKind": "week",
    "unit": 23,
@@ -1013,7 +1214,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
   },
   {
-   "order": 48,
+   "order": 58,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -1034,7 +1235,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
   },
   {
-   "order": 49,
+   "order": 59,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -1055,7 +1256,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
   },
   {
-   "order": 50,
+   "order": 60,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -1076,7 +1277,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
   },
   {
-   "order": 51,
+   "order": 61,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -1097,7 +1298,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
   },
   {
-   "order": 52,
+   "order": 62,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -1118,7 +1319,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
   },
   {
-   "order": 53,
+   "order": 63,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -1139,7 +1340,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
   },
   {
-   "order": 54,
+   "order": 64,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -1160,7 +1361,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
   },
   {
-   "order": 55,
+   "order": 65,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -1181,7 +1382,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
   },
   {
-   "order": 56,
+   "order": 66,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -1202,7 +1403,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
   },
   {
-   "order": 57,
+   "order": 67,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -1223,7 +1424,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
   },
   {
-   "order": 58,
+   "order": 68,
    "segment": 7,
    "unitKind": "week",
    "unit": 28,
@@ -1244,7 +1445,7 @@
    "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
   },
   {
-   "order": 59,
+   "order": 69,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -1265,7 +1466,7 @@
    "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
   },
   {
-   "order": 60,
+   "order": 70,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -1287,7 +1488,7 @@
    "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
   },
   {
-   "order": 61,
+   "order": 71,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -1308,7 +1509,7 @@
    "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
   },
   {
-   "order": 62,
+   "order": 72,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -1330,7 +1531,7 @@
    "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
   },
   {
-   "order": 63,
+   "order": 73,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -1351,7 +1552,7 @@
    "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
   },
   {
-   "order": 64,
+   "order": 74,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -1372,7 +1573,7 @@
    "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
   },
   {
-   "order": 65,
+   "order": 75,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -1393,7 +1594,7 @@
    "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
   },
   {
-   "order": 66,
+   "order": 76,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -1414,7 +1615,7 @@
    "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
   },
   {
-   "order": 67,
+   "order": 77,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -1435,7 +1636,7 @@
    "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
   },
   {
-   "order": 68,
+   "order": 78,
    "segment": 8,
    "unitKind": "week",
    "unit": 32,
