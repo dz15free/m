@@ -93,12 +93,18 @@ keys.forEach((key, s) => {
   const from = Math.floor((s * WEEKS.length) / keys.length);
   const to = Math.floor(((s + 1) * WEEKS.length) / keys.length);
   const weeks = WEEKS.slice(from, Math.max(to, from + 1));
+  // التوزيع على أسابيع المقطع بحسب المدة التراكمية للبطاقات (3AP: بالعدد)
+  const mins = list.map((f) => Number(/\d+/.exec(f.duration)?.[0] ?? 45));
+  const total = mins.reduce((a, b) => a + b, 0);
+  let acc = 0;
   list.forEach((f, i) => {
+    const mid = acc + mins[i] / 2;
+    acc += mins[i];
     lessons.push({
       order: lessons.length + 1,
       segment: s + 1,
       unitKind: "week",
-      unit: weeks[Math.min(weeks.length - 1, Math.floor((i * weeks.length) / list.length))],
+      unit: weeks[Math.min(weeks.length - 1, Math.floor((mid / total) * weeks.length))],
       session: `${f.activity}${f.duration ? ` (${f.duration})` : ""}`,
       activity: "Français",
       domain: f.activity,
@@ -125,8 +131,8 @@ const out = {
   subject: "fr",
   title: `Langue française — ${YEAR} année primaire`,
   source: {
-    ar: `بطاقات حصص منشورة للعموم (${level === "5AP" ? "وفق التدرّج السنوي للسنة الخامسة" : "وفق التدرّج السنوي والكتاب المدرسي"})؛ الأسابيع تقديرية`,
-    fr: `Fiches pédagogiques partagées publiquement (${level === "5AP" ? "selon la progression annuelle 5e AP" : "selon la progression annuelle et le manuel"}) ; semaines estimées`,
+    ar: `بطاقات حصص منشورة للعموم (${level === "5AP" ? "وفق التدرّج السنوي للسنة الخامسة 2026/2027: 3 ساعات أسبوعيًا، المقطع 11 ساعة" : "وفق التدرّج السنوي والكتاب المدرسي"})؛ الأسابيع تقديرية`,
+    fr: `Fiches pédagogiques partagées publiquement (${level === "5AP" ? "selon la progression annuelle 5e AP 2026/2027 : 3 h/semaine, séquence de 11 h" : "selon la progression annuelle et le manuel"}) ; semaines estimées`,
   },
   weekMode: "absolute",
   segments,
