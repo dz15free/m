@@ -1,0 +1,1459 @@
+{
+ "id": "4AP_fr",
+ "level": "4AP",
+ "subject": "fr",
+ "title": "Langue française — 4e année primaire",
+ "source": {
+  "ar": "التدرّج السنوي للغة الفرنسية — السنة الرابعة (2026/2027) وبطاقات حصص منشورة (إعداد Mostafa Ami)",
+  "fr": "Progression annuelle 4e AP (2026/2027) et fiches pédagogiques partagées (Mostafa Ami)"
+ },
+ "weekMode": "absolute",
+ "segments": {
+  "1": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)",
+  "2": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)",
+  "3": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)",
+  "4": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)",
+  "5": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)",
+  "6": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)",
+  "7": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)",
+  "8": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+ },
+ "lessons": [
+  {
+   "order": 1,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Séance 1/7 (30 min)",
+   "activity": "Français",
+   "domain": "Actes de parole",
+   "topic": "Actes de parole — Qu’est-ce que tu fais ?",
+   "materials": "Manuel scolaire p.70 — dialogue « Qu’est-ce que tu fais ? »",
+   "objectives": [
+    "Demander et dire ce que l’on fait (dialogue du manuel p.70 : Toufik, sa maman, Louisa).",
+    "Dire les jours de la semaine dans l’ordre et la date du jour."
+   ],
+   "body": "",
+   "pages": [
+    2
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 2,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Séance 2/7 (30 min)",
+   "activity": "Français",
+   "domain": "Oral production",
+   "topic": "Oral production — Qu’est-ce que tu fais ?",
+   "materials": "Objets de la classe : cartable, cahier, stylo, règle, trousse, gomme",
+   "objectives": [
+    "Dire les mots de salutation.",
+    "Nommer le matériel scolaire avec « C’est … »."
+   ],
+   "body": "",
+   "pages": [
+    3
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 3,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Séance 3/7 (90 min)",
+   "activity": "Français",
+   "domain": "Points de langue",
+   "topic": "Points de langue — Qu’est-ce que tu fais ?",
+   "materials": "Images d’actions, cartes-mots ; Tableau",
+   "objectives": [
+    "Dire le verbe faire à l’oral ; remplacer un groupe nominal par il.",
+    "Utiliser des adverbes de temps ; former le féminin des noms en -eur."
+   ],
+   "body": "",
+   "pages": [
+    4
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 4,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Séance 4/7 (60 min)",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Qu’est-ce que tu fais ?",
+   "materials": "Manuel M.S : P 73 et M.S : P 74 ; Étiquettes-mots, images, tableau",
+   "objectives": [
+    "Identifier, prononcer et lire les sons : ui, oui, nain, ein, in ; um, un, aim, ain.",
+    "Les repérer dans des mots et les écrire."
+   ],
+   "body": "",
+   "pages": [
+    5
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 5,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Séance 5/7 (90 min)",
+   "activity": "Français",
+   "domain": "Activités de lecture",
+   "topic": "Activités de lecture — Qu’est-ce que tu fais ?",
+   "materials": "Manuel M.S : P 75 (mots illustrés) ; Images, étiquettes-mots",
+   "objectives": [
+    "Lire et comprendre des mots illustrés, puis un court texte.",
+    "S’initier à la compréhension de l’écrit.",
+    "« Jour de pluie » (C.A : P 68)"
+   ],
+   "body": "",
+   "pages": [
+    6
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 6,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Séance 6/7 (30 min)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine — Qu’est-ce que tu fais ?",
+   "materials": "Manuel M.S : P 77",
+   "objectives": [
+    "Écouter, comprendre et mémoriser la comptine « Dans la salle de bain ».",
+    "Réciter la comptine avec le bon rythme et la bonne voix."
+   ],
+   "body": "",
+   "pages": [
+    7
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 7,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Séance 7/7 (30 min)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Qu’est-ce que tu fais ?",
+   "materials": "Cahier à interlignes, ardoises",
+   "objectives": [
+    "Reproduire des graphèmes ou un énoncé en écriture cursive.",
+    "Respecter les interlignes et l’inclinaison des lettres."
+   ],
+   "body": "",
+   "pages": [
+    8
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu’est-ce que tu fais ? (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 8,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Séance 1/7 (30 min)",
+   "activity": "Français",
+   "domain": "Actes de parole",
+   "topic": "Actes de parole — Je vais à la campagne",
+   "materials": "Manuel scolaire p.79 — dialogue « Je vais à la campagne »",
+   "objectives": [
+    "Demander l’heure : « Quelle heure est-il ? » (dialogue du manuel p.79 : départ pour la campagne).",
+    "Dire l’heure : « Il est … heures. »"
+   ],
+   "body": "",
+   "pages": [
+    9
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 9,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Séance 2/7 (30 min)",
+   "activity": "Français",
+   "domain": "Oral production",
+   "topic": "Oral production — Je vais à la campagne",
+   "materials": "Manuel M.S : P 80 et P 83 ; Images : train, bus, voiture, avion, bateau, vélo",
+   "objectives": [
+    "Dire l’heure.",
+    "Nommer quelques moyens de transport."
+   ],
+   "body": "",
+   "pages": [
+    10
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 10,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Séance 3/7 (90 min)",
+   "activity": "Français",
+   "domain": "Points de langue",
+   "topic": "Points de langue — Je vais à la campagne",
+   "materials": "Images, cartes-mots ; Tableau",
+   "objectives": [
+    "Dire le verbe aimer au futur (à l’oral) ; employer ils et elle.",
+    "Reconnaître le complément circonstanciel de temps ; former le féminin des noms en -ier / -er."
+   ],
+   "body": "",
+   "pages": [
+    11
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 11,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Séance 4/7 (60 min)",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Je vais à la campagne",
+   "materials": "Manuel M.S : P 81 et M.S : P 82 / 83 ; Étiquettes-mots, images, tableau",
+   "objectives": [
+    "Identifier, prononcer et lire les sons : ai, é, è, er, ez, ei, et ; gn, w.",
+    "Les repérer dans des mots et les écrire."
+   ],
+   "body": "",
+   "pages": [
+    12
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 12,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Séance 5/7 (90 min)",
+   "activity": "Français",
+   "domain": "Activités de lecture",
+   "topic": "Activités de lecture — Je vais à la campagne",
+   "materials": "Manuel M.S : P 83 (mots illustrés) ; Images, étiquettes-mots",
+   "objectives": [
+    "Lire et comprendre des mots illustrés, puis un court texte.",
+    "S’initier à la compréhension de l’écrit.",
+    "« Tu as déjà voyagé en train ? » (M.S : P 85 (texte « A la campagne »))"
+   ],
+   "body": "",
+   "pages": [
+    13
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 13,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 8,
+   "session": "Séance 6/7 (30 min)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine — Je vais à la campagne",
+   "materials": "Manuel M.S : P 87",
+   "objectives": [
+    "Écouter, comprendre et mémoriser la comptine « Le train T’chou T’chou ».",
+    "Réciter la comptine avec le bon rythme et la bonne voix."
+   ],
+   "body": "",
+   "pages": [
+    14
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 14,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 8,
+   "session": "Séance 7/7 (30 min)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Je vais à la campagne",
+   "materials": "M.S : P 86 ; Cahier à interlignes, ardoises",
+   "objectives": [
+    "Reproduire des graphèmes ou un énoncé en écriture cursive.",
+    "Respecter les interlignes et l’inclinaison des lettres.",
+    "Modèle au tableau"
+   ],
+   "body": "",
+   "pages": [
+    15
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 15,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 9,
+   "session": "Séance 1/7 (30 min)",
+   "activity": "Français",
+   "domain": "Actes de parole",
+   "topic": "Actes de parole — Nous planterons un arbre",
+   "materials": "Manuel scolaire p.88 — dialogue « Nous planterons des arbres » ; Images : arbre, cour de l’école, pelle, arrosoir",
+   "objectives": [
+    "Situer un événement dans le temps (dialogue du manuel p.88 : la journée de l’arbre, 21 mars).",
+    "Situer un événement dans le lieu."
+   ],
+   "body": "",
+   "pages": [
+    16
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 16,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 9,
+   "session": "Séance 2/7 (30 min)",
+   "activity": "Français",
+   "domain": "Oral production",
+   "topic": "Oral production — Nous planterons un arbre",
+   "materials": "Manuel M.S : P 89",
+   "objectives": [
+    "Dire la date et le lieu de la célébration de la journée de l’arbre.",
+    "Raconter dans l’ordre (la chronologie)."
+   ],
+   "body": "",
+   "pages": [
+    17
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 17,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 9,
+   "session": "Séance 3/7 (90 min)",
+   "activity": "Français",
+   "domain": "Points de langue",
+   "topic": "Points de langue — Nous planterons un arbre",
+   "materials": "Images, cartes-mots ; Tableau",
+   "objectives": [
+    "Dire le verbe planter au futur (à l’oral).",
+    "Employer ils, un nom propre, un GNS ; reconnaître le complément circonstanciel de lieu."
+   ],
+   "body": "",
+   "pages": [
+    18
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 18,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 10,
+   "session": "Séance 4/7 (60 min)",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Nous planterons un arbre",
+   "materials": "Manuel M.S : P 90 et M.S : P 91 ; Étiquettes-mots, images, tableau",
+   "objectives": [
+    "Identifier, prononcer et lire les sons : in, im, on, om, am ; x.",
+    "Les repérer dans des mots et les écrire."
+   ],
+   "body": "",
+   "pages": [
+    19
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 19,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 10,
+   "session": "Séance 5/7 (90 min)",
+   "activity": "Français",
+   "domain": "Activités de lecture",
+   "topic": "Activités de lecture — Nous planterons un arbre",
+   "materials": "Manuel M.S : P 92 (mots illustrés) ; Images, étiquettes-mots",
+   "objectives": [
+    "Lire et comprendre des mots illustrés, puis un court texte.",
+    "S’initier à la compréhension de l’écrit.",
+    "« Tu connais le pommier ? » (M.S : P 94 (texte « Petit arbre deviendra grand »))"
+   ],
+   "body": "",
+   "pages": [
+    20
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 20,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 11,
+   "session": "Séance 6/7 (30 min)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine — Nous planterons un arbre",
+   "materials": "Manuel M.S : P 96",
+   "objectives": [
+    "Écouter, comprendre et mémoriser la comptine « Ran, plan, plan ».",
+    "Réciter la comptine avec le bon rythme et la bonne voix."
+   ],
+   "body": "",
+   "pages": [
+    21
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 21,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 11,
+   "session": "Séance 7/7 (30 min)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Nous planterons un arbre",
+   "materials": "Cahier à interlignes, ardoises",
+   "objectives": [
+    "Reproduire des graphèmes ou un énoncé en écriture cursive.",
+    "Respecter les interlignes et l’inclinaison des lettres."
+   ],
+   "body": "",
+   "pages": [
+    22
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 22,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Séance 1/7 (30 min)",
+   "activity": "Français",
+   "domain": "Actes de parole",
+   "topic": "Actes de parole — Quelle belle journée à la campagne !",
+   "materials": "Manuel scolaire p.97 — dialogue « Quelle belle journée à la campagne ! » ; Images d’une journée à la campagne",
+   "objectives": [
+    "Évoquer des actions vécues (dialogue du manuel p.97 : Youcef, Yacine et Tania).",
+    "Dire ce que l’on a fait à la campagne."
+   ],
+   "body": "",
+   "pages": [
+    23
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 23,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Séance 2/7 (30 min)",
+   "activity": "Français",
+   "domain": "Oral production",
+   "topic": "Oral production — Quelle belle journée à la campagne !",
+   "materials": "Manuel M.S : P 98 ; Images de fruits et d’arbres fruitiers",
+   "objectives": [
+    "Nommer quelques fruits et arbres fruitiers.",
+    "Dire la date du jour."
+   ],
+   "body": "",
+   "pages": [
+    24
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 24,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Séance 3/7 (90 min)",
+   "activity": "Français",
+   "domain": "Points de langue",
+   "topic": "Points de langue — Quelle belle journée à la campagne !",
+   "materials": "Images, cartes-mots ; Tableau",
+   "objectives": [
+    "Dire les verbes être et avoir au futur (à l’oral).",
+    "Employer elles, un nom propre, un GNS ; reconnaître le complément circonstanciel de manière."
+   ],
+   "body": "",
+   "pages": [
+    25
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 25,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Séance 4/7 (60 min)",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Quelle belle journée à la campagne !",
+   "materials": "Manuel M.S : P 99 et M.S : P 100 / 101 ; Étiquettes-mots, images, tableau",
+   "objectives": [
+    "Identifier, prononcer et lire les sons : ç, ce, cy, y ; euil, euille, ouil, ouille, ille, eil, iel.",
+    "Les repérer dans des mots et les écrire."
+   ],
+   "body": "",
+   "pages": [
+    26
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 26,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Séance 5/7 (90 min)",
+   "activity": "Français",
+   "domain": "Activités de lecture",
+   "topic": "Activités de lecture — Quelle belle journée à la campagne !",
+   "materials": "Manuel M.S : P 102 (mots illustrés) ; Images, étiquettes-mots",
+   "objectives": [
+    "Lire et comprendre des mots illustrés, puis un court texte.",
+    "S’initier à la compréhension de l’écrit.",
+    "« Chez mes grands-parents » (M.S : P 103)"
+   ],
+   "body": "",
+   "pages": [
+    27
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 27,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 15,
+   "session": "Séance 6/7 (30 min)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine — Quelle belle journée à la campagne !",
+   "materials": "Manuel M.S : P 105",
+   "objectives": [
+    "Écouter, comprendre et mémoriser la comptine « Une grenouille ».",
+    "Réciter la comptine avec le bon rythme et la bonne voix."
+   ],
+   "body": "",
+   "pages": [
+    28
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 28,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 15,
+   "session": "Séance 7/7 (30 min)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Quelle belle journée à la campagne !",
+   "materials": "Cahier à interlignes, ardoises",
+   "objectives": [
+    "Reproduire des graphèmes ou un énoncé en écriture cursive.",
+    "Respecter les interlignes et l’inclinaison des lettres."
+   ],
+   "body": "",
+   "pages": [
+    29
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne ! (Suite du programme de la 3e A.P)"
+  },
+  {
+   "order": 29,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 16,
+   "session": "Séance 1/10 (30 min)",
+   "activity": "Français",
+   "domain": "Acte de parole",
+   "topic": "Acte de parole — Tu habites où ?",
+   "materials": "Manuel scolaire p.15 — dialogue « Tu habites où ? » (Yacine, Lina, Amira, Massinissa, Madjid)",
+   "objectives": [
+    "Saluer, se présenter, demander et donner une information.",
+    "Utiliser « Tu habites où ? » et « J’habite … » pour situer sa maison."
+   ],
+   "body": "",
+   "pages": [
+    30
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
+  },
+  {
+   "order": 30,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 16,
+   "session": "Séance 2/10 (60 min)",
+   "activity": "Français",
+   "domain": "Lecture compréhension / fluence",
+   "topic": "Lecture compréhension / fluence — Tu habites où ?",
+   "materials": "Manuel scolaire : « L’immeuble blanc » (M.S : P 17) ; Cahier d’activités : « Devant la porte de la maison » (C A : P 7) ; Texte transcrit et/ou photocopié pour la fluence",
+   "objectives": [
+    "Lire et comprendre un texte court sur le quartier.",
+    "Lire avec aisance (fluence) un texte transcrit."
+   ],
+   "body": "",
+   "pages": [
+    31
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
+  },
+  {
+   "order": 31,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 16,
+   "session": "Séance 3/10 (30 min)",
+   "activity": "Français",
+   "domain": "Lexique",
+   "topic": "Lexique — Tu habites où ?",
+   "materials": "Manuel scolaire p.33 — plan du quartier « Rue Ahmed Zabana »",
+   "objectives": [
+    "Connaître et utiliser des noms de lieux du quartier.",
+    "Enrichir son vocabulaire : poste, mairie, école, musée, jardin public, magasin …"
+   ],
+   "body": "",
+   "pages": [
+    32
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
+  },
+  {
+   "order": 32,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 16,
+   "session": "Séance 4/10 (30 min)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire — Tu habites où ?",
+   "materials": "Manuel M.S : P 28 ; Plan du quartier, étiquettes, tableau",
+   "objectives": [
+    "Employer à, au, à la devant un nom de lieu.",
+    "Utiliser les adverbes de position : à côté de, loin de, derrière, en face de."
+   ],
+   "body": "",
+   "pages": [
+    33
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
+  },
+  {
+   "order": 33,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Séance 5/10 (30 min)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison — Tu habites où ?",
+   "materials": "Tableau de conjugaison ; Cartes-pronoms, ardoises",
+   "objectives": [
+    "Reconnaître les pronoms personnels sujets.",
+    "Conjuguer le verbe habiter au présent de l’indicatif."
+   ],
+   "body": "",
+   "pages": [
+    34
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
+  },
+  {
+   "order": 34,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Séance 6/10 (30 min)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe — Tu habites où ?",
+   "materials": "Manuel M.S : P 37 ; Étiquettes de noms, tableau",
+   "objectives": [
+    "Former le pluriel des noms en ajoutant s.",
+    "Reconnaître les noms qui ne changent pas au pluriel (s, x, z)."
+   ],
+   "body": "",
+   "pages": [
+    35
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
+  },
+  {
+   "order": 35,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Séance 7/10 (30 min)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique — Tu habites où ?",
+   "materials": "Manuel M.S : P 18 ; Étiquettes-mots, tableau",
+   "objectives": [
+    "Identifier et lire les sons oi et oin.",
+    "Lire des mots et des phrases contenant ces sons."
+   ],
+   "body": "",
+   "pages": [
+    36
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
+  },
+  {
+   "order": 36,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Séance 8/10 (30 min)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Tu habites où ?",
+   "materials": "Manuel : Page 18 ; Ardoises, cahier de dictée",
+   "objectives": [
+    "Réinvestir les ressources étudiées dans la séquence.",
+    "Écrire sous la dictée un court texte en respectant l’orthographe."
+   ],
+   "body": "",
+   "pages": [
+    37
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
+  },
+  {
+   "order": 37,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Séance 9/10 (30 min)",
+   "activity": "Français",
+   "domain": "Phonétique articulatoire",
+   "topic": "Phonétique articulatoire — Tu habites où ?",
+   "materials": "Images (maman, maison, jardin …) ; Tableau",
+   "objectives": [
+    "Discriminer et prononcer les sons an, on, in.",
+    "Repérer ces sons dans des mots."
+   ],
+   "body": "",
+   "pages": [
+    38
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
+  },
+  {
+   "order": 38,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Séance 10/10 (60 min)",
+   "activity": "Français",
+   "domain": "Production orale / écrite",
+   "topic": "Production orale / écrite — Tu habites où ?",
+   "materials": "Plan du quartier, images ; Cahier d’essai, tableau",
+   "objectives": [
+    "Situer sa maison à l’aide d’un adverbe de position.",
+    "Écrire une ou deux phrases correctes à partir d’un modèle."
+   ],
+   "body": "",
+   "pages": [
+    39
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)"
+  },
+  {
+   "order": 39,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Séance 1/10 (30 min)",
+   "activity": "Français",
+   "domain": "Acte de parole",
+   "topic": "Acte de parole — Je vais chez Madjid",
+   "materials": "Manuel scolaire p.28 — Amira téléphone à Tanina ; Plan du quartier, cartes-prénoms (Madjid, Amira, Tanina …)",
+   "objectives": [
+    "Demander où habite quelqu’un.",
+    "Répondre : « X habite … » en situant sa maison."
+   ],
+   "body": "",
+   "pages": [
+    40
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
+  },
+  {
+   "order": 40,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Séance 2/10 (60 min)",
+   "activity": "Français",
+   "domain": "Lecture compréhension / fluence",
+   "topic": "Lecture compréhension / fluence — Je vais chez Madjid",
+   "materials": "Manuel scolaire : « Notre quartier » (M.S : P 31) ; Cahier d’activités : « Je lis et je comprends » (C A : P 15) ; Texte transcrit et/ou photocopié pour la fluence",
+   "objectives": [
+    "Lire et comprendre un texte sur le quartier.",
+    "Lire avec aisance un texte transcrit."
+   ],
+   "body": "",
+   "pages": [
+    41
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
+  },
+  {
+   "order": 41,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Séance 3/10 (30 min)",
+   "activity": "Français",
+   "domain": "Lexique",
+   "topic": "Lexique — Je vais chez Madjid",
+   "materials": "Manuel M.S : P 17 ; Étiquettes : Madjid, garçon, Alger, ville, rue …",
+   "objectives": [
+    "Distinguer un nom propre d’un nom commun.",
+    "Écrire la majuscule aux noms propres."
+   ],
+   "body": "",
+   "pages": [
+    42
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
+  },
+  {
+   "order": 42,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Séance 4/10 (30 min)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire — Je vais chez Madjid",
+   "materials": "Manuel M.S : P 17 et P 26",
+   "objectives": [
+    "Remplacer un nom propre ou un nom commun par il / elle.",
+    "Distinguer la phrase déclarative et la phrase interrogative.",
+    "Phrases écrites au tableau"
+   ],
+   "body": "",
+   "pages": [
+    43
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
+  },
+  {
+   "order": 43,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 21,
+   "session": "Séance 5/10 (30 min)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison — Je vais chez Madjid",
+   "materials": "Manuel M.S : P 16 ; Tableau de conjugaison, ardoises",
+   "objectives": [
+    "Reconnaître le verbe être dans une phrase.",
+    "Le conjuguer au présent de l’indicatif."
+   ],
+   "body": "",
+   "pages": [
+    44
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
+  },
+  {
+   "order": 44,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 21,
+   "session": "Séance 6/10 (30 min)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe — Je vais chez Madjid",
+   "materials": "Manuel M.S : P 77 ; Étiquettes de noms, tableau",
+   "objectives": [
+    "Former le pluriel de noms en -eau et -eu avec x.",
+    "Écrire correctement le pluriel de ces noms."
+   ],
+   "body": "",
+   "pages": [
+    45
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
+  },
+  {
+   "order": 45,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 21,
+   "session": "Séance 7/10 (30 min)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique — Je vais chez Madjid",
+   "materials": "Manuel M.S : P 27 ; Étiquettes-mots, tableau",
+   "objectives": [
+    "Distinguer et lire les sons s et z.",
+    "Lire des mots contenant ces sons."
+   ],
+   "body": "",
+   "pages": [
+    46
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
+  },
+  {
+   "order": 46,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 22,
+   "session": "Séance 8/10 (30 min)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Je vais chez Madjid",
+   "materials": "Manuel M.S : P 26 ; Ardoises, cahier de dictée",
+   "objectives": [
+    "Réinvestir les ressources étudiées.",
+    "Écrire sous la dictée un court texte avec une phrase interrogative."
+   ],
+   "body": "",
+   "pages": [
+    47
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
+  },
+  {
+   "order": 47,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 22,
+   "session": "Séance 9/10 (30 min)",
+   "activity": "Français",
+   "domain": "Phonétique articulatoire",
+   "topic": "Phonétique articulatoire — Je vais chez Madjid",
+   "materials": "Images (poule, rue, lune, route …) ; Tableau",
+   "objectives": [
+    "Discriminer et prononcer les sons ou et u.",
+    "Repérer ces sons dans des mots."
+   ],
+   "body": "",
+   "pages": [
+    48
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
+  },
+  {
+   "order": 48,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 22,
+   "session": "Séance 10/10 (60 min)",
+   "activity": "Français",
+   "domain": "Production orale / écrite",
+   "topic": "Production orale / écrite — Je vais chez Madjid",
+   "materials": "Manuel scolaire p.29 — Tâche « L’imagier de notre quartier »",
+   "objectives": [
+    "Situer sa maison à l’aide d’un indicateur de lieu, comme Madjid dans le manuel.",
+    "Dessiner et écrire une phrase correcte pour l’imagier du quartier."
+   ],
+   "body": "",
+   "pages": [
+    49
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 2 : Je vais chez Madjid (Programme de la 4e A.P)"
+  },
+  {
+   "order": 49,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 23,
+   "session": "Séance 1/10 (30 min)",
+   "activity": "Français",
+   "domain": "Acte de parole",
+   "topic": "Acte de parole — Au magasin",
+   "materials": "Manuel scolaire p.32 — dialogue « Au magasin » (Lina et Madjid)",
+   "objectives": [
+    "Demander où se trouve un lieu.",
+    "Répondre pour localiser un magasin."
+   ],
+   "body": "",
+   "pages": [
+    50
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
+  },
+  {
+   "order": 50,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 23,
+   "session": "Séance 2/10 (60 min)",
+   "activity": "Français",
+   "domain": "Lecture compréhension / fluence",
+   "topic": "Lecture compréhension / fluence — Au magasin",
+   "materials": "Texte transcrit et/ou photocopié : « Au magasin » (dialogue, manuel p.32)",
+   "objectives": [
+    "Lire et comprendre deux textes courts.",
+    "Lire avec aisance un texte transcrit."
+   ],
+   "body": "",
+   "pages": [
+    51
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
+  },
+  {
+   "order": 51,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 23,
+   "session": "Séance 3/10 (30 min)",
+   "activity": "Français",
+   "domain": "Lexique",
+   "topic": "Lexique — Au magasin",
+   "materials": "Manuel scolaire p.34 — « J’ai un blouson bleu. Le blouson est beau. » ; Crayons de couleur, objets de la classe",
+   "objectives": [
+    "Connaître les noms des couleurs.",
+    "Distinguer le nom de couleur (le bleu) de l’adjectif de couleur (un blouson bleu)."
+   ],
+   "body": "",
+   "pages": [
+    52
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
+  },
+  {
+   "order": 52,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 23,
+   "session": "Séance 4/10 (30 min)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire — Au magasin",
+   "materials": "Manuel M.S : P 24 ; Images de lieux, tableau",
+   "objectives": [
+    "Reconnaître les articles définis et indéfinis.",
+    "Employer l’article qui convient devant un nom."
+   ],
+   "body": "",
+   "pages": [
+    53
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
+  },
+  {
+   "order": 53,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 24,
+   "session": "Séance 5/10 (30 min)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison — Au magasin",
+   "materials": "Tableau de conjugaison ; Plan du quartier, ardoises",
+   "objectives": [
+    "Reconnaître les verbes se trouver et se situer.",
+    "Les conjuguer au présent de l’indicatif."
+   ],
+   "body": "",
+   "pages": [
+    54
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
+  },
+  {
+   "order": 54,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 24,
+   "session": "Séance 6/10 (30 min)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe — Au magasin",
+   "materials": "Étiquettes-couleurs ; Ardoises, tableau",
+   "objectives": [
+    "Accorder l’adjectif de couleur avec le nom féminin.",
+    "Écrire correctement le féminin des adjectifs de couleur."
+   ],
+   "body": "",
+   "pages": [
+    55
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
+  },
+  {
+   "order": 55,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 24,
+   "session": "Séance 7/10 (30 min)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique — Au magasin",
+   "materials": "Manuel M.S : P 38 ; Étiquettes-mots, tableau",
+   "objectives": [
+    "Lire le son x prononcé ks ou gz.",
+    "Lire des mots contenant ce son."
+   ],
+   "body": "",
+   "pages": [
+    56
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
+  },
+  {
+   "order": 56,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Séance 8/10 (30 min)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Au magasin",
+   "materials": "Ardoises, cahier de dictée",
+   "objectives": [
+    "Réinvestir les ressources étudiées.",
+    "Écrire sous la dictée un court texte."
+   ],
+   "body": "",
+   "pages": [
+    57
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
+  },
+  {
+   "order": 57,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Séance 9/10 (30 min)",
+   "activity": "Français",
+   "domain": "Phonétique articulatoire",
+   "topic": "Phonétique articulatoire — Au magasin",
+   "materials": "Images (poste, boulevard, pain, bain …) ; Tableau",
+   "objectives": [
+    "Discriminer et prononcer les sons p et b.",
+    "Repérer ces sons dans des mots."
+   ],
+   "body": "",
+   "pages": [
+    58
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
+  },
+  {
+   "order": 58,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Séance 10/10 (60 min)",
+   "activity": "Français",
+   "domain": "Production orale / écrite",
+   "topic": "Production orale / écrite — Au magasin",
+   "materials": "Plan du quartier, feuille d’affiche ; Crayons de couleur, cahier d’essai",
+   "objectives": [
+    "Localiser son école à l’aide d’un adverbe de position.",
+    "Réaliser une petite affiche pour localiser son école."
+   ],
+   "body": "",
+   "pages": [
+    59
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : C’est notre quartier ! — Séquence 3 : Au magasin (Programme de la 4e A.P)"
+  },
+  {
+   "order": 59,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Séance 1/10 (30 min)",
+   "activity": "Français",
+   "domain": "Acte de parole",
+   "topic": "Acte de parole — Bonne année !",
+   "materials": "Cartes de vœux, images de fêtes ; Tableau",
+   "objectives": [
+    "Souhaiter un vœu à l’occasion d’une fête.",
+    "Utiliser des formules de souhaits."
+   ],
+   "body": "",
+   "pages": [
+    60
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+  },
+  {
+   "order": 60,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Séance 2/10 (60 min)",
+   "activity": "Français",
+   "domain": "Lecture compréhension / fluence",
+   "topic": "Lecture compréhension / fluence — Bonne année !",
+   "materials": "Texte transcrit et/ou photocopié : « La fête du Mouloud » ; Texte pour la fluence",
+   "objectives": [
+    "Lire et comprendre des textes sur les fêtes.",
+    "Lire avec aisance un texte transcrit.",
+    "« Le mois de Yennayer » (C A : P 33)"
+   ],
+   "body": "",
+   "pages": [
+    61
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+  },
+  {
+   "order": 61,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Séance 3/10 (30 min)",
+   "activity": "Français",
+   "domain": "Lexique",
+   "topic": "Lexique — Bonne année !",
+   "materials": "Manuel scolaire — plats de Yennayer (galettes, beignets, couscous, figues sèches, noix)",
+   "objectives": [
+    "Connaître le lexique des fêtes, notamment Yennayer.",
+    "Utiliser ces mots dans des phrases."
+   ],
+   "body": "",
+   "pages": [
+    62
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+  },
+  {
+   "order": 62,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Séance 4/10 (30 min)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire — Bonne année !",
+   "materials": "Manuel M.S : P 47 et P 48",
+   "objectives": [
+    "Reconnaître la phrase exclamative et la phrase impérative.",
+    "Reconnaître l’adjectif qualificatif.",
+    "Phrases écrites au tableau"
+   ],
+   "body": "",
+   "pages": [
+    63
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+  },
+  {
+   "order": 63,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Séance 5/10 (30 min)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison — Bonne année !",
+   "materials": "Tableau de conjugaison ; Ardoises",
+   "objectives": [
+    "Reconnaître le verbe avoir dans une phrase.",
+    "Le conjuguer au présent de l’indicatif."
+   ],
+   "body": "",
+   "pages": [
+    64
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+  },
+  {
+   "order": 64,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Séance 6/10 (30 min)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe — Bonne année !",
+   "materials": "Manuel M.S : P 57 ; Étiquettes, ardoises",
+   "objectives": [
+    "Former le féminin des adjectifs en -eux.",
+    "Écrire correctement ce féminin."
+   ],
+   "body": "",
+   "pages": [
+    65
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+  },
+  {
+   "order": 65,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Séance 7/10 (30 min)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique — Bonne année !",
+   "materials": "Manuel M.S : P 48 ; Étiquettes-mots, tableau",
+   "objectives": [
+    "Distinguer et lire les sons k et g.",
+    "Lire des mots contenant ces sons."
+   ],
+   "body": "",
+   "pages": [
+    66
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+  },
+  {
+   "order": 66,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Séance 8/10 (30 min)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Bonne année !",
+   "materials": "Ardoises, cahier de dictée Activité : Dictée",
+   "objectives": [
+    "Réinvestir les ressources étudiées.",
+    "Écrire sous la dictée un court passage."
+   ],
+   "body": "",
+   "pages": [
+    67
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+  },
+  {
+   "order": 67,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Séance 9/10 (30 min)",
+   "activity": "Français",
+   "domain": "Phonétique articulatoire",
+   "topic": "Phonétique articulatoire — Bonne année !",
+   "materials": "Images (voiture, vélo, fête, fleur …) ; Tableau",
+   "objectives": [
+    "Discriminer et prononcer les sons v et f.",
+    "Repérer ces sons dans des mots."
+   ],
+   "body": "",
+   "pages": [
+    68
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+  },
+  {
+   "order": 68,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Séance 10/10 (60 min)",
+   "activity": "Français",
+   "domain": "Production orale / écrite",
+   "topic": "Production orale / écrite — Bonne année !",
+   "materials": "Cartes de vœux, feuille, crayons de couleur ; Cahier d’essai, tableau",
+   "objectives": [
+    "Exprimer un souhait à l’occasion d’une fête.",
+    "Écrire un court message de vœux."
+   ],
+   "body": "",
+   "pages": [
+    69
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C’est la fête ! — Séquence 1 : Bonne année ! (Programme de la 4e A.P)"
+  }
+ ]
+}
