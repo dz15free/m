@@ -2,7 +2,7 @@
  * الفرنسية — السنة الرابعة: «Progression annuelle de la 4ème A.P (2026/2027)» + «Fiches pédagogiques — progression complète»
  * (بطاقات منشورة، إعداد Mostafa Ami). كل صفحة بطاقة حصة: Projet / Séquence / Activité / Séance k/n / Objectifs.
  * ترتيب التدرّج: تتمة برنامج السنة الثالثة (المشروع 3 المقطع 3 + المشروع 4)، ثم المشروع 1 والمقطع 1 من المشروع 2.
- * المقطع = 6 ساعات (3 أسابيع بحصتين)، بعد أسبوعي التقويم التشخيصي، وخارج أسبوعي التقويم 12 و17 (كبقية مواد 4AP).
+ * توزيع الأسابيع وفق «الملحق 2» الوزاري (Le nouveau déroulement séquentiel de la 4e A.P).
  *
  *   node scripts/curriculum/build-fr-4ap.mjs <fiches.pdf> <out-dir>
  */
@@ -31,20 +31,33 @@ for (let n = 2; n <= nPages; n++) {
   fiches.push({ page: n, projet: Number(projet[1]), projetTitle: projet[2], seq: Number(seq[1]), seqTitle: seq[2], act, dur, seance: seance ? `${seance[1]}/${seance[2]}` : "", objectives, support });
 }
 
-// ترتيب المقاطع كما في الملف (= التدرّج) وأسابيعها
-const WEEKS = [3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
+// الملحق (2) — «Le nouveau déroulement séquentiel de la 4e A.P» (2026/2027):
+//   تتمة برنامج 3AP: المقطع = 6 ساعات (3 أسابيع بحصتين)؛ برنامج 4AP: المقطع = 8 ساعات (4 أسابيع) بهذا الترتيب:
+//   أ1 تفاوض/شفوي/قراءة 1/معجم — أ2 قراءة 2/قواعد/قراءة منهجية — أ3 طلاقة/تصريف/إملاء/صوتيات — أ4 إنتاج/تقويم.
+// الأسابيع من الثالث (بعد التشخيص)، خارج أسبوعي التقويم 12 و17 (كبقية مواد 4AP): 28 أسبوعًا = 56 ساعة.
+const WEEKS = [3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32];
+const WEEK_OF_ACTIVITY = [
+  [0, /Acte|Lecture compréhension|Lexique/],
+  [1, /Grammaire|Lecture systématique/],
+  [2, /Conjugaison|Orthographe|Phonétique|Dictée/],
+  [3, /Production/],
+];
 const seqKeys = [...new Set(fiches.map((f) => `${f.projet}:${f.seq}`))];
 const PART = (f) => (fiches.indexOf(f) < fiches.findIndex((x) => x.projet === 1) ? "Suite du programme de la 3e A.P" : "Programme de la 4e A.P");
 const lessons = [];
+let cursor = 0;
 seqKeys.forEach((key, s) => {
   const list = fiches.filter((f) => `${f.projet}:${f.seq}` === key);
-  const weeks = WEEKS.slice(s * 3, s * 3 + 3);
+  const len = PART(list[0]).startsWith("Suite") ? 3 : 4;
+  const weeks = WEEKS.slice(cursor, cursor + len);
+  cursor += len;
   list.forEach((f, i) => {
+    const byAct = len === 4 ? WEEK_OF_ACTIVITY.find(([, re]) => re.test(f.act))?.[0] : undefined;
     lessons.push({
       order: lessons.length + 1,
       segment: s + 1,
       unitKind: "week",
-      unit: weeks[Math.min(2, Math.floor((i * 3) / list.length))],
+      unit: weeks[byAct ?? Math.min(len - 1, Math.floor((i * len) / list.length))],
       session: `Séance ${f.seance}${f.dur ? ` (${f.dur})` : ""}`,
       activity: "Français",
       domain: f.act,

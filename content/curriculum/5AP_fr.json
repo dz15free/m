@@ -1,0 +1,2975 @@
+{
+ "id": "5AP_fr",
+ "level": "5AP",
+ "subject": "fr",
+ "title": "Langue française — 5e année primaire",
+ "source": {
+  "ar": "بطاقات حصص منشورة للعموم (وفق التدرّج السنوي للسنة الخامسة)؛ الأسابيع تقديرية",
+  "fr": "Fiches pédagogiques partagées publiquement (selon la progression annuelle 5e AP) ; semaines estimées"
+ },
+ "weekMode": "absolute",
+ "segments": {
+  "1": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
+  "2": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?",
+  "3": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée",
+  "4": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille",
+  "5": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)",
+  "6": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
+  "7": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
+  "8": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+ },
+ "lessons": [
+  {
+   "order": 1,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Présentation du projet (45 mn)",
+   "activity": "Français",
+   "domain": "Présentation du projet",
+   "topic": "Présentation du projet — Pauvre petite gazelle !",
+   "materials": "Manuel scolaire page 11– Tableau",
+   "objectives": [
+    "Impliquer l’apprenant dans le planning de la réalisation des tâches partielles et / ou finales"
+   ],
+   "body": "",
+   "pages": [
+    3
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 2,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Oral compréhension (45 mn)",
+   "activity": "Français",
+   "domain": "Oral compréhension",
+   "topic": "Oral compréhension — Pauvre petite gazelle !",
+   "materials": "Illustration – support audio ou audio-visuel",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    4
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 3,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Compréhension de l’écrit 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 1",
+   "topic": "Compréhension de l’écrit 1 : La gazelle — Pauvre petite gazelle !",
+   "materials": "L’illustration de la gazelle – Manuel scolaire page 15",
+   "objectives": [
+    "Bâtir des hypothèses de lecture à partir de l’illustration du texte"
+   ],
+   "body": "",
+   "pages": [
+    5
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 4,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Vocabulaire (45 mn)",
+   "activity": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : Lexique thématique : les parties du corps et l'aspect physique de l'animal — Pauvre petite gazelle !",
+   "materials": "Illustration de la gazelle – Manuel scolaire page 15",
+   "objectives": [
+    "Enrichir le stock lexical de l'élève pour décrire le physique d'un animal (parties du corps, couleur, taille)"
+   ],
+   "body": "",
+   "pages": [
+    6
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 5,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Oral production 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production 1",
+   "topic": "Oral production 1 — Pauvre petite gazelle !",
+   "materials": "Illustrations – Manuel scolaire page 12",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    7
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 6,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : L'adjectif qualificatif épithète — Pauvre petite gazelle !",
+   "materials": "Manuel scolaire page 16 – Tableau",
+   "objectives": [
+    "Identifier l'adjectif qualificatif épithète et l'accorder avec le nom qu'il qualifie"
+   ],
+   "body": "",
+   "pages": [
+    8
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 7,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : La pronominalisation (il / elle, ils / elles) — Pauvre petite gazelle !",
+   "materials": "Manuel scolaire page 16 – Ardoises",
+   "objectives": [
+    "Remplacer un groupe nominal par le pronom personnel qui convient pour éviter la répétition"
+   ],
+   "body": "",
+   "pages": [
+    9
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 8,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Compréhension de l'écrit 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l'écrit 2",
+   "topic": "Compréhension de l'écrit 2 : Un animal sauvage — Pauvre petite gazelle !",
+   "materials": "Cahier d'activités page 8 – Illustration",
+   "objectives": [
+    "Confirmer ou infirmer des hypothèses de lecture et dégager les caractéristiques physiques de l'animal décrit"
+   ],
+   "body": "",
+   "pages": [
+    10
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 9,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Oral production 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production 2",
+   "topic": "Oral production 2 : « Je m’exprime » — Pauvre petite gazelle !",
+   "materials": "Illustrations – Manuel scolaire page 13",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    11
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 10,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Conjugaison (45 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Le verbe être et avoir au présent — Pauvre petite gazelle !",
+   "materials": "Manuel scolaire page 29 – Des affiches de conjugaison",
+   "objectives": [
+    "L’emploi correct du verbe être et avoir dans des situations de communication"
+   ],
+   "body": "",
+   "pages": [
+    12
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 11,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Lecture systématique (45 mn)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique : Les sons : ail, eil, ouil, euil — Pauvre petite gazelle !",
+   "materials": "Tableau – Cahier de classe",
+   "objectives": [
+    "Identifier et lire correctement les sons ail, eil, ouil, euil"
+   ],
+   "body": "",
+   "pages": [
+    13
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 12,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Orthographe (45 mn)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe : Accord de l'adjectif qualificatif avec le nom (masculin / féminin) — Pauvre petite gazelle !",
+   "materials": "Exercices transcrits au tableau ou photocopiés",
+   "objectives": [
+    "Accorder correctement l'adjectif qualificatif en genre avec le nom"
+   ],
+   "body": "",
+   "pages": [
+    14
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 13,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Dictée (45 mn)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Pauvre petite gazelle !",
+   "materials": "Texte support de la séquence (la gazelle) – Ardoises, cahiers",
+   "objectives": [
+    "Reproduire correctement un passage en respectant l'orthographe et la ponctuation"
+   ],
+   "body": "",
+   "pages": [
+    15
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 14,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Préparation à l’écrit (45 mn)",
+   "activity": "Français",
+   "domain": "Préparation à l’écrit",
+   "topic": "Préparation à l’écrit — Pauvre petite gazelle !",
+   "materials": "Illustrations -Manuel scolaire page 21 – Ardoises",
+   "objectives": [
+    "Comprendre les consignes et répondre par écrit aux différents exercices"
+   ],
+   "body": "",
+   "pages": [
+    16
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 15,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Production écrite (1er et 2ème jet) (45 mn)",
+   "activity": "Français",
+   "domain": "Production écrite (1er et 2ème jet)",
+   "topic": "Production écrite (1er et 2ème jet) — Pauvre petite gazelle !",
+   "materials": "Illustrations – boite à outils (mots)",
+   "objectives": [
+    "Respecter une consigne d’écriture et organiser des informations pour écrire un texte."
+   ],
+   "body": "",
+   "pages": [
+    17
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 16,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Compte rendu (60 mn)",
+   "activity": "Français",
+   "domain": "Compte rendu",
+   "topic": "Compte rendu — Pauvre petite gazelle !",
+   "materials": "-Illustrations – Ardoises",
+   "objectives": [
+    "- Corriger collectivement les erreurs communes les plus Caractéristiques -Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+   ],
+   "body": "",
+   "pages": [
+    18
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 17,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Comptine (30 mn)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine : Alouette — Pauvre petite gazelle !",
+   "materials": "Support audio – Illustration d'un oiseau",
+   "objectives": [
+    "Mémoriser et chanter la comptine « Alouette » en respectant le rythme"
+   ],
+   "body": "",
+   "pages": [
+    19
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 18,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Réalisation partielle du projet (30 mn)",
+   "activity": "Français",
+   "domain": "Réalisation partielle du projet",
+   "topic": "Réalisation partielle du projet — Pauvre petite gazelle !",
+   "materials": "Illustrations -Manuel scolaire page 22 – Les dessins des animaux",
+   "objectives": [
+    "Amener l’élève à écrire des devinettes illustrées pour décrire des animaux"
+   ],
+   "body": "",
+   "pages": [
+    20
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 19,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Evaluation (60 mn)",
+   "activity": "Français",
+   "domain": "Evaluation",
+   "topic": "Evaluation — Pauvre petite gazelle !",
+   "materials": "-Tableau – Doubles feuilles",
+   "objectives": [
+    "Renforcer les acquis des apprenants par des exercices variés"
+   ],
+   "body": "",
+   "pages": [
+    21
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+  },
+  {
+   "order": 20,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Présentation du projet (45 mn)",
+   "activity": "Français",
+   "domain": "Présentation du projet",
+   "topic": "Présentation du projet — C'est un vrai fennec ?",
+   "materials": "Manuel scolaire page 33– Tableau",
+   "objectives": [
+    "Impliquer l’apprenant dans le planning de la réalisation des tâches finales"
+   ],
+   "body": "",
+   "pages": [
+    23
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 21,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Oral compréhension (45 mn)",
+   "activity": "Français",
+   "domain": "Oral compréhension",
+   "topic": "Oral compréhension — C'est un vrai fennec ?",
+   "materials": "Illustration – support audio ou audio-visuel – Manuel page 23",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    24
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 22,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Compréhension de l’écrit 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 1",
+   "topic": "Compréhension de l’écrit 1 : Le fennec — C'est un vrai fennec ?",
+   "materials": "L’illustration du fennec – Manuel scolaire page 26",
+   "objectives": [
+    "Bâtir des hypothèses de lecture à partir de l’illustration du texte"
+   ],
+   "body": "",
+   "pages": [
+    25
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 23,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Vocabulaire (45 mn)",
+   "activity": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : Lexique thématique : régime alimentaire, habitat, noms (mâle / femelle / petit) — C'est un vrai fennec ?",
+   "materials": "Illustrations – Manuel scolaire page 26",
+   "objectives": [
+    "Enrichir le stock lexical relatif à l'alimentation, l'habitat et aux noms des animaux selon leur sexe et leur âge"
+   ],
+   "body": "",
+   "pages": [
+    26
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 24,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Oral production (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production",
+   "topic": "Oral production — C'est un vrai fennec ?",
+   "materials": "Illustrations – Manuel scolaire page 23",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    27
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 25,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : Le verbe d’état et l’adjectif attribut — C'est un vrai fennec ?",
+   "materials": "Manuel scolaire page 27 - Cahiers de classe",
+   "objectives": [
+    "Identifier et connaître le verbe d’état et l’adjectif attribut"
+   ],
+   "body": "",
+   "pages": [
+    28
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 26,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : Le complément d'objet direct et indirect (COD / COI) — C'est un vrai fennec ?",
+   "materials": "Manuel scolaire pages 17/28 – Tableau",
+   "objectives": [
+    "Identifier le COD et le COI dans une phrase et les distinguer"
+   ],
+   "body": "",
+   "pages": [
+    29
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 27,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Compréhension de l’écrit 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 2",
+   "topic": "Compréhension de l’écrit 2 : Un animal du désert — C'est un vrai fennec ?",
+   "materials": "L’illustration du fennec – Cahier d’activités page 21",
+   "objectives": [
+    "Identifier les actes de parole dans des textes de lecture"
+   ],
+   "body": "",
+   "pages": [
+    30
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 28,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Oral production 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production 2",
+   "topic": "Oral production 2 : « Je m’exprime » — C'est un vrai fennec ?",
+   "materials": "Illustrations – Manuel scolaire page 24",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    31
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 29,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Conjugaison (45 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Les verbes du 1er groupe et le verbe « se nourrir » au présent de l'indicatif — C'est un vrai fennec ?",
+   "materials": "Manuel scolaire page 27 – Tableau de conjugaison",
+   "objectives": [
+    "Conjuguer les verbes du 1er groupe et le verbe se nourrir au présent de l'indicatif"
+   ],
+   "body": "",
+   "pages": [
+    32
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 30,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Lecture systématique (45 mn)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique : Les sons : qu / c — C'est un vrai fennec ?",
+   "materials": "Tableau – Cahier de classe",
+   "objectives": [
+    "Distinguer et lire correctement les sons qu et c (k)"
+   ],
+   "body": "",
+   "pages": [
+    33
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 31,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Orthographe (45 mn)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe : Accord de l'adjectif qualificatif avec le nom (singulier / pluriel) — C'est un vrai fennec ?",
+   "materials": "Exercices transcrits au tableau ou photocopiés",
+   "objectives": [
+    "Accorder l'adjectif qualificatif en nombre avec le nom"
+   ],
+   "body": "",
+   "pages": [
+    34
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 32,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Lecture systématique 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Lecture systématique 2",
+   "topic": "Lecture systématique 2 : Les sons : g / gn — C'est un vrai fennec ?",
+   "materials": "Tableau – Cahier de classe",
+   "objectives": [
+    "Distinguer et lire correctement les sons g et gn"
+   ],
+   "body": "",
+   "pages": [
+    35
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 33,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Dictée (45 mn)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — C'est un vrai fennec ?",
+   "materials": "Texte support de la séquence (le fennec) – Ardoises, cahiers",
+   "objectives": [
+    "Reproduire correctement un passage en respectant l'orthographe et la ponctuation"
+   ],
+   "body": "",
+   "pages": [
+    36
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 34,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 8,
+   "session": "Préparation à l’écrit (45 mn)",
+   "activity": "Français",
+   "domain": "Préparation à l’écrit",
+   "topic": "Préparation à l’écrit — C'est un vrai fennec ?",
+   "materials": "Illustrations -Manuel scolaire page 32 – Ardoises",
+   "objectives": [
+    "- Comprendre les consignes et répondre par écrit aux différents exercices proposés."
+   ],
+   "body": "",
+   "pages": [
+    37
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 35,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 8,
+   "session": "Production écrite (45 mn)",
+   "activity": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite — C'est un vrai fennec ?",
+   "materials": "Illustrations – boite à outils (mots) – Manuel scolaire page 32",
+   "objectives": [
+    "- Respecter une consigne d’écriture et organiser des informations pour écrire un texte"
+   ],
+   "body": "",
+   "pages": [
+    38
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 36,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 8,
+   "session": "Compte rendu (60 mn)",
+   "activity": "Français",
+   "domain": "Compte rendu",
+   "topic": "Compte rendu — C'est un vrai fennec ?",
+   "materials": "-Illustrations – Ardoises",
+   "objectives": [
+    "- Corriger collectivement les erreurs communes les plus Caractéristiques. -Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+   ],
+   "body": "",
+   "pages": [
+    39
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 37,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 8,
+   "session": "Comptine (30 mn)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine : Le fennec — C'est un vrai fennec ?",
+   "materials": "Illustration du fennec –Cahier d’activités page 19",
+   "objectives": [
+    "Amener l’apprenant à mémoriser une chanson"
+   ],
+   "body": "",
+   "pages": [
+    40
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 38,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 8,
+   "session": "Réalisation du projet (30 mn)",
+   "activity": "Français",
+   "domain": "Réalisation du projet",
+   "topic": "Réalisation du projet — C'est un vrai fennec ?",
+   "materials": "Illustrations -Manuel scolaire page 33 – Les dessins des animaux",
+   "objectives": [
+    "Amener l’élève à fabriquer un poster pour décrire un animal sauvage"
+   ],
+   "body": "",
+   "pages": [
+    41
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 39,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 8,
+   "session": "Evaluation (60 mn)",
+   "activity": "Français",
+   "domain": "Evaluation",
+   "topic": "Evaluation — C'est un vrai fennec ?",
+   "materials": "-Tableau – Doubles feuilles",
+   "objectives": [
+    "Renforcer les acquis des apprenants par des exercices"
+   ],
+   "body": "",
+   "pages": [
+    42
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
+  },
+  {
+   "order": 40,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 9,
+   "session": "Présentation du projet (45 mn)",
+   "activity": "Français",
+   "domain": "Présentation du projet",
+   "topic": "Présentation du projet — Nous allons au musée",
+   "materials": "Manuel scolaire page 34– Tableau",
+   "objectives": [
+    "Impliquer l’apprenant dans le planning de la réalisation des tâches finales"
+   ],
+   "body": "",
+   "pages": [
+    45
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 41,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 9,
+   "session": "Oral compréhension (45 mn)",
+   "activity": "Français",
+   "domain": "Oral compréhension",
+   "topic": "Oral compréhension — Nous allons au musée",
+   "materials": "Illustration – support audio ou audio-visuel – Manuel page 35",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    46
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 42,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 9,
+   "session": "Compréhension de l'écrit 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l'écrit 1",
+   "topic": "Compréhension de l'écrit 1 : Au musée du Moudjahid — Nous allons au musée",
+   "materials": "Illustration du musée – Manuel scolaire page 35",
+   "objectives": [
+    "Bâtir des hypothèses de lecture à partir de l'illustration et du titre du texte"
+   ],
+   "body": "",
+   "pages": [
+    47
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 43,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 9,
+   "session": "Vocabulaire (45 mn)",
+   "activity": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : Champ lexical de la visite : noms de lieux et moyens de transport — Nous allons au musée",
+   "materials": "Illustrations – Manuel scolaire page 37",
+   "objectives": [
+    "Enrichir le lexique relatif aux lieux visités et aux moyens de transport utilisés"
+   ],
+   "body": "",
+   "pages": [
+    48
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 44,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 9,
+   "session": "Oral production (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production",
+   "topic": "Oral production — Nous allons au musée",
+   "materials": "Illustrations – Manuel scolaire page 35",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    49
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 45,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 10,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : Le complément circonstanciel de lieu (CCL) — Nous allons au musée",
+   "materials": "Manuel scolaire page 40 – Tableau",
+   "objectives": [
+    "Identifier le complément circonstanciel de lieu dans une phrase"
+   ],
+   "body": "",
+   "pages": [
+    50
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 46,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 10,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : Le complément circonstanciel de temps (CCT) — Nous allons au musée",
+   "materials": "Manuel scolaire page 50 – Tableau",
+   "objectives": [
+    "Identifier le complément circonstanciel de temps dans une phrase"
+   ],
+   "body": "",
+   "pages": [
+    51
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 47,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 10,
+   "session": "Compréhension de l’écrit 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 2",
+   "topic": "Compréhension de l’écrit 2 : Notre visite du musée — Nous allons au musée",
+   "materials": "L’illustration du musée – Cahier d’activités page 35",
+   "objectives": [
+    "Identifier les actes de parole dans des textes de lecture"
+   ],
+   "body": "",
+   "pages": [
+    52
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 48,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 10,
+   "session": "Oral production en interaction (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production en interaction",
+   "topic": "Oral production en interaction : « Je m’exprime » — Nous allons au musée",
+   "materials": "Illustrations – Manuel scolaire page 36",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    53
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 49,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 10,
+   "session": "Conjugaison (45 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Le passé composé avec l'auxiliaire avoir — Nous allons au musée",
+   "materials": "Manuel scolaire – Tableau de conjugaison",
+   "objectives": [
+    "Conjuguer des verbes au passé composé avec l'auxiliaire avoir"
+   ],
+   "body": "",
+   "pages": [
+    54
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 50,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 11,
+   "session": "Conjugaison (45 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Le passé composé avec l'auxiliaire être (verbes aller, partir, arriver…) — Nous allons au musée",
+   "materials": "Manuel scolaire – Tableau de conjugaison",
+   "objectives": [
+    "Conjuguer les verbes aller, partir, arriver… au passé composé avec l'auxiliaire être"
+   ],
+   "body": "",
+   "pages": [
+    55
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 51,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 11,
+   "session": "Lecture systématique (45 mn)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique : Les sons : in / ain / aim / ein / un / im — Nous allons au musée",
+   "materials": "Tableau – Cahier de classe",
+   "objectives": [
+    "Identifier et lire correctement les graphies du son [in]"
+   ],
+   "body": "",
+   "pages": [
+    56
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 52,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 11,
+   "session": "Orthographe (45 mn)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe : Accord du participe passé (genre et / ou nombre) — Nous allons au musée",
+   "materials": "Exercices transcrits au tableau ou photocopiés",
+   "objectives": [
+    "Accorder le participe passé employé avec être en genre et en nombre avec le sujet"
+   ],
+   "body": "",
+   "pages": [
+    57
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 53,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 11,
+   "session": "Dictée (45 mn)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Nous allons au musée",
+   "materials": "Texte support de la séquence (la visite du musée) – Ardoises, cahiers",
+   "objectives": [
+    "Reproduire correctement un passage en respectant l'orthographe et la ponctuation"
+   ],
+   "body": "",
+   "pages": [
+    58
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 54,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 11,
+   "session": "Préparation à l’écrit (45 mn)",
+   "activity": "Français",
+   "domain": "Préparation à l’écrit",
+   "topic": "Préparation à l’écrit — Nous allons au musée",
+   "materials": "Illustrations -Manuel scolaire page 44 – Ardoises",
+   "objectives": [
+    "Comprendre les consignes et répondre par écrit aux différents exercices"
+   ],
+   "body": "",
+   "pages": [
+    59
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 55,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 12,
+   "session": "Production écrite (1er jet) (45 mn)",
+   "activity": "Français",
+   "domain": "Production écrite (1er jet)",
+   "topic": "Production écrite (1er jet) — Nous allons au musée",
+   "materials": "Illustrations – boite à outils (mots) – Manuel scolaire page 44 - 45",
+   "objectives": [
+    "Respecter une consigne d’écriture et organiser des informations pour écrire"
+   ],
+   "body": "",
+   "pages": [
+    60
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 56,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 12,
+   "session": "Compte rendu (60 mn)",
+   "activity": "Français",
+   "domain": "Compte rendu",
+   "topic": "Compte rendu — Nous allons au musée",
+   "materials": "-Illustrations – Ardoises",
+   "objectives": [
+    "Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+   ],
+   "body": "",
+   "pages": [
+    61
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 57,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 12,
+   "session": "Comptine (30 mn)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine : Au grand musée — Nous allons au musée",
+   "materials": "Illustration du musée –Manuel scolaire page 44 – Audio et/ou audio-visuel",
+   "objectives": [
+    "Amener l’apprenant à mémoriser une chanson"
+   ],
+   "body": "",
+   "pages": [
+    62
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 58,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 12,
+   "session": "Réalisation partielle du projet (30 mn)",
+   "activity": "Français",
+   "domain": "Réalisation partielle du projet",
+   "topic": "Réalisation partielle du projet — Nous allons au musée",
+   "materials": "Illustrations -Manuel scolaire page 45 – Les dessins des animaux",
+   "objectives": [
+    "Amener l’élève à fabriquer un poster pour décrire un animal sauvage"
+   ],
+   "body": "",
+   "pages": [
+    63
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
+  },
+  {
+   "order": 59,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Présentation du projet (45 mn)",
+   "activity": "Français",
+   "domain": "Présentation du projet",
+   "topic": "Présentation du projet — J'aime voyager en famille",
+   "materials": "Manuel scolaire page 56– Tableau",
+   "objectives": [
+    "Impliquer l’apprenant dans le planning de la réalisation des tâches finales"
+   ],
+   "body": "",
+   "pages": [
+    67
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 60,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Oral compréhension (45 mn)",
+   "activity": "Français",
+   "domain": "Oral compréhension",
+   "topic": "Oral compréhension — J'aime voyager en famille",
+   "materials": "Illustration – support audio ou audio-visuel – Manuel page 46",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    68
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 61,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Compréhension de l'écrit 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l'écrit 1",
+   "topic": "Compréhension de l'écrit 1 : L'Oasis — J'aime voyager en famille",
+   "materials": "Illustration d'une oasis – Manuel scolaire",
+   "objectives": [
+    "Bâtir des hypothèses de lecture à partir de l'illustration et du titre du texte"
+   ],
+   "body": "",
+   "pages": [
+    69
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 62,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Vocabulaire (45 mn)",
+   "activity": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : Lexique thématique de la visite (objets vus) — J'aime voyager en famille",
+   "materials": "Illustrations",
+   "objectives": [
+    "Enrichir le lexique des objets et éléments observés lors d'une visite"
+   ],
+   "body": "",
+   "pages": [
+    70
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 63,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Oral production (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production",
+   "topic": "Oral production — J'aime voyager en famille",
+   "materials": "Illustrations – Manuel scolaire page 46",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    71
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 64,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : Les prépositions (à, de, vers…) et les articles contractés (au, du…) — J'aime voyager en famille",
+   "materials": "Manuel scolaire – Tableau",
+   "objectives": [
+    "Identifier et employer correctement les prépositions et les articles contractés"
+   ],
+   "body": "",
+   "pages": [
+    72
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 65,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Compréhension de l’écrit 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 2",
+   "topic": "Compréhension de l’écrit 2 : Une épicerie à la Casbah — J'aime voyager en famille",
+   "materials": "L’illustration de l’épicerie – Cahier d’activités page 48",
+   "objectives": [
+    "Identifier les actes de parole dans des textes de lecture"
+   ],
+   "body": "",
+   "pages": [
+    73
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 66,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Oral production en interaction (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production en interaction",
+   "topic": "Oral production en interaction : « Je m’exprime » — J'aime voyager en famille",
+   "materials": "Illustrations – Manuel scolaire page 47",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    74
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 67,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Conjugaison (45 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Les participes passés des verbes « voir » et « découvrir » — J'aime voyager en famille",
+   "materials": "Manuel scolaire – Tableau de conjugaison",
+   "objectives": [
+    "Connaître et employer correctement les participes passés des verbes voir et découvrir"
+   ],
+   "body": "",
+   "pages": [
+    75
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 68,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Lecture systématique (45 mn)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique : Les sons : ou / oi — J'aime voyager en famille",
+   "materials": "Tableau – Cahier de classe",
+   "objectives": [
+    "Distinguer et lire correctement les sons ou et oi"
+   ],
+   "body": "",
+   "pages": [
+    76
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 69,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Orthographe (45 mn)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe : L’accord du participe passé — J'aime voyager en famille",
+   "materials": "Manuel scolaire page 53 – Ardoises",
+   "objectives": [
+    "Maîtriser l’accord du participe passé"
+   ],
+   "body": "",
+   "pages": [
+    77
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 70,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Dictée (45 mn)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — J'aime voyager en famille",
+   "materials": "Manuel scolaire page 54 – Ardoises – Cahiers de classe",
+   "objectives": [
+    "Consolider sa maîtrise de l’écriture en faisant attention à la relation « phonie-graphie »"
+   ],
+   "body": "",
+   "pages": [
+    78
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 71,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 16,
+   "session": "Préparation à l’écrit (45 mn)",
+   "activity": "Français",
+   "domain": "Préparation à l’écrit",
+   "topic": "Préparation à l’écrit — J'aime voyager en famille",
+   "materials": "Illustrations -Manuel scolaire page 44 – Ardoises",
+   "objectives": [
+    "Comprendre les consignes et répondre par écrit aux exercices"
+   ],
+   "body": "",
+   "pages": [
+    79
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 72,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 16,
+   "session": "Production écrite (1er jet) (45 mn)",
+   "activity": "Français",
+   "domain": "Production écrite (1er jet)",
+   "topic": "Production écrite (1er jet) — J'aime voyager en famille",
+   "materials": "Illustrations – boite à outils (mots) – Manuel scolaire page 55",
+   "objectives": [
+    "Respecter une consigne d’écriture et organiser des informations."
+   ],
+   "body": "",
+   "pages": [
+    80
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 73,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 16,
+   "session": "Compte rendu (60 mn)",
+   "activity": "Français",
+   "domain": "Compte rendu",
+   "topic": "Compte rendu — J'aime voyager en famille",
+   "materials": "-Illustrations – Ardoises",
+   "objectives": [
+    "Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+   ],
+   "body": "",
+   "pages": [
+    81
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 74,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 16,
+   "session": "Comptine (30 mn)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine : Le sifflement du train — J'aime voyager en famille",
+   "materials": "Illustration du musée –Manuel scolaire page 55 – Audio et/ou audio-visuel",
+   "objectives": [
+    "Amener l’apprenant à mémoriser une chanson"
+   ],
+   "body": "",
+   "pages": [
+    82
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 75,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 16,
+   "session": "Réalisation du projet (30 mn)",
+   "activity": "Français",
+   "domain": "Réalisation du projet",
+   "topic": "Réalisation du projet — J'aime voyager en famille",
+   "materials": "Illustrations -Manuel scolaire page 56 – Les dessins des lieux exceptionnels",
+   "objectives": [
+    "Amener l’élève à fabriquer un poster pour décrire un animal sauvage"
+   ],
+   "body": "",
+   "pages": [
+    83
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 76,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 16,
+   "session": "Evaluation (60 mn)",
+   "activity": "Français",
+   "domain": "Evaluation",
+   "topic": "Evaluation — J'aime voyager en famille",
+   "materials": "-Tableau – Doubles feuilles",
+   "objectives": [
+    "-Renforcer les acquis des apprenants par des exercices -Contrôler les acquis des apprenants à travers des activités variées"
+   ],
+   "body": "",
+   "pages": [
+    84
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
+  },
+  {
+   "order": 77,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Présentation du projet (45 mn)",
+   "activity": "Français",
+   "domain": "Présentation du projet",
+   "topic": "Présentation du projet — Quand je serai grand (les secouristes)",
+   "materials": "Manuel scolaire page 57– Tableau",
+   "objectives": [
+    "Impliquer l’apprenant dans le planning de la réalisation d’un projet"
+   ],
+   "body": "",
+   "pages": [
+    87
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 78,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Oral compréhension (45 mn)",
+   "activity": "Français",
+   "domain": "Oral compréhension",
+   "topic": "Oral compréhension — Quand je serai grand (les secouristes)",
+   "materials": "Illustration – support audio ou audio-visuel – Manuel page 58",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    88
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 79,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Compréhension de l’écrit 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 1",
+   "topic": "Compréhension de l’écrit 1 : Les sauveteurs — Quand je serai grand (les secouristes)",
+   "materials": "L’illustration des sauveteurs – Manuel scolaire page 61",
+   "objectives": [
+    "Bâtir des hypothèses de lecture à partir de l’illustration du texte"
+   ],
+   "body": "",
+   "pages": [
+    89
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 80,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Vocabulaire (45 mn)",
+   "activity": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : Lexique thématique : noms des secouristes et leurs actions / noms des catastrophes naturelles — Quand je serai grand (les secouristes)",
+   "materials": "Illustrations – Manuel scolaire page 61",
+   "objectives": [
+    "Enrichir le lexique relatif aux secouristes, à leurs actions et aux catastrophes naturelles"
+   ],
+   "body": "",
+   "pages": [
+    90
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 81,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Oral production (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production",
+   "topic": "Oral production — Quand je serai grand (les secouristes)",
+   "materials": "Illustrations – Manuel scolaire page 58",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    91
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 82,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : Le complément de manière — Quand je serai grand (les secouristes)",
+   "materials": "Manuel scolaire page 72 – Tableau",
+   "objectives": [
+    "Identifier le complément circonstanciel de manière dans une phrase"
+   ],
+   "body": "",
+   "pages": [
+    92
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 83,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Compréhension de l’écrit 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 2",
+   "topic": "Compréhension de l’écrit 2 : C’est quoi un tremblement de terre ? — Quand je serai grand (les secouristes)",
+   "materials": "L’illustration du tremblement de terre – Cahier d’activités page 63",
+   "objectives": [
+    "Identifier les actes de parole dans des textes de lecture"
+   ],
+   "body": "",
+   "pages": [
+    93
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 84,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Oral production 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production 2",
+   "topic": "Oral production 2 : « Je m’exprime » — Quand je serai grand (les secouristes)",
+   "materials": "Illustrations – Manuel scolaire page 59",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    94
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 85,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Conjugaison (45 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Les verbes du 1er groupe au présent (sauver, soigner, aider…) et le verbe secourir — Quand je serai grand (les secouristes)",
+   "materials": "Manuel scolaire – Tableau de conjugaison",
+   "objectives": [
+    "Conjuguer au présent les verbes du 1er groupe et le verbe secourir"
+   ],
+   "body": "",
+   "pages": [
+    95
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 86,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Conjugaison (45 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Le futur simple (verbes du 1er et du 2e groupe) — Quand je serai grand (les secouristes)",
+   "materials": "Manuel scolaire page 66 – Tableau de conjugaison",
+   "objectives": [
+    "Conjuguer des verbes du 1er et du 2e groupe au futur simple"
+   ],
+   "body": "",
+   "pages": [
+    96
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 87,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Lecture systématique (45 mn)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique : Les sons : é / et / est / ets / es / ée — Quand je serai grand (les secouristes)",
+   "materials": "Tableau – Cahier de classe",
+   "objectives": [
+    "Identifier et lire correctement les différentes graphies du son [é]"
+   ],
+   "body": "",
+   "pages": [
+    97
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 88,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Orthographe (45 mn)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe : Le féminin des noms d'agent (-eur / -euse, -teur / -trice, -er / -ère) — Quand je serai grand (les secouristes)",
+   "materials": "Exercices transcrits au tableau ou photocopiés",
+   "objectives": [
+    "Former correctement le féminin des noms de métiers et d'agents"
+   ],
+   "body": "",
+   "pages": [
+    98
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 89,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Dictée (45 mn)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Quand je serai grand (les secouristes)",
+   "materials": "Manuel scolaire page 54 – Ardoises – Cahiers de classe",
+   "objectives": [
+    "Consolider sa maîtrise de l’écriture en faisant attention à la relation « phonie-graphie »"
+   ],
+   "body": "",
+   "pages": [
+    99
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 90,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Préparation à l’écrit (45 mn)",
+   "activity": "Français",
+   "domain": "Préparation à l’écrit",
+   "topic": "Préparation à l’écrit — Quand je serai grand (les secouristes)",
+   "materials": "Illustration du pompier–Texte au choix – Ardoises",
+   "objectives": [
+    "Comprendre les consignes et répondre par écrit aux exercices"
+   ],
+   "body": "",
+   "pages": [
+    100
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 91,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Production écrite (45 mn)",
+   "activity": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite — Quand je serai grand (les secouristes)",
+   "materials": "Illustrations des sauveteurs – boite à outils (mots) – Manuel scolaire page 66",
+   "objectives": [
+    "Respecter une consigne d’écriture et organiser des informations."
+   ],
+   "body": "",
+   "pages": [
+    101
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 92,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Compte rendu (60 mn)",
+   "activity": "Français",
+   "domain": "Compte rendu",
+   "topic": "Compte rendu — Quand je serai grand (les secouristes)",
+   "materials": "-Illustrations de sauveteurs – Ardoises",
+   "objectives": [
+    "Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+   ],
+   "body": "",
+   "pages": [
+    102
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 93,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Comptine (30 mn)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine : Quand je serai grand — Quand je serai grand (les secouristes)",
+   "materials": "Illustration – Manuel scolaire page 66",
+   "objectives": [
+    "Amener l’apprenant à mémoriser une chanson"
+   ],
+   "body": "",
+   "pages": [
+    103
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 94,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Réalisation de la tâche partielle (30 mn)",
+   "activity": "Français",
+   "domain": "Réalisation de la tâche partielle",
+   "topic": "Réalisation de la tâche partielle — Quand je serai grand (les secouristes)",
+   "materials": "Manuel scolaire page 67 – Illustrations des métiers",
+   "objectives": [
+    "Amener l’élève à fabriquer un poster pour décrire un animal sauvage"
+   ],
+   "body": "",
+   "pages": [
+    104
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 95,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Evaluation (60 mn)",
+   "activity": "Français",
+   "domain": "Evaluation",
+   "topic": "Evaluation — Quand je serai grand (les secouristes)",
+   "materials": "-Tableau – Doubles feuilles",
+   "objectives": [
+    "-Renforcer les acquis des apprenants par des exercices -Contrôler les acquis des apprenants à travers des activités variées"
+   ],
+   "body": "",
+   "pages": [
+    105
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
+  },
+  {
+   "order": 96,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Présentation du projet (45 mn)",
+   "activity": "Français",
+   "domain": "Présentation du projet",
+   "topic": "Présentation du projet — C'est une inondation",
+   "materials": "Manuel scolaire page 78 – Tableau",
+   "objectives": [
+    "Impliquer l’apprenant dans le planning de la réalisation d’un projet"
+   ],
+   "body": "",
+   "pages": [
+    107
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 97,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Oral compréhension (45 mn)",
+   "activity": "Français",
+   "domain": "Oral compréhension",
+   "topic": "Oral compréhension — C'est une inondation",
+   "materials": "Illustration – support audio ou audio-visuel – Manuel page 68",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    108
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 98,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Compréhension de l’écrit 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 1",
+   "topic": "Compréhension de l’écrit 1 : L’inondation. — C'est une inondation",
+   "materials": "L’illustration des sauveteurs – Manuel scolaire page 71",
+   "objectives": [
+    "Bâtir des hypothèses de lecture à partir de l’illustration du texte"
+   ],
+   "body": "",
+   "pages": [
+    109
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 99,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Vocabulaire (45 mn)",
+   "activity": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : L’adverbe en « ment / emment » — C'est une inondation",
+   "materials": "Manuel scolaire page 70 - Ardoises",
+   "objectives": [
+    "- Augmenter le stock lexical de l’élève -Identifier et connaître les adverbes en « ment / emment »"
+   ],
+   "body": "",
+   "pages": [
+    110
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 100,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Oral production 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production 1",
+   "topic": "Oral production 1 — C'est une inondation",
+   "materials": "Illustrations – Manuel scolaire page 69",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    111
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 101,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 21,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : Le complément du but — C'est une inondation",
+   "materials": "Manuel scolaire page 62 – Tableau",
+   "objectives": [
+    "Identifier le complément circonstanciel de but dans une phrase"
+   ],
+   "body": "",
+   "pages": [
+    112
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 102,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 21,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : La forme négative (phrase déclarative) — C'est une inondation",
+   "materials": "Manuel scolaire page 73 – Tableau",
+   "objectives": [
+    "Transformer une phrase déclarative affirmative en phrase négative"
+   ],
+   "body": "",
+   "pages": [
+    113
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 103,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 21,
+   "session": "Compréhension de l’écrit 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 2",
+   "topic": "Compréhension de l’écrit 2 : Je lis et je comprends — C'est une inondation",
+   "materials": "L’illustration de l’inondation – Cahier d’activités page 73",
+   "objectives": [
+    "Identifier les actes de parole dans des textes de lecture"
+   ],
+   "body": "",
+   "pages": [
+    114
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 104,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 21,
+   "session": "Oral production 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production 2",
+   "topic": "Oral production 2 : « Je m’exprime » — C'est une inondation",
+   "materials": "Illustrations – Manuel scolaire page 69",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    115
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 105,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 21,
+   "session": "Conjugaison (45 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Emploi du mode infinitif pour donner des conseils en cas de catastrophe naturelle (forme affirmative et négative) — C'est une inondation",
+   "materials": "Manuel scolaire – Tableau",
+   "objectives": [
+    "Employer le mode infinitif pour donner des conseils, à la forme affirmative et négative"
+   ],
+   "body": "",
+   "pages": [
+    116
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 106,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 22,
+   "session": "Lecture systématique (45 mn)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique : Les sons : ouil / euil / ui — C'est une inondation",
+   "materials": "Tableau – Cahier de classe",
+   "objectives": [
+    "Identifier et lire correctement les sons ouil, euil et ui"
+   ],
+   "body": "",
+   "pages": [
+    117
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 107,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 22,
+   "session": "Orthographe (45 mn)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe : Emploi de l'infinitif après une préposition / après un verbe conjugué — C'est une inondation",
+   "materials": "Exercices transcrits au tableau ou photocopiés",
+   "objectives": [
+    "Reconnaître et écrire correctement l'infinitif après une préposition ou un verbe conjugué"
+   ],
+   "body": "",
+   "pages": [
+    118
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 108,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 22,
+   "session": "Dictée (45 mn)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — C'est une inondation",
+   "materials": "Manuel scolaire page 76 – Ardoises – Cahiers de classe",
+   "objectives": [
+    "Consolider sa maîtrise de l’écriture en faisant attention à la relation « phonie-graphie »"
+   ],
+   "body": "",
+   "pages": [
+    119
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 109,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 22,
+   "session": "Préparation à l’écrit (45 mn)",
+   "activity": "Français",
+   "domain": "Préparation à l’écrit",
+   "topic": "Préparation à l’écrit — C'est une inondation",
+   "materials": "Illustrations –Manuel scolaire page 77 – Ardoises",
+   "objectives": [
+    "Comprendre les consignes et répondre par écrit aux exercices"
+   ],
+   "body": "",
+   "pages": [
+    120
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 110,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 22,
+   "session": "Production écrite (1er jet) (45 mn)",
+   "activity": "Français",
+   "domain": "Production écrite (1er jet)",
+   "topic": "Production écrite (1er jet) — C'est une inondation",
+   "materials": "Illustration de l’inondation – boite à outils (mots)",
+   "objectives": [
+    "Respecter une consigne d’écriture et organiser des informations."
+   ],
+   "body": "",
+   "pages": [
+    121
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 111,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 24,
+   "session": "Compte rendu (60 mn)",
+   "activity": "Français",
+   "domain": "Compte rendu",
+   "topic": "Compte rendu — C'est une inondation",
+   "materials": "-Illustration de l’inondation – Ardoises",
+   "objectives": [
+    "Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+   ],
+   "body": "",
+   "pages": [
+    122
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 112,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 24,
+   "session": "Comptine (30 mn)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine : Gouttes, gouttelettes de pluie — C'est une inondation",
+   "materials": "Support audio – Illustration de la pluie",
+   "objectives": [
+    "Mémoriser et chanter la comptine « Gouttes, gouttelettes de pluie » en respectant le rythme"
+   ],
+   "body": "",
+   "pages": [
+    123
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 113,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 24,
+   "session": "Réalisation de la tâche partielle (30 mn)",
+   "activity": "Français",
+   "domain": "Réalisation de la tâche partielle",
+   "topic": "Réalisation de la tâche partielle — C'est une inondation",
+   "materials": "Manuel scolaire page 78 – Illustrations de catastrophes naturelles",
+   "objectives": [
+    "Amener l’élève à fabriquer un poster pour décrire un animal sauvage"
+   ],
+   "body": "",
+   "pages": [
+    124
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 114,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 24,
+   "session": "Evaluation (60 mn)",
+   "activity": "Français",
+   "domain": "Evaluation",
+   "topic": "Evaluation — C'est une inondation",
+   "materials": "-Tableau – Doubles feuilles",
+   "objectives": [
+    "-Renforcer les acquis des apprenants par des exercices -Contrôler les acquis des apprenants à travers des activités variées"
+   ],
+   "body": "",
+   "pages": [
+    125
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+  },
+  {
+   "order": 115,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Présentation du projet (45 mn)",
+   "activity": "Français",
+   "domain": "Présentation du projet",
+   "topic": "Présentation du projet — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Manuel scolaire page 73 – Tableau",
+   "objectives": [
+    "Impliquer l’apprenant dans le planning de la réalisation d’un projet"
+   ],
+   "body": "",
+   "pages": [
+    128
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 116,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Oral compréhension (45 mn)",
+   "activity": "Français",
+   "domain": "Oral compréhension",
+   "topic": "Oral compréhension — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Illustration – support audio ou audio-visuel – Manuel page 80",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    129
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 117,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Compréhension de l’écrit 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 1",
+   "topic": "Compréhension de l’écrit 1 : Pourquoi les déchets sont-ils dangereux ? — Pourquoi notre terre est-elle en danger ?",
+   "materials": "L’illustration – Manuel scolaire page 83",
+   "objectives": [
+    "Bâtir des hypothèses de lecture à partir de l’illustration du texte"
+   ],
+   "body": "",
+   "pages": [
+    130
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 118,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Vocabulaire (45 mn)",
+   "activity": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : Le lexique relatif à la pollution et à l'environnement — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Illustrations – Manuel scolaire page 83",
+   "objectives": [
+    "Enrichir le lexique relatif à la pollution et à la protection de l'environnement"
+   ],
+   "body": "",
+   "pages": [
+    131
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 119,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Oral production 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production 1",
+   "topic": "Oral production 1 — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Illustration – Manuel scolaire page 80",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    132
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 120,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : La coordination et la subordination par l'emploi de « car » et de « parce que » — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Manuel scolaire page 85 – Tableau",
+   "objectives": [
+    "Exprimer la cause en employant car et parce que"
+   ],
+   "body": "",
+   "pages": [
+    133
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 121,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Compréhension de l’écrit 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 2",
+   "topic": "Compréhension de l’écrit 2 : Je lis et je comprends — Pourquoi notre terre est-elle en danger ?",
+   "materials": "L’illustration de la terre – Cahier d’activités page 85",
+   "objectives": [
+    "Identifier les actes de parole dans des textes de lecture"
+   ],
+   "body": "",
+   "pages": [
+    134
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 122,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Oral production 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production 2",
+   "topic": "Oral production 2 : « Je m’exprime » — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Illustrations – Manuel scolaire page 81",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    135
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 123,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Conjugaison (45 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : Le verbe « être » et le verbe « avoir » au futur simple — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Manuel scolaire page 63 – Tableau de conjugaison",
+   "objectives": [
+    "Conjuguer être et avoir au futur simple de l'indicatif"
+   ],
+   "body": "",
+   "pages": [
+    136
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 124,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Lecture systématique (45 mn)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique : Les sons : eil, iel, io, ia — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Tableau – Cahier de classe",
+   "objectives": [
+    "Identifier et lire correctement les sons eil, iel, io, ia"
+   ],
+   "body": "",
+   "pages": [
+    137
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 125,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Orthographe (45 mn)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe : Le pluriel des noms en « al », « ail » — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Exercices transcrits au tableau ou photocopiés",
+   "objectives": [
+    "Former correctement le pluriel des noms terminés par -al et -ail"
+   ],
+   "body": "",
+   "pages": [
+    138
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 126,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Dictée (45 mn)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Manuel scolaire page 88 – Ardoises – Cahiers de classe",
+   "objectives": [
+    "Consolider sa maîtrise de l’écriture en faisant attention à la relation « phonie-graphie »"
+   ],
+   "body": "",
+   "pages": [
+    139
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 127,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Préparation à l’écrit (45 mn)",
+   "activity": "Français",
+   "domain": "Préparation à l’écrit",
+   "topic": "Préparation à l’écrit — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Illustrations –Manuel scolaire page 89 – Ardoises",
+   "objectives": [
+    "Comprendre les consignes et répondre par écrit aux exercices"
+   ],
+   "body": "",
+   "pages": [
+    140
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 128,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Production écrite (1er jet) (45 mn)",
+   "activity": "Français",
+   "domain": "Production écrite (1er jet)",
+   "topic": "Production écrite (1er jet) — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Illustration – boite à outils (mots)",
+   "objectives": [
+    "Respecter une consigne d’écriture et organiser des informations."
+   ],
+   "body": "",
+   "pages": [
+    141
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 129,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Compte rendu (60 mn)",
+   "activity": "Français",
+   "domain": "Compte rendu",
+   "topic": "Compte rendu — Pourquoi notre terre est-elle en danger ?",
+   "materials": "-Illustration – Ardoises",
+   "objectives": [
+    "Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+   ],
+   "body": "",
+   "pages": [
+    142
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 130,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Comptine (30 mn)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine : Sauvons le monde — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Illustration – Support audio- visuel (youtube)",
+   "objectives": [
+    "Amener l’apprenant à mémoriser une chanson"
+   ],
+   "body": "",
+   "pages": [
+    143
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 131,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Réalisation de la tâche partielle (30 mn)",
+   "activity": "Français",
+   "domain": "Réalisation de la tâche partielle",
+   "topic": "Réalisation de la tâche partielle — Pourquoi notre terre est-elle en danger ?",
+   "materials": "Manuel scolaire page 90 – Illustrations",
+   "objectives": [
+    "Amener l’élève à fabriquer une affiche avec des conseils et des dessins"
+   ],
+   "body": "",
+   "pages": [
+    144
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 132,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Evaluation (60 mn)",
+   "activity": "Français",
+   "domain": "Evaluation",
+   "topic": "Evaluation — Pourquoi notre terre est-elle en danger ?",
+   "materials": "-Tableau – Doubles feuilles",
+   "objectives": [
+    "-Renforcer les acquis des apprenants par des exercices"
+   ],
+   "body": "",
+   "pages": [
+    145
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+  },
+  {
+   "order": 133,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Présentation du projet (45 mn)",
+   "activity": "Français",
+   "domain": "Présentation du projet",
+   "topic": "Présentation du projet — Ne gaspillons pas l'eau !",
+   "materials": "Manuel scolaire page 101 – Tableau",
+   "objectives": [
+    "Impliquer l’apprenant dans le planning de la réalisation d’un projet"
+   ],
+   "body": "",
+   "pages": [
+    147
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 134,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Oral compréhension (45 mn)",
+   "activity": "Français",
+   "domain": "Oral compréhension",
+   "topic": "Oral compréhension — Ne gaspillons pas l'eau !",
+   "materials": "Illustration – support audio ou audio-visuel – Manuel page 91",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    148
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 135,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Compréhension de l'écrit 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l'écrit 1",
+   "topic": "Compréhension de l'écrit 1 : Je lis et je comprends — Ne gaspillons pas l'eau !",
+   "materials": "Illustration sur l'économie de l'eau – Manuel scolaire page 94",
+   "objectives": [
+    "Bâtir des hypothèses de lecture à partir de l'illustration et du titre du texte"
+   ],
+   "body": "",
+   "pages": [
+    149
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 136,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Vocabulaire (45 mn)",
+   "activity": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : Il faut / Il ne faut pas — Ne gaspillons pas l'eau !",
+   "materials": "Manuel scolaire page 96 - Ardoises",
+   "objectives": [
+    "Identifier et connaître les expressions : « Il faut / Il ne faut pas »"
+   ],
+   "body": "",
+   "pages": [
+    150
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 137,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Oral production 1 (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production 1",
+   "topic": "Oral production 1 — Ne gaspillons pas l'eau !",
+   "materials": "Illustration – Manuel scolaire page 91",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    151
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 138,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 29,
+   "session": "Grammaire (45 mn)",
+   "activity": "Français",
+   "domain": "Grammaire",
+   "topic": "Grammaire : Les pronoms compléments : « le, la, les, l’ » — Ne gaspillons pas l'eau !",
+   "materials": "Manuel scolaire page 95 - Cahier de classe - Ardoises",
+   "objectives": [
+    "Identifier et connaître les pronoms compléments : « le, la, les, l’ »"
+   ],
+   "body": "",
+   "pages": [
+    152
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 139,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 29,
+   "session": "Compréhension de l’écrit 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Compréhension de l’écrit 2",
+   "topic": "Compréhension de l’écrit 2 : L’eau — Ne gaspillons pas l'eau !",
+   "materials": "L’illustration de l’eau – Cahier d’activités page 96",
+   "objectives": [
+    "Identifier les actes de parole dans des textes de lecture"
+   ],
+   "body": "",
+   "pages": [
+    153
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 140,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 29,
+   "session": "Oral production 2 (45 mn)",
+   "activity": "Français",
+   "domain": "Oral production 2",
+   "topic": "Oral production 2 : « Je m’exprime » — Ne gaspillons pas l'eau !",
+   "materials": "Illustrations – Manuel scolaire page 92",
+   "objectives": [],
+   "body": "",
+   "pages": [
+    154
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 141,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 29,
+   "session": "Conjugaison (45 mn)",
+   "activity": "Français",
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : L’impératif — Ne gaspillons pas l'eau !",
+   "materials": "Manuel scolaire page 97 – Des affiches de conjugaison",
+   "objectives": [
+    "L’emploi correct des verbes à l’impératif"
+   ],
+   "body": "",
+   "pages": [
+    155
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 142,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 30,
+   "session": "Lecture systématique (45 mn)",
+   "activity": "Français",
+   "domain": "Lecture systématique",
+   "topic": "Lecture systématique : Les sons : en / em, an / am, on / om — Ne gaspillons pas l'eau !",
+   "materials": "Tableau – Cahier de classe",
+   "objectives": [
+    "Identifier et lire correctement les sons en/em, an/am, on/om"
+   ],
+   "body": "",
+   "pages": [
+    156
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 143,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 30,
+   "session": "Orthographe (45 mn)",
+   "activity": "Français",
+   "domain": "Orthographe",
+   "topic": "Orthographe : La nominalisation à base verbale — Ne gaspillons pas l'eau !",
+   "materials": "Exercices transcrits au tableau ou photocopiés",
+   "objectives": [
+    "Former un nom à partir d'un verbe (nominalisation)"
+   ],
+   "body": "",
+   "pages": [
+    157
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 144,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 30,
+   "session": "Dictée (45 mn)",
+   "activity": "Français",
+   "domain": "Dictée",
+   "topic": "Dictée — Ne gaspillons pas l'eau !",
+   "materials": "Manuel scolaire page 99 – Ardoises – Cahiers de classe",
+   "objectives": [
+    "Consolider sa maîtrise de l’écriture en faisant attention à la relation « phonie-graphie »"
+   ],
+   "body": "",
+   "pages": [
+    158
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 145,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 30,
+   "session": "Préparation à l’écrit (45 mn)",
+   "activity": "Français",
+   "domain": "Préparation à l’écrit",
+   "topic": "Préparation à l’écrit — Ne gaspillons pas l'eau !",
+   "materials": "Illustrations –Manuel scolaire page 100 – Ardoises",
+   "objectives": [
+    "Comprendre les consignes et répondre par écrit aux exercices"
+   ],
+   "body": "",
+   "pages": [
+    159
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 146,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 30,
+   "session": "Production écrite (45 mn)",
+   "activity": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite — Ne gaspillons pas l'eau !",
+   "materials": "Illustration – boite à outils (mots)",
+   "objectives": [
+    "Respecter une consigne d’écriture et organiser des informations."
+   ],
+   "body": "",
+   "pages": [
+    160
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 147,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 31,
+   "session": "Compte rendu (60 mn)",
+   "activity": "Français",
+   "domain": "Compte rendu",
+   "topic": "Compte rendu — Ne gaspillons pas l'eau !",
+   "materials": "-Illustration – Ardoises",
+   "objectives": [
+    "Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+   ],
+   "body": "",
+   "pages": [
+    161
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 148,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 31,
+   "session": "Comptine (30 mn)",
+   "activity": "Français",
+   "domain": "Comptine",
+   "topic": "Comptine : L’eau c’est de l’or — Ne gaspillons pas l'eau !",
+   "materials": "Illustration de l’eau – Support audio- visuel (YouTube)",
+   "objectives": [
+    "Amener l’apprenant à mémoriser une chanson"
+   ],
+   "body": "",
+   "pages": [
+    162
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 149,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 31,
+   "session": "Réalisation de la tâche finale (30 mn)",
+   "activity": "Français",
+   "domain": "Réalisation de la tâche finale",
+   "topic": "Réalisation de la tâche finale — Ne gaspillons pas l'eau !",
+   "materials": "Manuel scolaire page 101 – Illustrations",
+   "objectives": [
+    "Amener l’élève à fabriquer une affiche avec des conseils et des dessins pour protéger la nature"
+   ],
+   "body": "",
+   "pages": [
+    163
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  },
+  {
+   "order": 150,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 31,
+   "session": "Evaluation (60 mn)",
+   "activity": "Français",
+   "domain": "Evaluation",
+   "topic": "Evaluation — Ne gaspillons pas l'eau !",
+   "materials": "-Tableau – Doubles feuilles",
+   "objectives": [
+    "-Renforcer les acquis des apprenants par des exercices"
+   ],
+   "body": "",
+   "pages": [
+    164
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
+  }
+ ]
+}

@@ -1,0 +1,1147 @@
+{
+ "id": "3AP_fr",
+ "level": "3AP",
+ "subject": "fr",
+ "title": "Langue française — 3e année primaire",
+ "source": {
+  "ar": "بطاقات حصص منشورة للعموم (وفق التدرّج السنوي والكتاب المدرسي)؛ الأسابيع تقديرية",
+  "fr": "Fiches pédagogiques partagées publiquement (selon la progression annuelle et le manuel) ; semaines estimées"
+ },
+ "weekMode": "absolute",
+ "segments": {
+  "1": "Projet 1 : Vive l'école ! — Séquence 1 : Bonjour ! Au revoir !",
+  "2": "Projet 1 : Vive l'école ! — Séquence 2 : Je m'appelle Nadir",
+  "3": "Projet 1 : Vive l'école ! — Séquence 3 : J'aime l'école",
+  "4": "Projet 2 : En famille ! — Séquence 1 : Nous sommes une famille",
+  "5": "Projet 2 : En famille ! — Séquence 2 : Qu'est-ce que tu veux manger ?",
+  "6": "Projet 2 : En famille ! — Séquence 3 : Tu as quel âge ?",
+  "7": "Projet 3 : Tu connais les animaux ? — Séquence 1 : A la ferme",
+  "8": "Projet 3 : Tu connais les animaux ? — Séquence 2 : Où est mon chien ?",
+  "9": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu'est-ce que tu fais ?",
+  "10": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne",
+  "11": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre",
+  "12": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne !"
+ },
+ "lessons": [
+  {
+   "order": 1,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — Bonjour ! Au revoir !",
+   "materials": "Manuel scolaire (P. 11), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à saluer / prendre congé"
+   ],
+   "body": "",
+   "pages": [
+    3
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 1 : Bonjour ! Au revoir !"
+  },
+  {
+   "order": 2,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Dire les mots de salutation ; demander et dire son prénom ; nommer le matériel scolaire ; utiliser le présentatif « C'est » ; verbe (à l'oral) : aller ; le pronom « Je » ; la phrase déclarative ; la ponctuation : le point ; nom propre / prénom — Bonjour ! Au revoir !",
+   "materials": "Manuel scolaire (P. 11), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dire les mots de salutation ; demander et dire son prénom ; nommer le matériel scolaire ; utiliser le présentatif « C'est » ; verbe (à l'oral) : aller ; le pronom « Je » ; la phrase déclarative ; la ponctuation : le point ; nom propre / prénom"
+   ],
+   "body": "",
+   "pages": [
+    3
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 1 : Bonjour ! Au revoir !"
+  },
+  {
+   "order": 3,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Bonjour ! Au revoir !",
+   "materials": "Manuel scolaire (P. 11), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à les sons : a/i — m/n"
+   ],
+   "body": "",
+   "pages": [
+    4
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 1 : Bonjour ! Au revoir !"
+  },
+  {
+   "order": 4,
+   "segment": 1,
+   "unitKind": "week",
+   "unit": 3,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — Bonjour ! Au revoir !",
+   "materials": "Manuel scolaire (P. 11), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « Bonjour ! Au revoir ! » ; Comptine 1 : « Mon ami Anis » ; Comptine 2 : « L'Alphabet »"
+   ],
+   "body": "",
+   "pages": [
+    4
+   ],
+   "sample": true,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 1 : Bonjour ! Au revoir !"
+  },
+  {
+   "order": 5,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — Je m'appelle Nadir",
+   "materials": "Manuel scolaire (P. 19), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à se présenter / présenter"
+   ],
+   "body": "",
+   "pages": [
+    6
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 2 : Je m'appelle Nadir"
+  },
+  {
+   "order": 6,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Dire les noms des couleurs ; qualifier un objet par sa couleur ; utiliser le présentatif « Voici » ; verbe (à l'oral) : s'appeler ; les pronoms Je/Tu/Il/Elle ; la phrase interrogative ; la ponctuation : le point d'interrogation ; le nom commun ; les articles indéfinis un/une — Je m'appelle Nadir",
+   "materials": "Manuel scolaire (P. 19), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dire les noms des couleurs ; qualifier un objet par sa couleur ; utiliser le présentatif « Voici » ; verbe (à l'oral) : s'appeler ; les pronoms Je/Tu/Il/Elle ; la phrase interrogative ; la ponctuation : le point d'interrogation ; le nom commun ; les articles indéfinis un/une"
+   ],
+   "body": "",
+   "pages": [
+    6
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 2 : Je m'appelle Nadir"
+  },
+  {
+   "order": 7,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 4,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Je m'appelle Nadir",
+   "materials": "Manuel scolaire (P. 19), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à les sons : e/é — t/d"
+   ],
+   "body": "",
+   "pages": [
+    7
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 2 : Je m'appelle Nadir"
+  },
+  {
+   "order": 8,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — Je m'appelle Nadir",
+   "materials": "Manuel scolaire (P. 19), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « Je m'appelle Nadir » ; Comptine : « C'est dans jeudi »"
+   ],
+   "body": "",
+   "pages": [
+    7
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 2 : Je m'appelle Nadir"
+  },
+  {
+   "order": 9,
+   "segment": 2,
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Production — Tâche 2",
+   "activity": "Français",
+   "domain": "Production — Tâche 2",
+   "topic": "Production — Tâche 2 — Je m'appelle Nadir",
+   "materials": "Manuel scolaire (P. 19), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à fabriquons les badges avec nos prénoms."
+   ],
+   "body": "",
+   "pages": [
+    7
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 2 : Je m'appelle Nadir"
+  },
+  {
+   "order": 10,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — J'aime l'école",
+   "materials": "Manuel scolaire (P. 26), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à exprimer un sentiment / une préférence"
+   ],
+   "body": "",
+   "pages": [
+    9
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 3 : J'aime l'école"
+  },
+  {
+   "order": 11,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Exprimer ses préférences ; dire ce qu'on aime faire à l'école ; verbe (à l'oral) : aimer / adorer ; pronoms Je/Tu/Il ; les articles définis le/la ; la phrase exclamative ; la ponctuation : le point d'exclamation — J'aime l'école",
+   "materials": "Manuel scolaire (P. 26), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à exprimer ses préférences ; dire ce qu'on aime faire à l'école ; verbe (à l'oral) : aimer / adorer ; pronoms Je/Tu/Il ; les articles définis le/la ; la phrase exclamative ; la ponctuation : le point d'exclamation"
+   ],
+   "body": "",
+   "pages": [
+    9
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 3 : J'aime l'école"
+  },
+  {
+   "order": 12,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 6,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — J'aime l'école",
+   "materials": "Manuel scolaire (P. 26), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à les sons : o/u — l/r"
+   ],
+   "body": "",
+   "pages": [
+    10
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 3 : J'aime l'école"
+  },
+  {
+   "order": 13,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — J'aime l'école",
+   "materials": "Manuel scolaire (P. 26), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « J'aime l'école » ; Comptine : « Bonjour Monsieur le Soleil ! Madame la Lune ! »"
+   ],
+   "body": "",
+   "pages": [
+    10
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 3 : J'aime l'école"
+  },
+  {
+   "order": 14,
+   "segment": 3,
+   "unitKind": "week",
+   "unit": 7,
+   "session": "Production — Tâche 3",
+   "activity": "Français",
+   "domain": "Production — Tâche 3",
+   "topic": "Production — Tâche 3 — J'aime l'école",
+   "materials": "Manuel scolaire (P. 26), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à fabriquons l'album de notre classe."
+   ],
+   "body": "",
+   "pages": [
+    10
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 1 : Vive l'école ! — Séquence 3 : J'aime l'école"
+  },
+  {
+   "order": 15,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 9,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — Nous sommes une famille",
+   "materials": "Manuel scolaire (P. 33), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à présenter sa famille"
+   ],
+   "body": "",
+   "pages": [
+    12
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 1 : Nous sommes une famille"
+  },
+  {
+   "order": 16,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 9,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Présenter les membres de sa famille ; dire les formules de politesse ; nommer une énumération avec « il y a » ; nommer les objets de sa chambre ; pronom : nous ; verbe (à l'oral) : être ; la phrase : la majuscule, le point ; le sujet de la phrase ; la phrase négative : ne…pas — Nous sommes une famille",
+   "materials": "Manuel scolaire (P. 33), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à présenter les membres de sa famille ; dire les formules de politesse ; nommer une énumération avec « il y a » ; nommer les objets de sa chambre ; pronom : nous ; verbe (à l'oral) : être ; la phrase : la majuscule, le point ; le sujet de la phrase ; la phrase négative : ne…pas"
+   ],
+   "body": "",
+   "pages": [
+    12
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 1 : Nous sommes une famille"
+  },
+  {
+   "order": 17,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 10,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Nous sommes une famille",
+   "materials": "Manuel scolaire (P. 33), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à les sons : ou/u — p/b"
+   ],
+   "body": "",
+   "pages": [
+    13
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 1 : Nous sommes une famille"
+  },
+  {
+   "order": 18,
+   "segment": 4,
+   "unitKind": "week",
+   "unit": 10,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — Nous sommes une famille",
+   "materials": "Manuel scolaire (P. 33), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « Nous sommes une famille » ; Comptine : « La famille tortue »"
+   ],
+   "body": "",
+   "pages": [
+    13
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 1 : Nous sommes une famille"
+  },
+  {
+   "order": 19,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 11,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — Qu'est-ce que tu veux manger ?",
+   "materials": "Manuel scolaire (P. 41), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à demander un objet / répondre à une question"
+   ],
+   "body": "",
+   "pages": [
+    15
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 2 : Qu'est-ce que tu veux manger ?"
+  },
+  {
+   "order": 20,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 11,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Nommer quelques aliments ; exprimer un goût, une préférence alimentaire ; dire des phrases avec « il faut » ; verbe (à l'oral) : vouloir ; le verbe de la phrase ; la phrase négative : ni…ni ; les deux points, les guillemets — Qu'est-ce que tu veux manger ?",
+   "materials": "Manuel scolaire (P. 41), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à nommer quelques aliments ; exprimer un goût, une préférence alimentaire ; dire des phrases avec « il faut » ; verbe (à l'oral) : vouloir ; le verbe de la phrase ; la phrase négative : ni…ni ; les deux points, les guillemets"
+   ],
+   "body": "",
+   "pages": [
+    15
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 2 : Qu'est-ce que tu veux manger ?"
+  },
+  {
+   "order": 21,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 11,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Qu'est-ce que tu veux manger ?",
+   "materials": "Manuel scolaire (P. 41), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à les sons : oi/oin — f/v — ph"
+   ],
+   "body": "",
+   "pages": [
+    16
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 2 : Qu'est-ce que tu veux manger ?"
+  },
+  {
+   "order": 22,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — Qu'est-ce que tu veux manger ?",
+   "materials": "Manuel scolaire (P. 41), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « Qu'est-ce que tu veux manger ? » ; Comptine : « Il faut se laver les mains » ; Comptine : « Ah ! le Gourmand »"
+   ],
+   "body": "",
+   "pages": [
+    16
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 2 : Qu'est-ce que tu veux manger ?"
+  },
+  {
+   "order": 23,
+   "segment": 5,
+   "unitKind": "week",
+   "unit": 13,
+   "session": "Production — Tâche 2",
+   "activity": "Français",
+   "domain": "Production — Tâche 2",
+   "topic": "Production — Tâche 2 — Qu'est-ce que tu veux manger ?",
+   "materials": "Manuel scolaire (P. 41), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dessinons le portrait des membres de notre famille."
+   ],
+   "body": "",
+   "pages": [
+    16
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 2 : Qu'est-ce que tu veux manger ?"
+  },
+  {
+   "order": 24,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — Tu as quel âge ?",
+   "materials": "Manuel scolaire (P. 49), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à demander et dire son âge"
+   ],
+   "body": "",
+   "pages": [
+    18
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 3 : Tu as quel âge ?"
+  },
+  {
+   "order": 25,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Dire son âge ; compter de 0 à 10 ; nommer le lieu où on habite ; localisation : adverbe de lieu ; verbe (à l'oral) : avoir ; l'adjectif qualificatif ; le singulier et le pluriel des noms ; les articles le/la/les ; le complément d'objet direct — Tu as quel âge ?",
+   "materials": "Manuel scolaire (P. 49), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dire son âge ; compter de 0 à 10 ; nommer le lieu où on habite ; localisation : adverbe de lieu ; verbe (à l'oral) : avoir ; l'adjectif qualificatif ; le singulier et le pluriel des noms ; les articles le/la/les ; le complément d'objet direct"
+   ],
+   "body": "",
+   "pages": [
+    18
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 3 : Tu as quel âge ?"
+  },
+  {
+   "order": 26,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 14,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Tu as quel âge ?",
+   "materials": "Manuel scolaire (P. 49), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à les sons : c-k-g/gu-qu — an/on — ion"
+   ],
+   "body": "",
+   "pages": [
+    19
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 3 : Tu as quel âge ?"
+  },
+  {
+   "order": 27,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 15,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — Tu as quel âge ?",
+   "materials": "Manuel scolaire (P. 49), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « Tu as quel âge ? » ; Comptine : « Nous allons au bois »"
+   ],
+   "body": "",
+   "pages": [
+    19
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 3 : Tu as quel âge ?"
+  },
+  {
+   "order": 28,
+   "segment": 6,
+   "unitKind": "week",
+   "unit": 15,
+   "session": "Production — Tâche 3",
+   "activity": "Français",
+   "domain": "Production — Tâche 3",
+   "topic": "Production — Tâche 3 — Tu as quel âge ?",
+   "materials": "Manuel scolaire (P. 49), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dessinons l'arbre de notre famille."
+   ],
+   "body": "",
+   "pages": [
+    19
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 2 : En famille ! — Séquence 3 : Tu as quel âge ?"
+  },
+  {
+   "order": 29,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — A la ferme",
+   "materials": "Manuel scolaire (P. 56), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à nommer les animaux de la ferme"
+   ],
+   "body": "",
+   "pages": [
+    21
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 1 : A la ferme"
+  },
+  {
+   "order": 30,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Nommer les animaux de la ferme ; nommer les mois de l'année ; le synonyme ; verbe (à l'oral) : devoir ; pronom : Ils ; le substitut grammatical (Il / Nom propre) ; le complément d'objet indirect ; nom au pluriel : l'article des ; la marque du pluriel : s, x — A la ferme",
+   "materials": "Manuel scolaire (P. 56), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à nommer les animaux de la ferme ; nommer les mois de l'année ; le synonyme ; verbe (à l'oral) : devoir ; pronom : Ils ; le substitut grammatical (Il / Nom propre) ; le complément d'objet indirect ; nom au pluriel : l'article des ; la marque du pluriel : s, x"
+   ],
+   "body": "",
+   "pages": [
+    21
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 1 : A la ferme"
+  },
+  {
+   "order": 31,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — A la ferme",
+   "materials": "Manuel scolaire (P. 56), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à les sons : s/z — eau/au/eu/œu"
+   ],
+   "body": "",
+   "pages": [
+    22
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 1 : A la ferme"
+  },
+  {
+   "order": 32,
+   "segment": 7,
+   "unitKind": "week",
+   "unit": 17,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — A la ferme",
+   "materials": "Manuel scolaire (P. 56), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « A la ferme ! » ; Comptine 1 : « Les animaux de la ferme » ; Comptine 2 : « A la campagne » ; Devinette : « la vache »"
+   ],
+   "body": "",
+   "pages": [
+    22
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 1 : A la ferme"
+  },
+  {
+   "order": 33,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — Où est mon chien ?",
+   "materials": "Manuel scolaire (P. 64), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à nommer les animaux domestiques"
+   ],
+   "body": "",
+   "pages": [
+    24
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 2 : Où est mon chien ?"
+  },
+  {
+   "order": 34,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Nommer les saisons ; nommer les animaux domestiques ; l'antonyme ; verbes (à l'oral) : pouvoir et venir ; le substitut grammatical (Elle / Nom propre) ; le féminin du nom en « ienne » — Où est mon chien ?",
+   "materials": "Manuel scolaire (P. 64), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à nommer les saisons ; nommer les animaux domestiques ; l'antonyme ; verbes (à l'oral) : pouvoir et venir ; le substitut grammatical (Elle / Nom propre) ; le féminin du nom en « ienne »"
+   ],
+   "body": "",
+   "pages": [
+    24
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 2 : Où est mon chien ?"
+  },
+  {
+   "order": 35,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 18,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Où est mon chien ?",
+   "materials": "Manuel scolaire (P. 64), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à les sons : ch/h — j/ge — en/ien"
+   ],
+   "body": "",
+   "pages": [
+    25
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 2 : Où est mon chien ?"
+  },
+  {
+   "order": 36,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — Où est mon chien ?",
+   "materials": "Manuel scolaire (P. 64), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « Où est mon chien ? » ; Comptine 1 : « Le chat a dit » ; Comptine 2 : « Mon petit chien »"
+   ],
+   "body": "",
+   "pages": [
+    25
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 2 : Où est mon chien ?"
+  },
+  {
+   "order": 37,
+   "segment": 8,
+   "unitKind": "week",
+   "unit": 19,
+   "session": "Production — Tâche 2",
+   "activity": "Français",
+   "domain": "Production — Tâche 2",
+   "topic": "Production — Tâche 2 — Où est mon chien ?",
+   "materials": "Manuel scolaire (P. 64), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à fabriquons l'imagier des animaux domestiques."
+   ],
+   "body": "",
+   "pages": [
+    25
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 2 : Où est mon chien ?"
+  },
+  {
+   "order": 38,
+   "segment": 9,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Oral production",
+   "activity": "Français",
+   "domain": "Oral production",
+   "topic": "Oral production — Qu'est-ce que tu fais ?",
+   "materials": "Manuel scolaire (—), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dire les mots de salutation ; nommer le matériel scolaire ; utiliser le présentatif « C'est »"
+   ],
+   "body": "",
+   "pages": [
+    27
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu'est-ce que tu fais ?"
+  },
+  {
+   "order": 39,
+   "segment": 9,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) — Qu'est-ce que tu fais ?",
+   "materials": "Manuel scolaire (M.S : 73 / M.S : 74), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dire ce qu'il fait ; dire la date du jour ; le verbe « faire » à l'oral ; le substitut grammatical (il / GN) ; l'adverbe de temps ; le féminin du nom en « eur, euse, trice »"
+   ],
+   "body": "",
+   "pages": [
+    27
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu'est-ce que tu fais ?"
+  },
+  {
+   "order": 40,
+   "segment": 9,
+   "unitKind": "week",
+   "unit": 20,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Qu'est-ce que tu fais ?",
+   "materials": "Manuel scolaire (M.S : 73 / M.S : 74), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à les sons : ui, oui, nain, ein, in — um, un, aim, ain"
+   ],
+   "body": "",
+   "pages": [
+    28
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu'est-ce que tu fais ?"
+  },
+  {
+   "order": 41,
+   "segment": 9,
+   "unitKind": "week",
+   "unit": 21,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — Qu'est-ce que tu fais ?",
+   "materials": "Manuel scolaire (M.S : 75), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « Qu'est-ce que tu fais ? » ; Comptine : « Dans la salle de bain » ; Devinette : « Le poussin »"
+   ],
+   "body": "",
+   "pages": [
+    28
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu'est-ce que tu fais ?"
+  },
+  {
+   "order": 42,
+   "segment": 9,
+   "unitKind": "week",
+   "unit": 21,
+   "session": "Production — Tâche 3",
+   "activity": "Français",
+   "domain": "Production — Tâche 3",
+   "topic": "Production — Tâche 3 — Qu'est-ce que tu fais ?",
+   "materials": "Manuel scolaire (M.S : 77), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à fabriquons l'abécédaire des animaux."
+   ],
+   "body": "",
+   "pages": [
+    28
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 3 : Tu connais les animaux ? — Séquence 3 : Qu'est-ce que tu fais ?"
+  },
+  {
+   "order": 43,
+   "segment": 10,
+   "unitKind": "week",
+   "unit": 22,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — Je vais à la campagne",
+   "materials": "Manuel scolaire (P. 78), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à demander et dire l'heure"
+   ],
+   "body": "",
+   "pages": [
+    30
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne"
+  },
+  {
+   "order": 44,
+   "segment": 10,
+   "unitKind": "week",
+   "unit": 22,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Dire l'heure ; nommer quelques moyens de transport ; futur (à l'oral) : verbe aimer ; le substitut grammatical (elle / GN) ; le complément de temps ; le féminin du nom en « ier, er » — Je vais à la campagne",
+   "materials": "Manuel scolaire (P. 78), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dire l'heure ; nommer quelques moyens de transport ; futur (à l'oral) : verbe aimer ; le substitut grammatical (elle / GN) ; le complément de temps ; le féminin du nom en « ier, er »"
+   ],
+   "body": "",
+   "pages": [
+    30
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne"
+  },
+  {
+   "order": 45,
+   "segment": 10,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Je vais à la campagne",
+   "materials": "Manuel scolaire (P. 78), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à gn — w — è-ai-ei-et-ê-é-er-ez-ier"
+   ],
+   "body": "",
+   "pages": [
+    31
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne"
+  },
+  {
+   "order": 46,
+   "segment": 10,
+   "unitKind": "week",
+   "unit": 25,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — Je vais à la campagne",
+   "materials": "Manuel scolaire (P. 78), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « Je vais à la campagne » ; Comptine 1 : « Quelle heure est-il ? » ; Comptine 2 : « Les cinq sens », Sophie Arnoud, Nathan, 1980 ; Comptine 3 : « A la campagne », Maurice Genevoix, Casterman, 1980"
+   ],
+   "body": "",
+   "pages": [
+    31
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 1 : Je vais à la campagne"
+  },
+  {
+   "order": 47,
+   "segment": 11,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — Nous planterons un arbre",
+   "materials": "Manuel scolaire (P. 88), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à situer un événement dans le temps et le lieu"
+   ],
+   "body": "",
+   "pages": [
+    33
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre"
+  },
+  {
+   "order": 48,
+   "segment": 11,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Fêter la journée de l'arbre ; dire la date et le lieu de la célébration de la journée ; annoncer le thème de la journée ; la chronologie ; écrire les chiffres en lettres (0-10) ; futur (à l'oral) : verbe planter ; le substitut grammatical (Ils / Nom propre / GN) ; le complément de lieu ; écrire m devant : m, p, b — Nous planterons un arbre",
+   "materials": "Manuel scolaire (P. 88), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à fêter la journée de l'arbre ; dire la date et le lieu de la célébration de la journée ; annoncer le thème de la journée ; la chronologie ; écrire les chiffres en lettres (0-10) ; futur (à l'oral) : verbe planter ; le substitut grammatical (Ils / Nom propre / GN) ; le complément de lieu ; écrire m devant : m, p, b"
+   ],
+   "body": "",
+   "pages": [
+    33
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre"
+  },
+  {
+   "order": 49,
+   "segment": 11,
+   "unitKind": "week",
+   "unit": 26,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Nous planterons un arbre",
+   "materials": "Manuel scolaire (P. 88), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à x — an/am/on/om/in-im/en/em"
+   ],
+   "body": "",
+   "pages": [
+    34
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre"
+  },
+  {
+   "order": 50,
+   "segment": 11,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — Nous planterons un arbre",
+   "materials": "Manuel scolaire (P. 88), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « Nous planterons un arbre » ; Comptine 1 : « Le jardinier » ; Comptine 2 : « Trois framboises rouges » ; Comptine 3 : « Mon petit chien »"
+   ],
+   "body": "",
+   "pages": [
+    34
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre"
+  },
+  {
+   "order": 51,
+   "segment": 11,
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Production — Tâche 2",
+   "activity": "Français",
+   "domain": "Production — Tâche 2",
+   "topic": "Production — Tâche 2 — Nous planterons un arbre",
+   "materials": "Manuel scolaire (P. 88), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dessinons une affiche pour annoncer la fête de l'arbre."
+   ],
+   "body": "",
+   "pages": [
+    34
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 2 : Nous planterons un arbre"
+  },
+  {
+   "order": 52,
+   "segment": 12,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Acte de parole / Oral",
+   "activity": "Français",
+   "domain": "Acte de parole / Oral",
+   "topic": "Acte de parole / Oral — Quelle belle journée à la campagne !",
+   "materials": "Manuel scolaire (P. 97), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à évoquer des actions vécues"
+   ],
+   "body": "",
+   "pages": [
+    36
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne !"
+  },
+  {
+   "order": 53,
+   "segment": 12,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "activity": "Français",
+   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Nommer quelques fruits et arbres fruitiers ; narrer des actions vécues ; passé composé (à l'oral) : auxiliaires être/avoir ; le substitut grammatical (Elles / Nom propre / GN) ; le complément de manière — Quelle belle journée à la campagne !",
+   "materials": "Manuel scolaire (P. 97), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à nommer quelques fruits et arbres fruitiers ; narrer des actions vécues ; passé composé (à l'oral) : auxiliaires être/avoir ; le substitut grammatical (Elles / Nom propre / GN) ; le complément de manière"
+   ],
+   "body": "",
+   "pages": [
+    36
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne !"
+  },
+  {
+   "order": 54,
+   "segment": 12,
+   "unitKind": "week",
+   "unit": 28,
+   "session": "Phonie / Graphie",
+   "activity": "Français",
+   "domain": "Phonie / Graphie",
+   "topic": "Phonie / Graphie — Quelle belle journée à la campagne !",
+   "materials": "Manuel scolaire (P. 97), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à s = ss, ç, c+e/i — ill-eil/euil/euille/ouil/ouille/ia-io/ail/aille/y"
+   ],
+   "body": "",
+   "pages": [
+    37
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne !"
+  },
+  {
+   "order": 55,
+   "segment": 12,
+   "unitKind": "week",
+   "unit": 29,
+   "session": "Comptine(s) / Dialogue support",
+   "activity": "Français",
+   "domain": "Comptine(s) / Dialogue support",
+   "topic": "Comptine(s) / Dialogue support — Quelle belle journée à la campagne !",
+   "materials": "Manuel scolaire (P. 97), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à dialogue : « Quelle belle journée à la campagne ! » ; Poème : « Je marche », Rachid Boudjedra, Pour ne plus rêver, 1965 ; Comptine : « Dans la salle de bain »"
+   ],
+   "body": "",
+   "pages": [
+    37
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne !"
+  },
+  {
+   "order": 56,
+   "segment": 12,
+   "unitKind": "week",
+   "unit": 29,
+   "session": "Production — Tâche 3",
+   "activity": "Français",
+   "domain": "Production — Tâche 3",
+   "topic": "Production — Tâche 3 — Quelle belle journée à la campagne !",
+   "materials": "Manuel scolaire (P. 97), images/étiquettes, ardoise, cahier.",
+   "objectives": [
+    "Amener l'enfant à fabriquons l'imagier des fruits."
+   ],
+   "body": "",
+   "pages": [
+    37
+   ],
+   "sample": false,
+   "segmentTitle": "Projet 4 : A la campagne ! — Séquence 3 : Quelle belle journée à la campagne !"
+  }
+ ]
+}
