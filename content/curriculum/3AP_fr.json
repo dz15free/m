@@ -30,7 +30,7 @@
    "unit": 3,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — Bonjour ! Au revoir !",
    "materials": "Manuel scolaire (P. 11), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -50,7 +50,7 @@
    "unit": 3,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Dire les mots de salutation ; demander et dire son prénom ; nommer le matériel scolaire ; utiliser le présentatif « C'est » ; verbe (à l'oral) : aller ; le pronom « Je » ; la phrase déclarative ; la ponctuation : le point ; nom propre / prénom — Bonjour ! Au revoir !",
    "materials": "Manuel scolaire (P. 11), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -70,7 +70,7 @@
    "unit": 3,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Bonjour ! Au revoir !",
    "materials": "Manuel scolaire (P. 11), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -90,7 +90,7 @@
    "unit": 3,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — Bonjour ! Au revoir !",
    "materials": "Manuel scolaire (P. 11), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -110,7 +110,7 @@
    "unit": 4,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — Je m'appelle Nadir",
    "materials": "Manuel scolaire (P. 19), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -130,7 +130,7 @@
    "unit": 4,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Dire les noms des couleurs ; qualifier un objet par sa couleur ; utiliser le présentatif « Voici » ; verbe (à l'oral) : s'appeler ; les pronoms Je/Tu/Il/Elle ; la phrase interrogative ; la ponctuation : le point d'interrogation ; le nom commun ; les articles indéfinis un/une — Je m'appelle Nadir",
    "materials": "Manuel scolaire (P. 19), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -150,7 +150,7 @@
    "unit": 5,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Je m'appelle Nadir",
    "materials": "Manuel scolaire (P. 19), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -170,7 +170,7 @@
    "unit": 5,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — Je m'appelle Nadir",
    "materials": "Manuel scolaire (P. 19), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -190,7 +190,7 @@
    "unit": 5,
    "session": "Production — Tâche 2",
    "activity": "Français",
-   "domain": "Production — Tâche 2",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production — Tâche 2 — Je m'appelle Nadir",
    "materials": "Manuel scolaire (P. 19), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -210,7 +210,7 @@
    "unit": 6,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — J'aime l'école",
    "materials": "Manuel scolaire (P. 26), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -230,7 +230,7 @@
    "unit": 6,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Exprimer ses préférences ; dire ce qu'on aime faire à l'école ; verbe (à l'oral) : aimer / adorer ; pronoms Je/Tu/Il ; les articles définis le/la ; la phrase exclamative ; la ponctuation : le point d'exclamation — J'aime l'école",
    "materials": "Manuel scolaire (P. 26), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -250,7 +250,7 @@
    "unit": 7,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — J'aime l'école",
    "materials": "Manuel scolaire (P. 26), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -270,7 +270,7 @@
    "unit": 7,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — J'aime l'école",
    "materials": "Manuel scolaire (P. 26), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -290,7 +290,7 @@
    "unit": 7,
    "session": "Production — Tâche 3",
    "activity": "Français",
-   "domain": "Production — Tâche 3",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production — Tâche 3 — J'aime l'école",
    "materials": "Manuel scolaire (P. 26), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -310,7 +310,7 @@
    "unit": 9,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — Nous sommes une famille",
    "materials": "Manuel scolaire (P. 33), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -330,7 +330,7 @@
    "unit": 9,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Présenter les membres de sa famille ; dire les formules de politesse ; nommer une énumération avec « il y a » ; nommer les objets de sa chambre ; pronom : nous ; verbe (à l'oral) : être ; la phrase : la majuscule, le point ; le sujet de la phrase ; la phrase négative : ne…pas — Nous sommes une famille",
    "materials": "Manuel scolaire (P. 33), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -350,7 +350,7 @@
    "unit": 10,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Nous sommes une famille",
    "materials": "Manuel scolaire (P. 33), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -370,7 +370,7 @@
    "unit": 10,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — Nous sommes une famille",
    "materials": "Manuel scolaire (P. 33), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -390,7 +390,7 @@
    "unit": 11,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — Qu'est-ce que tu veux manger ?",
    "materials": "Manuel scolaire (P. 41), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -410,7 +410,7 @@
    "unit": 11,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Nommer quelques aliments ; exprimer un goût, une préférence alimentaire ; dire des phrases avec « il faut » ; verbe (à l'oral) : vouloir ; le verbe de la phrase ; la phrase négative : ni…ni ; les deux points, les guillemets — Qu'est-ce que tu veux manger ?",
    "materials": "Manuel scolaire (P. 41), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -430,7 +430,7 @@
    "unit": 13,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Qu'est-ce que tu veux manger ?",
    "materials": "Manuel scolaire (P. 41), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -450,7 +450,7 @@
    "unit": 13,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — Qu'est-ce que tu veux manger ?",
    "materials": "Manuel scolaire (P. 41), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -470,7 +470,7 @@
    "unit": 13,
    "session": "Production — Tâche 2",
    "activity": "Français",
-   "domain": "Production — Tâche 2",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production — Tâche 2 — Qu'est-ce que tu veux manger ?",
    "materials": "Manuel scolaire (P. 41), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -490,7 +490,7 @@
    "unit": 14,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — Tu as quel âge ?",
    "materials": "Manuel scolaire (P. 49), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -510,7 +510,7 @@
    "unit": 14,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Dire son âge ; compter de 0 à 10 ; nommer le lieu où on habite ; localisation : adverbe de lieu ; verbe (à l'oral) : avoir ; l'adjectif qualificatif ; le singulier et le pluriel des noms ; les articles le/la/les ; le complément d'objet direct — Tu as quel âge ?",
    "materials": "Manuel scolaire (P. 49), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -530,7 +530,7 @@
    "unit": 15,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Tu as quel âge ?",
    "materials": "Manuel scolaire (P. 49), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -550,7 +550,7 @@
    "unit": 15,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — Tu as quel âge ?",
    "materials": "Manuel scolaire (P. 49), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -570,7 +570,7 @@
    "unit": 15,
    "session": "Production — Tâche 3",
    "activity": "Français",
-   "domain": "Production — Tâche 3",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production — Tâche 3 — Tu as quel âge ?",
    "materials": "Manuel scolaire (P. 49), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -590,7 +590,7 @@
    "unit": 17,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — A la ferme",
    "materials": "Manuel scolaire (P. 56), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -610,7 +610,7 @@
    "unit": 17,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Nommer les animaux de la ferme ; nommer les mois de l'année ; le synonyme ; verbe (à l'oral) : devoir ; pronom : Ils ; le substitut grammatical (Il / Nom propre) ; le complément d'objet indirect ; nom au pluriel : l'article des ; la marque du pluriel : s, x — A la ferme",
    "materials": "Manuel scolaire (P. 56), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -630,7 +630,7 @@
    "unit": 17,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — A la ferme",
    "materials": "Manuel scolaire (P. 56), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -650,7 +650,7 @@
    "unit": 17,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — A la ferme",
    "materials": "Manuel scolaire (P. 56), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -670,7 +670,7 @@
    "unit": 18,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — Où est mon chien ?",
    "materials": "Manuel scolaire (P. 64), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -690,7 +690,7 @@
    "unit": 18,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Nommer les saisons ; nommer les animaux domestiques ; l'antonyme ; verbes (à l'oral) : pouvoir et venir ; le substitut grammatical (Elle / Nom propre) ; le féminin du nom en « ienne » — Où est mon chien ?",
    "materials": "Manuel scolaire (P. 64), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -710,7 +710,7 @@
    "unit": 19,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Où est mon chien ?",
    "materials": "Manuel scolaire (P. 64), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -730,7 +730,7 @@
    "unit": 19,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — Où est mon chien ?",
    "materials": "Manuel scolaire (P. 64), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -750,7 +750,7 @@
    "unit": 19,
    "session": "Production — Tâche 2",
    "activity": "Français",
-   "domain": "Production — Tâche 2",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production — Tâche 2 — Où est mon chien ?",
    "materials": "Manuel scolaire (P. 64), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -770,7 +770,7 @@
    "unit": 20,
    "session": "Oral production",
    "activity": "Français",
-   "domain": "Oral production",
+   "domain": "Dire pour s’approprier la langue",
    "topic": "Oral production — Qu'est-ce que tu fais ?",
    "materials": "Manuel scolaire (—), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -790,7 +790,7 @@
    "unit": 20,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) — Qu'est-ce que tu fais ?",
    "materials": "Manuel scolaire (M.S : 73 / M.S : 74), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -810,7 +810,7 @@
    "unit": 21,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Qu'est-ce que tu fais ?",
    "materials": "Manuel scolaire (M.S : 73 / M.S : 74), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -830,7 +830,7 @@
    "unit": 21,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — Qu'est-ce que tu fais ?",
    "materials": "Manuel scolaire (M.S : 75), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -850,7 +850,7 @@
    "unit": 21,
    "session": "Production — Tâche 3",
    "activity": "Français",
-   "domain": "Production — Tâche 3",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production — Tâche 3 — Qu'est-ce que tu fais ?",
    "materials": "Manuel scolaire (M.S : 77), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -870,7 +870,7 @@
    "unit": 22,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — Je vais à la campagne",
    "materials": "Manuel scolaire (P. 78), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -890,7 +890,7 @@
    "unit": 22,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Dire l'heure ; nommer quelques moyens de transport ; futur (à l'oral) : verbe aimer ; le substitut grammatical (elle / GN) ; le complément de temps ; le féminin du nom en « ier, er » — Je vais à la campagne",
    "materials": "Manuel scolaire (P. 78), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -910,7 +910,7 @@
    "unit": 25,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Je vais à la campagne",
    "materials": "Manuel scolaire (P. 78), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -930,7 +930,7 @@
    "unit": 25,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — Je vais à la campagne",
    "materials": "Manuel scolaire (P. 78), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -950,7 +950,7 @@
    "unit": 26,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — Nous planterons un arbre",
    "materials": "Manuel scolaire (P. 88), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -970,7 +970,7 @@
    "unit": 26,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Fêter la journée de l'arbre ; dire la date et le lieu de la célébration de la journée ; annoncer le thème de la journée ; la chronologie ; écrire les chiffres en lettres (0-10) ; futur (à l'oral) : verbe planter ; le substitut grammatical (Ils / Nom propre / GN) ; le complément de lieu ; écrire m devant : m, p, b — Nous planterons un arbre",
    "materials": "Manuel scolaire (P. 88), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -990,7 +990,7 @@
    "unit": 27,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Nous planterons un arbre",
    "materials": "Manuel scolaire (P. 88), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -1010,7 +1010,7 @@
    "unit": 27,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — Nous planterons un arbre",
    "materials": "Manuel scolaire (P. 88), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -1030,7 +1030,7 @@
    "unit": 27,
    "session": "Production — Tâche 2",
    "activity": "Français",
-   "domain": "Production — Tâche 2",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production — Tâche 2 — Nous planterons un arbre",
    "materials": "Manuel scolaire (P. 88), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -1050,7 +1050,7 @@
    "unit": 28,
    "session": "Acte de parole / Oral",
    "activity": "Français",
-   "domain": "Acte de parole / Oral",
+   "domain": "Saisir la portée du message oral",
    "topic": "Acte de parole / Oral — Quelle belle journée à la campagne !",
    "materials": "Manuel scolaire (P. 97), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -1070,7 +1070,7 @@
    "unit": 28,
    "session": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
    "activity": "Français",
-   "domain": "Points de langue (lexique, grammaire, conjugaison, orthographe)",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue (lexique, grammaire, conjugaison, orthographe) : Nommer quelques fruits et arbres fruitiers ; narrer des actions vécues ; passé composé (à l'oral) : auxiliaires être/avoir ; le substitut grammatical (Elles / Nom propre / GN) ; le complément de manière — Quelle belle journée à la campagne !",
    "materials": "Manuel scolaire (P. 97), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -1090,7 +1090,7 @@
    "unit": 29,
    "session": "Phonie / Graphie",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Quelle belle journée à la campagne !",
    "materials": "Manuel scolaire (P. 97), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -1110,7 +1110,7 @@
    "unit": 29,
    "session": "Comptine(s) / Dialogue support",
    "activity": "Français",
-   "domain": "Comptine(s) / Dialogue support",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine(s) / Dialogue support — Quelle belle journée à la campagne !",
    "materials": "Manuel scolaire (P. 97), images/étiquettes, ardoise, cahier.",
    "objectives": [
@@ -1130,7 +1130,7 @@
    "unit": 29,
    "session": "Production — Tâche 3",
    "activity": "Français",
-   "domain": "Production — Tâche 3",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production — Tâche 3 — Quelle belle journée à la campagne !",
    "materials": "Manuel scolaire (P. 97), images/étiquettes, ardoise, cahier.",
    "objectives": [

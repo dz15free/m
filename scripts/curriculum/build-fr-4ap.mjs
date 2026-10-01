@@ -9,6 +9,7 @@
 import { execFileSync } from "node:child_process";
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { composanteFor } from "./fr-composantes.mjs";
 
 const [pdf, outDir] = process.argv.slice(2);
 const nPages = Number(/Pages:\s+(\d+)/.exec(execFileSync("pdfinfo", [pdf]).toString())[1]);
@@ -60,7 +61,7 @@ seqKeys.forEach((key, s) => {
       unit: weeks[byAct ?? Math.min(len - 1, Math.floor((i * len) / list.length))],
       session: `Séance ${f.seance}${f.dur ? ` (${f.dur})` : ""}`,
       activity: "Français",
-      domain: f.act,
+      domain: composanteFor(f.act, PART(f).startsWith("Suite") ? "3AP" : "4AP") || f.act,
       topic: `${f.act} — ${f.seqTitle}`,
       materials: f.support.join(" ; ") || "Manuel scolaire, tableau",
       objectives: f.objectives,

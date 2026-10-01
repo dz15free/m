@@ -27,7 +27,7 @@
    "unit": 1,
    "session": "Oral compréhension (30 mn)",
    "activity": "Français",
-   "domain": "Oral compréhension",
+   "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension : Les animaux au parc — Évaluation diagnostique",
    "materials": "Support audio/audiovisuel – dialogue – illustration",
    "objectives": [
@@ -48,7 +48,7 @@
    "unit": 1,
    "session": "Vocabulaire (30 mn)",
    "activity": "Français",
-   "domain": "Vocabulaire",
+   "domain": "Utiliser des ressources diverses pour améliorer sa production écrite",
    "topic": "Vocabulaire : Les synonymes et les antonymes — Évaluation diagnostique",
    "materials": "Exercices au tableau ou photocopies",
    "objectives": [
@@ -69,7 +69,7 @@
    "unit": 1,
    "session": "Lecture 1 (30 mn)",
    "activity": "Français",
-   "domain": "Lecture 1",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture 1 : Une tortue courageuse — Évaluation diagnostique",
    "materials": "Illustration – texte transcrit ou photocopié",
    "objectives": [
@@ -91,7 +91,7 @@
    "unit": 1,
    "session": "Grammaire (30 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Utiliser des ressources diverses pour améliorer sa production écrite",
    "topic": "Grammaire : Les constituants de la phrase : S + V + COD — Évaluation diagnostique",
    "materials": "Exercices au tableau ou photocopiés",
    "objectives": [
@@ -111,7 +111,7 @@
    "unit": 1,
    "session": "Oral production 1 (30 mn)",
    "activity": "Français",
-   "domain": "Oral production 1",
+   "domain": "Dire pour s’approprier la langue",
    "topic": "Oral production 1 : Se présenter et parler de son lieu d’habitation — Évaluation diagnostique",
    "materials": "Illustration – tableau",
    "objectives": [
@@ -132,7 +132,7 @@
    "unit": 2,
    "session": "Conjugaison (30 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "exploiter ses ressources pour améliorer la production écrite",
    "topic": "Conjugaison : Être et avoir au présent — Évaluation diagnostique",
    "materials": "Exercices ecrit– tableau",
    "objectives": [
@@ -152,7 +152,7 @@
    "unit": 2,
    "session": "Lecture 2 (30 mn)",
    "activity": "Français",
-   "domain": "Lecture 2",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture 2 : Une nouvelle camarade — Évaluation diagnostique",
    "materials": "Illustration – texte transcrit ou photocopié",
    "objectives": [
@@ -174,7 +174,7 @@
    "unit": 2,
    "session": "Orthographe (30 mn)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Utiliser des ressources diverses pour améliorer sa production écrite",
    "topic": "Orthographe : Le féminin des noms et des adjectifs — Évaluation diagnostique",
    "materials": "Exercices – tableau",
    "objectives": [
@@ -195,7 +195,7 @@
    "unit": 2,
    "session": "Oral production 2 (30 mn)",
    "activity": "Français",
-   "domain": "Oral production 2",
+   "domain": "Dire pour s’approprier la langue",
    "topic": "Oral production 2 : Les activités sportives — Évaluation diagnostique",
    "materials": "Illustrations – tableau",
    "objectives": [
@@ -216,7 +216,7 @@
    "unit": 2,
    "session": "Production écrite (30 mn)",
    "activity": "Français",
-   "domain": "Production écrite",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Production écrite : Ma journée à l’école — Évaluation diagnostique",
    "materials": "Tableau – double feuille – illustration",
    "objectives": [
@@ -236,7 +236,7 @@
    "unit": 3,
    "session": "Présentation du projet (45 mn)",
    "activity": "Français",
-   "domain": "Présentation du projet",
+   "domain": "Connaître le système graphique du français",
    "topic": "Présentation du projet — Pauvre petite gazelle !",
    "materials": "Manuel scolaire page 11– Tableau",
    "objectives": [
@@ -256,7 +256,7 @@
    "unit": 3,
    "session": "Oral compréhension (45 mn)",
    "activity": "Français",
-   "domain": "Oral compréhension",
+   "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — Pauvre petite gazelle !",
    "materials": "Illustration – support audio ou audio-visuel",
    "objectives": [],
@@ -274,7 +274,7 @@
    "unit": 3,
    "session": "Compréhension de l’écrit 1 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 1",
+   "domain": "Construire du sens à l’aide d’éléments du para texte (silhouette, références, illustration)",
    "topic": "Compréhension de l’écrit 1 : La gazelle — Pauvre petite gazelle !",
    "materials": "L’illustration de la gazelle – Manuel scolaire page 15",
    "objectives": [
@@ -294,7 +294,7 @@
    "unit": 3,
    "session": "Vocabulaire (45 mn)",
    "activity": "Français",
-   "domain": "Vocabulaire",
+   "domain": "Identifier du lexique thématique",
    "topic": "Vocabulaire : Lexique thématique : les parties du corps et l'aspect physique de l'animal — Pauvre petite gazelle !",
    "materials": "Illustration de la gazelle – Manuel scolaire page 15",
    "objectives": [
@@ -314,7 +314,7 @@
    "unit": 3,
    "session": "Oral production 1 (45 mn)",
    "activity": "Français",
-   "domain": "Oral production 1",
+   "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production 1 — Pauvre petite gazelle !",
    "materials": "Illustrations – Manuel scolaire page 12",
    "objectives": [],
@@ -332,7 +332,7 @@
    "unit": 3,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : L'adjectif qualificatif épithète — Pauvre petite gazelle !",
    "materials": "Manuel scolaire page 16 – Tableau",
    "objectives": [
@@ -352,7 +352,7 @@
    "unit": 4,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : La pronominalisation (il / elle, ils / elles) — Pauvre petite gazelle !",
    "materials": "Manuel scolaire page 16 – Ardoises",
    "objectives": [
@@ -372,7 +372,7 @@
    "unit": 4,
    "session": "Compréhension de l'écrit 2 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l'écrit 2",
+   "domain": "Construire du sens à l'aide d'éléments du para texte (silhouette, références, illustration)",
    "topic": "Compréhension de l'écrit 2 : Un animal sauvage — Pauvre petite gazelle !",
    "materials": "Cahier d'activités page 8 – Illustration",
    "objectives": [
@@ -392,7 +392,7 @@
    "unit": 4,
    "session": "Oral production 2 (45 mn)",
    "activity": "Français",
-   "domain": "Oral production 2",
+   "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production 2 : « Je m’exprime » — Pauvre petite gazelle !",
    "materials": "Illustrations – Manuel scolaire page 13",
    "objectives": [],
@@ -410,7 +410,7 @@
    "unit": 4,
    "session": "Conjugaison (45 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Conjugaison : Le verbe être et avoir au présent — Pauvre petite gazelle !",
    "materials": "Manuel scolaire page 29 – Des affiches de conjugaison",
    "objectives": [
@@ -430,7 +430,7 @@
    "unit": 4,
    "session": "Lecture systématique (45 mn)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture systématique : Les sons : ail, eil, ouil, euil — Pauvre petite gazelle !",
    "materials": "Tableau – Cahier de classe",
    "objectives": [
@@ -450,7 +450,7 @@
    "unit": 4,
    "session": "Orthographe (45 mn)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Orthographe : Accord de l'adjectif qualificatif avec le nom (masculin / féminin) — Pauvre petite gazelle !",
    "materials": "Exercices transcrits au tableau ou photocopiés",
    "objectives": [
@@ -470,7 +470,7 @@
    "unit": 4,
    "session": "Dictée (45 mn)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Ecrire pour répondre à une consigne d'écriture",
    "topic": "Dictée — Pauvre petite gazelle !",
    "materials": "Texte support de la séquence (la gazelle) – Ardoises, cahiers",
    "objectives": [
@@ -490,7 +490,7 @@
    "unit": 5,
    "session": "Préparation à l’écrit (45 mn)",
    "activity": "Français",
-   "domain": "Préparation à l’écrit",
+   "domain": "Produire des énoncés pour les insérer dans un cadre textuel",
    "topic": "Préparation à l’écrit — Pauvre petite gazelle !",
    "materials": "Illustrations -Manuel scolaire page 21 – Ardoises",
    "objectives": [
@@ -510,7 +510,7 @@
    "unit": 5,
    "session": "Production écrite (1er et 2ème jet) (45 mn)",
    "activity": "Français",
-   "domain": "Production écrite (1er et 2ème jet)",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Production écrite (1er et 2ème jet) — Pauvre petite gazelle !",
    "materials": "Illustrations – boite à outils (mots)",
    "objectives": [
@@ -530,7 +530,7 @@
    "unit": 5,
    "session": "Compte rendu (60 mn)",
    "activity": "Français",
-   "domain": "Compte rendu",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Compte rendu — Pauvre petite gazelle !",
    "materials": "-Illustrations – Ardoises",
    "objectives": [
@@ -550,7 +550,7 @@
    "unit": 5,
    "session": "Comptine (30 mn)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir tout en chantant la comptine",
    "topic": "Comptine : Alouette — Pauvre petite gazelle !",
    "materials": "Support audio – Illustration d'un oiseau",
    "objectives": [
@@ -570,7 +570,7 @@
    "unit": 5,
    "session": "Réalisation partielle du projet (30 mn)",
    "activity": "Français",
-   "domain": "Réalisation partielle du projet",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
    "topic": "Réalisation partielle du projet — Pauvre petite gazelle !",
    "materials": "Illustrations -Manuel scolaire page 22 – Les dessins des animaux",
    "objectives": [
@@ -590,7 +590,7 @@
    "unit": 5,
    "session": "Evaluation (60 mn)",
    "activity": "Français",
-   "domain": "Evaluation",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
    "topic": "Evaluation — Pauvre petite gazelle !",
    "materials": "-Tableau – Doubles feuilles",
    "objectives": [
@@ -610,7 +610,7 @@
    "unit": 6,
    "session": "Présentation du projet (45 mn)",
    "activity": "Français",
-   "domain": "Présentation du projet",
+   "domain": "Connaître le système graphique du français",
    "topic": "Présentation du projet — C'est un vrai fennec ?",
    "materials": "Manuel scolaire page 33– Tableau",
    "objectives": [
@@ -630,7 +630,7 @@
    "unit": 6,
    "session": "Oral compréhension (45 mn)",
    "activity": "Français",
-   "domain": "Oral compréhension",
+   "domain": "Saisir la portée du message oral",
    "topic": "Oral compréhension — C'est un vrai fennec ?",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 23",
    "objectives": [],
@@ -648,7 +648,7 @@
    "unit": 6,
    "session": "Compréhension de l’écrit 1 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 1",
+   "domain": "Construire du sens à l’aide d’éléments du para texte (silhouette, références, illustration)",
    "topic": "Compréhension de l’écrit 1 : Le fennec — C'est un vrai fennec ?",
    "materials": "L’illustration du fennec – Manuel scolaire page 26",
    "objectives": [
@@ -668,7 +668,7 @@
    "unit": 6,
    "session": "Vocabulaire (45 mn)",
    "activity": "Français",
-   "domain": "Vocabulaire",
+   "domain": "Identifier du lexique thématique",
    "topic": "Vocabulaire : Lexique thématique : régime alimentaire, habitat, noms (mâle / femelle / petit) — C'est un vrai fennec ?",
    "materials": "Illustrations – Manuel scolaire page 26",
    "objectives": [
@@ -688,7 +688,7 @@
    "unit": 6,
    "session": "Oral production (45 mn)",
    "activity": "Français",
-   "domain": "Oral production",
+   "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production — C'est un vrai fennec ?",
    "materials": "Illustrations – Manuel scolaire page 23",
    "objectives": [],
@@ -706,7 +706,7 @@
    "unit": 6,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : Le verbe d’état et l’adjectif attribut — C'est un vrai fennec ?",
    "materials": "Manuel scolaire page 27 - Cahiers de classe",
    "objectives": [
@@ -726,7 +726,7 @@
    "unit": 6,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : Le complément d'objet direct et indirect (COD / COI) — C'est un vrai fennec ?",
    "materials": "Manuel scolaire pages 17/28 – Tableau",
    "objectives": [
@@ -746,7 +746,7 @@
    "unit": 7,
    "session": "Compréhension de l’écrit 2 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 2",
+   "domain": "Construire du sens à l’aide d’indices textuels",
    "topic": "Compréhension de l’écrit 2 : Un animal du désert — C'est un vrai fennec ?",
    "materials": "L’illustration du fennec – Cahier d’activités page 21",
    "objectives": [
@@ -766,7 +766,7 @@
    "unit": 7,
    "session": "Oral production 2 (45 mn)",
    "activity": "Français",
-   "domain": "Oral production 2",
+   "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production 2 : « Je m’exprime » — C'est un vrai fennec ?",
    "materials": "Illustrations – Manuel scolaire page 24",
    "objectives": [],
@@ -784,7 +784,7 @@
    "unit": 7,
    "session": "Conjugaison (45 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Conjugaison : Les verbes du 1er groupe et le verbe « se nourrir » au présent de l'indicatif — C'est un vrai fennec ?",
    "materials": "Manuel scolaire page 27 – Tableau de conjugaison",
    "objectives": [
@@ -804,7 +804,7 @@
    "unit": 7,
    "session": "Lecture systématique (45 mn)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture systématique : Les sons : qu / c — C'est un vrai fennec ?",
    "materials": "Tableau – Cahier de classe",
    "objectives": [
@@ -824,7 +824,7 @@
    "unit": 7,
    "session": "Orthographe (45 mn)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Orthographe : Accord de l'adjectif qualificatif avec le nom (singulier / pluriel) — C'est un vrai fennec ?",
    "materials": "Exercices transcrits au tableau ou photocopiés",
    "objectives": [
@@ -844,7 +844,7 @@
    "unit": 7,
    "session": "Lecture systématique 2 (45 mn)",
    "activity": "Français",
-   "domain": "Lecture systématique 2",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture systématique 2 : Les sons : g / gn — C'est un vrai fennec ?",
    "materials": "Tableau – Cahier de classe",
    "objectives": [
@@ -864,7 +864,7 @@
    "unit": 8,
    "session": "Dictée (45 mn)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Ecrire pour répondre à une consigne d'écriture",
    "topic": "Dictée — C'est un vrai fennec ?",
    "materials": "Texte support de la séquence (le fennec) – Ardoises, cahiers",
    "objectives": [
@@ -884,7 +884,7 @@
    "unit": 8,
    "session": "Préparation à l’écrit (45 mn)",
    "activity": "Français",
-   "domain": "Préparation à l’écrit",
+   "domain": "Produire des énoncés pour les insérer dans un cadre textuel donné",
    "topic": "Préparation à l’écrit — C'est un vrai fennec ?",
    "materials": "Illustrations -Manuel scolaire page 32 – Ardoises",
    "objectives": [
@@ -904,7 +904,7 @@
    "unit": 8,
    "session": "Production écrite (45 mn)",
    "activity": "Français",
-   "domain": "Production écrite",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Production écrite — C'est un vrai fennec ?",
    "materials": "Illustrations – boite à outils (mots) – Manuel scolaire page 32",
    "objectives": [
@@ -924,7 +924,7 @@
    "unit": 8,
    "session": "Compte rendu (60 mn)",
    "activity": "Français",
-   "domain": "Compte rendu",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Compte rendu — C'est un vrai fennec ?",
    "materials": "-Illustrations – Ardoises",
    "objectives": [
@@ -944,7 +944,7 @@
    "unit": 8,
    "session": "Comptine (30 mn)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine : Le fennec — C'est un vrai fennec ?",
    "materials": "Illustration du fennec –Cahier d’activités page 19",
    "objectives": [
@@ -964,7 +964,7 @@
    "unit": 8,
    "session": "Réalisation du projet (30 mn)",
    "activity": "Français",
-   "domain": "Réalisation du projet",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
    "topic": "Réalisation du projet — C'est un vrai fennec ?",
    "materials": "Illustrations -Manuel scolaire page 33 – Les dessins des animaux",
    "objectives": [
@@ -984,7 +984,7 @@
    "unit": 8,
    "session": "Evaluation (60 mn)",
    "activity": "Français",
-   "domain": "Evaluation",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Evaluation — C'est un vrai fennec ?",
    "materials": "-Tableau – Doubles feuilles",
    "objectives": [
@@ -1004,7 +1004,7 @@
    "unit": 9,
    "session": "Présentation du projet (45 mn)",
    "activity": "Français",
-   "domain": "Présentation du projet",
+   "domain": "Connaître le système graphique du français",
    "topic": "Présentation du projet — Nous allons au musée",
    "materials": "Manuel scolaire page 34– Tableau",
    "objectives": [
@@ -1024,7 +1024,7 @@
    "unit": 9,
    "session": "Oral compréhension (45 mn)",
    "activity": "Français",
-   "domain": "Oral compréhension",
+   "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — Nous allons au musée",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 35",
    "objectives": [],
@@ -1042,7 +1042,7 @@
    "unit": 9,
    "session": "Compréhension de l'écrit 1 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l'écrit 1",
+   "domain": "Construire du sens à l'aide d'éléments du para texte (silhouette, références, illustration)",
    "topic": "Compréhension de l'écrit 1 : Au musée du Moudjahid — Nous allons au musée",
    "materials": "Illustration du musée – Manuel scolaire page 35",
    "objectives": [
@@ -1062,7 +1062,7 @@
    "unit": 9,
    "session": "Vocabulaire (45 mn)",
    "activity": "Français",
-   "domain": "Vocabulaire",
+   "domain": "Identifier du lexique thématique",
    "topic": "Vocabulaire : Champ lexical de la visite : noms de lieux et moyens de transport — Nous allons au musée",
    "materials": "Illustrations – Manuel scolaire page 37",
    "objectives": [
@@ -1082,7 +1082,7 @@
    "unit": 9,
    "session": "Oral production (45 mn)",
    "activity": "Français",
-   "domain": "Oral production",
+   "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production — Nous allons au musée",
    "materials": "Illustrations – Manuel scolaire page 35",
    "objectives": [],
@@ -1100,7 +1100,7 @@
    "unit": 10,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : Le complément circonstanciel de lieu (CCL) — Nous allons au musée",
    "materials": "Manuel scolaire page 40 – Tableau",
    "objectives": [
@@ -1120,7 +1120,7 @@
    "unit": 10,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : Le complément circonstanciel de temps (CCT) — Nous allons au musée",
    "materials": "Manuel scolaire page 50 – Tableau",
    "objectives": [
@@ -1140,7 +1140,7 @@
    "unit": 10,
    "session": "Compréhension de l’écrit 2 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 2",
+   "domain": "Construire du sens à l’aide d’indices textuels",
    "topic": "Compréhension de l’écrit 2 : Notre visite du musée — Nous allons au musée",
    "materials": "L’illustration du musée – Cahier d’activités page 35",
    "objectives": [
@@ -1160,7 +1160,7 @@
    "unit": 10,
    "session": "Oral production en interaction (45 mn)",
    "activity": "Français",
-   "domain": "Oral production en interaction",
+   "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production en interaction : « Je m’exprime » — Nous allons au musée",
    "materials": "Illustrations – Manuel scolaire page 36",
    "objectives": [],
@@ -1178,7 +1178,7 @@
    "unit": 11,
    "session": "Conjugaison (45 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Conjugaison : Le passé composé avec l'auxiliaire avoir — Nous allons au musée",
    "materials": "Manuel scolaire – Tableau de conjugaison",
    "objectives": [
@@ -1198,7 +1198,7 @@
    "unit": 11,
    "session": "Conjugaison (45 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Conjugaison : Le passé composé avec l'auxiliaire être (verbes aller, partir, arriver…) — Nous allons au musée",
    "materials": "Manuel scolaire – Tableau de conjugaison",
    "objectives": [
@@ -1218,7 +1218,7 @@
    "unit": 11,
    "session": "Lecture systématique (45 mn)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture systématique : Les sons : in / ain / aim / ein / un / im — Nous allons au musée",
    "materials": "Tableau – Cahier de classe",
    "objectives": [
@@ -1238,7 +1238,7 @@
    "unit": 11,
    "session": "Orthographe (45 mn)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Orthographe : Accord du participe passé (genre et / ou nombre) — Nous allons au musée",
    "materials": "Exercices transcrits au tableau ou photocopiés",
    "objectives": [
@@ -1258,7 +1258,7 @@
    "unit": 11,
    "session": "Dictée (45 mn)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Ecrire pour répondre à une consigne d'écriture",
    "topic": "Dictée — Nous allons au musée",
    "materials": "Texte support de la séquence (la visite du musée) – Ardoises, cahiers",
    "objectives": [
@@ -1278,7 +1278,7 @@
    "unit": 12,
    "session": "Préparation à l’écrit (45 mn)",
    "activity": "Français",
-   "domain": "Préparation à l’écrit",
+   "domain": "Produire des énoncés pour les insérer dans un cadre textuel donné",
    "topic": "Préparation à l’écrit — Nous allons au musée",
    "materials": "Illustrations -Manuel scolaire page 44 – Ardoises",
    "objectives": [
@@ -1298,7 +1298,7 @@
    "unit": 12,
    "session": "Production écrite (1er jet) (45 mn)",
    "activity": "Français",
-   "domain": "Production écrite (1er jet)",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Production écrite (1er jet) — Nous allons au musée",
    "materials": "Illustrations – boite à outils (mots) – Manuel scolaire page 44 - 45",
    "objectives": [
@@ -1318,7 +1318,7 @@
    "unit": 12,
    "session": "Compte rendu (60 mn)",
    "activity": "Français",
-   "domain": "Compte rendu",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Compte rendu — Nous allons au musée",
    "materials": "-Illustrations – Ardoises",
    "objectives": [
@@ -1338,7 +1338,7 @@
    "unit": 12,
    "session": "Comptine (30 mn)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine : Au grand musée — Nous allons au musée",
    "materials": "Illustration du musée –Manuel scolaire page 44 – Audio et/ou audio-visuel",
    "objectives": [
@@ -1358,7 +1358,7 @@
    "unit": 12,
    "session": "Réalisation partielle du projet (30 mn)",
    "activity": "Français",
-   "domain": "Réalisation partielle du projet",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
    "topic": "Réalisation partielle du projet — Nous allons au musée",
    "materials": "Illustrations -Manuel scolaire page 45 – Les dessins des animaux",
    "objectives": [
@@ -1378,7 +1378,7 @@
    "unit": 13,
    "session": "Présentation du projet (45 mn)",
    "activity": "Français",
-   "domain": "Présentation du projet",
+   "domain": "Connaître le système graphique du français",
    "topic": "Présentation du projet — J'aime voyager en famille",
    "materials": "Manuel scolaire page 56– Tableau",
    "objectives": [
@@ -1398,7 +1398,7 @@
    "unit": 13,
    "session": "Oral compréhension (45 mn)",
    "activity": "Français",
-   "domain": "Oral compréhension",
+   "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — J'aime voyager en famille",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 46",
    "objectives": [],
@@ -1416,7 +1416,7 @@
    "unit": 13,
    "session": "Compréhension de l'écrit 1 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l'écrit 1",
+   "domain": "Construire du sens à l'aide d'éléments du para texte (silhouette, références, illustration)",
    "topic": "Compréhension de l'écrit 1 : L'Oasis — J'aime voyager en famille",
    "materials": "Illustration d'une oasis – Manuel scolaire",
    "objectives": [
@@ -1436,7 +1436,7 @@
    "unit": 13,
    "session": "Vocabulaire (45 mn)",
    "activity": "Français",
-   "domain": "Vocabulaire",
+   "domain": "Identifier du lexique thématique",
    "topic": "Vocabulaire : Lexique thématique de la visite (objets vus) — J'aime voyager en famille",
    "materials": "Illustrations",
    "objectives": [
@@ -1456,7 +1456,7 @@
    "unit": 13,
    "session": "Oral production (45 mn)",
    "activity": "Français",
-   "domain": "Oral production",
+   "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production — J'aime voyager en famille",
    "materials": "Illustrations – Manuel scolaire page 46",
    "objectives": [],
@@ -1474,7 +1474,7 @@
    "unit": 13,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : Les prépositions (à, de, vers…) et les articles contractés (au, du…) — J'aime voyager en famille",
    "materials": "Manuel scolaire – Tableau",
    "objectives": [
@@ -1494,7 +1494,7 @@
    "unit": 14,
    "session": "Compréhension de l’écrit 2 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 2",
+   "domain": "Construire du sens à l’aide d’indices textuels",
    "topic": "Compréhension de l’écrit 2 : Une épicerie à la Casbah — J'aime voyager en famille",
    "materials": "L’illustration de l’épicerie – Cahier d’activités page 48",
    "objectives": [
@@ -1514,7 +1514,7 @@
    "unit": 14,
    "session": "Oral production en interaction (45 mn)",
    "activity": "Français",
-   "domain": "Oral production en interaction",
+   "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production en interaction : « Je m’exprime » — J'aime voyager en famille",
    "materials": "Illustrations – Manuel scolaire page 47",
    "objectives": [],
@@ -1532,7 +1532,7 @@
    "unit": 14,
    "session": "Conjugaison (45 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Conjugaison : Les participes passés des verbes « voir » et « découvrir » — J'aime voyager en famille",
    "materials": "Manuel scolaire – Tableau de conjugaison",
    "objectives": [
@@ -1552,7 +1552,7 @@
    "unit": 14,
    "session": "Lecture systématique (45 mn)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture systématique : Les sons : ou / oi — J'aime voyager en famille",
    "materials": "Tableau – Cahier de classe",
    "objectives": [
@@ -1572,7 +1572,7 @@
    "unit": 14,
    "session": "Orthographe (45 mn)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Identifier les points de la langue pour mieux écrire",
    "topic": "Orthographe : L’accord du participe passé — J'aime voyager en famille",
    "materials": "Manuel scolaire page 53 – Ardoises",
    "objectives": [
@@ -1592,7 +1592,7 @@
    "unit": 14,
    "session": "Dictée (45 mn)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
    "topic": "Dictée — J'aime voyager en famille",
    "materials": "Manuel scolaire page 54 – Ardoises – Cahiers de classe",
    "objectives": [
@@ -1612,7 +1612,7 @@
    "unit": 16,
    "session": "Préparation à l’écrit (45 mn)",
    "activity": "Français",
-   "domain": "Préparation à l’écrit",
+   "domain": "Produire des énoncés pour les insérer dans un cadre textuel",
    "topic": "Préparation à l’écrit — J'aime voyager en famille",
    "materials": "Illustrations -Manuel scolaire page 44 – Ardoises",
    "objectives": [
@@ -1632,7 +1632,7 @@
    "unit": 16,
    "session": "Production écrite (1er jet) (45 mn)",
    "activity": "Français",
-   "domain": "Production écrite (1er jet)",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Production écrite (1er jet) — J'aime voyager en famille",
    "materials": "Illustrations – boite à outils (mots) – Manuel scolaire page 55",
    "objectives": [
@@ -1652,7 +1652,7 @@
    "unit": 16,
    "session": "Compte rendu (60 mn)",
    "activity": "Français",
-   "domain": "Compte rendu",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Compte rendu — J'aime voyager en famille",
    "materials": "-Illustrations – Ardoises",
    "objectives": [
@@ -1672,7 +1672,7 @@
    "unit": 16,
    "session": "Comptine (30 mn)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine : Le sifflement du train — J'aime voyager en famille",
    "materials": "Illustration du musée –Manuel scolaire page 55 – Audio et/ou audio-visuel",
    "objectives": [
@@ -1692,7 +1692,7 @@
    "unit": 16,
    "session": "Réalisation du projet (30 mn)",
    "activity": "Français",
-   "domain": "Réalisation du projet",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
    "topic": "Réalisation du projet — J'aime voyager en famille",
    "materials": "Illustrations -Manuel scolaire page 56 – Les dessins des lieux exceptionnels",
    "objectives": [
@@ -1712,7 +1712,7 @@
    "unit": 16,
    "session": "Evaluation (60 mn)",
    "activity": "Français",
-   "domain": "Evaluation",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Evaluation — J'aime voyager en famille",
    "materials": "-Tableau – Doubles feuilles",
    "objectives": [
@@ -1732,7 +1732,7 @@
    "unit": 17,
    "session": "Présentation du projet (45 mn)",
    "activity": "Français",
-   "domain": "Présentation du projet",
+   "domain": "Connaître le système graphique du français",
    "topic": "Présentation du projet — Quand je serai grand (les secouristes)",
    "materials": "Manuel scolaire page 57– Tableau",
    "objectives": [
@@ -1752,7 +1752,7 @@
    "unit": 17,
    "session": "Oral compréhension (45 mn)",
    "activity": "Français",
-   "domain": "Oral compréhension",
+   "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — Quand je serai grand (les secouristes)",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 58",
    "objectives": [],
@@ -1770,7 +1770,7 @@
    "unit": 17,
    "session": "Compréhension de l’écrit 1 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 1",
+   "domain": "Construire du sens à l’aide d’éléments du para texte (silhouette, références, illustration)",
    "topic": "Compréhension de l’écrit 1 : Les sauveteurs — Quand je serai grand (les secouristes)",
    "materials": "L’illustration des sauveteurs – Manuel scolaire page 61",
    "objectives": [
@@ -1790,7 +1790,7 @@
    "unit": 17,
    "session": "Vocabulaire (45 mn)",
    "activity": "Français",
-   "domain": "Vocabulaire",
+   "domain": "Identifier du lexique thématique",
    "topic": "Vocabulaire : Lexique thématique : noms des secouristes et leurs actions / noms des catastrophes naturelles — Quand je serai grand (les secouristes)",
    "materials": "Illustrations – Manuel scolaire page 61",
    "objectives": [
@@ -1810,7 +1810,7 @@
    "unit": 17,
    "session": "Oral production (45 mn)",
    "activity": "Français",
-   "domain": "Oral production",
+   "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production — Quand je serai grand (les secouristes)",
    "materials": "Illustrations – Manuel scolaire page 58",
    "objectives": [],
@@ -1828,7 +1828,7 @@
    "unit": 17,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : Le complément de manière — Quand je serai grand (les secouristes)",
    "materials": "Manuel scolaire page 72 – Tableau",
    "objectives": [
@@ -1848,7 +1848,7 @@
    "unit": 18,
    "session": "Compréhension de l’écrit 2 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 2",
+   "domain": "Construire du sens à l’aide d’indices textuels",
    "topic": "Compréhension de l’écrit 2 : C’est quoi un tremblement de terre ? — Quand je serai grand (les secouristes)",
    "materials": "L’illustration du tremblement de terre – Cahier d’activités page 63",
    "objectives": [
@@ -1868,7 +1868,7 @@
    "unit": 18,
    "session": "Oral production 2 (45 mn)",
    "activity": "Français",
-   "domain": "Oral production 2",
+   "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production 2 : « Je m’exprime » — Quand je serai grand (les secouristes)",
    "materials": "Illustrations – Manuel scolaire page 59",
    "objectives": [],
@@ -1886,7 +1886,7 @@
    "unit": 18,
    "session": "Conjugaison (45 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Conjugaison : Les verbes du 1er groupe au présent (sauver, soigner, aider…) et le verbe secourir — Quand je serai grand (les secouristes)",
    "materials": "Manuel scolaire – Tableau de conjugaison",
    "objectives": [
@@ -1906,7 +1906,7 @@
    "unit": 18,
    "session": "Conjugaison (45 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Conjugaison : Le futur simple (verbes du 1er et du 2e groupe) — Quand je serai grand (les secouristes)",
    "materials": "Manuel scolaire page 66 – Tableau de conjugaison",
    "objectives": [
@@ -1926,7 +1926,7 @@
    "unit": 18,
    "session": "Lecture systématique (45 mn)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture systématique : Les sons : é / et / est / ets / es / ée — Quand je serai grand (les secouristes)",
    "materials": "Tableau – Cahier de classe",
    "objectives": [
@@ -1946,7 +1946,7 @@
    "unit": 18,
    "session": "Orthographe (45 mn)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Orthographe : Le féminin des noms d'agent (-eur / -euse, -teur / -trice, -er / -ère) — Quand je serai grand (les secouristes)",
    "materials": "Exercices transcrits au tableau ou photocopiés",
    "objectives": [
@@ -1966,7 +1966,7 @@
    "unit": 18,
    "session": "Dictée (45 mn)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
    "topic": "Dictée — Quand je serai grand (les secouristes)",
    "materials": "Manuel scolaire page 54 – Ardoises – Cahiers de classe",
    "objectives": [
@@ -1986,7 +1986,7 @@
    "unit": 19,
    "session": "Préparation à l’écrit (45 mn)",
    "activity": "Français",
-   "domain": "Préparation à l’écrit",
+   "domain": "Produire des énoncés pour les insérer dans un cadre textuel",
    "topic": "Préparation à l’écrit — Quand je serai grand (les secouristes)",
    "materials": "Illustration du pompier–Texte au choix – Ardoises",
    "objectives": [
@@ -2006,7 +2006,7 @@
    "unit": 19,
    "session": "Production écrite (45 mn)",
    "activity": "Français",
-   "domain": "Production écrite",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Production écrite — Quand je serai grand (les secouristes)",
    "materials": "Illustrations des sauveteurs – boite à outils (mots) – Manuel scolaire page 66",
    "objectives": [
@@ -2026,7 +2026,7 @@
    "unit": 19,
    "session": "Compte rendu (60 mn)",
    "activity": "Français",
-   "domain": "Compte rendu",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Compte rendu — Quand je serai grand (les secouristes)",
    "materials": "-Illustrations de sauveteurs – Ardoises",
    "objectives": [
@@ -2046,7 +2046,7 @@
    "unit": 19,
    "session": "Comptine (30 mn)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine ; Produire un texte en fonction d’une situation de communication",
    "topic": "Comptine : Quand je serai grand — Quand je serai grand (les secouristes)",
    "materials": "Illustration – Manuel scolaire page 66",
    "objectives": [
@@ -2066,7 +2066,7 @@
    "unit": 19,
    "session": "Réalisation de la tâche partielle (30 mn)",
    "activity": "Français",
-   "domain": "Réalisation de la tâche partielle",
+   "domain": "Ecrire pour répondre à une consigne d’écriture ; Produire un texte en fonction d’une situation de communication",
    "topic": "Réalisation de la tâche partielle — Quand je serai grand (les secouristes)",
    "materials": "Manuel scolaire page 67 – Illustrations des métiers",
    "objectives": [
@@ -2086,7 +2086,7 @@
    "unit": 19,
    "session": "Evaluation (60 mn)",
    "activity": "Français",
-   "domain": "Evaluation",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Evaluation — Quand je serai grand (les secouristes)",
    "materials": "-Tableau – Doubles feuilles",
    "objectives": [
@@ -2106,7 +2106,7 @@
    "unit": 20,
    "session": "Présentation du projet (45 mn)",
    "activity": "Français",
-   "domain": "Présentation du projet",
+   "domain": "Connaître le système graphique du français",
    "topic": "Présentation du projet — C'est une inondation",
    "materials": "Manuel scolaire page 78 – Tableau",
    "objectives": [
@@ -2126,7 +2126,7 @@
    "unit": 20,
    "session": "Oral compréhension (45 mn)",
    "activity": "Français",
-   "domain": "Oral compréhension",
+   "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — C'est une inondation",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 68",
    "objectives": [],
@@ -2144,7 +2144,7 @@
    "unit": 20,
    "session": "Compréhension de l’écrit 1 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 1",
+   "domain": "Construire du sens à l’aide d’éléments du para texte (silhouette, références, illustration)",
    "topic": "Compréhension de l’écrit 1 : L’inondation. — C'est une inondation",
    "materials": "L’illustration des sauveteurs – Manuel scolaire page 71",
    "objectives": [
@@ -2164,7 +2164,7 @@
    "unit": 20,
    "session": "Vocabulaire (45 mn)",
    "activity": "Français",
-   "domain": "Vocabulaire",
+   "domain": "Identifier du lexique thématique",
    "topic": "Vocabulaire : L’adverbe en « ment / emment » — C'est une inondation",
    "materials": "Manuel scolaire page 70 - Ardoises",
    "objectives": [
@@ -2184,7 +2184,7 @@
    "unit": 20,
    "session": "Oral production 1 (45 mn)",
    "activity": "Français",
-   "domain": "Oral production 1",
+   "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production 1 — C'est une inondation",
    "materials": "Illustrations – Manuel scolaire page 69",
    "objectives": [],
@@ -2202,7 +2202,7 @@
    "unit": 21,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : Le complément du but — C'est une inondation",
    "materials": "Manuel scolaire page 62 – Tableau",
    "objectives": [
@@ -2222,7 +2222,7 @@
    "unit": 21,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : La forme négative (phrase déclarative) — C'est une inondation",
    "materials": "Manuel scolaire page 73 – Tableau",
    "objectives": [
@@ -2242,7 +2242,7 @@
    "unit": 21,
    "session": "Compréhension de l’écrit 2 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 2",
+   "domain": "Construire du sens à l’aide d’indices textuels",
    "topic": "Compréhension de l’écrit 2 : Je lis et je comprends — C'est une inondation",
    "materials": "L’illustration de l’inondation – Cahier d’activités page 73",
    "objectives": [
@@ -2262,7 +2262,7 @@
    "unit": 21,
    "session": "Oral production 2 (45 mn)",
    "activity": "Français",
-   "domain": "Oral production 2",
+   "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production 2 : « Je m’exprime » — C'est une inondation",
    "materials": "Illustrations – Manuel scolaire page 69",
    "objectives": [],
@@ -2280,7 +2280,7 @@
    "unit": 22,
    "session": "Conjugaison (45 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Conjugaison : Emploi du mode infinitif pour donner des conseils en cas de catastrophe naturelle (forme affirmative et négative) — C'est une inondation",
    "materials": "Manuel scolaire – Tableau",
    "objectives": [
@@ -2300,7 +2300,7 @@
    "unit": 22,
    "session": "Lecture systématique (45 mn)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture systématique : Les sons : ouil / euil / ui — C'est une inondation",
    "materials": "Tableau – Cahier de classe",
    "objectives": [
@@ -2320,7 +2320,7 @@
    "unit": 22,
    "session": "Orthographe (45 mn)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Orthographe : Emploi de l'infinitif après une préposition / après un verbe conjugué — C'est une inondation",
    "materials": "Exercices transcrits au tableau ou photocopiés",
    "objectives": [
@@ -2340,7 +2340,7 @@
    "unit": 22,
    "session": "Dictée (45 mn)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
    "topic": "Dictée — C'est une inondation",
    "materials": "Manuel scolaire page 76 – Ardoises – Cahiers de classe",
    "objectives": [
@@ -2360,7 +2360,7 @@
    "unit": 22,
    "session": "Préparation à l’écrit (45 mn)",
    "activity": "Français",
-   "domain": "Préparation à l’écrit",
+   "domain": "Produire des énoncés pour les insérer dans un cadre textuel",
    "topic": "Préparation à l’écrit — C'est une inondation",
    "materials": "Illustrations –Manuel scolaire page 77 – Ardoises",
    "objectives": [
@@ -2380,7 +2380,7 @@
    "unit": 24,
    "session": "Production écrite (1er jet) (45 mn)",
    "activity": "Français",
-   "domain": "Production écrite (1er jet)",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Production écrite (1er jet) — C'est une inondation",
    "materials": "Illustration de l’inondation – boite à outils (mots)",
    "objectives": [
@@ -2400,7 +2400,7 @@
    "unit": 24,
    "session": "Compte rendu (60 mn)",
    "activity": "Français",
-   "domain": "Compte rendu",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Compte rendu — C'est une inondation",
    "materials": "-Illustration de l’inondation – Ardoises",
    "objectives": [
@@ -2420,7 +2420,7 @@
    "unit": 24,
    "session": "Comptine (30 mn)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir tout en chantant la comptine",
    "topic": "Comptine : Gouttes, gouttelettes de pluie — C'est une inondation",
    "materials": "Support audio – Illustration de la pluie",
    "objectives": [
@@ -2440,7 +2440,7 @@
    "unit": 24,
    "session": "Réalisation de la tâche partielle (30 mn)",
    "activity": "Français",
-   "domain": "Réalisation de la tâche partielle",
+   "domain": "Ecrire pour répondre à une consigne d’écriture ; Produire un texte en fonction d’une situation de communication",
    "topic": "Réalisation de la tâche partielle — C'est une inondation",
    "materials": "Manuel scolaire page 78 – Illustrations de catastrophes naturelles",
    "objectives": [
@@ -2460,7 +2460,7 @@
    "unit": 24,
    "session": "Evaluation (60 mn)",
    "activity": "Français",
-   "domain": "Evaluation",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Evaluation — C'est une inondation",
    "materials": "-Tableau – Doubles feuilles",
    "objectives": [
@@ -2480,7 +2480,7 @@
    "unit": 25,
    "session": "Présentation du projet (45 mn)",
    "activity": "Français",
-   "domain": "Présentation du projet",
+   "domain": "Connaître le système graphique du français",
    "topic": "Présentation du projet — Pourquoi notre terre est-elle en danger ?",
    "materials": "Manuel scolaire page 73 – Tableau",
    "objectives": [
@@ -2500,7 +2500,7 @@
    "unit": 25,
    "session": "Oral compréhension (45 mn)",
    "activity": "Français",
-   "domain": "Oral compréhension",
+   "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — Pourquoi notre terre est-elle en danger ?",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 80",
    "objectives": [],
@@ -2518,7 +2518,7 @@
    "unit": 25,
    "session": "Compréhension de l’écrit 1 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 1",
+   "domain": "Construire du sens à l’aide d’éléments du para texte (silhouette, références, illustration)",
    "topic": "Compréhension de l’écrit 1 : Pourquoi les déchets sont-ils dangereux ? — Pourquoi notre terre est-elle en danger ?",
    "materials": "L’illustration – Manuel scolaire page 83",
    "objectives": [
@@ -2538,7 +2538,7 @@
    "unit": 25,
    "session": "Vocabulaire (45 mn)",
    "activity": "Français",
-   "domain": "Vocabulaire",
+   "domain": "Identifier du lexique thématique",
    "topic": "Vocabulaire : Le lexique relatif à la pollution et à l'environnement — Pourquoi notre terre est-elle en danger ?",
    "materials": "Illustrations – Manuel scolaire page 83",
    "objectives": [
@@ -2558,7 +2558,7 @@
    "unit": 25,
    "session": "Oral production 1 (45 mn)",
    "activity": "Français",
-   "domain": "Oral production 1",
+   "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production 1 — Pourquoi notre terre est-elle en danger ?",
    "materials": "Illustration – Manuel scolaire page 80",
    "objectives": [],
@@ -2576,7 +2576,7 @@
    "unit": 25,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : La coordination et la subordination par l'emploi de « car » et de « parce que » — Pourquoi notre terre est-elle en danger ?",
    "materials": "Manuel scolaire page 85 – Tableau",
    "objectives": [
@@ -2596,7 +2596,7 @@
    "unit": 26,
    "session": "Compréhension de l’écrit 2 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 2",
+   "domain": "Construire du sens à l’aide d’indices textuels",
    "topic": "Compréhension de l’écrit 2 : Je lis et je comprends — Pourquoi notre terre est-elle en danger ?",
    "materials": "L’illustration de la terre – Cahier d’activités page 85",
    "objectives": [
@@ -2616,7 +2616,7 @@
    "unit": 26,
    "session": "Oral production 2 (45 mn)",
    "activity": "Français",
-   "domain": "Oral production 2",
+   "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production 2 : « Je m’exprime » — Pourquoi notre terre est-elle en danger ?",
    "materials": "Illustrations – Manuel scolaire page 81",
    "objectives": [],
@@ -2634,7 +2634,7 @@
    "unit": 26,
    "session": "Conjugaison (45 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Conjugaison : Le verbe « être » et le verbe « avoir » au futur simple — Pourquoi notre terre est-elle en danger ?",
    "materials": "Manuel scolaire page 63 – Tableau de conjugaison",
    "objectives": [
@@ -2654,7 +2654,7 @@
    "unit": 26,
    "session": "Lecture systématique (45 mn)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture systématique : Les sons : eil, iel, io, ia — Pourquoi notre terre est-elle en danger ?",
    "materials": "Tableau – Cahier de classe",
    "objectives": [
@@ -2674,7 +2674,7 @@
    "unit": 26,
    "session": "Orthographe (45 mn)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Orthographe : Le pluriel des noms en « al », « ail » — Pourquoi notre terre est-elle en danger ?",
    "materials": "Exercices transcrits au tableau ou photocopiés",
    "objectives": [
@@ -2694,7 +2694,7 @@
    "unit": 26,
    "session": "Dictée (45 mn)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
    "topic": "Dictée — Pourquoi notre terre est-elle en danger ?",
    "materials": "Manuel scolaire page 88 – Ardoises – Cahiers de classe",
    "objectives": [
@@ -2714,7 +2714,7 @@
    "unit": 27,
    "session": "Préparation à l’écrit (45 mn)",
    "activity": "Français",
-   "domain": "Préparation à l’écrit",
+   "domain": "Produire des énoncés pour les insérer dans un cadre textuel",
    "topic": "Préparation à l’écrit — Pourquoi notre terre est-elle en danger ?",
    "materials": "Illustrations –Manuel scolaire page 89 – Ardoises",
    "objectives": [
@@ -2734,7 +2734,7 @@
    "unit": 27,
    "session": "Production écrite (1er jet) (45 mn)",
    "activity": "Français",
-   "domain": "Production écrite (1er jet)",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Production écrite (1er jet) — Pourquoi notre terre est-elle en danger ?",
    "materials": "Illustration – boite à outils (mots)",
    "objectives": [
@@ -2754,7 +2754,7 @@
    "unit": 27,
    "session": "Compte rendu (60 mn)",
    "activity": "Français",
-   "domain": "Compte rendu",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Compte rendu — Pourquoi notre terre est-elle en danger ?",
    "materials": "-Illustration – Ardoises",
    "objectives": [
@@ -2774,7 +2774,7 @@
    "unit": 27,
    "session": "Comptine (30 mn)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine ; Produire un texte en fonction d’une situation de communication",
    "topic": "Comptine : Sauvons le monde — Pourquoi notre terre est-elle en danger ?",
    "materials": "Illustration – Support audio- visuel (youtube)",
    "objectives": [
@@ -2794,7 +2794,7 @@
    "unit": 27,
    "session": "Réalisation de la tâche partielle (30 mn)",
    "activity": "Français",
-   "domain": "Réalisation de la tâche partielle",
+   "domain": "Ecrire pour répondre à une consigne d’écriture ; Produire un texte en fonction d’une situation de communication",
    "topic": "Réalisation de la tâche partielle — Pourquoi notre terre est-elle en danger ?",
    "materials": "Manuel scolaire page 90 – Illustrations",
    "objectives": [
@@ -2814,7 +2814,7 @@
    "unit": 27,
    "session": "Evaluation (60 mn)",
    "activity": "Français",
-   "domain": "Evaluation",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Evaluation — Pourquoi notre terre est-elle en danger ?",
    "materials": "-Tableau – Doubles feuilles",
    "objectives": [
@@ -2834,7 +2834,7 @@
    "unit": 28,
    "session": "Présentation du projet (45 mn)",
    "activity": "Français",
-   "domain": "Présentation du projet",
+   "domain": "Connaître le système graphique du français",
    "topic": "Présentation du projet — Ne gaspillons pas l'eau !",
    "materials": "Manuel scolaire page 101 – Tableau",
    "objectives": [
@@ -2854,7 +2854,7 @@
    "unit": 28,
    "session": "Oral compréhension (45 mn)",
    "activity": "Français",
-   "domain": "Oral compréhension",
+   "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — Ne gaspillons pas l'eau !",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 91",
    "objectives": [],
@@ -2872,7 +2872,7 @@
    "unit": 28,
    "session": "Compréhension de l'écrit 1 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l'écrit 1",
+   "domain": "Construire du sens à l'aide d'éléments du para texte (silhouette, références, illustration)",
    "topic": "Compréhension de l'écrit 1 : Je lis et je comprends — Ne gaspillons pas l'eau !",
    "materials": "Illustration sur l'économie de l'eau – Manuel scolaire page 94",
    "objectives": [
@@ -2892,7 +2892,7 @@
    "unit": 28,
    "session": "Vocabulaire (45 mn)",
    "activity": "Français",
-   "domain": "Vocabulaire",
+   "domain": "Identifier du lexique thématique",
    "topic": "Vocabulaire : Il faut / Il ne faut pas — Ne gaspillons pas l'eau !",
    "materials": "Manuel scolaire page 96 - Ardoises",
    "objectives": [
@@ -2912,7 +2912,7 @@
    "unit": 29,
    "session": "Oral production 1 (45 mn)",
    "activity": "Français",
-   "domain": "Oral production 1",
+   "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production 1 — Ne gaspillons pas l'eau !",
    "materials": "Illustration – Manuel scolaire page 91",
    "objectives": [],
@@ -2930,7 +2930,7 @@
    "unit": 29,
    "session": "Grammaire (45 mn)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
    "topic": "Grammaire : Les pronoms compléments : « le, la, les, l’ » — Ne gaspillons pas l'eau !",
    "materials": "Manuel scolaire page 95 - Cahier de classe - Ardoises",
    "objectives": [
@@ -2950,7 +2950,7 @@
    "unit": 29,
    "session": "Compréhension de l’écrit 2 (45 mn)",
    "activity": "Français",
-   "domain": "Compréhension de l’écrit 2",
+   "domain": "Construire du sens à l’aide d’indices textuels",
    "topic": "Compréhension de l’écrit 2 : L’eau — Ne gaspillons pas l'eau !",
    "materials": "L’illustration de l’eau – Cahier d’activités page 96",
    "objectives": [
@@ -2970,7 +2970,7 @@
    "unit": 29,
    "session": "Oral production 2 (45 mn)",
    "activity": "Français",
-   "domain": "Oral production 2",
+   "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production 2 : « Je m’exprime » — Ne gaspillons pas l'eau !",
    "materials": "Illustrations – Manuel scolaire page 92",
    "objectives": [],
@@ -2988,7 +2988,7 @@
    "unit": 29,
    "session": "Conjugaison (45 mn)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Conjugaison : L’impératif — Ne gaspillons pas l'eau !",
    "materials": "Manuel scolaire page 97 – Des affiches de conjugaison",
    "objectives": [
@@ -3008,7 +3008,7 @@
    "unit": 30,
    "session": "Lecture systématique (45 mn)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Lire de manière expressive",
    "topic": "Lecture systématique : Les sons : en / em, an / am, on / om — Ne gaspillons pas l'eau !",
    "materials": "Tableau – Cahier de classe",
    "objectives": [
@@ -3028,7 +3028,7 @@
    "unit": 30,
    "session": "Orthographe (45 mn)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Identifier les points de langue pour mieux écrire",
    "topic": "Orthographe : La nominalisation à base verbale — Ne gaspillons pas l'eau !",
    "materials": "Exercices transcrits au tableau ou photocopiés",
    "objectives": [
@@ -3048,7 +3048,7 @@
    "unit": 30,
    "session": "Dictée (45 mn)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
    "topic": "Dictée — Ne gaspillons pas l'eau !",
    "materials": "Manuel scolaire page 99 – Ardoises – Cahiers de classe",
    "objectives": [
@@ -3068,7 +3068,7 @@
    "unit": 30,
    "session": "Préparation à l’écrit (45 mn)",
    "activity": "Français",
-   "domain": "Préparation à l’écrit",
+   "domain": "Produire des énoncés pour les insérer dans un cadre textuel",
    "topic": "Préparation à l’écrit — Ne gaspillons pas l'eau !",
    "materials": "Illustrations –Manuel scolaire page 100 – Ardoises",
    "objectives": [
@@ -3088,7 +3088,7 @@
    "unit": 31,
    "session": "Production écrite (45 mn)",
    "activity": "Français",
-   "domain": "Production écrite",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Production écrite — Ne gaspillons pas l'eau !",
    "materials": "Illustration – boite à outils (mots)",
    "objectives": [
@@ -3108,7 +3108,7 @@
    "unit": 31,
    "session": "Compte rendu (60 mn)",
    "activity": "Français",
-   "domain": "Compte rendu",
+   "domain": "Produire un texte en fonction d’une situation de communication",
    "topic": "Compte rendu — Ne gaspillons pas l'eau !",
    "materials": "-Illustration – Ardoises",
    "objectives": [
@@ -3128,7 +3128,7 @@
    "unit": 31,
    "session": "Comptine (30 mn)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine ; Produire un texte en fonction d’une situation de communication",
    "topic": "Comptine : L’eau c’est de l’or — Ne gaspillons pas l'eau !",
    "materials": "Illustration de l’eau – Support audio- visuel (YouTube)",
    "objectives": [
@@ -3148,7 +3148,7 @@
    "unit": 31,
    "session": "Réalisation de la tâche finale (30 mn)",
    "activity": "Français",
-   "domain": "Réalisation de la tâche finale",
+   "domain": "Ecrire pour répondre à une consigne d’écriture ; Produire un texte en fonction d’une situation de communication",
    "topic": "Réalisation de la tâche finale — Ne gaspillons pas l'eau !",
    "materials": "Manuel scolaire page 101 – Illustrations",
    "objectives": [
@@ -3168,7 +3168,7 @@
    "unit": 31,
    "session": "Evaluation (60 mn)",
    "activity": "Français",
-   "domain": "Evaluation",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Evaluation — Ne gaspillons pas l'eau !",
    "materials": "-Tableau – Doubles feuilles",
    "objectives": [

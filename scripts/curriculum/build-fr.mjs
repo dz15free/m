@@ -11,6 +11,7 @@
 import { execFileSync } from "node:child_process";
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { composanteFor, composanteIn } from "./fr-composantes.mjs";
 
 const [level, outDir, ...pdfs] = process.argv.slice(2);
 const squash = (s) => s.replace(/\s+/g, " ").trim();
@@ -47,6 +48,7 @@ if (level === "5AP") {
         activity: act[1].replace(/^./, (c) => c.toUpperCase()),
         duration: squash(act[2]),
         theme,
+        composante: composanteIn(t),
         objectives: obj ? [obj.slice(0, 300)] : [],
         materials: mat ? mat.slice(0, 200) : "Manuel scolaire, tableau",
         page: offset + p,
@@ -78,6 +80,7 @@ if (level === "5AP") {
         activity: m[1],
         duration: "",
         theme: /Points de langue/.test(m[1]) ? overview : undefined,
+        composante: composanteFor(m[1], "3AP"),
         objectives: [m[4]],
         materials: m[5],
         page: p,
@@ -107,7 +110,7 @@ keys.forEach((key, s) => {
       unit: weeks[Math.min(weeks.length - 1, Math.floor((mid / total) * weeks.length))],
       session: `${f.activity}${f.duration ? ` (${f.duration})` : ""}`,
       activity: "Français",
-      domain: f.activity,
+      domain: f.composante || composanteFor(f.activity, "4AP") || f.activity,
       topic: `${f.activity}${f.theme ? ` : ${f.theme}` : ""} — ${f.seqTitle}`,
       materials: f.materials,
       objectives: f.objectives,

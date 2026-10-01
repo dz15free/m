@@ -27,7 +27,7 @@
    "unit": 1,
    "session": "Oral compréhension (30 min)",
    "activity": "Français",
-   "domain": "Oral compréhension",
+   "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension : Au marché — Évaluation diagnostique",
    "materials": "Support audio ou lecture expressive – illustration.",
    "objectives": [
@@ -47,7 +47,7 @@
    "unit": 1,
    "session": "Vocabulaire (30 min)",
    "activity": "Français",
-   "domain": "Vocabulaire",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Vocabulaire : Les animaux de la ferme et de la maison — Évaluation diagnostique",
    "materials": "Illustrations – tableau – ardoise.",
    "objectives": [
@@ -67,7 +67,7 @@
    "unit": 1,
    "session": "Lecture syllabique (30 min)",
    "activity": "Français",
-   "domain": "Lecture syllabique",
+   "domain": "Lire à haute voix des syllabes simples",
    "topic": "Lecture syllabique : Les syllabes simples — Évaluation diagnostique",
    "materials": "Tableau syllabique – ardoise – fiche.",
    "objectives": [
@@ -87,7 +87,7 @@
    "unit": 1,
    "session": "Grammaire (30 min)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Remplacer un nom ou un groupe nominal par le substitut grammatical qui convient",
    "topic": "Grammaire : Les substituts : il / elle — Évaluation diagnostique",
    "materials": "Illustrations – tableau – ardoise.",
    "objectives": [
@@ -107,7 +107,7 @@
    "unit": 1,
    "session": "Oral production 1 (30 min)",
    "activity": "Français",
-   "domain": "Oral production 1",
+   "domain": "Produire un énoncé oral simple pour se présenter et utiliser un repère temporel",
    "topic": "Oral production 1 : Se repérer dans le temps et se presenter — Évaluation diagnostique",
    "materials": "Illustrations – tableau – fiche.",
    "objectives": [
@@ -127,7 +127,7 @@
    "unit": 2,
    "session": "Conjugaison (30 min)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Identifier et utiliser les pronoms personnels sujets",
    "topic": "Conjugaison : Les pronoms personnels sujets — Évaluation diagnostique",
    "materials": "Fiche – tableau – ardoise.",
    "objectives": [
@@ -147,7 +147,7 @@
    "unit": 2,
    "session": "Lecture (30 min)",
    "activity": "Français",
-   "domain": "Lecture",
+   "domain": "Lire silencieusement puis à haute voix en repérant des informations explicites",
    "topic": "Lecture : Une sortie au parc animalier — Évaluation diagnostique",
    "materials": "Texte – illustration – tableau.",
    "objectives": [
@@ -167,7 +167,7 @@
    "unit": 2,
    "session": "Orthographe (30 min)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Identifier et écrire correctement quelques formes féminines des noms",
    "topic": "Orthographe : Le féminin des noms — Évaluation diagnostique",
    "materials": "Fiche – illustrations – tableau.",
    "objectives": [
@@ -187,7 +187,7 @@
    "unit": 2,
    "session": "Oral production 2 (30 min)",
    "activity": "Français",
-   "domain": "Oral production 2",
+   "domain": "Mobiliser des acquis mémorisés pour produire oralement une série connue",
    "topic": "Oral production 2 : Alphabet, nombres et saisons — Évaluation diagnostique",
    "materials": "Illustrations – fiche – ardoise.",
    "objectives": [
@@ -207,7 +207,7 @@
    "unit": 2,
    "session": "Copie (30 min)",
    "activity": "Français",
-   "domain": "Copie",
+   "domain": "Copier un court énoncé en respectant la majuscule, les espaces et la ponctuation",
    "topic": "Copie : Respecter les conventions de l’écrit — Évaluation diagnostique",
    "materials": "Tableau – cahier – ardoise – fiche.",
    "objectives": [
@@ -227,7 +227,7 @@
    "unit": 3,
    "session": "Séance 1/7 (30 min)",
    "activity": "Français",
-   "domain": "Actes de parole",
+   "domain": "Saisir la portée du message oral",
    "topic": "Actes de parole — Qu’est-ce que tu fais ?",
    "materials": "Manuel scolaire p.70 — dialogue « Qu’est-ce que tu fais ? »",
    "objectives": [
@@ -248,7 +248,7 @@
    "unit": 3,
    "session": "Séance 2/7 (30 min)",
    "activity": "Français",
-   "domain": "Oral production",
+   "domain": "Dire pour s’approprier la langue",
    "topic": "Oral production — Qu’est-ce que tu fais ?",
    "materials": "Objets de la classe : cartable, cahier, stylo, règle, trousse, gomme",
    "objectives": [
@@ -269,7 +269,7 @@
    "unit": 3,
    "session": "Séance 3/7 (90 min)",
    "activity": "Français",
-   "domain": "Points de langue",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue — Qu’est-ce que tu fais ?",
    "materials": "Images d’actions, cartes-mots ; Tableau",
    "objectives": [
@@ -290,7 +290,7 @@
    "unit": 4,
    "session": "Séance 4/7 (60 min)",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Qu’est-ce que tu fais ?",
    "materials": "Manuel M.S : P 73 et M.S : P 74 ; Étiquettes-mots, images, tableau",
    "objectives": [
@@ -311,7 +311,7 @@
    "unit": 4,
    "session": "Séance 5/7 (90 min)",
    "activity": "Français",
-   "domain": "Activités de lecture",
+   "domain": "Lire des mots à haute voix",
    "topic": "Activités de lecture — Qu’est-ce que tu fais ?",
    "materials": "Manuel M.S : P 75 (mots illustrés) ; Images, étiquettes-mots",
    "objectives": [
@@ -333,7 +333,7 @@
    "unit": 5,
    "session": "Séance 6/7 (30 min)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine — Qu’est-ce que tu fais ?",
    "materials": "Manuel M.S : P 77",
    "objectives": [
@@ -354,7 +354,7 @@
    "unit": 5,
    "session": "Séance 7/7 (30 min)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Maîtriser le système graphique du français",
    "topic": "Dictée — Qu’est-ce que tu fais ?",
    "materials": "Cahier à interlignes, ardoises",
    "objectives": [
@@ -375,7 +375,7 @@
    "unit": 6,
    "session": "Séance 1/7 (30 min)",
    "activity": "Français",
-   "domain": "Actes de parole",
+   "domain": "Saisir la portée du message oral",
    "topic": "Actes de parole — Je vais à la campagne",
    "materials": "Manuel scolaire p.79 — dialogue « Je vais à la campagne »",
    "objectives": [
@@ -396,7 +396,7 @@
    "unit": 6,
    "session": "Séance 2/7 (30 min)",
    "activity": "Français",
-   "domain": "Oral production",
+   "domain": "Dire pour s’approprier la langue",
    "topic": "Oral production — Je vais à la campagne",
    "materials": "Manuel M.S : P 80 et P 83 ; Images : train, bus, voiture, avion, bateau, vélo",
    "objectives": [
@@ -417,7 +417,7 @@
    "unit": 6,
    "session": "Séance 3/7 (90 min)",
    "activity": "Français",
-   "domain": "Points de langue",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue — Je vais à la campagne",
    "materials": "Images, cartes-mots ; Tableau",
    "objectives": [
@@ -438,7 +438,7 @@
    "unit": 7,
    "session": "Séance 4/7 (60 min)",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Je vais à la campagne",
    "materials": "Manuel M.S : P 81 et M.S : P 82 / 83 ; Étiquettes-mots, images, tableau",
    "objectives": [
@@ -459,7 +459,7 @@
    "unit": 7,
    "session": "Séance 5/7 (90 min)",
    "activity": "Français",
-   "domain": "Activités de lecture",
+   "domain": "Lire des mots à haute voix",
    "topic": "Activités de lecture — Je vais à la campagne",
    "materials": "Manuel M.S : P 83 (mots illustrés) ; Images, étiquettes-mots",
    "objectives": [
@@ -481,7 +481,7 @@
    "unit": 8,
    "session": "Séance 6/7 (30 min)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine — Je vais à la campagne",
    "materials": "Manuel M.S : P 87",
    "objectives": [
@@ -502,7 +502,7 @@
    "unit": 8,
    "session": "Séance 7/7 (30 min)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Maîtriser le système graphique du français",
    "topic": "Dictée — Je vais à la campagne",
    "materials": "M.S : P 86 ; Cahier à interlignes, ardoises",
    "objectives": [
@@ -524,7 +524,7 @@
    "unit": 9,
    "session": "Séance 1/7 (30 min)",
    "activity": "Français",
-   "domain": "Actes de parole",
+   "domain": "Saisir la portée du message oral",
    "topic": "Actes de parole — Nous planterons un arbre",
    "materials": "Manuel scolaire p.88 — dialogue « Nous planterons des arbres » ; Images : arbre, cour de l’école, pelle, arrosoir",
    "objectives": [
@@ -545,7 +545,7 @@
    "unit": 9,
    "session": "Séance 2/7 (30 min)",
    "activity": "Français",
-   "domain": "Oral production",
+   "domain": "Dire pour s’approprier la langue",
    "topic": "Oral production — Nous planterons un arbre",
    "materials": "Manuel M.S : P 89",
    "objectives": [
@@ -566,7 +566,7 @@
    "unit": 9,
    "session": "Séance 3/7 (90 min)",
    "activity": "Français",
-   "domain": "Points de langue",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue — Nous planterons un arbre",
    "materials": "Images, cartes-mots ; Tableau",
    "objectives": [
@@ -587,7 +587,7 @@
    "unit": 10,
    "session": "Séance 4/7 (60 min)",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Nous planterons un arbre",
    "materials": "Manuel M.S : P 90 et M.S : P 91 ; Étiquettes-mots, images, tableau",
    "objectives": [
@@ -608,7 +608,7 @@
    "unit": 10,
    "session": "Séance 5/7 (90 min)",
    "activity": "Français",
-   "domain": "Activités de lecture",
+   "domain": "Lire des mots à haute voix",
    "topic": "Activités de lecture — Nous planterons un arbre",
    "materials": "Manuel M.S : P 92 (mots illustrés) ; Images, étiquettes-mots",
    "objectives": [
@@ -630,7 +630,7 @@
    "unit": 11,
    "session": "Séance 6/7 (30 min)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine — Nous planterons un arbre",
    "materials": "Manuel M.S : P 96",
    "objectives": [
@@ -651,7 +651,7 @@
    "unit": 11,
    "session": "Séance 7/7 (30 min)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Maîtriser le système graphique du français",
    "topic": "Dictée — Nous planterons un arbre",
    "materials": "Cahier à interlignes, ardoises",
    "objectives": [
@@ -672,7 +672,7 @@
    "unit": 13,
    "session": "Séance 1/7 (30 min)",
    "activity": "Français",
-   "domain": "Actes de parole",
+   "domain": "Saisir la portée du message oral",
    "topic": "Actes de parole — Quelle belle journée à la campagne !",
    "materials": "Manuel scolaire p.97 — dialogue « Quelle belle journée à la campagne ! » ; Images d’une journée à la campagne",
    "objectives": [
@@ -693,7 +693,7 @@
    "unit": 13,
    "session": "Séance 2/7 (30 min)",
    "activity": "Français",
-   "domain": "Oral production",
+   "domain": "Dire pour s’approprier la langue",
    "topic": "Oral production — Quelle belle journée à la campagne !",
    "materials": "Manuel M.S : P 98 ; Images de fruits et d’arbres fruitiers",
    "objectives": [
@@ -714,7 +714,7 @@
    "unit": 13,
    "session": "Séance 3/7 (90 min)",
    "activity": "Français",
-   "domain": "Points de langue",
+   "domain": "Systématiser des structures linguistiques retenues en oral",
    "topic": "Points de langue — Quelle belle journée à la campagne !",
    "materials": "Images, cartes-mots ; Tableau",
    "objectives": [
@@ -735,7 +735,7 @@
    "unit": 14,
    "session": "Séance 4/7 (60 min)",
    "activity": "Français",
-   "domain": "Phonie / Graphie",
+   "domain": "Discriminer les sons au niveau phonique et graphique",
    "topic": "Phonie / Graphie — Quelle belle journée à la campagne !",
    "materials": "Manuel M.S : P 99 et M.S : P 100 / 101 ; Étiquettes-mots, images, tableau",
    "objectives": [
@@ -756,7 +756,7 @@
    "unit": 14,
    "session": "Séance 5/7 (90 min)",
    "activity": "Français",
-   "domain": "Activités de lecture",
+   "domain": "Lire des mots à haute voix",
    "topic": "Activités de lecture — Quelle belle journée à la campagne !",
    "materials": "Manuel M.S : P 102 (mots illustrés) ; Images, étiquettes-mots",
    "objectives": [
@@ -778,7 +778,7 @@
    "unit": 15,
    "session": "Séance 6/7 (30 min)",
    "activity": "Français",
-   "domain": "Comptine",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
    "topic": "Comptine — Quelle belle journée à la campagne !",
    "materials": "Manuel M.S : P 105",
    "objectives": [
@@ -799,7 +799,7 @@
    "unit": 15,
    "session": "Séance 7/7 (30 min)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Maîtriser le système graphique du français",
    "topic": "Dictée — Quelle belle journée à la campagne !",
    "materials": "Cahier à interlignes, ardoises",
    "objectives": [
@@ -820,7 +820,7 @@
    "unit": 16,
    "session": "Séance 1/10 (30 min)",
    "activity": "Français",
-   "domain": "Acte de parole",
+   "domain": "Saisir la portée d’un message oral",
    "topic": "Acte de parole — Tu habites où ?",
    "materials": "Manuel scolaire p.15 — dialogue « Tu habites où ? » (Yacine, Lina, Amira, Massinissa, Madjid)",
    "objectives": [
@@ -841,7 +841,7 @@
    "unit": 16,
    "session": "Séance 2/10 (60 min)",
    "activity": "Français",
-   "domain": "Lecture compréhension / fluence",
+   "domain": "Connaître le système graphique du français",
    "topic": "Lecture compréhension / fluence — Tu habites où ?",
    "materials": "Manuel scolaire : « L’immeuble blanc » (M.S : P 17) ; Cahier d’activités : « Devant la porte de la maison » (C A : P 7) ; Texte transcrit et/ou photocopié pour la fluence",
    "objectives": [
@@ -862,7 +862,7 @@
    "unit": 16,
    "session": "Séance 3/10 (30 min)",
    "activity": "Français",
-   "domain": "Lexique",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Lexique — Tu habites où ?",
    "materials": "Manuel scolaire p.33 — plan du quartier « Rue Ahmed Zabana »",
    "objectives": [
@@ -883,7 +883,7 @@
    "unit": 18,
    "session": "Séance 4/10 (30 min)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Grammaire — Tu habites où ?",
    "materials": "Manuel M.S : P 28 ; Plan du quartier, étiquettes, tableau",
    "objectives": [
@@ -904,7 +904,7 @@
    "unit": 19,
    "session": "Séance 5/10 (30 min)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Conjugaison — Tu habites où ?",
    "materials": "Tableau de conjugaison ; Cartes-pronoms, ardoises",
    "objectives": [
@@ -925,7 +925,7 @@
    "unit": 19,
    "session": "Séance 6/10 (30 min)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Orthographe — Tu habites où ?",
    "materials": "Manuel M.S : P 37 ; Étiquettes de noms, tableau",
    "objectives": [
@@ -946,7 +946,7 @@
    "unit": 18,
    "session": "Séance 7/10 (30 min)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Maîtriser le système phonétique de la langue",
    "topic": "Lecture systématique — Tu habites où ?",
    "materials": "Manuel M.S : P 18 ; Étiquettes-mots, tableau",
    "objectives": [
@@ -967,7 +967,7 @@
    "unit": 19,
    "session": "Séance 8/10 (30 min)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Mobiliser ses connaissances du système phonologique et prosodique",
    "topic": "Dictée — Tu habites où ?",
    "materials": "Manuel : Page 18 ; Ardoises, cahier de dictée",
    "objectives": [
@@ -988,7 +988,7 @@
    "unit": 19,
    "session": "Séance 9/10 (30 min)",
    "activity": "Français",
-   "domain": "Phonétique articulatoire",
+   "domain": "Maîtriser le système phonétique de la langue",
    "topic": "Phonétique articulatoire — Tu habites où ?",
    "materials": "Images (maman, maison, jardin …) ; Tableau",
    "objectives": [
@@ -1009,7 +1009,7 @@
    "unit": 20,
    "session": "Séance 10/10 (60 min)",
    "activity": "Français",
-   "domain": "Production orale / écrite",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production orale / écrite — Tu habites où ?",
    "materials": "Plan du quartier, images ; Cahier d’essai, tableau",
    "objectives": [
@@ -1030,7 +1030,7 @@
    "unit": 21,
    "session": "Séance 1/10 (30 min)",
    "activity": "Français",
-   "domain": "Acte de parole",
+   "domain": "Saisir la portée d’un message oral",
    "topic": "Acte de parole — Je vais chez Madjid",
    "materials": "Manuel scolaire p.28 — Amira téléphone à Tanina ; Plan du quartier, cartes-prénoms (Madjid, Amira, Tanina …)",
    "objectives": [
@@ -1051,7 +1051,7 @@
    "unit": 21,
    "session": "Séance 2/10 (60 min)",
    "activity": "Français",
-   "domain": "Lecture compréhension / fluence",
+   "domain": "Connaître le système graphique du français",
    "topic": "Lecture compréhension / fluence — Je vais chez Madjid",
    "materials": "Manuel scolaire : « Notre quartier » (M.S : P 31) ; Cahier d’activités : « Je lis et je comprends » (C A : P 15) ; Texte transcrit et/ou photocopié pour la fluence",
    "objectives": [
@@ -1072,7 +1072,7 @@
    "unit": 21,
    "session": "Séance 3/10 (30 min)",
    "activity": "Français",
-   "domain": "Lexique",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Lexique — Je vais chez Madjid",
    "materials": "Manuel M.S : P 17 ; Étiquettes : Madjid, garçon, Alger, ville, rue …",
    "objectives": [
@@ -1093,7 +1093,7 @@
    "unit": 22,
    "session": "Séance 4/10 (30 min)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Grammaire — Je vais chez Madjid",
    "materials": "Manuel M.S : P 17 et P 26",
    "objectives": [
@@ -1115,7 +1115,7 @@
    "unit": 23,
    "session": "Séance 5/10 (30 min)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Conjugaison — Je vais chez Madjid",
    "materials": "Manuel M.S : P 16 ; Tableau de conjugaison, ardoises",
    "objectives": [
@@ -1136,7 +1136,7 @@
    "unit": 23,
    "session": "Séance 6/10 (30 min)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Orthographe — Je vais chez Madjid",
    "materials": "Manuel M.S : P 77 ; Étiquettes de noms, tableau",
    "objectives": [
@@ -1157,7 +1157,7 @@
    "unit": 22,
    "session": "Séance 7/10 (30 min)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Maîtriser le système phonétique de la langue",
    "topic": "Lecture systématique — Je vais chez Madjid",
    "materials": "Manuel M.S : P 27 ; Étiquettes-mots, tableau",
    "objectives": [
@@ -1178,7 +1178,7 @@
    "unit": 23,
    "session": "Séance 8/10 (30 min)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Mobiliser ses connaissances du système phonologique et prosodique",
    "topic": "Dictée — Je vais chez Madjid",
    "materials": "Manuel M.S : P 26 ; Ardoises, cahier de dictée",
    "objectives": [
@@ -1199,7 +1199,7 @@
    "unit": 23,
    "session": "Séance 9/10 (30 min)",
    "activity": "Français",
-   "domain": "Phonétique articulatoire",
+   "domain": "Maîtriser le système phonétique de la langue",
    "topic": "Phonétique articulatoire — Je vais chez Madjid",
    "materials": "Images (poule, rue, lune, route …) ; Tableau",
    "objectives": [
@@ -1220,7 +1220,7 @@
    "unit": 24,
    "session": "Séance 10/10 (60 min)",
    "activity": "Français",
-   "domain": "Production orale / écrite",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production orale / écrite — Je vais chez Madjid",
    "materials": "Manuel scolaire p.29 — Tâche « L’imagier de notre quartier »",
    "objectives": [
@@ -1241,7 +1241,7 @@
    "unit": 25,
    "session": "Séance 1/10 (30 min)",
    "activity": "Français",
-   "domain": "Acte de parole",
+   "domain": "Saisir la portée d’un message oral",
    "topic": "Acte de parole — Au magasin",
    "materials": "Manuel scolaire p.32 — dialogue « Au magasin » (Lina et Madjid)",
    "objectives": [
@@ -1262,7 +1262,7 @@
    "unit": 25,
    "session": "Séance 2/10 (60 min)",
    "activity": "Français",
-   "domain": "Lecture compréhension / fluence",
+   "domain": "Connaître le système graphique du français",
    "topic": "Lecture compréhension / fluence — Au magasin",
    "materials": "Texte transcrit et/ou photocopié : « Au magasin » (dialogue, manuel p.32)",
    "objectives": [
@@ -1283,7 +1283,7 @@
    "unit": 25,
    "session": "Séance 3/10 (30 min)",
    "activity": "Français",
-   "domain": "Lexique",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Lexique — Au magasin",
    "materials": "Manuel scolaire p.34 — « J’ai un blouson bleu. Le blouson est beau. » ; Crayons de couleur, objets de la classe",
    "objectives": [
@@ -1304,7 +1304,7 @@
    "unit": 26,
    "session": "Séance 4/10 (30 min)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Grammaire — Au magasin",
    "materials": "Manuel M.S : P 24 ; Images de lieux, tableau",
    "objectives": [
@@ -1325,7 +1325,7 @@
    "unit": 27,
    "session": "Séance 5/10 (30 min)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Conjugaison — Au magasin",
    "materials": "Tableau de conjugaison ; Plan du quartier, ardoises",
    "objectives": [
@@ -1346,7 +1346,7 @@
    "unit": 27,
    "session": "Séance 6/10 (30 min)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Orthographe — Au magasin",
    "materials": "Étiquettes-couleurs ; Ardoises, tableau",
    "objectives": [
@@ -1367,7 +1367,7 @@
    "unit": 26,
    "session": "Séance 7/10 (30 min)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Maîtriser le système phonétique de la langue",
    "topic": "Lecture systématique — Au magasin",
    "materials": "Manuel M.S : P 38 ; Étiquettes-mots, tableau",
    "objectives": [
@@ -1388,7 +1388,7 @@
    "unit": 27,
    "session": "Séance 8/10 (30 min)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Mobiliser ses connaissances du système phonologique et prosodique",
    "topic": "Dictée — Au magasin",
    "materials": "Ardoises, cahier de dictée",
    "objectives": [
@@ -1409,7 +1409,7 @@
    "unit": 27,
    "session": "Séance 9/10 (30 min)",
    "activity": "Français",
-   "domain": "Phonétique articulatoire",
+   "domain": "Maîtriser le système phonétique de la langue",
    "topic": "Phonétique articulatoire — Au magasin",
    "materials": "Images (poste, boulevard, pain, bain …) ; Tableau",
    "objectives": [
@@ -1430,7 +1430,7 @@
    "unit": 28,
    "session": "Séance 10/10 (60 min)",
    "activity": "Français",
-   "domain": "Production orale / écrite",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production orale / écrite — Au magasin",
    "materials": "Plan du quartier, feuille d’affiche ; Crayons de couleur, cahier d’essai",
    "objectives": [
@@ -1451,7 +1451,7 @@
    "unit": 29,
    "session": "Séance 1/10 (30 min)",
    "activity": "Français",
-   "domain": "Acte de parole",
+   "domain": "Saisir la portée d’un message oral",
    "topic": "Acte de parole — Bonne année !",
    "materials": "Cartes de vœux, images de fêtes ; Tableau",
    "objectives": [
@@ -1472,7 +1472,7 @@
    "unit": 29,
    "session": "Séance 2/10 (60 min)",
    "activity": "Français",
-   "domain": "Lecture compréhension / fluence",
+   "domain": "Connaître le système graphique du français",
    "topic": "Lecture compréhension / fluence — Bonne année !",
    "materials": "Texte transcrit et/ou photocopié : « La fête du Mouloud » ; Texte pour la fluence",
    "objectives": [
@@ -1494,7 +1494,7 @@
    "unit": 29,
    "session": "Séance 3/10 (30 min)",
    "activity": "Français",
-   "domain": "Lexique",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Lexique — Bonne année !",
    "materials": "Manuel scolaire — plats de Yennayer (galettes, beignets, couscous, figues sèches, noix)",
    "objectives": [
@@ -1515,7 +1515,7 @@
    "unit": 30,
    "session": "Séance 4/10 (30 min)",
    "activity": "Français",
-   "domain": "Grammaire",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Grammaire — Bonne année !",
    "materials": "Manuel M.S : P 47 et P 48",
    "objectives": [
@@ -1537,7 +1537,7 @@
    "unit": 31,
    "session": "Séance 5/10 (30 min)",
    "activity": "Français",
-   "domain": "Conjugaison",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Conjugaison — Bonne année !",
    "materials": "Tableau de conjugaison ; Ardoises",
    "objectives": [
@@ -1558,7 +1558,7 @@
    "unit": 31,
    "session": "Séance 6/10 (30 min)",
    "activity": "Français",
-   "domain": "Orthographe",
+   "domain": "Mobilisation des ressources linguistiques",
    "topic": "Orthographe — Bonne année !",
    "materials": "Manuel M.S : P 57 ; Étiquettes, ardoises",
    "objectives": [
@@ -1579,7 +1579,7 @@
    "unit": 30,
    "session": "Séance 7/10 (30 min)",
    "activity": "Français",
-   "domain": "Lecture systématique",
+   "domain": "Maîtriser le système phonétique de la langue",
    "topic": "Lecture systématique — Bonne année !",
    "materials": "Manuel M.S : P 48 ; Étiquettes-mots, tableau",
    "objectives": [
@@ -1600,7 +1600,7 @@
    "unit": 31,
    "session": "Séance 8/10 (30 min)",
    "activity": "Français",
-   "domain": "Dictée",
+   "domain": "Mobiliser ses connaissances du système phonologique et prosodique",
    "topic": "Dictée — Bonne année !",
    "materials": "Ardoises, cahier de dictée Activité : Dictée",
    "objectives": [
@@ -1621,7 +1621,7 @@
    "unit": 31,
    "session": "Séance 9/10 (30 min)",
    "activity": "Français",
-   "domain": "Phonétique articulatoire",
+   "domain": "Maîtriser le système phonétique de la langue",
    "topic": "Phonétique articulatoire — Bonne année !",
    "materials": "Images (voiture, vélo, fête, fleur …) ; Tableau",
    "objectives": [
@@ -1642,7 +1642,7 @@
    "unit": 32,
    "session": "Séance 10/10 (60 min)",
    "activity": "Français",
-   "domain": "Production orale / écrite",
+   "domain": "Écrire pour répondre à une consigne d’écriture",
    "topic": "Production orale / écrite — Bonne année !",
    "materials": "Cartes de vœux, feuille, crayons de couleur ; Cahier d’essai, tableau",
    "objectives": [

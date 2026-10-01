@@ -8,6 +8,7 @@
  */
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
+import { composanteFor, composanteIn } from "./fr-composantes.mjs";
 
 const [level, pdf] = process.argv.slice(2);
 const file = new URL(`../../content/curriculum/${level}_fr.json`, import.meta.url);
@@ -27,6 +28,7 @@ for (let p = 1; p <= n; p++) {
       theme,
       duration: squash(m[3]),
       materials: squash(/Matériel didactique\s*:\s*(.+?)\s*Compétence/.exec(rest)?.[1] ?? "Tableau, ardoise"),
+      composante: composanteIn(rest),
       objective: squash(/Objectif d[’']apprentissage\s*:\s*(.+?)\s*Déroulement/.exec(rest)?.[1] ?? ""),
     });
   }
@@ -45,7 +47,7 @@ const diag = fiches.map((f, i) => ({
   unit: i < Math.ceil(fiches.length / 2) ? 1 : 2,
   session: `${f.activity} (${f.duration})`,
   activity: "Français",
-  domain: f.activity,
+  domain: f.composante || composanteFor(f.activity, level) || f.activity,
   topic: `${f.activity} : ${f.theme} — ${title}`,
   materials: f.materials,
   objectives: f.objective ? [f.objective] : [],
