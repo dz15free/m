@@ -108,26 +108,41 @@ export async function fetchFile(contentId: string, index: number): Promise<Blob>
 export const previewUrl = (key: string) => `/api/${key}`;
 
 
-/** استيراد ملف من «المكتبة الجاهزة»: المتصفح يجلبه من Google Drive (مسموح CORS) ثم يرسله للخادم الذي يحفظه في الحاوية.
-    الخطأ يحمل المرحلة والسبب ليُعرض للأدمن. */
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** نتيجة الطلب ورسالة الخطأ إن وُجدت. */
+async function importRequest(driveId: string, init: RequestInit): Promise<{ ok: true; file: ContentFile } | { ok: false; status: number; error: string }> {
+  const res = await authedFetch(`/api/admin/library-import?driveId=${encodeURIComponent(driveId)}`, { method: "POST", ...init });
+  if (res.ok) return { ok: true, file: (await res.json()) as ContentFile };
+  const error = ((await res.json().catch(() => ({}))) as { error?: string }).error ?? "";
+  return { ok: false, status: res.status, error };
+}
+
+/** تحميل من Drive في المتصفح، مع إعادة المحاولة (Google يحدّ التحميلات المتتالية). */
+async function browserDownload(driveId: string): Promise<Blob> {
+  let last = "";
+  for (const wait of [0, 5_000, 20_000]) {
+    if (wait) await sleep(wait);
+    try {
+      const res = await fetch(`https://drive.usercontent.google.com/download?id=${encodeURIComponent(driveId)}&export=download&confirm=t`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if ((res.headers.get("content-type") ?? "").startsWith("text/html")) throw new Error("not shared publicly");
+      return await res.blob();
+    } catch (e) {
+      last = e instanceof Error ? e.message : String(e);
+    }
+  }
+  throw new Error(`Drive: ${last}`);
+}
+
+/** استيراد ملف من «المكتبة الجاهزة»: الخادم يجلبه عبر Drive API إن كان مفتاحه مضبوطًا،
+    وإلا يحمّله المتصفح ويرسله. الخطأ يحمل المرحلة والسبب ليُعرض للأدمن. */
 export async function importCatalogFile(file: { driveId: string; mime: string }): Promise<ContentFile> {
-  let blob: Blob;
-  try {
-    const res = await fetch(`https://drive.usercontent.google.com/download?id=${encodeURIComponent(file.driveId)}&export=download&confirm=t`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    if ((res.headers.get("content-type") ?? "").startsWith("text/html")) throw new Error("not shared publicly");
-    blob = await res.blob();
-  } catch (e) {
-    throw new Error(`Drive: ${e instanceof Error ? e.message : String(e)}`);
-  }
-  const res = await authedFetch(`/api/admin/library-import?driveId=${encodeURIComponent(file.driveId)}`, {
-    method: "POST",
-    headers: { "Content-Type": file.mime },
-    body: blob,
-  });
-  if (!res.ok) {
-    const msg = ((await res.json().catch(() => ({}))) as { error?: string }).error ?? "";
-    throw new Error(`upload ${res.status} ${msg}`.trim());
-  }
-  return (await res.json()) as ContentFile;
+  const server = await importRequest(file.driveId, {});
+  if (server.ok) return server.file;
+  if (!(server.status === 503 && server.error === "drive key missing")) throw new Error(`server ${server.status} ${server.error}`.trim());
+  const blob = await browserDownload(file.driveId);
+  const res = await importRequest(file.driveId, { headers: { "Content-Type": file.mime }, body: blob });
+  if (!res.ok) throw new Error(`upload ${res.status} ${res.error}`.trim());
+  return res.file;
 }
