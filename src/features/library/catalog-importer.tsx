@@ -20,7 +20,7 @@ export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
   const qc = useQueryClient();
   const pending = pendingCatalog(catalog as CatalogEntry[], existingIds);
   const [run, setRun] = useState<{ done: number; total: number; current: string } | null>(null);
-  const [failed, setFailed] = useState<string[]>([]);
+  const [failed, setFailed] = useState<{ title: string; reason: string }[]>([]);
   const [finished, setFinished] = useState(false);
 
   async function start() {
@@ -32,12 +32,16 @@ export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
       setRun({ done: i, total: list.length, current: titleOf(entry.title, locale) });
       const files: ContentFile[] = [];
       try {
-        for (const f of entry.files) files.push(await importCatalogFile(f.driveId));
-        await saveContent(toContentDoc(entry, files), entry.id);
-      } catch {
+        for (const f of entry.files) files.push(await importCatalogFile(f));
+        try {
+          await saveContent(toContentDoc(entry, files), entry.id);
+        } catch (e) {
+          throw new Error(`Firestore: ${e instanceof Error ? e.message : String(e)}`);
+        }
+      } catch (e) {
         // لا نترك ملفات يتيمة لمحتوى لم يُحفظ
         await Promise.all(files.map((f) => removeFile(f.key)));
-        setFailed((x) => [...x, titleOf(entry.title, locale)]);
+        setFailed((x) => [...x, { title: titleOf(entry.title, locale), reason: e instanceof Error ? e.message : String(e) }]);
       }
     }
     setRun(null);
@@ -71,7 +75,13 @@ export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
       {failed.length > 0 && (
         <div className="text-sm text-red-800">
           <p>{t("failed", { n: failed.length })}</p>
-          <ul className="list-inside list-disc text-xs">{failed.map((f) => <li key={f} dir="auto">{f}</li>)}</ul>
+          <ul className="list-inside list-disc text-xs">
+            {failed.map((f) => (
+              <li key={f.title} dir="auto">
+                {f.title} — <span dir="ltr" className="font-mono">{f.reason}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </Card>

@@ -108,13 +108,26 @@ export async function fetchFile(contentId: string, index: number): Promise<Blob>
 export const previewUrl = (key: string) => `/api/${key}`;
 
 
-/** استيراد ملف من «المكتبة الجاهزة»: الخادم يجلبه من Drive ويحفظه في الحاوية. */
-export async function importCatalogFile(driveId: string): Promise<ContentFile> {
-  const res = await authedFetch("/api/admin/library-import", {
+/** استيراد ملف من «المكتبة الجاهزة»: المتصفح يجلبه من Google Drive (مسموح CORS) ثم يرسله للخادم الذي يحفظه في الحاوية.
+    الخطأ يحمل المرحلة والسبب ليُعرض للأدمن. */
+export async function importCatalogFile(file: { driveId: string; mime: string }): Promise<ContentFile> {
+  let blob: Blob;
+  try {
+    const res = await fetch(`https://drive.usercontent.google.com/download?id=${encodeURIComponent(file.driveId)}&export=download&confirm=t`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if ((res.headers.get("content-type") ?? "").startsWith("text/html")) throw new Error("not shared publicly");
+    blob = await res.blob();
+  } catch (e) {
+    throw new Error(`Drive: ${e instanceof Error ? e.message : String(e)}`);
+  }
+  const res = await authedFetch(`/api/admin/library-import?driveId=${encodeURIComponent(file.driveId)}`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ driveId }),
+    headers: { "Content-Type": file.mime },
+    body: blob,
   });
-  if (!res.ok) throw new Error(`import ${res.status}`);
+  if (!res.ok) {
+    const msg = ((await res.json().catch(() => ({}))) as { error?: string }).error ?? "";
+    throw new Error(`upload ${res.status} ${msg}`.trim());
+  }
   return (await res.json()) as ContentFile;
 }
