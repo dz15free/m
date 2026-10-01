@@ -895,6 +895,8 @@
     "noResults": "Aucun résultat. Essayez un autre mot ou retirez des filtres.",
     "clear": "Retirer les filtres",
     "types": {
+      "textbook": "Manuel scolaire",
+      "guide": "Guide et documents officiels",
       "fiche": "Fiche",
       "progression": "Progression",
       "exercise": "Exercices et activités",
@@ -978,7 +980,15 @@
     "needFile": "Ajoutez au moins un fichier avant de publier.",
     "publishedAt": "Publié",
     "count": "{n} éléments",
-    "notify": "Notifier tous les enseignants"
+    "notify": "Notifier tous les enseignants",
+    "catalog": {
+      "title": "Bibliothèque prête",
+      "body": "{n} contenus classés ({files} fichiers) : manuels, guides, plannings, affiches, fiches. Ils sont récupérés depuis Google Drive et publiés directement.",
+      "button": "Tout importer ({n})",
+      "progress": "{done} sur {total} — {title}",
+      "done": "La bibliothèque prête a été entièrement importée.",
+      "failed": "{n} échec(s) — relancez avec le même bouton :"
+    }
   },
   "documents": {
     "title": "Documents",

@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
 import {
+  BookMarked,
+  BookOpen,
   CalendarRange,
   ClipboardCheck,
   FileBadge,
@@ -30,6 +32,8 @@ import { CONTENT_TYPES, search, type ContentType, type IndexEntry } from "./logi
 import { getIndex, previewUrl } from "./repo";
 
 export const TYPE_ICON: Record<ContentType, typeof FileText> = {
+  textbook: BookOpen,
+  guide: BookMarked,
   fiche: FileText,
   progression: CalendarRange,
   exercise: PencilLine,

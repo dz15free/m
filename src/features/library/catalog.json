@@ -1,0 +1,2056 @@
+[
+ {
+  "id": "cat-tb-1ap-ar",
+  "title": {
+   "ar": "كتابي في اللغة العربية والتربية الإسلامية والتربية المدنية — السنة الأولى",
+   "fr": "Mon livre d'arabe, d'éducation islamique et civique — 1re année"
+  },
+  "level": "1AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "تربية إسلامية",
+   "تربية مدنية"
+  ],
+  "excerpt": "الكتاب المدرسي الموحّد للسنة الأولى: اللغة العربية والتربية الإسلامية والتربية المدنية.",
+  "access": "free",
+  "author": "الديوان الوطني للمطبوعات المدرسية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1GmoQZD5VGipmnGgy-HaOxNgCnQdK-k8k",
+    "name": "كتابي في اللغة العربية — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 36052275
+   }
+  ]
+ },
+ {
+  "id": "cat-tb-1ap-ar-act",
+  "title": {
+   "ar": "دفتر الأنشطة: اللغة العربية والتربية الإسلامية والتربية المدنية — السنة الأولى",
+   "fr": "Cahier d'activités : arabe, éducation islamique et civique — 1re année"
+  },
+  "level": "1AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "دفتر الأنشطة",
+   "كتاب مدرسي"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "الديوان الوطني للمطبوعات المدرسية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1SF-1L3d_n7qnrMMXMK5ONFloZ9nIqvDn",
+    "name": "دفتر الأنشطة لغة عربية — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 51483644
+   }
+  ]
+ },
+ {
+  "id": "cat-tb-1ap-math-act",
+  "title": {
+   "ar": "دفتر الأنشطة: الرياضيات والتربية العلمية — السنة الأولى",
+   "fr": "Cahier d'activités : mathématiques et sciences — 1re année"
+  },
+  "level": "1AP",
+  "subject": "math",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "دفتر الأنشطة",
+   "تربية علمية",
+   "كتاب مدرسي"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "الديوان الوطني للمطبوعات المدرسية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1un3eA3Z02lrxObcv_GNqCVQLWmBGRBCN",
+    "name": "دفتر الأنشطة رياضيات وعلمية — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 66042278
+   }
+  ]
+ },
+ {
+  "id": "cat-tb-4ap-ar",
+  "title": {
+   "ar": "كتاب اللغة العربية — السنة الرابعة",
+   "fr": "Manuel de langue arabe — 4e année"
+  },
+  "level": "4AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "الديوان الوطني للمطبوعات المدرسية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1E-Zp1caVdh1PUnB5jURRmu3rTJEx7X7O",
+    "name": "كتاب اللغة العربية — السنة الرابعة.pdf",
+    "mime": "application/pdf",
+    "size": 79269817
+   }
+  ]
+ },
+ {
+  "id": "cat-tb-4ap-islamic",
+  "title": {
+   "ar": "كتاب التربية الإسلامية — السنة الرابعة",
+   "fr": "Manuel d'éducation islamique — 4e année"
+  },
+  "level": "4AP",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "الديوان الوطني للمطبوعات المدرسية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1fLGkS0Un9UgK33kf3COv3wRtJ8MZF-w_",
+    "name": "كتاب التربية الإسلامية — السنة الرابعة.pdf",
+    "mime": "application/pdf",
+    "size": 19302278
+   }
+  ]
+ },
+ {
+  "id": "cat-tb-4ap-science",
+  "title": {
+   "ar": "كتاب التربية العلمية والتكنولوجية — السنة الرابعة",
+   "fr": "Manuel d'éducation scientifique et technologique — 4e année"
+  },
+  "level": "4AP",
+  "subject": "science",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "الديوان الوطني للمطبوعات المدرسية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1eif0FHxMPujZjMdX9kBNJSf7BfZeZVHM",
+    "name": "كتاب التربية العلمية — السنة الرابعة.pdf",
+    "mime": "application/pdf",
+    "size": 10594372
+   }
+  ]
+ },
+ {
+  "id": "cat-tb-4ap-civic",
+  "title": {
+   "ar": "كتاب التربية المدنية — السنة الرابعة",
+   "fr": "Manuel d'éducation civique — 4e année"
+  },
+  "level": "4AP",
+  "subject": "civic",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "الديوان الوطني للمطبوعات المدرسية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "17JcZLFFHGmoxH4Eh0EsszjxDmss6mArY",
+    "name": "كتاب التربية المدنية — السنة الرابعة.pdf",
+    "mime": "application/pdf",
+    "size": 13221546
+   }
+  ]
+ },
+ {
+  "id": "cat-tb-4ap-math-act",
+  "title": {
+   "ar": "كراس النشاطات في الرياضيات — السنة الرابعة",
+   "fr": "Cahier d'activités de mathématiques — 4e année"
+  },
+  "level": "4AP",
+  "subject": "math",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كراس النشاطات",
+   "كتاب مدرسي"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "الديوان الوطني للمطبوعات المدرسية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1QdLr1vmUPgimlZuljFb5q8Lazpx1h6Jq",
+    "name": "كراس النشاطات رياضيات — السنة الرابعة.pdf",
+    "mime": "application/pdf",
+    "size": 12093295
+   }
+  ]
+ },
+ {
+  "id": "cat-tb-3ap-en",
+  "title": {
+   "ar": "كتاب اللغة الإنجليزية — السنة الثالثة",
+   "fr": "My Book of English — 3rd year"
+  },
+  "level": "3AP",
+  "subject": "en",
+  "language": "en",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "English",
+   "كتاب مدرسي"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "الديوان الوطني للمطبوعات المدرسية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1hHXiICXif7WQ1pHLhL4tZvy3HRLX-795",
+    "name": "English textbook — 3AP.pdf",
+    "mime": "application/pdf",
+    "size": 4977621
+   }
+  ]
+ },
+ {
+  "id": "cat-guide-1ap-math",
+  "title": {
+   "ar": "دليل الأستاذ: كتاب الرياضيات — السنة الأولى",
+   "fr": "Guide du maître : mathématiques — 1re année"
+  },
+  "level": "1AP",
+  "subject": "math",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "دليل الأستاذ"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1cuQrGOeGNdJU6V9670cKY_kHww9dzbqF",
+    "name": "دليل كتاب الرياضيات — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 2455643
+   }
+  ]
+ },
+ {
+  "id": "cat-guide-2ap-math",
+  "title": {
+   "ar": "دليل الأستاذ: كتاب الرياضيات — السنة الثانية",
+   "fr": "Guide du maître : mathématiques — 2e année"
+  },
+  "level": "2AP",
+  "subject": "math",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "دليل الأستاذ"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1CmNJG3bKm5yudNxAgQVTNC1Te_d8EsaY",
+    "name": "دليل كتاب الرياضيات — السنة الثانية.pdf",
+    "mime": "application/pdf",
+    "size": 2172129
+   }
+  ]
+ },
+ {
+  "id": "cat-guide-1ap-ar",
+  "title": {
+   "ar": "دليل الأستاذ: كتاب اللغة العربية — السنة الأولى",
+   "fr": "Guide du maître : langue arabe — 1re année"
+  },
+  "level": "1AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "دليل الأستاذ"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1hv7QV6vpesCWE-4MJu_wCxUzL29jqZhO",
+    "name": "دليل كتاب اللغة العربية — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 2021470
+   }
+  ]
+ },
+ {
+  "id": "cat-guide-1ap-ar-plans",
+  "title": {
+   "ar": "مخططات حصص التعلّم لمادة اللغة العربية — السنة الأولى (وزارية)",
+   "fr": "Plans des séances d'arabe (ministère) — 1re année"
+  },
+  "level": "1AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات وزارية",
+   "مخططات حصص"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1trLvkzQUz0ienzCMOCxNioeRf7Dxy9Bp",
+    "name": "مخططات حصص التعلم لغة عربية — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 17333344
+   }
+  ]
+ },
+ {
+  "id": "cat-guide-1ap-math-plans",
+  "title": {
+   "ar": "مخططات حصص التعلّم لمادة الرياضيات — السنة الأولى (وزارية)",
+   "fr": "Plans des séances de mathématiques (ministère) — 1re année"
+  },
+  "level": "1AP",
+  "subject": "math",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات وزارية",
+   "مخططات حصص"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1lSfrwFaEM0oEtxVkw6aaf-2aGnR4Pzot",
+    "name": "مخططات حصص التعلم رياضيات — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 33737726
+   }
+  ]
+ },
+ {
+  "id": "cat-guide-1ap-math-cards",
+  "title": {
+   "ar": "بطاقات مقترحة لتسيير دروس الرياضيات — السنة الأولى",
+   "fr": "Fiches proposées de mathématiques — 1re année"
+  },
+  "level": "1AP",
+  "subject": "math",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "بطاقات",
+   "مخططات حصص"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "17aJJRDA_u05wPLcIbvG9fbtmpMc1bXUx",
+    "name": "مخطط مقترح لتسيير درس الرياضيات — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 34354623
+   }
+  ]
+ },
+ {
+  "id": "cat-guide-2ap-math-cards",
+  "title": {
+   "ar": "بطاقات مقترحة لتسيير دروس الرياضيات — السنة الثانية",
+   "fr": "Fiches proposées de mathématiques — 2e année"
+  },
+  "level": "2AP",
+  "subject": "math",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "بطاقات",
+   "مخططات حصص"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1ZaVlGMUt5lWFDN2ecDnTukTy0d5mPtU-",
+    "name": "مخطط مقترح لتسيير درس الرياضيات — السنة الثانية.pdf",
+    "mime": "application/pdf",
+    "size": 28208254
+   }
+  ]
+ },
+ {
+  "id": "cat-guide-programmes",
+  "title": {
+   "ar": "مناهج مرحلة التعليم الابتدائي 2016 (كل المواد)",
+   "fr": "Programmes de l'enseignement primaire 2016"
+  },
+  "level": "",
+  "subject": "",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "منهاج",
+   "مناهج"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1-v5YnFyTYhOKxQufeNZ5e0foLcbnQLpY",
+    "name": "مناهج التعليم الابتدائي 2016.pdf",
+    "mime": "application/pdf",
+    "size": 11447034
+   }
+  ]
+ },
+ {
+  "id": "cat-plan-1ap",
+  "title": {
+   "ar": "المخطط السنوي لبناء التعلمات — السنة الأولى",
+   "fr": "Planification annuelle — 1re année"
+  },
+  "level": "1AP",
+  "subject": "",
+  "language": "ar",
+  "type": "progression",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مخطط سنوي",
+   "توزيع"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1L-_co18QzZPOnBj52UJ9QrRSDKGLeilo",
+    "name": "المخطط السنوي — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 1264360
+   },
+   {
+    "driveId": "1M41TyDAD__J1rCMaMtBGOOJx4bBfv2G5",
+    "name": "المخطط السنوي لبناء التعلمات — السنة الأولى 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 1105694
+   }
+  ]
+ },
+ {
+  "id": "cat-plan-2ap",
+  "title": {
+   "ar": "المخطط السنوي لبناء التعلمات — السنة الثانية",
+   "fr": "Planification annuelle — 2e année"
+  },
+  "level": "2AP",
+  "subject": "",
+  "language": "ar",
+  "type": "progression",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مخطط سنوي",
+   "توزيع"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1yvyndd2JVsDr2n_XlP6XqMqtYzWwSD2p",
+    "name": "المخطط السنوي — السنة الثانية.pdf",
+    "mime": "application/pdf",
+    "size": 1306201
+   },
+   {
+    "driveId": "1qnGh1IiVBN_3vTSlnnWTQlPlo6mEXPGt",
+    "name": "المخططات السنوية — السنة الثانية.pdf",
+    "mime": "application/pdf",
+    "size": 2358604
+   },
+   {
+    "driveId": "1FITHDYYWCaKC4_zwi7uMPjTzTKiwCToE",
+    "name": "المخطط السنوي لبناء التعلمات 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 968698
+   }
+  ]
+ },
+ {
+  "id": "cat-plan-3ap",
+  "title": {
+   "ar": "التدرّج السنوي — السنة الثالثة",
+   "fr": "Progression annuelle — 3e année"
+  },
+  "level": "3AP",
+  "subject": "",
+  "language": "ar",
+  "type": "progression",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تدرج",
+   "توزيع"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Meoi6U5v5paRuLDN65DOos33MvtnQwNC",
+    "name": "التدرج السنوي — السنة الثالثة.pdf",
+    "mime": "application/pdf",
+    "size": 620872
+   }
+  ]
+ },
+ {
+  "id": "cat-plan-5ap",
+  "title": {
+   "ar": "المخطط السنوي لبناء التعلمات — السنة الخامسة (2026/2027)",
+   "fr": "Planification annuelle — 5e année (2026/2027)"
+  },
+  "level": "5AP",
+  "subject": "",
+  "language": "ar",
+  "type": "progression",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مخطط سنوي",
+   "توزيع"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1pyUs5njzPsalda4PI0sXi6QgYrlQ7Rap",
+    "name": "المخطط السنوي — السنة الخامسة 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 1485326
+   }
+  ]
+ },
+ {
+  "id": "cat-plan-sept",
+  "title": {
+   "ar": "مخطط بناء التعلمات لشهر سبتمبر 2026/2027 — كل المستويات",
+   "fr": "Plan des apprentissages de septembre 2026/2027 — tous niveaux"
+  },
+  "level": "",
+  "subject": "",
+  "language": "ar",
+  "type": "progression",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "سبتمبر",
+   "مخطط شهري"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "الأستاذ بوعافية حسين",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "1NBKkcCEnJHWd_C7KKLjW1znmkVoMh_DP",
+    "name": "مخطط بناء تعلمات شهر سبتمبر 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 951247
+   }
+  ]
+ },
+ {
+  "id": "cat-plan-1ap-months",
+  "title": {
+   "ar": "مخططات بناء التعلمات الشهرية — السنة الأولى",
+   "fr": "Plans mensuels des apprentissages — 1re année"
+  },
+  "level": "1AP",
+  "subject": "",
+  "language": "ar",
+  "type": "progression",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مخطط شهري"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1vI8gvtqUACsGyUl9FBnkhvseZB_Cc0Ee",
+    "name": "مخطط شهر أكتوبر — السنة الأولى.jpg",
+    "mime": "image/jpeg",
+    "size": 252250
+   },
+   {
+    "driveId": "1enDtDqdLFoPjY3J3mG3glfOln1oz5jZn",
+    "name": "مخطط شهر نوفمبر (1) — السنة الأولى.jpg",
+    "mime": "image/jpeg",
+    "size": 259295
+   },
+   {
+    "driveId": "1YF9P8Sr0U4xOik6uQzCz2DH8f7gN-3qQ",
+    "name": "مخطط شهر نوفمبر (2) — السنة الأولى.jpg",
+    "mime": "image/jpeg",
+    "size": 252493
+   },
+   {
+    "driveId": "14riIdm_sEVxycwoJe3wcmhyXMmlmES9Q",
+    "name": "مخطط شهر ديسمبر — السنة الأولى.jpg",
+    "mime": "image/jpeg",
+    "size": 247756
+   },
+   {
+    "driveId": "1Vr07_aA_-2SBRlD6dCZV7kqCT5DsCG3s",
+    "name": "مخطط شهر جانفي — السنة الأولى.jpg",
+    "mime": "image/jpeg",
+    "size": 218935
+   },
+   {
+    "driveId": "1L1qrbR3EOibtdjdm3gEzS-UNG9Ln3o2y",
+    "name": "مخطط شهر فيفري — السنة الأولى.jpg",
+    "mime": "image/jpeg",
+    "size": 239860
+   },
+   {
+    "driveId": "1g2wgBq7no_UhQxbvchxn6ZGhvfAnYbaF",
+    "name": "مخطط شهر أفريل — السنة الأولى.jpg",
+    "mime": "image/jpeg",
+    "size": 243222
+   }
+  ]
+ },
+ {
+  "id": "cat-plan-art",
+  "title": {
+   "ar": "مخطط التربية التشكيلية",
+   "fr": "Planification d'éducation artistique"
+  },
+  "level": "",
+  "subject": "art",
+  "language": "ar",
+  "type": "progression",
+  "term": 0,
+  "unit": "",
+  "tags": [],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1XYADv0rqReRr12UW5jeA1TMvwqxrXQKJ",
+    "name": "مخطط التربية التشكيلية.jpg",
+    "mime": "image/jpeg",
+    "size": 1006702
+   }
+  ]
+ },
+ {
+  "id": "cat-plan-en",
+  "title": {
+   "ar": "التوزيع السنوي وتوزيع حصص الإنجليزية — السنوات 3 و4 و5",
+   "fr": "Annual allotment & sequence repartition — 3PS/4PS/5PS"
+  },
+  "level": "",
+  "subject": "en",
+  "language": "en",
+  "type": "progression",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "English",
+   "allotment"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "14vn_ak_kS0t4cmUj7IOeJuXEx87yzMlJ",
+    "name": "English annual allotment 3-4-5PS.pdf",
+    "mime": "application/pdf",
+    "size": 10065009
+   },
+   {
+    "driveId": "1IXZmy3GtabevAaPU0J76eEHokpuyHl9H",
+    "name": "3PS Yearly Planning.pdf",
+    "mime": "application/pdf",
+    "size": 116077
+   }
+  ]
+ },
+ {
+  "id": "cat-plan-fr",
+  "title": {
+   "ar": "Progressions annuelles de français — 4e et 5e AP (2026/2027) et annexe 2",
+   "fr": "التدرّجات السنوية للفرنسية — السنتان الرابعة والخامسة"
+  },
+  "level": "",
+  "subject": "fr",
+  "language": "fr",
+  "type": "progression",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "progression",
+   "français"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1S7m8-h1jEvUZge48VurhgofF3-34JLTL",
+    "name": "Progression annuelle 4AP 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 163219
+   },
+   {
+    "driveId": "1s0SKO09wFsbVnbm2vqMIw9L8PQ0mNe9o",
+    "name": "Progression annuelle 5AP 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 191938
+   },
+   {
+    "driveId": "10l1EKq9GMt_fXPx-YTrAjPa97Z0XGHt7",
+    "name": "Annexe 2 — nouveau déroulement séquentiel 4AP.pdf",
+    "mime": "application/pdf",
+    "size": 1472548
+   }
+  ]
+ },
+ {
+  "id": "cat-poster-1ap",
+  "title": {
+   "ar": "معلقات السنة الأولى",
+   "fr": "Affiches — 1re année"
+  },
+  "level": "1AP",
+  "subject": "",
+  "language": "ar",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "معلقات"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1RhoGEwNbtj-45yBhAHV29LDZEpPZ8egm",
+    "name": "معلقات السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 938711
+   }
+  ]
+ },
+ {
+  "id": "cat-poster-2ap",
+  "title": {
+   "ar": "معلقات السنة الثانية",
+   "fr": "Affiches — 2e année"
+  },
+  "level": "2AP",
+  "subject": "",
+  "language": "ar",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "معلقات"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1rNclm9qeg_gxTwxo91er2B9OWpADrgeA",
+    "name": "معلقات السنة الثانية.pdf",
+    "mime": "application/pdf",
+    "size": 936645
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-3ap",
+  "title": {
+   "ar": "Fiches pédagogiques de français — 3e AP",
+   "fr": "بطاقات حصص الفرنسية — السنة الثالثة"
+  },
+  "level": "3AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "fiches",
+   "français"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1oU6mbTrtb4jDuqANZ4EjHhkiBPyhm6ED",
+    "name": "Fiches pédagogiques 3AP-4AP.pdf",
+    "mime": "application/pdf",
+    "size": 167952
+   },
+   {
+    "driveId": "12lhl6xo25RbhpYHFmrPmqDBGsmP-qw_Q",
+    "name": "Fiches 3AP — Projet 4 À la campagne.pdf",
+    "mime": "application/pdf",
+    "size": 396117
+   },
+   {
+    "driveId": "1meYrPWVJO0K2TC9vRlYX1xSZL6YlbXOL",
+    "name": "Fiches 3AP — Projet 3 Séquence 3.pdf",
+    "mime": "application/pdf",
+    "size": 160645
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-4ap",
+  "title": {
+   "ar": "Fiches pédagogiques de français — 4e AP",
+   "fr": "بطاقات حصص الفرنسية — السنة الرابعة"
+  },
+  "level": "4AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "fiches",
+   "français"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "Mostafa Ami",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "1pZbgjfBXvLAwYP4pycOsqziswZGQWd2K",
+    "name": "Fiches 4AP — progression complète.pdf",
+    "mime": "application/pdf",
+    "size": 2834083
+   },
+   {
+    "driveId": "1FJ0XTANM_IPzOV2QC7NwClyJw4bxuItC",
+    "name": "Fiches 4AP — Projet 1 C'est notre quartier.pdf",
+    "mime": "application/pdf",
+    "size": 147175
+   },
+   {
+    "driveId": "1bhzqxcul8AeI60coYaxXljk5WSwv9aTF",
+    "name": "Fiches 4AP — Projet 2 C'est la fête.pdf",
+    "mime": "application/pdf",
+    "size": 159791
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap",
+  "title": {
+   "ar": "Fiches pédagogiques de français — 5e AP (4 projets)",
+   "fr": "بطاقات حصص الفرنسية — السنة الخامسة"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "fiches",
+   "français"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Ya4lO107BCrLIv8zmADN-zexOaqu0kih",
+    "name": "Fiches 5AP — Projet 1 Au zoo.pdf",
+    "mime": "application/pdf",
+    "size": 101848
+   },
+   {
+    "driveId": "1eqonBpPFbmva-nnTju3AnozONPQhQs82",
+    "name": "Fiches 5AP — Projet 2 Lieu exceptionnel.pdf",
+    "mime": "application/pdf",
+    "size": 97447
+   },
+   {
+    "driveId": "1ap7hcpa1tt7c7sG74dt8YW3oJeBVtL1i",
+    "name": "Fiches 5AP — Projet 3 Catastrophes naturelles.pdf",
+    "mime": "application/pdf",
+    "size": 98493
+   },
+   {
+    "driveId": "1hznOCjsYs6FrSWwvle5v-pvXdqVXO4BN",
+    "name": "Fiches 5AP — Projet 4 Protégeons la nature.pdf",
+    "mime": "application/pdf",
+    "size": 93660
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-diag-4ap",
+  "title": {
+   "ar": "Évaluation diagnostique de français — 4e AP",
+   "fr": "التقويم التشخيصي في الفرنسية — السنة الرابعة"
+  },
+  "level": "4AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "evaluation",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "diagnostique"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "1R8Q1CzPNqWS3-9hSQZ1PglE8spBM5hdg",
+    "name": "Évaluation diagnostique 4AP.pdf",
+    "mime": "application/pdf",
+    "size": 743993
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-diag-5ap",
+  "title": {
+   "ar": "Évaluation diagnostique de français — 5e AP",
+   "fr": "التقويم التشخيصي في الفرنسية — السنة الخامسة"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "evaluation",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "diagnostique"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "1Jf5ZSDe_yeRyuYcLXKDODVjdIbEMp41j",
+    "name": "Évaluation diagnostique 5AP.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 14988457
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-3ap-all",
+  "title": {
+   "ar": "مذكرات جميع المواد — السنة الثالثة",
+   "fr": "Fiches de toutes les matières — 3e année"
+  },
+  "level": "3AP",
+  "subject": "",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1ouGjKBnFPrZj94f2ji0ALTV92kI8LCMh",
+    "name": "مذكرات جميع المواد — السنة الثالثة.pdf",
+    "mime": "application/pdf",
+    "size": 43375247
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-4ap-all",
+  "title": {
+   "ar": "مذكرات جميع المواد — السنة الرابعة",
+   "fr": "Fiches de toutes les matières — 4e année"
+  },
+  "level": "4AP",
+  "subject": "",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "17V3WR7qHTQlmVVj5c4Ga-sSQerxNQ8Vj",
+    "name": "مذكرات جميع المواد — السنة الرابعة.pdf",
+    "mime": "application/pdf",
+    "size": 15472518
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-1ap-subjects",
+  "title": {
+   "ar": "مذكرات التربية الإسلامية والعلمية والمدنية والبدنية والرياضيات — السنة الأولى",
+   "fr": "Fiches d'éducation islamique, scientifique, civique, physique et de mathématiques — 1re année"
+  },
+  "level": "1AP",
+  "subject": "",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "الأستاذ بن عبد القادر عبد الصمد وآخرون",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "1qsdtlFAuRCtwnzYLqoxqOKP5Okkq2bcc",
+    "name": "مذكرات التربية الإسلامية — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 2535258
+   },
+   {
+    "driveId": "1iDoosGZN-wpKJjeytIAhy-rhRBVO0Tso",
+    "name": "مذكرات التربية العلمية — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 3838856
+   },
+   {
+    "driveId": "10Q4HQEJqdeKmyMH-vsyxLaRPjuMEfpZB",
+    "name": "مذكرات التربية العلمية (المقاطع) — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 3838856
+   },
+   {
+    "driveId": "1XMS_1aoDxcR8jgH_E0KmYtERQtrBfkCu",
+    "name": "مذكرات التربية المدنية — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 1265412
+   },
+   {
+    "driveId": "1-JsZQOyJPLB11YMlrmmOIYGfwRx_lCCn",
+    "name": "مذكرات التربية البدنية — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 520512
+   },
+   {
+    "driveId": "1NCrodSlWvePYfIFiv8hfTcgLaj2ibbJB",
+    "name": "مذكرات الرياضيات — السنة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 947843
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-2ap-subjects",
+  "title": {
+   "ar": "مذكرات الرياضيات والتربية الإسلامية والعلمية والمدنية — السنة الثانية",
+   "fr": "Fiches de mathématiques, éducation islamique, scientifique et civique — 2e année"
+  },
+  "level": "2AP",
+  "subject": "",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "الأستاذ بن عبد القادر عبد الصمد",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "1B5QP5fh59q3fG1Mswzao_YP4wO8csXi0",
+    "name": "مذكرات الرياضيات — السنة الثانية.pdf",
+    "mime": "application/pdf",
+    "size": 12184485
+   },
+   {
+    "driveId": "1kWig8mfGY07vlV7UC-OC0O3GQd6zAuez",
+    "name": "مذكرات التربية الإسلامية — السنة الثانية.pdf",
+    "mime": "application/pdf",
+    "size": 2555092
+   },
+   {
+    "driveId": "1t1kd5EUjY5_NxGfKI34n6M96oWKVjPDh",
+    "name": "مذكرات التربية العلمية — السنة الثانية.pdf",
+    "mime": "application/pdf",
+    "size": 2867371
+   },
+   {
+    "driveId": "1PdE9gKhRiJmlVUj0WByeb0hDB7T6LKQd",
+    "name": "مذكرات التربية المدنية — السنة الثانية.pdf",
+    "mime": "application/pdf",
+    "size": 1555647
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-5ap-math-islamic",
+  "title": {
+   "ar": "مذكرات الرياضيات والتربية الإسلامية — السنة الخامسة",
+   "fr": "Fiches de mathématiques et d'éducation islamique — 5e année"
+  },
+  "level": "5AP",
+  "subject": "",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1K-0-M8DOCAZ9XkqE3kJZSz6ipE5OCmvk",
+    "name": "مذكرات الرياضيات — السنة الخامسة.pdf",
+    "mime": "application/pdf",
+    "size": 376610
+   },
+   {
+    "driveId": "1emi3_d1EqtAi9NRWrRDcMiyWobWXq9rg",
+    "name": "الايمان باليوم الاخر.pdf",
+    "mime": "application/pdf",
+    "size": 1081251
+   },
+   {
+    "driveId": "1QL3rezAy15gM31GXULRjhGB_gVSdaHMc",
+    "name": "المسلم يحب الخير.pdf",
+    "mime": "application/pdf",
+    "size": 1086126
+   },
+   {
+    "driveId": "1M_HxFmF5hz3oB_AxZ-ddhwLxnOlv9rP3",
+    "name": "تفريج الكربات.pdf",
+    "mime": "application/pdf",
+    "size": 1133633
+   },
+   {
+    "driveId": "1iNQ2ysN_EN6FdyuPLx-o21P2pfcNDZ3r",
+    "name": "سورة البلد.pdf",
+    "mime": "application/pdf",
+    "size": 1295468
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-1ap-ar-extra",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الأولى (أسبوع الإعداد اليومي، تثبيت المكتسبات)",
+   "fr": "Fiches d'arabe — 1re année (compléments)"
+  },
+  "level": "1AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "إعداد يومي"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "14Dm_-R4CaE-kmIv8Nbf8C6VDaowhS3Kf",
+    "name": "مذكرات اللغة العربية — السنة الأولى (مقطع 1).pdf",
+    "mime": "application/pdf",
+    "size": 5036909
+   },
+   {
+    "driveId": "1LOoYakCJNMcsJJmO6mdjNgt85Kpn2fyR",
+    "name": "الإعداد اليومي للأسبوع الثاني — بوعافية حسين.pdf",
+    "mime": "application/pdf",
+    "size": 1059146
+   },
+   {
+    "driveId": "1sUhif9qrsD3EarrXh3Dy6eHBgxXmvmku",
+    "name": "مرحلة تثبيت المكتسبات — السنة الثانية لغة عربية.pdf",
+    "mime": "application/pdf",
+    "size": 1452104
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-1ap-ar-1",
+  "title": {
+   "ar": "مذكرات اللغة العربية الأسبوعية — السنة الأولى (1/2)",
+   "fr": "Fiches hebdomadaires d'arabe — 1re année (1/2)"
+  },
+  "level": "1AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "أسبوعية"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "أساتذة متعددون (مذكرات منشورة)",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "1aJoiMsE-XEtWiLeOyvRstLQAykElLGGs",
+    "name": "D9 85 D8 B0 D9 83 D8 B1 D8 A7 D8 AA 20 D8 A7 D9 84 D8 A7 D8 B3 D8 A8 D9 88 D8 B9 20 D8 A7 D9 84 D8 AB D8 A7 D9 86 D9 8A 20 D8 A7 D9 84 D9 85 D9 82 D8 B7 D8 B9 20 D8 A7 D9 84 D8 AB D8 A7 D9 86 D9 8A 20 D9 84 D9 84 D8 B3 D9.pdf",
+    "mime": "application/pdf",
+    "size": 3596477
+   },
+   {
+    "driveId": "1krpFpU1aWX8b3MTTG9q_TbgQdRW-D6jh",
+    "name": "ألعاب قرائية للسة الأولى.pdf",
+    "mime": "application/pdf",
+    "size": 1373762
+   },
+   {
+    "driveId": "1PX0Q2yP6K32_9zsOCfeBQmUvObac8zbW",
+    "name": "ادماج المقطع3 للسنة الاولى اعداد الاستاذ محمد.pdf",
+    "mime": "application/pdf",
+    "size": 1426813
+   },
+   {
+    "driveId": "1A91tc13ZZmHjPjHpZOo9DN0Tmfb48HgC",
+    "name": "اسبوع الادماج للمقطع الرابع.pdf",
+    "mime": "application/pdf",
+    "size": 1083026
+   },
+   {
+    "driveId": "1FF2q8bzgiSX03jozu8BSZ4-58yh4pWkU",
+    "name": "الاسبوع الثالث من المقطع الرابع.pdf",
+    "mime": "application/pdf",
+    "size": 1564593
+   },
+   {
+    "driveId": "1DB_YOydbeoisfYhRlyOPDZm6QS58Rm7F",
+    "name": "التأسيس لحرفي الباء و الملم بمهارات منهج الوعي الصوتي الخطي اعداد الاستاذ جمعي محمد.pdf",
+    "mime": "application/pdf",
+    "size": 2848314
+   },
+   {
+    "driveId": "12n3ZmlQdUzHo_pFeIV3AWHJ6iNrGfWQX",
+    "name": "التوزيع الزمني للمرحلة الابجدية للسنة الاولى اعداد الاستاذ محمد.pdf",
+    "mime": "application/pdf",
+    "size": 843822
+   },
+   {
+    "driveId": "1VYD-nqmbxgthkw9zW3ulxy3F9Mpe16WU",
+    "name": "المذكرات الوزارية للسنة 1 ابتدائي في اللغة العربية المقطع 01 الاسبوع 01.pdf",
+    "mime": "application/pdf",
+    "size": 2064059
+   },
+   {
+    "driveId": "1qjp-PJmq5T58yNNZmaa3mDf__cOlJObz",
+    "name": "المقطع 04 الوحدة 01 في معرض الكتاب الأستاذ بن دايدة س1.pdf",
+    "mime": "application/pdf",
+    "size": 2920232
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-1ap-ar-2",
+  "title": {
+   "ar": "مذكرات اللغة العربية الأسبوعية — السنة الأولى (2/2)",
+   "fr": "Fiches hebdomadaires d'arabe — 1re année (2/2)"
+  },
+  "level": "1AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "أسبوعية"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "أساتذة متعددون (مذكرات منشورة)",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "1g-FszU8f974CL1sua-7N_S5N-pnXM63a",
+    "name": "المقطع 04 الوحدة 02 مباراة في كرة القدم الأستاذ بن دايدة س1.pdf",
+    "mime": "application/pdf",
+    "size": 2796444
+   },
+   {
+    "driveId": "1uFi6scq2BDB-UlqzP2fjMG7RkCQTTVgL",
+    "name": "المقطع الأول الاسبوع الثالث.pdf",
+    "mime": "application/pdf",
+    "size": 1455129
+   },
+   {
+    "driveId": "1XgmEt4BbWVBq5shNZz7GFXmhba6jrIOu",
+    "name": "المقطع الأول الاسبوع الرابع.pdf",
+    "mime": "application/pdf",
+    "size": 1694168
+   },
+   {
+    "driveId": "1bIJxs6Ggi_kSldV-vQqGrxBJ5w8pB-IB",
+    "name": "المقطع الاول الاسبوع ثاني.pdf",
+    "mime": "application/pdf",
+    "size": 1791680
+   },
+   {
+    "driveId": "1Jv_XbmsBdFjet3iNXFYC8CxzV5VUnJNe",
+    "name": "مذكرات أحمد في المدرسة للسنة الاولى.pdf",
+    "mime": "application/pdf",
+    "size": 417051
+   },
+   {
+    "driveId": "1zyKbbK2Tu_tJdV56PmdexkG12TKgPfkk",
+    "name": "مذكرات الادماج والتقويم للغة ع المقطع2يالاسبوع 9 سنة 1 الاستاذ محمد بودواية.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1380385
+   },
+   {
+    "driveId": "1C8wihKtc8oTyh3E2y8Rq8IE174XFBOsZ",
+    "name": "مذكرات الاسبوع الاول المقطع الثالث سنة الاولى ابتدائي.pdf",
+    "mime": "application/pdf",
+    "size": 1761479
+   },
+   {
+    "driveId": "1HZEkl4yDj0HQ4n0OYLAA0qT3zPGmm2VA",
+    "name": "مقطع 2 في اللغة للسنة الاولى مراجعة و تقويم للاستاذ محمد.pdf",
+    "mime": "application/pdf",
+    "size": 3125334
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-2ap-ar-1",
+  "title": {
+   "ar": "مذكرات اللغة العربية الأسبوعية — السنة الثانية (1/3)",
+   "fr": "Fiches hebdomadaires d'arabe — 2e année (1/3)"
+  },
+  "level": "2AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "أسبوعية"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "الأستاذ بن عبد القادر عبد الصمد وآخرون",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "1hcITm5A8DNKvxCsn9LpVwKLUKACN_8mw",
+    "name": "الاسبوع الاول من المقطع الرابع للسنة الثانية ابتدائي.pdf",
+    "mime": "application/pdf",
+    "size": 1358428
+   },
+   {
+    "driveId": "1wOLr5FnHigz-4AhjNBPrxRGr_Z0ybWDp",
+    "name": "الاسبوع الثاني للمقطع الرابع سنة 2 ابتدائي.pdf",
+    "mime": "application/pdf",
+    "size": 1473258
+   },
+   {
+    "driveId": "1-VT1_CeY_88LSa6UzM1TXmZGr9gNJKCQ",
+    "name": "مذكرات أسبوع الإدماج للمقطع 02.pdf",
+    "mime": "application/pdf",
+    "size": 965241
+   },
+   {
+    "driveId": "1XmT8arI3cu0MkF-Gr_XFoBkhrVa2HUcU",
+    "name": "مذكرات أسبوع الإدماج للمقطع 04.pdf",
+    "mime": "application/pdf",
+    "size": 758251
+   },
+   {
+    "driveId": "1vlRt7atfybgZWEDJIg9JyfL_JuarPo7x",
+    "name": "مذكرات أسبوع الإدماج للمقطع 05.pdf",
+    "mime": "application/pdf",
+    "size": 804526
+   },
+   {
+    "driveId": "1o3XI1A7VG59RBDz2ILZ7pu8CSdPnlzFw",
+    "name": "مذكرات الأسبوع 001.pdf",
+    "mime": "application/pdf",
+    "size": 1961458
+   },
+   {
+    "driveId": "1LTi4USf1trLriptt8Bn-1EgkfvNUrlYD",
+    "name": "مذكرات الأسبوع 02 المقطع 6.pdf",
+    "mime": "application/pdf",
+    "size": 1254276
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-2ap-ar-2",
+  "title": {
+   "ar": "مذكرات اللغة العربية الأسبوعية — السنة الثانية (2/3)",
+   "fr": "Fiches hebdomadaires d'arabe — 2e année (2/3)"
+  },
+  "level": "2AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "أسبوعية"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "الأستاذ بن عبد القادر عبد الصمد وآخرون",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "1e2zTxCCYe90p2os_0hZ7rmUhuUyffKwb",
+    "name": "مذكرات الأسبوع 1 المقطع 5.pdf",
+    "mime": "application/pdf",
+    "size": 1674218
+   },
+   {
+    "driveId": "19GY4D5m0_uLOLuvvqTr11PVTZsk1Ela6",
+    "name": "مذكرات الأسبوع 1 للمقطع 06.pdf",
+    "mime": "application/pdf",
+    "size": 1246690
+   },
+   {
+    "driveId": "1lzZE6hWcZYe_nohJxo0Q2eO0O6-V-XbL",
+    "name": "مذكرات الأسبوع 2 المقطع 04.pdf",
+    "mime": "application/pdf",
+    "size": 1543268
+   },
+   {
+    "driveId": "1-Q6tdhErPqtHBBlc1sDVgGtMhqZzcw0V",
+    "name": "مذكرات الأسبوع 2 المقطع 5.pdf",
+    "mime": "application/pdf",
+    "size": 1747658
+   },
+   {
+    "driveId": "1W7zwEKYslLP2YBiqx1XmOoUnYQ7y27r_",
+    "name": "مذكرات الأسبوع 3 المقطع 04.pdf",
+    "mime": "application/pdf",
+    "size": 1595582
+   },
+   {
+    "driveId": "16A35i_Dn9wGMcoA1GaJAsvGQREuaWnaW",
+    "name": "مذكرات الأسبوع 3 المقطع 06.pdf",
+    "mime": "application/pdf",
+    "size": 1447681
+   },
+   {
+    "driveId": "1V1gRlpqdZidRm8PaIVb0GNj32Ihlo3gP",
+    "name": "مذكرات الأسبوع 3 المقطع 5.pdf",
+    "mime": "application/pdf",
+    "size": 1471699
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-2ap-ar-3",
+  "title": {
+   "ar": "مذكرات اللغة العربية الأسبوعية — السنة الثانية (3/3)",
+   "fr": "Fiches hebdomadaires d'arabe — 2e année (3/3)"
+  },
+  "level": "2AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "أسبوعية"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "الأستاذ بن عبد القادر عبد الصمد وآخرون",
+  "license": "licensed",
+  "files": [
+   {
+    "driveId": "17zeG_YIHFocjO8gNHDTH466pMPRJ1RSX",
+    "name": "مذكرات الأسبوع2 المقطع 3.pdf",
+    "mime": "application/pdf",
+    "size": 1618799
+   },
+   {
+    "driveId": "1okfbszOYs1rhX5_OKUP1gPlXg-7XWHqA",
+    "name": "مذكرات الأسبوع2 المقطع2.pdf",
+    "mime": "application/pdf",
+    "size": 1646958
+   },
+   {
+    "driveId": "1wHrmXSpki9_4dz4hcWdvUOggNLCoUfGy",
+    "name": "مذكرات الأسبوع3 المقطع2.pdf",
+    "mime": "application/pdf",
+    "size": 1798067
+   },
+   {
+    "driveId": "1GCUCj_HrwBar1Og96jiesd6egWQuxu9H",
+    "name": "مذكرات الاسبوع الثالث في القسم بن عبد القادر عبد الصمد درمام.pdf",
+    "mime": "application/pdf",
+    "size": 1752514
+   },
+   {
+    "driveId": "1ud1YluTDqiyAu1iHf-fara2c7kyqgNeH",
+    "name": "مذكرات الاسبوع 3 المقطع 3 جولة في ارجاء المدينة لمعلم بن عبد القادر عبد الصمد.pdf",
+    "mime": "application/pdf",
+    "size": 1801496
+   },
+   {
+    "driveId": "1On5VarSDcrRnWgXpWt1RK5mTlwVLzClY",
+    "name": "مذكرات الاسبوع الاول اليوم نعود الى المدرسة للمعلم بن عبد القادر عبد الصمد.pdf",
+    "mime": "application/pdf",
+    "size": 1680757
+   },
+   {
+    "driveId": "1TERgR4boJbFwsiN7ybw-uqX0xHXZZVAU",
+    "name": "مذكرات الاسبوع الثاني في ساحة المدرسة للمعلم بن عبد القادر عبد الصمد.pdf",
+    "mime": "application/pdf",
+    "size": 1860755
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-5ap-ar-s1",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الخامسة، المقطع 1",
+   "fr": "Fiches d'arabe — 5e année, séquence 1"
+  },
+  "level": "5AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "المقطع 1",
+  "tags": [
+   "مذكرات",
+   "المقطع 1"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "مخططات حصص التعلم الوزارية ومذكرات الأساتذة",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1xfoZPZPcEJzHqnWaOqKVtnAM7hqGECMD",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 01 الاسبوع 01 رفاق المدرسة.pdf",
+    "mime": "application/pdf",
+    "size": 2731193
+   },
+   {
+    "driveId": "1DPuFbS4BnT9HdWicmHn933NvTn32KY0i",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 01 الاسبوع 02 التعاونية المدرسية.pdf",
+    "mime": "application/pdf",
+    "size": 1640100
+   },
+   {
+    "driveId": "1IsQ0cbgntfNFTfPvoqz7e1vnkplfM7LY",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 01 الاسبوع 03 طريق السعادة.pdf",
+    "mime": "application/pdf",
+    "size": 2008224
+   },
+   {
+    "driveId": "1_rlQq5s2dpy_kKX1exz-GHuE85XNq6Id",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 01 الاسبوع 04 الادماج.pdf",
+    "mime": "application/pdf",
+    "size": 3095954
+   },
+   {
+    "driveId": "1_BaJH6JEKO_W_y3F2PoHDFAmjaj4UIHm",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 01 الاسبوع 04 الادماج.pdf",
+    "mime": "application/pdf",
+    "size": 2097399
+   },
+   {
+    "driveId": "12NLyk9iNf36BqijRNSlk6KwaK8eF6Za6",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 01 الاسبوع 01.pdf",
+    "mime": "application/pdf",
+    "size": 1670901
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-5ap-ar-s2",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الخامسة، المقطع 2",
+   "fr": "Fiches d'arabe — 5e année, séquence 2"
+  },
+  "level": "5AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "المقطع 2",
+  "tags": [
+   "مذكرات",
+   "المقطع 2"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "مخططات حصص التعلم الوزارية ومذكرات الأساتذة",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "17P2wb1-TdKdTmGIDhwblos9cTI-axkSq",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 02 الاسبوع 01.pdf",
+    "mime": "application/pdf",
+    "size": 1271694
+   },
+   {
+    "driveId": "1AYGDy5CROmHPfN4B71AM8Lj1rvnYhvF1",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 02 الاسبوع 02.pdf",
+    "mime": "application/pdf",
+    "size": 1634144
+   },
+   {
+    "driveId": "1hI9NBFPz0M7YQINfnO0hC3DgU_ZgomdK",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 02 الاسبوع 03.pdf",
+    "mime": "application/pdf",
+    "size": 1627919
+   },
+   {
+    "driveId": "1O8u2oivJeRCh0m2tTyIn1PCOguHgD1eI",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 02 الاسبوع 04.pdf",
+    "mime": "application/pdf",
+    "size": 1571388
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-5ap-ar-s3",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الخامسة، المقطع 3",
+   "fr": "Fiches d'arabe — 5e année, séquence 3"
+  },
+  "level": "5AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "المقطع 3",
+  "tags": [
+   "مذكرات",
+   "المقطع 3"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "مخططات حصص التعلم الوزارية ومذكرات الأساتذة",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Yyg9WgAdnrlY3b7gQZyn9cKtiPZsEhQN",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 03 الاسبوع 01 تاكفاريناس يتحدث.pdf",
+    "mime": "application/pdf",
+    "size": 1913509
+   },
+   {
+    "driveId": "1g0Fk0b-_MGPR7P56ByTOUNsKYcytvJ2V",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 03 الاسبوع 01.pdf",
+    "mime": "application/pdf",
+    "size": 1279233
+   },
+   {
+    "driveId": "1uQAF7bBR5UflkCyI_DYAk63jey3kOFSq",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 03 الاسبوع 02.pdf",
+    "mime": "application/pdf",
+    "size": 1586707
+   },
+   {
+    "driveId": "1TXxEXw-YKHCHFMm5823YVoidKSN9ZBPV",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 03 الاسبوع 03.pdf",
+    "mime": "application/pdf",
+    "size": 1503850
+   },
+   {
+    "driveId": "1aWzPjT0sGjvzLAHuMEuC3hoXG2WdXx48",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 03 الاسبوع 04.pdf",
+    "mime": "application/pdf",
+    "size": 1527849
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-5ap-ar-s4",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الخامسة، المقطع 4",
+   "fr": "Fiches d'arabe — 5e année, séquence 4"
+  },
+  "level": "5AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "المقطع 4",
+  "tags": [
+   "مذكرات",
+   "المقطع 4"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "مخططات حصص التعلم الوزارية ومذكرات الأساتذة",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Pu0j-q3DYbSGkw_Ib_fV4lQhijGRUg1F",
+    "name": "دراسة نص ادماج المقطع 04 للسنة الخامسة ابتدائي ج2 للأستاذ محمد جمعي.pdf",
+    "mime": "application/pdf",
+    "size": 243696
+   },
+   {
+    "driveId": "1Qzj62wkGy1AUnrOZ6jNq1w_yxO3PlXTH",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 04 الاسبوع 01 سر الحياة.pdf",
+    "mime": "application/pdf",
+    "size": 1779204
+   },
+   {
+    "driveId": "1oT8Whq89C35TYHvhVVr8S8Lr6HEZjha7",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 04 نص المطالعة للاستاذ محمد جمعي.pdf",
+    "mime": "application/pdf",
+    "size": 1168809
+   },
+   {
+    "driveId": "1BqyggUFUMfImOcCJnH36NQIY3oNQjZ0b",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 04 الاسبوع 02.pdf",
+    "mime": "application/pdf",
+    "size": 1650157
+   },
+   {
+    "driveId": "1pkVCX6riuzJ0_phlz4VKu-bDKF3rDjF2",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 04 الاسبوع 03.pdf",
+    "mime": "application/pdf",
+    "size": 1530843
+   },
+   {
+    "driveId": "1dcMD7OChCXs71Yw2EjJDOW7Cy5l63TWr",
+    "name": "مذكرات وزارية السنة 5 ابتدائي اللغة العربية المقطع 04 الاسبوع 04.pdf",
+    "mime": "application/pdf",
+    "size": 1468696
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-5ap-ar-s5",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الخامسة، المقطع 5",
+   "fr": "Fiches d'arabe — 5e année, séquence 5"
+  },
+  "level": "5AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "المقطع 5",
+  "tags": [
+   "مذكرات",
+   "المقطع 5"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "مخططات حصص التعلم الوزارية ومذكرات الأساتذة",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "19QzBByOyB4llypfLEN_kAIvYIfh07l3P",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 05 الاسبوع 01 وادي الحياة.pdf",
+    "mime": "application/pdf",
+    "size": 726981
+   },
+   {
+    "driveId": "1Z_T6zmCVLDkUxTKxjsD8cGZYGGrm8Gwx",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 05 الاسبوع 02 ممنوع الدخول.pdf",
+    "mime": "application/pdf",
+    "size": 822014
+   },
+   {
+    "driveId": "1FbZdxQ6b6S2KkHyBlUY0S1xh4E1nvMsl",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 05 الاسبوع 03 احسن الاطباء.pdf",
+    "mime": "application/pdf",
+    "size": 718150
+   },
+   {
+    "driveId": "1FxQkHUseiGvzXS8143bWAUwcfBkiSKwI",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 05 الاسبوع 04 الادماج.pdf",
+    "mime": "application/pdf",
+    "size": 277056
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-5ap-ar-s6",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الخامسة، المقطع 6",
+   "fr": "Fiches d'arabe — 5e année, séquence 6"
+  },
+  "level": "5AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "المقطع 6",
+  "tags": [
+   "مذكرات",
+   "المقطع 6"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "مخططات حصص التعلم الوزارية ومذكرات الأساتذة",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "152pmXj4AevmdbwRRCR5AfG1oFDlldOS0",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 06 الاسبوع 01 عبقرية فذة.pdf",
+    "mime": "application/pdf",
+    "size": 894453
+   },
+   {
+    "driveId": "1cSPVTMuOAPdwMRKBtb2vM7grWt_d3oC8",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 06 الاسبوع 02 قصة البنسلين.pdf",
+    "mime": "application/pdf",
+    "size": 903821
+   },
+   {
+    "driveId": "11UnCvwOzRYDTg2aDP1nEKyvGW_Ds35rg",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 06 الاسبوع 03 الروبوت المشاغب.pdf",
+    "mime": "application/pdf",
+    "size": 858427
+   },
+   {
+    "driveId": "1OeOgITFhCpMBdXuBsXqfvOveB13Fjb6h",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 06 الاسبوع 04 الادماج.pdf",
+    "mime": "application/pdf",
+    "size": 305184
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-5ap-ar-s7",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الخامسة، المقطع 7",
+   "fr": "Fiches d'arabe — 5e année, séquence 7"
+  },
+  "level": "5AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "المقطع 7",
+  "tags": [
+   "مذكرات",
+   "المقطع 7"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "مخططات حصص التعلم الوزارية ومذكرات الأساتذة",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1nW50QVtWhrCaDnaG7jeqefdd8EMdrO3f",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 07 الاسبوع 01 عزة و معزوزة.pdf",
+    "mime": "application/pdf",
+    "size": 1719760
+   },
+   {
+    "driveId": "1yerO_nbdPAuvfXdOcJ-0fJ1y4L9tck6k",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 07 الاسبوع 02 جحا و السلطان.pdf",
+    "mime": "application/pdf",
+    "size": 2183427
+   },
+   {
+    "driveId": "1B59zJu1Vn9H8ZeV6OxHo-fvkURdij4G-",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 07 الاسبوع 03 وفاء صديق.pdf",
+    "mime": "application/pdf",
+    "size": 859501
+   },
+   {
+    "driveId": "1pTrvPOCkU6-IVHV025bn7eO-_XG9Ymzi",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 07 الاسبوع 04 الادماج.pdf",
+    "mime": "application/pdf",
+    "size": 407101
+   }
+  ]
+ },
+ {
+  "id": "cat-memo-5ap-ar-s8",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الخامسة، المقطع 8",
+   "fr": "Fiches d'arabe — 5e année, séquence 8"
+  },
+  "level": "5AP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "المقطع 8",
+  "tags": [
+   "مذكرات",
+   "المقطع 8"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "مخططات حصص التعلم الوزارية ومذكرات الأساتذة",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1ICbAZybrYaIC4eFUPa5u9-m0bpPK4AtG",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 08 الاسبوع 01 رحلة الى عين الصفراء.pdf",
+    "mime": "application/pdf",
+    "size": 886375
+   },
+   {
+    "driveId": "175oZDsMzKdXLtEiF5atqcaRhhkvHyUIg",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 08 الاسبوع 02 حكى ابن بطوطة.pdf",
+    "mime": "application/pdf",
+    "size": 746604
+   },
+   {
+    "driveId": "1viNRONZqTq0vBCiTGCwTCxYVBktACVKL",
+    "name": "مذكرات السنة 5 ابتدائي ج2 اللغة العربية المقطع 08 الاسبوع 03 الادماج.pdf",
+    "mime": "application/pdf",
+    "size": 306833
+   }
+  ]
+ }
+]

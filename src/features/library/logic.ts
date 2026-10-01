@@ -5,6 +5,8 @@
 import { nameKey } from "../../shared/text/names.ts";
 
 export const CONTENT_TYPES = [
+  "textbook",
+  "guide",
   "fiche",
   "progression",
   "exercise",

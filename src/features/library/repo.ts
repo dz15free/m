@@ -107,3 +107,14 @@ export async function fetchFile(contentId: string, index: number): Promise<Blob>
 
 export const previewUrl = (key: string) => `/api/${key}`;
 
+
+/** استيراد ملف من «المكتبة الجاهزة»: الخادم يجلبه من Drive ويحفظه في الحاوية. */
+export async function importCatalogFile(driveId: string): Promise<ContentFile> {
+  const res = await authedFetch("/api/admin/library-import", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ driveId }),
+  });
+  if (!res.ok) throw new Error(`import ${res.status}`);
+  return (await res.json()) as ContentFile;
+}
