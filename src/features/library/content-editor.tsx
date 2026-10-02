@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils/cn";
 import { CONTENT_TYPES, formatSize, MAX_FILE_BYTES, type ContentDoc, type ContentFile, type ContentType } from "./logic";
 import { deleteContent, getContent, listContentsForEditor, previewUrl, removeFile, saveContent, uploadFile } from "./repo";
 import { titleOf } from "./library-browser";
-import { CatalogImporter } from "./catalog-importer";
+import { CatalogImporter, DriveImporter } from "./catalog-importer";
 
 export function useIsEditor() {
   const auth = useAuth();
@@ -72,6 +72,7 @@ function AdminList() {
         </Link>
       </div>
       {stage === "primary" && list.data && <CatalogImporter existingIds={new Set(list.data.map((c) => c.id))} />}
+      {stage === "primary" && list.data && <DriveImporter existingIds={new Set(list.data.map((c) => c.id))} />}
       {!list.data || !tax.data ? (
         <div role="status" className="grid place-items-center py-12">
           <LoaderCircle aria-hidden className="size-8 animate-spin text-brand-700" />

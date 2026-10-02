@@ -146,3 +146,13 @@ export async function importCatalogFile(file: { driveId: string; mime: string })
   if (!res.ok) throw new Error(`upload ${res.status} ${res.error}`.trim());
   return res.file;
 }
+
+/** محتويات مجلد المكتبة على Drive (للأدمن): لعرض الملفات الجديدة. */
+export async function listDriveLibrary(): Promise<{ id: string; name: string; path: string; mime: string; size: number }[]> {
+  const res = await authedFetch("/api/admin/library-drive");
+  if (!res.ok) {
+    const error = ((await res.json().catch(() => ({}))) as { error?: string }).error ?? "";
+    throw new Error(`${res.status} ${error}`.trim());
+  }
+  return ((await res.json()) as { files: { id: string; name: string; path: string; mime: string; size: number }[] }).files;
+}

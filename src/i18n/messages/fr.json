@@ -988,6 +988,18 @@
       "progress": "{done} sur {total} — {title}",
       "done": "La bibliothèque prête a été entièrement importée.",
       "failed": "{n} échec(s) — relancez avec le même bouton :"
+    },
+    "drive": {
+      "title": "Nouveaux fichiers sur Drive",
+      "checking": "Vérification du dossier Drive…",
+      "error": "Lecture du dossier Drive impossible ({reason}).",
+      "body": "{n} nouveau(x) fichier(s) dans le dossier Drive, non encore importé(s). Classés automatiquement d'après leur nom ; modifiables après l'import.",
+      "none": "Aucun nouveau fichier dans le dossier Drive.",
+      "skipped": "({n} fichier(s) au format non pris en charge ou de plus de 100 Mo masqué(s).)",
+      "refresh": "Vérifier Drive",
+      "button": "Importer les nouveaux ({n})",
+      "progress": "{done} sur {total} — {title}",
+      "failed": "{n} échec(s), réessayez :"
     }
   },
   "documents": {
