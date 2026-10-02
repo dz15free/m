@@ -16,7 +16,7 @@ const EXT: Record<string, string> = {
 };
 const MAX_BYTES = 100 * 1024 * 1024;
 
-type CatalogFile = { driveId: string; name: string; mime: string };
+type CatalogFile = { driveId: string; name: string; mime: string; size: number | null };
 const FILES = new Map<string, CatalogFile>(
   (catalog as { files: CatalogFile[] }[]).flatMap((c) => c.files.map((f) => [f.driveId, f] as const)),
 );
@@ -53,7 +53,8 @@ export async function POST(req: Request) {
         throw new HttpError(502, `drive api ${res.status} ${reason}`.trim().slice(0, 200));
       }
       body = res.body;
-      length = Number(res.headers.get("content-length") ?? 0);
+      // الملفات الكبيرة تأتي مقطّعة بلا Content-Length: نعتمد الحجم المسجّل في القائمة (يتحقق منه FixedLengthStream)
+      length = Number(res.headers.get("content-length") ?? 0) || (file.size ?? 0);
     }
     if (!(length > 0) || length > MAX_BYTES) throw new HttpError(413, "bad size");
 
