@@ -999,7 +999,11 @@
       "refresh": "فحص الدرايف",
       "button": "استيراد الجديد ({n})",
       "progress": "{done} من {total} — {title}",
-      "failed": "تعذّر استيراد {n}، أعد المحاولة:"
+      "failed": "تعذّر استيراد {n}، أعد المحاولة:",
+      "importSelected": "استيراد المحدد ({n})",
+      "selected": "محدد {n} من {total}",
+      "selectAll": "تحديد الكل",
+      "selectNone": "إلغاء التحديد"
     }
   },
   "documents": {

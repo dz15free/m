@@ -999,7 +999,11 @@
       "refresh": "Vérifier Drive",
       "button": "Importer les nouveaux ({n})",
       "progress": "{done} sur {total} — {title}",
-      "failed": "{n} échec(s), réessayez :"
+      "failed": "{n} échec(s), réessayez :",
+      "importSelected": "Importer la sélection ({n})",
+      "selected": "{n} sur {total} sélectionnés",
+      "selectAll": "Tout sélectionner",
+      "selectNone": "Tout désélectionner"
     }
   },
   "documents": {

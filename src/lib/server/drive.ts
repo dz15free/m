@@ -66,18 +66,20 @@ export async function listLibraryFolder(): Promise<DriveFile[]> {
   return out;
 }
 
-/** بيانات ملف والتحقق من أنه داخل مجلد المكتبة (تتبّع الآباء حتى الجذر). */
+// Drive لا يُرجع «parents» للطلبات بمفتاح API، فالتحقق يكون من قائمة المجلد نفسها (مخزّنة مؤقتًا دقائق)
+let cached: { at: number; files: Map<string, DriveFile> } | null = null;
+const CACHE_MS = 5 * 60 * 1000;
+
+/** بيانات ملف والتحقق من أنه داخل مجلد المكتبة. */
 export async function libraryFile(id: string): Promise<{ name: string; mime: string; size: number }> {
-  const { folder } = await env();
-  const key = await driveKey();
-  const meta = await driveJson<RawFile>(`${API}/${encodeURIComponent(id)}?fields=id,name,mimeType,size,parents&supportsAllDrives=true&key=${key}`);
-  let parents = meta.parents ?? [];
-  for (let depth = 0; depth < 6 && parents.length; depth++) {
-    if (parents.includes(folder)) return { name: meta.name, mime: meta.mimeType, size: Number(meta.size ?? 0) };
-    const up = await driveJson<RawFile>(`${API}/${encodeURIComponent(parents[0]!)}?fields=id,parents&supportsAllDrives=true&key=${key}`);
-    parents = up.parents ?? [];
+  let file = cached && Date.now() - cached.at < CACHE_MS ? cached.files.get(id) : undefined;
+  if (!file) {
+    // ملف أُضيف للتو أو انتهت صلاحية النسخة المخزّنة: نعيد القراءة مرة واحدة
+    cached = { at: Date.now(), files: new Map((await listLibraryFolder()).map((f) => [f.id, f])) };
+    file = cached.files.get(id);
   }
-  throw new HttpError(404, "not in library folder");
+  if (!file) throw new HttpError(404, "not in library folder");
+  return { name: file.name, mime: file.mime, size: file.size };
 }
 
 export async function fetchDriveMedia(id: string): Promise<Response> {

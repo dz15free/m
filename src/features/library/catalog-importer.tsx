@@ -77,8 +77,8 @@ export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
         <div className="text-sm text-red-800">
           <p>{t("failed", { n: failed.length })}</p>
           <ul className="list-inside list-disc text-xs">
-            {failed.map((f) => (
-              <li key={f.title} dir="auto">
+            {failed.map((f, i) => (
+              <li key={i} dir="auto">
                 {f.title} — <span dir="ltr" className="font-mono">{f.reason}</span>
               </li>
             ))}
@@ -89,8 +89,12 @@ export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
   );
 }
 
-const CATALOG_DRIVE_IDS = new Set((catalog as CatalogEntry[]).flatMap((c) => c.files.map((f) => f.driveId)));
+const CATALOG_FILES = (catalog as CatalogEntry[]).flatMap((c) => c.files);
+const CATALOG_DRIVE_IDS = new Set(CATALOG_FILES.map((f) => f.driveId));
 const MAX_IMPORT = 100 * 1024 * 1024;
+/** مفتاح التكرار: الاسم دون لاحقة النسخ «(1)» مع الحجم — النسخ المكررة في الدرايف تُعرض مرة واحدة. */
+const dupKey = (name: string, size: number | null) => `${size ?? 0}:${name.replace(/\s*\(\d+\)(?=\.[^.]+$|$)/, "").trim().toLowerCase()}`;
+const CATALOG_KEYS = new Set(CATALOG_FILES.map((f) => dupKey(f.name, f.size)));
 
 /** «ملفات جديدة في الدرايف»: ما أُضيف إلى مجلد المكتبة ولم يُستورد بعد، مصنّفًا تلقائيًا من اسمه. */
 export function DriveImporter({ existingIds }: { existingIds: Set<string> }) {
@@ -100,18 +104,37 @@ export function DriveImporter({ existingIds }: { existingIds: Set<string> }) {
   const list = useQuery({ queryKey: ["driveLibrary"], queryFn: listDriveLibrary, retry: false, staleTime: 60_000 });
   const [run, setRun] = useState<{ done: number; total: number; current: string } | null>(null);
   const [failed, setFailed] = useState<{ title: string; reason: string }[]>([]);
+  // المستبعَد من الاختيار (الافتراضي: كل ملف جديد محدَّد)
+  const [unchecked, setUnchecked] = useState<Set<string>>(() => new Set());
 
-  const files = (list.data ?? []).filter((f) => !CATALOG_DRIVE_IDS.has(f.id));
+  const seen = new Set(CATALOG_KEYS);
+  const files = (list.data ?? []).filter((f) => {
+    if (CATALOG_DRIVE_IDS.has(f.id)) return false;
+    const k = dupKey(f.name, f.size);
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
   const fresh = files.filter((f) => !existingIds.has(driveContentId(f.id)));
   const ok = fresh.filter((f) => (ALLOWED_MIME as readonly string[]).includes(f.mime) && f.size > 0 && f.size <= MAX_IMPORT);
   const skipped = fresh.length - ok.length;
+  const selected = ok.filter((f) => !unchecked.has(f.id));
 
-  async function start() {
+  function toggle(id: string) {
+    setUnchecked((s) => {
+      const n = new Set(s);
+      if (n.has(id)) n.delete(id);
+      else n.add(id);
+      return n;
+    });
+  }
+
+  async function start(chosen: DriveListing[]) {
     setFailed([]);
-    for (let i = 0; i < ok.length; i++) {
-      const f: DriveListing = ok[i]!;
+    for (let i = 0; i < chosen.length; i++) {
+      const f = chosen[i]!;
       const title = guessMeta(f).title;
-      setRun({ done: i, total: ok.length, current: title });
+      setRun({ done: i, total: chosen.length, current: title });
       let uploaded: ContentFile | null = null;
       try {
         uploaded = await importCatalogFile({ driveId: f.id, mime: f.mime });
@@ -147,24 +170,53 @@ export function DriveImporter({ existingIds }: { existingIds: Set<string> }) {
           {t("refresh")}
         </button>
         {ok.length > 0 && (
-          <button type="button" onClick={start} disabled={!!run} className={cn(buttonClass("primary"), "shrink-0")}>
-            {run ? <LoaderCircle aria-hidden className="size-4 animate-spin" /> : <DownloadCloud aria-hidden className="size-4" />}
-            {t("button", { n: ok.length })}
-          </button>
+          <>
+            <button
+              type="button"
+              onClick={() => start(selected)}
+              disabled={!!run || !selected.length}
+              className={cn(buttonClass("secondary"), "shrink-0")}
+            >
+              <DownloadCloud aria-hidden className="size-4" />
+              {t("importSelected", { n: selected.length })}
+            </button>
+            <button type="button" onClick={() => start(ok)} disabled={!!run} className={cn(buttonClass("primary"), "shrink-0")}>
+              {run ? <LoaderCircle aria-hidden className="size-4 animate-spin" /> : <DownloadCloud aria-hidden className="size-4" />}
+              {t("button", { n: ok.length })}
+            </button>
+          </>
         )}
       </div>
       {ok.length > 0 && !run && (
-        <ul className="max-h-60 space-y-1 overflow-auto text-xs">
-          {ok.map((f) => {
-            const g = guessMeta(f);
-            return (
-              <li key={f.id} className="flex flex-wrap gap-x-2" dir="auto">
-                <span className="font-medium">{g.title}</span>
-                <span className="text-muted">— {[tl(`types.${g.type}`), g.level, g.subject].filter(Boolean).join(" · ")}</span>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="space-y-2">
+          <div className="flex flex-wrap items-center gap-3 text-xs">
+            <span className="text-muted">{t("selected", { n: selected.length, total: ok.length })}</span>
+            <button type="button" onClick={() => setUnchecked(new Set())} className="font-medium text-brand-700 hover:underline">
+              {t("selectAll")}
+            </button>
+            <button type="button" onClick={() => setUnchecked(new Set(ok.map((f) => f.id)))} className="font-medium text-brand-700 hover:underline">
+              {t("selectNone")}
+            </button>
+          </div>
+          <ul className="max-h-72 space-y-1 overflow-auto text-xs">
+            {ok.map((f) => {
+              const g = guessMeta(f);
+              return (
+                <li key={f.id}>
+                  <label className="flex cursor-pointer items-start gap-2 rounded px-1 py-0.5 hover:bg-canvas" dir="auto">
+                    <input type="checkbox" checked={!unchecked.has(f.id)} onChange={() => toggle(f.id)} className="mt-0.5 size-4 shrink-0 accent-brand-600" />
+                    <span className="min-w-0">
+                      <span className="font-medium">{g.title}</span>{" "}
+                      <span className="text-muted">
+                        — {[tl(`types.${g.type}`), g.level, g.subject, `${(f.size / 1024 / 1024).toFixed(1)} MB`].filter(Boolean).join(" · ")}
+                      </span>
+                    </span>
+                  </label>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       )}
       {run && (
         <div role="status" className="space-y-1">
@@ -178,8 +230,8 @@ export function DriveImporter({ existingIds }: { existingIds: Set<string> }) {
         <div className="text-sm text-red-800">
           <p>{t("failed", { n: failed.length })}</p>
           <ul className="list-inside list-disc text-xs">
-            {failed.map((f) => (
-              <li key={f.title} dir="auto">
+            {failed.map((f, i) => (
+              <li key={i} dir="auto">
                 {f.title} — <span dir="ltr" className="font-mono">{f.reason}</span>
               </li>
             ))}
