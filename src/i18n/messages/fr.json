@@ -1713,5 +1713,56 @@
       "desktop1": "Cliquez l'icône d'installation dans la barre d'adresse",
       "desktop2": "Ou, dans le menu ⋮, choisissez « Installer مساعد الأستاذ »"
     }
+  },
+  "authAction": {
+    "pageTitle": "Actions du compte",
+    "checking": "Vérification du lien…",
+    "verifiedTitle": "Adresse e-mail confirmée ✓",
+    "changedTitle": "Adresse e-mail mise à jour ✓",
+    "verifiedBody": "Merci ! Votre compte est confirmé et votre essai gratuit est prêt à démarrer.",
+    "toApp": "Continuer vers la plateforme",
+    "toLogin": "Se connecter",
+    "resetTitle": "Nouveau mot de passe",
+    "resetFor": "Pour le compte",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "hint": "8 caractères minimum",
+    "save": "Enregistrer et se connecter",
+    "short": "Mot de passe trop court : 8 caractères minimum.",
+    "mismatch": "Les deux mots de passe ne correspondent pas.",
+    "resetDoneTitle": "Mot de passe modifié ✓",
+    "resetDoneBody": "Vous pouvez maintenant vous connecter avec le nouveau mot de passe.",
+    "recoveredTitle": "Adresse d'origine rétablie",
+    "recoveredBody": "L'adresse de votre compte a été rétablie : {email}. Si vous n'êtes pas à l'origine du changement, changez votre mot de passe maintenant.",
+    "sendReset": "M'envoyer un lien de réinitialisation",
+    "resetSent": "Lien envoyé. Pensez à vérifier les courriers indésirables.",
+    "newResetLink": "Demander un nouveau lien",
+    "resendHint": "Après connexion, vous pourrez demander un nouveau lien de confirmation depuis le bandeau en haut.",
+    "errors": {
+      "expired": {
+        "title": "Lien expiré",
+        "body": "Ce lien est trop ancien. Demandez-en un nouveau et utilisez-le rapidement."
+      },
+      "invalid": {
+        "title": "Lien invalide",
+        "body": "Il a peut-être déjà été utilisé ou copié incomplet. Si votre adresse est déjà confirmée, connectez-vous directement."
+      },
+      "disabled": {
+        "title": "Compte désactivé",
+        "body": "Ce compte est désactivé. Contactez l'administration."
+      },
+      "weakPassword": {
+        "title": "Mot de passe trop faible",
+        "body": "Mot de passe trop faible. Choisissez-en un plus long."
+      },
+      "network": {
+        "title": "Connexion impossible",
+        "body": "Vérifiez votre connexion puis rouvrez le lien."
+      },
+      "generic": {
+        "title": "Une erreur est survenue",
+        "body": "Impossible de terminer l'opération. Réessayez dans un instant."
+      }
+    }
   }
 }
