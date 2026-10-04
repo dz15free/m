@@ -29,3 +29,17 @@ test("التصفية: ما لا مستوى له يظهر في كل المستو�
 test("اسم ملف آمن", () => {
   assert.equal(safeFileName('مذكرة: "الألوان"/3.pdf'), "مذكرة الألوان 3.pdf");
 });
+
+test("فلترة حسب لغة المحتوى: الفرنسية وحدها والعربية وحدها", () => {
+  const mixed = [
+    e("fr1", "فرنسية", "Fiche", { lang: "fr" }),
+    e("en1", "إنجليزية", "Unit", { lang: "en", s: "en" }),
+    e("ar1", "كتابي", "Livre", { lang: "ar", s: "ar" }),
+    e("gen", "توزيع عام", "Plan général", { lang: "ar", s: "" }),
+    e("old", "قديم", "Ancien", { lang: "" }),
+  ];
+  assert.deepEqual(search(mixed, "", { lang: "fr" }).map((x) => x.id), ["fr1"]);
+  assert.deepEqual(search(mixed, "", { lang: "en" }).map((x) => x.id), ["en1"]);
+  assert.deepEqual(search(mixed, "", { lang: "ar" }).map((x) => x.id).sort(), ["ar1", "gen", "old"]);
+  assert.equal(search(mixed, "").length, 5);
+});

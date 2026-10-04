@@ -111,7 +111,10 @@ export function entryTokens(e: IndexEntry): string[] {
   return tokenize([e.t.ar, e.t.fr, e.u, ...e.tags].join(" ")).flatMap(variants);
 }
 
-export type Filters = { level?: string; subject?: string; type?: string; access?: Access | "" };
+export type Filters = { level?: string; subject?: string; type?: string; access?: Access | ""; lang?: Lang | "" };
+export type Lang = "ar" | "fr" | "en";
+/** لغة المحتوى (المداخل القديمة بلا لغة = عربية). */
+export const langOf = (e: Pick<IndexEntry, "lang">): Lang => (e.lang === "fr" || e.lang === "en" ? e.lang : "ar");
 
 /** كل كلمة في الطلب يجب أن تطابق بداية كلمة في العنوان/الوسوم/الوحدة. */
 export function search(entries: IndexEntry[], query: string, f: Filters = {}): IndexEntry[] {
@@ -121,6 +124,7 @@ export function search(entries: IndexEntry[], query: string, f: Filters = {}): I
       (!f.level || !e.l || e.l === f.level) &&
       (!f.subject || !e.s || e.s === f.subject) &&
       (!f.type || e.ty === f.type) &&
+      (!f.lang || langOf(e) === f.lang) &&
       (!f.access || e.a === f.access),
   );
   if (!q.length) return matches.sort((a, b) => b.at - a.at);

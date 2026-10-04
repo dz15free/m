@@ -923,7 +923,14 @@
     "upgrade": "S'abonner",
     "fileError": "Impossible d'ouvrir le fichier. Vérifiez la connexion et réessayez.",
     "author": "Réalisé par",
-    "manage": "Gérer le contenu"
+    "manage": "Gérer le contenu",
+    "langs": {
+      "label": "Langue du contenu",
+      "all": "Tout",
+      "ar": "Arabe et matières",
+      "fr": "Français",
+      "en": "English"
+    }
   },
   "contentAdmin": {
     "title": "Gestion du contenu",

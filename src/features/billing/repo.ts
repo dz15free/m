@@ -42,7 +42,8 @@ export async function startTrial(): Promise<void> {
   if (error === "email not verified") throw new TrialError("unverified");
   if (error === "already subscribed") throw new TrialError("subscribed");
   if (error === "stage unavailable" || error === "onboarding required") throw new TrialError("unavailable");
-  throw new TrialError(res.status === 503 ? "unavailable" : "network");
+  // 503 «trial unavailable» = إعداد الإدارة؛ أما 5xx بلا رمز (صفحة خطأ Cloudflare مثل 1102) فعارض مؤقت يُعاد
+  throw new TrialError(error === "trial unavailable" ? "unavailable" : "network");
 }
 
 /** الخطة الفعلية للأستاذ (للعرض فقط؛ الحماية في القواعد والخادم). */

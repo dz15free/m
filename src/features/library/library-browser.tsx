@@ -28,7 +28,9 @@ import { Card } from "@/components/ui/card";
 import { useClasses, useTaxonomy, useTeacher } from "@/features/classes/hooks";
 import { levelById, subjectById, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
-import { CONTENT_TYPES, search, type ContentType, type IndexEntry } from "./logic";
+import { CONTENT_TYPES, langOf, search, type ContentType, type IndexEntry, type Lang } from "./logic";
+
+const LANGS: Lang[] = ["ar", "fr", "en"];
 import { getIndex, previewUrl } from "./repo";
 
 export const TYPE_ICON: Record<ContentType, typeof FileText> = {
@@ -63,6 +65,7 @@ export function LibraryBrowser() {
   const [level, setLevel] = useState("");
   const [subject, setSubject] = useState("");
   const [type, setType] = useState<ContentType | "">("");
+  const [langPick, setLang] = useState<Lang | "" | null>(null);
 
   if (!index.data || !tax.data || !classes.data) {
     return (
@@ -78,11 +81,15 @@ export function LibraryBrowser() {
   const mySubjects = new Set(active.flatMap((c) => c.subjectIds));
   const canMine = active.length > 0;
   const useMine = canMine && mine && !level && !subject;
+  // أستاذ الفرنسية أو الإنجليزية فقط: نبدأ بقسم لغته؛ غيره يبدأ بالكل
+  const onlyLang = [...mySubjects].every((s) => s === "fr") ? "fr" : [...mySubjects].every((s) => s === "en") ? "en" : "";
+  const lang = langPick ?? (mySubjects.size ? onlyLang : "");
+  const presentLangs = LANGS.filter((l) => index.data.some((e) => langOf(e) === l));
 
-  let results = search(index.data, query, { level, subject, type });
+  let results = search(index.data, query, { level, subject, type, lang });
   if (useMine) results = results.filter((e) => (!e.l || myLevels.has(e.l)) && (!e.s || mySubjects.has(e.s)));
   const presentTypes = CONTENT_TYPES.filter((ty) => index.data.some((e) => e.ty === ty));
-  const filtered = !!(query || level || subject || type);
+  const filtered = !!(query || level || subject || type || lang);
 
   if (index.data.length === 0) {
     return (
@@ -106,6 +113,25 @@ export function LibraryBrowser() {
           className="block min-h-13 w-full rounded-2xl border border-line bg-surface ps-12 pe-4 text-base shadow-card outline-none focus:border-brand-600 focus:ring-3 focus:ring-brand-100"
         />
       </label>
+
+      {presentLangs.length > 1 && (
+        <div role="group" aria-label={t("langs.label")} className="grid grid-cols-4 gap-1 rounded-2xl bg-canvas p-1 ring-1 ring-line">
+          {(["", ...presentLangs] as const).map((l) => (
+            <button
+              key={l || "all"}
+              type="button"
+              aria-pressed={lang === l}
+              onClick={() => setLang(l)}
+              className={cn(
+                "min-h-10 rounded-xl px-2 text-sm font-semibold transition-colors",
+                lang === l ? "bg-surface text-brand-800 shadow-card" : "text-muted hover:text-ink",
+              )}
+            >
+              {t(`langs.${l || "all"}`)}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="flex flex-wrap gap-2">
         {canMine && (
@@ -156,6 +182,7 @@ export function LibraryBrowser() {
               setLevel("");
               setSubject("");
               setType("");
+              setLang("");
             }}
             className="inline-flex min-h-9 items-center gap-1 text-sm font-medium text-brand-700"
           >

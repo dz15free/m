@@ -45,7 +45,8 @@ function AutoTrial() {
       await refresh();
       return true;
     },
-    retry: (n, e) => n < 2 && e instanceof TrialError && e.reason === "network",
+    retry: (n, e) => n < 3 && e instanceof TrialError && e.reason === "network",
+    retryDelay: (n) => 1500 * 2 ** n,
     staleTime: Infinity,
     gcTime: Infinity,
   });
