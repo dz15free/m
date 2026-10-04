@@ -18,6 +18,7 @@ export async function Sidebar() {
       <li key={key}>
         <NavLink
           href={href}
+          data-tour={key}
           className="flex min-h-11 items-center gap-3 rounded-xl px-3 text-[15px] font-medium text-ink/80 transition-colors hover:bg-brand-50 hover:text-ink"
           activeClassName="bg-brand-50! text-brand-800! font-semibold"
         >
@@ -37,7 +38,7 @@ export async function Sidebar() {
       </div>
 
       <div className="px-4 pb-4">
-        <Link href={NAV.session.href} className={buttonClass("primary", "md", "w-full")}>
+        <Link href={NAV.session.href} data-tour="session" className={buttonClass("primary", "md", "w-full")}>
           <SessionIcon aria-hidden className="size-5" />
           {t("sessionHint")}
         </Link>

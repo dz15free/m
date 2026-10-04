@@ -50,6 +50,7 @@ export function SupportFab() {
       <button
         type="button"
         onClick={() => setOpen(true)}
+        data-tour="support"
         aria-label={unread ? `${t("fab")} — ${t("newReply")}` : t("fab")}
         className="contact-fab group fixed end-4 bottom-24 z-30 inline-flex h-14 items-center gap-2.5 rounded-full bg-linear-to-br from-brand-600 to-brand-800 p-1.5 text-white shadow-[0_10px_28px_-6px_rgb(6_90_73/0.55)] ring-1 ring-white/25 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_32px_-6px_rgb(6_90_73/0.6)] focus-visible:outline-offset-4 active:translate-y-0 active:scale-95 print:hidden lg:end-8 lg:bottom-8 lg:pe-5"
       >

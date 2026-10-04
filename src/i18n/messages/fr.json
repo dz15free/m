@@ -1623,5 +1623,95 @@
     "printToday": "Ouvrir le cahier du jour",
     "openNotebook": "Cahier journal",
     "lessons": "Fiches"
+  },
+  "tour": {
+    "progress": "Étape {n} sur {total}",
+    "teacher": "cher enseignant",
+    "skip": "Passer la visite",
+    "later": "Plus tard — je découvrirai seul",
+    "begin": "Commencer la visite",
+    "next": "Suivant",
+    "back": "Précédent",
+    "start": "Commencer : ajouter ma classe",
+    "inMore": "Sur téléphone, vous le trouverez dans « Plus ».",
+    "trial": "Votre essai gratuit est activé : {n, plural, one {# jour} other {# jours}} avec tous les outils, sans engagement.",
+    "replayTitle": "Visite guidée de la plateforme",
+    "replayBody": "Revoyez l'explication pas à pas à tout moment.",
+    "replay": "Relancer la visite",
+    "steps": {
+      "welcome": {
+        "title": "Bienvenue {name} sur مساعد الأستاذ",
+        "body": "En une minute, découvrez votre bureau numérique : saisissez vos données une seule fois, la plateforme s'occupe chaque jour des cahiers, fiches et documents."
+      },
+      "today": {
+        "title": "Aujourd'hui : votre tableau de bord",
+        "body": "Chaque matin commence ici : les séances du jour, la séance en cours et les étapes restantes pour préparer votre bureau.",
+        "tip": "Suivez les cartes « Préparons votre bureau » dans l'ordre : classe, élèves, emploi du temps."
+      },
+      "classes": {
+        "title": "Mes classes : le point de départ",
+        "body": "Créez vos classes en une fois (niveau, groupe, matières), puis ajoutez les élèves de chaque classe.",
+        "tip": "Inutile de saisir les noms un par un : importez directement la liste depuis le fichier de la numérisation."
+      },
+      "schedule": {
+        "title": "Emploi du temps : une seule fois",
+        "body": "Saisissez vos séances hebdomadaires : les séances de chaque jour et le cahier journal en découlent automatiquement.",
+        "tip": "Vous l'avez dans un fichier ? Importez-le depuis Excel, PDF ou même une photo, puis vérifiez."
+      },
+      "session": {
+        "title": "La séance : un seul bouton en classe",
+        "body": "Ouvre la séance en cours selon votre emploi du temps : présences, absences et retards d'un geste.",
+        "tip": "Fonctionne même hors ligne : les changements sont enregistrés sur l'appareil puis synchronisés."
+      },
+      "logbook": {
+        "title": "Le cahier qui s'écrit tout seul",
+        "body": "Le cahier journal au modèle officiel, rempli depuis votre emploi du temps et la progression : activité, domaine, contenu, composantes.",
+        "tip": "Vérifiez-le et imprimez-le en un clic, ou modifiez une ligne avant l'impression."
+      },
+      "lessons": {
+        "title": "Les fiches prêtes",
+        "body": "Les fiches de chaque séance par séquence et par semaine, pour toutes les matières : thème, matériel, objectifs et déroulement.",
+        "tip": "Les fiches de la semaine en cours s'affichent selon vos classes et matières."
+      },
+      "library": {
+        "title": "La bibliothèque pédagogique",
+        "body": "Manuels, guides, progressions, affiches et exercices, classés par niveau et matière.",
+        "tip": "Touchez « Mes classes » pour ne voir que vos niveaux."
+      },
+      "documents": {
+        "title": "Vos documents en quelques secondes",
+        "body": "Diplômes d'encouragement, relevé mensuel des absences, convocations, étiquettes… remplis avec les données de vos élèves.",
+        "tip": "Chaque document est prêt à imprimer au format A4."
+      },
+      "support": {
+        "title": "Nous sommes là pour vous",
+        "body": "Une question, une suggestion ou un problème ? Écrivez à l'équipe depuis ce bouton, la réponse arrive ici.",
+        "tip": "Activez les notifications pour être averti de la réponse sur votre téléphone."
+      },
+      "install": {
+        "title": "Installez la plateforme comme une application",
+        "body": "Ouvrez-la d'un geste depuis l'écran d'accueil, plus rapide, sans barre du navigateur, et utilisable même sans internet."
+      },
+      "finish": {
+        "title": "Vous êtes prêt ! 🎉",
+        "body": "Commencez par ajouter votre première classe, puis vos élèves et votre emploi du temps. Ensuite, le cahier s'écrit tout seul chaque jour."
+      }
+    },
+    "install": {
+      "now": "Installer l'application",
+      "thanks": "Installée ✓ Vous la trouverez parmi vos applications.",
+      "for": {
+        "ios": "Sur iPhone / iPad (avec Safari) :",
+        "android": "Sur Android (avec Chrome) :",
+        "desktop": "Sur ordinateur (Chrome ou Edge) :"
+      },
+      "ios1": "Touchez le bouton Partager en bas de l'écran",
+      "ios2": "Choisissez « Sur l'écran d'accueil »",
+      "ios3": "Touchez « Ajouter » — l'application apparaît parmi les autres",
+      "android1": "Ouvrez le menu du navigateur (⋮) en haut",
+      "android2": "Choisissez « Installer l'application » ou « Ajouter à l'écran d'accueil »",
+      "desktop1": "Cliquez l'icône d'installation dans la barre d'adresse",
+      "desktop2": "Ou, dans le menu ⋮, choisissez « Installer مساعد الأستاذ »"
+    }
   }
 }

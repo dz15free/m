@@ -12,6 +12,7 @@ import { SiteBanner } from "@/features/pwa/site-banner";
 import { ConnectionStatus } from "@/features/pwa/connection-status";
 import { StageGate } from "@/features/onboarding/stage-gate";
 import { AccessGate } from "@/features/billing/access-gate";
+import { WelcomeTour } from "@/features/onboarding/welcome-tour";
 
 /* مساحة الأستاذ: لا تُعرض إلا بعد تسجيل الدخول.
    الحماية الحقيقية للبيانات في قواعد Firestore والخادم، لا في هذا التخطيط. */
@@ -48,6 +49,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
             </div>
             <BottomNav />
             <SupportFab />
+            <WelcomeTour />
           </div>
         </RequireAuth>
       </QueryProvider>

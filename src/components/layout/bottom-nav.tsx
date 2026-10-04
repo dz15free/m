@@ -17,6 +17,7 @@ export async function BottomNav() {
               {/* زرّ الحصة: بارز فوق الشريط، ويفتح الحصة الجارية مباشرة */}
               <NavLink
                 href={href}
+                data-tour={key}
                 aria-label={t("sessionHint")}
                 className="-mt-6 flex size-16 flex-col items-center justify-center gap-0.5 rounded-full bg-linear-to-br from-brand-900 via-brand-700 to-brand-500 text-white shadow-lg ring-4 ring-surface transition-transform active:scale-95"
                 activeClassName="ring-brand-100"
@@ -29,6 +30,7 @@ export async function BottomNav() {
             <li key={key}>
               <NavLink
                 href={href}
+                data-tour={key}
                 className="flex min-h-16 flex-col items-center justify-center gap-1 text-[12px] font-medium text-muted transition-colors"
                 activeClassName="text-brand-700! [&>svg]:stroke-[2.4]"
               >
