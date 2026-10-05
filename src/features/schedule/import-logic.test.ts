@@ -60,6 +60,15 @@ test("الأقسام بصيغها الشائعة", () => {
   assert.equal(matchClass("رياضيات", CLASSES), null);
 });
 
+test("قسم التحضيري", () => {
+  const pre: ImportClass[] = [{ id: "p1", level: "PRE", section: "01", displayName: "PRE-01", subjectIds: [] }];
+  assert.equal(matchClass("التحضيري", pre), "p1");
+  assert.equal(matchClass("تحضيري 1", pre), "p1");
+  assert.equal(matchClass("PRE-01", pre), "p1");
+  assert.equal(matchClass("تحضيري 2", pre), null);
+  assert.equal(matchClass("رياضيات تحضيري", pre), "p1");
+});
+
 test("جدول معلّم ابتدائي: أيام في الأسطر، حصص مزدوجة تُدمج", () => {
   const res = parseTimetable(
     g([

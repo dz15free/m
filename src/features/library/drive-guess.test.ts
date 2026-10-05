@@ -27,3 +27,8 @@ test("عنوان نظيف ومعرّف ثابت", () => {
   assert.equal(cleanTitle("مذكرات-الاسبوع-3_المقطع 2 موقع راية التعليم5.pdf"), "مذكرات الاسبوع 3 المقطع 2");
   assert.equal(driveContentId("abc"), "drv-abc");
 });
+
+test("ملفات التحضيري", () => {
+  assert.equal(guessMeta(f("التحضيري/00- التحضيري رياضيات.pdf")).level, "PRE");
+  assert.equal(guessMeta(f("التحضيري/00- التحضيري عربية.pdf")).subject, "ar");
+});

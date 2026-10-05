@@ -159,6 +159,8 @@ export function matchClass(text: string, classes: ImportClass[]): string | null 
     const stage = STAGE_OF_LEVEL[c.level.slice(1)]?.[1] ?? [];
     const sec = String(Number.parseInt(c.section, 10));
     if (compact.includes(nameKey(c.displayName).replace(/[\s-]/g, ""))) return true;
+    // التحضيري: «تحضيري»، «تحضيري 2»، «التحضيري-01»
+    if (c.level === "PRE") return new RegExp(`تحضيري(?:ه|ة)?(?:\\s*-?\\s*0?${sec}(?!\\d)|(?![\\s-]*\\d))`).test(t);
     return stage.some((st) => {
       const re = new RegExp(`(^|[^\\d])${n}\\s*-?\\s*${st}\\s*-?\\s*0?${sec}(?!\\d)`);
       return re.test(t);

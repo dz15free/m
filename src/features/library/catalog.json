@@ -2052,5 +2052,500 @@
     "size": 306833
    }
   ]
+ },
+ {
+  "id": "cat-tb-pre-langue",
+  "title": {
+   "ar": "تعلماتي الأولى — دفتر الأنشطة اللغوية للتربية التحضيرية",
+   "fr": "Taâloumati el oula — cahier d'activités langagières (préscolaire)"
+  },
+  "level": "PRE",
+  "subject": "ar",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تحضيري",
+   "دفتر الأنشطة",
+   "قراءة",
+   "تخطيط",
+   "كتابة"
+  ],
+  "excerpt": "دفتر الأنشطة الرسمي للتربية التحضيرية (5–6 سنوات): 75 تمرينًا في القراءة والتخطيط والكتابة.",
+  "access": "free",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1XoVqqqhCCe7xIk2V6E4nIs0RglVR9Wl0",
+    "name": "تعلماتي الأولى — دفتر الأنشطة اللغوية (التحضيري).pdf",
+    "mime": "application/pdf",
+    "size": 7510325
+   }
+  ]
+ },
+ {
+  "id": "cat-tb-pre-science",
+  "title": {
+   "ar": "تعلماتي الأولى — دفتر الأنشطة العلمية للتربية التحضيرية",
+   "fr": "Taâloumati el oula — cahier d'activités scientifiques (préscolaire)"
+  },
+  "level": "PRE",
+  "subject": "math",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تحضيري",
+   "دفتر الأنشطة",
+   "رياضيات",
+   "تربية علمية"
+  ],
+  "excerpt": "دفتر الأنشطة الرسمي للتربية التحضيرية: 90 تمرينًا في الرياضيات والتربية العلمية والتكنولوجية.",
+  "access": "free",
+  "author": "وزارة التربية الوطنية",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1mjjX_vTcptSjWmJml6uemRVrZ8zFp5LS",
+    "name": "تعلماتي الأولى — دفتر الأنشطة العلمية (التحضيري).pdf",
+    "mime": "application/pdf",
+    "size": 8730587
+   }
+  ]
+ },
+ {
+  "id": "cat-fiche-pre-memos",
+  "title": {
+   "ar": "مذكرات نموذجية للقسم التحضيري (قراءة وكتابة، رياضيات، قرآن، سلوك، أناشيد)",
+   "fr": "Fiches modèles — classe préparatoire"
+  },
+  "level": "PRE",
+  "subject": "",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تحضيري",
+   "مذكرات",
+   "حروف",
+   "أعداد"
+  ],
+  "excerpt": "86 مذكرة جاهزة بجداول (الأهداف، المحتوى، الأنشطة، التقويم) للاستئناس وتكييفها مع دفتري «تعلماتي الأولى».",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1IJV2g1cJ_p089zCzNsUuq7uTL4v4YJJD",
+    "name": "مذكرات نموذجية للتحضيري.pdf",
+    "mime": "application/pdf",
+    "size": 3814531
+   }
+  ]
+ },
+ {
+  "id": "cat-fiche-3ap-hg",
+  "title": {
+   "ar": "مذكرات التاريخ والجغرافيا — السنة الثالثة (الجيل الثاني)",
+   "fr": "Fiches d'histoire-géographie — 3e année"
+  },
+  "level": "3AP",
+  "subject": "history",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تاريخ",
+   "جغرافيا",
+   "مذكرات"
+  ],
+  "excerpt": "جميع مذكرات التاريخ والجغرافيا للسنة الثالثة، مقطعًا بمقطع.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1rZ-2Qy01jtcVlDmv6OdCpVqJm84hQNDn",
+    "name": "مذكرات التاريخ والجغرافيا — السنة الثالثة.pdf",
+    "mime": "application/pdf",
+    "size": 4946744
+   }
+  ]
+ },
+ {
+  "id": "cat-poster-fr-ferme",
+  "title": {
+   "ar": "Référentiel : les animaux de la ferme",
+   "fr": "مرجع مصوّر: حيوانات المزرعة (فرنسية)"
+  },
+  "level": "3AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "vocabulaire",
+   "animaux",
+   "imagier"
+  ],
+  "excerpt": "Imagier à afficher : les animaux de la ferme, en capitales, script et cursive.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1HohZZ2-11nMDfmwdZwCBo6LuCeWH2osQ",
+    "name": "Référentiel animaux de la ferme.pdf",
+    "mime": "application/pdf",
+    "size": 565807
+   }
+  ]
+ },
+ {
+  "id": "cat-poster-fr-couleurs",
+  "title": {
+   "ar": "Référentiel : les couleurs",
+   "fr": "مرجع مصوّر: الألوان (فرنسية)"
+  },
+  "level": "3AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "vocabulaire",
+   "couleurs",
+   "imagier"
+  ],
+  "excerpt": "Affiche A4 des couleurs, en capitales, script et cursive.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1nCqGpN4bhMUluEqWq76ki22QDHCMD-Ar",
+    "name": "Référentiel couleurs A4.pdf",
+    "mime": "application/pdf",
+    "size": 734481
+   }
+  ]
+ },
+ {
+  "id": "cat-poster-fr-5ap-seq1",
+  "title": {
+   "ar": "Illustrations — 5e AP, séquence 1",
+   "fr": "رسومات المقطع الأول — فرنسية السنة الخامسة"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "illustrations",
+   "séquence 1"
+  ],
+  "excerpt": "Illustrations à projeter ou afficher pour la séquence 1 de 5e AP.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "10JVOTq-fSst9EEs2QQ3d1FI-0p4z6emn",
+    "name": "Illustrations séquence 1 — 5AP.pdf",
+    "mime": "application/pdf",
+    "size": 624619
+   }
+  ]
+ },
+ {
+  "id": "cat-poster-fr-3ap-fig-p1",
+  "title": {
+   "ar": "Figurines — 3e AP, projet 1",
+   "fr": "رسومات (Figurines) الفرنسية — السنة الثالثة، المشروع 1"
+  },
+  "level": "3AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "figurines",
+   "illustrations",
+   "projet 1"
+  ],
+  "excerpt": "Figurines à projeter ou afficher pour les séquences du projet 1 (3e AP).",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Owj_m9ORwgoyUeCHnij0YbMZvS9kbDTc",
+    "name": "Figurine 3AP P1S1 (2).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1kKT9jhVSpQwWiOL6orlaF3VQEJavA_IJ",
+    "name": "Figurine 3AP P1S1 (3).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1YdM5QwHrLVmhQnqI4fwf7Fww9B7bu8Qr",
+    "name": "Figurine 3AP P1S1.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1CDeUQ-Xd2bfOQsp0dasvooarxEZebgDO",
+    "name": "Figurine 3AP P1S2 (2).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1XKAutLWppnSclhxU8sGf2JvSWMe0P1Qt",
+    "name": "Figurine 3AP P1S2 (3).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1SWHVEjFXSPbaaC81s4ZdBGMEk3UbvXOF",
+    "name": "Figurine 3AP P1S2.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1LXkUwa0z7hUJrGOSmFR39wmxsj7uHqY7",
+    "name": "Figurine 3AP P1S3 (2).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1Qocxahs_sxtweZVBuapKCqJpDTdjbxUY",
+    "name": "Figurine 3AP P1S3.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   }
+  ]
+ },
+ {
+  "id": "cat-poster-fr-3ap-fig-p2",
+  "title": {
+   "ar": "Figurines — 3e AP, projet 2",
+   "fr": "رسومات (Figurines) الفرنسية — السنة الثالثة، المشروع 2"
+  },
+  "level": "3AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "figurines",
+   "illustrations",
+   "projet 2"
+  ],
+  "excerpt": "Figurines à projeter ou afficher pour les séquences du projet 2 (3e AP).",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1_u3nhxYIxe5GHWMoKxNJkeme0_G4oJsy",
+    "name": "Figurine 3AP P2S1 (2).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1fy4tsp1qt0Qfn3KnRCkANSpunBhC2c58",
+    "name": "Figurine 3AP P2S1.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1bb3hKDB5TQ90IfrTYdO50Z2hHWOQN-J1",
+    "name": "Figurine 3AP P2S2 (2).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1ILdjJZxk-UHn4PwZszRhrpSBmgeAu7gU",
+    "name": "Figurine 3AP P2S2.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1bIhWlU7vToGZQp0cTSIXsi9dXGq_3wt0",
+    "name": "Figurine 3AP P2S3 (2).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1CSjTeV2QyuUruhrRbicD3ecc24NCzxuO",
+    "name": "Figurine 3AP P2S3 (3).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1fR7FK_A3ig3OxqN-g7BF74tkSeV-9VmN",
+    "name": "Figurine 3AP P2S3.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   }
+  ]
+ },
+ {
+  "id": "cat-poster-fr-3ap-fig-p3",
+  "title": {
+   "ar": "Figurines — 3e AP, projet 3",
+   "fr": "رسومات (Figurines) الفرنسية — السنة الثالثة، المشروع 3"
+  },
+  "level": "3AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "figurines",
+   "illustrations",
+   "projet 3"
+  ],
+  "excerpt": "Figurines à projeter ou afficher pour les séquences du projet 3 (3e AP).",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1jU-otkzO8rHHFmF1_iO7EJQ9sgrZplEe",
+    "name": "Figurine 3AP P3S1.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1j8y-xf6bRG_2sN3K6emQHSjDQTpQ6RAv",
+    "name": "Figurine 3AP P3S2 (2).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1MCQ1xdKd61JsjJcJBlwwnCJhGVl96MEq",
+    "name": "Figurine 3AP P3S2.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1n1Vbqr1xr3CDpZOrep1Kd99ZARftO0gs",
+    "name": "Figurine 3AP P3S3 (2).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1LyQQnpmSlFbv3LFC0hSMxywm2QOqN_hU",
+    "name": "Figurine 3AP P3S3 (3).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1M-fE-qM6YBdo71PmylNp3wa8vOKzg_bZ",
+    "name": "Figurine 3AP P3S3 (4).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "12TNlgXuco0VwTY0suX_5WBoVQTFHNV5l",
+    "name": "Figurine 3AP P3S3.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   }
+  ]
+ },
+ {
+  "id": "cat-poster-fr-3ap-fig-p4",
+  "title": {
+   "ar": "Figurines — 3e AP, projet 4",
+   "fr": "رسومات (Figurines) الفرنسية — السنة الثالثة، المشروع 4"
+  },
+  "level": "3AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "figurines",
+   "illustrations",
+   "projet 4"
+  ],
+  "excerpt": "Figurines à projeter ou afficher pour les séquences du projet 4 (3e AP).",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1PzNVI3YlNTaO4VlDIyWA13T3wMu9A3iI",
+    "name": "Figurine 3AP P4S1 - 1.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "19Cg6z4tsUJNmyjbC9cThx_PwvTOmhET9",
+    "name": "Figurine 3AP P4S1 - 2.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1_PrTmJiZ1VPMruOa3mE-Ttuurz_Hk9py",
+    "name": "Figurine 3AP P4S1 - 3.jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1tShrOUvgOYrjqmd5ce9oCQRGPbLcKwYv",
+    "name": "Figurine 3AP P4S2 (1).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "184BSO0lkUyjqRGl7AzGkkLKV1os3hFTm",
+    "name": "Figurine 3AP P4S2 (2).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1QsIgP03iGw3FYsy8-4do23ZRTeckh7_v",
+    "name": "Figurine 3AP P4S2 (3).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1hqxz67Wo2nmrQemMV3dnUamgzTwiSoQZ",
+    "name": "Figurine 3AP P4S2 (4).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1j5_6tvyaGsFH6C9SLUbtueAZIVQtpI7H",
+    "name": "Figurine 3AP P4S3 (1).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   },
+   {
+    "driveId": "1tQYnkiF3bLVRXkmz0EjbAWy5Dw6ItZGl",
+    "name": "Figurine 3AP P4S3 (2).jpg",
+    "mime": "image/jpeg",
+    "size": null
+   }
+  ]
  }
 ]

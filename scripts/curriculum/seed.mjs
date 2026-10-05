@@ -23,8 +23,8 @@ const extraPdf = Object.fromEntries(process.argv.filter((a) => /^--pdf-[a-z]=/.t
 const pdfOf = (key) => (key === "main" ? pdf : extraPdf[key]);
 /** صفحة: رقم في الوثيقة الأصلية، أو «b:N» في وثيقة إضافية */
 const parsePage = (p) => (typeof p === "number" ? { key: "main", n: p } : { key: p.split(":")[0], n: Number(p.split(":")[1]) });
-if (!/^[1-5]AP_[a-z]+$/.test(id ?? "")) {
-  console.error("usage: seed.mjs <level_subject>, e.g. 1AP_ar");
+if (!/^(?:PRE|[1-5]AP)_[a-z]+$/.test(id ?? "")) {
+  console.error("usage: seed.mjs <level_subject>, e.g. 1AP_ar or PRE_math");
   process.exit(1);
 }
 const data = JSON.parse(readFileSync(new URL(`../../content/curriculum/${id}.json`, import.meta.url), "utf8"));

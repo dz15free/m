@@ -5,6 +5,7 @@ import type { ContentDoc, ContentFile, ContentType } from "./logic";
 export type DriveListing = { id: string; name: string; path: string; mime: string; size: number };
 
 const LEVELS: [string, RegExp][] = [
+  ["PRE", /تحضيري|التحضيرية|pr[ée]paratoire|pr[ée]scolaire/i],
   ["1AP", /س\s*1(?!\d)|سنة\s*ال?[اأ]ولى|السنة\s*ال?[اأ]ولى|(?<![A-Za-z0-9])1\s*A\.?P(?![A-Za-z])|1(?:ère|re)\s*(?:année|AP)|(?<![A-Za-z0-9])1PS(?![A-Za-z])/i],
   ["2AP", /س\s*2(?!\d)|سنة\s*(?:ال)?ثاني|السنة\s*الثاني|ثاتية|(?<![A-Za-z0-9])2\s*A\.?P(?![A-Za-z])|2e\s*(?:année|AP)|(?<![A-Za-z0-9])2PS(?![A-Za-z])/i],
   ["3AP", /س\s*3(?!\d)|سنة\s*(?:ال)?ثالث|السنة\s*الثالث|(?<![A-Za-z0-9])3\s*A\.?P(?![A-Za-z])|3e\s*(?:année|AP)|(?<![A-Za-z0-9])3PS(?![A-Za-z])/i],

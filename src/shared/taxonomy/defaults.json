@@ -1,6 +1,7 @@
 {
   "primary": {
     "levels": [
+      { "id": "PRE", "order": 0, "label": { "ar": "التربية التحضيرية", "fr": "Éducation préparatoire" }, "short": { "ar": "تحضيري", "fr": "Prépa" } },
       { "id": "1AP", "order": 1, "label": { "ar": "السنة الأولى ابتدائي", "fr": "1re année primaire" }, "short": { "ar": "1 ابتدائي", "fr": "1AP" } },
       { "id": "2AP", "order": 2, "label": { "ar": "السنة الثانية ابتدائي", "fr": "2e année primaire" }, "short": { "ar": "2 ابتدائي", "fr": "2AP" } },
       { "id": "3AP", "order": 3, "label": { "ar": "السنة الثالثة ابتدائي", "fr": "3e année primaire" }, "short": { "ar": "3 ابتدائي", "fr": "3AP" } },
@@ -8,19 +9,19 @@
       { "id": "5AP", "order": 5, "label": { "ar": "السنة الخامسة ابتدائي", "fr": "5e année primaire" }, "short": { "ar": "5 ابتدائي", "fr": "5AP" } }
     ],
     "subjects": [
-      { "id": "ar", "label": { "ar": "اللغة العربية", "fr": "Langue arabe" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
-      { "id": "math", "label": { "ar": "الرياضيات", "fr": "Mathématiques" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
-      { "id": "islamic", "label": { "ar": "التربية الإسلامية", "fr": "Éducation islamique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
-      { "id": "science", "label": { "ar": "التربية العلمية والتكنولوجية", "fr": "Éducation scientifique et technologique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
-      { "id": "civic", "label": { "ar": "التربية المدنية", "fr": "Éducation civique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "ar", "label": { "ar": "اللغة العربية", "fr": "Langue arabe" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "math", "label": { "ar": "الرياضيات", "fr": "Mathématiques" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "islamic", "label": { "ar": "التربية الإسلامية", "fr": "Éducation islamique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "science", "label": { "ar": "التربية العلمية والتكنولوجية", "fr": "Éducation scientifique et technologique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "civic", "label": { "ar": "التربية المدنية", "fr": "Éducation civique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
       { "id": "history", "label": { "ar": "التاريخ", "fr": "Histoire" }, "levels": ["3AP", "4AP", "5AP"] },
       { "id": "geography", "label": { "ar": "الجغرافيا", "fr": "Géographie" }, "levels": ["3AP", "4AP", "5AP"] },
       { "id": "fr", "label": { "ar": "اللغة الفرنسية", "fr": "Langue française" }, "levels": ["3AP", "4AP", "5AP"] },
       { "id": "en", "label": { "ar": "اللغة الإنجليزية", "fr": "Langue anglaise" }, "levels": ["3AP", "4AP", "5AP"] },
       { "id": "tamazight", "label": { "ar": "اللغة الأمازيغية", "fr": "Tamazight" }, "levels": ["3AP", "4AP", "5AP"] },
-      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation artistique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
-      { "id": "music", "label": { "ar": "التربية الموسيقية", "fr": "Éducation musicale" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] },
-      { "id": "pe", "label": { "ar": "التربية البدنية", "fr": "Éducation physique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] }
+      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation artistique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "music", "label": { "ar": "التربية الموسيقية", "fr": "Éducation musicale" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "pe", "label": { "ar": "التربية البدنية", "fr": "Éducation physique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] }
     ]
   },
   "middle": {
