@@ -2117,37 +2117,6 @@
   ]
  },
  {
-  "id": "cat-fiche-pre-memos",
-  "title": {
-   "ar": "مذكرات نموذجية للقسم التحضيري (قراءة وكتابة، رياضيات، قرآن، سلوك، أناشيد)",
-   "fr": "Fiches modèles — classe préparatoire"
-  },
-  "level": "PRE",
-  "subject": "",
-  "language": "ar",
-  "type": "fiche",
-  "term": 0,
-  "unit": "",
-  "tags": [
-   "تحضيري",
-   "مذكرات",
-   "حروف",
-   "أعداد"
-  ],
-  "excerpt": "86 مذكرة جاهزة بجداول (الأهداف، المحتوى، الأنشطة، التقويم) للاستئناس وتكييفها مع دفتري «تعلماتي الأولى».",
-  "access": "free",
-  "author": "",
-  "license": "public",
-  "files": [
-   {
-    "driveId": "1IJV2g1cJ_p089zCzNsUuq7uTL4v4YJJD",
-    "name": "مذكرات نموذجية للتحضيري.pdf",
-    "mime": "application/pdf",
-    "size": 3814531
-   }
-  ]
- },
- {
   "id": "cat-fiche-3ap-hg",
   "title": {
    "ar": "مذكرات التاريخ والجغرافيا — السنة الثالثة (الجيل الثاني)",
