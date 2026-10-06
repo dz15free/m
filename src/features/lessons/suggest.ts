@@ -38,14 +38,17 @@ export function suggestionToEntry(s: Suggestion, base: LessonEntry): LessonEntry
   const parts = s.summary?.objectiveParts;
   const objectives = day && parts?.length === 3 ? parts[s.dayIndex % 3]!.items : (s.summary?.objectives ?? []);
   const seg = s.curriculum.segments.find((x) => x.n === s.entry.s)?.title ?? "";
+  // بطاقات الفرنسية: النشاط «Français» عام، فاسم النشاط الحقيقي في بداية الموضوع («Actes de parole — …»)
+  const generic = /^(Français|Anglais|English)$/i.test(s.entry.a);
+  const [head, ...rest] = s.entry.t.split(/\s+[—:]\s+/);
   return {
     ...base,
-    activity: day ? prep.name : s.entry.a,
+    activity: day ? prep.name : generic && rest.length ? head! : s.entry.a,
     unit: day ? prep.domain : s.entry.d,
-    title: s.entry.t,
+    title: generic && rest.length ? rest.join(" — ") : s.entry.t,
     objective: objectives.join(" ▪ ").slice(0, 300),
     materials: (s.summary?.materials ?? "").slice(0, 200),
-    seq: (/^(المقطع|الفصل)/.test(seg) ? seg : `${s.entry.s}${seg ? ` — ${seg}` : ""}`).slice(0, 80),
+    seq: (/^(المقطع|الفصل|Projet|Évaluation)/.test(seg) ? seg : `${s.entry.s}${seg ? ` — ${seg}` : ""}`).slice(0, 80),
     week: String(day ? Math.ceil(s.entry.u / 5) : s.entry.u),
     session: String(day ? ((s.entry.u - 1) % 5) + 1 : s.sessionNo),
     ref: s.entry.id,

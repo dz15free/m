@@ -37,7 +37,7 @@ if (level === "5AP") {
       const head = /Projet\s*(\d)\s*:\s*(.+?)\s*—\s*Séquence\s*(\d)\s*:\s*(.+?)\s*(?:FICHE|Tâche|Activité|Evaluation|$)/.exec(t);
       const act = /Activité\s*:\s*(.+?)\.?\s+Durée\s*:\s*([^A-Z]*?mn)/.exec(t);
       if (!head || !act) continue; // غلاف المشروع أو المقطع
-      const obj = /Objectif[s]?\s*d[’']apprentissage\s*:\s*(.+?)\s*(?:Matériel|Support|Déroulement|$)/.exec(t)?.[1];
+      const obj = /Objectif[s]?\s*(?:d[’']apprentissage|à atteindre)\s*:\s*(.+?)\s*(?:Matériel|Support|Déroulement|$)/.exec(t)?.[1];
       const mat = /Matériel\s*(?:didactique)?\s*:\s*(.+?)\s*(?:Déroulement|Etapes|Étapes|Phases|Moments|$)/.exec(t)?.[1];
       const theme = /Thème\s*:\s*(.+?)\s*(?:Acte|Compétence)/.exec(t)?.[1];
       fiches.push({

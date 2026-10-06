@@ -259,7 +259,9 @@
    "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — Pauvre petite gazelle !",
    "materials": "Illustration – support audio ou audio-visuel",
-   "objectives": [],
+   "objectives": [
+    "Repérer le thème général, les interlocuteurs et l’objet du message oral"
+   ],
    "body": "",
    "pages": [
     4
@@ -317,7 +319,9 @@
    "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production 1 — Pauvre petite gazelle !",
    "materials": "Illustrations – Manuel scolaire page 12",
-   "objectives": [],
+   "objectives": [
+    "Participer à une discussion sur un sujet donné."
+   ],
    "body": "",
    "pages": [
     7
@@ -395,7 +399,9 @@
    "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production 2 : « Je m’exprime » — Pauvre petite gazelle !",
    "materials": "Illustrations – Manuel scolaire page 13",
-   "objectives": [],
+   "objectives": [
+    "Participer à une discussion sur un sujet donné."
+   ],
    "body": "",
    "pages": [
     11
@@ -633,7 +639,9 @@
    "domain": "Saisir la portée du message oral",
    "topic": "Oral compréhension — C'est un vrai fennec ?",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 23",
-   "objectives": [],
+   "objectives": [
+    "Repérer le thème général, les interlocuteurs et l’objet du message oral"
+   ],
    "body": "",
    "pages": [
     24
@@ -691,7 +699,9 @@
    "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production — C'est un vrai fennec ?",
    "materials": "Illustrations – Manuel scolaire page 23",
-   "objectives": [],
+   "objectives": [
+    "Restituer un énoncé oral en respectant le schéma intonatif"
+   ],
    "body": "",
    "pages": [
     27
@@ -769,7 +779,9 @@
    "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production 2 : « Je m’exprime » — C'est un vrai fennec ?",
    "materials": "Illustrations – Manuel scolaire page 24",
-   "objectives": [],
+   "objectives": [
+    "Intervenir dans une discussion en respectant les règles de prise de parole"
+   ],
    "body": "",
    "pages": [
     31
@@ -1027,7 +1039,9 @@
    "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — Nous allons au musée",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 35",
-   "objectives": [],
+   "objectives": [
+    "Repérer le thème général, les interlocuteurs et dégager l’essentiel d’un message oral"
+   ],
    "body": "",
    "pages": [
     46
@@ -1085,7 +1099,9 @@
    "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production — Nous allons au musée",
    "materials": "Illustrations – Manuel scolaire page 35",
-   "objectives": [],
+   "objectives": [
+    "Restituer un énoncé oral en respectant le schéma intonatif"
+   ],
    "body": "",
    "pages": [
     49
@@ -1163,7 +1179,9 @@
    "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production en interaction : « Je m’exprime » — Nous allons au musée",
    "materials": "Illustrations – Manuel scolaire page 36",
-   "objectives": [],
+   "objectives": [
+    "Intervenir dans une discussion en respectant les règles de prise de parole"
+   ],
    "body": "",
    "pages": [
     53
@@ -1401,7 +1419,9 @@
    "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — J'aime voyager en famille",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 46",
-   "objectives": [],
+   "objectives": [
+    "Repérer le thème général, les interlocuteurs et dégager l’essentiel d’un message oral"
+   ],
    "body": "",
    "pages": [
     68
@@ -1459,7 +1479,9 @@
    "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production — J'aime voyager en famille",
    "materials": "Illustrations – Manuel scolaire page 46",
-   "objectives": [],
+   "objectives": [
+    "Restituer un énoncé oral en respectant le schéma intonatif"
+   ],
    "body": "",
    "pages": [
     71
@@ -1517,7 +1539,9 @@
    "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production en interaction : « Je m’exprime » — J'aime voyager en famille",
    "materials": "Illustrations – Manuel scolaire page 47",
-   "objectives": [],
+   "objectives": [
+    "Intervenir dans une discussion en respectant les règles de prise de parole"
+   ],
    "body": "",
    "pages": [
     74
@@ -1755,7 +1779,9 @@
    "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — Quand je serai grand (les secouristes)",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 58",
-   "objectives": [],
+   "objectives": [
+    "Repérer le thème général et comprendre un message oral en réception."
+   ],
    "body": "",
    "pages": [
     88
@@ -1813,7 +1839,9 @@
    "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production — Quand je serai grand (les secouristes)",
    "materials": "Illustrations – Manuel scolaire page 58",
-   "objectives": [],
+   "objectives": [
+    "Restituer un énoncé oral en respectant le schéma intonatif"
+   ],
    "body": "",
    "pages": [
     91
@@ -1871,7 +1899,9 @@
    "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production 2 : « Je m’exprime » — Quand je serai grand (les secouristes)",
    "materials": "Illustrations – Manuel scolaire page 59",
-   "objectives": [],
+   "objectives": [
+    "Intervenir dans une discussion en respectant les règles de prise de parole"
+   ],
    "body": "",
    "pages": [
     94
@@ -2129,7 +2159,9 @@
    "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — C'est une inondation",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 68",
-   "objectives": [],
+   "objectives": [
+    "Repérer le thème général et comprendre un message oral en réception."
+   ],
    "body": "",
    "pages": [
     108
@@ -2187,7 +2219,9 @@
    "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production 1 — C'est une inondation",
    "materials": "Illustrations – Manuel scolaire page 69",
-   "objectives": [],
+   "objectives": [
+    "Restituer un énoncé oral en respectant le schéma intonatif"
+   ],
    "body": "",
    "pages": [
     111
@@ -2265,7 +2299,9 @@
    "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production 2 : « Je m’exprime » — C'est une inondation",
    "materials": "Illustrations – Manuel scolaire page 69",
-   "objectives": [],
+   "objectives": [
+    "Intervenir dans une discussion en respectant les règles de prise de parole"
+   ],
    "body": "",
    "pages": [
     115
@@ -2503,7 +2539,9 @@
    "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — Pourquoi notre terre est-elle en danger ?",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 80",
-   "objectives": [],
+   "objectives": [
+    "Repérer le thème général et comprendre un message oral en réception."
+   ],
    "body": "",
    "pages": [
     129
@@ -2561,7 +2599,9 @@
    "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production 1 — Pourquoi notre terre est-elle en danger ?",
    "materials": "Illustration – Manuel scolaire page 80",
-   "objectives": [],
+   "objectives": [
+    "Restituer un énoncé oral en respectant le schéma intonatif"
+   ],
    "body": "",
    "pages": [
     132
@@ -2619,7 +2659,9 @@
    "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production 2 : « Je m’exprime » — Pourquoi notre terre est-elle en danger ?",
    "materials": "Illustrations – Manuel scolaire page 81",
-   "objectives": [],
+   "objectives": [
+    "Amener l’apprenant à produire un énoncé pour expliquer pourquoi les déchets sont dangereux"
+   ],
    "body": "",
    "pages": [
     135
@@ -2857,7 +2899,9 @@
    "domain": "Identifier la situation de communication",
    "topic": "Oral compréhension — Ne gaspillons pas l'eau !",
    "materials": "Illustration – support audio ou audio-visuel – Manuel page 91",
-   "objectives": [],
+   "objectives": [
+    "Repérer le thème général et comprendre un message oral en réception."
+   ],
    "body": "",
    "pages": [
     148
@@ -2915,7 +2959,9 @@
    "domain": "Produire un énoncé intelligible pour communiquer",
    "topic": "Oral production 1 — Ne gaspillons pas l'eau !",
    "materials": "Illustration – Manuel scolaire page 91",
-   "objectives": [],
+   "objectives": [
+    "Restituer un énoncé oral en respectant le schéma intonatif"
+   ],
    "body": "",
    "pages": [
     151
@@ -2973,7 +3019,9 @@
    "domain": "Savoir prendre sa place dans un jeu de rôle",
    "topic": "Oral production 2 : « Je m’exprime » — Ne gaspillons pas l'eau !",
    "materials": "Illustrations – Manuel scolaire page 92",
-   "objectives": [],
+   "objectives": [
+    "Amener l’apprenant à produire un énoncé pour dire comment économiser l’eau"
+   ],
    "body": "",
    "pages": [
     154
