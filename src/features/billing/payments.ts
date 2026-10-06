@@ -23,8 +23,13 @@ export async function startCheckout(planId: string, locale: "ar" | "fr"): Promis
   if (!res) throw new CheckoutError("error");
   if (res.status === 429) throw new CheckoutError("tooMany");
   if (res.status === 409) throw new CheckoutError("unavailable");
-  if (res.status === 503) throw new CheckoutError("notConfigured");
-  if (!res.ok) throw new CheckoutError("error");
+  if (!res.ok) {
+    // 503 من الخادم نفسه = مفتاح Chargily ناقص/خاطئ؛ أما 5xx بلا رمز (صفحة خطأ Cloudflare مثل 1102) فعارض مؤقت
+    const { error } = (await res.json().catch(() => ({}))) as { error?: string };
+    console.warn("[checkout]", res.status, error ?? "no error code");
+    if (error === "payments not configured" || error === "payments misconfigured") throw new CheckoutError("notConfigured");
+    throw new CheckoutError("error");
+  }
   return ((await res.json()) as { checkoutUrl: string }).checkoutUrl;
 }
 

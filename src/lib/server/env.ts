@@ -8,7 +8,8 @@ import { z } from "zod";
 const schema = z.object({
   NEXT_PUBLIC_SITE_URL: z.url().default("http://localhost:3000"),
   FIREBASE_SERVICE_ACCOUNT: z.string().min(1).optional(),
-  CHARGILY_SECRET_KEY: z.string().startsWith("test_sk_").or(z.string().startsWith("live_sk_")).optional(),
+  // الصيغة (test_sk_/live_sk_) يتحقق منها chargily.ts برسالة واضحة، فلا يُسقط مفتاحٌ خاطئ كل الخادم
+  CHARGILY_SECRET_KEY: z.string().trim().optional(),
   CHARGILY_MODE: z.enum(["test", "live"]).default("test"),
   R2_ACCOUNT_ID: z.string().min(1).optional(),
   R2_ACCESS_KEY_ID: z.string().min(1).optional(),
