@@ -88,6 +88,13 @@ const EN: typeof FR = {
 const FOREIGN = new Set(["fr", "en"]);
 
 type Row = { slot: Slot; key: string; entry: LessonEntry; sug: Suggestion | undefined };
+/** سطر في الدفتر: حصة الجدول، أو جزء منها حين تضم نشاطين من المذكرات (مثل 2 × 30 دقيقة في ساعة) */
+type Line = { key: string; slot: Slot; start: string; end: string; minutes: number; e: LessonEntry };
+
+const addMinutes = (t: string, m: number) => {
+  const total = Number(t.slice(0, 2)) * 60 + Number(t.slice(3, 5)) + m;
+  return `${String(Math.floor(total / 60) % 24).padStart(2, "0")}:${String(total % 60).padStart(2, "0")}`;
+};
 
 export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?: string; autoPrint?: boolean }) {
   const t = useTranslations("logbook.daily");
@@ -179,13 +186,39 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
       sug: suggestions.map.get(key),
       entry: entries.get(key) ?? emptyLesson({ date, classId: slot.classId, subjectId: slot.subjectId, start: slot.start, end: slot.end }),
     }));
-  /** ما يُعرض ويُطبع: المحفوظ، وإلا الحصة المقترحة من المذكرات */
-  const effective = (r: Row): LessonEntry => (isBlank(r.entry) && r.sug ? suggestionToEntry(r.sug, r.entry) : r.entry);
-  /** مدة الحصة كما في المذكرة (مثل «30 mn»)، وإلا null — فتُحسب من الجدول */
+  /** أجزاء الحصة المقترحة (نشاطان أو أكثر من المذكرات في حصة واحدة) */
+  const partsOf = (r: Row): LessonEntry[] =>
+    isBlank(r.entry) && r.sug
+      ? r.sug.parts.map((p, k) => suggestionToEntry({ ...r.sug!, entry: p, summary: r.sug!.partSummaries[k] ?? null, sessionNo: r.sug!.sessionNo + k }, r.entry))
+      : [r.entry];
+  /** ما يُعرض ويُعدَّل: المحفوظ، وإلا المقترح (وإن ضمّت الحصة نشاطين يُجمعان في سطر واحد للتعديل) */
+  const effective = (r: Row): LessonEntry => {
+    if (!isBlank(r.entry) || !r.sug) return r.entry;
+    const parts = partsOf(r);
+    if (parts.length === 1) return parts[0]!;
+    const join = (f: keyof LessonEntry, sep: string) => [...new Set(parts.map((p) => String(p[f] ?? "")).filter(Boolean))].join(sep);
+    return { ...parts[0]!, activity: join("activity", " / "), unit: join("unit", " / "), title: join("title", " / "), objective: join("objective", " ▪ ").slice(0, 300), session: join("session", "+") };
+  };
+  /** مدة النشاط كما في المذكرة (مثل «30 mn»)، وإلا null — فتُحسب من الجدول */
   const memoDuration = (r: Row, e: LessonEntry): number | null => {
     const ref = e.ref || r.sug?.entry.id;
     const ce = ref ? r.sug?.curriculum.entries.find((x) => x.id === ref) : undefined;
     return memoMinutes(ce?.ss);
+  };
+  /** أسطر الطباعة: كل نشاط بوقته ومدته من المذكرة */
+  const linesOf = (r: Row): Line[] => {
+    const parts = partsOf(r);
+    if (parts.length > 1) {
+      let t = r.slot.start;
+      return parts.map((e, k) => {
+        const m = memoDuration(r, e) ?? 0;
+        const line = { key: `${r.key}#${k}`, slot: r.slot, start: t, end: k === parts.length - 1 ? r.slot.end : addMinutes(t, m), minutes: m, e };
+        t = line.end;
+        return line;
+      });
+    }
+    const e = effective(r);
+    return [{ key: r.key, slot: r.slot, start: r.slot.start, end: r.slot.end, minutes: memoDuration(r, e) ?? durationMinutes(r.slot.start, r.slot.end), e }];
   };
 
   const range = days.length ? `${formatLongDate(new Date(`${days[0]}T12:00:00`), locale)} — ${formatLongDate(new Date(`${days[days.length - 1]}T12:00:00`), locale)}` : "";
@@ -263,7 +296,7 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
                         >
                           <span className="w-12 shrink-0 pt-0.5 text-center">
                             <bdi dir="ltr" className="block text-sm font-semibold tabular-nums">{r.slot.start}</bdi>
-                            {memoDuration(r, shown) && <bdi dir="ltr" className="block text-[11px] text-muted">{memoDuration(r, shown)} min</bdi>}
+                            {linesOf(r).length === 1 && memoDuration(r, shown) && <bdi dir="ltr" className="block text-[11px] text-muted">{memoDuration(r, shown)} min</bdi>}
                           </span>
                           <span className="min-w-0 flex-1 space-y-0.5">
                             <span className="flex flex-wrap items-center gap-x-2 text-sm">
@@ -274,8 +307,19 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
                               <span className="block text-sm text-muted/80">{t("empty")}</span>
                             ) : (
                               <>
-                                <span className={cn("block font-semibold", suggested && "text-ink/80")}>{[shown.activity, shown.title].filter(Boolean).join(": ") || shown.unit}</span>
-                                {shown.objective && <span className="line-clamp-2 block text-sm text-muted">{shown.objective}</span>}
+                                {linesOf(r).length > 1 ? (
+                                  linesOf(r).map((l) => (
+                                    <span key={l.key} className={cn("block", suggested && "text-ink/80")}>
+                                      <bdi dir="ltr" className="me-1.5 text-xs tabular-nums text-muted">{l.start}–{l.end} · {l.minutes} min</bdi>
+                                      <span className="font-semibold">{[l.e.activity, l.e.title].filter(Boolean).join(": ") || l.e.unit}</span>
+                                    </span>
+                                  ))
+                                ) : (
+                                  <>
+                                    <span className={cn("block font-semibold", suggested && "text-ink/80")}>{[shown.activity, shown.title].filter(Boolean).join(": ") || shown.unit}</span>
+                                    {shown.objective && <span className="line-clamp-2 block text-sm text-muted">{shown.objective}</span>}
+                                  </>
+                                )}
                               </>
                             )}
                           </span>
@@ -307,10 +351,10 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
           const french = rows.every((r) => FOREIGN.has(r.slot.subjectId));
           const L = rows.every((r) => r.slot.subjectId === "en") ? EN : FR;
           const multiSubject = new Set(rows.map((r) => r.slot.subjectId)).size > 1;
-          const shown = rows.map((r) => ({ ...r, e: effective(r) }));
-          const periods = (["am", "pm"] as const).map((p) => ({ p, rows: shown.filter((r) => periodOf(r.slot.start) === p) })).filter((x) => x.rows.length);
-          const notes = shown.map((r) => r.entry.notes).filter(Boolean).join(" — ");
-          const prep = shown.find((r) => r.sug?.entry.k === "day")?.sug?.entry;
+          const shown = rows.flatMap(linesOf);
+          const periods = (["am", "pm"] as const).map((p) => ({ p, rows: shown.filter((r) => periodOf(r.start) === p) })).filter((x) => x.rows.length);
+          const notes = rows.map((r) => r.entry.notes).filter(Boolean).join(" — ");
+          const prep = rows.find((r) => r.sug?.entry.k === "day")?.sug?.entry;
           const weekNo = schoolWeekOf(date, yearStart, cal.schoolDays, cal.holidays);
           const dateObj = new Date(`${date}T12:00:00`);
           const cell = "border border-ink px-1.5 py-1";
@@ -336,12 +380,12 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
                       </tr>
                     </thead>
                     <tbody>
-                      {pr.map((r) => {
-                        const { slot, key, e } = r;
+                      {pr.map((l) => {
+                        const { slot, key, e } = l;
                         return (
                         <tr key={key} className="break-inside-avoid align-top">
-                          <td className={`${cell} w-24 whitespace-nowrap text-center`}>{slot.start} – {slot.end}</td>
-                          <td className={`${cell} w-14 text-center`}>{memoDuration(r, e) ?? durationMinutes(slot.start, slot.end)} min</td>
+                          <td className={`${cell} w-24 whitespace-nowrap text-center`}>{l.start} – {l.end}</td>
+                          <td className={`${cell} w-14 text-center`}>{l.minutes} min</td>
                           {multiClass && <td className={cell}>{classById.get(slot.classId)?.displayName}</td>}
                           {multiSubject && <td className={cell}>{subjectById(taxonomy, slot.subjectId)?.label.fr}</td>}
                           <td className={`${cell} w-[24%]`} dir="auto">{[e.activity, e.title].filter(Boolean).join(" : ")}</td>
@@ -397,10 +441,10 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
                     </tr>
                   </thead>
                   <tbody>
-                    {pr.map(({ slot, key, e }) => (
+                    {pr.map(({ slot, key, e, start, end }) => (
                       <tr key={key} className="break-inside-avoid align-top">
-                        <td className={`${cell} w-12 text-center tabular-nums`}><bdi dir="ltr">{slot.start}</bdi></td>
-                        <td className={`${cell} w-12 text-center tabular-nums`}><bdi dir="ltr">{slot.end}</bdi></td>
+                        <td className={`${cell} w-12 text-center tabular-nums`}><bdi dir="ltr">{start}</bdi></td>
+                        <td className={`${cell} w-12 text-center tabular-nums`}><bdi dir="ltr">{end}</bdi></td>
                         {multiClass && <td className={cell}><bdi dir="ltr">{classById.get(slot.classId)?.displayName}</bdi></td>}
                         <td className={`${cell} w-[12%]`}><bdi>{e.activity || subjectById(taxonomy, slot.subjectId)?.label.ar}</bdi></td>
                         <td className={`${cell} w-[11%]`}><bdi>{e.unit}</bdi></td>

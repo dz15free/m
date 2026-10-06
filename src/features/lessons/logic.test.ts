@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { weeksOf, curriculumWeeks, groupCurriculum, lessonAccess, suggestForWeek, type CurriculumEntry } from "./logic.ts";
+import { weeksOf, curriculumWeeks, groupCurriculum, lessonAccess, packWeek, suggestForWeek, type CurriculumEntry } from "./logic.ts";
 
 const e = (o: number, s: number, k: "week" | "day", u: number): CurriculumEntry => ({ id: `x_${o}`, o, s, k, u, a: "", d: "", t: `t${o}`, b: true, sm: false });
 
@@ -42,4 +42,21 @@ test("الاقتراح: حصص الأسبوع بترتيبها، وأيام ال
 test("الأسابيع المطلقة: الأسبوع n هو أسبوع السنة n حتى مع أسابيع فارغة", () => {
   const w = weeksOf({ weekMode: "absolute", entries: [e(1, 1, "week", 1), e(2, 1, "week", 3), e(3, 2, "week", 3)] });
   assert.deepEqual(w.map((x) => x.entries.map((y) => y.o)), [[1], [], [2, 3]]);
+});
+
+test("حصة ساعة تأخذ نشاطين من 30 دقيقة حسب مدد المذكرات", () => {
+  const e = (id: string, ss: string): CurriculumEntry => ({ id, o: 0, s: 1, k: "week", u: 2, a: "Français", ss, d: "", t: id, b: false, sm: false });
+  const entries = [e("voc", "Vocabulaire (30 mn)"), e("lec", "Lecture (30 mn)"), e("gra", "Grammaire (45 mn)"), e("ort", "Orthographe (15 mn)"), e("prod", "Production (60 mn)")];
+  const slots = [
+    { key: "s1", date: "2026-10-11", start: "08:00", minutes: 60 },
+    { key: "s2", date: "2026-10-12", start: "08:00", minutes: 60 },
+    { key: "s3", date: "2026-10-13", start: "08:00", minutes: 45 },
+  ];
+  const out = packWeek(entries, slots);
+  assert.deepEqual(out.get("s1")!.map((x) => x.id), ["voc", "lec"]);
+  assert.deepEqual(out.get("s2")!.map((x) => x.id), ["gra", "ort"]);
+  assert.deepEqual(out.get("s3")!.map((x) => x.id), ["prod"]);
+  // بلا مدد: حصة لحصة
+  const plain = packWeek([e("a", "Séance 1"), e("b", "Séance 2")], slots.slice(0, 2));
+  assert.deepEqual([...plain.values()].map((p) => p.map((x) => x.id)), [["a"], ["b"]]);
 });

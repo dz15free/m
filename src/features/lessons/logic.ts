@@ -111,7 +111,22 @@ export function weeksOf(c: Pick<Curriculum, "entries" | "weekMode">): { kind: "d
   return Array.from({ length: max }, (_, i) => ({ kind: "week" as const, entries: c.entries.filter((e) => e.u === i + 1).sort((a, b) => a.o - b.o) }));
 }
 
-export type SlotRef = { key: string; date: string; start: string };
+export type SlotRef = { key: string; date: string; start: string; /** مدة الحصة في الجدول (للتجميع حسب مدد المذكرات) */ minutes?: number };
+
+/** المدة المكتوبة في المذكرة («30 mn»، «45 min»، «1h30»، «une demi-heure»، «ربع ساعة»…) بالدقائق، أو null. */
+export function memoMinutes(text: string | undefined): number | null {
+  if (!text) return null;
+  const t = text.toLowerCase();
+  const hm = /(\d+)\s*h\s*(\d{1,2})?/.exec(t);
+  if (hm) return Number(hm[1]) * 60 + Number(hm[2] ?? 0);
+  const m = /(\d+)\s*(?:mn|min|minutes?|د(?:قيقة|قائق)?)(?![a-z\u0621-\u064A])/.exec(t);
+  if (m) return Number(m[1]);
+  if (/demi[- ]heure|نصف ساعة/.test(t)) return 30;
+  if (/quart d.heure|ربع ساعة/.test(t)) return 15;
+  if (/ساعة ونصف|une heure et demie/.test(t)) return 90;
+  if (/une heure|(?<![\u0621-\u064A])ساعة(?![\u0621-\u064A])/.test(t)) return 60;
+  return null;
+}
 
 /** الحصة المقترحة لكل حصة من الجدول في أسبوع دراسي:
  *  - أسبوع عادي: حصص المادة في الأسبوع بترتيبها (يوم ثم ساعة) ← حصص أسبوع المنهاج بترتيبها.
@@ -135,9 +150,42 @@ export function suggestForWeek(
     }
     return out;
   }
-  sorted.forEach((s, i) => {
-    const e = week.entries[i];
-    if (e) out.set(s.key, e);
-  });
+  for (const [k, parts] of packWeek(week.entries, sorted)) out.set(k, parts[0]!);
   return out;
+}
+
+/** حصص المنهاج لكل حصة من الجدول، بالترتيب. إن حملت المذكرات مددها (مثل «30 mn») تملأ الحصةَ
+ *  حصصُ المذكرات المتتالية حتى تكتمل مدتها: حصة ساعة ← نشاطان من 30 دقيقة. وإلا فحصة لحصة. */
+export function packWeek(entries: CurriculumEntry[], sortedSlots: SlotRef[]): Map<string, CurriculumEntry[]> {
+  const out = new Map<string, CurriculumEntry[]>();
+  let i = 0;
+  for (const s of sortedSlots) {
+    if (i >= entries.length) break;
+    const parts = [entries[i++]!];
+    let used = memoMinutes(parts[0]!.ss);
+    if (used && s.minutes) {
+      while (i < entries.length) {
+        const d = memoMinutes(entries[i]!.ss);
+        if (!d || used + d > s.minutes) break;
+        parts.push(entries[i++]!);
+        used += d;
+      }
+    }
+    out.set(s.key, parts);
+  }
+  return out;
+}
+
+/** حصص أسبوع مع أجزائها (للأسبوع العادي؛ الفترة التمهيدية حصة واحدة لكل حصة). */
+export function suggestPartsForWeek(
+  weeks: { kind: "day" | "week"; entries: CurriculumEntry[] }[],
+  weekNo: number,
+  slots: SlotRef[],
+  schoolDays: number[],
+): Map<string, CurriculumEntry[]> {
+  const week = weeks[weekNo - 1];
+  if (!week || weekNo < 1) return new Map();
+  if (week.kind === "day") return new Map([...suggestForWeek(weeks, weekNo, slots, schoolDays)].map(([k, e]) => [k, [e]]));
+  const sorted = [...slots].sort((a, b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start));
+  return packWeek(week.entries, sorted);
 }

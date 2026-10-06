@@ -7,8 +7,8 @@ import { useBilling } from "@/features/billing/repo";
 import type { ClassDoc } from "@/features/classes/repo";
 import { defaultStart, schoolWeekOf } from "@/features/planning/logic";
 import type { Calendar, Slot } from "@/features/schedule/logic";
-import type { LessonEntry } from "@/features/logbook/logic";
-import { curriculumId, suggestForWeek, weeksOf, type Curriculum, type CurriculumEntry, type LessonSummary } from "./logic";
+import { durationMinutes, type LessonEntry } from "@/features/logbook/logic";
+import { curriculumId, suggestPartsForWeek, weeksOf, type Curriculum, type CurriculumEntry, type LessonSummary } from "./logic";
 
 export type Suggestion = {
   entry: CurriculumEntry;
@@ -19,6 +19,9 @@ export type Suggestion = {
   sessionNo: number;
   /** ترتيبها في يومها (الفترة التمهيدية: أسمع وأتحدث ← أشاهد وأقرأ ← أخطط وأكتب) */
   dayIndex: number;
+  /** نشاطات المذكرات في هذه الحصة (الأول = entry): حصة ساعة قد تضم نشاطين من 30 دقيقة */
+  parts: CurriculumEntry[];
+  partSummaries: (LessonSummary | null)[];
 };
 
 const PREP_ACTIVITIES = [
@@ -76,9 +79,9 @@ export function useNotebookSuggestions(args: {
   curQueries.forEach((q) => q.data && curricula.set(q.data.id, q.data));
 
   const start = defaultStart(args.startYear);
-  const picked = new Map<string, Omit<Suggestion, "summary">>();
+  const picked = new Map<string, Omit<Suggestion, "summary" | "partSummaries">>();
   // تجميع حصص كل (قسم، مادة) حسب الأسبوع الدراسي
-  const groups = new Map<string, { cur: Curriculum; week: number; refs: { key: string; date: string; start: string }[] }>();
+  const groups = new Map<string, { cur: Curriculum; week: number; refs: { key: string; date: string; start: string; minutes: number }[] }>();
   for (const r of args.rows) {
     const cls = classById.get(r.slot.classId);
     const cur = cls && curricula.get(curriculumId(cls.level, r.slot.subjectId));
@@ -86,21 +89,23 @@ export function useNotebookSuggestions(args: {
     const week = schoolWeekOf(r.date, start, args.calendar.schoolDays, args.calendar.holidays);
     const gk = `${r.slot.classId}|${r.slot.subjectId}|${week}`;
     const g = groups.get(gk) ?? { cur, week, refs: [] };
-    g.refs.push({ key: r.key, date: r.date, start: r.slot.start });
+    g.refs.push({ key: r.key, date: r.date, start: r.slot.start, minutes: durationMinutes(r.slot.start, r.slot.end) });
     groups.set(gk, g);
   }
   for (const g of groups.values()) {
     const weeks = weeksOf(g.cur);
-    const map = suggestForWeek(weeks, g.week, g.refs, args.calendar.schoolDays);
+    const map = suggestPartsForWeek(weeks, g.week, g.refs, args.calendar.schoolDays);
     const order = [...g.refs].sort((a, b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start));
+    let sessionNo = 0;
     order.forEach((ref, i) => {
-      const entry = map.get(ref.key);
+      const parts = map.get(ref.key);
       const dayIndex = order.slice(0, i).filter((o) => o.date === ref.date).length;
-      if (entry) picked.set(ref.key, { entry, curriculum: g.cur, schoolWeek: g.week, sessionNo: i + 1, dayIndex });
+      if (parts?.length) picked.set(ref.key, { entry: parts[0]!, parts, curriculum: g.cur, schoolWeek: g.week, sessionNo: sessionNo + 1, dayIndex });
+      sessionNo += parts?.length ?? 1;
     });
   }
 
-  const ids = [...new Set([...picked.values()].map((p) => p.entry.id))];
+  const ids = [...new Set([...picked.values()].flatMap((p) => p.parts.map((x) => x.id)))];
   const sums = useQueries({
     queries: ids.map((id) => ({
       queryKey: ["lessonSummary", id],
@@ -113,7 +118,9 @@ export function useNotebookSuggestions(args: {
   sums.forEach((q, i) => q.data && summaryById.set(ids[i]!, q.data));
 
   const out = new Map<string, Suggestion>();
-  for (const [key, p] of picked) out.set(key, { ...p, summary: summaryById.get(p.entry.id) ?? null });
+  for (const [key, p] of picked) {
+    out.set(key, { ...p, summary: summaryById.get(p.entry.id) ?? null, partSummaries: p.parts.map((x) => summaryById.get(x.id) ?? null) });
+  }
   const loading = curQueries.some((q) => q.isLoading) || sums.some((q) => q.isLoading && q.fetchStatus !== "idle");
   return { map: out, loading };
 }
