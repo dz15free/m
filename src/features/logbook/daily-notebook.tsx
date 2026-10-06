@@ -211,14 +211,15 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
     if (parts.length > 1) {
       let t = r.slot.start;
       return parts.map((e, k) => {
-        const m = memoDuration(r, e) ?? 0;
+        const m = memoMinutes(r.sug?.parts[k]?.ss) ?? 0;
         const line = { key: `${r.key}#${k}`, slot: r.slot, start: t, end: k === parts.length - 1 ? r.slot.end : addMinutes(t, m), minutes: m, e };
         t = line.end;
         return line;
       });
     }
     const e = effective(r);
-    return [{ key: r.key, slot: r.slot, start: r.slot.start, end: r.slot.end, minutes: memoDuration(r, e) ?? durationMinutes(r.slot.start, r.slot.end), e }];
+    const own = isBlank(r.entry) ? memoMinutes(r.sug?.parts[0]?.ss) : null;
+    return [{ key: r.key, slot: r.slot, start: r.slot.start, end: r.slot.end, minutes: own ?? memoDuration(r, e) ?? durationMinutes(r.slot.start, r.slot.end), e }];
   };
 
   const range = days.length ? `${formatLongDate(new Date(`${days[0]}T12:00:00`), locale)} — ${formatLongDate(new Date(`${days[days.length - 1]}T12:00:00`), locale)}` : "";

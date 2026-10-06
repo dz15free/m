@@ -8,6 +8,7 @@ import type { ClassDoc } from "@/features/classes/repo";
 import { defaultStart, schoolWeekOf } from "@/features/planning/logic";
 import type { Calendar, Slot } from "@/features/schedule/logic";
 import { durationMinutes, type LessonEntry } from "@/features/logbook/logic";
+import { frenchDayPlan } from "./fr-sequence";
 import { curriculumId, suggestPartsForWeek, weeksOf, type Curriculum, type CurriculumEntry, type LessonSummary } from "./logic";
 
 export type Suggestion = {
@@ -81,7 +82,7 @@ export function useNotebookSuggestions(args: {
   const start = defaultStart(args.startYear);
   const picked = new Map<string, Omit<Suggestion, "summary" | "partSummaries">>();
   // تجميع حصص كل (قسم، مادة) حسب الأسبوع الدراسي
-  const groups = new Map<string, { cur: Curriculum; week: number; refs: { key: string; date: string; start: string; minutes: number }[] }>();
+  const groups = new Map<string, { cur: Curriculum; week: number; refs: { key: string; date: string; start: string; minutes?: number }[] }>();
   for (const r of args.rows) {
     const cls = classById.get(r.slot.classId);
     const cur = cls && curricula.get(curriculumId(cls.level, r.slot.subjectId));
@@ -89,7 +90,8 @@ export function useNotebookSuggestions(args: {
     const week = schoolWeekOf(r.date, start, args.calendar.schoolDays, args.calendar.holidays);
     const gk = `${r.slot.classId}|${r.slot.subjectId}|${week}`;
     const g = groups.get(gk) ?? { cur, week, refs: [] };
-    g.refs.push({ key: r.key, date: r.date, start: r.slot.start, minutes: durationMinutes(r.slot.start, r.slot.end) });
+    // تجميع عدة نشاطات في الحصة الواحدة خاص بدفتر الفرنسية
+    g.refs.push({ key: r.key, date: r.date, start: r.slot.start, minutes: r.slot.subjectId === "fr" ? durationMinutes(r.slot.start, r.slot.end) : undefined });
     groups.set(gk, g);
   }
   for (const g of groups.values()) {
@@ -98,14 +100,16 @@ export function useNotebookSuggestions(args: {
     const order = [...g.refs].sort((a, b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start));
     let sessionNo = 0;
     order.forEach((ref, i) => {
-      const parts = map.get(ref.key);
+      // الفرنسية (الرابعة والخامسة): نشاطات اليوم ومددها من «Déroulement séquentiel» الرسمي
+      const plan = frenchDayPlan(g.cur, g.week, i);
+      const parts = plan ?? map.get(ref.key);
       const dayIndex = order.slice(0, i).filter((o) => o.date === ref.date).length;
       if (parts?.length) picked.set(ref.key, { entry: parts[0]!, parts, curriculum: g.cur, schoolWeek: g.week, sessionNo: sessionNo + 1, dayIndex });
       sessionNo += parts?.length ?? 1;
     });
   }
 
-  const ids = [...new Set([...picked.values()].flatMap((p) => p.parts.map((x) => x.id)))];
+  const ids = [...new Set([...picked.values()].flatMap((p) => p.parts.map((x) => x.id)))].filter(Boolean);
   const sums = useQueries({
     queries: ids.map((id) => ({
       queryKey: ["lessonSummary", id],
