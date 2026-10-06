@@ -23,20 +23,27 @@ const cur5 = {
 test("الخامسة: اليوم الأول من الأسبوع الأول = عقد التعلم 20 + الشفهي 40", () => {
   const p = frenchDayPlan(cur5, 3, 0)!;
   assert.deepEqual(p.map((x) => [x.a, x.ss]), [
-    ["Contrat d'apprentissage", "Contrat d'apprentissage (20 mn)"],
-    ["Oral réception / production", "Oral réception / production (40 mn)"],
+    ["Contrat d'apprentissage (projet + séquences + tâches)", "Contrat d'apprentissage (projet + séquences + tâches) (20 mn)"],
+    ["Oral / compréhension — Oral / production", "Oral / compréhension — Oral / production (40 mn)"],
   ]);
   assert.equal(p[0]!.id, "id1");
 });
 
-test("الخامسة: يوم القواعد يأخذ بطاقتي القواعد بالترتيب", () => {
-  const p = frenchDayPlan(cur5, 4, 0)!;
-  assert.deepEqual(p.map((x) => [x.id, x.t]), [["id4", "L'adjectif — Pauvre petite gazelle !"], ["id5", "La pronominalisation — Pauvre petite gazelle !"]]);
+test("الخامسة: القواعد 1 في الحصة الثالثة والقواعد 2 في الرابعة", () => {
+  assert.equal(frenchDayPlan(cur5, 3, 2)![1]!.id, "id4");
+  assert.equal(frenchDayPlan(cur5, 4, 0)![1]!.id, "id5");
 });
 
-test("مقطع من 3 أسابيع: التقويم يُلحق بآخر يوم", () => {
+test("مقطع من 3 أسابيع: آخر حصة = compte rendu + التقويم", () => {
   const p = frenchDayPlan(cur5, 5, 2)!;
-  assert.deepEqual(p.map((x) => x.a), ["Compte rendu", "Poème / Comptine", "Évaluation séquentielle"]);
+  assert.deepEqual(p.map((x) => [x.a, x.ss]), [["Compte rendu et réécriture", "Compte rendu et réécriture (30 mn)"], ["Évaluation séquentielle", "Évaluation séquentielle (30 mn)"]]);
+});
+
+test("مقطع من 4 أسابيع: الأسبوع الرابع = التقويم (1سا) ثم القصيدة والإنجاز (1سا30)", () => {
+  const cur = { ...cur5, entries: [...cur5.entries, e(8, 6, 1, "Réalisation du projet (30 mn)", "Réalisation du projet — X")] };
+  assert.deepEqual(frenchDayPlan(cur, 6, 0)!.map((x) => x.ss), ["Évaluation séquentielle (60 mn)"]);
+  assert.deepEqual(frenchDayPlan(cur, 6, 1)!.map((x) => x.ss), ["Poème (prononciation et prosodie) (45 mn)", "Réalisation partielle et/ou finale du projet (45 mn)"]);
+  assert.deepEqual(frenchDayPlan(cur, 6, 2), []);
 });
 
 test("غير الفرنسية أو مقطع الاستدراك: null", () => {

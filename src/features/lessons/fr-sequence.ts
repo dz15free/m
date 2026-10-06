@@ -53,50 +53,59 @@ const FR_4AP: Template = [
   ],
 ];
 
+/* الخامسة: «Déroulement d'une séquence d'apprentissage en 5e AP» — 3 حصص (vacations) من ساعة أسبوعيًا،
+   11 حصة في المقطع (الحادية عشرة ساعة ونصف). مدة كل نشاط داخل الساعة «تتبع طبيعة الموضوع»:
+   نقسمها افتراضيًا 30 + 30 (والأولى 20 + 40 كما في نموذج Au zoo). */
 const FR_5AP: Template = [
   [
     [
-      { name: "Contrat d'apprentissage", min: 20, match: [/Présentation du projet/i] },
-      { name: "Oral réception / production", min: 40, match: [/Oral compréhension/i] },
+      { name: "Contrat d'apprentissage (projet + séquences + tâches)", min: 20, match: [/Présentation du projet/i] },
+      { name: "Oral / compréhension — Oral / production", min: 40, match: [/Oral compréhension/i] },
     ],
     [
-      { name: "Compréhension de l'écrit", min: 30, match: [/Compréhension de l.écrit 1/i, /Compréhension de l.écrit/i] },
+      { name: "Compréhension de l'écrit (texte 1)", min: 30, match: [/Compréhension de l.écrit 1/i, /Compréhension de l.écrit/i] },
       { name: "Vocabulaire", min: 30, match: [/Vocabulaire/i] },
     ],
     [
-      { name: "Compréhension de l'écrit", min: 30, match: [/Compréhension de l.écrit 2/i, /Compréhension de l.écrit/i] },
-      { name: "Lecture systématique", min: 30, match: [/Lecture systématique/i] },
+      { name: "Compréhension de l'écrit (texte 2)", min: 30, match: [/Compréhension de l.écrit 2/i, /Compréhension de l.écrit/i] },
+      { name: "Grammaire (ressource linguistique 1)", min: 30, match: [/Grammaire/i] },
     ],
   ],
   [
     [
-      { name: "Grammaire", min: 30, match: [/Grammaire/i] },
-      { name: "Grammaire", min: 30, match: [/Grammaire/i], nth: 1 },
+      { name: "Lecture systématique (correspondance graphie/phonie)", min: 30, match: [/Lecture systématique/i] },
+      { name: "Grammaire (ressource linguistique 2)", min: 30, match: [/Grammaire/i], nth: 1 },
     ],
     [
       { name: "Conjugaison", min: 30, match: [/Conjugaison/i] },
       { name: "Orthographe", min: 30, match: [/Orthographe/i] },
     ],
     [
-      { name: "Phonétique articulatoire", min: 15, match: [/Lecture systématique 2/i, /Phonétique/i, /Lecture systématique/i], nth: 1 },
+      { name: "Correspondance phonie/graphie et/ou phonétique articulatoire", min: 30, match: [/Lecture systématique 2/i, /Phonétique/i, /Lecture systématique/i], nth: 1 },
       { name: "Dictée", min: 30, match: [/Dictée/i] },
     ],
   ],
   [
     [
-      { name: "Entraînement à la mobilisation", min: 30, match: [/Préparation à l.écrit/i, /Oral production/i] },
-      { name: "Oral production", min: 30, match: [/Oral production/i] },
+      { name: "Entraînement à la mobilisation (à l'oral)", min: 30, match: [/Préparation à l.écrit/i, /Oral production/i] },
+      { name: "Production orale", min: 30, match: [/Oral production 2/i, /Oral production/i] },
     ],
     [
-      { name: "Production écrite 1er jet", min: 30, match: [/Production écrite/i] },
-      { name: "Production écrite 2e jet", min: 30, match: [/Production écrite/i] },
+      { name: "Production écrite (1er jet)", min: 30, match: [/Production écrite/i] },
+      { name: "Production écrite (2e jet)", min: 30, match: [/Production écrite/i] },
     ],
     [
-      { name: "Compte rendu", min: 30, match: [/Compte rendu/i] },
-      { name: "Poème / Comptine", min: 30, match: [/Comptine/i, /Poème/i] },
+      { name: "Compte rendu et réécriture", min: 30, match: [/Compte rendu/i] },
+      { name: "Activités de remédiation", min: 30, match: [/Compte rendu/i] },
     ],
   ],
-  [[{ name: "Évaluation séquentielle", min: 60, match: [/[ÉE]valuation/i] }]],
+  [
+    [{ name: "Évaluation séquentielle", min: 60, match: [/[ÉE]valuation/i] }],
+    [
+      { name: "Poème (prononciation et prosodie)", min: 45, match: [/Comptine/i, /Poème/i] },
+      { name: "Réalisation partielle et/ou finale du projet", min: 45, match: [/Réalisation/i] },
+    ],
+  ],
 ];
 
 const TEMPLATES: Record<string, Template> = { "4AP": FR_4AP, "5AP": FR_5AP };
@@ -120,7 +129,11 @@ export function frenchDayPlan(cur: Pick<Curriculum, "level" | "subject" | "entri
   const tw = Math.min(rank, tpl.length - 1);
   const days = tpl[tw]!;
   let acts = days[dayIdx];
-  if (rank === weeks.length - 1 && tw < tpl.length - 1 && dayIdx === days.length - 1) acts = [...(acts ?? []), ...tpl[tpl.length - 1]!.flat()];
+  // مقطع أقصر من الجدول (3 أسابيع في الخامسة): آخر حصة فيه = compte rendu + التقويم المرحلي
+  if (rank === weeks.length - 1 && tw < tpl.length - 1 && dayIdx === days.length - 1 && acts) {
+    const evaluation = tpl[tpl.length - 1]!.flat().find((a) => /valuation/i.test(a.name));
+    acts = [{ ...acts[0]!, min: 30 }, ...(evaluation ? [{ ...evaluation, min: 30 }] : [])];
+  }
   if (!acts) return [];
   const seqTitle = segTitle.replace(/^.*Séquence\s*\d+\s*:\s*/i, "").replace(/\s*\(.*\)\s*$/, "");
   return acts.map((act) => {
