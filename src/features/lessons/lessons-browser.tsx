@@ -13,7 +13,7 @@ import { groupCurriculum } from "./logic";
 import { useCurriculum, useLessonAccessFor, useMyCurricula } from "./repo";
 
 /** المذكرات الجاهزة لأقسام الأستاذ: مادة ← مقطع ← أسبوع ← حصة. */
-export function LessonsBrowser() {
+export function LessonsBrowser({ level }: { level?: string } = {}) {
   const t = useTranslations("lessons");
   const locale = useLocale() as "ar" | "fr";
   const tax = useTaxonomy("primary");
@@ -23,7 +23,8 @@ export function LessonsBrowser() {
   if (!mine.ready || !tax.data) return <Spinner />;
   if (!mine.list.length) return <Card className="py-10 text-center text-muted">{t("noClasses")}</Card>;
   const available = mine.list.filter((c) => c.available);
-  const current = picked ?? available[0]?.id ?? null;
+  // من صفحة القسم: نبدأ بأول مادة متاحة لمستواه
+  const current = picked ?? available.find((c) => c.level === level)?.id ?? available[0]?.id ?? null;
   const label = (c: { level: string; subject: string }) =>
     `${subjectById(tax.data!, c.subject)?.label[locale] ?? c.subject} · ${levelById(tax.data!, c.level)?.short[locale] ?? c.level}`;
 

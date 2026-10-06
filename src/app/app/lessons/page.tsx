@@ -7,7 +7,8 @@ export async function generateMetadata() {
   return { title: t("title") };
 }
 
-export default async function LessonsPage() {
+export default async function LessonsPage({ searchParams }: { searchParams: Promise<{ level?: string }> }) {
+  const { level } = await searchParams;
   const t = await getTranslations("lessons");
   return (
     <div className="space-y-5">
@@ -18,7 +19,7 @@ export default async function LessonsPage() {
         </h1>
         <p className="mt-1 text-muted">{t("subtitle")}</p>
       </div>
-      <LessonsBrowser />
+      <LessonsBrowser level={typeof level === "string" ? level : undefined} />
     </div>
   );
 }

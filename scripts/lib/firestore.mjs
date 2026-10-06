@@ -66,3 +66,9 @@ export async function readDoc(path) {
   if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text()}`);
   return (await res.json()).fields ?? {};
 }
+
+/** حذف وثيقة (لا خطأ إن لم تكن موجودة). */
+export async function deleteDoc(path) {
+  const res = await fetch(`${base}/${path}`, { method: "DELETE", headers: { Authorization: authHeader } });
+  if (!res.ok && res.status !== 404) throw new Error(`${path}: ${res.status} ${await res.text()}`);
+}

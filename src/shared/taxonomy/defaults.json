@@ -16,7 +16,7 @@
       { "id": "civic", "label": { "ar": "التربية المدنية", "fr": "Éducation civique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
       { "id": "history", "label": { "ar": "التاريخ", "fr": "Histoire" }, "levels": ["3AP", "4AP", "5AP"] },
       { "id": "geography", "label": { "ar": "الجغرافيا", "fr": "Géographie" }, "levels": ["3AP", "4AP", "5AP"] },
-      { "id": "fr", "label": { "ar": "اللغة الفرنسية", "fr": "Langue française" }, "levels": ["3AP", "4AP", "5AP"] },
+      { "id": "fr", "label": { "ar": "اللغة الفرنسية", "fr": "Langue française" }, "levels": ["4AP", "5AP"] },
       { "id": "en", "label": { "ar": "اللغة الإنجليزية", "fr": "Langue anglaise" }, "levels": ["3AP", "4AP", "5AP"] },
       { "id": "tamazight", "label": { "ar": "اللغة الأمازيغية", "fr": "Tamazight" }, "levels": ["3AP", "4AP", "5AP"] },
       { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation artistique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },

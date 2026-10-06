@@ -38,8 +38,9 @@ const TABS = [
   { key: "stats", icon: BarChart3 },
 ] as const;
 
-/** أقسام صفحة القسم المفعّلة ومساراتها. */
+/** أقسام صفحة القسم ومساراتها (الدروس والتوقيت والوثائق صفحات عامة، تُفتح على مستوى القسم). */
 const LINKS = { students: "students", attendance: "attendance", stats: "attendance/stats" } as const;
+const GLOBAL_LINKS = { lessons: (c: ClassDoc) => `/app/lessons?level=${c.level}`, schedule: () => "/app/schedule", documents: () => "/app/documents" } as const;
 
 export function ClassDetail({ classId }: { classId: string }) {
   const t = useTranslations("classes.detail");
@@ -83,8 +84,11 @@ export function ClassDetail({ classId }: { classId: string }) {
           const tile = "flex min-h-24 flex-col items-center justify-center gap-2 rounded-card bg-surface p-4 text-center shadow-card";
           return (
             <li key={key}>
-              {key in LINKS ? (
-                <Link href={`/app/classes/${c.id}/${LINKS[key as keyof typeof LINKS]}`} className={`${tile} transition-shadow hover:shadow-md`}>
+              {key in LINKS || key in GLOBAL_LINKS ? (
+                <Link
+                  href={key in LINKS ? `/app/classes/${c.id}/${LINKS[key as keyof typeof LINKS]}` : GLOBAL_LINKS[key as keyof typeof GLOBAL_LINKS](c)}
+                  className={`${tile} transition-shadow hover:shadow-md`}
+                >
                   <Icon aria-hidden className="size-6 text-brand-700" />
                   <span className="text-sm font-medium">{t(`tabs.${key}`)}</span>
                   {key === "students" && (
