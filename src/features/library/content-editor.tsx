@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Check, FileText, LoaderCircle, Lock, Plus, ShieldAlert, Trash2, Upload } from "lucide-react";
+import { Check, FileText, LoaderCircle, Lock, Plus, Search, ShieldAlert, Trash2, Upload } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field, SelectField } from "@/components/ui/field";
@@ -14,6 +14,7 @@ import { useTaxonomy, useUid } from "@/features/classes/hooks";
 import { publishAnnouncement } from "@/features/notifications/repo";
 import { STAGES, type Stage } from "@/shared/dz/education";
 import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
+import { nameKey } from "@/shared/text/names";
 import { cn } from "@/lib/utils/cn";
 import { CONTENT_TYPES, formatSize, MAX_FILE_BYTES, type ContentDoc, type ContentFile, type ContentType } from "./logic";
 import { deleteContent, getContent, listContentsForEditor, previewUrl, removeFile, saveContent, uploadFile } from "./repo";
@@ -57,6 +58,17 @@ function AdminList() {
   const [stage, setStage] = useState<Stage>("primary");
   const tax = useTaxonomy(stage);
   const list = useQuery({ queryKey: ["contentsAdmin", stage], queryFn: () => listContentsForEditor(stage) });
+  const [q, setQ] = useState("");
+  const [level, setLevel] = useState("");
+  const words = nameKey(q).split(" ").filter(Boolean);
+  const shown = (list.data ?? []).filter((c) => {
+    if (level && c.level !== level) return false;
+    if (!words.length) return true;
+    const hay = nameKey(
+      [c.title.ar, c.title.fr, c.tags.join(" "), c.unit, tl(`types.${c.type}`), tax.data && c.subject ? subjectById(tax.data, c.subject)?.label[locale] : ""].join(" "),
+    );
+    return words.every((w) => hay.includes(w));
+  });
 
   return (
     <div className="space-y-4">
@@ -81,9 +93,28 @@ function AdminList() {
         <Card className="py-10 text-center text-muted">{t("empty")}</Card>
       ) : (
         <>
-          <p className="text-sm text-muted">{t("count", { n: list.data.length })}</p>
+          <div className="flex flex-wrap gap-2">
+            <label className="relative min-w-56 flex-1">
+              <span className="sr-only">{t("search")}</span>
+              <Search aria-hidden className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted" />
+              <input
+                type="search"
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+                placeholder={t("search")}
+                className="block min-h-11 w-full rounded-xl border border-line bg-surface ps-10 pe-3 outline-none focus:border-brand-600 focus:ring-3 focus:ring-brand-100"
+              />
+            </label>
+            <select value={level} onChange={(e) => setLevel(e.target.value)} aria-label={tl("allLevels")} className="min-h-11 rounded-xl border border-line bg-surface px-3">
+              <option value="">{tl("allLevels")}</option>
+              {tax.data.levels.map((l) => (
+                <option key={l.id} value={l.id}>{l.label[locale]}</option>
+              ))}
+            </select>
+          </div>
+          <p className="text-sm text-muted">{q || level ? t("countFiltered", { n: shown.length, total: list.data.length }) : t("count", { n: list.data.length })}</p>
           <ul className="divide-y divide-line overflow-hidden rounded-card bg-surface shadow-card">
-            {list.data.map((c) => (
+            {shown.map((c) => (
               <li key={c.id}>
                 <Link href={`/admin/content/${c.id}`} className="flex items-center gap-3 px-4 py-3 hover:bg-brand-50">
                   <span className="min-w-0 flex-1">

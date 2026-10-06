@@ -10,7 +10,7 @@ import { curriculumId, lessonAccess, type Curriculum, type LessonSummary } from 
 
 const db = () => getFirebase().db;
 
-async function getCurriculum(id: string): Promise<Curriculum | null> {
+export async function getCurriculum(id: string): Promise<Curriculum | null> {
   const snap = await getDoc(doc(db(), "curriculum", id)).catch(() => null);
   return snap?.exists() ? ({ id: snap.id, ...snap.data() } as Curriculum) : null;
 }

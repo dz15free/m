@@ -1011,7 +1011,9 @@
       "selected": "{n} sur {total} sélectionnés",
       "selectAll": "Tout sélectionner",
       "selectNone": "Tout désélectionner"
-    }
+    },
+    "search": "Rechercher : titre, matière, type…",
+    "countFiltered": "{n} sur {total}"
   },
   "documents": {
     "title": "Documents",
@@ -1146,7 +1148,9 @@
     "empty": "Aucune ligne. Ajoutez une ligne ou collez une progression.",
     "markHint": "Cochez ce qui est fait : « Où en suis-je ? » se met à jour.",
     "fromLibrary": "Chercher une progression dans la bibliothèque",
-    "edit": "Modifier"
+    "edit": "Modifier",
+    "official": "officiel",
+    "officialHint": "Progression officielle proposée à partir des fiches de la plateforme ; les semaines passées sont cochées. Cochez ou modifiez : elle sera enregistrée comme la vôtre."
   },
   "billing": {
     "title": "Abonnement",

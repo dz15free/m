@@ -28,7 +28,7 @@ import { Card } from "@/components/ui/card";
 import { useClasses, useTaxonomy, useTeacher } from "@/features/classes/hooks";
 import { levelById, subjectById, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
-import { CONTENT_TYPES, langOf, search, type ContentType, type IndexEntry, type Lang } from "./logic";
+import { CONTENT_TYPES, forMyClasses, inLang, search, type ContentType, type IndexEntry, type Lang } from "./logic";
 
 const LANGS: Lang[] = ["ar", "fr", "en"];
 import { getIndex, previewUrl } from "./repo";
@@ -84,10 +84,10 @@ export function LibraryBrowser() {
   // أستاذ الفرنسية أو الإنجليزية فقط: نبدأ بقسم لغته؛ غيره يبدأ بالكل
   const onlyLang = [...mySubjects].every((s) => s === "fr") ? "fr" : [...mySubjects].every((s) => s === "en") ? "en" : "";
   const lang = langPick ?? (mySubjects.size ? onlyLang : "");
-  const presentLangs = LANGS.filter((l) => index.data.some((e) => langOf(e) === l));
+  const presentLangs = LANGS.filter((l) => index.data.some((e) => inLang(e, l)));
 
   let results = search(index.data, query, { level, subject, type, lang });
-  if (useMine) results = results.filter((e) => (!e.l || myLevels.has(e.l)) && (!e.s || mySubjects.has(e.s)));
+  if (useMine) results = results.filter((e) => forMyClasses(e, myLevels, mySubjects));
   const presentTypes = CONTENT_TYPES.filter((ty) => index.data.some((e) => e.ty === ty));
   const filtered = !!(query || level || subject || type || lang);
 

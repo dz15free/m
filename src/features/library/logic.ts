@@ -115,6 +115,12 @@ export type Filters = { level?: string; subject?: string; type?: string; access?
 export type Lang = "ar" | "fr" | "en";
 /** لغة المحتوى (المداخل القديمة بلا لغة = عربية). */
 export const langOf = (e: Pick<IndexEntry, "lang">): Lang => (e.lang === "fr" || e.lang === "en" ? e.lang : "ar");
+/** قسم اللغة: الفرنسية/الإنجليزية = كل ما لغته أو مادته هي، والعربية = الباقي. */
+export const inLang = (e: Pick<IndexEntry, "lang" | "s">, lang: Lang): boolean =>
+  lang === "ar" ? langOf(e) === "ar" && e.s !== "fr" && e.s !== "en" : langOf(e) === lang || e.s === lang;
+/** «لأقسامي»: ما نُشر لمستوى أحد أقسام الأستاذ ولمادة يدرّسها (أو عامًّا لكل مواد المستوى). */
+export const forMyClasses = (e: Pick<IndexEntry, "l" | "s">, levels: Set<string>, subjects: Set<string>): boolean =>
+  !!e.l && levels.has(e.l) && (!e.s || subjects.has(e.s));
 
 /** كل كلمة في الطلب يجب أن تطابق بداية كلمة في العنوان/الوسوم/الوحدة. */
 export function search(entries: IndexEntry[], query: string, f: Filters = {}): IndexEntry[] {
@@ -124,7 +130,7 @@ export function search(entries: IndexEntry[], query: string, f: Filters = {}): I
       (!f.level || !e.l || e.l === f.level) &&
       (!f.subject || !e.s || e.s === f.subject) &&
       (!f.type || e.ty === f.type) &&
-      (!f.lang || langOf(e) === f.lang) &&
+      (!f.lang || inLang(e, f.lang)) &&
       (!f.access || e.a === f.access),
   );
   if (!q.length) return matches.sort((a, b) => b.at - a.at);

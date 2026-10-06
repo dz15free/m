@@ -1,6 +1,8 @@
 /* التوزيع السنوي و«أين أنا الآن؟».
    الأسابيع الدراسية تُعدّ من تاريخ الانطلاق، والأسبوع الواقع كله في عطلة لا يُحسب. */
 
+import { weeksOf, type Curriculum } from "../lessons/logic.ts";
+
 export type ProgressionRow = { w: number; unit: string; content: string; done: boolean };
 export type Progression = { classId: string; subjectId: string; startDate: string; rows: ProgressionRow[] };
 export type Holiday = { start: string; end: string };
@@ -89,4 +91,23 @@ export function parseProgression(text: string): ProgressionRow[] {
     if (rows.length >= MAX_ROWS) break;
   }
   return rows;
+}
+
+/** التوزيع الرسمي من المنهاج المنشور (حين لا يكون للأستاذ توزيع محفوظ): سطر لكل حصة بأسبوعها ومقطعها،
+    وما قبل الأسبوع الجاري يُعدّ منجزًا افتراضيًا (يعدّله الأستاذ). يُدمج الأسبوع في سطر واحد إن تجاوزت الحصص الحدّ. */
+export function rowsFromCurriculum(c: Pick<Curriculum, "entries" | "weekMode" | "segments">, currentWeek: number): ProgressionRow[] {
+  const segTitle = (n: number) => c.segments.find((s) => s.n === n)?.title ?? "";
+  const weeks = weeksOf(c);
+  const perLesson = weeks.flatMap((wk, i) =>
+    wk.entries.map((e) => ({ w: i + 1, unit: segTitle(e.s).slice(0, ROW_MAX.unit), content: e.t.slice(0, ROW_MAX.content), done: i + 1 < currentWeek })),
+  );
+  if (perLesson.length <= MAX_ROWS) return perLesson;
+  return weeks
+    .map((wk, i) => ({
+      w: i + 1,
+      unit: segTitle(wk.entries[0]?.s ?? 0).slice(0, ROW_MAX.unit),
+      content: [...new Set(wk.entries.map((e) => e.t))].join(" — ").slice(0, ROW_MAX.content),
+      done: i + 1 < currentWeek,
+    }))
+    .filter((r) => r.content);
 }

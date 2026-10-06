@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useQuery } from "@tanstack/react-query";
+import { useQueries, useQuery } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
 import { CalendarRange, ChevronLeft, ChevronRight, LoaderCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -11,7 +11,9 @@ import { useCalendar } from "@/features/schedule/repo";
 import { parseAcademicYearId } from "@/shared/academic-year";
 import { subjectById } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
-import { defaultStart, progressionId, progressStatus, schoolWeekOf, type Status } from "./logic";
+import { getCurriculum } from "@/features/lessons/repo";
+import { curriculumId } from "@/features/lessons/logic";
+import { defaultStart, progressionId, progressStatus, rowsFromCurriculum, schoolWeekOf, type Status } from "./logic";
 import { listProgressions } from "./repo";
 
 export const STATUS_STYLE: Record<Status["kind"], string> = {
@@ -31,6 +33,12 @@ export function PlanningOverview() {
   const calendar = useCalendar();
   const tax = useTaxonomy(teacher.data?.profile.stage);
   const progs = useQuery({ queryKey: ["progressions", uid ?? ""], queryFn: () => listProgressions(uid!), enabled: !!uid });
+  // المناهج المنشورة لأقسام الأستاذ: توزيع رسمي مقترح لما لم يحفظ له توزيعًا
+  const curIds = [...new Set((classes.data ?? []).filter((c) => !c.archived).flatMap((c) => c.subjectIds.map((s) => curriculumId(c.level, s))))];
+  const curricula = useQueries({
+    queries: curIds.map((id) => ({ queryKey: ["curriculum", id], queryFn: () => getCurriculum(id), staleTime: 60 * 60_000 })),
+  });
+  const curById = new Map(curIds.map((id, i) => [id, curricula[i]?.data ?? null]));
 
   if (!teacher.data || !classes.data || !calendar.data || !tax.data || !progs.data) {
     return (
@@ -68,12 +76,16 @@ export function PlanningOverview() {
             <ul className="divide-y divide-line overflow-hidden rounded-card bg-surface shadow-card">
               {subjects.map((s) => {
                 const p = byId.get(progressionId(c.id, s));
-                const st = progressStatus(p?.rows ?? [], p ? weekFor(p.startDate) : currentWeek);
+                const cur = !p ? curById.get(curriculumId(c.level, s)) : null;
+                const st = progressStatus(p?.rows ?? (cur?.entries.length ? rowsFromCurriculum(cur, currentWeek) : []), p ? weekFor(p.startDate) : currentWeek);
                 return (
                   <li key={s}>
                     <Link href={`/app/planning/${c.id}/${s}`} className="flex items-center gap-3 px-4 py-3 hover:bg-brand-50">
                       <span className="min-w-0 flex-1">
-                        <span className="block font-medium">{subjectById(tax.data!, s)?.label[locale] ?? s}</span>
+                        <span className="block font-medium">
+                          {subjectById(tax.data!, s)?.label[locale] ?? s}
+                          {cur?.entries.length ? <span className="ms-2 rounded-full bg-brand-50 px-2 py-0.5 text-[11px] font-semibold text-brand-800">{t("official")}</span> : null}
+                        </span>
                         {st.nextRow ? (
                           <span dir="auto" className="block truncate text-sm text-muted">{t("next", { content: st.nextRow.content || st.nextRow.unit })}</span>
                         ) : null}

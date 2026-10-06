@@ -16,8 +16,10 @@ import { PrintHeader } from "@/features/logbook/print-header";
 import { parseAcademicYearId } from "@/shared/academic-year";
 import { subjectById } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
-import { defaultStart, parseProgression, progressStatus, ROW_MAX, schoolWeekOf, weekStart, type Progression, type ProgressionRow } from "./logic";
+import { defaultStart, parseProgression, rowsFromCurriculum, progressStatus, ROW_MAX, schoolWeekOf, weekStart, type Progression, type ProgressionRow } from "./logic";
 import { getProgression, saveProgression } from "./repo";
+import { useCurriculum } from "@/features/lessons/repo";
+import { curriculumId } from "@/features/lessons/logic";
 import { STATUS_STYLE } from "./planning-overview";
 
 export function ProgressionEditor({ classId, subjectId }: { classId: string; subjectId: string }) {
@@ -27,8 +29,9 @@ export function ProgressionEditor({ classId, subjectId }: { classId: string; sub
   const calendar = useCalendar();
   const tax = useTaxonomy(teacher.data?.profile.stage);
   const prog = useQuery({ queryKey: ["progression", uid ?? "", classId, subjectId], queryFn: () => getProgression(uid!, classId, subjectId), enabled: !!uid });
+  const curriculum = useCurriculum(cls.data ? curriculumId(cls.data.level, subjectId) : "");
 
-  if (!teacher.data || !cls.data || !calendar.data || !tax.data || prog.data === undefined) {
+  if (!teacher.data || !cls.data || !calendar.data || !tax.data || prog.data === undefined || (prog.data === null && curriculum.isLoading)) {
     return (
       <div role="status" className="grid place-items-center py-16">
         <LoaderCircle aria-hidden className="size-8 animate-spin text-brand-700" />
@@ -36,11 +39,15 @@ export function ProgressionEditor({ classId, subjectId }: { classId: string; sub
     );
   }
   const startYear = parseAcademicYearId(teacher.data.profile.activeYearId)?.startYear ?? new Date().getFullYear();
-  const initial: Progression = prog.data ?? { classId, subjectId, startDate: defaultStart(startYear), rows: [] };
-  return <Editor key={`${classId}-${subjectId}`} initial={initial} className={cls.data.displayName} subjectLabel={subjectById(tax.data, subjectId)?.label} />;
+  // لا توزيع محفوظ: نقترح التوزيع الرسمي من المنهاج المنشور
+  const startDate = defaultStart(startYear);
+  const official = !prog.data && !!curriculum.data?.entries.length;
+  const rows = official ? rowsFromCurriculum(curriculum.data!, schoolWeekOf(todayInAlgiers(), startDate, calendar.data.schoolDays, calendar.data.holidays)) : [];
+  const initial: Progression = prog.data ?? { classId, subjectId, startDate, rows };
+  return <Editor key={`${classId}-${subjectId}`} initial={initial} official={official} className={cls.data.displayName} subjectLabel={subjectById(tax.data, subjectId)?.label} />;
 }
 
-function Editor({ initial, className, subjectLabel }: { initial: Progression; className: string; subjectLabel?: { ar: string; fr: string } }) {
+function Editor({ initial, official, className, subjectLabel }: { initial: Progression; official: boolean; className: string; subjectLabel?: { ar: string; fr: string } }) {
   const t = useTranslations("planning");
   const locale = useLocale() as "ar" | "fr";
   const uid = useUid();
@@ -97,6 +104,7 @@ function Editor({ initial, className, subjectLabel }: { initial: Progression; cl
   return (
     <>
       <div className="space-y-4 pb-4 print:hidden">
+        {official && state !== "saved" && <p className="rounded-2xl bg-brand-50 p-3 text-sm text-brand-900">{t("officialHint")}</p>}
         <Card className="flex flex-wrap items-center gap-3">
           <div className="min-w-0 flex-1">
             <p className="text-sm text-muted">{t("whereAmI")} · {currentWeek ? t("week", { n: currentWeek }) : t("beforeStart")}</p>

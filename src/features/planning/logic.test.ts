@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { defaultStart, parseProgression, progressStatus, schoolWeekOf, weekStart } from "./logic.ts";
+import { defaultStart, parseProgression, progressStatus, schoolWeekOf, weekStart, rowsFromCurriculum } from "./logic.ts";
 
 const days = [0, 1, 2, 3, 4];
 
@@ -34,4 +34,12 @@ test("لصق توزيع جاهز", () => {
     [3, "", "المدرسة"],
     [5, "Séquence 2", "Les couleurs"],
   ]);
+});
+
+test("التوزيع من المنهاج: سطر لكل حصة، وما قبل الأسبوع الجاري منجز", () => {
+  const e = (o: number, u: number, s: number, t: string) => ({ id: String(o), o, s, k: "week" as const, u, a: "", d: "", t, b: false, sm: false });
+  const c = { weekMode: "absolute" as const, segments: [{ n: 1, title: "المقطع الأول" }], entries: [e(1, 2, 1, "أ"), e(2, 2, 1, "ب"), e(3, 3, 1, "ج")] };
+  const rows = rowsFromCurriculum(c, 3);
+  assert.deepEqual(rows.map((r) => [r.w, r.unit, r.content, r.done]), [[2, "المقطع الأول", "أ", true], [2, "المقطع الأول", "ب", true], [3, "المقطع الأول", "ج", false]]);
+  assert.equal(progressStatus(rows, 3).kind, "onTrack");
 });
