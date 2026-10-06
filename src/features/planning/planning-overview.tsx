@@ -69,7 +69,7 @@ export function PlanningOverview() {
 
       {active.map((c) => {
         // المواد ذات التوزيع أولًا
-        const subjects = [...c.subjectIds].sort((a, b) => Number(byId.has(progressionId(c.id, b))) - Number(byId.has(progressionId(c.id, a))));
+        const subjects = c.subjectIds.filter((s) => { const subj = subjectById(tax.data!, s); return !subj || subj.levels.includes(c.level); }).sort((a, b) => Number(byId.has(progressionId(c.id, b))) - Number(byId.has(progressionId(c.id, a))));
         return (
           <section key={c.id} aria-labelledby={`c-${c.id}`} className="space-y-2">
             <h2 id={`c-${c.id}`} className="text-lg font-bold" dir="ltr">{c.displayName}</h2>
