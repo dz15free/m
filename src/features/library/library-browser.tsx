@@ -80,10 +80,12 @@ export function LibraryBrowser() {
   const myLevels = new Set(active.map((c) => c.level));
   const mySubjects = new Set(active.flatMap((c) => c.subjectIds));
   const canMine = active.length > 0;
-  const useMine = canMine && mine && !level && !subject;
   // أستاذ الفرنسية أو الإنجليزية فقط: نبدأ بقسم لغته؛ غيره يبدأ بالكل
   const onlyLang = [...mySubjects].every((s) => s === "fr") ? "fr" : [...mySubjects].every((s) => s === "en") ? "en" : "";
   const lang = langPick ?? (mySubjects.size ? onlyLang : "");
+  // «لأقسامي» مع قسم لغة لا يدرّسها الأستاذ يعطي قائمة فارغة: نعرض حينها كل محتوى تلك اللغة
+  const teachesLang = !lang || lang === "ar" || mySubjects.has(lang);
+  const useMine = canMine && mine && !level && !subject && teachesLang;
   const presentLangs = LANGS.filter((l) => index.data.some((e) => inLang(e, l)));
 
   let results = search(index.data, query, { level, subject, type, lang });

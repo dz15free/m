@@ -24,6 +24,7 @@ import { cn } from "@/lib/utils/cn";
 import {
   durationMinutes,
   emptyLesson,
+  memoMinutes,
   FIELD_MAX,
   isBlank,
   LESSON_META_FIELDS,
@@ -61,7 +62,30 @@ const FR = {
   remarks: "Observations",
   seen: "Vu par M. le Directeur le",
   sign: "Signature et cachet",
+  classe: "Classe",
+  matiere: "Matière",
 };
+/* نفس النموذج لأستاذ الإنجليزية */
+const EN: typeof FR = {
+  title: "Daily logbook",
+  date: "Date",
+  project: "Project",
+  sequence: "Sequence",
+  week: "Week",
+  horaire: "Time",
+  duree: "Duration",
+  activites: "Activities",
+  composantes: "Competency components",
+  objectifs: "Learning objectives",
+  morning: "Morning",
+  afternoon: "Afternoon",
+  remarks: "Remarks",
+  seen: "Seen by the headmaster on",
+  sign: "Signature and stamp",
+  classe: "Class",
+  matiere: "Subject",
+};
+const FOREIGN = new Set(["fr", "en"]);
 
 type Row = { slot: Slot; key: string; entry: LessonEntry; sug: Suggestion | undefined };
 
@@ -157,6 +181,12 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
     }));
   /** ما يُعرض ويُطبع: المحفوظ، وإلا الحصة المقترحة من المذكرات */
   const effective = (r: Row): LessonEntry => (isBlank(r.entry) && r.sug ? suggestionToEntry(r.sug, r.entry) : r.entry);
+  /** مدة الحصة كما في المذكرة (مثل «30 mn»)، وإلا null — فتُحسب من الجدول */
+  const memoDuration = (r: Row, e: LessonEntry): number | null => {
+    const ref = e.ref || r.sug?.entry.id;
+    const ce = ref ? r.sug?.curriculum.entries.find((x) => x.id === ref) : undefined;
+    return memoMinutes(ce?.ss);
+  };
 
   const range = days.length ? `${formatLongDate(new Date(`${days[0]}T12:00:00`), locale)} — ${formatLongDate(new Date(`${days[days.length - 1]}T12:00:00`), locale)}` : "";
   const printDays = autoPrint && initialDate && days.includes(initialDate) ? [initialDate] : days;
@@ -231,7 +261,10 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
                           onClick={() => setEditing(r.key)}
                           className="flex w-full items-start gap-3 rounded-card bg-surface p-4 text-start shadow-card transition-shadow hover:shadow-md"
                         >
-                          <bdi dir="ltr" className="w-12 shrink-0 pt-0.5 text-sm font-semibold tabular-nums">{r.slot.start}</bdi>
+                          <span className="w-12 shrink-0 pt-0.5 text-center">
+                            <bdi dir="ltr" className="block text-sm font-semibold tabular-nums">{r.slot.start}</bdi>
+                            {memoDuration(r, shown) && <bdi dir="ltr" className="block text-[11px] text-muted">{memoDuration(r, shown)} min</bdi>}
+                          </span>
                           <span className="min-w-0 flex-1 space-y-0.5">
                             <span className="flex flex-wrap items-center gap-x-2 text-sm">
                               <bdi dir="ltr" className="font-bold">{classById.get(r.slot.classId)?.displayName}</bdi>
@@ -270,7 +303,10 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
         {printDays.map((date) => {
           const rows = rowsOf(date);
           if (!rows.length) return null;
-          const french = rows.every((r) => r.slot.subjectId === "fr");
+          // الفرنسية والإنجليزية (قسم أو أكثر): ورقة واحدة بالنموذج الفرنسي، وبالإنجليزية إن كانت كلها إنجليزية
+          const french = rows.every((r) => FOREIGN.has(r.slot.subjectId));
+          const L = rows.every((r) => r.slot.subjectId === "en") ? EN : FR;
+          const multiSubject = new Set(rows.map((r) => r.slot.subjectId)).size > 1;
           const shown = rows.map((r) => ({ ...r, e: effective(r) }));
           const periods = (["am", "pm"] as const).map((p) => ({ p, rows: shown.filter((r) => periodOf(r.slot.start) === p) })).filter((x) => x.rows.length);
           const notes = shown.map((r) => r.entry.notes).filter(Boolean).join(" — ");
@@ -282,41 +318,45 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
           if (french) {
             const seq = shown.find((r) => r.e.seq)?.e.seq ?? "";
             return (
-              <section key={date} dir="ltr" lang="fr" className="break-after-page text-[10pt] last:break-after-auto">
-                <h1 className="mb-1 text-center text-[13pt] font-bold">{FR.title}</h1>
+              <section key={date} dir="ltr" lang={L === EN ? "en" : "fr"} className="break-after-page text-[10pt] last:break-after-auto">
+                <h1 className="mb-1 text-center text-[13pt] font-bold">{L.title}</h1>
                 <div className="mb-2 grid grid-cols-3 gap-4">
-                  <p><b>{FR.date} :</b> {formatLongDate(dateObj, "fr")}</p>
-                  <p><b>{FR.project} :</b> ......................................</p>
-                  <p><b>{FR.sequence} :</b> {seq || "......................................"}</p>
+                  <p><b>{L.date} :</b> {formatLongDate(dateObj, "fr")}</p>
+                  <p><b>{L.project} :</b> ......................................</p>
+                  <p><b>{L.sequence} :</b> {seq || "......................................"}</p>
                 </div>
                 {periods.map(({ p, rows: pr }) => (
                   <table key={p} className="mb-3 w-full border-collapse">
-                    <caption className="pb-1 text-center text-[11pt] font-bold">{p === "am" ? FR.morning : FR.afternoon}</caption>
+                    <caption className="pb-1 text-center text-[11pt] font-bold">{p === "am" ? L.morning : L.afternoon}</caption>
                     <thead>
                       <tr className="bg-canvas">
-                        {[FR.horaire, FR.duree, ...(multiClass ? ["Classe"] : []), FR.activites, FR.composantes, FR.objectifs].map((h) => (
+                        {[L.horaire, L.duree, ...(multiClass ? [L.classe] : []), ...(multiSubject ? [L.matiere] : []), L.activites, L.composantes, L.objectifs].map((h) => (
                           <th key={h} className={`${cell} text-center font-semibold`}>{h}</th>
                         ))}
                       </tr>
                     </thead>
                     <tbody>
-                      {pr.map(({ slot, key, e }) => (
+                      {pr.map((r) => {
+                        const { slot, key, e } = r;
+                        return (
                         <tr key={key} className="break-inside-avoid align-top">
                           <td className={`${cell} w-24 whitespace-nowrap text-center`}>{slot.start} – {slot.end}</td>
-                          <td className={`${cell} w-14 text-center`}>{durationMinutes(slot.start, slot.end)} min</td>
+                          <td className={`${cell} w-14 text-center`}>{memoDuration(r, e) ?? durationMinutes(slot.start, slot.end)} min</td>
                           {multiClass && <td className={cell}>{classById.get(slot.classId)?.displayName}</td>}
+                          {multiSubject && <td className={cell}>{subjectById(taxonomy, slot.subjectId)?.label.fr}</td>}
                           <td className={`${cell} w-[24%]`} dir="auto">{[e.activity, e.title].filter(Boolean).join(" : ")}</td>
                           <td className={`${cell} w-[24%]`} dir="auto">{e.unit}</td>
                           <td className={`${cell} h-12`} dir="auto">{e.objective}</td>
                         </tr>
-                      ))}
+                        );
+                      })}
                     </tbody>
                   </table>
                 ))}
-                <p className="mt-3"><b>{FR.remarks} :</b> {notes || "................................................................................................................"}</p>
+                <p className="mt-3"><b>{L.remarks} :</b> {notes || "................................................................................................................"}</p>
                 <div className="mt-4 flex justify-between gap-6">
-                  <p><b>{FR.seen} :</b> ....................................</p>
-                  <p><b>{FR.sign} :</b> ....................................</p>
+                  <p><b>{L.seen} :</b> ....................................</p>
+                  <p><b>{L.sign} :</b> ....................................</p>
                 </div>
               </section>
             );

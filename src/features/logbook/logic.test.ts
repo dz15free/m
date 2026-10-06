@@ -37,3 +37,14 @@ test("تنظيف المذكّرة", async () => {
   assert.equal(c.content, "عائلتي");
   assert.equal(c.phases.build.situation, "أ\n\nب");
 });
+
+test("مدة الحصة كما في المذكرة", async () => {
+  const { memoMinutes } = await import("./logic.ts");
+  assert.equal(memoMinutes("Vocabulaire (30 mn)"), 30);
+  assert.equal(memoMinutes("Séance 1/3 (45 min)"), 45);
+  assert.equal(memoMinutes("Production (1h30)"), 90);
+  assert.equal(memoMinutes("Comptine — une demi-heure"), 30);
+  assert.equal(memoMinutes("نشاط ربع ساعة"), 15);
+  assert.equal(memoMinutes("Séance 1/3"), null);
+  assert.equal(memoMinutes(undefined), null);
+});

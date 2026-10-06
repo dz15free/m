@@ -63,6 +63,21 @@ export function durationMinutes(start: string, end: string): number {
   return Math.max(0, m(end) - m(start));
 }
 
+/** المدة المكتوبة في المذكرة («30 mn»، «45 min»، «1h30»، «une demi-heure»، «ربع ساعة»…) بالدقائق، أو null. */
+export function memoMinutes(text: string | undefined): number | null {
+  if (!text) return null;
+  const t = text.toLowerCase();
+  const hm = /(\d+)\s*h\s*(\d{1,2})?/.exec(t);
+  if (hm) return Number(hm[1]) * 60 + Number(hm[2] ?? 0);
+  const m = /(\d+)\s*(?:mn|min|minutes?|د(?:قيقة|قائق)?)(?![a-z\u0621-\u064A])/.exec(t);
+  if (m) return Number(m[1]);
+  if (/demi[- ]heure|نصف ساعة/.test(t)) return 30;
+  if (/quart d.heure|ربع ساعة/.test(t)) return 15;
+  if (/ساعة ونصف|une heure et demie/.test(t)) return 90;
+  if (/une heure|(?<![\u0621-\u064A])ساعة(?![\u0621-\u064A])/.test(t)) return 60;
+  return null;
+}
+
 /** الفترة الصباحية تنتهي قبل منتصف النهار؛ ما بدأ بعده فمسائي. */
 export const periodOf = (start: string): "am" | "pm" => (start < "12:00" ? "am" : "pm");
 
