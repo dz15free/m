@@ -32,3 +32,9 @@ test("ملفات التحضيري", () => {
   assert.equal(guessMeta(f("التحضيري/00- التحضيري رياضيات.pdf")).level, "PRE");
   assert.equal(guessMeta(f("التحضيري/00- التحضيري عربية.pdf")).subject, "ar");
 });
+
+test("دروس الإنجليزية 3PS ليست فرنسية", () => {
+  const g = guessMeta(f("English/3PS_Sequence1_Me_my_family_and_my_friends_Lesson_Plans.docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"));
+  assert.equal(g.subject, "en");
+  assert.equal(g.level, "3AP");
+});

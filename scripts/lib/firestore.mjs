@@ -72,3 +72,14 @@ export async function deleteDoc(path) {
   const res = await fetch(`${base}/${path}`, { method: "DELETE", headers: { Authorization: authHeader } });
   if (!res.ok && res.status !== 404) throw new Error(`${path}: ${res.status} ${await res.text()}`);
 }
+
+/** تعديل حقول محددة فقط في وثيقة (updateMask)، دون المساس بباقي الحقول. */
+export async function patchDoc(path, data) {
+  const mask = Object.keys(data).map((k) => `updateMask.fieldPaths=${encodeURIComponent(k)}`).join("&");
+  const res = await fetch(`${base}/${path}?${mask}`, {
+    method: "PATCH",
+    headers: { Authorization: authHeader, "Content-Type": "application/json" },
+    body: JSON.stringify({ fields: toFields(data) }),
+  });
+  if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text()}`);
+}

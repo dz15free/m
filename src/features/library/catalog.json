@@ -875,10 +875,10 @@
  {
   "id": "cat-fr-3ap",
   "title": {
-   "ar": "Fiches pédagogiques de français — 3e AP",
-   "fr": "بطاقات حصص الفرنسية — السنة الثالثة"
+   "ar": "بطاقات حصص الفرنسية — للسنة الرابعة (استدراك برنامج الثالثة)",
+   "fr": "Fiches pédagogiques de français — 4e AP (rattrapage du programme de 3e AP)"
   },
-  "level": "3AP",
+  "level": "4AP",
   "subject": "fr",
   "language": "fr",
   "type": "fiche",
@@ -2149,10 +2149,10 @@
  {
   "id": "cat-poster-fr-ferme",
   "title": {
-   "ar": "Référentiel : les animaux de la ferme",
-   "fr": "مرجع مصوّر: حيوانات المزرعة (فرنسية)"
+   "ar": "مرجع مصوّر بالفرنسية: حيوانات المزرعة — للسنة الرابعة (استدراك برنامج الثالثة)",
+   "fr": "Référentiel : les animaux de la ferme — 4e AP (rattrapage du programme de 3e AP)"
   },
-  "level": "3AP",
+  "level": "4AP",
   "subject": "fr",
   "language": "fr",
   "type": "poster",
@@ -2179,10 +2179,10 @@
  {
   "id": "cat-poster-fr-couleurs",
   "title": {
-   "ar": "Référentiel : les couleurs",
-   "fr": "مرجع مصوّر: الألوان (فرنسية)"
+   "ar": "مرجع مصوّر بالفرنسية: الألوان — للسنة الرابعة (استدراك برنامج الثالثة)",
+   "fr": "Référentiel : les couleurs — 4e AP (rattrapage du programme de 3e AP)"
   },
-  "level": "3AP",
+  "level": "4AP",
   "subject": "fr",
   "language": "fr",
   "type": "poster",
@@ -2209,8 +2209,8 @@
  {
   "id": "cat-poster-fr-5ap-seq1",
   "title": {
-   "ar": "Illustrations — 5e AP, séquence 1",
-   "fr": "رسومات المقطع الأول — فرنسية السنة الخامسة"
+   "ar": "رسومات المقطع الأول — فرنسية السنة الخامسة",
+   "fr": "Illustrations — 5e AP, séquence 1"
   },
   "level": "5AP",
   "subject": "fr",
@@ -2238,10 +2238,10 @@
  {
   "id": "cat-poster-fr-3ap-fig-p1",
   "title": {
-   "ar": "Figurines — 3e AP, projet 1",
-   "fr": "رسومات (Figurines) الفرنسية — السنة الثالثة، المشروع 1"
+   "ar": "رسومات (Figurines) الفرنسية — المشروع 1 — للسنة الرابعة (استدراك برنامج الثالثة)",
+   "fr": "Figurines — projet 1 — 4e AP (rattrapage du programme de 3e AP)"
   },
-  "level": "3AP",
+  "level": "4AP",
   "subject": "fr",
   "language": "fr",
   "type": "poster",
@@ -2310,10 +2310,10 @@
  {
   "id": "cat-poster-fr-3ap-fig-p2",
   "title": {
-   "ar": "Figurines — 3e AP, projet 2",
-   "fr": "رسومات (Figurines) الفرنسية — السنة الثالثة، المشروع 2"
+   "ar": "رسومات (Figurines) الفرنسية — المشروع 2 — للسنة الرابعة (استدراك برنامج الثالثة)",
+   "fr": "Figurines — projet 2 — 4e AP (rattrapage du programme de 3e AP)"
   },
-  "level": "3AP",
+  "level": "4AP",
   "subject": "fr",
   "language": "fr",
   "type": "poster",
@@ -2376,10 +2376,10 @@
  {
   "id": "cat-poster-fr-3ap-fig-p3",
   "title": {
-   "ar": "Figurines — 3e AP, projet 3",
-   "fr": "رسومات (Figurines) الفرنسية — السنة الثالثة، المشروع 3"
+   "ar": "رسومات (Figurines) الفرنسية — المشروع 3 — للسنة الرابعة (استدراك برنامج الثالثة)",
+   "fr": "Figurines — projet 3 — 4e AP (rattrapage du programme de 3e AP)"
   },
-  "level": "3AP",
+  "level": "4AP",
   "subject": "fr",
   "language": "fr",
   "type": "poster",
@@ -2442,10 +2442,10 @@
  {
   "id": "cat-poster-fr-3ap-fig-p4",
   "title": {
-   "ar": "Figurines — 3e AP, projet 4",
-   "fr": "رسومات (Figurines) الفرنسية — السنة الثالثة، المشروع 4"
+   "ar": "رسومات (Figurines) الفرنسية — المشروع 4 — للسنة الرابعة (استدراك برنامج الثالثة)",
+   "fr": "Figurines — projet 4 — 4e AP (rattrapage du programme de 3e AP)"
   },
-  "level": "3AP",
+  "level": "4AP",
   "subject": "fr",
   "language": "fr",
   "type": "poster",

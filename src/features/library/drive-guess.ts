@@ -13,8 +13,9 @@ const LEVELS: [string, RegExp][] = [
   ["5AP", /س\s*5(?!\d)|سنة\s*(?:ال)?خامس|السنة\s*الخامس|(?<![A-Za-z0-9])5\s*A\.?P(?![A-Za-z])|5e\s*(?:année|AP)|(?<![A-Za-z0-9])5PS(?![A-Za-z])/i],
 ];
 const SUBJECTS: [string, RegExp][] = [
+  // الإنجليزية أولًا: دروسها تحمل «Sequence» أيضًا (3PS_Sequence1_… Lesson Plans)
+  ["en", /انجليزي|إنجليزي|english|(?<![A-Za-z])\dPS(?![A-Za-z])|\bPS\b|allotment|lesson ?plans?/i],
   ["fr", /فرنسي|fran[cç]ais|fiche|progression|projet|s[ée]quence/i],
-  ["en", /انجليزي|إنجليزي|english|\bPS\b|allotment/i],
   ["islamic", /[اإ]سلامي/],
   ["civic", /مدني/],
   ["science", /علمي|تكنولوج/],
