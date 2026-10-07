@@ -60,3 +60,28 @@ test("الرابعة: الأسبوع الأول اليوم الأول = 10 + 30 
   };
   assert.deepEqual(frenchDayPlan(cur4, 13, 0)!.map((x) => x.ss), ["Négociation du projet (thème et tâche à réaliser) (10 mn)", "Oral / Compréhension (30 mn)", "Oral / Production (20 mn)"]);
 });
+
+test("الرابعة: البطاقات الكاملة (Présentation، Compréhension de l’écrit، Tâche) في أماكنها", () => {
+  const cur4 = {
+    level: "4AP",
+    subject: "fr",
+    segments: [{ n: 5, title: "Projet 1 : X — Séquence 1 : Tu habites où ? (Programme de la 4e A.P)" }],
+    entries: [
+      e(1, 16, 5, "Présentation du projet (45 mn)", "Présentation du projet — Tu habites où ?"),
+      e(2, 16, 5, "Oral compréhension (45 mn)", "Oral compréhension : Saluer — Tu habites où ?"),
+      e(3, 16, 5, "Compréhension de l’écrit 1 (45 mn)", "Compréhension de l’écrit 1 : L’immeuble blanc — Tu habites où ?"),
+      e(4, 16, 5, "Vocabulaire (45 mn)", "Vocabulaire : les articles — Tu habites où ?"),
+      e(5, 16, 5, "Oral production 1 (45 mn)", "Oral production 1 : Saluer — Tu habites où ?"),
+      e(6, 18, 5, "Grammaire (45 mn)", "Grammaire : Le nom — Tu habites où ?"),
+      e(7, 20, 5, "Oral production 2 (45 mn)", "Oral production 2 : Saluer — Tu habites où ?"),
+      e(8, 20, 5, "Production écrite (45 mn)", "Production écrite — Tu habites où ?"),
+      e(9, 20, 5, "Tâche 1 (30 mn)", "Tâche 1 : Je fabrique le présentoir — Tu habites où ?"),
+      e(10, 20, 5, "Evaluation (60 mn)", "Evaluation — Tu habites où ?"),
+      e(11, 19, 5, "Conjugaison (45 mn)", "Conjugaison : être — Tu habites où ?"),
+    ],
+  };
+  assert.deepEqual(frenchDayPlan(cur4, 16, 0)!.map((x) => x.id), ["id1", "id2", "id5"]);
+  assert.deepEqual(frenchDayPlan(cur4, 16, 1)!.map((x) => x.id), ["id3", "id4"]);
+  assert.deepEqual(frenchDayPlan(cur4, 20, 0)!.map((x) => x.id), ["id7", "id8"]);
+  assert.deepEqual(frenchDayPlan(cur4, 20, 1)!.map((x) => [x.id, x.t]), [["id8", "Production écrite — Tu habites où ?"], ["id9", "Je fabrique le présentoir — Tu habites où ?"], ["id10", "Evaluation — Tu habites où ?"]]);
+});

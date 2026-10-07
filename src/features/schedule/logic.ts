@@ -10,6 +10,8 @@ export type Slot = {
   end: string; // "09:00"
   classId: string;
   subjectId: string;
+  /** الحصة كما كُتبت في الجدول («فهم المنطوق»، «قراءة (الظاهرة النحوية)») — اختياري */
+  label?: string;
 };
 
 export type Calendar = {

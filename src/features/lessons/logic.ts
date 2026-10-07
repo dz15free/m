@@ -119,6 +119,9 @@ export function memoMinutes(text: string | undefined): number | null {
   const t = text.toLowerCase();
   const hm = /(\d+)\s*h\s*(\d{1,2})?/.exec(t);
   if (hm) return Number(hm[1]) * 60 + Number(hm[2] ?? 0);
+  // «1 سا»، «1سا30»، «6سا و30د»
+  const sa = /(\d+)\s*سا(?:عة|عات)?(?:\s*و?\s*(\d{1,2})\s*د?)?/.exec(t);
+  if (sa) return Number(sa[1]) * 60 + Number(sa[2] ?? 0);
   const m = /(\d+)\s*(?:mn|min|minutes?|د(?:قيقة|قائق)?)(?![a-z\u0621-\u064A])/.exec(t);
   if (m) return Number(m[1]);
   if (/demi[- ]heure|نصف ساعة/.test(t)) return 30;

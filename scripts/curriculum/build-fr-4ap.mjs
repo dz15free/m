@@ -4,14 +4,18 @@
  * ترتيب التدرّج: تتمة برنامج السنة الثالثة (المشروع 3 المقطع 3 + المشروع 4)، ثم المشروع 1 والمقطع 1 من المشروع 2.
  * توزيع الأسابيع وفق «الملحق 2» الوزاري (Le nouveau déroulement séquentiel de la 4e A.P).
  *
- *   node scripts/curriculum/build-fr-4ap.mjs <fiches.pdf> <out-dir>
+ * البطاقات الكاملة لكل مشروع («fiches_4AP_Projet1_complet»، «…Projet2_complet»: بطاقة لكل نشاط مع مدتها، أهدافها،
+ * مكوّن الكفاءة والسير) تحلّ محل بطاقات المقاطع نفسها في الملف الأول؛ صفحاتها «c:N» و«d:N»… بترتيب تمريرها.
+ *
+ *   node scripts/curriculum/build-fr-4ap.mjs <fiches.pdf> <out-dir> [projet1_complet.pdf projet2_complet.pdf …]
+ *   seed.mjs 4AP_fr --pdf=<fiches.pdf> --pdf-b=<diagnostic> --pdf-c=<projet1_complet.pdf> --pdf-d=<projet2_complet.pdf>
  */
 import { execFileSync } from "node:child_process";
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { composanteFor } from "./fr-composantes.mjs";
 
-const [pdf, outDir] = process.argv.slice(2);
+const [pdf, outDir, ...complets] = process.argv.slice(2);
 const nPages = Number(/Pages:\s+(\d+)/.exec(execFileSync("pdfinfo", [pdf]).toString())[1]);
 const squash = (s) => s.replace(/\s+/g, " ").trim();
 const SUPPORT = /^(Manuel|M\.S|Étiquettes|Etiquettes|Calendrier|Cartes|Images|Tableau|Plan|Ardoise|CD|Texte|Affiche|Cahier|Enregistrement|Photos|Fiches?|Dessins|Objets|Livre|Comptine|Support|Imagier|Abécédaire|Feuilles?|Papier|Crayons?|Dictionnaire|Chanson|Gravures?|Vidéo|Matériel)/i;
@@ -32,6 +36,44 @@ for (let n = 2; n <= nPages; n++) {
   fiches.push({ page: n, projet: Number(projet[1]), projetTitle: projet[2], seq: Number(seq[1]), seqTitle: seq[2], act, dur, seance: seance ? `${seance[1]}/${seance[2]}` : "", objectives, support });
 }
 
+// البطاقات الكاملة: «<Activité> — Durée : N mn» ثم «4ème AP — Projet p : … — Séquence s : …» ثم جدول الحقول
+const FIELD = String.raw`(?=Acte\(s\) de parole|Thème|Compétences? visée|Composante de la compétence|Compétences transversales|Valeurs mises|Objectif|Matériel didactique|Déroulement|$)`;
+const field = (t, label) => squash(new RegExp(`${label}\\s*:?\\s*(.*?)\\s*${FIELD}`).exec(t)?.[1] ?? "");
+const complete = [];
+// أخطاء نسخ في البطاقات الأصلية (هدف بطاقة أخرى منسوخ كما هو)
+const FIXES = {
+  "1:3:Orthographe": { objectives: ["Reconnaître et former le pluriel des noms en « s »"] },
+  "2:1:Tâche 1": { objectives: ["Amener l’apprenant à dessiner et écrire une carte de vœux", "Impliquer l’élève dans la réalisation de la tâche"] },
+};
+complets.forEach((file, k) => {
+  const key = String.fromCharCode(99 + k); // c, d, …
+  const n = Number(/Pages:\s+(\d+)/.exec(execFileSync("pdfinfo", [file]).toString())[1]);
+  for (let p = 1; p <= n; p++) {
+    const t = squash(execFileSync("pdftotext", ["-f", String(p), "-l", String(p), file, "-"]).toString());
+    const head = /^(.+?)\s+—\s+Durée\s*:\s*(\d+)\s*mn\s+4ème AP\s+—\s+Projet\s*(\d)\s*:\s*(.+?)\s+—\s+Séquence\s*(\d)\s*:\s*(.+?)\s+Acte/.exec(t);
+    if (!head) continue; // غلاف أو فهرس
+    const act = head[1].replace(/^Grammaire(\d)/, "Grammaire $1").replace(/\s*:$/, "");
+    complete.push({
+      page: `${key}:${p}`,
+      projet: Number(head[3]),
+      projetTitle: head[4],
+      seq: Number(head[5]),
+      seqTitle: head[6],
+      act,
+      dur: `${head[2]} mn`,
+      composante: field(t, "Composante de la compétence"),
+      theme: field(t, "Thème"),
+      acte: field(t, "Acte\\(s\\) de parole").replace(/\s*Compétences? visée.*$/, "").replace(/\.$/, ""),
+      objectives: field(t, "Objectif(?:\\(s\\)|s)?\\s*(?:d.apprentissage|à atteindre)").split(/\s+-\s*(?=[A-ZÉ])|\s*\.\s+(?=[A-ZÉ])/).map((o) => squash(o).replace(/^-\s*/, "")).filter(Boolean),
+      support: field(t, "Matériel didactique"),
+    });
+    const f = complete.at(-1);
+    Object.assign(f, FIXES[`${f.projet}:${f.seq}:${f.act}`] ?? {});
+    f.composante = f.composante.replace("Dire pour d’approprier", "Dire pour s’approprier");
+    f.theme = f.theme.replace("[■]", "[ɛ]");
+  }
+});
+
 // الملحق (2) — «Le nouveau déroulement séquentiel de la 4e A.P» (2026/2027):
 //   تتمة برنامج 3AP: المقطع = 6 ساعات (3 أسابيع بحصتين)؛ برنامج 4AP: المقطع = 8 ساعات (4 أسابيع) بهذا الترتيب:
 //   أ1 تفاوض/شفوي/قراءة 1/معجم — أ2 قراءة 2/قواعد/قراءة منهجية — أ3 طلاقة/تصريف/إملاء/صوتيات — أ4 إنتاج/تقويم.
@@ -44,12 +86,46 @@ const WEEK_OF_ACTIVITY = [
   [3, /Production/],
 ];
 const seqKeys = [...new Set(fiches.map((f) => `${f.projet}:${f.seq}`))];
+// أسبوع كل نشاط من البطاقات الكاملة في المقطع (4 أسابيع، ترتيب الملحق 2)
+const WEEK_OF_COMPLETE = [
+  [0, /Présentation|Oral compréhension|Oral production 1|Compréhension de l.écrit 1|Vocabulaire/],
+  [1, /Compréhension de l.écrit 2|Grammaire|Lecture systématique 1/],
+  [2, /Lecture systématique 2|Conjugaison|Orthographe|Dictée/],
+  [3, /Oral production 2|Préparation|Production écrite|Compte rendu|Comptine|Tâche|Evaluation/],
+];
 const PART = (f) => (fiches.indexOf(f) < fiches.findIndex((x) => x.projet === 1) ? "Suite du programme de la 3e A.P" : "Programme de la 4e A.P");
 const lessons = [];
 let cursor = 0;
 seqKeys.forEach((key, s) => {
-  const list = fiches.filter((f) => `${f.projet}:${f.seq}` === key);
-  const len = PART(list[0]).startsWith("Suite") ? 3 : 4;
+  const old = fiches.filter((f) => `${f.projet}:${f.seq}` === key);
+  const len = PART(old[0]).startsWith("Suite") ? 3 : 4;
+  const full = len === 4 ? complete.filter((f) => `${f.projet}:${f.seq}` === key) : [];
+  if (full.length) {
+    const weeks = WEEKS.slice(cursor, cursor + len);
+    cursor += len;
+    for (const f of full) {
+      const w = WEEK_OF_COMPLETE.find(([, re]) => re.test(f.act))?.[0];
+      if (w === undefined) throw new Error(`${f.page}: نشاط بلا أسبوع «${f.act}»`);
+      lessons.push({
+        order: lessons.length + 1,
+        segment: s + 1,
+        unitKind: "week",
+        unit: weeks[w],
+        session: `${f.act} (${f.dur})`,
+        activity: "Français",
+        domain: f.composante || composanteFor(f.act, "4AP") || f.act,
+        // الشفهي بلا «Thème»: موضوعه فعل الكلام («Oral production 1 : Saluer / prendre congé»)
+        topic: `${f.act}${f.theme ? ` : ${f.theme}` : /^Oral/.test(f.act) && f.acte ? ` : ${f.acte}` : ""} — ${old[0].seqTitle}`,
+        materials: f.support || "Manuel scolaire, tableau",
+        objectives: f.objectives,
+        body: "",
+        pages: [f.page],
+        sample: s === 0,
+      });
+    }
+    return;
+  }
+  const list = old;
   const weeks = WEEKS.slice(cursor, cursor + len);
   cursor += len;
   list.forEach((f, i) => {

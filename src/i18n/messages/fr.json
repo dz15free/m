@@ -560,6 +560,8 @@
     "saved": "Enregistré",
     "error": "Enregistrement impossible. Réessayez.",
     "overlap": "Chevauche une autre séance le même jour.",
+    "session": "Séance",
+    "sessionAuto": "Automatique (selon la durée)",
     "invalidTime": "L'heure de fin doit être après le début.",
     "copyDay": "Copier ce jour vers…",
     "copyConfirm": "Remplacer les séances du {day} par une copie de ce jour ?",

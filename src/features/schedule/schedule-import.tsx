@@ -264,13 +264,14 @@ function Importer({
     if (!uid || !ready) return;
     setSaving(true);
     const imported: Slot[] = chosen.map(
-      ({ day, start, end, classId, subjectId }) => ({
+      ({ day, start, end, classId, subjectId, label }) => ({
         id: newSlotId(),
         day,
         start,
         end,
         classId,
         subjectId,
+        ...(label ? { label } : {}),
       }),
     );
     const next = mode === "replace" ? imported : [...existing, ...imported];

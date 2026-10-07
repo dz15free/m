@@ -14,6 +14,7 @@ import { levelById, subjectById, type StageTaxonomy } from "@/shared/taxonomy/ta
 import { cn } from "@/lib/utils/cn";
 import { todayInAlgiers } from "@/features/attendance/logic";
 import { bySlotTime, copyDay, fromMinutes, isValidTime, newSlotId, overlaps, toMinutes, weekdayOf, type Slot } from "./logic";
+import { AR_LEVELS, AR_SESSIONS, arSessionOfLabel, formatMinutes } from "@/features/lessons/week-plan";
 import { saveSchedule, scheduleKey, useCalendar, useSchedule } from "./repo";
 
 type Draft = Omit<Slot, "id"> & { id: string | null };
@@ -176,7 +177,10 @@ function Editor({
                   <bdi dir="ltr" className="block font-bold">
                     {cls?.displayName ?? "—"}
                   </bdi>
-                  <span className="block truncate text-sm text-muted">{subjectById(taxonomy, s.subjectId)?.label[locale] ?? s.subjectId}</span>
+                  <span className="block truncate text-sm text-muted">
+                    {subjectById(taxonomy, s.subjectId)?.label[locale] ?? s.subjectId}
+                    {s.label ? ` — ${s.label}` : ""}
+                  </span>
                 </span>
                 <Pencil aria-hidden className="size-4 shrink-0 text-muted" />
               </button>
@@ -218,13 +222,24 @@ function Editor({
               </option>
             ))}
           </SelectField>
-          <SelectField label={t("subject")} value={draft.subjectId} onChange={(e) => setDraft({ ...draft, subjectId: e.target.value })}>
+          <SelectField label={t("subject")} value={draft.subjectId} onChange={(e) => setDraft({ ...draft, subjectId: e.target.value, label: undefined })}>
             {(classById.get(draft.classId)?.subjectIds ?? []).map((id) => (
               <option key={id} value={id}>
                 {subjectById(taxonomy, id)?.label[locale] ?? id}
               </option>
             ))}
           </SelectField>
+          {/* حصص العربية التسع (ساعة / نصف ساعة): تحديدها يضبط الدفتر اليومي، وإلا تُستنتج من المدة */}
+          {draft.subjectId === "ar" && AR_LEVELS.has(classById.get(draft.classId)?.level ?? "") && (
+            <SelectField label={t("session")} value={AR_SESSIONS[arSessionOfLabel(draft.label)]?.name ?? ""} onChange={(e) => setDraft({ ...draft, label: e.target.value || undefined })}>
+              <option value="">{t("sessionAuto")}</option>
+              {AR_SESSIONS.map((x) => (
+                <option key={x.name} value={x.name}>
+                  {x.name} ({formatMinutes(x.min)})
+                </option>
+              ))}
+            </SelectField>
+          )}
 
           {!valid && <p className="flex items-center gap-2 text-sm text-red-700"><CircleAlert aria-hidden className="size-4" />{t("invalidTime")}</p>}
           {clash && <p className="flex items-center gap-2 text-sm text-amber-800"><CircleAlert aria-hidden className="size-4" />{t("overlap")}</p>}
@@ -234,7 +249,9 @@ function Editor({
               type="button"
               disabled={!valid || !draft.classId || !draft.subjectId}
               onClick={() => {
-                const slot: Slot = { ...draft, id: draft.id ?? newSlotId() };
+                const { label, ...rest } = draft;
+                // Firestore يرفض القيم undefined
+                const slot: Slot = { ...rest, id: draft.id ?? newSlotId(), ...(label ? { label } : {}) };
                 persist([...slots.filter((s) => s.id !== slot.id), slot]);
                 setDraft(null);
               }}

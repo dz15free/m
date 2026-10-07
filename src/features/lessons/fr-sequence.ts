@@ -11,43 +11,43 @@ type Template = Act[][][]; // أسبوع ← يوم ← نشاطات
 const FR_4AP: Template = [
   [
     [
-      { name: "Négociation du projet (thème et tâche à réaliser)", min: 10, match: [/Acte de parole/i] },
-      { name: "Oral / Compréhension", min: 30, match: [/Acte de parole/i] },
-      { name: "Oral / Production", min: 20, match: [/Acte de parole/i, /Oral production/i] },
+      { name: "Négociation du projet (thème et tâche à réaliser)", min: 10, match: [/Présentation du projet/i, /Acte de parole/i] },
+      { name: "Oral / Compréhension", min: 30, match: [/Oral compréhension/i, /Acte de parole/i] },
+      { name: "Oral / Production", min: 20, match: [/Oral production 1/i, /Oral production/i] },
     ],
     [
-      { name: "Lecture / Compréhension (texte 1)", min: 30, match: [/Lecture compréhension/i] },
-      { name: "Lexique", min: 30, match: [/Lexique/i] },
-    ],
-  ],
-  [
-    [
-      { name: "Lecture / Compréhension (texte 2)", min: 30, match: [/Lecture compréhension/i] },
-      { name: "Grammaire 1", min: 30, match: [/Grammaire/i] },
-    ],
-    [
-      { name: "Lecture systématique", min: 30, match: [/Lecture systématique/i] },
-      { name: "Grammaire 2", min: 30, match: [/Grammaire/i], nth: 1 },
+      { name: "Lecture / Compréhension (texte 1)", min: 30, match: [/Compréhension de l.écrit 1/i, /Lecture compréhension/i] },
+      { name: "Lexique", min: 30, match: [/Vocabulaire/i, /Lexique/i] },
     ],
   ],
   [
     [
-      { name: "Entraînement à la lecture fluence", min: 30, match: [/fluence/i] },
+      { name: "Lecture / Compréhension (texte 2)", min: 30, match: [/Compréhension de l.écrit 2/i, /Lecture compréhension/i] },
+      { name: "Grammaire 1", min: 30, match: [/Grammaire 1/i, /Grammaire/i] },
+    ],
+    [
+      { name: "Lecture systématique", min: 30, match: [/Lecture systématique 1/i, /Lecture systématique/i] },
+      { name: "Grammaire 2", min: 30, match: [/Grammaire 2/i, /Grammaire/i] },
+    ],
+  ],
+  [
+    [
+      { name: "Entraînement à la lecture fluence", min: 30, match: [/fluence/i, /Lecture systématique 2/i] },
       { name: "Conjugaison", min: 30, match: [/Conjugaison/i] },
     ],
     [
       { name: "Orthographe", min: 40, match: [/Orthographe/i] },
-      { name: "Phonétique articulatoire ou dictée", min: 20, match: [/Phonétique/i, /Dictée/i] },
+      { name: "Phonétique articulatoire ou dictée", min: 20, match: [/Dictée/i, /Phonétique/i, /Lecture systématique 2/i] },
     ],
   ],
   [
     [
-      { name: "Production orale (entraînement et mobilisation)", min: 30, match: [/Production/i] },
-      { name: "Production écrite (jet 1 + jet 2)", min: 30, match: [/Production/i] },
+      { name: "Production orale (entraînement et mobilisation)", min: 30, match: [/Oral production 2/i, /Préparation à l.écrit/i, /Production orale/i] },
+      { name: "Production écrite (jet 1 + jet 2)", min: 30, match: [/Production écrite/i, /Production orale \/ écrite/i] },
     ],
     [
-      { name: "Compte rendu", min: 20, match: [/Compte rendu/i, /Production/i] },
-      { name: "Réalisation (partielle / finale) du projet", min: 20, match: [/Réalisation/i] },
+      { name: "Compte rendu", min: 20, match: [/Compte rendu/i, /Production écrite/i] },
+      { name: "Réalisation (partielle / finale) du projet", min: 20, match: [/Tâche/i, /Réalisation/i] },
       { name: "Évaluation séquentielle", min: 20, match: [/[ÉE]valuation/i] },
     ],
   ],

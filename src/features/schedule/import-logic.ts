@@ -14,6 +14,8 @@ export type ImportSubject = { id: string; label: { ar: string; fr: string } };
 export type DraftSlot = Omit<Slot, "id"> & {
   key: string;
   raw: string;
+  /** جزء من خانة قُسّمت حسب المدد المكتوبة («(1سا)»، «(30)»): لا يُدمج مع جاره */
+  split?: boolean;
   /** ok: القسم والمادة معروفان؛ check: ينقص أحدهما (يختاره الأستاذ) */
   status: "ok" | "check";
   include: boolean;
@@ -171,6 +173,59 @@ export function matchClass(text: string, classes: ImportClass[]): string | null 
 
 const EMPTY = /^(|-+|—|–|x|\/|راحه|فراغ|استراحه|pause|recreation|libre)$/;
 
+// ── المدد داخل الخانة ─────────────────────────────────────
+
+const toLatinDigits = (t: string) => t.normalize("NFKC").replace(/[٠-٩]/g, (d) => String(d.charCodeAt(0) - 0x660));
+// «(1سا)»، «(1 سا 30)»، «(30)»، «(30 د)»، «(45mn)»، وبلا أقواس مع الوحدة: «1سا»، «30د»
+const DURATION = /\(\s*(\d{1,3})\s*(سا(?:عة|عات)?|س|h|د(?:قيقة|قائق)?|mn|min)?\s*(\d{1,2})?\s*(?:د|mn|min)?\s*\)?(?=\s|$|[^\d])|(?<![\d\p{L}])(\d{1,2})\s*(سا(?:عة|عات)?|د(?:قيقة|قائق)?)(?:\s*و?\s*(\d{1,2})\s*د)?(?!\p{L})/gu;
+
+function durationOf(n: string, unit: string | undefined, extra: string | undefined): number {
+  const v = Number(n);
+  if (unit && /^(سا|س|h)/.test(unit)) return v * 60 + Number(extra ?? 0);
+  if (unit) return v;
+  return v <= 4 ? v * 60 : v; // «(1)» ساعة، «(30)» دقيقة
+}
+
+/** أجزاء خانة حسب المدد المكتوبة: «قراءة (1سا) تربية إسلامية (30)» ⇒ [قراءة 60، تربية إسلامية 30]. */
+export function splitByDurations(text: string): { text: string; minutes: number | null }[] {
+  const t = toLatinDigits(text);
+  const out: { text: string; minutes: number | null }[] = [];
+  let last = 0;
+  for (const m of t.matchAll(DURATION)) {
+    if (m[0].startsWith("(") && !m[0].trimEnd().endsWith(")") && m[2] === undefined) continue; // «(1» ناقصة بلا وحدة: ليست مدة
+    const minutes = m[1] !== undefined ? durationOf(m[1], m[2], m[3]) : durationOf(m[4]!, m[5], m[6]);
+    if (minutes < 10 || minutes > 240) continue;
+    const piece = t.slice(last, m.index).replace(/^[\s/|+\-–—،,]+|[\s/|+\-–—،,]+$/g, "");
+    last = m.index! + m[0].length;
+    const prev = out.at(-1);
+    // مدة في خانة وحدها بعد اسم المادة: تعود إليه
+    if (!/\p{L}/u.test(piece)) {
+      if (prev && prev.minutes === null) prev.minutes = minutes;
+      continue;
+    }
+    out.push({ text: piece, minutes });
+  }
+  const tail = t.slice(last).replace(/^[\s/|+\-–—،,]+|[\s/|+\-–—،,]+$/g, "");
+  if (/\p{L}/u.test(tail)) out.push({ text: tail, minutes: null });
+  return out;
+}
+
+/** توزيع خانة زمنية على أجزائها: المدد المكتوبة كما هي، والباقي بالتساوي على ما لا مدة له؛ الأخير ينتهي بنهاية الخانة. */
+export function allocate(start: string, end: string, parts: { minutes: number | null }[]): { start: string; end: string }[] {
+  const a = toMinutes(start);
+  const b = toMinutes(end);
+  const known = parts.reduce((n, p) => n + (p.minutes ?? 0), 0);
+  const unknown = parts.filter((p) => p.minutes === null).length;
+  const share = unknown ? Math.max(0, Math.round((b - a - known) / unknown / 5) * 5) : 0;
+  let t = a;
+  return parts.map((p, i) => {
+    const s = Math.min(t, b);
+    const e = i === parts.length - 1 && (p.minutes === null || t + p.minutes > b || unknown === 0 && known >= b - a) ? b : Math.min(b, t + (p.minutes ?? share));
+    t = e;
+    return { start: fromMinutes(s), end: fromMinutes(e) };
+  });
+}
+
 // ── التحليل ───────────────────────────────────────────────
 
 export function parseTimetable(grid: Grid, ctx: { classes: ImportClass[]; subjects: ImportSubject[] }): ParseOutcome {
@@ -226,6 +281,14 @@ export function parseTimetable(grid: Grid, ctx: { classes: ImportClass[]; subjec
     });
   }
 
+  // عنوان وقت مدموج على عدة أعمدة (خانة الفترة مقسومة لمادتين): العمود بلا عنوان يتبع العمود الموقوت قبله
+  const blockOf: number[] = columnTimes.map((_, c) => c);
+  for (let c = 1; c < columnTimes.length; c++) {
+    if (columnTimes[c] || c === dayIndex || (T[timeRow]![c] ?? "").trim()) continue;
+    const owner = blockOf[c - 1]!;
+    if (columnTimes[owner] && owner !== dayIndex) blockOf[c] = owner;
+  }
+
   const singleClass = ctx.classes.length === 1 ? ctx.classes[0]! : null;
   const out: DraftSlot[] = [];
   let seq = 0;
@@ -238,29 +301,49 @@ export function parseTimetable(grid: Grid, ctx: { classes: ImportClass[]; subjec
     const day = parsed ?? (dayText ? null : lastDay);
     if (parsed !== null) lastDay = parsed;
     if (day === null) continue;
+    // خانات الفترات: نص كل أعمدتها بالترتيب
+    const blocks = new Map<number, string[]>();
     T[r]!.forEach((raw, c) => {
-      const time = columnTimes[c];
-      if (!time || c === dayIndex) return;
+      const b = blockOf[c]!;
+      if (!columnTimes[b] || c === dayIndex) return;
       const text = raw.trim();
-      if (EMPTY.test(nameKey(text))) return;
-      const classId = matchClass(text, ctx.classes) ?? singleClass?.id ?? "";
-      const cls = ctx.classes.find((k) => k.id === classId);
-      const pool = cls ? ctx.subjects.filter((s) => cls.subjectIds.includes(s.id)) : ctx.subjects;
-      let subjectId = matchSubject(text, pool) ?? "";
-      // أستاذ مادة واحدة: الخلية تذكر القسم فقط
-      if (!subjectId && cls && cls.subjectIds.length === 1) subjectId = cls.subjectIds[0]!;
-      out.push({
-        key: `s${++seq}`,
-        day,
-        start: time.start,
-        end: time.end,
-        classId,
-        subjectId,
-        raw: text,
-        status: classId && subjectId ? "ok" : "check",
-        include: true,
-      });
+      if (!text || EMPTY.test(nameKey(text))) return;
+      blocks.set(b, [...(blocks.get(b) ?? []), text]);
     });
+    for (const [b, texts] of blocks) {
+      const time = columnTimes[b]!;
+      const whole = texts.join(" ");
+      const pieces = texts.flatMap((x) => {
+        const p = splitByDurations(x);
+        return p.length ? p : [{ text: x, minutes: null }];
+      });
+      const split = pieces.length > 1 || pieces.some((p) => p.minutes !== null);
+      const times = split ? allocate(time.start, time.end, pieces) : [time];
+      pieces.forEach((piece, i) => {
+        const text = split ? piece.text : whole;
+        if (EMPTY.test(nameKey(text))) return;
+        const classId = matchClass(text, ctx.classes) ?? matchClass(whole, ctx.classes) ?? singleClass?.id ?? "";
+        const cls = ctx.classes.find((k) => k.id === classId);
+        const pool = cls ? ctx.subjects.filter((s) => cls.subjectIds.includes(s.id)) : ctx.subjects;
+        let subjectId = matchSubject(text, pool) ?? "";
+        // أستاذ مادة واحدة: الخلية تذكر القسم فقط
+        if (!subjectId && cls && cls.subjectIds.length === 1) subjectId = cls.subjectIds[0]!;
+        const { start, end } = times[i]!;
+        if (toMinutes(end) <= toMinutes(start)) return;
+        out.push({
+          key: `s${++seq}`,
+          day,
+          start,
+          end,
+          classId,
+          subjectId,
+          raw: split ? piece.text : whole,
+          ...(split ? { split: true, label: piece.text.slice(0, 60) } : {}),
+          status: classId && subjectId ? "ok" : "check",
+          include: true,
+        });
+      });
+    }
   }
   if (!out.length) return { ok: false, reason: "empty" };
   return { ok: true, slots: mergeContiguous(out), orientation };
@@ -272,7 +355,7 @@ export function mergeContiguous(slots: DraftSlot[]): DraftSlot[] {
   const out: DraftSlot[] = [];
   for (const s of sorted) {
     const prev = out.at(-1);
-    if (prev && prev.day === s.day && prev.end === s.start && prev.classId === s.classId && prev.subjectId === s.subjectId && prev.classId && prev.subjectId) {
+    if (prev && !prev.split && !s.split && prev.day === s.day && prev.end === s.start && prev.classId === s.classId && prev.subjectId === s.subjectId && prev.classId && prev.subjectId) {
       prev.end = s.end;
       continue;
     }

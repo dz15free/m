@@ -9,6 +9,7 @@ import { defaultStart, schoolWeekOf } from "@/features/planning/logic";
 import type { Calendar, Slot } from "@/features/schedule/logic";
 import { durationMinutes, type LessonEntry } from "@/features/logbook/logic";
 import { frenchDayPlan } from "./fr-sequence";
+import { arabicWeekPlan, mathWeekPlan, type PlanRef } from "./week-plan";
 import { curriculumId, suggestPartsForWeek, weeksOf, type Curriculum, type CurriculumEntry, type LessonSummary } from "./logic";
 
 export type Suggestion = {
@@ -85,7 +86,7 @@ export function useNotebookSuggestions(args: {
   const start = defaultStart(args.startYear);
   const picked = new Map<string, Omit<Suggestion, "summary" | "partSummaries">>();
   // تجميع حصص كل (قسم، مادة) حسب الأسبوع الدراسي
-  const groups = new Map<string, { cur: Curriculum; week: number; refs: { key: string; date: string; start: string; minutes?: number }[] }>();
+  const groups = new Map<string, { cur: Curriculum; week: number; refs: PlanRef[] }>();
   for (const r of args.rows) {
     const cls = classById.get(r.slot.classId);
     const cur = cls && curricula.get(curriculumId(cls.level, r.slot.subjectId));
@@ -93,13 +94,17 @@ export function useNotebookSuggestions(args: {
     const week = schoolWeekOf(r.date, start, args.calendar.schoolDays, args.calendar.holidays);
     const gk = `${r.slot.classId}|${r.slot.subjectId}|${week}`;
     const g = groups.get(gk) ?? { cur, week, refs: [] };
-    // تجميع عدة نشاطات في الحصة الواحدة خاص بدفتر الفرنسية
-    g.refs.push({ key: r.key, date: r.date, start: r.slot.start, minutes: r.slot.subjectId === "fr" ? durationMinutes(r.slot.start, r.slot.end) : undefined });
+    g.refs.push({ key: r.key, date: r.date, start: r.slot.start, minutes: durationMinutes(r.slot.start, r.slot.end), label: r.slot.label });
     groups.set(gk, g);
   }
   for (const g of groups.values()) {
     const weeks = weeksOf(g.cur);
-    const map = suggestPartsForWeek(weeks, g.week, g.refs, args.calendar.schoolDays);
+    // العربية والرياضيات: حسب مدد الجدول (ساعة / نصف ساعة)؛ وإلا ترتيب المذكرات حصة لحصة
+    // (تجميع عدة نشاطات من المذكرات في الحصة الواحدة خاص بالفرنسية)
+    const map =
+      arabicWeekPlan(g.cur, g.week, g.refs) ??
+      mathWeekPlan(g.cur, g.week, g.refs) ??
+      suggestPartsForWeek(weeks, g.week, g.cur.subject === "fr" ? g.refs : g.refs.map((r) => ({ ...r, minutes: undefined })), args.calendar.schoolDays);
     const order = [...g.refs].sort((a, b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start));
     let sessionNo = 0;
     order.forEach((ref, i) => {

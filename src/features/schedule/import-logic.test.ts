@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { matchClass, matchSubject, parseDay, parseSingleTime, parseTimeRange, parseTimetable, type ImportClass, type ImportSubject } from "./import-logic.ts";
+import { matchClass, matchSubject, parseDay, parseSingleTime, parseTimeRange, parseTimetable, splitByDurations, allocate, type ImportClass, type ImportSubject } from "./import-logic.ts";
 
 const g = (rows: string[][]) => rows.map((r) => r.map((text) => ({ text })));
 const SUBJECTS: ImportSubject[] = [
@@ -118,4 +118,58 @@ test("المواد رغم أخطاء التعرّف", () => {
   assert.equal(matchSubject("رياضيت", SUBJECTS), "math");
   assert.equal(matchSubject("فرنسبة", SUBJECTS), "fr");
   assert.equal(matchSubject("قراعة", SUBJECTS), "ar");
+});
+
+test("المدد داخل الخانة: «(1سا)» و«(30)»", () => {
+  assert.deepEqual(splitByDurations("رياضيات (1سا) تربية إسلامية (30)"), [
+    { text: "رياضيات", minutes: 60 },
+    { text: "تربية إسلامية", minutes: 30 },
+  ]);
+  assert.deepEqual(splitByDurations("قراءة (الظاهرة النحوية) (1سا)"), [{ text: "قراءة (الظاهرة النحوية)", minutes: 60 }]);
+  assert.deepEqual(splitByDurations("فهم المنطوق (٣٠) التعبير الشفوي (30د)"), [
+    { text: "فهم المنطوق", minutes: 30 },
+    { text: "التعبير الشفوي", minutes: 30 },
+  ]);
+  assert.deepEqual(splitByDurations("3AP-01 رياضيات"), [{ text: "3AP-01 رياضيات", minutes: null }]);
+  assert.deepEqual(allocate("08:00", "09:30", [{ minutes: 60 }, { minutes: 30 }]), [
+    { start: "08:00", end: "09:00" },
+    { start: "09:00", end: "09:30" },
+  ]);
+  assert.deepEqual(allocate("13:00", "15:00", [{ minutes: 30 }, { minutes: 30 }, { minutes: null }]), [
+    { start: "13:00", end: "13:30" },
+    { start: "13:30", end: "14:00" },
+    { start: "14:00", end: "15:00" },
+  ]);
+});
+
+test("جدول بخانات مقسومة: فترة 8:00–9:30 لمادتين، وعنوان وقت مدموج", () => {
+  const classes = [{ id: "c4", level: "4AP", section: "01", displayName: "4AP-01", subjectIds: ["ar", "math", "islamic", "civic", "music", "art"] }];
+  const subjects = ["ar", "math", "islamic", "civic", "music", "art"].map((id) => ({ id, label: { ar: id, fr: id } }));
+  const g = (rows: string[][]) => rows.map((r) => r.map((text) => ({ text })));
+  const res = parseTimetable(
+    g([
+      ["الأيام", "من 8:00 إلى 9:30", "", "من 9:45 إلى 11:15", "من 13:00 إلى 15:00", ""],
+      ["الأحد", "رياضيات (1سا)", "تربية إسلامية (30)", "قراءة أداء فهم (1سا) رياضيات (30)", "فهم المنطوق (30) التعبير الشفوي (30)", "تربية موسيقية"],
+      ["الاثنين", "قراءة (الظاهرة النحوية) (1سا) تربية إسلامية (30)", "", "الإنتاج الشفوي (30)", "تربية مدنية", "تربية تشكيلية"],
+      ["الثلاثاء", "رياضيات", "", "", "", ""],
+    ]),
+    { classes, subjects },
+  );
+  assert.ok(res.ok);
+  const show = res.slots.map((s) => `${s.day} ${s.start}-${s.end} ${s.subjectId}${s.label ? ` «${s.label}»` : ""}`);
+  assert.deepEqual(show, [
+    "0 08:00-09:00 math «رياضيات»",
+    "0 09:00-09:30 islamic «تربية إسلامية»",
+    "0 09:45-10:45 ar «قراءة أداء فهم»",
+    "0 10:45-11:15 math «رياضيات»",
+    "0 13:00-13:30 ar «فهم المنطوق»",
+    "0 13:30-14:00 ar «التعبير الشفوي»",
+    "0 14:00-15:00 music «تربية موسيقية»",
+    "1 08:00-09:00 ar «قراءة (الظاهرة النحوية)»",
+    "1 09:00-09:30 islamic «تربية إسلامية»",
+    "1 09:45-10:15 ar «الإنتاج الشفوي»",
+    "1 13:00-14:00 civic «تربية مدنية»",
+    "1 14:00-15:00 art «تربية تشكيلية»",
+    "2 08:00-09:30 math",
+  ]);
 });
