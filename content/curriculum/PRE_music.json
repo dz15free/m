@@ -1,0 +1,142 @@
+{
+ "id": "PRE_music",
+ "level": "PRE",
+ "subject": "music",
+ "title": "التربية الموسيقية — التربية التحضيرية",
+ "source": {
+  "ar": "مذكرات الإنشاد — القسم التحضيري (منشورة للعموم)",
+  "fr": "Fiches de chant — préscolaire"
+ },
+ "weekMode": "absolute",
+ "segments": {
+  "1": "السنة التحضيرية"
+ },
+ "lessons": [
+  {
+   "order": 1,
+   "segment": 1,
+   "segmentTitle": "السنة التحضيرية",
+   "unitKind": "week",
+   "unit": 2,
+   "session": "المذكرة 1",
+   "activity": "تربية موسيقية",
+   "domain": "الإنشاد",
+   "topic": "أغنية الأرقام",
+   "materials": "علب",
+   "objectives": [
+    "يحيط بالمعنى الإجمالي للأنشودة.",
+    "يحفظ أبيات الأنشودة تدريجيًا ويؤديها بإيقاع سليم."
+   ],
+   "body": "",
+   "pages": [
+    1
+   ],
+   "sample": true
+  },
+  {
+   "order": 2,
+   "segment": 1,
+   "segmentTitle": "السنة التحضيرية",
+   "unitKind": "week",
+   "unit": 7,
+   "session": "المذكرة 2",
+   "activity": "تربية موسيقية",
+   "domain": "الإنشاد",
+   "topic": "أغنية السيارة",
+   "materials": "سيارة لعبة",
+   "objectives": [
+    "يحيط بالمعنى الإجمالي للأنشودة.",
+    "يحفظ أبيات الأنشودة تدريجيًا ويؤديها بإيقاع سليم."
+   ],
+   "body": "",
+   "pages": [
+    2
+   ],
+   "sample": true
+  },
+  {
+   "order": 3,
+   "segment": 1,
+   "segmentTitle": "السنة التحضيرية",
+   "unitKind": "week",
+   "unit": 12,
+   "session": "المذكرة 3",
+   "activity": "تربية موسيقية",
+   "domain": "الإنشاد",
+   "topic": "أغنية العلم",
+   "materials": "العلم الوطني",
+   "objectives": [
+    "يحيط بالمعنى الإجمالي للأنشودة.",
+    "يحفظ أبيات الأنشودة تدريجيًا ويؤديها بإيقاع سليم."
+   ],
+   "body": "",
+   "pages": [
+    3
+   ],
+   "sample": false
+  },
+  {
+   "order": 4,
+   "segment": 1,
+   "segmentTitle": "السنة التحضيرية",
+   "unitKind": "week",
+   "unit": 17,
+   "session": "المذكرة 4",
+   "activity": "تربية موسيقية",
+   "domain": "الإنشاد",
+   "topic": "أغنية اللعب",
+   "materials": "أدوات اللعب",
+   "objectives": [
+    "يحيط بالمعنى الإجمالي للأنشودة.",
+    "يحفظ أبيات الأنشودة تدريجيًا ويؤديها بإيقاع سليم."
+   ],
+   "body": "",
+   "pages": [
+    4
+   ],
+   "sample": false
+  },
+  {
+   "order": 5,
+   "segment": 1,
+   "segmentTitle": "السنة التحضيرية",
+   "unitKind": "week",
+   "unit": 22,
+   "session": "المذكرة 5",
+   "activity": "تربية موسيقية",
+   "domain": "الإنشاد",
+   "topic": "أغنية «حان الدرس»",
+   "materials": "جرس",
+   "objectives": [
+    "يحيط بالمعنى الإجمالي للأنشودة.",
+    "يحفظ أبيات الأنشودة تدريجيًا ويؤديها بإيقاع سليم."
+   ],
+   "body": "",
+   "pages": [
+    5
+   ],
+   "sample": false
+  },
+  {
+   "order": 6,
+   "segment": 1,
+   "segmentTitle": "السنة التحضيرية",
+   "unitKind": "week",
+   "unit": 27,
+   "session": "المذكرة 6",
+   "activity": "تربية موسيقية",
+   "domain": "الإنشاد",
+   "topic": "أغنية الطائر الصغير",
+   "materials": "صورة طائر",
+   "objectives": [
+    "يحيط بالمعنى الإجمالي للأنشودة.",
+    "يحفظ أبيات الأنشودة تدريجيًا ويؤديها بإيقاع سليم."
+   ],
+   "body": "",
+   "pages": [
+    6
+   ],
+   "sample": false
+  }
+ ]
+}

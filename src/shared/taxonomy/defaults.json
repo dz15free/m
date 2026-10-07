@@ -21,7 +21,7 @@
       { "id": "tamazight", "label": { "ar": "اللغة الأمازيغية", "fr": "Tamazight" }, "levels": ["3AP", "4AP", "5AP"] },
       { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation artistique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
       { "id": "music", "label": { "ar": "التربية الموسيقية", "fr": "Éducation musicale" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
-      { "id": "pe", "label": { "ar": "التربية البدنية", "fr": "Éducation physique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] }
+      { "id": "pe", "label": { "ar": "التربية البدنية", "fr": "Éducation physique" }, "levels": ["1AP", "2AP", "3AP", "4AP", "5AP"] }
     ]
   },
   "middle": {

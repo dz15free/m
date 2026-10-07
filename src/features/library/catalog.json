@@ -2516,5 +2516,131 @@
     "size": null
    }
   ]
+ },
+ {
+  "id": "cat-fiche-pre-islamic",
+  "title": {
+   "ar": "مذكرات التربية الإسلامية — التربية التحضيرية",
+   "fr": "Fiches d’éducation islamique — préscolaire"
+  },
+  "level": "PRE",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تحضيري",
+   "مذكرات",
+   "قرآن",
+   "عقيدة",
+   "أخلاق"
+  ],
+  "excerpt": "15 مذكرة: الشهادتان، السور القصيرة، الطهارة، الصدق، الطاعة، الأمانة، آداب الأكل…",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1wjunDNF-Ii85iLohQIKLy3hTsBbGgneS",
+    "name": "مذكرات التربية الإسلامية — التحضيري.pdf",
+    "mime": "application/pdf",
+    "size": 536439
+   }
+  ]
+ },
+ {
+  "id": "cat-fiche-pre-civic",
+  "title": {
+   "ar": "مذكرات التربية المدنية — التربية التحضيرية",
+   "fr": "Fiches d’éducation civique — préscolaire"
+  },
+  "level": "PRE",
+  "subject": "civic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تحضيري",
+   "مذكرات",
+   "حقوق",
+   "أخطار",
+   "العلم الوطني"
+  ],
+  "excerpt": "15 مذكرة: مكان ميلادي، حقوقي، المهن، التعاون، الأخطار، أيام الأسبوع، العلم والنشيد الوطني…",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1JU-hIICowJCi_YtlDx5iN1xe9JpmOYIz",
+    "name": "مذكرات التربية المدنية — التحضيري.pdf",
+    "mime": "application/pdf",
+    "size": 869982
+   }
+  ]
+ },
+ {
+  "id": "cat-fiche-pre-art",
+  "title": {
+   "ar": "بطاقات التربية التشكيلية (تلوين) — التربية التحضيرية",
+   "fr": "Fiches d’éducation artistique (coloriage) — préscolaire"
+  },
+  "level": "PRE",
+  "subject": "art",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تحضيري",
+   "مذكرات",
+   "تلوين",
+   "رسم"
+  ],
+  "excerpt": "20 بطاقة تلوين جماعي مع خطوات الحصة: اختيار الألوان المناسبة والدقة في التلوين.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1k7R47b6JvgRyv_ki917MNbUEK2CePHah",
+    "name": "التربية التشكيلية — التحضيري.pdf",
+    "mime": "application/pdf",
+    "size": 890262
+   }
+  ]
+ },
+ {
+  "id": "cat-fiche-pre-music",
+  "title": {
+   "ar": "مذكرات التربية الموسيقية (إنشاد) — التربية التحضيرية",
+   "fr": "Fiches d’éducation musicale (chant) — préscolaire"
+  },
+  "level": "PRE",
+  "subject": "music",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تحضيري",
+   "مذكرات",
+   "إنشاد",
+   "أناشيد"
+  ],
+  "excerpt": "6 أناشيد مع سير الحصة: الأرقام، السيارة، العلم، اللعب، حان الدرس، الطائر الصغير.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1pFjBEXLdnpJHIXNHyAjTt9avXe5mf198",
+    "name": "التربية الموسيقية — التحضيري.pdf",
+    "mime": "application/pdf",
+    "size": 115916
+   }
+  ]
  }
 ]

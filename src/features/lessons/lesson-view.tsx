@@ -70,7 +70,7 @@ export function LessonView({ id }: { id: string }) {
           {body.data.body && (
             <Card className="space-y-2 print:shadow-none print:ring-1 print:ring-black/30">
               <h2 className="font-bold">{t("process")}</h2>
-              <div dir="rtl" className="whitespace-pre-line leading-loose">{body.data.body}</div>
+              <div dir="auto" className="whitespace-pre-line leading-loose">{body.data.body}</div>
             </Card>
           )}
           {!!body.data.pages?.length && (
