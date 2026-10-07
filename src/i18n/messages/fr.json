@@ -1209,6 +1209,9 @@
       "paidUntil": "Valable jusqu'au {date}",
       "failed": "Paiement non abouti",
       "failedBody": "Rien n'a été débité, ou le montant sera remboursé automatiquement. Vous pouvez réessayer.",
+      "failedWhy": "Causes fréquentes : solde insuffisant, code secret ou CVV2 erroné, carte non activée pour le paiement en ligne (à activer auprès d'Algérie Poste ou de la banque), ou plafond journalier dépassé.",
+      "contact": "Écrire à l'administration",
+      "contactText": "Mon paiement a échoué (commande {order}).",
       "slow": "La confirmation n'est pas encore arrivée. Votre abonnement sera activé automatiquement dès réception ; vous pouvez continuer.",
       "toBilling": "Page Abonnement",
       "retry": "Réessayer",
@@ -1394,7 +1397,26 @@
         "mismatch": "Montant non conforme"
       },
       "attempts": "Tentatives de paiement non abouties ({n})",
-      "attemptsHint": "Page de paiement ouverte sans aller au bout — non comptabilisées, aucun abonnement activé. Utile seulement si un enseignant dit avoir payé sans activation."
+      "attemptsHint": "Page de paiement ouverte sans aller au bout — non comptabilisées, aucun abonnement activé. Utile seulement si un enseignant dit avoir payé sans activation.",
+      "why": "Motif",
+      "reasons": {
+        "failed": "Transaction refusée par la banque (SATIM / Algérie Poste). Causes fréquentes : solde insuffisant, code secret ou CVV2 erroné, carte non activée pour le paiement en ligne, carte expirée ou plafond journalier dépassé.",
+        "canceled": "L'enseignant a annulé lui-même sur la page Chargily (bouton annuler ou retour).",
+        "expired": "La page de paiement a expiré avant la fin de l'opération.",
+        "createError": "Impossible de créer la page de paiement chez Chargily (erreur du service ou de configuration) — l'enseignant n'a pas atteint la page de paiement.",
+        "pending": "Aucune notification de Chargily : l'enseignant a fermé la page sans terminer, ou il est encore sur la page de paiement.",
+        "unknown": "Échec sans détails (tentative antérieure à l'enregistrement des motifs). Cliquez « Détails Chargily »."
+      },
+      "noExactReason": "Chargily ne transmet pas le motif bancaire précis ; consultez aussi le tableau de bord Chargily → Transactions.",
+      "inspect": "Détails Chargily",
+      "inspecting": "Chargement…",
+      "inspectFail": "Échec de la récupération depuis Chargily.",
+      "chargilyStatus": "Statut chez Chargily",
+      "payMethod": "Moyen de paiement",
+      "customer": "Saisi sur la page de paiement",
+      "providerReason": "Message de Chargily",
+      "paidAtProvider": "Attention : Chargily indique un paiement réussi alors que la commande n'est pas activée ici — activez l'abonnement manuellement depuis la fiche de l'enseignant.",
+      "message": "Écrire"
     },
     "notif": {
       "compose": "Nouvelle notification pour tous",
@@ -1449,11 +1471,31 @@
       "reopen": "Rouvrir",
       "closed": "Clôturée",
       "teacher": "Enseignant",
-      "back": "Conversations"
+      "back": "Conversations",
+      "new": "Écrire à un enseignant",
+      "search": "Rechercher par e-mail…",
+      "noResults": "Aucun enseignant avec cet e-mail.",
+      "newThread": "Aucun message encore — écrivez le premier.",
+      "broadcast": "Message à tous (chacun en privé)",
+      "broadcastHint": "Chaque enseignant le reçoit dans sa conversation privée avec l'administration et peut y répondre. {name} est remplacé par le nom de chacun.",
+      "audience": "Destinataires",
+      "audiences": {
+        "all": "Tous les enseignants",
+        "paid": "Abonnés",
+        "trial": "En période d'essai",
+        "free": "Sans abonnement actif",
+        "failed": "Paiement tenté sans succès"
+      },
+      "count": "Destinataires : {n}",
+      "preview": "Compter les destinataires",
+      "sendAll": "Envoyer à {n}",
+      "sent": "Envoyé à {n} enseignants ✓",
+      "confirm": "Envoyer ce message à {n} enseignants ?"
     },
     "audit": {
       "empty": "Aucune opération.",
       "actions": {
+        "support_broadcast": "Message groupé (privé)",
         "trial_start": "Début d'essai",
         "payment_activate": "Activation après paiement",
         "payment_mismatch": "Paiement non conforme",

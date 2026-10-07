@@ -187,3 +187,21 @@ export async function adminList(collection: string): Promise<{ id: string; data:
   const body = (await res.json()) as { documents?: { name: string; fields?: Record<string, Value> }[] };
   return (body.documents ?? []).map((d) => ({ id: d.name.split("/").pop()!, data: decodeFields(d.fields ?? {}) }));
 }
+
+/** كل وثائق مجموعة (صفحات من 300) مع الحقول المطلوبة فقط. */
+export async function adminListAll(collection: string, fields: string[], max = 20000): Promise<{ id: string; data: Record<string, unknown> }[]> {
+  const out: { id: string; data: Record<string, unknown> }[] = [];
+  let token = "";
+  const mask = fields.map((f) => `mask.fieldPaths=${encodeURIComponent(f)}`).join("&");
+  do {
+    const res = await fetch(`${apiBase()}/${docsRoot()}/${collection}?pageSize=300&${mask}${token ? `&pageToken=${encodeURIComponent(token)}` : ""}`, {
+      headers: { Authorization: `Bearer ${await accessToken()}` },
+      cache: "no-store",
+    });
+    if (!res.ok) throw new Error(`firestore list ${res.status}`);
+    const body = (await res.json()) as { documents?: { name: string; fields?: Record<string, Value> }[]; nextPageToken?: string };
+    for (const d of body.documents ?? []) out.push({ id: d.name.split("/").pop()!, data: decodeFields(d.fields ?? {}) });
+    token = body.nextPageToken ?? "";
+  } while (token && out.length < max);
+  return out;
+}

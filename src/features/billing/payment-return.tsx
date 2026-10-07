@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/card";
 import { formatLongDate } from "@/i18n/dates";
 import { useRefreshBilling } from "./repo";
 import { getOrder } from "./payments";
+import { openSupport } from "@/features/support/repo";
 
 /* العودة من Chargily: التأكيد الحقيقي يأتي من الـ webhook إلى الخادم، فنقرأ حالة الطلب
    بفواصل متزايدة (≤ 10 محاولات). صفحة النجاح وحدها لا تمنح شيئًا. */
@@ -52,7 +53,13 @@ export function PaymentReturn({ orderId, failed }: { orderId: string; failed: bo
         <XCircle aria-hidden className="size-12 text-red-700" />
         <p className="text-xl font-bold">{t("failed")}</p>
         <p className="max-w-sm text-sm text-muted">{t("failedBody")}</p>
-        <Link href={`/app/billing/checkout?plan=${o.planId}`} className={buttonClass("primary")}>{t("retry")}</Link>
+        <p className="max-w-sm rounded-xl bg-canvas p-3 text-start text-sm text-ink/80">{t("failedWhy")}</p>
+        <div className="flex flex-wrap justify-center gap-2">
+          <Link href={`/app/billing/checkout?plan=${o.planId}`} className={buttonClass("primary")}>{t("retry")}</Link>
+          <button type="button" onClick={() => openSupport(t("contactText", { order: orderId }))} className={buttonClass("secondary")}>
+            {t("contact")}
+          </button>
+        </div>
       </Card>
     );
   }

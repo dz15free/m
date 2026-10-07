@@ -56,7 +56,7 @@ export async function POST(req: Request) {
       await adminCommit([{ path: `orders/${orderId}`, data: { checkoutId: checkout.id }, merge: true }]);
       return Response.json({ orderId, checkoutUrl: checkout.checkoutUrl });
     } catch (e) {
-      await adminCommit([{ path: `orders/${orderId}`, data: { status: "failed" }, merge: true }]).catch(() => {});
+      await adminCommit([{ path: `orders/${orderId}`, data: { status: "failed", failure: { event: "create_error", checkoutStatus: "", method: "", reason: String((e as Error)?.message ?? "").slice(0, 200), at: new Date() } }, merge: true }]).catch(() => {});
       throw e;
     }
   } catch (error) {

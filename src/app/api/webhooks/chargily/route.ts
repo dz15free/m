@@ -1,6 +1,6 @@
 import { HttpError } from "@/lib/server/auth";
 import { activationWrites, notifyActivated, notifyAdminsPaid } from "@/lib/server/activation";
-import { verifySignature } from "@/lib/server/chargily";
+import { reasonOf, verifySignature } from "@/lib/server/chargily";
 import { adminCommit, adminGet, type Write } from "@/lib/server/firestore-admin";
 
 type Checkout = {
@@ -11,6 +11,8 @@ type Checkout = {
   pass_fees_to_customer?: boolean | number;
   livemode?: boolean;
   metadata?: { orderId?: string; app?: string } | null;
+  status?: string;
+  payment_method?: string | null;
 };
 type Event = { id: string; type: string; livemode?: boolean; data: Checkout };
 
@@ -61,7 +63,15 @@ export async function POST(req: Request) {
     }
 
     if (kind === "failed") {
-      await adminCommit([orderWrite({ status: "failed", checkoutId: c.id }), eventWrite]);
+      // ما يمكن معرفته عن الفشل: نوع الحدث (رفض / إلغاء / انتهاء المهلة)، وسيلة الدفع، وسبب إن أرسله Chargily
+      const failure = {
+        event: event.type,
+        checkoutStatus: String(c.status ?? ""),
+        method: String(c.payment_method ?? ""),
+        reason: reasonOf(c as unknown as Record<string, unknown>) ?? "",
+        at: new Date(now),
+      };
+      await adminCommit([orderWrite({ status: "failed", checkoutId: c.id, failure }), eventWrite]);
       return ok("failed");
     }
 

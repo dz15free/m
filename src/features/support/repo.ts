@@ -84,18 +84,26 @@ export function watchThreads(cb: (t: Thread[]) => void) {
   );
 }
 
-export async function sendAdminMessage(uid: string, text: string) {
+/** رد الإدارة، أو بدء محادثة مع أستاذ لم يراسلها قط (who: اسمه وبريده لقائمة المحادثات). */
+export async function sendAdminMessage(uid: string, text: string, who?: { name: string; email: string }) {
   const clean = text.trim().slice(0, 2000);
   if (!clean) return;
   const batch = writeBatch(db());
   batch.set(doc(messagesCol(uid)), { from: "admin", text: clean, at: serverTimestamp() });
-  batch.update(threadRef(uid), {
-    lastMessage: clean.slice(0, 140),
-    lastMessageAt: serverTimestamp(),
-    lastFrom: "admin",
-    unreadAdmin: false,
-    unreadTeacher: true,
-  });
+  batch.set(
+    threadRef(uid),
+    {
+      uid,
+      ...(who ? { name: who.name.slice(0, 130), email: who.email.slice(0, 200) } : {}),
+      lastMessage: clean.slice(0, 140),
+      lastMessageAt: serverTimestamp(),
+      lastFrom: "admin",
+      unreadAdmin: false,
+      unreadTeacher: true,
+      status: "open",
+    },
+    { merge: true },
+  );
   await batch.commit();
 }
 

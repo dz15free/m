@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Download, LoaderCircle, Send, Star, Trash2 } from "lucide-react";
+import Link from "next/link";
+import { Download, LoaderCircle, MessagesSquare, Search, Send, Star, Trash2 } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field, SelectField } from "@/components/ui/field";
@@ -11,7 +12,7 @@ import { useUid } from "@/features/classes/hooks";
 import { deleteAnnouncement, listAnnouncements, publishAnnouncement, type Kind } from "@/features/notifications/repo";
 import { cn } from "@/lib/utils/cn";
 import { FEEDBACK_REASONS } from "@/features/billing/feedback";
-import { emailsOf, listAudit, listFeedback, listOrders, listPayments, peopleOf } from "./repo";
+import { emailsOf, failureKey, inspectOrder, listAudit, listFeedback, listOrders, listPayments, peopleOf, type ChargilyInfo, type OrderRow } from "./repo";
 
 const fmtDate = (locale: "ar" | "fr", at: number) =>
   at ? new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ", { dateStyle: "medium", timeStyle: "short" }).format(at) : "—";
@@ -210,20 +211,94 @@ export function AdminPayments() {
             </summary>
             <ul className="divide-y divide-line border-t border-line">
               {open.map((o) => (
-                <li key={o.id} className="flex flex-wrap items-center gap-3 px-4 py-2.5 text-sm">
-                  <span className="w-40 shrink-0 text-muted">{fmtDate(locale, o.createdAt)}</span>
-                  <span dir="ltr" className="min-w-0 flex-1 truncate">{o.email}</span>
-                  <span className="tabular-nums">{nf.format(o.amount)}</span>
-                  <span className={cn("rounded-full px-2 py-0.5 text-xs font-semibold", o.status === "pending" ? "bg-amber-50 text-amber-900" : "bg-red-50 text-red-800")}>
-                    {t(`status.${(["pending", "failed", "mismatch"].includes(o.status) ? o.status : "failed") as "failed"}`)}
-                  </span>
-                </li>
+                <OrderAttempt key={o.id} o={o} />
               ))}
             </ul>
           </details>
         );
       })()}
     </div>
+  );
+}
+
+/** محاولة دفع لم تكتمل: السبب كما وصل من Chargily مع شرحه، وتفاصيل يُجلبها الأدمن عند الحاجة، ومراسلة الأستاذ. */
+function OrderAttempt({ o }: { o: OrderRow }) {
+  const t = useTranslations("admin.payments");
+  const locale = useLocale() as "ar" | "fr";
+  const nf = new Intl.NumberFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ");
+  const [info, setInfo] = useState<ChargilyInfo | null>(o.chargily ?? null);
+  const [state, setState] = useState<"idle" | "busy" | "error">("idle");
+  const key = failureKey(o);
+  const method = info?.paymentMethod || o.failure?.method;
+  const providerReason = info?.reason || o.failure?.reason;
+  async function inspect() {
+    setState("busy");
+    try {
+      const r = await inspectOrder(o.id);
+      setInfo(r.info);
+      setState("idle");
+    } catch {
+      setState("error");
+    }
+  }
+  return (
+    <li className="space-y-2 px-4 py-3 text-sm">
+      <div className="flex flex-wrap items-center gap-3">
+        <span className="w-40 shrink-0 text-muted">{fmtDate(locale, o.createdAt)}</span>
+        <span dir="ltr" className="min-w-0 flex-1 truncate">{o.email}</span>
+        <span className="tabular-nums">{nf.format(o.amount)}</span>
+        <span className={cn("rounded-full px-2 py-0.5 text-xs font-semibold", o.status === "pending" ? "bg-amber-50 text-amber-900" : "bg-red-50 text-red-800")}>
+          {t(`status.${(["pending", "failed", "mismatch"].includes(o.status) ? o.status : "failed") as "failed"}`)}
+        </span>
+      </div>
+      <p className="rounded-xl bg-canvas p-2.5 text-ink/80">
+        <span className="font-semibold">{t("why")}: </span>
+        {o.status === "mismatch" ? t("status.mismatch") : t(`reasons.${key}`)}
+        {key === "failed" && <span className="mt-1 block text-xs text-muted">{t("noExactReason")}</span>}
+      </p>
+      {(info || method || providerReason) && (
+        <dl className="grid gap-1 text-xs sm:grid-cols-2">
+          {info && (
+            <div>
+              <dt className="inline text-muted">{t("chargilyStatus")}: </dt>
+              <dd className="inline font-semibold" dir="ltr">{info.status}</dd>
+            </div>
+          )}
+          {method && (
+            <div>
+              <dt className="inline text-muted">{t("payMethod")}: </dt>
+              <dd className="inline font-semibold" dir="ltr">{method}</dd>
+            </div>
+          )}
+          {providerReason && (
+            <div className="sm:col-span-2">
+              <dt className="inline text-muted">{t("providerReason")}: </dt>
+              <dd className="inline" dir="auto">{providerReason}</dd>
+            </div>
+          )}
+          {info?.customer && (
+            <div className="sm:col-span-2">
+              <dt className="inline text-muted">{t("customer")}: </dt>
+              <dd className="inline" dir="auto">{[info.customer.name, info.customer.email, info.customer.phone].filter(Boolean).join(" — ")}</dd>
+            </div>
+          )}
+        </dl>
+      )}
+      {info?.status === "paid" && <p className="rounded-xl bg-amber-50 p-2.5 text-xs font-medium text-amber-900">{t("paidAtProvider")}</p>}
+      <div className="flex flex-wrap gap-2">
+        {o.checkoutId && (
+          <button type="button" onClick={inspect} disabled={state === "busy"} className={buttonClass("secondary")}>
+            {state === "busy" ? <LoaderCircle aria-hidden className="size-4 animate-spin" /> : <Search aria-hidden className="size-4" />}
+            {state === "busy" ? t("inspecting") : t("inspect")}
+          </button>
+        )}
+        <Link href={`/admin/support?uid=${o.uid}`} className={buttonClass("ghost")}>
+          <MessagesSquare aria-hidden className="size-4" />
+          {t("message")}
+        </Link>
+      </div>
+      {state === "error" && <p className="text-xs text-red-700">{t("inspectFail")}</p>}
+    </li>
   );
 }
 
@@ -239,7 +314,7 @@ export function AdminAudit() {
     queryFn: () => emailsOf(list.data!.flatMap((r) => [r.uid, r.by].filter((x): x is string => typeof x === "string"))),
     enabled: !!list.data?.length,
   });
-  const known = ["trial.start", "payment.activate", "payment.mismatch", "admin.grant", "admin.revoke", "admin.roles"];
+  const known = ["trial.start", "payment.activate", "payment.mismatch", "admin.grant", "admin.revoke", "admin.roles", "support.broadcast"];
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-bold">{ta("nav.audit")}</h1>

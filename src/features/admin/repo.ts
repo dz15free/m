@@ -127,11 +127,43 @@ export async function listPayments(): Promise<PaymentRow[]> {
   return snap.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<PaymentRow, "id" | "createdAt" | "periodEnd">), createdAt: ms(d.data().createdAt), periodEnd: ms(d.data().periodEnd) }));
 }
 
-export type OrderRow = { id: string; uid: string; email: string; amount: number; status: string; createdAt: number };
+export type ChargilyInfo = {
+  status: string;
+  paymentMethod: string | null;
+  reason: string | null;
+  customer: { name: string; email: string; phone: string } | null;
+};
+export type OrderRow = {
+  id: string;
+  uid: string;
+  email: string;
+  amount: number;
+  status: string;
+  createdAt: number;
+  checkoutId?: string;
+  /** ما وصل من Chargily عند الفشل (webhook) */
+  failure?: { event: string; checkoutStatus: string; method: string; reason: string };
+  /** آخر جلب يدوي لتفاصيل المحاولة من Chargily */
+  chargily?: ChargilyInfo;
+};
 
 export async function listOrders(): Promise<OrderRow[]> {
-  const snap = await getDocs(query(collection(db(), "orders"), orderBy("createdAt", "desc"), limit(30)));
+  const snap = await getDocs(query(collection(db(), "orders"), orderBy("createdAt", "desc"), limit(50)));
   return snap.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<OrderRow, "id" | "createdAt">), createdAt: ms(d.data().createdAt) }));
+}
+
+export const inspectOrder = (orderId: string) =>
+  adminApi<{ info: ChargilyInfo | null }>("/api/admin/orders/inspect", { method: "POST", body: JSON.stringify({ orderId }) });
+
+/** مفتاح شرح سبب فشل محاولة دفع. */
+export function failureKey(o: Pick<OrderRow, "status" | "failure">): "failed" | "canceled" | "expired" | "createError" | "pending" | "unknown" {
+  if (o.status === "pending") return "pending";
+  const e = o.failure?.event ?? "";
+  if (e === "checkout.failed") return "failed";
+  if (e === "checkout.canceled") return "canceled";
+  if (e === "checkout.expired") return "expired";
+  if (e === "create_error") return "createError";
+  return "unknown";
 }
 
 export type AuditRow = { id: string; action: string; uid?: string; by?: string; at: number; [k: string]: unknown };

@@ -57,6 +57,56 @@ export async function createCheckout(req: CheckoutRequest): Promise<{ id: string
   return { id: body.id, checkoutUrl: body.checkout_url };
 }
 
+export type CheckoutInfo = {
+  status: string;
+  paymentMethod: string | null;
+  livemode: boolean | null;
+  amount: number | null;
+  fees: number | null;
+  updatedAt: string | null;
+  /** حقول خطأ إن أرسلها Chargily (لا يوثّقها: السبب البنكي الدقيق لا يصل عادة) */
+  reason: string | null;
+  customer: { name: string; email: string; phone: string } | null;
+};
+
+const str = (v: unknown) => (typeof v === "string" && v.trim() ? v.trim().slice(0, 300) : null);
+/** سبب الفشل إن وُجد في كائن Chargily بأي اسم شائع. */
+export function reasonOf(x: Record<string, unknown> | null | undefined): string | null {
+  if (!x) return null;
+  for (const k of ["failure_reason", "failure_message", "error_message", "error", "reason", "message", "response_message"]) {
+    const v = x[k];
+    if (str(v)) return str(v);
+    if (v && typeof v === "object" && str((v as Record<string, unknown>).message)) return str((v as Record<string, unknown>).message);
+  }
+  return null;
+}
+
+async function getJson(path: string): Promise<Record<string, unknown> | null> {
+  const res = await fetch(`${apiBase()}${path}`, { headers: { Authorization: `Bearer ${secret()}`, Accept: "application/json" } });
+  if (res.status === 404) return null;
+  if (!res.ok) throw new HttpError(502, "payment provider error");
+  return (await res.json()) as Record<string, unknown>;
+}
+
+/** حالة صفحة دفع من Chargily مع بيانات الزبون (الاسم، البريد، الهاتف كما كتبها في الصفحة). */
+export async function getCheckoutInfo(checkoutId: string): Promise<CheckoutInfo | null> {
+  if (!/^[\w-]{1,100}$/.test(checkoutId)) return null;
+  const c = await getJson(`/checkouts/${checkoutId}`);
+  if (!c) return null;
+  const customerId = str(c.customer_id);
+  const cu = customerId && /^[\w-]{1,100}$/.test(customerId) ? await getJson(`/customers/${customerId}`).catch(() => null) : null;
+  return {
+    status: str(c.status) ?? "unknown",
+    paymentMethod: str(c.payment_method),
+    livemode: typeof c.livemode === "boolean" ? c.livemode : null,
+    amount: typeof c.amount === "number" ? c.amount : null,
+    fees: typeof c.fees === "number" ? c.fees : null,
+    updatedAt: typeof c.updated_at === "number" ? new Date(c.updated_at * 1000).toISOString() : str(c.updated_at),
+    reason: reasonOf(c),
+    customer: cu ? { name: str(cu.name) ?? "", email: str(cu.email) ?? "", phone: str(cu.phone) ?? "" } : null,
+  };
+}
+
 /** توقيع الـ webhook: HMAC-SHA256 للجسم الخام بالمفتاح السري، ومقارنة بزمن ثابت. */
 export async function verifySignature(rawBody: string, signature: string | null): Promise<boolean> {
   if (!signature || !/^[0-9a-f]{64}$/i.test(signature)) return false;

@@ -19,7 +19,7 @@
       { "id": "fr", "label": { "ar": "اللغة الفرنسية", "fr": "Langue française" }, "levels": ["4AP", "5AP"] },
       { "id": "en", "label": { "ar": "اللغة الإنجليزية", "fr": "Langue anglaise" }, "levels": ["3AP", "4AP", "5AP"] },
       { "id": "tamazight", "label": { "ar": "اللغة الأمازيغية", "fr": "Tamazight" }, "levels": ["3AP", "4AP", "5AP"] },
-      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation plastique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
+      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation artistique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
       { "id": "music", "label": { "ar": "التربية الموسيقية", "fr": "Éducation musicale" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] },
       { "id": "pe", "label": { "ar": "التربية البدنية", "fr": "Éducation physique" }, "levels": ["PRE", "1AP", "2AP", "3AP", "4AP", "5AP"] }
     ]
@@ -43,7 +43,7 @@
       { "id": "histgeo", "label": { "ar": "التاريخ والجغرافيا", "fr": "Histoire-géographie" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
       { "id": "tamazight", "label": { "ar": "اللغة الأمازيغية", "fr": "Tamazight" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
       { "id": "informatics", "label": { "ar": "الإعلام الآلي", "fr": "Informatique" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
-      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation plastique" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
+      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation artistique" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
       { "id": "music", "label": { "ar": "التربية الموسيقية", "fr": "Éducation musicale" }, "levels": ["1AM", "2AM", "3AM", "4AM"] },
       { "id": "pe", "label": { "ar": "التربية البدنية والرياضية", "fr": "Éducation physique et sportive" }, "levels": ["1AM", "2AM", "3AM", "4AM"] }
     ]
@@ -73,7 +73,7 @@
       { "id": "italian", "label": { "ar": "اللغة الإيطالية", "fr": "Langue italienne" }, "levels": ["2AS", "3AS"] },
       { "id": "tamazight", "label": { "ar": "اللغة الأمازيغية", "fr": "Tamazight" }, "levels": ["1AS", "2AS", "3AS"] },
       { "id": "informatics", "label": { "ar": "الإعلام الآلي", "fr": "Informatique" }, "levels": ["1AS", "2AS", "3AS"] },
-      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation plastique" }, "levels": ["1AS", "2AS", "3AS"] },
+      { "id": "art", "label": { "ar": "التربية التشكيلية", "fr": "Éducation artistique" }, "levels": ["1AS", "2AS", "3AS"] },
       { "id": "music", "label": { "ar": "التربية الموسيقية", "fr": "Éducation musicale" }, "levels": ["1AS", "2AS", "3AS"] },
       { "id": "pe", "label": { "ar": "التربية البدنية والرياضية", "fr": "Éducation physique et sportive" }, "levels": ["1AS", "2AS", "3AS"] }
     ]
