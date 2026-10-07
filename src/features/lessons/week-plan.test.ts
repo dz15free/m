@@ -61,13 +61,16 @@ test("العربية: حصة ساعة ونصف = حصتان، والأسبوع �
   assert.equal(arabicWeekPlan({ ...ar4, level: "1AP" }, 2, week), null);
 });
 
-test("الرياضيات: الساعة درس، ونصف الساعة تدريب على آخر درس", () => {
+test("الرياضيات: الساعة درس، ونصف الساعة أنشطة على آخر درس", () => {
   const m = (o: number, t: string): CurriculumEntry => ({ id: `m${o}`, o, s: 1, k: "week", u: 6, a: "رياضيات", ss: "رياضيات", d: "", t, b: false, sm: false });
   const cur = { level: "4AP", subject: "math", segments: [], entries: [m(1, "الضرب (1)"), m(2, "الضرب (2)"), m(3, "حل مشكلات")] };
   const slots = [ref("a", "2026-10-04", "08:00", 60), ref("b", "2026-10-04", "10:45", 30), ref("c", "2026-10-06", "08:00", 60), ref("d", "2026-10-07", "08:00", 60), ref("e", "2026-10-07", "09:45", 30)];
   const p = mathWeekPlan(cur, 6, slots)!;
-  assert.deepEqual(slots.map((s) => `${p.get(s.key)![0]!.a}:${p.get(s.key)![0]!.id}`), ["رياضيات:m1", "تدريب وتطبيقات:m1", "رياضيات:m2", "رياضيات:m3", "تدريب وتطبيقات:m3"]);
+  assert.deepEqual(slots.map((s) => `${p.get(s.key)![0]!.a}:${p.get(s.key)![0]!.id}`), ["رياضيات:m1", "أنشطة:m1", "رياضيات:m2", "رياضيات:m3", "أنشطة:m3"]);
   assert.equal(mathWeekPlan(cur, 6, slots.filter((s) => s.minutes === 60)), null);
+  // نصف ساعة قبل أي درس في الأسبوع: أنشطة على الدرس الأول، ولا تأخذ درسًا
+  const early = [ref("z", "2026-10-04", "08:00", 30), ...slots.slice(2)];
+  assert.deepEqual(early.map((s) => `${mathWeekPlan(cur, 6, early)!.get(s.key)![0]!.a}:${mathWeekPlan(cur, 6, early)!.get(s.key)![0]!.id}`), ["أنشطة:m1", "رياضيات:m1", "رياضيات:m2", "أنشطة:m2"]);
 });
 
 test("memoMinutes: الساعات بالعربية", () => {

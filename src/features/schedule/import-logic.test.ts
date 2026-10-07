@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { matchClass, matchSubject, parseDay, parseSingleTime, parseTimeRange, parseTimetable, splitByDurations, allocate, type ImportClass, type ImportSubject } from "./import-logic.ts";
+import { matchClass, matchSubject, parseDay, parseSingleTime, parseTimeRange, parseTimetable, splitByDurations, allocate, fromToBlocks, type ImportClass, type ImportSubject } from "./import-logic.ts";
 
 const g = (rows: string[][]) => rows.map((r) => r.map((text) => ({ text })));
 const SUBJECTS: ImportSubject[] = [
@@ -172,4 +172,24 @@ test("جدول بخانات مقسومة: فترة 8:00–9:30 لمادتين، 
     "1 14:00-15:00 art «تربية تشكيلية»",
     "2 08:00-09:30 math",
   ]);
+});
+
+test("صورة: «من 8:00» و«إلى 9:30» في خانتين، والفترة تملك الأعمدة تحتها", () => {
+  const row = ["", "من 8:00", "إلى 9:30", "", "من 9:45", "", "إلى", "11:1", "|", "من 13:00", "إلى 15:00"];
+  const b = fromToBlocks(row, 0)!;
+  assert.deepEqual(b.times.filter(Boolean), [
+    { start: "08:00", end: "09:30" },
+    { start: "09:45", end: "11:15" },
+    { start: "13:00", end: "15:00" },
+  ]);
+  assert.deepEqual(b.owner, [0, 1, 1, 1, 4, 4, 4, 4, 4, 9, 9]);
+});
+
+test("«رياضر» (رياضيات مقروءة بخطأ) لا تُحسب تربية بدنية", () => {
+  const subjects = [
+    { id: "math", label: { ar: "الرياضيات", fr: "Mathématiques" } },
+    { id: "pe", label: { ar: "التربية البدنية", fr: "Éducation physique" } },
+  ];
+  assert.equal(matchSubject("رياضر.ت (تسا)", subjects), "math");
+  assert.equal(matchSubject("تربية بدنية", subjects), "pe");
 });

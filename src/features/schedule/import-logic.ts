@@ -132,11 +132,14 @@ export function matchSubject(text: string, subjects: ImportSubject[]): string | 
     if (score && (!best || score > best.score)) best = { id: s.id, score };
   }
   if (best) return best.id;
+  // «رياضر»، «رياضيا»… (الرياضيات مقروءة بخطأ في صورة)
+  if (subjects.some((s) => s.id === "math") && t.trim().split(" ").some((w) => /^رياض/.test(w) && w !== "رياضه")) return "math";
   // تسامح مع أخطاء التعرّف: كلمة قريبة جدًا من كلمة مفتاحية («رياضيت»، «فرنسيه»)
   const textWords = t.trim().split(" ").filter((w) => w.length >= 4);
   let fuzzy: { id: string; sim: number } | null = null;
   for (const s of subjects) {
-    if (s.id === "pe" && /رياضي/.test(t)) continue;
+    // «رياض…» مقروءة بخطأ هي الرياضيات غالبًا لا «رياضة» (البدنية تُكتب «تربية بدنية» في الابتدائي)
+    if (s.id === "pe" && /رياض/.test(t)) continue;
     const keys = [...(SUBJECT_KEYS[s.id] ?? []), s.label.ar, s.label.fr].flatMap((k) => words(k).trim().split(" ")).filter((k) => k.length >= 4);
     for (const w of textWords) for (const k of keys) {
       const sim = similarity(w, k);
@@ -172,6 +175,51 @@ export function matchClass(text: string, classes: ImportClass[]): string | null 
 }
 
 const EMPTY = /^(|-+|—|–|x|\/|راحه|فراغ|استراحه|pause|recreation|libre)$/;
+
+// ── فترات «من … إلى …» موزّعة على عدة خانات ─────────────────
+
+type Range = { start: string; end: string };
+
+/** صف أوقات قُرئ خانات متفرقة («من 8:00» | «إلى 9:30» | … ) ⇒ فترات، كل فترة تملك الأعمدة تحتها
+ *  حتى بداية الفترة التالية. «11:1» (دقائق مبتورة في الصورة) تُكمَّل بطول الفترة السابقة. */
+export function fromToBlocks(row: string[], dayIndex: number): { times: (Range | null)[]; owner: number[] } | null {
+  const norm = row.map((x, c) => (c === dayIndex ? "" : toLatinDigits(x)));
+  const timeIn = (t: string) => /(\d{1,2})\s*[:h.]\s*(\d{1,2})?/.exec(t);
+  type Mark = { c: number; kind: "from" | "to"; h: number; m: number; cut: boolean };
+  const marks: Mark[] = [];
+  for (let c = 0; c < norm.length; c++) {
+    const t = norm[c]!;
+    const kind = /(^|\s)(من|de)(\s|$|\d)/i.test(t) ? "from" : /(الى|إلى|الي|à|a)(\s|$|\d)/i.test(t) ? "to" : null;
+    if (!kind) continue;
+    // الوقت في الخانة نفسها أو التالية
+    const m = timeIn(t) ?? (norm[c + 1] && !/(من|الى|إلى)/.test(norm[c + 1]!) ? timeIn(norm[c + 1]!) : null);
+    if (!m) continue;
+    const h = Number(m[1]);
+    if (h > 23) continue;
+    marks.push({ c, kind, h: h >= 1 && h <= 6 ? h + 12 : h, m: m[2] && m[2].length === 2 ? Number(m[2]) : 0, cut: !!m[2] && m[2].length === 1 });
+  }
+  const blocks: { c: number; start: number; end: number }[] = [];
+  for (let i = 0; i < marks.length; i++) {
+    const a = marks[i]!;
+    const b = marks[i + 1];
+    if (a.kind !== "from" || !b || b.kind !== "to") continue;
+    const start = a.h * 60 + a.m;
+    let end = b.h * 60 + b.m;
+    const prev = blocks.at(-1);
+    if (b.cut && prev && Math.abs(start + (prev.end - prev.start) - end) <= 30) end = start + (prev.end - prev.start);
+    if (end > start && end - start <= 5 * 60) blocks.push({ c: a.c, start, end });
+    i++;
+  }
+  if (blocks.length < 2) return null;
+  const times: (Range | null)[] = row.map(() => null);
+  const owner = row.map((_, c) => c);
+  blocks.forEach((b, k) => {
+    times[b.c] = { start: fromMinutes(b.start), end: fromMinutes(b.end) };
+    const stop = blocks[k + 1]?.c ?? row.length;
+    for (let c = b.c + 1; c < stop; c++) if (c !== dayIndex) owner[c] = b.c;
+  });
+  return { times, owner };
+}
 
 // ── المدد داخل الخانة ─────────────────────────────────────
 
@@ -258,8 +306,15 @@ export function parseTimetable(grid: Grid, ctx: { classes: ImportClass[]; subjec
     if (n > timeCount) [timeRow, timeCount] = [r, n];
   }
   let columnTimes: ({ start: string; end: string } | null)[];
+  let owners: number[] | null = null;
+  // «من 8:00» و«إلى 9:30» في خانتين (صورة أو PDF مقروء خانة خانة)
+  const split = timeCount < 2 ? T.map((r, i) => ({ i, b: parseDay(r[dayIndex] ?? "") === null ? fromToBlocks(r, dayIndex) : null })).find((x) => x.b) : undefined;
   if (timeCount >= 2) {
     columnTimes = timesOf(timeRow);
+  } else if (split?.b) {
+    timeRow = split.i;
+    columnTimes = split.b.times;
+    owners = split.b.owner;
   } else {
     // أوقات منفردة («8:00»، «9:00»…) ⇒ النهاية = بداية التالي
     let best = -1;
@@ -282,8 +337,8 @@ export function parseTimetable(grid: Grid, ctx: { classes: ImportClass[]; subjec
   }
 
   // عنوان وقت مدموج على عدة أعمدة (خانة الفترة مقسومة لمادتين): العمود بلا عنوان يتبع العمود الموقوت قبله
-  const blockOf: number[] = columnTimes.map((_, c) => c);
-  for (let c = 1; c < columnTimes.length; c++) {
+  const blockOf: number[] = owners ?? columnTimes.map((_, c) => c);
+  for (let c = 1; c < columnTimes.length && !owners; c++) {
     if (columnTimes[c] || c === dayIndex || (T[timeRow]![c] ?? "").trim()) continue;
     const owner = blockOf[c - 1]!;
     if (columnTimes[owner] && owner !== dayIndex) blockOf[c] = owner;
@@ -313,10 +368,15 @@ export function parseTimetable(grid: Grid, ctx: { classes: ImportClass[]; subjec
     for (const [b, texts] of blocks) {
       const time = columnTimes[b]!;
       const whole = texts.join(" ");
-      const pieces = texts.flatMap((x) => {
+      let pieces = texts.flatMap((x) => {
         const p = splitByDurations(x);
         return p.length ? p : [{ text: x, minutes: null }];
       });
+      // بقايا قراءة مشوّشة (صورة): في خانة عُرفت فيها مادة، الجزء الذي لا مادة فيه ولا مدة يُهمل
+      if (pieces.length > 1) {
+        const known = pieces.map((p) => !!matchSubject(p.text, ctx.subjects));
+        if (known.some(Boolean)) pieces = pieces.filter((p, i) => known[i] || p.minutes !== null);
+      }
       const split = pieces.length > 1 || pieces.some((p) => p.minutes !== null);
       const times = split ? allocate(time.start, time.end, pieces) : [time];
       pieces.forEach((piece, i) => {

@@ -36,6 +36,7 @@ import { subjectById, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
 import { reportClientError } from "@/lib/firebase/report";
 import {
+  parseDay,
   parseTimetable,
   type DraftSlot,
   type ImportSubject,
@@ -138,6 +139,16 @@ function Importer({
     subjects,
   };
 
+  /** عدد أيام الأسبوع المختلفة المقروءة في الجدول، ولو في خلية واحدة (لاختيار اتجاه الصورة). */
+  const dayCells = (table: Table) =>
+    new Set(
+      table
+        .flat()
+        .flatMap((c) => c.text.split(/\s+/))
+        .map(parseDay)
+        .filter((d) => d !== null),
+    ).size;
+
   /** أفضل جدول بين الصفحات/الأوراق: الأكثر حصصًا. */
   function finish(tables: Table[]) {
     let best: DraftSlot[] | null = null;
@@ -166,7 +177,18 @@ function Importer({
       setProgress(t("recognizing", { current: i + 1, total: canvases.length }));
       await engine.current.init("ara+fra");
       const src = canvases[i]!;
-      const prepared = prepareForOcr(src, 0);
+      // صورة مصوّرة بالطول أو مقلوبة (جدول مصوّر جانبيًا): نجرّب الاتجاهات حتى نجد أيام الأسبوع
+      let rotation = 0;
+      for (const rot of [0, 90, 270, 180]) {
+        const probe = prepareForOcr(src, rot);
+        const quick = (await engine.current.recognize(probe, { refine: "none" })).table;
+        probe.width = probe.height = 0;
+        if (dayCells(quick) >= 3) {
+          rotation = rot;
+          break;
+        }
+      }
+      const prepared = prepareForOcr(src, rotation);
       out.push(
         (await engine.current.recognize(prepared, { refine: "all" })).table,
       );

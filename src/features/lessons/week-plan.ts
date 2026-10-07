@@ -1,7 +1,7 @@
 /* توزيع حصص الأسبوع حسب مدد جدول التوقيت (ساعة / نصف ساعة):
    - اللغة العربية (3، 4، 5 ابتدائي): «توزيع حصص اللغة العربية» — 9 حصص، 6سا30د في الأسبوع.
      حصة الجدول تأخذ الحصة المكتوبة فيها («فهم المنطوق (30)») إن وُجدت، وإلا الحصة التالية التي تساوي مدتها.
-   - الرياضيات: حصص الساعة تأخذ دروس الأسبوع بالترتيب، وحصة نصف الساعة تدريبٌ على آخر درس.
+   - الرياضيات: حصة الساعة درس (دروس الأسبوع بالترتيب)، وحصة نصف الساعة أنشطة على آخر درس.
    null ⇐ لا توزيع خاص (يبقى ترتيب المذكرات حصة لحصة). */
 import { nameKey } from "../../shared/text/names.ts";
 import type { Curriculum, CurriculumEntry, SlotRef } from "./logic.ts";
@@ -100,28 +100,27 @@ export function arabicWeekPlan(cur: Cur, week: number, refs: PlanRef[]): Map<str
 
 export function mathWeekPlan(cur: Cur, week: number, refs: PlanRef[]): Map<string, CurriculumEntry[]> | null {
   if (cur.subject !== "math") return null;
-  // بلا حصص نصف ساعة: كل حصة درس (الترتيب العادي)
-  if (!refs.some((r) => r.minutes && r.minutes <= 30)) return null;
+  const short = (r: PlanRef) => !!r.minutes && r.minutes <= 30;
+  // بلا حصص نصف ساعة (أو كلها نصف ساعة): كل حصة درس بالترتيب العادي
+  if (!refs.some(short) || refs.every(short)) return null;
   const lessons = cur.entries.filter((e) => e.k === "week" && e.u === week).sort((a, b) => a.o - b.o);
   if (!lessons.length) return null;
   const out = new Map<string, CurriculumEntry[]>();
   const sorted = [...refs].sort(byTime);
+  const activities = (e: CurriculumEntry, min: number): CurriculumEntry => ({ ...e, a: "أنشطة", ss: `أنشطة (${formatMinutes(min)})` });
   let i = 0;
   let last: CurriculumEntry | null = null;
-  sorted.forEach((r, k) => {
-    const short = !!r.minutes && r.minutes <= 30;
-    // نصف ساعة: تدريب على آخر درس — إلا إن لم يُقدَّم درس بعد وبقيت دروس أكثر من حصص الساعة الباقية
-    const longLeft = sorted.slice(k + 1).filter((x) => !(x.minutes && x.minutes <= 30)).length;
-    if (short && last && lessons.length - i <= longLeft) {
-      out.set(r.key, [{ ...last, a: "تدريب وتطبيقات", ss: `تدريب وتطبيقات (${formatMinutes(r.minutes!)})` }]);
-      return;
-    }
-    if (i < lessons.length) {
+  for (const r of sorted) {
+    if (short(r)) {
+      // نصف ساعة: أنشطة على آخر درس قُدِّم (أو على أول درس إن جاءت قبله في الأسبوع)
+      out.set(r.key, [activities(last ?? lessons[0]!, r.minutes!)]);
+    } else if (i < lessons.length) {
+      // ساعة: الدرس التالي
       last = lessons[i++]!;
       out.set(r.key, [{ ...last, ss: `${last.ss && last.ss !== last.a ? `${last.ss} ` : ""}(${formatMinutes(r.minutes ?? 60)})` }]);
     } else if (last) {
-      out.set(r.key, [{ ...last, a: "تدريب وتطبيقات", ss: `تدريب وتطبيقات (${formatMinutes(r.minutes ?? 60)})` }]);
+      out.set(r.key, [activities(last, r.minutes ?? 60)]);
     }
-  });
+  }
   return out;
 }

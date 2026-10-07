@@ -50,7 +50,7 @@ export class OcrEngine {
   /** يتعرّف على صفحة ويعيدها جدولًا (أسطر × خلايا) مع ثقة كل خلية.
    *  جدول بخطوط مرسومة (قوائم الرقمنة المصوّرة): قراءة «متفرّقة» للصفحة، ثم بناء الشبكة من الخطوط،
    *  ثم إعادة قراءة خلايا الاسم واللقب والجنس منفردة (أدق بكثير، وتلتقط الأسماء على سطرين). */
-  async recognize(canvas: OcrCanvas, opts: { refine?: "students" | "all" } = {}): Promise<{ table: Table; group?: string; confidence: number }> {
+  async recognize(canvas: OcrCanvas, opts: { refine?: "students" | "all" | "none" } = {}): Promise<{ table: Table; group?: string; confidence: number }> {
     if (!this.worker || !this.psm) throw new Error("OCR not initialised");
     const rules = canvas.rules;
     const ruled = !!rules && rules.h.length >= 3 && rules.v.length >= 2;
@@ -72,7 +72,7 @@ export class OcrEngine {
       }
     }
     const grid = smartTable(pieces, ruled ? rules : undefined);
-    if (grid.cells) await this.refineCells(canvas, grid, opts.refine ?? "students");
+    if (grid.cells && opts.refine !== "none") await this.refineCells(canvas, grid, opts.refine ?? "students");
     return { table: grid.table, group: groupFromTitle(grid.title), confidence: data.confidence };
   }
 

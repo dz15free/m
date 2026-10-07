@@ -207,9 +207,19 @@ export function reconstructFromRules(pieces: Piece[], rules: RuleLines): GridRes
   const rtl = isRtl(words.map((w) => w.text).join(" "));
   const h = median(words.map((w) => w.box.y1 - w.box.y0)) || 10;
 
-  // حدود الجدول: أطول الخطوط الأفقية
-  const longest = Math.max(...rules.h.map((l) => l.b - l.a));
-  const hLines = rules.h.filter((l) => l.b - l.a >= 0.4 * longest).sort((a, b) => a.pos - b.pos);
+  // الخطوط الأفقية: قطع على نفس الارتفاع تُجمع (الخط بين صفين قد يُرسم خلية خلية أو تقطعه خلايا مظلّلة)،
+  // ويُقبل الخط إن غطّت قطعه معًا جزءًا معتبرًا من عرض الجدول
+  const hByY: { pos: number; a: number; b: number; cover: number }[] = [];
+  for (const l of [...rules.h].sort((x, y) => x.pos - y.pos)) {
+    const hit = hByY.find((c) => Math.abs(c.pos - l.pos) <= h * 0.6);
+    if (hit) {
+      hit.cover += l.b - l.a;
+      hit.a = Math.min(hit.a, l.a);
+      hit.b = Math.max(hit.b, l.b);
+    } else hByY.push({ pos: l.pos, a: l.a, b: l.b, cover: l.b - l.a });
+  }
+  const longest = Math.max(...hByY.map((l) => l.cover));
+  const hLines = hByY.filter((l) => l.cover >= 0.4 * longest).sort((a, b) => a.pos - b.pos);
   if (hLines.length < 3) return null;
   const top = hLines[0]!.pos;
   const bottom = hLines.at(-1)!.pos;
