@@ -5,14 +5,15 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Bell, BellRing, BookOpen, CreditCard, Gift, LoaderCircle, Megaphone, Sparkles, X } from "lucide-react";
+import { Bell, BellRing, BookOpen, CreditCard, Gift, LoaderCircle, Megaphone, Sparkles, X, MessagesSquare } from "lucide-react";
 import { enablePush, getPushState, refreshPush, type PushState } from "@/features/pwa/push";
 import { useUid } from "@/features/classes/hooks";
 import { cn } from "@/lib/utils/cn";
 import { linkKind } from "@/lib/utils/links";
 import { getNotificationState, listNotices, markAllRead, type Kind } from "./repo";
+import { openSupport } from "@/features/support/repo";
 
-const ICON: Record<Kind, typeof Bell> = { news: Megaphone, update: Sparkles, content: BookOpen, offer: Gift, billing: CreditCard };
+const ICON: Record<Kind, typeof Bell> = { news: Megaphone, update: Sparkles, content: BookOpen, offer: Gift, billing: CreditCard, message: MessagesSquare };
 
 export function NotificationBell({ className }: { className?: string }) {
   const t = useTranslations("notifications");
@@ -122,7 +123,12 @@ function Panel({ uid, readAt, onClose }: { uid: string; readAt: number; onClose:
                 return (
                   <li key={`${n.personal ? "p" : "a"}-${n.id}`}>
                     {linkKind(n.link) === "internal" ? (
-                      <Link href={n.link} onClick={onClose} className={cn(cls, "hover:bg-canvas")}>{body}</Link>
+                      n.kind === "message" ? (
+                        // رسالة من الإدارة: تفتح المحادثة مباشرة
+                        <button type="button" onClick={() => { onClose(); openSupport(); }} className={cn(cls, "w-full text-start hover:bg-canvas")}>{body}</button>
+                      ) : (
+                        <Link href={n.link} onClick={onClose} className={cn(cls, "hover:bg-canvas")}>{body}</Link>
+                      )
                     ) : linkKind(n.link) === "external" ? (
                       <a href={n.link} target="_blank" rel="noopener" className={cn(cls, "hover:bg-canvas")}>{body}</a>
                     ) : (

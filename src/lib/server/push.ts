@@ -1,6 +1,6 @@
 import "server-only";
 import { usingEmulators } from "./auth";
-import { accessToken, adminCommit, adminGet } from "./firestore-admin";
+import { accessToken, adminCommit, adminGet, newId, type Write } from "./firestore-admin";
 
 /* إشعارات الهاتف عبر Firebase Cloud Messaging (Web Push) — مجانية.
    - كل جهاز يُشترك في موضوع حسب لغته (all_ar / all_fr) فتُرسَل الإعلانات بطلب واحد.
@@ -100,4 +100,16 @@ export async function saveToken(uid: string, token: string, locale: string, ua: 
   const bytes = new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(token)));
   const id = Array.from(bytes.slice(0, 16), (b) => b.toString(16).padStart(2, "0")).join("");
   await adminCommit([{ path: `teachers/${uid}/pushTokens/${id}`, data: { token, locale, ua: ua.slice(0, 200), createdAt: new Date() } }]);
+}
+
+/** إشعار «رسالة من الإدارة» في جرس التطبيق (يظهر حتى دون إشعارات الهاتف). */
+export function messageNoticeWrites(uid: string, preview: string, now = new Date()): Write[] {
+  const body = preview.slice(0, 240);
+  return [
+    {
+      path: `teachers/${uid}/notifications/msg_${newId()}`,
+      data: { kind: "message", title: { ar: "رسالة جديدة من الإدارة", fr: "Nouveau message de l'administration" }, body: { ar: body, fr: body }, link: "/app?support=1", createdAt: now },
+    },
+    { path: `teachers/${uid}/prefs/notifications`, data: { personalLatestAt: now }, merge: true },
+  ];
 }

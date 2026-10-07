@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { errorResponse, HttpError, requireUser } from "@/lib/server/auth";
 import { adminCommit, adminListAll, newId, type Write } from "@/lib/server/firestore-admin";
-import { sendToTopic } from "@/lib/server/push";
+import { messageNoticeWrites, sendToTopic, sendToUser } from "@/lib/server/push";
 
 const Body = z.object({
   text: z.string().trim().min(1).max(2000),
@@ -46,11 +46,26 @@ export async function POST(req: Request) {
           data: { uid: u.id, name, email: String(u.data.email ?? "").slice(0, 200), lastMessage: body.slice(0, 140), lastMessageAt: now, lastFrom: "admin", unreadTeacher: true, status: "open" },
           merge: true,
         },
+        // جرس التطبيق
+        ...messageNoticeWrites(u.id, body.slice(0, 140), now),
       ];
     });
     for (let i = 0; i < writes.length; i += 400) await adminCommit(writes.slice(i, i + 400));
-    // إشعار هاتف واحد عام (لا إشعار لكل أستاذ) حين تشمل الرسالة الجميع
-    if (audience === "all") {
+    // الهاتف: طلب واحد للجميع عبر الموضوع؛ ولفئة محددة إشعار لأجهزة كل أستاذ (حتى 300، عشرة في كل مرة)
+    if (audience !== "all") {
+      const preview = (name: string) => text.replaceAll("{name}", name).slice(0, 140);
+      const list = targets.slice(0, 300);
+      for (let i = 0; i < list.length; i += 10) {
+        await Promise.all(
+          list.slice(i, i + 10).map((u) =>
+            sendToUser(u.id, {
+              ar: { title: "رسالة جديدة من الإدارة", body: preview(String(u.data.displayName ?? "")), link: "/app?support=1", tag: "support" },
+              fr: { title: "Nouveau message de l'administration", body: preview(String(u.data.displayName ?? "")), link: "/app?support=1", tag: "support" },
+            }),
+          ),
+        );
+      }
+    } else {
       await Promise.all([
         sendToTopic("all_ar", { title: "رسالة جديدة من الإدارة", body: text.replaceAll("{name}", "").slice(0, 140), link: "/app?support=1", tag: "support" }),
         sendToTopic("all_fr", { title: "Nouveau message de l'administration", body: text.replaceAll("{name}", "").slice(0, 140), link: "/app?support=1", tag: "support" }),

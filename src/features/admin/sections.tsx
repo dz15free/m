@@ -100,7 +100,7 @@ export function AdminNotifications() {
               <li key={n.id}>
                 <Card className="flex items-start gap-3 p-4">
                   <div className="min-w-0 flex-1">
-                    <p className="text-xs text-muted">{t(`kinds.${n.kind as Exclude<Kind, "billing">}`)} · {fmtDate(locale, n.createdAt)}</p>
+                    <p className="text-xs text-muted">{t(`kinds.${n.kind as Exclude<Kind, "billing" | "message">}`)} · {fmtDate(locale, n.createdAt)}</p>
                     <p dir="auto" className="font-semibold">{n.title[locale] || n.title.ar || n.title.fr}</p>
                     <p dir="auto" className="line-clamp-2 text-sm text-muted">{n.body[locale] || n.body.ar || n.body.fr}</p>
                   </div>
