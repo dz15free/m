@@ -2792,5 +2792,34 @@
     "size": 64679
    }
   ]
+ },
+ {
+  "id": "cat-fiche-3ap-civic",
+  "title": {
+   "ar": "مذكرات التربية المدنية — السنة الثالثة (الجيل الثاني)",
+   "fr": "Fiches d’éducation civique — 3e année"
+  },
+  "level": "3AP",
+  "subject": "civic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تربية مدنية",
+   "مذكرات"
+  ],
+  "excerpt": "18 مذكرة على ثلاثة مقاطع: الصحة والغذاء والسلامة، التنوع الثقافي والمساواة، الحياة في القسم وانتخاب المندوب.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1h8SIXQhmk9CgdKqeoCQVeeBWAMIBOnPV",
+    "name": "مذكرات التربية المدنية — السنة الثالثة.pdf",
+    "mime": "application/pdf",
+    "size": 2919422
+   }
+  ]
  }
 ]
