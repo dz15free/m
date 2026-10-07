@@ -2642,5 +2642,155 @@
     "size": 115916
    }
   ]
+ },
+ {
+  "id": "cat-fiche-1ap-pe",
+  "title": {
+   "ar": "مذكرات التربية البدنية (الوضعيات والتنقلات) — السنة الأولى",
+   "fr": "Fiches d’éducation physique (postures et déplacements) — 1re année"
+  },
+  "level": "1AP",
+  "subject": "pe",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تربية بدنية",
+   "مذكرات",
+   "الوضعيات والتنقلات"
+  ],
+  "excerpt": "توزيع الحصص و20 مذكرة كاملة: الهدف، الوسائل، والمراحل الثلاث بزمنها وتوجيهاتها.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1_loBCdsNZXlu_1sr0lRvIGzdWv1nBNdj",
+    "name": "وضعيات وتنقلات سنة1.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 107304
+   }
+  ]
+ },
+ {
+  "id": "cat-fiche-2ap-pe",
+  "title": {
+   "ar": "مذكرات التربية البدنية (الوضعيات والتنقلات) — السنة الثانية",
+   "fr": "Fiches d’éducation physique (postures et déplacements) — 2e année"
+  },
+  "level": "2AP",
+  "subject": "pe",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تربية بدنية",
+   "مذكرات",
+   "الوضعيات والتنقلات"
+  ],
+  "excerpt": "توزيع الحصص و20 مذكرة كاملة: الهدف، الوسائل، والمراحل الثلاث بزمنها وتوجيهاتها.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "11rmQx2Pv5rqoz2CopJU-cFosp6DCMjng",
+    "name": "وضعيات وتنقلات سنة2.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 101712
+   }
+  ]
+ },
+ {
+  "id": "cat-fiche-3ap-pe",
+  "title": {
+   "ar": "مذكرات التربية البدنية (الوضعيات والتنقلات) — السنة الثالثة",
+   "fr": "Fiches d’éducation physique (postures et déplacements) — 3e année"
+  },
+  "level": "3AP",
+  "subject": "pe",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تربية بدنية",
+   "مذكرات",
+   "الوضعيات والتنقلات"
+  ],
+  "excerpt": "توزيع الحصص و20 مذكرة كاملة: الهدف، الوسائل، والمراحل الثلاث بزمنها وتوجيهاتها.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1uioOSpv_hL93YWdMMtjANTT3ZJmX0tXk",
+    "name": "وضعيات وتنقلات سنة3.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 99816
+   }
+  ]
+ },
+ {
+  "id": "cat-fiche-4ap-pe",
+  "title": {
+   "ar": "مذكرات التربية البدنية (الوضعيات والتنقلات) — السنة الرابعة",
+   "fr": "Fiches d’éducation physique (postures et déplacements) — 4e année"
+  },
+  "level": "4AP",
+  "subject": "pe",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تربية بدنية",
+   "مذكرات",
+   "الوضعيات والتنقلات"
+  ],
+  "excerpt": "توزيع الحصص و10 مذكرة كاملة: الهدف، الوسائل، والمراحل الثلاث بزمنها وتوجيهاتها.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1TcPLc1YdsYXiFw17BUg49D53BlGXZAkq",
+    "name": "وضعيات وتنقلات سنة4.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 60177
+   }
+  ]
+ },
+ {
+  "id": "cat-fiche-5ap-pe",
+  "title": {
+   "ar": "مذكرات التربية البدنية (الوضعيات والتنقلات) — السنة الخامسة",
+   "fr": "Fiches d’éducation physique (postures et déplacements) — 5e année"
+  },
+  "level": "5AP",
+  "subject": "pe",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "تربية بدنية",
+   "مذكرات",
+   "الوضعيات والتنقلات"
+  ],
+  "excerpt": "توزيع الحصص و10 مذكرة كاملة: الهدف، الوسائل، والمراحل الثلاث بزمنها وتوجيهاتها.",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1G9VRlwOEI_QGQKGuCeYcjdQqbm37tn7q",
+    "name": "وضعيات وتنقلات سنة5.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 64679
+   }
+  ]
  }
 ]

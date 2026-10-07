@@ -8,40 +8,15 @@
  *
  *   node scripts/curriculum/build-en-plans.mjs <docx-dir> <out-dir>
  */
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { unzipSync, strFromU8 } from "fflate";
+import { docxLines } from "./docx-lines.mjs";
 
 const [dir, outDir] = process.argv.slice(2);
 const TERM_STARTS = [2, 16, 24];
 const PER_WEEK = 2;
 const squash = (s) => s.replace(/\s+/g, " ").trim();
 const clean = (s) => squash(s.replace(/\s*¶\s*/g, " / "));
-
-// ── docx ⇒ أسطر (فقرات، وصفوف الجداول «خلية | خلية») ──
-const decode = (s) => s.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, "&");
-const textOf = (xml) =>
-  decode(
-    [...xml.matchAll(/<w:t(?:\s[^>]*)?>([\s\S]*?)<\/w:t>|<w:tab\/>|<w:(?:br|cr)\/>/g)]
-      .map((m) => (m[1] !== undefined ? m[1] : m[0].startsWith("<w:tab") ? "\t" : "\n"))
-      .join(""),
-  );
-function docxLines(file) {
-  const xml = strFromU8(unzipSync(readFileSync(file))["word/document.xml"]);
-  const body = xml.slice(xml.indexOf("<w:body>"));
-  const out = [];
-  for (const m of body.matchAll(/<w:tbl>[\s\S]*?<\/w:tbl>|<w:p[ >][\s\S]*?<\/w:p>|<w:p\/>/g)) {
-    if (m[0].startsWith("<w:tbl>")) {
-      for (const tr of m[0].matchAll(/<w:tr[ >][\s\S]*?<\/w:tr>/g)) {
-        const cells = [...tr[0].matchAll(/<w:tc>[\s\S]*?<\/w:tc>/g)].map((tc) =>
-          [...tc[0].matchAll(/<w:p[ >][\s\S]*?<\/w:p>/g)].map((p) => textOf(p[0])).filter((t) => t.trim()).join(" ¶ "),
-        );
-        out.push(cells.join(" | "));
-      }
-    } else out.push(textOf(m[0]));
-  }
-  return out;
-}
 
 // ── 3PS / 4PS: رأس الحصة «Teacher: … Session: n Page: … / Domain … / Learning objectives …» ثم جدول المراحل ──
 function parseSessionPlans(lines, seqN) {
