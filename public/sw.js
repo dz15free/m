@@ -3,7 +3,9 @@
    - الصفحات وبيانات التنقّل (RSC): من الشبكة أولًا، ومن الكاش عند انقطاعها.
    - /api وطلبات Firebase: لا تُلمس (البيانات لها كاش Firestore الدائم).
    - إشعارات الهاتف (FCM Web Push): عرضها وفتح الرابط عند الضغط. */
-const VERSION = "v4";
+// v5: مفتاح بيانات RSC صار معاملًا لا «#rsc» (الكاش يتجاهل ما بعد #، فكانت البيانات تطغى على صفحة HTML
+// وتظهر نصًّا خامًا عند انقطاع الإنترنت). تغيير الإصدار يحذف الكاش القديم الفاسد.
+const VERSION = "v5";
 const STATIC = `static-${VERSION}`;
 const PAGES = `pages-${VERSION}`;
 const SHELL = ["/app", "/offline.html", "/icons/icon-192.png"];
@@ -50,12 +52,15 @@ self.addEventListener("fetch", (event) => {
   // صفحة كاملة أو بيانات تنقّل داخلي (RSC) لصفحات التطبيق
   const rsc = req.headers.get("RSC") === "1" || url.searchParams.has("_rsc");
   if (req.mode === "navigate" || rsc) {
-    // مفتاح كاش ثابت لبيانات RSC (بلا معامل _rsc المتغيّر)
-    const key = rsc ? new Request(`${url.origin}${url.pathname}${url.search.replace(/[?&]_rsc=[^&]*/, "")}#rsc`) : req;
+    // مفتاح كاش منفصل لبيانات RSC (معامل ثابت بدل _rsc المتغيّر)؛ صفحة HTML تبقى على عنوانها
+    const search = url.search.replace(/([?&])_rsc=[^&]*&?/, "$1").replace(/[?&]$/, "");
+    const key = rsc ? `${url.origin}${url.pathname}${search}${search ? "&" : "?"}__sw_rsc=1` : `${url.origin}${url.pathname}${url.search}`;
+    const isHtml = (res) => (res.headers.get("content-type") || "").includes("text/html");
     event.respondWith(
       fetch(req)
         .then((res) => {
-          if (res.ok && (url.pathname.startsWith("/app") || url.pathname === "/")) {
+          // نحفظ الصفحة HTML فقط لطلب الصفحة، وبيانات RSC فقط لطلبها — لا يختلطان أبدًا
+          if (res.ok && (url.pathname.startsWith("/app") || url.pathname === "/") && (rsc ? !isHtml(res) : isHtml(res))) {
             const copy = res.clone();
             caches.open(PAGES).then((c) => c.put(key, copy));
           }
@@ -63,9 +68,11 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(async () => {
           const hit = await caches.match(key);
-          if (hit) return hit;
-          if (rsc) return Response.error();
-          return (await caches.match("/app")) || (await caches.match("/offline.html")) || Response.error();
+          if (rsc) return hit && !isHtml(hit) ? hit : Response.error();
+          if (hit && isHtml(hit)) return hit;
+          const shell = await caches.match("/app");
+          if (shell && isHtml(shell)) return shell;
+          return (await caches.match("/offline.html")) || Response.error();
         }),
     );
   }
