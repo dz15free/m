@@ -3,7 +3,10 @@
 
 import { weeksOf, type Curriculum } from "../lessons/logic.ts";
 
-export type ProgressionRow = { w: number; unit: string; content: string; done: boolean };
+/** خانة اللغة العربية في المخطط الشهري: ميادينها الثلاثة، أو «all» لأسبوع على عرضها (إدماج، تقويم…) */
+export type ArColumn = "oral" | "reading" | "writing" | "all";
+export const AR_KEYS = ["oral", "reading", "writing", "all"] as const;
+export type ProgressionRow = { w: number; unit: string; content: string; done: boolean; k?: ArColumn };
 export type Progression = { classId: string; subjectId: string; startDate: string; rows: ProgressionRow[] };
 export type Holiday = { start: string; end: string };
 
@@ -93,21 +96,40 @@ export function parseProgression(text: string): ProgressionRow[] {
   return rows;
 }
 
-/** التوزيع الرسمي من المنهاج المنشور (حين لا يكون للأستاذ توزيع محفوظ): سطر لكل حصة بأسبوعها ومقطعها،
-    وما قبل الأسبوع الجاري يُعدّ منجزًا افتراضيًا (يعدّله الأستاذ). يُدمج الأسبوع في سطر واحد إن تجاوزت الحصص الحدّ. */
-export function rowsFromCurriculum(c: Pick<Curriculum, "entries" | "weekMode" | "segments">, currentWeek: number): ProgressionRow[] {
+/** ميدان حصة العربية ⇐ خانتها: فهم المنطوق والتعبير الشفوي، فهم المكتوب، التعبير الكتابي، وإلا على عرض الميادين. */
+export function arColumnOf(domain: string): ArColumn {
+  if (/المنطوق|الشفوي/.test(domain)) return "oral";
+  if (/الكتابي|الكتابة|التخطيط/.test(domain)) return "writing";
+  if (/المكتوب|القراءة|المحفوظات/.test(domain)) return "reading";
+  return "all";
+}
+
+/** التوزيع الرسمي من المنهاج المنشور (حين لا يكون للأستاذ توزيع محفوظ): سطر لكل موضوع في أسبوعه (حصص الموضوع
+    الواحد سطر واحد)، وللعربية خانة ميدانها. ما قبل الأسبوع الجاري يُعدّ منجزًا افتراضيًا (يعدّله الأستاذ).
+    إن تجاوزت الأسطر الحدّ تُدمج مواضيع الأسبوع (والخانة) في سطر واحد. */
+export function rowsFromCurriculum(c: Pick<Curriculum, "entries" | "weekMode" | "segments"> & { subject?: string }, currentWeek: number): ProgressionRow[] {
   const segTitle = (n: number) => c.segments.find((s) => s.n === n)?.title ?? "";
+  const ar = c.subject === "ar";
   const weeks = weeksOf(c);
-  const perLesson = weeks.flatMap((wk, i) =>
-    wk.entries.map((e) => ({ w: i + 1, unit: segTitle(e.s).slice(0, ROW_MAX.unit), content: e.t.slice(0, ROW_MAX.content), done: i + 1 < currentWeek })),
-  );
-  if (perLesson.length <= MAX_ROWS) return perLesson;
-  return weeks
-    .map((wk, i) => ({
-      w: i + 1,
-      unit: segTitle(wk.entries[0]?.s ?? 0).slice(0, ROW_MAX.unit),
-      content: [...new Set(wk.entries.map((e) => e.t))].join(" — ").slice(0, ROW_MAX.content),
-      done: i + 1 < currentWeek,
-    }))
-    .filter((r) => r.content);
+  const seen = new Set<string>();
+  const perTopic: ProgressionRow[] = [];
+  weeks.forEach((wk, i) => {
+    for (const e of wk.entries) {
+      const content = e.t.replace(/\s+/g, " ").trim().slice(0, ROW_MAX.content);
+      const k = ar ? arColumnOf(e.d) : undefined;
+      const key = `${i + 1}|${k ?? ""}|${content}`;
+      if (!content || seen.has(key)) continue;
+      seen.add(key);
+      perTopic.push({ w: i + 1, unit: segTitle(e.s).slice(0, ROW_MAX.unit), content, done: i + 1 < currentWeek, ...(k ? { k } : {}) });
+    }
+  });
+  if (perTopic.length <= MAX_ROWS) return perTopic;
+  const merged = new Map<string, ProgressionRow>();
+  for (const r of perTopic) {
+    const key = `${r.w}|${r.k ?? ""}`;
+    const m = merged.get(key);
+    if (m) m.content = `${m.content} — ${r.content}`.slice(0, ROW_MAX.content);
+    else merged.set(key, { ...r });
+  }
+  return [...merged.values()];
 }

@@ -1,8 +1,8 @@
 "use client";
 
-import { collection, doc, getDoc, getDocs, serverTimestamp, setDoc } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDoc, getDocs, serverTimestamp, setDoc } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
-import { MAX_ROWS, progressionId, ROW_MAX, type Progression } from "./logic";
+import { AR_KEYS, MAX_ROWS, progressionId, ROW_MAX, type Progression } from "./logic";
 
 const col = (uid: string) => collection(getFirebase().db, "teachers", uid, "progressions");
 
@@ -23,8 +23,11 @@ export async function saveProgression(uid: string, p: Progression) {
       unit: r.unit.replace(/\s+/g, " ").trim().slice(0, ROW_MAX.unit),
       content: r.content.replace(/\s+/g, " ").trim().slice(0, ROW_MAX.content),
       done: !!r.done,
+      // خانة العربية في المخطط الشهري
+      ...(r.k && (AR_KEYS as readonly string[]).includes(r.k) ? { k: r.k } : {}),
     }))
     .filter((r) => r.unit || r.content)
+    // ترتيب مستقر: أسطر الأسبوع الواحد تبقى بترتيب الأستاذ
     .sort((a, b) => a.w - b.w)
     .slice(0, MAX_ROWS);
   await setDoc(doc(col(uid), progressionId(p.classId, p.subjectId)), {
@@ -35,4 +38,9 @@ export async function saveProgression(uid: string, p: Progression) {
     updatedAt: serverTimestamp(),
   });
   return rows;
+}
+
+/** حذف التوزيع المحفوظ: يعود الأستاذ إلى التوزيع الرسمي المقترح من المذكرات. */
+export async function deleteProgression(uid: string, classId: string, subjectId: string) {
+  await deleteDoc(doc(col(uid), progressionId(classId, subjectId)));
 }

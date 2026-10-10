@@ -5,7 +5,7 @@ import Link from "next/link";
 import { flushSync } from "react-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Check, ClipboardPaste, LoaderCircle, Pencil, Plus, Printer, Search, Trash2 } from "lucide-react";
+import { Check, ClipboardPaste, LoaderCircle, Pencil, Plus, Printer, RotateCcw, Search, Trash2 } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field } from "@/components/ui/field";
@@ -17,7 +17,9 @@ import { parseAcademicYearId } from "@/shared/academic-year";
 import { subjectById } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
 import { defaultStart, parseProgression, rowsFromCurriculum, progressStatus, ROW_MAX, schoolWeekOf, weekStart, type Progression, type ProgressionRow } from "./logic";
-import { getProgression, saveProgression } from "./repo";
+import { deleteProgression, getProgression, saveProgression } from "./repo";
+import { EditTip } from "./edit-tip";
+import { subjectDir } from "./monthly-sheet";
 import { useCurriculum } from "@/features/lessons/repo";
 import { curriculumId } from "@/features/lessons/logic";
 import { STATUS_STYLE } from "./planning-overview";
@@ -42,12 +44,23 @@ export function ProgressionEditor({ classId, subjectId }: { classId: string; sub
   // لا توزيع محفوظ: نقترح التوزيع الرسمي من المنهاج المنشور
   const startDate = defaultStart(startYear);
   const official = !prog.data && !!curriculum.data?.entries.length;
-  const rows = official ? rowsFromCurriculum(curriculum.data!, schoolWeekOf(todayInAlgiers(), startDate, calendar.data.schoolDays, calendar.data.holidays)) : [];
+  const rows = official ? rowsFromCurriculum({ ...curriculum.data!, subject: subjectId }, schoolWeekOf(todayInAlgiers(), startDate, calendar.data.schoolDays, calendar.data.holidays)) : [];
   const initial: Progression = prog.data ?? { classId, subjectId, startDate, rows };
-  return <Editor key={`${classId}-${subjectId}`} initial={initial} official={official} className={cls.data.displayName} subjectLabel={subjectById(tax.data, subjectId)?.label} />;
+  // «استرجاع التوزيع الرسمي» متاح لتوزيع محفوظ حين تتوفر مذكرات المادة
+  const canReset = !!prog.data && !!curriculum.data?.entries.length;
+  return (
+    <Editor
+      key={`${classId}-${subjectId}-${prog.data ? "saved" : "official"}`}
+      initial={initial}
+      official={official}
+      canReset={canReset}
+      className={cls.data.displayName}
+      subjectLabel={subjectById(tax.data, subjectId)?.label}
+    />
+  );
 }
 
-function Editor({ initial, official, className, subjectLabel }: { initial: Progression; official: boolean; className: string; subjectLabel?: { ar: string; fr: string } }) {
+function Editor({ initial, official, canReset, className, subjectLabel }: { initial: Progression; official: boolean; canReset: boolean; className: string; subjectLabel?: { ar: string; fr: string } }) {
   const t = useTranslations("planning");
   const locale = useLocale() as "ar" | "fr";
   const uid = useUid();
@@ -60,6 +73,21 @@ function Editor({ initial, official, className, subjectLabel }: { initial: Progr
   const [state, setState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [printMode, setPrintMode] = useState<"annual" | "monthly">("annual");
   const subject = subjectLabel?.[locale] ?? p.subjectId;
+  // العربية وبقية المواد من اليمين، والفرنسية والإنجليزية من اليسار
+  const dir = subjectDir(p.subjectId);
+  const tm = useTranslations("planning.monthlyPlan");
+
+  async function reset() {
+    if (!uid || !window.confirm(t("resetConfirm"))) return;
+    setState("saving");
+    try {
+      await deleteProgression(uid, p.classId, p.subjectId);
+      queryClient.setQueryData(["progression", uid, p.classId, p.subjectId], null);
+      await queryClient.invalidateQueries({ queryKey: ["progressions", uid] });
+    } catch {
+      setState("error");
+    }
+  }
   const currentWeek = schoolWeekOf(todayInAlgiers(), p.startDate, cal.schoolDays, cal.holidays);
   const status = progressStatus(p.rows, currentWeek);
   const weekDate = (w: number) => weekStart(w, p.startDate, cal.schoolDays, cal.holidays);
@@ -105,6 +133,7 @@ function Editor({ initial, official, className, subjectLabel }: { initial: Progr
     <>
       <div className="space-y-4 pb-4 print:hidden">
         {official && state !== "saved" && <p className="rounded-2xl bg-brand-50 p-3 text-sm text-brand-900">{t("officialHint")}</p>}
+        <EditTip id="progression-edit" title={t("tipTitle")}>{t("tipBody")}</EditTip>
         <Card className="flex flex-wrap items-center gap-3">
           <div className="min-w-0 flex-1">
             <p className="text-sm text-muted">{t("whereAmI")} · {currentWeek ? t("week", { n: currentWeek }) : t("beforeStart")}</p>
@@ -142,6 +171,12 @@ function Editor({ initial, official, className, subjectLabel }: { initial: Progr
               </button>
             </>
           )}
+          {canReset && (
+            <button type="button" onClick={() => void reset()} disabled={state === "saving"} className={buttonClass("ghost")}>
+              <RotateCcw aria-hidden className="size-4" />
+              {t("reset")}
+            </button>
+          )}
           <Link href="/app/library" className={buttonClass("ghost")}>
             <Search aria-hidden className="size-4" />
             {t("fromLibrary")}
@@ -156,7 +191,7 @@ function Editor({ initial, official, className, subjectLabel }: { initial: Progr
               value={paste}
               onChange={(e) => setPaste(e.target.value)}
               rows={6}
-              dir="auto"
+              dir={dir}
               placeholder={t("pastePlaceholder")}
               aria-label={t("paste")}
               className="block w-full rounded-xl border border-line bg-surface px-4 py-3 font-mono text-sm outline-none focus:border-brand-600"
@@ -230,7 +265,7 @@ function Editor({ initial, official, className, subjectLabel }: { initial: Progr
                         <input
                           value={r.unit}
                           maxLength={ROW_MAX.unit}
-                          dir="auto"
+                          dir={dir}
                           placeholder={t("unit")}
                           aria-label={t("unit")}
                           onChange={(e) => setRow(i, { unit: e.target.value })}
@@ -247,7 +282,7 @@ function Editor({ initial, official, className, subjectLabel }: { initial: Progr
                         <input
                           value={r.content}
                           maxLength={ROW_MAX.content}
-                          dir="auto"
+                          dir={dir}
                           placeholder={t("content")}
                           aria-label={t("content")}
                           onChange={(e) => setRow(i, { content: e.target.value })}
@@ -265,9 +300,14 @@ function Editor({ initial, official, className, subjectLabel }: { initial: Progr
                         <span className={cn("w-16 shrink-0 text-center text-xs font-semibold", current ? "text-brand-700" : "text-muted")}>
                           {current ? t("thisWeek") : t("week", { n: r.w })}
                         </span>
-                        <span className={cn("min-w-0 flex-1", r.done && "text-muted line-through")}>
-                          {r.unit && <span dir="auto" className="block text-xs text-muted">{r.unit}</span>}
-                          <span dir="auto" className="block">{r.content}</span>
+                        <span className={cn("min-w-0 flex-1", r.done && "text-muted")}>
+                          {(r.unit || (r.k && r.k !== "all")) && (
+                            <span className="flex flex-wrap items-center gap-1.5 text-xs text-muted">
+                              {r.unit && <span dir={dir}>{r.unit}</span>}
+                              {r.k && r.k !== "all" && <span className="rounded-full bg-emerald-50 px-1.5 font-semibold text-emerald-800">{tm(r.k)}</span>}
+                            </span>
+                          )}
+                          <span dir={dir} className={cn("block", r.done && "line-through")}>{r.content}</span>
                         </span>
                       </label>
                     )}

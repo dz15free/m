@@ -21,7 +21,8 @@ import { getFirebase } from "@/lib/firebase/client";
    عند فتح التطبيق نقرأ تاريخين فقط (آخر إعلان في config/app وآخر شخصي في prefs)؛
    القائمة لا تُجلب إلا عند فتح الجرس. */
 
-export type Kind = "news" | "update" | "content" | "offer" | "billing" | "message";
+/** planning: إشعار يُحسب على الجهاز (التوزيع الشهري الجديد) ولا يُخزَّن في القاعدة */
+export type Kind = "news" | "update" | "content" | "offer" | "billing" | "message" | "planning";
 export type Notice = { id: string; kind: Kind; title: { ar: string; fr: string }; body: { ar: string; fr: string }; link: string; createdAt: number; personal: boolean };
 
 const db = () => getFirebase().db;

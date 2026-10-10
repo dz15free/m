@@ -5,15 +5,16 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Bell, BellRing, BookOpen, CreditCard, Gift, LoaderCircle, Megaphone, Sparkles, X, MessagesSquare } from "lucide-react";
+import { Bell, BellRing, BookOpen, CalendarDays, CreditCard, Gift, LoaderCircle, Megaphone, Sparkles, X, MessagesSquare } from "lucide-react";
 import { enablePush, getPushState, refreshPush, type PushState } from "@/features/pwa/push";
 import { useUid } from "@/features/classes/hooks";
 import { cn } from "@/lib/utils/cn";
 import { linkKind } from "@/lib/utils/links";
-import { getNotificationState, listNotices, markAllRead, type Kind } from "./repo";
+import { useMonthlyNotice } from "@/features/planning/monthly-notice";
+import { getNotificationState, listNotices, markAllRead, type Kind, type Notice } from "./repo";
 import { openSupport } from "@/features/support/repo";
 
-const ICON: Record<Kind, typeof Bell> = { news: Megaphone, update: Sparkles, content: BookOpen, offer: Gift, billing: CreditCard, message: MessagesSquare };
+const ICON: Record<Kind, typeof Bell> = { news: Megaphone, update: Sparkles, content: BookOpen, offer: Gift, billing: CreditCard, message: MessagesSquare, planning: CalendarDays };
 
 export function NotificationBell({ className }: { className?: string }) {
   const t = useTranslations("notifications");
@@ -32,7 +33,8 @@ export function NotificationBell({ className }: { className?: string }) {
   useEffect(() => {
     if (uid) refreshPush(locale);
   }, [uid, locale]);
-  const unread = !!s && Math.max(s.latestAnnouncementAt, s.personalLatestAt) > s.readAt;
+  const monthly = useMonthlyNotice();
+  const unread = !!s && Math.max(s.latestAnnouncementAt, s.personalLatestAt, monthly?.createdAt ?? 0) > s.readAt;
 
   function close() {
     setOpen(false);
@@ -55,17 +57,18 @@ export function NotificationBell({ className }: { className?: string }) {
       </button>
       {open && uid && (
         <Portal>
-          <Panel uid={uid} readAt={s?.readAt ?? 0} onClose={close} />
+          <Panel uid={uid} readAt={s?.readAt ?? 0} extra={monthly} onClose={close} />
         </Portal>
       )}
     </>
   );
 }
 
-function Panel({ uid, readAt, onClose }: { uid: string; readAt: number; onClose: () => void }) {
+function Panel({ uid, readAt, extra, onClose }: { uid: string; readAt: number; extra: Notice | null; onClose: () => void }) {
   const t = useTranslations("notifications");
   const locale = useLocale() as "ar" | "fr";
   const list = useQuery({ queryKey: ["notices", uid], queryFn: () => listNotices(uid), staleTime: 60_000 });
+  const notices = list.data && [...(extra ? [extra] : []), ...list.data].sort((a, b) => b.createdAt - a.createdAt);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -93,15 +96,15 @@ function Panel({ uid, readAt, onClose }: { uid: string; readAt: number; onClose:
         </header>
         <div className="overflow-y-auto">
           <PushCard />
-          {!list.data ? (
+          {!notices ? (
             <div className="grid place-items-center py-10">
               <LoaderCircle aria-hidden className="size-6 animate-spin text-brand-700" />
             </div>
-          ) : list.data.length === 0 ? (
+          ) : notices.length === 0 ? (
             <p className="py-10 text-center text-muted">{t("empty")}</p>
           ) : (
             <ul className="divide-y divide-line">
-              {list.data.map((n) => {
+              {notices.map((n) => {
                 const Icon = ICON[n.kind] ?? Bell;
                 const isNew = n.createdAt > readAt;
                 const body = (

@@ -63,3 +63,9 @@ export function formatHijri(iso: string): string {
     return "";
   }
 }
+
+/** اسم الشهر (1 = جانفي): «أكتوبر» / « octobre ». */
+export function monthName(month: number, locale: Locale): string {
+  if (locale === "ar") return MONTHS_DZ[month - 1] ?? "";
+  return new Intl.DateTimeFormat("fr-DZ", { month: "long", timeZone: "UTC" }).format(Date.UTC(2000, month - 1, 15));
+}

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useQueries, useQuery } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { CalendarRange, ChevronLeft, ChevronRight, LoaderCircle } from "lucide-react";
+import { CalendarDays, CalendarRange, ChevronLeft, ChevronRight, LoaderCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useClasses, useTaxonomy, useTeacher, useUid } from "@/features/classes/hooks";
 import { todayInAlgiers } from "@/features/attendance/logic";
@@ -15,6 +15,8 @@ import { getCurriculum } from "@/features/lessons/repo";
 import { curriculumId } from "@/features/lessons/logic";
 import { defaultStart, progressionId, progressStatus, rowsFromCurriculum, schoolWeekOf, type Status } from "./logic";
 import { listProgressions } from "./repo";
+import { schoolMonths } from "./monthly";
+import { useMonthLabel } from "./monthly-sheet";
 
 export const STATUS_STYLE: Record<Status["kind"], string> = {
   empty: "bg-canvas text-muted",
@@ -26,6 +28,7 @@ export const STATUS_STYLE: Record<Status["kind"], string> = {
 
 export function PlanningOverview() {
   const t = useTranslations("planning");
+  const monthLabel = useMonthLabel();
   const locale = useLocale() as "ar" | "fr";
   const uid = useUid();
   const teacher = useTeacher();
@@ -56,6 +59,8 @@ export function PlanningOverview() {
   const weekFor = (start: string) => schoolWeekOf(today, start, calendar.data!.schoolDays, calendar.data!.holidays);
   const currentWeek = weekFor(progs.data[0]?.startDate ?? defaultStart(startYear));
   const Chevron = locale === "ar" ? ChevronLeft : ChevronRight;
+  const months = schoolMonths(defaultStart(startYear), calendar.data);
+  const month = months.includes(today.slice(0, 7)) ? today.slice(0, 7) : null;
 
   return (
     <div className="space-y-5">
@@ -67,6 +72,15 @@ export function PlanningOverview() {
         </div>
       </Card>
 
+      <Link href="/app/planning/monthly" className="flex items-center gap-3 rounded-card bg-surface p-4 shadow-card hover:bg-brand-50">
+        <CalendarDays aria-hidden className="size-7 shrink-0 text-brand-700" />
+        <span className="min-w-0 flex-1">
+          <span className="block font-bold">{month ? t("monthlyPlan.cardTitle", { month: monthLabel(month) }) : t("monthlyPlan.title")}</span>
+          <span className="block text-sm text-muted">{t("monthlyPlan.cardBody")}</span>
+        </span>
+        <Chevron aria-hidden className="size-4 shrink-0 text-muted" />
+      </Link>
+
       {active.map((c) => {
         // المواد ذات التوزيع أولًا
         const subjects = c.subjectIds.filter((s) => { const subj = subjectById(tax.data!, s); return !subj || subj.levels.includes(c.level); }).sort((a, b) => Number(byId.has(progressionId(c.id, b))) - Number(byId.has(progressionId(c.id, a))));
@@ -77,7 +91,7 @@ export function PlanningOverview() {
               {subjects.map((s) => {
                 const p = byId.get(progressionId(c.id, s));
                 const cur = !p ? curById.get(curriculumId(c.level, s)) : null;
-                const st = progressStatus(p?.rows ?? (cur?.entries.length ? rowsFromCurriculum(cur, currentWeek) : []), p ? weekFor(p.startDate) : currentWeek);
+                const st = progressStatus(p?.rows ?? (cur?.entries.length ? rowsFromCurriculum({ ...cur, subject: s }, currentWeek) : []), p ? weekFor(p.startDate) : currentWeek);
                 return (
                   <li key={s}>
                     <Link href={`/app/planning/${c.id}/${s}`} className="flex items-center gap-3 px-4 py-3 hover:bg-brand-50">

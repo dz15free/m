@@ -19,6 +19,8 @@ export type Calendar = {
   schoolDays: number[];
   /** العطل: مجالات تواريخ شاملة */
   holidays: { start: string; end: string; label?: { ar: string; fr: string } }[];
+  /** أيام الاختبارات الفصلية (لا تُوقف العدّ: الأسبوع يبقى أسبوعًا دراسيًا) */
+  exams?: { term: 1 | 2 | 3; days: string[] }[];
 };
 
 export const DEFAULT_CALENDAR: Calendar = { schoolDays: [0, 1, 2, 3, 4], holidays: [] };
