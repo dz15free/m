@@ -91,7 +91,7 @@ export function PlanningOverview() {
               {subjects.map((s) => {
                 const p = byId.get(progressionId(c.id, s));
                 const cur = !p ? curById.get(curriculumId(c.level, s)) : null;
-                const st = progressStatus(p?.rows ?? (cur?.entries.length ? rowsFromCurriculum(cur, currentWeek) : []), p ? weekFor(p.startDate) : currentWeek);
+                const st = progressStatus(p?.rows ?? (cur?.entries.length ? rowsFromCurriculum({ ...cur, subject: s }, currentWeek) : []), p ? weekFor(p.startDate) : currentWeek);
                 return (
                   <li key={s}>
                     <Link href={`/app/planning/${c.id}/${s}`} className="flex items-center gap-3 px-4 py-3 hover:bg-brand-50">

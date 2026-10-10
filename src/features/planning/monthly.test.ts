@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { arabicColumns, entriesOfWeek, monthPublishedAt, monthWeeks, schoolMonths, topicsOf, yearWeeks } from "./monthly.ts";
-import { schoolWeekOf } from "./logic.ts";
+import { arabicWeek, cellItems, inferColumns, monthPublishedAt, monthWeeks, replaceCell, schoolMonths, yearWeeks } from "./monthly.ts";
+import { rowsFromCurriculum, schoolWeekOf, type ProgressionRow } from "./logic.ts";
 import { officialCalendar } from "../../shared/dz/school-calendar.ts";
 import type { CurriculumEntry } from "../lessons/logic.ts";
 
@@ -51,28 +51,83 @@ test("أشهر السنة الدراسية حتى شهر آخر اختبار", (
   assert.equal(schoolMonths(START, { schoolDays: [0, 1, 2, 3, 4], holidays: [] }).at(-1), "2027-06");
 });
 
-const e = (o: number, u: number, d: string, t: string): CurriculumEntry => ({ id: `x${o}`, o, s: 1, k: "week", u, a: "", d, t, b: false, sm: false });
-
-test("حصص الأسبوع والمواضيع بلا تكرار", () => {
-  const c = { weekMode: "absolute" as const, entries: [e(1, 3, "فهم المكتوب", "ماسح الزجاج"), e(2, 3, "فهم المكتوب", "ماسح الزجاج"), e(3, 4, "فهم المكتوب", "جدي")] };
-  assert.deepEqual(topicsOf(entriesOfWeek(c, 3)), ["ماسح الزجاج"]);
-  assert.deepEqual(entriesOfWeek(c, 12), []);
-  assert.deepEqual(entriesOfWeek(null, 3), []);
-});
-
-test("العربية بميادينها، والإدماج خانة واحدة", () => {
-  const week = [
+const e = (o: number, u: number, d: string, t: string, s = 1): CurriculumEntry => ({ id: `x${o}`, o, s, k: "week", u, a: "", d, t, b: false, sm: false });
+const ar = {
+  subject: "ar",
+  weekMode: "absolute" as const,
+  segments: [{ n: 1, title: "القيم الإنسانية" }],
+  entries: [
     e(1, 3, "فهم المنطوق", "البائع الصغير"),
     e(2, 3, "التعبير الشفوي", "ظروف الزمان"),
     e(3, 3, "فهم المكتوب", "ماسح الزجاج"),
-    e(4, 3, "فهم المكتوب", "الفعل الماضي"),
-    e(5, 3, "التعبير الكتابي", "تعبير كتابي"),
+    e(4, 3, "فهم المكتوب", "ماسح الزجاج"), // حصتان لنفس النص
+    e(5, 3, "فهم المكتوب", "الفعل الماضي"),
+    e(6, 3, "التعبير الكتابي", "تعبير كتابي"),
+    e(7, 5, "إدماج", "إدماج المقطع 1"),
+  ],
+};
+
+test("التوزيع الرسمي: سطر لكل موضوع في أسبوعه، وللعربية خانة ميدانها", () => {
+  const rows = rowsFromCurriculum(ar, 1);
+  assert.deepEqual(rows.map((r) => [r.w, r.k, r.content]), [
+    [3, "oral", "البائع الصغير"],
+    [3, "oral", "ظروف الزمان"],
+    [3, "reading", "ماسح الزجاج"],
+    [3, "reading", "الفعل الماضي"],
+    [3, "writing", "تعبير كتابي"],
+    [5, "all", "إدماج المقطع 1"],
+  ]);
+  // المواد الأخرى بلا خانات
+  assert.equal(rowsFromCurriculum({ ...ar, subject: "math" }, 1)[0]!.k, undefined);
+});
+
+test("خانات أسبوع العربية، والإدماج خانة واحدة على عرضها", () => {
+  const rows = rowsFromCurriculum(ar, 1);
+  assert.deepEqual(arabicWeek(rows, 3), {
+    merged: null,
+    cols: { oral: ["البائع الصغير", "ظروف الزمان"], reading: ["ماسح الزجاج", "الفعل الماضي"], writing: ["تعبير كتابي"] },
+  });
+  assert.deepEqual(arabicWeek(rows, 5).merged, ["إدماج المقطع 1"]);
+  assert.deepEqual(arabicWeek(rows, 9), { merged: null, cols: { oral: [], reading: [], writing: [] } });
+  // سطر بلا خانة (توزيع قديم أو ملصوق) يظهر في فهم المكتوب
+  assert.deepEqual(cellItems([{ w: 2, unit: "", content: "نص", done: false }], 2, "reading"), ["نص"]);
+});
+
+test("تعديل خانة: الاستبدال في مكانها مع الإبقاء على «أُنجز»", () => {
+  const rows = rowsFromCurriculum(ar, 1).map((r) => (r.content === "ماسح الزجاج" ? { ...r, done: true } : r));
+  const next = replaceCell(rows, 3, "reading", ["ماسح الزجاج", "  الفعل   المضارع ", "", "ماسح الزجاج"]);
+  assert.deepEqual(cellItems(next, 3, "reading"), ["ماسح الزجاج", "الفعل المضارع"]);
+  assert.equal(next.find((r) => r.content === "ماسح الزجاج")!.done, true);
+  assert.equal(next.find((r) => r.content === "الفعل المضارع")!.done, false);
+  assert.equal(next.find((r) => r.content === "الفعل المضارع")!.unit, "القيم الإنسانية");
+  // الخانات الأخرى لم تتغيّر، والترتيب محفوظ (الشفوي ثم المكتوب ثم الكتابي)
+  assert.deepEqual(next.map((r) => r.k), ["oral", "oral", "reading", "reading", "writing", "all"]);
+  // تفريغ خانة
+  assert.deepEqual(cellItems(replaceCell(rows, 3, "writing", []), 3, "writing"), []);
+});
+
+test("نقل خانة إلى أسبوع آخر (تأجيل بعد الاختبارات)", () => {
+  const rows: ProgressionRow[] = [
+    { w: 11, unit: "م3", content: "الكسور (1)", done: false },
+    { w: 12, unit: "م3", content: "التناسبية (1)", done: false },
+    { w: 13, unit: "م4", content: "القسمة (1)", done: false },
   ];
-  const r = arabicColumns(week);
-  assert.equal(r.merged, null);
-  assert.deepEqual(r.cols, { oral: ["البائع الصغير", "ظروف الزمان"], reading: ["ماسح الزجاج", "الفعل الماضي"], writing: ["تعبير كتابي"] });
-  assert.deepEqual(arabicColumns([e(1, 5, "إدماج", "إدماج المقطع 1")]).merged, ["إدماج المقطع 1"]);
-  assert.equal(arabicColumns([]).merged, null);
+  const next = replaceCell(rows, 12, null, cellItems(rows, 12, null), 13);
+  assert.deepEqual(next.map((r) => [r.w, r.content]), [[11, "الكسور (1)"], [13, "القسمة (1)"], [13, "التناسبية (1)"]]);
+  assert.equal(next[2]!.unit, "م3");
+  // خانة فارغة تُملأ في أسبوع بلا أسطر
+  const filled = replaceCell(rows, 20, null, ["الحصيلة"]);
+  assert.deepEqual(filled.at(-1), { w: 20, unit: "م4", content: "الحصيلة", done: false });
+});
+
+test("توزيع عربية قديم بلا خانات: تُستردّ من السطر الرسمي المطابق", () => {
+  const official = rowsFromCurriculum(ar, 1);
+  const legacy = official.map((r) => {
+    const c = { ...r };
+    delete c.k;
+    return c;
+  });
+  assert.deepEqual(inferColumns(legacy, official).map((r) => r.k), official.map((r) => r.k));
 });
 
 test("تاريخ وضع توزيع الشهر: صباح أوله بتوقيت الجزائر", () => {

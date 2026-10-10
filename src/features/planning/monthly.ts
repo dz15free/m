@@ -2,7 +2,7 @@
    مع رزنامة العطل والاختبارات. الترقيم نفسه في كل المنصة (schoolWeekOf): الأسبوع الذي تقع أيامه الدراسية
    كلها في عطلة لا يُعدّ، وأسبوع الاختبارات يبقى أسبوعًا دراسيًا (المذكرات تتركه فارغًا أو للتقويم). */
 
-import { weeksOf, type Curriculum, type CurriculumEntry } from "../lessons/logic.ts";
+import { ROW_MAX, type ArColumn, type ProgressionRow } from "./logic.ts";
 
 type Label = { ar: string; fr: string };
 export type MonthCalendar = {
@@ -64,45 +64,63 @@ export function monthWeeks(month: string, start: string, cal: MonthCalendar): Mo
     .map((w, i) => ({ n: w.n, index: i + 1, days: w.days, exams: w.exams, holidays: w.holidays }));
 }
 
-/** حصص المذكرات لأسبوع دراسي. */
-export function entriesOfWeek(c: Pick<Curriculum, "entries" | "weekMode"> | null | undefined, n: number): CurriculumEntry[] {
-  if (!c?.entries.length) return [];
-  return weeksOf(c)[n - 1]?.entries ?? [];
-}
-
-/** المواضيع المختلفة بترتيبها (بلا تكرار الحصص المتعددة لنفس الموضوع). */
-export function topicsOf(entries: CurriculumEntry[]): string[] {
-  const seen = new Set<string>();
-  const out: string[] = [];
-  for (const e of [...entries].sort((a, b) => a.o - b.o)) {
-    const t = e.t.replace(/\s+/g, " ").trim();
-    if (t && !seen.has(t)) {
-      seen.add(t);
-      out.push(t);
-    }
-  }
-  return out;
-}
+/* ── خانات الجدول ──
+   المخطط الشهري منظر شهري لتوزيعات القسم (مادة مادة): التوزيع المحفوظ للأستاذ، وإلا الرسمي من المذكرات.
+   تعديل خانة = تعديل أسطر ذلك الأسبوع في توزيع المادة، فيتحدّث «أين أنا الآن؟» معه. */
 
 export const AR_COLUMNS = ["oral", "reading", "writing"] as const;
-export type ArColumn = (typeof AR_COLUMNS)[number];
+/** خانة: كل المادة (null)، أو ميدان من العربية، أو «all» لأسبوع عربية بلا ميدان (إدماج…) */
+export type CellCol = ArColumn | null;
 
-/** اللغة العربية بميادينها الثلاثة كما في المخطط الرسمي: فهم المنطوق والتعبير الشفوي، فهم المكتوب، التعبير الكتابي.
-    أسبوع لا ميدان فيه (إدماج، تقويم، تثبيت المكتسبات) يُعرض خانة واحدة على عرض الميادين. */
-export function arabicColumns(entries: CurriculumEntry[]): { merged: string[] | null; cols: Record<ArColumn, string[]> } {
-  const kind = (d: string): ArColumn | null =>
-    /المنطوق|الشفوي/.test(d) ? "oral" : /الكتابي|الكتابة|التخطيط/.test(d) ? "writing" : /المكتوب|القراءة|المحفوظات/.test(d) ? "reading" : null;
-  const groups: Record<ArColumn, CurriculumEntry[]> = { oral: [], reading: [], writing: [] };
-  const other: CurriculumEntry[] = [];
-  for (const e of entries) {
-    const k = kind(e.d);
-    (k ? groups[k] : other).push(e);
-  }
-  if (!groups.oral.length && !groups.reading.length && !groups.writing.length) {
-    return { merged: other.length ? topicsOf(other) : null, cols: { oral: [], reading: [], writing: [] } };
-  }
-  groups.reading.push(...other);
-  return { merged: null, cols: { oral: topicsOf(groups.oral), reading: topicsOf(groups.reading), writing: topicsOf(groups.writing) } };
+function member(r: ProgressionRow, col: CellCol): boolean {
+  if (col === null || col === "all") return true;
+  if (col === "reading") return !r.k || r.k === "reading" || r.k === "all";
+  return r.k === col;
+}
+
+const distinct = (list: string[]) => [...new Set(list.map((x) => x.replace(/\s+/g, " ").trim()).filter(Boolean))];
+
+/** محتوى خانة (الأسبوع n) بلا تكرار، بترتيبه. */
+export function cellItems(rows: ProgressionRow[], n: number, col: CellCol): string[] {
+  return distinct(rows.filter((r) => r.w === n && member(r, col)).map((r) => r.content));
+}
+
+/** أسبوع العربية بخاناته الثلاث، أو خانة واحدة على عرضها حين لا ميدان في أسطره كلها. */
+export function arabicWeek(rows: ProgressionRow[], n: number): { merged: string[] | null; cols: Record<(typeof AR_COLUMNS)[number], string[]> } {
+  const week = rows.filter((r) => r.w === n);
+  if (week.length && week.every((r) => r.k === "all")) return { merged: cellItems(rows, n, "all"), cols: { oral: [], reading: [], writing: [] } };
+  return { merged: null, cols: { oral: cellItems(rows, n, "oral"), reading: cellItems(rows, n, "reading"), writing: cellItems(rows, n, "writing") } };
+}
+
+/** يستبدل محتوى خانة بعناصر جديدة (سطر لكل عنصر)، في الأسبوع نفسه أو في أسبوع آخر (نقل/تأجيل).
+    العنصر الذي لم يتغيّر يحتفظ بعلامة «أُنجز»، والأسطر الجديدة تأخذ مقطع الأسبوع. */
+export function replaceCell(rows: ProgressionRow[], n: number, col: CellCol, items: string[], target = n): ProgressionRow[] {
+  const isIn = (r: ProgressionRow) => r.w === n && member(r, col);
+  const removed = rows.filter(isIn);
+  const rest = rows.filter((r) => !isIn(r));
+  const doneOf = new Map(removed.map((r) => [r.content, r.done]));
+  const unit = removed[0]?.unit ?? rest.find((r) => r.w === target)?.unit ?? rest.filter((r) => r.w <= target).at(-1)?.unit ?? "";
+  const fresh: ProgressionRow[] = distinct(items).map((x) => {
+    const content = x.slice(0, ROW_MAX.content);
+    return { w: target, unit, content, done: doneOf.get(content) ?? false, ...(col ? { k: col } : {}) };
+  });
+  // الموضع: مكان الخانة نفسها، أو بعد آخر سطر من الأسبوع الهدف
+  const firstRemoved = rows.findIndex(isIn);
+  const at =
+    target === n && firstRemoved >= 0
+      ? rows.slice(0, firstRemoved).filter((r) => !isIn(r)).length
+      : rest.reduce((last, r, i) => (r.w <= target ? i + 1 : last), 0);
+  return [...rest.slice(0, at), ...fresh, ...rest.slice(at)];
+}
+
+/** أسطر عربية محفوظة قبل اعتماد الخانات: تأخذ خانة السطر الرسمي المطابق (نفس الأسبوع والموضوع). */
+export function inferColumns(rows: ProgressionRow[], official: ProgressionRow[]): ProgressionRow[] {
+  const byKey = new Map(official.map((r) => [`${r.w}|${r.content}`, r.k]));
+  return rows.map((r) => {
+    if (r.k) return r;
+    const k = byKey.get(`${r.w}|${r.content}`);
+    return k ? { ...r, k } : r;
+  });
 }
 
 /** لحظة «وضع» توزيع الشهر: أول يوم فيه، الثامنة صباحًا بتوقيت الجزائر (UTC+1) — يبقى «اليوم الأول» في أي منطقة زمنية. */
