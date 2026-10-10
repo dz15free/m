@@ -1265,6 +1265,258 @@
     386
    ],
    "segmentTitle": "المقطع 8: الرحلات والأسفار"
+  },
+  {
+   "order": 55,
+   "unitKind": "week",
+   "activity": "رياضيات",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 2,
+   "session": "رياضيات",
+   "domain": "الأعداد والحساب",
+   "topic": "الأعداد الأصغر من 100000 (1)",
+   "materials": "كتاب الرياضيات، دفتر الأنشطة، أدوات الهندسة، اللوحة",
+   "objectives": [
+    "قراءة وكتابة وتسمية وتفكيك الأعداد الأصغر من 100000."
+   ],
+   "pages": [
+    "b:1",
+    "b:2",
+    "b:3",
+    "b:4"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 56,
+   "unitKind": "week",
+   "activity": "رياضيات",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 2,
+   "session": "رياضيات",
+   "domain": "الأعداد والحساب",
+   "topic": "الجمع والطرح",
+   "materials": "كتاب الرياضيات، دفتر الأنشطة، أدوات الهندسة، اللوحة",
+   "objectives": [
+    "جمع أو طرح عددين (حساب أفقي)."
+   ],
+   "pages": [
+    "b:5",
+    "b:6",
+    "b:7",
+    "b:8"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 57,
+   "unitKind": "week",
+   "activity": "رياضيات",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 2,
+   "session": "رياضيات",
+   "domain": "الأعداد والحساب",
+   "topic": "مشكلات جمعية (1)",
+   "materials": "كتاب الرياضيات، دفتر الأنشطة، أدوات الهندسة، اللوحة",
+   "objectives": [
+    "تمييز مشكلات جمعية وطرحية وتحديد خطوات حل مشكل رياضياتي."
+   ],
+   "pages": [
+    "b:9",
+    "b:10",
+    "b:11",
+    "b:12"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 58,
+   "unitKind": "week",
+   "activity": "رياضيات",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 3,
+   "session": "رياضيات",
+   "domain": "تنظيم المعطيات",
+   "topic": "جداول ومخططات",
+   "materials": "كتاب الرياضيات، دفتر الأنشطة، أدوات الهندسة، اللوحة",
+   "objectives": [
+    "تنظيم معلومات عددية في جدول أو مخطط بسيط، وتمثيل معطيات بمخطط وقراءتها."
+   ],
+   "pages": [
+    "b:13",
+    "b:14",
+    "b:15",
+    "b:16",
+    "b:17"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 59,
+   "unitKind": "week",
+   "activity": "رياضيات",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 3,
+   "session": "رياضيات",
+   "domain": "الفضاء والهندسة",
+   "topic": "التنقل على مرصوفة",
+   "materials": "كتاب الرياضيات، دفتر الأنشطة، أدوات الهندسة، اللوحة",
+   "objectives": [
+    "وصف موقع أو تنقل في الفضاء أو على تمثيل (مخطط، مرصوفة، توقع مسار تنقل)."
+   ],
+   "pages": [
+    "b:18",
+    "b:19",
+    "b:20",
+    "b:21"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 60,
+   "unitKind": "week",
+   "activity": "رياضيات",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 4,
+   "session": "رياضيات",
+   "domain": "الأعداد والحساب",
+   "topic": "آلية الجمع",
+   "materials": "كتاب الرياضيات، دفتر الأنشطة، أدوات الهندسة، اللوحة",
+   "objectives": [
+    "يجري عمليات جمع على الأعداد الطبيعية."
+   ],
+   "pages": [
+    "b:22"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 61,
+   "unitKind": "week",
+   "activity": "رياضيات",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 4,
+   "session": "رياضيات",
+   "domain": "الأعداد والحساب",
+   "topic": "آلية الطرح",
+   "materials": "كتاب الرياضيات، دفتر الأنشطة، أدوات الهندسة، اللوحة",
+   "objectives": [
+    "يجري عمليات طرح على الأعداد الطبيعية."
+   ],
+   "pages": [
+    "b:23"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 62,
+   "unitKind": "week",
+   "activity": "رياضيات",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 4,
+   "session": "رياضيات",
+   "domain": "الأعداد والحساب",
+   "topic": "الأعداد الأصغر من 100000 (2)",
+   "materials": "كتاب الرياضيات، دفتر الأنشطة، أدوات الهندسة، اللوحة",
+   "objectives": [
+    "مقارنة وترتيب وحصر الأعداد الأصغر من 100000."
+   ],
+   "pages": [
+    "b:24",
+    "b:25",
+    "b:26",
+    "b:27"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 63,
+   "unitKind": "week",
+   "activity": "رياضيات",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 5,
+   "session": "رياضيات",
+   "domain": "كل الميادين",
+   "topic": "أُجنّد معارفي 1",
+   "materials": "كتاب الرياضيات، دفتر الأنشطة، أدوات الهندسة، اللوحة",
+   "objectives": [
+    "يسترجع معلومات سابقة ويوظفها، وينجز فرديًا (إدماج جزئي)."
+   ],
+   "pages": [
+    "b:28",
+    "b:29"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 64,
+   "unitKind": "week",
+   "activity": "رياضيات",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 5,
+   "session": "رياضيات",
+   "domain": "كل الميادين",
+   "topic": "الحصيلة 1",
+   "materials": "كتاب الرياضيات، دفتر الأنشطة، أدوات الهندسة، اللوحة",
+   "objectives": [
+    "يسترجع معلومات سابقة ويوظفها في وضعيات تقويمية."
+   ],
+   "pages": [
+    "b:30",
+    "b:31"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
   }
- ]
+ ],
+ "sources": {
+  "main": {
+   "pdf": [
+    "17V3WR7qHTQlmVVj5c4Ga-sSQerxNQ8Vj"
+   ]
+  },
+  "b": {
+   "pdf": [
+    "1aTxYEQvg6nv65vE-77XFaMiWX1n4c7JR",
+    "1Efp4IQcpG05qN0qJ3qee3GtnhR2VSLq9",
+    "1q5S8pyAj2yysUpkUtKQuPIVwwmbRJD8L",
+    "1iGtT7uVjvIp6uj0eW5EEyXAC5WPGnlQ9",
+    "1_wLPGvsO8GEkPxM3fLxX5iIWfoY89TYt",
+    "1kBdziRwQ_bZ5rkSWMFDgkvzf3LLDpAZ_",
+    "1qyR6hc2Q9gOgI4e2BTSBnzatw9XhVApH",
+    "1yjlW_sImHmlA4MAwOxMtLDoFeBKIPvax",
+    "1e9ueFansjhVzivllZPmKOm9BCZmVf9jc",
+    "1_xwxGo2M4ofhaxV7RPHWFoQQluieIure"
+   ]
+  }
+ }
 }

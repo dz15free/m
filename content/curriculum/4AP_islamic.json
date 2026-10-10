@@ -446,6 +446,112 @@
     372
    ],
    "segmentTitle": "المقطع 7: الإبداع والابتكار"
+  },
+  {
+   "order": 22,
+   "unitKind": "week",
+   "activity": "تربية إسلامية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 2,
+   "session": "تربية إسلامية",
+   "domain": "القرآن الكريم والحديث الشريف",
+   "topic": "الوضعية الأم — سورة العلق",
+   "materials": "كتاب التلميذ، المصحف المدرسي، وسائط سمعية",
+   "objectives": [
+    "يتلو سورة العلق تلاوة سليمة ويتعرّف على معانيها."
+   ],
+   "pages": [
+    "b:1",
+    "b:2",
+    "b:3",
+    "b:4",
+    "b:5"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 23,
+   "unitKind": "week",
+   "activity": "تربية إسلامية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 3,
+   "session": "تربية إسلامية",
+   "domain": "القرآن الكريم والحديث الشريف",
+   "topic": "طلب العلم",
+   "materials": "كتاب التلميذ، المصحف المدرسي، وسائط سمعية",
+   "objectives": [
+    "يحفظ الحديث ويستظهره بشكل سليم، ويستدل به في المواقف المناسبة ويذكر فضل العلم."
+   ],
+   "pages": [
+    "b:6",
+    "b:7"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 24,
+   "unitKind": "week",
+   "activity": "تربية إسلامية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 4,
+   "session": "تربية إسلامية",
+   "domain": "تهذيب السلوك",
+   "topic": "الإخلاص",
+   "materials": "كتاب التلميذ، المصحف المدرسي، وسائط سمعية",
+   "objectives": [
+    "يبرز قيمة الإخلاص ويستدل بالنصوص الشرعية في معالجة مواقف من محيطه."
+   ],
+   "pages": [
+    "b:8",
+    "b:9"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 25,
+   "unitKind": "week",
+   "activity": "تربية إسلامية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 5,
+   "session": "تربية إسلامية",
+   "domain": "مبادئ في العقيدة الإسلامية والعبادات",
+   "topic": "الإيمان بالكتب السماوية",
+   "materials": "كتاب التلميذ، المصحف المدرسي، وسائط سمعية",
+   "objectives": [
+    "يعرض أركان العقيدة متكاملة، ويسمي الكتب السماوية والرسل الذين أنزلت عليهم."
+   ],
+   "pages": [
+    "b:10",
+    "b:11"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
   }
- ]
+ ],
+ "sources": {
+  "main": {
+   "pdf": [
+    "17V3WR7qHTQlmVVj5c4Ga-sSQerxNQ8Vj"
+   ]
+  },
+  "b": {
+   "pdf": [
+    "1RqmhNPloCoSo6riFVNiezK1mjVOLKPi5",
+    "1bjrIDGwUgI836Eh1c7ur8_68lo753c3p",
+    "1_wnWcoQRXAw84GWN5x3Gh5iczZox4_kc",
+    "12Y_uV0P7fa2ryYDuuKAcYeVrRxf4Mw7I"
+   ]
+  }
+ }
 }

@@ -418,6 +418,108 @@
     381
    ],
    "segmentTitle": "المقطع 8: الرحلات والأسفار"
+  },
+  {
+   "order": 21,
+   "unitKind": "week",
+   "activity": "تاريخ",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 2,
+   "session": "تاريخ",
+   "domain": "أدوات ومفاهيم المادة",
+   "topic": "الوضعية الأم والتاريخ الميلادي",
+   "materials": "كتاب التاريخ والجغرافيا والتربية المدنية، خط الزمن، سندات",
+   "objectives": [
+    "يعرّف التقويم الميلادي ويستعمله في التأريخ للأحداث."
+   ],
+   "pages": [
+    "b:1",
+    "b:2"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 22,
+   "unitKind": "week",
+   "activity": "تاريخ",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 3,
+   "session": "تاريخ",
+   "domain": "أدوات ومفاهيم المادة",
+   "topic": "التاريخ الهجري",
+   "materials": "كتاب التاريخ والجغرافيا والتربية المدنية، خط الزمن، سندات",
+   "objectives": [
+    "يعرّف التقويم الهجري ويميزه عن التقويم الميلادي."
+   ],
+   "pages": [
+    "b:3",
+    "b:4"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 23,
+   "unitKind": "week",
+   "activity": "تاريخ",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 4,
+   "session": "الحصة 1",
+   "domain": "أدوات ومفاهيم المادة",
+   "topic": "التاريخ المعلمي الشخصي",
+   "materials": "كتاب التاريخ والجغرافيا والتربية المدنية، خط الزمن، سندات",
+   "objectives": [
+    "يعرّف التاريخ المعلمي ويقدم أمثلة عن التاريخ الشخصي."
+   ],
+   "pages": [
+    "b:5",
+    "b:6"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 24,
+   "unitKind": "week",
+   "activity": "تاريخ",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 5,
+   "session": "الحصة 2",
+   "domain": "أدوات ومفاهيم المادة",
+   "topic": "التاريخ المعلمي الاجتماعي",
+   "materials": "كتاب التاريخ والجغرافيا والتربية المدنية، خط الزمن، سندات",
+   "objectives": [
+    "يميز بين التاريخ المعلمي الشخصي والاجتماعي ويقدم أمثلة عنهما."
+   ],
+   "pages": [
+    "b:5",
+    "b:6"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
   }
- ]
+ ],
+ "sources": {
+  "main": {
+   "pdf": [
+    "17V3WR7qHTQlmVVj5c4Ga-sSQerxNQ8Vj"
+   ]
+  },
+  "b": {
+   "pdf": [
+    "1hl1c6Rhc1rkE8Udu8HANSfEJvzNdG3M0",
+    "15sz0okBZcPC6ioWH-MXdNAuf7oR4WKmR",
+    "1C0MUh_v3nZ_oFsg3WbnoZR2G6xBGmo-k"
+   ]
+  }
+ }
 }

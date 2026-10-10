@@ -438,6 +438,108 @@
     382
    ],
    "segmentTitle": "المقطع 8: الرحلات والأسفار"
+  },
+  {
+   "order": 22,
+   "unitKind": "week",
+   "activity": "جغرافيا",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 2,
+   "session": "الحصة 1",
+   "domain": "أدوات ومفاهيم المادة",
+   "topic": "شكل الأرض",
+   "materials": "كتاب التاريخ والجغرافيا والتربية المدنية، الخرائط، صور",
+   "objectives": [
+    "يتعرف على شكل الأرض وخطوطها."
+   ],
+   "pages": [
+    "b:1",
+    "b:2"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 23,
+   "unitKind": "week",
+   "activity": "جغرافيا",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 3,
+   "session": "الحصة 2",
+   "domain": "أدوات ومفاهيم المادة",
+   "topic": "شكل الأرض (تتمة)",
+   "materials": "كتاب التاريخ والجغرافيا والتربية المدنية، الخرائط، صور",
+   "objectives": [
+    "يوظف خريطة العالم للتعرف على شكل الأرض وخطوطها."
+   ],
+   "pages": [
+    "b:1",
+    "b:2"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 24,
+   "unitKind": "week",
+   "activity": "جغرافيا",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 4,
+   "session": "جغرافيا",
+   "domain": "أدوات ومفاهيم المادة",
+   "topic": "الخريطة",
+   "materials": "كتاب التاريخ والجغرافيا والتربية المدنية، الخرائط، صور",
+   "objectives": [
+    "يذكر أهمية الخريطة ومجالات استعمالها."
+   ],
+   "pages": [
+    "b:3",
+    "b:4"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 25,
+   "unitKind": "week",
+   "activity": "جغرافيا",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 5,
+   "session": "جغرافيا",
+   "domain": "أدوات ومفاهيم المادة",
+   "topic": "توزيع الماء واليابسة على سطح الأرض",
+   "materials": "كتاب التاريخ والجغرافيا والتربية المدنية، الخرائط، صور",
+   "objectives": [
+    "يتعرف على نسبة توزيع الماء واليابسة ويسمي القارات والمحيطات."
+   ],
+   "pages": [
+    "b:5",
+    "b:6"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
   }
- ]
+ ],
+ "sources": {
+  "main": {
+   "pdf": [
+    "17V3WR7qHTQlmVVj5c4Ga-sSQerxNQ8Vj"
+   ]
+  },
+  "b": {
+   "pdf": [
+    "1ZylpHdOKCNk3ti5RzkLmYI6GybDYOk9s",
+    "1uq-BzIXvuEoJWISMS_WZvOS313sXT11Y",
+    "1SSsyis7QP-juLoeEd3cLuDusyKgVzbDM"
+   ]
+  }
+ }
 }

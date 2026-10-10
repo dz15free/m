@@ -180,6 +180,149 @@
     388
    ],
    "segmentTitle": "المقطع 8: الرحلات والأسفار"
+  },
+  {
+   "order": 9,
+   "unitKind": "week",
+   "activity": "تربية موسيقية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 2,
+   "session": "تربية موسيقية",
+   "domain": "التذوق الموسيقي والاستماع",
+   "topic": "الفرقة الموسيقية وتشكيلها",
+   "materials": "مسجل صوتي، تسجيلات موسيقية، كلمات النشيد",
+   "objectives": [
+    "يتعرف على الفرقة الموسيقية وتشكيلها."
+   ],
+   "pages": [
+    "c:1"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 10,
+   "unitKind": "week",
+   "activity": "تربية موسيقية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 5,
+   "session": "تربية موسيقية",
+   "domain": "التذوق الموسيقي والاستماع",
+   "topic": "النشيد الوطني: المقطع الرابع",
+   "materials": "مسجل صوتي، تسجيلات موسيقية، كلمات النشيد",
+   "objectives": [
+    "يتعرف على المقطع الرابع من النشيد الوطني ويحفظه ويستظهره."
+   ],
+   "pages": [
+    "c:2"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 11,
+   "unitKind": "week",
+   "activity": "تربية موسيقية",
+   "body": "",
+   "sample": false,
+   "segment": 2,
+   "unit": 7,
+   "session": "تربية موسيقية",
+   "domain": "التذوق الموسيقي والاستماع",
+   "topic": "النشيد الوطني: المقطع الرابع",
+   "materials": "مسجل صوتي، تسجيلات موسيقية، كلمات النشيد",
+   "objectives": [
+    "يحفظ المقطع الرابع من النشيد الوطني ويستظهره."
+   ],
+   "pages": [
+    "c:3"
+   ],
+   "segmentTitle": "المقطع 2: الحياة الاجتماعية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 12,
+   "unitKind": "week",
+   "activity": "تربية موسيقية",
+   "body": "",
+   "sample": false,
+   "segment": 3,
+   "unit": 9,
+   "session": "تربية موسيقية",
+   "domain": "التذوق الموسيقي والاستماع",
+   "topic": "النشيد الوطني: المقطع الرابع",
+   "materials": "مسجل صوتي، تسجيلات موسيقية، كلمات النشيد",
+   "objectives": [
+    "يستظهر المقطع الرابع من النشيد الوطني أداءً سليمًا."
+   ],
+   "pages": [
+    "c:4"
+   ],
+   "segmentTitle": "المقطع 3: الهوية الوطنية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 13,
+   "unitKind": "week",
+   "activity": "تربية موسيقية",
+   "body": "",
+   "sample": false,
+   "segment": 3,
+   "unit": 11,
+   "session": "تربية موسيقية",
+   "domain": "التذوق الموسيقي والاستماع",
+   "topic": "الفرقة الموسيقية العالمية (أنشودة «صباح الخير مدرستي»)",
+   "materials": "مسجل صوتي، تسجيلات موسيقية، كلمات النشيد",
+   "objectives": [
+    "يتعرف على الفرقة الموسيقية العالمية وتشكيلها، ويحفظ أنشودة «صباح الخير مدرستي»."
+   ],
+   "pages": [
+    "c:5"
+   ],
+   "segmentTitle": "المقطع 3: الهوية الوطنية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 14,
+   "unitKind": "week",
+   "activity": "تربية موسيقية",
+   "body": "",
+   "sample": false,
+   "segment": 5,
+   "unit": 17,
+   "session": "تربية موسيقية",
+   "domain": "التذوق الموسيقي والاستماع",
+   "topic": "القصة الموسيقية (أنشودة «الأم الحنون»)",
+   "materials": "مسجل صوتي، تسجيلات موسيقية، كلمات النشيد",
+   "objectives": [
+    "يتعرف على مكونات القصة الموسيقية ويؤدي الأنشودة منسجمًا في مجموعة."
+   ],
+   "pages": [
+    "c:6"
+   ],
+   "segmentTitle": "المقطع 5: الصحة والرياضة",
+   "added": "drive-2026-10"
   }
- ]
+ ],
+ "sources": {
+  "main": {
+   "pdf": [
+    "17V3WR7qHTQlmVVj5c4Ga-sSQerxNQ8Vj"
+   ]
+  },
+  "c": {
+   "images": [
+    "1PhQ0G5tUupVKpcvTp7iaibpAFLcvc2nU",
+    "1zPFejau8olT-J4ywgsUL2bJBkg-tHbQ4",
+    "1EwNCT_kmarEpl8uTiXU1A9Artv4OY2Xv",
+    "1JZ7TTPlVx6WnT_kN38lLCOYNLnDOjabW",
+    "1DIRNyX30dUyq7S46o31phqqLFC-DCD7a",
+    "1DlbWFfVM_wA-0Uv9NvqONYfL0W66JZzS"
+   ]
+  }
+ }
 }
