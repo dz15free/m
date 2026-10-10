@@ -1363,7 +1363,8 @@
       "settings": "Bandeau et contact",
       "support": "Messages",
       "audit": "Journal",
-      "feedback": "Avis des enseignants"
+      "feedback": "Avis des enseignants",
+      "curriculum": "Fiches"
     },
     "dash": {
       "teachers": "Enseignants inscrits",
@@ -1579,6 +1580,23 @@
         "trialEnd": "Après l'essai",
         "trial": "Pendant l'essai",
         "general": "Général"
+      }
+    },
+    "curriculum": {
+      "title": "Publication des fiches",
+      "intro": "Fiches ajoutées ou corrigées sur la plateforme et pas encore visibles par les enseignants. « Publier » télécharge leurs fichiers depuis le dossier Drive de la bibliothèque, dessine leurs pages dans ce navigateur et les enregistre avec le compte admin. Gardez la page ouverte jusqu'à la fin (quelques minutes).",
+      "publishAll": "Tout publier ({n})",
+      "allPublished": "Toutes les fiches sont publiées",
+      "publish": "Publier",
+      "published": "Publié",
+      "pending": "Mise à jour à publier",
+      "lessons": "{n} séances",
+      "added": "{n} nouvelles séances",
+      "step": {
+        "load": "Téléchargement depuis Drive…",
+        "pages": "Pages des fiches : {done} sur {total}",
+        "summaries": "Séances : {done} sur {total}",
+        "index": "Terminé"
       }
     }
   },

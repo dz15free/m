@@ -16,6 +16,7 @@ import {
   Tags,
   Users,
   ArrowRightLeft,
+  BookOpenCheck,
 } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
 import { buttonClass } from "@/components/ui/button";
@@ -23,7 +24,7 @@ import { Card } from "@/components/ui/card";
 import { useAuth, type Role } from "@/features/auth/auth-provider";
 import { cn } from "@/lib/utils/cn";
 
-type NavKey = "dashboard" | "teachers" | "support" | "feedback" | "content" | "notifications" | "plans" | "payments" | "settings" | "audit";
+type NavKey = "dashboard" | "teachers" | "support" | "feedback" | "content" | "curriculum" | "notifications" | "plans" | "payments" | "settings" | "audit";
 type Item = { key: NavKey; href: string; icon: typeof Gauge; roles: Role[] };
 
 export const ADMIN_NAV: Item[] = [
@@ -32,6 +33,7 @@ export const ADMIN_NAV: Item[] = [
   { key: "support", href: "/admin/support", icon: MessagesSquare, roles: ["admin"] },
   { key: "feedback", href: "/admin/feedback", icon: Star, roles: ["admin"] },
   { key: "content", href: "/admin/content", icon: FolderCog, roles: ["admin", "contentEditor"] },
+  { key: "curriculum", href: "/admin/curriculum", icon: BookOpenCheck, roles: ["admin", "contentEditor"] },
   { key: "notifications", href: "/admin/notifications", icon: Bell, roles: ["admin"] },
   { key: "plans", href: "/admin/plans", icon: Tags, roles: ["admin"] },
   { key: "payments", href: "/admin/payments", icon: CreditCard, roles: ["admin", "finance"] },
