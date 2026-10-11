@@ -34,8 +34,12 @@
    "objectives": [
     "يتعرّف على «المؤسسات العمومية الخدماتية» ويتبنّى سلوكًا مدنيًا مناسبًا."
    ],
-   "pages": [],
-   "segmentTitle": "المقطع 1: القيم الإنسانية"
+   "pages": [
+    "b:1",
+    "b:2"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "attached": "drive-2026-10"
   },
   {
    "order": 2,
@@ -52,8 +56,11 @@
    "objectives": [
     "يتعرّف على «البريد والمواصلات» ويتبنّى سلوكًا مدنيًا مناسبًا."
    ],
-   "pages": [],
-   "segmentTitle": "المقطع 1: القيم الإنسانية"
+   "pages": [
+    "b:3"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "attached": "drive-2026-10"
   },
   {
    "order": 3,
@@ -70,8 +77,11 @@
    "objectives": [
     "يتعرّف على «وسائل الإعلام» ويتبنّى سلوكًا مدنيًا مناسبًا."
    ],
-   "pages": [],
-   "segmentTitle": "المقطع 1: القيم الإنسانية"
+   "pages": [
+    "b:4"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "attached": "drive-2026-10"
   },
   {
    "order": 4,
@@ -88,8 +98,11 @@
    "objectives": [
     "يتعرّف على «وسائل الاتصال» ويتبنّى سلوكًا مدنيًا مناسبًا."
    ],
-   "pages": [],
-   "segmentTitle": "المقطع 2: الحياة الاجتماعية والخدمات"
+   "pages": [
+    "b:5"
+   ],
+   "segmentTitle": "المقطع 2: الحياة الاجتماعية والخدمات",
+   "attached": "drive-2026-10"
   },
   {
    "order": 5,
@@ -106,8 +119,11 @@
    "objectives": [
     "يتعرّف على «تعلّم الإدماج» ويتبنّى سلوكًا مدنيًا مناسبًا."
    ],
-   "pages": [],
-   "segmentTitle": "المقطع 2: الحياة الاجتماعية والخدمات"
+   "pages": [
+    "b:6"
+   ],
+   "segmentTitle": "المقطع 2: الحياة الاجتماعية والخدمات",
+   "attached": "drive-2026-10"
   },
   {
    "order": 6,
@@ -469,5 +485,17 @@
    "pages": [],
    "segmentTitle": "المقطع 8: الأسفار والرحلات"
   }
- ]
+ ],
+ "sources": {
+  "b": {
+   "pdf": [
+    "1cJzUUZDQHSbQCSmzFONE1aB8b64P_zc6",
+    "1iuroO6ncAxgdBGC6EyVXFT5J3g2-jMbn",
+    "1f4Z-75zDC2IzDt8j1O_i4iJTqODoVUyc",
+    "1zJAFvtNXLqntpOuTVpGTSf5oO7Ej5j4l",
+    "165PUQwRHG73k1BRivjvyUO_1-jl4F0xF",
+    "1GzvfWmHEnF23tWpdi4Tb8Foa6wjIMOJQ"
+   ]
+  }
+ }
 }

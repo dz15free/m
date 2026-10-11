@@ -34,8 +34,13 @@
    "objectives": [
     "يتعرّف على مكوّنات الهواء ومخاطر بعض الغازات (الهواء والاحتراق) بمسعى تجريبي ويوظّف ذلك في حياته."
    ],
-   "pages": [],
-   "segmentTitle": "المقطع 1: القيم الإنسانية"
+   "pages": [
+    "b:1",
+    "b:2",
+    "b:3"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "attached": "drive-2026-10"
   },
   {
    "order": 2,
@@ -52,8 +57,11 @@
    "objectives": [
     "يتعرّف على غازات أخرى غير الهواء بمسعى تجريبي ويوظّف ذلك في حياته."
    ],
-   "pages": [],
-   "segmentTitle": "المقطع 1: القيم الإنسانية"
+   "pages": [
+    "b:4"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "attached": "drive-2026-10"
   },
   {
    "order": 3,
@@ -70,8 +78,11 @@
    "objectives": [
     "يتعرّف على قواعد الأمن عند التعامل مع الغازات (أوظّف تعلماتي) بمسعى تجريبي ويوظّف ذلك في حياته."
    ],
-   "pages": [],
-   "segmentTitle": "المقطع 1: القيم الإنسانية"
+   "pages": [
+    "b:5"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "attached": "drive-2026-10"
   },
   {
    "order": 4,
@@ -487,5 +498,16 @@
    "pages": [],
    "segmentTitle": "المقطع 8: الأسفار والرحلات"
   }
- ]
+ ],
+ "sources": {
+  "b": {
+   "pdf": [
+    "1U0DuOZiY3P00Fg4WBGZhoKmGPhovGHKL",
+    "12QqvKbbJD8xRKmmFRMeY4AD867y6JMrq",
+    "1Izza4FpE-f9pnvZZIQoM0a-mj4QYHgmf",
+    "1vpi_SyvcUF55BdwR-BEY9-AEQ0rMo8aP",
+    "1brvNC7vriAH7DVYigQSLiwm8LP0HRLoh"
+   ]
+  }
+ }
 }
