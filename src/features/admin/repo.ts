@@ -1,6 +1,8 @@
 "use client";
 
 import {
+  arrayRemove,
+  arrayUnion,
   collection,
   doc,
   getCountFromServer,
@@ -181,6 +183,17 @@ export async function listFeedback(): Promise<FeedbackRow[]> {
     const x = d.data();
     return { uid: d.id, rating: Number(x.rating) || 0, reasons: Array.isArray(x.reasons) ? x.reasons : [], comment: String(x.comment ?? ""), context: String(x.context ?? ""), at: ms(x.updatedAt) };
   });
+}
+
+/** الآراء التي أخفاها الأدمن من الصفحة الرئيسية (config/testimonials.hidden). */
+export async function getHiddenTestimonials(): Promise<string[]> {
+  const snap = await getDoc(doc(db(), "config", "testimonials")).catch(() => null);
+  const hidden = snap?.data()?.hidden;
+  return Array.isArray(hidden) ? hidden.filter((x): x is string => typeof x === "string") : [];
+}
+
+export async function setTestimonialHidden(uid: string, hide: boolean) {
+  await setDoc(doc(db(), "config", "testimonials"), { hidden: hide ? arrayUnion(uid) : arrayRemove(uid) }, { merge: true });
 }
 
 export async function emailsOf(uids: string[]): Promise<Map<string, string>> {

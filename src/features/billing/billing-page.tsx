@@ -9,6 +9,7 @@ import { formatLongDate } from "@/i18n/dates";
 import { cn } from "@/lib/utils/cn";
 import { useBilling } from "./repo";
 import { FeedbackForm } from "./feedback-form";
+import { Testimonials } from "@/features/landing/testimonials";
 
 export function BillingPage() {
   const t = useTranslations("billing");
@@ -41,6 +42,8 @@ export function BillingPage() {
         )}
         <p className="pt-1 text-sm text-muted">{t(`accessNote.${access}`)}</p>
       </Card>
+
+      <Testimonials variant="compact" />
 
       <section aria-labelledby="plans" className="space-y-3">
         <h2 id="plans" className="text-lg font-semibold">{t("plans")}</h2>
