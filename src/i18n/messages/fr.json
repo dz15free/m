@@ -1119,7 +1119,20 @@
       "selectNone": "Tout désélectionner"
     },
     "search": "Rechercher : titre, matière, type…",
-    "countFiltered": "{n} sur {total}"
+    "countFiltered": "{n} sur {total}",
+    "bulk": {
+      "select": "Sélectionner",
+      "selectShown": "Tout sélectionner ({n})",
+      "clear": "Désélectionner",
+      "selected": "{n} sélectionné(s)",
+      "delete": "Supprimer la sélection ({n})",
+      "confirm": "Oui, supprimer définitivement {n}",
+      "cancel": "Annuler",
+      "warn": "Le contenu et ses fichiers seront supprimés définitivement. Les fichiers Drive supprimés ne seront plus proposés à l’import.",
+      "deleting": "Suppression… {done} sur {total}",
+      "deleted": "{n} contenu(s) supprimé(s).",
+      "error": "Certains contenus n’ont pas pu être supprimés. Réessayez."
+    }
   },
   "documents": {
     "title": "Documents",
