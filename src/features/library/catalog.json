@@ -3151,5 +3151,127 @@
     "size": 386679
    }
   ]
+ },
+ {
+  "id": "cat-own-3ap-en-s2-flashcards",
+  "title": {
+   "ar": "3AP English — Flashcards — My school",
+   "fr": "3AP English — Flashcards — My school"
+  },
+  "level": "3AP",
+  "subject": "en",
+  "language": "en",
+  "type": "poster",
+  "term": 1,
+  "unit": "Sequence 2: My school",
+  "tags": [
+   "Flashcards",
+   "بطاقات",
+   "المقطع 2"
+  ],
+  "excerpt": "Sequence 2 flashcards in colour: school things (10), in / on / under (3), colours (7), school subjects (7) and a days-of-the-week poster. 13 pages.",
+  "access": "free",
+  "author": "مساعد الأستاذ",
+  "license": "original",
+  "files": [
+   {
+    "upload": true,
+    "name": "3AP-EN-Seq2-Flashcards.pdf",
+    "mime": "application/pdf",
+    "size": 1060070
+   }
+  ]
+ },
+ {
+  "id": "cat-own-3ap-en-s2-worksheet",
+  "title": {
+   "ar": "3AP English — Worksheet — My school (with answer key)",
+   "fr": "3AP English — Worksheet — My school (with answer key)"
+  },
+  "level": "3AP",
+  "subject": "en",
+  "language": "en",
+  "type": "exercise",
+  "term": 1,
+  "unit": "Sequence 2: My school",
+  "tags": [
+   "Worksheet",
+   "ورقة عمل",
+   "المقطع 2",
+   "مع الحل"
+  ],
+  "excerpt": "Sequence 2 worksheet: look and match, read and colour, in / on / under, days of the week, the sound /ʌ/, trace b h k m, What's this? / What colour is it? 2 pages + answer key.",
+  "access": "premium",
+  "author": "مساعد الأستاذ",
+  "license": "original",
+  "files": [
+   {
+    "upload": true,
+    "name": "3AP-EN-Seq2-Worksheet.pdf",
+    "mime": "application/pdf",
+    "size": 447864
+   }
+  ]
+ },
+ {
+  "id": "cat-own-3ap-en-s2-assessment",
+  "title": {
+   "ar": "3AP English — Assessment — Sequence 2 (/10, answer key, teacher's notes)",
+   "fr": "3AP English — Assessment — Sequence 2 (/10, answer key, teacher's notes)"
+  },
+  "level": "3AP",
+  "subject": "en",
+  "language": "en",
+  "type": "evaluation",
+  "term": 1,
+  "unit": "Sequence 2: My school",
+  "tags": [
+   "Assessment",
+   "تقويم",
+   "المقطع 2",
+   "مع الحل"
+  ],
+  "excerpt": "End of Sequence 2 assessment marked /10: listen and tick, look and circle, where's the ball?, days of the week, small/capital letters. Answer key, listening script, marking guide and remediation ideas.",
+  "access": "premium",
+  "author": "مساعد الأستاذ",
+  "license": "original",
+  "files": [
+   {
+    "upload": true,
+    "name": "3AP-EN-Seq2-Assessment.pdf",
+    "mime": "application/pdf",
+    "size": 343095
+   }
+  ]
+ },
+ {
+  "id": "cat-own-3ap-en-t1-exam",
+  "title": {
+   "ar": "3AP English — First Term English Exam (/10, answer key, teacher's notes)",
+   "fr": "3AP English — First Term English Exam (/10, answer key, teacher's notes)"
+  },
+  "level": "3AP",
+  "subject": "en",
+  "language": "en",
+  "type": "exam",
+  "term": 1,
+  "unit": "",
+  "tags": [
+   "اختبار",
+   "الفصل الأول",
+   "مع الحل"
+  ],
+  "excerpt": "First term exam covering Sequences 1 and 2: family members, numbers, colours, in / on / under, missing letters. One page for pupils + answer key + marking guide and common mistakes.",
+  "access": "premium",
+  "author": "مساعد الأستاذ",
+  "license": "original",
+  "files": [
+   {
+    "upload": true,
+    "name": "3AP-EN-Term1-Exam.pdf",
+    "mime": "application/pdf",
+    "size": 364114
+   }
+  ]
  }
 ]
