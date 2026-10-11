@@ -16,8 +16,28 @@ export type CatalogEntry = {
   access: Access;
   author: string;
   license: "original" | "licensed" | "public";
-  files: { driveId: string; name: string; mime: string; size: number | null }[];
+  files: CatalogFile[];
 };
+
+/** مصدر الملف: Drive، أو رابط عام من موقع مسموح (منشورات مجانية مع ذكر المصدر)، أو رفع من جهاز الأدمن
+    (موادنا الخاصة: لا تُحفظ في المستودع العام). */
+export type CatalogFile = { driveId?: string; url?: string; upload?: boolean; name: string; mime: string; size: number | null };
+
+/** المواقع التي يُسمح للخادم بجلب ملفات «المكتبة الجاهزة» منها. */
+export const CATALOG_URL_HOSTS = ["eddirasa.com"] as const;
+
+export const isAllowedCatalogUrl = (url: string) => {
+  try {
+    const u = new URL(url);
+    return u.protocol === "https:" && (CATALOG_URL_HOSTS as readonly string[]).includes(u.hostname);
+  } catch {
+    return false;
+  }
+};
+
+/** المعرّف الذي يُرسل لمسار الاستيراد. */
+export const catalogSource = (f: CatalogFile): { kind: "driveId" | "url" | "upload"; value: string } =>
+  f.driveId ? { kind: "driveId", value: f.driveId } : f.url ? { kind: "url", value: f.url } : { kind: "upload", value: f.name };
 
 export const pendingCatalog = (entries: CatalogEntry[], existing: Set<string>) => entries.filter((e) => !existing.has(e.id));
 

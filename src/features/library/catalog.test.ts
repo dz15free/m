@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { ALLOWED_MIME, CONTENT_TYPES } from "./logic.ts";
-import { pendingCatalog, toContentDoc, type CatalogEntry } from "./catalog.ts";
+import { isAllowedCatalogUrl, pendingCatalog, toContentDoc, type CatalogEntry } from "./catalog.ts";
 
 const catalog = JSON.parse(readFileSync(new URL("./catalog.json", import.meta.url), "utf8")) as CatalogEntry[];
 
@@ -18,7 +18,11 @@ test("catalog entries satisfy the content rules", () => {
     assert.ok(e.tags.length <= 20 && e.excerpt.length <= 1000 && e.unit.length <= 120, e.id);
     for (const f of e.files) {
       assert.ok((ALLOWED_MIME as readonly string[]).includes(f.mime), `${e.id}: ${f.mime}`);
-      assert.match(f.driveId, /^[A-Za-z0-9_-]{20,}$/);
+      const sources = [f.driveId, f.url, f.upload].filter(Boolean).length;
+      assert.equal(sources, 1, `${e.id}: exactly one source`);
+      if (f.driveId) assert.match(f.driveId, /^[A-Za-z0-9_-]{20,}$/);
+      if (f.url) assert.ok(isAllowedCatalogUrl(f.url), `${e.id}: url host not allowed`);
+      if (f.upload) assert.ok(e.license === "original" && /^[\w.-]+\.pdf$/.test(f.name), `${e.id}: upload name`);
       assert.ok((f.size ?? 0) <= 100 * 1024 * 1024, `${e.id}: too large`);
     }
   }
