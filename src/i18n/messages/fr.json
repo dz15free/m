@@ -1084,8 +1084,8 @@
     "notify": "Notifier tous les enseignants",
     "catalog": {
       "title": "Bibliothèque prête",
-      "body": "{n} contenus classés ({files} fichiers) : manuels, guides, plannings, affiches, fiches, examens. Ils sont importés dans la bibliothèque et publiés directement.",
-      "button": "Tout importer ({n})",
+      "body": "{n} contenus non publiés ({files} fichiers). Cochez uniquement ce que vous voulez publier puis « Publier la sélection ».",
+      "button": "Publier la sélection ({n})",
       "progress": "{done} sur {total} — {title}",
       "done": "La bibliothèque prête a été entièrement importée.",
       "failed": "{n} échec(s) — relancez avec le même bouton :",
@@ -1093,7 +1093,14 @@
       "uploadsBody": "{n} fichier(s) créés par la plateforme ne sont pas stockés dans le dépôt public. Téléchargez les fichiers reçus puis choisissez-les ici (reconnus par leur nom) :",
       "choose": "Choisir les fichiers",
       "matched": "{n} sur {total} prêts",
-      "waiting": "{n} contenu(s) attendent leur fichier et restent dans la liste."
+      "waiting": "{n} contenu(s) attendent leur fichier et restent dans la liste.",
+      "selectAll": "Tout cocher",
+      "selectNone": "Tout décocher",
+      "selected": "{n} sélectionné(s) sur {total} — seul ce qui est coché est publié",
+      "srcDrive": "Drive",
+      "srcWeb": "eddirasa",
+      "srcUpload": "Notre création",
+      "needsFile": "Choisissez d’abord son fichier"
     },
     "drive": {
       "title": "Nouveaux fichiers sur Drive",

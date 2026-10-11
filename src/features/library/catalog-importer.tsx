@@ -14,7 +14,7 @@ import { driveContentId, driveToContentDoc, guessMeta, type DriveListing } from 
 import { importCatalogFile, listDriveLibrary, removeFile, saveContent } from "./repo";
 import { titleOf } from "./library-browser";
 
-/** «المكتبة الجاهزة»: زر واحد للأدمن يستورد كل ما لم يُستورد بعد من catalog.json (ملفات Drive مصنّفة). */
+/** «المكتبة الجاهزة»: الأدمن يحدّد ما يريد نشره مما لم يُستورد بعد من catalog.json، ولا يُنشر غيره. */
 export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
   const t = useTranslations("contentAdmin.catalog");
   const locale = useLocale() as "ar" | "fr";
@@ -27,8 +27,19 @@ export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
   const [local, setLocal] = useState<Map<string, File>>(() => new Map());
   const uploads = pending.flatMap((e) => e.files.filter((f) => f.upload).map((f) => f.name));
   const ready = (e: CatalogEntry) => e.files.every((f) => !f.upload || local.has(f.name));
-  const importable = pending.filter(ready);
-  const waiting = pending.length - importable.length;
+  // التحديد الافتراضي: الجديد من غير Drive (روابط عامة وموادنا)؛ ملفات Drive لا تُحدَّد إلا يدويًا
+  const [picked, setPicked] = useState<Set<string> | null>(null);
+  const selected = picked ?? new Set(pending.filter((e) => !e.files.some((f) => f.driveId)).map((e) => e.id));
+  const importable = pending.filter((e) => selected.has(e.id) && ready(e));
+  const waiting = pending.filter((e) => selected.has(e.id) && !ready(e)).length;
+  const tl = useTranslations("library");
+
+  function toggle(id: string) {
+    const n = new Set(selected);
+    if (n.has(id)) n.delete(id);
+    else n.add(id);
+    setPicked(n);
+  }
 
   function choose(list: FileList | null) {
     setLocal((m) => {
@@ -82,6 +93,39 @@ export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
           {run ? <LoaderCircle aria-hidden className="size-4 animate-spin" /> : <DownloadCloud aria-hidden className="size-4" />}
           {t("button", { n: importable.length })}
         </button>
+      </div>
+      <div className="space-y-2">
+        <div className="flex flex-wrap items-center gap-3 text-xs">
+          <span className="text-muted">{t("selected", { n: selected.size, total: pending.length })}</span>
+          <button type="button" onClick={() => setPicked(new Set(pending.map((e) => e.id)))} className="font-medium text-brand-700 hover:underline">
+            {t("selectAll")}
+          </button>
+          <button type="button" onClick={() => setPicked(new Set())} className="font-medium text-brand-700 hover:underline">
+            {t("selectNone")}
+          </button>
+        </div>
+        <ul className="max-h-80 space-y-1 overflow-auto rounded-xl ring-1 ring-line p-1 text-xs">
+          {pending.map((e) => {
+            const src = e.files.some((f) => f.upload) ? "srcUpload" : e.files.some((f) => f.url) ? "srcWeb" : "srcDrive";
+            return (
+              <li key={e.id}>
+                <label className="flex cursor-pointer items-start gap-2 rounded px-1.5 py-1 hover:bg-canvas">
+                  <input type="checkbox" checked={selected.has(e.id)} onChange={() => toggle(e.id)} disabled={!!run} className="mt-0.5 size-4 shrink-0 accent-brand-600" />
+                  <span className="min-w-0 flex-1">
+                    <span className="font-medium" dir="auto">{titleOf(e.title, locale)}</span>{" "}
+                    <span className="text-muted">
+                      — {[tl(`types.${e.type}`), e.level, e.term ? tl("term", { n: e.term }) : "", t(src)].filter(Boolean).join(" · ")}
+                    </span>
+                  </span>
+                  <span className={cn("shrink-0 rounded-full px-2 py-0.5 font-semibold", e.access === "premium" ? "bg-accent-100 text-accent-700" : "bg-brand-50 text-brand-800")}>
+                    {tl(e.access === "premium" ? "premium" : "free")}
+                  </span>
+                  {selected.has(e.id) && !ready(e) && <span className="shrink-0 text-late">{t("needsFile")}</span>}
+                </label>
+              </li>
+            );
+          })}
+        </ul>
       </div>
       {uploads.length > 0 && (
         <div className="space-y-2 rounded-xl bg-canvas p-3 text-sm">
