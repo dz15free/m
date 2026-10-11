@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { DownloadCloud, FolderSync, LoaderCircle } from "lucide-react";
+import { CheckCircle2, DownloadCloud, FileUp, FolderSync, LoaderCircle } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils/cn";
@@ -23,17 +23,35 @@ export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
   const [run, setRun] = useState<{ done: number; total: number; current: string } | null>(null);
   const [failed, setFailed] = useState<{ title: string; reason: string }[]>([]);
   const [finished, setFinished] = useState(false);
+  // ملفات موادنا الخاصة يختارها الأدمن من جهازه، وتُطابَق بالاسم
+  const [local, setLocal] = useState<Map<string, File>>(() => new Map());
+  const uploads = pending.flatMap((e) => e.files.filter((f) => f.upload).map((f) => f.name));
+  const ready = (e: CatalogEntry) => e.files.every((f) => !f.upload || local.has(f.name));
+  const importable = pending.filter(ready);
+  const waiting = pending.length - importable.length;
+
+  function choose(list: FileList | null) {
+    setLocal((m) => {
+      const n = new Map(m);
+      for (const f of Array.from(list ?? [])) {
+        // المتصفح قد يضيف «(1)» عند تكرار التنزيل
+        const name = uploads.find((u) => u.toLowerCase() === f.name.replace(/\s*\(\d+\)(?=\.pdf$)/i, "").toLowerCase());
+        if (name) n.set(name, f);
+      }
+      return n;
+    });
+  }
 
   async function start() {
     setFailed([]);
     setFinished(false);
-    const list = pending;
+    const list = importable;
     for (let i = 0; i < list.length; i++) {
       const entry = list[i]!;
       setRun({ done: i, total: list.length, current: titleOf(entry.title, locale) });
       const files: ContentFile[] = [];
       try {
-        for (const f of entry.files) files.push(await importCatalogFile(f));
+        for (const f of entry.files) files.push(await importCatalogFile(f, f.upload ? local.get(f.name) : undefined));
         try {
           await saveContent(toContentDoc(entry, files), entry.id);
         } catch (e) {
@@ -60,11 +78,34 @@ export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
           <h2 className="font-semibold">{t("title")}</h2>
           <p className="text-sm text-muted">{t("body", { n: pending.length, files })}</p>
         </div>
-        <button type="button" onClick={start} disabled={!!run || !pending.length} className={cn(buttonClass("primary"), "shrink-0")}>
+        <button type="button" onClick={start} disabled={!!run || !importable.length} className={cn(buttonClass("primary"), "shrink-0")}>
           {run ? <LoaderCircle aria-hidden className="size-4 animate-spin" /> : <DownloadCloud aria-hidden className="size-4" />}
-          {t("button", { n: pending.length })}
+          {t("button", { n: importable.length })}
         </button>
       </div>
+      {uploads.length > 0 && (
+        <div className="space-y-2 rounded-xl bg-canvas p-3 text-sm">
+          <p className="font-semibold">{t("uploadsTitle")}</p>
+          <p className="text-muted">{t("uploadsBody", { n: uploads.length })}</p>
+          <ul className="space-y-0.5 text-xs" dir="ltr">
+            {uploads.map((name) => (
+              <li key={name} className={cn("flex items-center gap-1.5", local.has(name) ? "text-green-800" : "text-muted")}>
+                {local.has(name) ? <CheckCircle2 aria-hidden className="size-3.5" /> : <FileUp aria-hidden className="size-3.5" />}
+                <span className="font-mono">{name}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-wrap items-center gap-3">
+            <label className={cn(buttonClass("secondary"), "cursor-pointer")}>
+              <FileUp aria-hidden className="size-4" />
+              {t("choose")}
+              <input type="file" accept="application/pdf" multiple className="sr-only" onChange={(e) => choose(e.target.files)} />
+            </label>
+            <span className="text-xs text-muted">{t("matched", { n: uploads.filter((n) => local.has(n)).length, total: uploads.length })}</span>
+          </div>
+          {waiting > 0 && <p className="text-xs text-muted">{t("waiting", { n: waiting })}</p>}
+        </div>
+      )}
       {run && (
         <div role="status" className="space-y-1">
           <div className="h-2 overflow-hidden rounded-full bg-canvas">

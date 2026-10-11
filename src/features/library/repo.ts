@@ -111,8 +111,8 @@ export const previewUrl = (key: string) => `/api/${key}`;
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 /** نتيجة الطلب ورسالة الخطأ إن وُجدت. */
-async function importRequest(driveId: string, init: RequestInit): Promise<{ ok: true; file: ContentFile } | { ok: false; status: number; error: string }> {
-  const res = await authedFetch(`/api/admin/library-import?driveId=${encodeURIComponent(driveId)}`, { method: "POST", ...init });
+async function importRequest(source: string, init: RequestInit): Promise<{ ok: true; file: ContentFile } | { ok: false; status: number; error: string }> {
+  const res = await authedFetch(`/api/admin/library-import?${source}`, { method: "POST", ...init });
   if (res.ok) return { ok: true, file: (await res.json()) as ContentFile };
   const error = ((await res.json().catch(() => ({}))) as { error?: string }).error ?? "";
   return { ok: false, status: res.status, error };
@@ -137,12 +137,22 @@ export async function browserDownload(driveId: string): Promise<Blob> {
 
 /** استيراد ملف من «المكتبة الجاهزة»: الخادم يجلبه عبر Drive API إن كان مفتاحه مضبوطًا،
     وإلا يحمّله المتصفح ويرسله. الخطأ يحمل المرحلة والسبب ليُعرض للأدمن. */
-export async function importCatalogFile(file: { driveId: string; mime: string }): Promise<ContentFile> {
-  const server = await importRequest(file.driveId, {});
+export async function importCatalogFile(file: { driveId?: string; url?: string; upload?: boolean; mime: string; name?: string }, local?: Blob): Promise<ContentFile> {
+  if (file.url || file.upload) {
+    // رابط عام يجلبه الخادم، أو ملف من جهاز الأدمن
+    const source = file.url ? `url=${encodeURIComponent(file.url)}` : `upload=${encodeURIComponent(file.name ?? "")}`;
+    if (file.upload && !local) throw new Error("file not selected");
+    const res = await importRequest(source, local ? { headers: { "Content-Type": file.mime }, body: local } : {});
+    if (!res.ok) throw new Error(`server ${res.status} ${res.error}`.trim());
+    return res.file;
+  }
+  if (!file.driveId) throw new Error("no source");
+  const driveId = file.driveId;
+  const server = await importRequest(`driveId=${encodeURIComponent(driveId)}`, {});
   if (server.ok) return server.file;
   if (!(server.status === 503 && server.error === "drive key missing")) throw new Error(`server ${server.status} ${server.error}`.trim());
-  const blob = await browserDownload(file.driveId);
-  const res = await importRequest(file.driveId, { headers: { "Content-Type": file.mime }, body: blob });
+  const blob = await browserDownload(driveId);
+  const res = await importRequest(`driveId=${encodeURIComponent(driveId)}`, { headers: { "Content-Type": file.mime }, body: blob });
   if (!res.ok) throw new Error(`upload ${res.status} ${res.error}`.trim());
   return res.file;
 }
