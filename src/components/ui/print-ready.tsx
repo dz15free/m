@@ -1,41 +1,20 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { Printer } from "lucide-react";
+import { FileText } from "lucide-react";
+import { PrintButtons } from "./print-actions";
 
-/* صفحة تُفتح «جاهزة للطباعة» (الدفتر اليومي ?print=1، طباعة التوزيعات): شريط ظاهر بزر «طباعة أو حفظ PDF».
-   الهواتف (iPhone خاصة) تتجاهل window.print() إن لم تأتِ من لمسة مباشرة، فالطباعة التلقائية بعد تحميل البيانات
-   لا تظهر هناك؛ لذلك نطبع تلقائيًا على الحاسوب فقط، ويبقى الزر للجميع (لمسته تفتح نافذة الطباعة دائمًا). */
-export function PrintReady({ ready }: { ready: boolean }) {
+/* صفحة تُفتح «جاهزة للطباعة» (الدفتر اليومي ?print=1، طباعة التوزيعات): شريط ظاهر بزرّين منفصلين
+   «طباعة» و«حفظ PDF». لا طباعة تلقائية: الهواتف تمنعها، والأستاذ يختار ما يريد بلمسة واحدة. */
+export function PrintReady({ ready, title }: { ready: boolean; title: string | (() => string) }) {
   const t = useTranslations("common.printReady");
-  const done = useRef(false);
-
-  useEffect(() => {
-    if (!ready || done.current) return;
-    const desktop = window.matchMedia("(pointer: fine)").matches && !/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (!desktop) return;
-    const id = window.setTimeout(() => {
-      done.current = true;
-      window.print();
-    }, 600);
-    return () => window.clearTimeout(id);
-  }, [ready]);
-
   if (!ready) return null;
   return (
     <div className="sticky top-2 z-30 print:hidden">
       <div className="flex flex-wrap items-center gap-3 rounded-2xl bg-brand-800 p-3 text-white shadow-float">
-        <Printer aria-hidden className="size-6 shrink-0" />
-        <p className="min-w-0 flex-1 text-sm font-medium">{t("body")}</p>
-        <button
-          type="button"
-          onClick={() => window.print()}
-          className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-5 font-semibold text-brand-900 hover:bg-brand-50"
-        >
-          <Printer aria-hidden className="size-4" />
-          {t("button")}
-        </button>
+        <FileText aria-hidden className="size-6 shrink-0" />
+        <p className="min-w-0 flex-1 basis-48 text-sm font-medium">{t("body")}</p>
+        <PrintButtons title={title} tone="dark" />
       </div>
     </div>
   );

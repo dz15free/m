@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* أصناف print: تعمل في الطباعة، وكذلك أثناء «حفظ PDF» (data-printing على <html>) لتطابق الوثيقة المطبوعة */
+@custom-variant print {
+  @media print {
+    @slot;
+  }
+  &:where([data-printing], [data-printing] *) {
+    @slot;
+  }
+}
+
 /* ─────────────────────────────────────────────────────────────
    نظام التصميم — ألوان مأخوذة من شعار «مساعد الأستاذ».
    اللون الأساسي للنصوص والأزرار brand-700 (تباين 5.9:1 على الأبيض).
@@ -65,6 +75,10 @@
       background: #fff;
       color: #000;
     }
+  }
+  [data-printing] body {
+    background: #fff;
+    color: #000;
   }
 
   h1,
@@ -166,6 +180,18 @@
     .doc-sheet:last-child {
       break-after: auto;
     }
+  }
+  [data-printing] .doc-preview,
+  [data-printing] .doc-preview.doc-landscape {
+    zoom: 1;
+  }
+  [data-printing] .doc-sheet {
+    box-shadow: none;
+    margin: 0;
+    break-after: page;
+  }
+  [data-printing] .doc-sheet:last-child {
+    break-after: auto;
   }
 }
 

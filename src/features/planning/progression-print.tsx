@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { ArrowRight, LoaderCircle, Printer } from "lucide-react";
-import { buttonClass } from "@/components/ui/button";
+import { ArrowRight, LoaderCircle } from "lucide-react";
 import { PrintHeader } from "@/features/logbook/print-header";
 import { PrintReady } from "@/components/ui/print-ready";
 import { DOC, docLangOfSubject, docMonth } from "@/i18n/doc-lang";
@@ -86,13 +85,9 @@ export function ProgressionPrint({ classId, subjectId, mode }: { classId: string
             </Link>
           ))}
         </nav>
-        <button type="button" onClick={() => window.print()} className={buttonClass("primary")}>
-          <Printer aria-hidden className="size-4" />
-          {t("print")}
-        </button>
       </div>
 
-      <PrintReady ready />
+      <PrintReady ready title={`${title}${m.className ? ` — ${m.className}` : ""}`} />
 
       {/* الورقة: معاينة A4 على الشاشة، وهي نفسها ما يُطبع */}
       <article

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PrintButtons } from "@/components/ui/print-actions";
 import Link from "next/link";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { doc, getDoc } from "firebase/firestore";
@@ -217,11 +218,12 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
   const range = days.length ? `${formatLongDate(new Date(`${days[0]}T12:00:00`), locale)} — ${formatLongDate(new Date(`${days[days.length - 1]}T12:00:00`), locale)}` : "";
   const printDays = autoPrint && initialDate && days.includes(initialDate) ? [initialDate] : days;
   const today = todayInAlgiers();
+  const pdfTitle = () => `${t("title")} — ${printDays.length === 1 ? printDays[0] : `${printDays[0] ?? ""} … ${printDays[printDays.length - 1] ?? ""}`}`;
 
   return (
     <>
       {/* «?print=1»: الدفتر جاهز، وزر الطباعة بلمسة مباشرة (الهواتف تمنع الطباعة التلقائية) */}
-      {autoPrint && <PrintReady ready={!suggestions.loading} />}
+      {autoPrint && <PrintReady ready={!suggestions.loading} title={pdfTitle} />}
       {/* ── الشاشة ── */}
       <div className="space-y-4 pb-4 print:hidden">
         <Card className="flex items-center gap-2 p-3">
@@ -243,10 +245,7 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
               {t("printToday")}
             </a>
           )}
-          <button type="button" onClick={() => window.print()} className={buttonClass("secondary")}>
-            <Printer aria-hidden className="size-4" />
-            {t("print")}
-          </button>
+          <PrintButtons title={pdfTitle} className="contents" />
         </div>
         {suggestions.map.size > 0 && (
           <p className="flex items-start gap-2 rounded-card bg-brand-50 p-3 text-sm text-brand-900">
