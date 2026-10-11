@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  arrayUnion,
   collection,
   doc,
   getDoc,
@@ -8,6 +9,7 @@ import {
   query,
   runTransaction,
   serverTimestamp,
+  setDoc,
   where,
 } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
@@ -77,6 +79,34 @@ export async function deleteContent(id: string, stage: Stage, files: ContentFile
   });
   // الملفات بعد المستند: ملف يتيم أهون من محتوى بلا ملف
   await Promise.all([...files.map((f) => f.key), previewKey].filter(Boolean).map((k) => removeFile(k)));
+}
+
+/** حذف عدة محتويات دفعة واحدة: الفهرس والمستندات في معاملات (≤ 400 كتابة لكل معاملة)، ثم ملفاتها.
+    ملفات Drive المحذوفة تُحفظ في قائمة «مستبعدة» فلا تُقترح للاستيراد مرة أخرى. */
+export async function deleteContents(items: ContentWithId[], stage: Stage, onProgress?: (done: number) => void) {
+  let done = 0;
+  for (let i = 0; i < items.length; i += 400) {
+    const chunk = items.slice(i, i + 400);
+    const ids = new Set(chunk.map((c) => c.id));
+    await runTransaction(db(), async (tx) => {
+      const idx = await tx.get(indexRef(stage));
+      const rest = ((idx.data()?.entries as IndexEntry[]) ?? []).filter((e) => !ids.has(e.id));
+      tx.set(indexRef(stage), { entries: rest, updatedAt: serverTimestamp() });
+      for (const id of ids) tx.delete(doc(contentsCol(), id));
+    });
+    done += chunk.length;
+    onProgress?.(done);
+  }
+  const driveIds = items.filter((c) => c.id.startsWith("drv-")).map((c) => c.id.slice(4));
+  if (driveIds.length) await setDoc(doc(db(), "config", "libraryDrive"), { ignored: arrayUnion(...driveIds) }, { merge: true }).catch(() => {});
+  const keys = items.flatMap((c) => [...c.files.map((f) => f.key), c.previewKey]).filter(Boolean);
+  for (let i = 0; i < keys.length; i += 6) await Promise.all(keys.slice(i, i + 6).map((k) => removeFile(k)));
+}
+
+/** ملفات Drive التي حذفها الأدمن من المكتبة: لا تُعرض في «ملفات جديدة في الدرايف». */
+export async function getIgnoredDriveIds(): Promise<Set<string>> {
+  const snap = await getDoc(doc(db(), "config", "libraryDrive")).catch(() => null);
+  return new Set((snap?.data()?.ignored as string[] | undefined) ?? []);
 }
 
 export async function uploadFile(file: File, kind: "content" | "preview"): Promise<ContentFile> {

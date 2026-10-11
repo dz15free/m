@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Check, FileText, LoaderCircle, Lock, Plus, Search, ShieldAlert, Trash2, Upload } from "lucide-react";
+import { Check, CheckCircle2, FileText, LoaderCircle, Lock, Plus, Search, ShieldAlert, Trash2, Upload } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field, SelectField } from "@/components/ui/field";
@@ -17,7 +17,7 @@ import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
 import { nameKey } from "@/shared/text/names";
 import { cn } from "@/lib/utils/cn";
 import { CONTENT_TYPES, formatSize, MAX_FILE_BYTES, type ContentDoc, type ContentFile, type ContentType } from "./logic";
-import { deleteContent, getContent, listContentsForEditor, previewUrl, removeFile, saveContent, uploadFile } from "./repo";
+import { deleteContent, deleteContents, getContent, listContentsForEditor, previewUrl, removeFile, saveContent, uploadFile } from "./repo";
 import { titleOf } from "./library-browser";
 import { CatalogImporter, DriveImporter } from "./catalog-importer";
 
@@ -60,6 +60,36 @@ function AdminList() {
   const list = useQuery({ queryKey: ["contentsAdmin", stage], queryFn: () => listContentsForEditor(stage) });
   const [q, setQ] = useState("");
   const [level, setLevel] = useState("");
+  const tb = useTranslations("contentAdmin.bulk");
+  const qc = useQueryClient();
+  // التحديد المتعدد والحذف دفعة واحدة
+  const [picked, setPicked] = useState<Set<string>>(() => new Set());
+  const [confirming, setConfirming] = useState(false);
+  const [bulk, setBulk] = useState<{ done: number; total: number } | null>(null);
+  const [bulkMsg, setBulkMsg] = useState<{ ok: boolean; text: string } | null>(null);
+  const toggle = (id: string) =>
+    setPicked((p) => {
+      const n = new Set(p);
+      if (n.has(id)) n.delete(id);
+      else n.add(id);
+      return n;
+    });
+  async function removePicked() {
+    const items = (list.data ?? []).filter((c) => picked.has(c.id));
+    setBulk({ done: 0, total: items.length });
+    setBulkMsg(null);
+    try {
+      await deleteContents(items, stage, (done) => setBulk({ done, total: items.length }));
+      setBulkMsg({ ok: true, text: tb("deleted", { n: items.length }) });
+      setPicked(new Set());
+    } catch {
+      setBulkMsg({ ok: false, text: tb("error") });
+    }
+    setBulk(null);
+    setConfirming(false);
+    await qc.invalidateQueries({ queryKey: ["contentsAdmin"] });
+    await qc.invalidateQueries({ queryKey: ["driveIgnored"] });
+  }
   const words = nameKey(q).split(" ").filter(Boolean);
   const shown = (list.data ?? []).filter((c) => {
     if (level && c.level !== level) return false;
@@ -73,7 +103,16 @@ function AdminList() {
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-end gap-3">
-        <SelectField label={t("stage")} value={stage} onChange={(e) => setStage(e.target.value as Stage)} className="min-w-40">
+        <SelectField
+          label={t("stage")}
+          value={stage}
+          onChange={(e) => {
+            setStage(e.target.value as Stage);
+            setPicked(new Set());
+            setConfirming(false);
+          }}
+          className="min-w-40"
+        >
           {STAGES.map((s) => (
             <option key={s} value={s}>{tp(s)}</option>
           ))}
@@ -85,6 +124,12 @@ function AdminList() {
       </div>
       {stage === "primary" && list.data && <CatalogImporter existingIds={new Set(list.data.map((c) => c.id))} />}
       {stage === "primary" && list.data && <DriveImporter existingIds={new Set(list.data.map((c) => c.id))} />}
+      {bulkMsg && (
+        <p role="status" className={cn("flex items-center gap-2 rounded-xl p-3 text-sm", bulkMsg.ok ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800")}>
+          {bulkMsg.ok && <CheckCircle2 aria-hidden className="size-4" />}
+          {bulkMsg.text}
+        </p>
+      )}
       {!list.data || !tax.data ? (
         <div role="status" className="grid place-items-center py-12">
           <LoaderCircle aria-hidden className="size-8 animate-spin text-brand-700" />
@@ -112,11 +157,52 @@ function AdminList() {
               ))}
             </select>
           </div>
-          <p className="text-sm text-muted">{q || level ? t("countFiltered", { n: shown.length, total: list.data.length }) : t("count", { n: list.data.length })}</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+            <p className="text-muted">{q || level ? t("countFiltered", { n: shown.length, total: list.data.length }) : t("count", { n: list.data.length })}</p>
+            <button type="button" onClick={() => setPicked((p) => new Set([...p, ...shown.map((c) => c.id)]))} disabled={!shown.length || !!bulk} className="font-medium text-brand-700 hover:underline disabled:opacity-50">
+              {tb("selectShown", { n: shown.length })}
+            </button>
+            {picked.size > 0 && (
+              <button type="button" onClick={() => { setPicked(new Set()); setConfirming(false); }} disabled={!!bulk} className="font-medium text-muted hover:underline">
+                {tb("clear")}
+              </button>
+            )}
+          </div>
+          {picked.size > 0 && (
+            <div className="sticky top-2 z-20 space-y-2 rounded-card bg-surface p-3 shadow-float ring-1 ring-red-200">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="flex-1 font-semibold">{tb("selected", { n: picked.size })}</span>
+                {bulk ? (
+                  <span role="status" className="flex items-center gap-2 text-sm text-muted">
+                    <LoaderCircle aria-hidden className="size-4 animate-spin" />
+                    {tb("deleting", { done: bulk.done, total: bulk.total })}
+                  </span>
+                ) : confirming ? (
+                  <>
+                    <button type="button" onClick={() => setConfirming(false)} className={buttonClass("secondary")}>{tb("cancel")}</button>
+                    <button type="button" onClick={removePicked} className={cn(buttonClass("primary"), "bg-red-700 hover:bg-red-800")}>
+                      <Trash2 aria-hidden className="size-4" />
+                      {tb("confirm", { n: picked.size })}
+                    </button>
+                  </>
+                ) : (
+                  <button type="button" onClick={() => setConfirming(true)} className={cn(buttonClass("secondary"), "text-red-700")}>
+                    <Trash2 aria-hidden className="size-4" />
+                    {tb("delete", { n: picked.size })}
+                  </button>
+                )}
+              </div>
+              {confirming && !bulk && <p className="text-xs text-red-800">{tb("warn")}</p>}
+            </div>
+          )}
           <ul className="divide-y divide-line overflow-hidden rounded-card bg-surface shadow-card">
             {shown.map((c) => (
-              <li key={c.id}>
-                <Link href={`/admin/content/${c.id}`} className="flex items-center gap-3 px-4 py-3 hover:bg-brand-50">
+              <li key={c.id} className={cn("flex items-center", picked.has(c.id) && "bg-red-50/60")}>
+                <label className="grid min-h-12 shrink-0 cursor-pointer place-items-center ps-4 pe-1">
+                  <span className="sr-only">{tb("select")}</span>
+                  <input type="checkbox" checked={picked.has(c.id)} onChange={() => toggle(c.id)} disabled={!!bulk} className="size-4 accent-brand-600" />
+                </label>
+                <Link href={`/admin/content/${c.id}`} className="flex min-w-0 flex-1 items-center gap-3 py-3 pe-4 ps-2 hover:bg-brand-50">
                   <span className="min-w-0 flex-1">
                     <span dir="auto" className="block truncate font-medium">{titleOf(c.title, locale)}</span>
                     <span className="block truncate text-xs text-muted">
