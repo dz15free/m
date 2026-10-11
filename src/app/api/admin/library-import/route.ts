@@ -8,7 +8,8 @@ import { isAllowedCatalogUrl, type CatalogFile } from "@/features/library/catalo
 /* استيراد ملف من مجلد المكتبة على Google Drive إلى حاوية المكتبة — للمحرّرين والأدمن فقط.
    ملفات «المكتبة الجاهزة» (catalog.json) معروفة مسبقًا؛ وأي ملف آخر يُقبل إن كان داخل مجلد المكتبة.
    طريقتان: بلا جسم ⇐ الخادم يجلبه عبر Drive API (DRIVE_API_KEY)؛ بجسم ⇐ متصفح الأدمن جلبه بنفسه (حين لا يوجد المفتاح).
-   ومن القائمة الجاهزة أيضًا: ?url= رابط عام مدرج فيها ومن موقع مسموح (يجلبه الخادم)، و?upload= اسم ملف مدرج يرفعه الأدمن من جهازه.
+   ومن القائمة الجاهزة أيضًا: ?entry=<معرّف المحتوى>&file=<رقم الملف> لملف برابط عام من موقع مسموح (يجلبه الخادم)
+   أو لملف من موادنا يرفعه الأدمن من جهازه. الرابط نفسه لا يمرّ في الطلب (ترميزه قد يتغيّر في الطريق). 
    الملف يُمرَّر تدفّقًا إلى R2 دون تحميله كاملًا في الذاكرة. */
 
 const EXT: Record<string, string> = {
@@ -27,8 +28,7 @@ const MAX_BYTES = 100 * 1024 * 1024;
 
 const FILES = (catalog as { files: CatalogFile[] }[]).flatMap((c) => c.files);
 const CATALOG = new Map(FILES.filter((f) => f.driveId).map((f) => [f.driveId!, f] as const));
-const BY_URL = new Map(FILES.filter((f) => f.url && isAllowedCatalogUrl(f.url)).map((f) => [f.url!, f] as const));
-const BY_UPLOAD = new Map(FILES.filter((f) => f.upload).map((f) => [f.name, f] as const));
+const ENTRIES = new Map((catalog as { id: string; files: CatalogFile[] }[]).map((c) => [c.id, c.files] as const));
 
 async function requireEditor(req: Request) {
   const user = await requireUser(req);
@@ -41,25 +41,23 @@ export async function POST(req: Request) {
     await requireEditor(req);
     const params = new URL(req.url).searchParams;
     const uploaded = Number(req.headers.get("content-length") ?? 0) > 0 && req.body;
-    const url = params.get("url");
-    const uploadName = params.get("upload");
+    const entryId = params.get("entry");
+    const known = entryId === null ? undefined : ENTRIES.get(entryId)?.[Number(params.get("file") ?? 0)];
+    if (entryId !== null && (!known || known.driveId)) throw new HttpError(400, "unknown catalog file");
     let file: { name: string; mime: string; size: number | null };
     let body: ReadableStream<Uint8Array>;
     let length: number;
 
-    if (url !== null) {
+    if (known?.url) {
       // رابط عام من القائمة الجاهزة فقط، ومن موقع مسموح؛ لا تتبّع لإعادة التوجيه خارجها
-      const known = BY_URL.get(url);
-      if (!known) throw new HttpError(400, "unknown url");
-      const res = await fetch(url, { redirect: "manual", headers: { "User-Agent": "Mozilla/5.0 (compatible; ProfAssistant library import)" } });
+      if (!isAllowedCatalogUrl(known.url)) throw new HttpError(400, "host not allowed");
+      const res = await fetch(known.url, { redirect: "manual", headers: { "User-Agent": "Mozilla/5.0 (compatible; ProfAssistant library import)" } });
       if (!res.ok || !res.body) throw new HttpError(502, `source ${res.status}`);
       file = known;
       body = res.body;
       length = Number(res.headers.get("content-length") ?? 0) || (known.size ?? 0);
-    } else if (uploadName !== null) {
-      // ملف من موادنا يرفعه الأدمن من جهازه: الاسم مدرج في القائمة الجاهزة
-      const known = BY_UPLOAD.get(uploadName);
-      if (!known) throw new HttpError(400, "unknown file");
+    } else if (known?.upload) {
+      // ملف من موادنا يرفعه الأدمن من جهازه
       if (!uploaded) throw new HttpError(400, "file required");
       file = known;
       body = req.body!;

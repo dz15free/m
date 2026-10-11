@@ -137,10 +137,15 @@ export async function browserDownload(driveId: string): Promise<Blob> {
 
 /** استيراد ملف من «المكتبة الجاهزة»: الخادم يجلبه عبر Drive API إن كان مفتاحه مضبوطًا،
     وإلا يحمّله المتصفح ويرسله. الخطأ يحمل المرحلة والسبب ليُعرض للأدمن. */
-export async function importCatalogFile(file: { driveId?: string; url?: string; upload?: boolean; mime: string; name?: string }, local?: Blob): Promise<ContentFile> {
+export async function importCatalogFile(
+  file: { driveId?: string; url?: string; upload?: boolean; mime: string },
+  local?: Blob,
+  ref?: { entry: string; index: number },
+): Promise<ContentFile> {
   if (file.url || file.upload) {
-    // رابط عام يجلبه الخادم، أو ملف من جهاز الأدمن
-    const source = file.url ? `url=${encodeURIComponent(file.url)}` : `upload=${encodeURIComponent(file.name ?? "")}`;
+    // رابط عام يجلبه الخادم، أو ملف من جهاز الأدمن — يُعرَّف بمعرّف المحتوى ورقم الملف في القائمة الجاهزة
+    if (!ref) throw new Error("no catalog reference");
+    const source = `entry=${encodeURIComponent(ref.entry)}&file=${ref.index}`;
     if (file.upload && !local) throw new Error("file not selected");
     const res = await importRequest(source, local ? { headers: { "Content-Type": file.mime }, body: local } : {});
     if (!res.ok) throw new Error(`server ${res.status} ${res.error}`.trim());
