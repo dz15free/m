@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/card";
 import { useClasses, useTaxonomy, useTeacher, useUid } from "@/features/classes/hooks";
 import { todayInAlgiers } from "@/features/attendance/logic";
 import { useCalendar } from "@/features/schedule/repo";
+import { calendarForLevel } from "@/features/schedule/logic";
 import { PrintHeader } from "@/features/logbook/print-header";
 import { getCurriculum } from "@/features/lessons/repo";
 import { curriculumId } from "@/features/lessons/logic";
@@ -91,7 +92,7 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
   }
   if (!cls) return <Card className="py-10 text-center text-muted">{t("noClasses")}</Card>;
 
-  const cal = calendar.data;
+  const cal = calendarForLevel(calendar.data, cls.level);
   const startYear = parseAcademicYearId(teacher.data.profile.activeYearId)?.startYear ?? new Date().getFullYear();
   const start = defaultStart(startYear);
   const today = todayInAlgiers();

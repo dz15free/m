@@ -1,9 +1,10 @@
 import { errorResponse, HttpError, requireUser } from "@/lib/server/auth";
 import { adminCommit, adminGet, newId } from "@/lib/server/firestore-admin";
-import { effectivePlan, renewEnd, type Entitlement, type Plan } from "@/shared/billing/plans";
+import { effectivePlan, renewEnd, stageOpen, type AppConfig, type Entitlement, type Plan } from "@/shared/billing/plans";
 
 /* بدء التجربة المجانية (تلقائيًا عند أول دخول بعد الإعداد): مرة واحدة لكل حساب، ببريد مؤكّد،
-   ولأساتذة المرحلة المتاحة فقط (المتوسط والثانوي «قريبًا»: لا تُستهلك تجربتهم قبل جاهزية محتواهم).
+   ولأساتذة المرحلة المتاحة فقط (الابتدائي، وما فتحه الأدمن في config/app.openStages: لا تُستهلك تجربة
+   أستاذ مرحلة قبل جاهزية محتواها).
    الكتابة ذرّية بشرط مسبق على نسخة وثيقة الاشتراك: طلبان متزامنان لا يمنحان تجربتين. */
 export async function POST(req: Request) {
   try {
@@ -12,9 +13,8 @@ export async function POST(req: Request) {
 
     const teacher = (await adminGet(`teachers/${user.uid}`))?.data;
     if (!teacher) throw new HttpError(409, "onboarding required");
-    if (teacher.stage !== "primary") throw new HttpError(409, "stage unavailable");
-
     const config = (await adminGet("config/app"))?.data ?? {};
+    if (!stageOpen(teacher.stage as string | undefined, config as Partial<AppConfig>)) throw new HttpError(409, "stage unavailable");
     const days = Number(config.trialDays);
     const planId = typeof config.trialPlanId === "string" ? config.trialPlanId : "premium";
     if (!Number.isInteger(days) || days < 1 || days > 90) throw new HttpError(503, "trial unavailable");

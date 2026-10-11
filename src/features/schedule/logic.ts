@@ -2,6 +2,8 @@
    الحصص لا تُكتب مسبقًا في القاعدة: تُحسب من الجدول الأسبوعي + الرزنامة.
    المستند يُنشأ فقط عند تسجيل حضور أو درس في حصة فعلية. */
 
+import { examsForLevel } from "../../shared/dz/school-calendar.ts";
+
 export type Slot = {
   id: string;
   /** 0 = الأحد … 6 = السبت */
@@ -20,8 +22,13 @@ export type Calendar = {
   /** العطل: مجالات تواريخ شاملة */
   holidays: { start: string; end: string; label?: { ar: string; fr: string } }[];
   /** أيام الاختبارات الفصلية (لا تُوقف العدّ: الأسبوع يبقى أسبوعًا دراسيًا) */
-  exams?: { term: 1 | 2 | 3; days: string[] }[];
+  exams?: { term: 1 | 2 | 3; days: string[]; levels?: string[] }[];
 };
+
+/** رزنامة قسمٍ بمستواه: فترات الاختبارات الخاصة بالمستوى بدل العامة (الرابعة متوسط في الفصل الثالث). */
+export function calendarForLevel(cal: Calendar, level: string | undefined): Calendar {
+  return cal.exams ? { ...cal, exams: examsForLevel(cal.exams, level) } : cal;
+}
 
 export const DEFAULT_CALENDAR: Calendar = { schoolDays: [0, 1, 2, 3, 4], holidays: [] };
 

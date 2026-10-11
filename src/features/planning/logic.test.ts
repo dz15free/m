@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { defaultStart, parseProgression, progressStatus, schoolWeekOf, weekStart, rowsFromCurriculum } from "./logic.ts";
+import { arColumnOf, defaultStart, parseProgression, progressStatus, schoolWeekOf, weekStart, rowsFromCurriculum } from "./logic.ts";
 
 const days = [0, 1, 2, 3, 4];
 
@@ -42,4 +42,10 @@ test("التوزيع من المنهاج: سطر لكل حصة، وما قبل �
   const rows = rowsFromCurriculum(c, 3);
   assert.deepEqual(rows.map((r) => [r.w, r.unit, r.content, r.done]), [[2, "المقطع الأول", "أ", true], [2, "المقطع الأول", "ب", true], [3, "المقطع الأول", "ج", false]]);
   assert.equal(progressStatus(rows, 3).kind, "onTrack");
+});
+
+test("arColumnOf: ميادين العربية في المتوسط", () => {
+  assert.equal(arColumnOf("فهم المنطوق وإنتاجه"), "oral");
+  assert.equal(arColumnOf("فهم المكتوب"), "reading");
+  assert.equal(arColumnOf("إنتاج المكتوب"), "writing");
 });

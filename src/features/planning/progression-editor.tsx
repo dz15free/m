@@ -11,6 +11,7 @@ import { Field } from "@/components/ui/field";
 import { useClass, useTaxonomy, useTeacher, useUid } from "@/features/classes/hooks";
 import { todayInAlgiers } from "@/features/attendance/logic";
 import { useCalendar } from "@/features/schedule/repo";
+import { calendarForLevel } from "@/features/schedule/logic";
 import { parseAcademicYearId } from "@/shared/academic-year";
 import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
 import { DOC, docLangOfSubject, docLevel } from "@/i18n/doc-lang";
@@ -51,7 +52,7 @@ export function useProgressionModel(classId: string, subjectId: string) {
     levelLabel: lang ? docLevel(level, lang, cls.data.level) : undefined,
     levelLocal: level?.label,
     subjectLabel: subjectById(tax.data, subjectId)?.label,
-    calendar: calendar.data,
+    calendar: calendarForLevel(calendar.data, cls.data.level),
   };
 }
 

@@ -39,6 +39,7 @@ export function AdminPlans() {
     <div className="space-y-4">
       <h1 className="text-2xl font-bold">{ta("nav.plans")}</h1>
       <TrialCard initial={config.data.trialDays ?? 7} />
+      <StagesCard initial={config.data.openStages ?? []} />
       {plans.data.map((p) => (
         <PlanCard key={p.id} plan={p} />
       ))}
@@ -61,6 +62,42 @@ function TrialCard({ initial }: { initial: number }) {
           setState("saving");
           const n = Math.min(90, Math.max(0, Math.round(Number(days)) || 0));
           await saveAppConfig({ trialDays: n }).then(() => setState("saved"), () => setState("error"));
+          await queryClient.invalidateQueries({ queryKey: ["appConfig"] });
+        }}
+      />
+    </Card>
+  );
+}
+
+function StagesCard({ initial }: { initial: string[] }) {
+  const t = useTranslations("admin.plans");
+  const queryClient = useQueryClient();
+  const [open, setOpen] = useState<string[]>(initial);
+  const [state, setState] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const toggle = (stage: string) => {
+    setOpen((o) => (o.includes(stage) ? o.filter((x) => x !== stage) : [...o, stage]));
+    setState("idle");
+  };
+  return (
+    <Card className="space-y-3">
+      <div>
+        <h2 className="font-semibold">{t("stagesTitle")}</h2>
+        <p className="text-sm text-muted">{t("stagesHint")}</p>
+      </div>
+      <div className="flex flex-wrap gap-4">
+        {(["middle", "secondary"] as const).map((stage) => (
+          <label key={stage} className="flex min-h-11 cursor-pointer items-center gap-2">
+            <input type="checkbox" checked={open.includes(stage)} onChange={() => toggle(stage)} className="size-5 accent-brand-600" />
+            <span className="font-medium">{t(stage === "middle" ? "stageMiddle" : "stageSecondary")}</span>
+          </label>
+        ))}
+      </div>
+      <SaveButton
+        state={state}
+        label={t("save")}
+        onClick={async () => {
+          setState("saving");
+          await saveAppConfig({ openStages: open }).then(() => setState("saved"), () => setState("error"));
           await queryClient.invalidateQueries({ queryKey: ["appConfig"] });
         }}
       />
