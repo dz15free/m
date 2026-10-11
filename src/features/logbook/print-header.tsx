@@ -8,7 +8,7 @@ import { DOC, docDirectorate, type DocLang } from "@/i18n/doc-lang";
 
 /* رأس الوثائق المطبوعة: بيانات الأستاذ والمؤسسة تُكتب تلقائيًا من الملف المهني.
    وثائق الفرنسية والإنجليزية (lang) برأس رسمي بلغتها، من اليسار. */
-export function PrintHeader({ title, subtitle, lang, level }: { title: string; subtitle?: string; lang?: DocLang | null; level?: string }) {
+export function PrintHeader({ title, subtitle, lang, level, official = false }: { title: string; subtitle?: string; lang?: DocLang | null; level?: string; official?: boolean }) {
   const t = useTranslations("logbook.print");
   const locale = useLocale() as "ar" | "fr";
   const teacher = useTeacher().data;
@@ -42,6 +42,13 @@ export function PrintHeader({ title, subtitle, lang, level }: { title: string; s
   const grade = gradeLabel(profile.stage, profile.gradeId, profile.gradeCustom, locale);
   return (
     <header className="mb-4 border-b-2 border-ink pb-3 text-[11pt]">
+      {/* الوثائق الرسمية (التوزيعات): الجمهورية والوزارة في الأعلى */}
+      {official && (
+        <div className="mb-2 text-center font-semibold">
+          <p>{t("republic")}</p>
+          <p>{t("ministry")}</p>
+        </div>
+      )}
       <div className="flex justify-between gap-6">
         <div className="space-y-0.5">
           <p>{school?.directorate ?? profile.directorate}</p>

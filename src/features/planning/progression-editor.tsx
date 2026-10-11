@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { flushSync } from "react-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Check, ClipboardPaste, LoaderCircle, Pencil, Plus, Printer, RotateCcw, Search, Trash2 } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -12,12 +11,11 @@ import { Field } from "@/components/ui/field";
 import { useClass, useTaxonomy, useTeacher, useUid } from "@/features/classes/hooks";
 import { todayInAlgiers } from "@/features/attendance/logic";
 import { useCalendar } from "@/features/schedule/repo";
-import { PrintHeader } from "@/features/logbook/print-header";
 import { parseAcademicYearId } from "@/shared/academic-year";
 import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
-import { DOC, docLangOfSubject, docLevel, docMonth, type DocLabels } from "@/i18n/doc-lang";
+import { DOC, docLangOfSubject, docLevel } from "@/i18n/doc-lang";
 import { cn } from "@/lib/utils/cn";
-import { defaultStart, parseProgression, rowsFromCurriculum, progressStatus, ROW_MAX, schoolWeekOf, weekStart, type Progression, type ProgressionRow } from "./logic";
+import { defaultStart, parseProgression, rowsFromCurriculum, progressStatus, ROW_MAX, schoolWeekOf, type Progression, type ProgressionRow } from "./logic";
 import { deleteProgression, getProgression, saveProgression } from "./repo";
 import { EditTip } from "./edit-tip";
 import { subjectDir } from "./monthly-sheet";
@@ -25,7 +23,8 @@ import { useCurriculum } from "@/features/lessons/repo";
 import { curriculumId } from "@/features/lessons/logic";
 import { STATUS_STYLE } from "./planning-overview";
 
-export function ProgressionEditor({ classId, subjectId }: { classId: string; subjectId: string }) {
+/** التوزيع المعروض لمادة قسم: المحفوظ للأستاذ، وإلا الرسمي المقترح من المذكرات المنشورة. null أثناء التحميل. */
+export function useProgressionModel(classId: string, subjectId: string) {
   const uid = useUid();
   const teacher = useTeacher();
   const cls = useClass(classId);
@@ -34,41 +33,49 @@ export function ProgressionEditor({ classId, subjectId }: { classId: string; sub
   const prog = useQuery({ queryKey: ["progression", uid ?? "", classId, subjectId], queryFn: () => getProgression(uid!, classId, subjectId), enabled: !!uid });
   const curriculum = useCurriculum(cls.data ? curriculumId(cls.data.level, subjectId) : "");
 
-  if (!teacher.data || !cls.data || !calendar.data || !tax.data || prog.data === undefined || (prog.data === null && curriculum.isLoading)) {
+  if (!teacher.data || !cls.data || !calendar.data || !tax.data || prog.data === undefined || (prog.data === null && curriculum.isLoading)) return null;
+  const startYear = parseAcademicYearId(teacher.data.profile.activeYearId)?.startYear ?? new Date().getFullYear();
+  // لا توزيع محفوظ: نقترح التوزيع الرسمي من المنهاج المنشور
+  const startDate = defaultStart(startYear);
+  const official = !prog.data && !!curriculum.data?.entries.length;
+  const rows = official ? rowsFromCurriculum({ ...curriculum.data!, subject: subjectId }, schoolWeekOf(todayInAlgiers(), startDate, calendar.data.schoolDays, calendar.data.holidays)) : [];
+  const lang = docLangOfSubject(subjectId);
+  const level = levelById(tax.data, cls.data.level);
+  return {
+    initial: prog.data ?? ({ classId, subjectId, startDate, rows } as Progression),
+    official,
+    saved: !!prog.data,
+    // «استرجاع التوزيع الرسمي» متاح لتوزيع محفوظ حين تتوفر مذكرات المادة
+    canReset: !!prog.data && !!curriculum.data?.entries.length,
+    className: cls.data.displayName,
+    levelLabel: lang ? docLevel(level, lang, cls.data.level) : undefined,
+    levelLocal: level?.label,
+    subjectLabel: subjectById(tax.data, subjectId)?.label,
+    calendar: calendar.data,
+  };
+}
+
+export function ProgressionEditor({ classId, subjectId }: { classId: string; subjectId: string }) {
+  const m = useProgressionModel(classId, subjectId);
+  if (!m) {
     return (
       <div role="status" className="grid place-items-center py-16">
         <LoaderCircle aria-hidden className="size-8 animate-spin text-brand-700" />
       </div>
     );
   }
-  const startYear = parseAcademicYearId(teacher.data.profile.activeYearId)?.startYear ?? new Date().getFullYear();
-  // لا توزيع محفوظ: نقترح التوزيع الرسمي من المنهاج المنشور
-  const startDate = defaultStart(startYear);
-  const official = !prog.data && !!curriculum.data?.entries.length;
-  const rows = official ? rowsFromCurriculum({ ...curriculum.data!, subject: subjectId }, schoolWeekOf(todayInAlgiers(), startDate, calendar.data.schoolDays, calendar.data.holidays)) : [];
-  const initial: Progression = prog.data ?? { classId, subjectId, startDate, rows };
-  // «استرجاع التوزيع الرسمي» متاح لتوزيع محفوظ حين تتوفر مذكرات المادة
-  const canReset = !!prog.data && !!curriculum.data?.entries.length;
   return (
     <Editor
-      key={`${classId}-${subjectId}-${prog.data ? "saved" : "official"}`}
-      initial={initial}
-      official={official}
-      canReset={canReset}
-      className={cls.data.displayName}
-      levelLabel={(() => {
-        const lv = levelById(tax.data, cls.data.level);
-        const lang = docLangOfSubject(subjectId);
-        return lang ? docLevel(lv, lang, cls.data.level) : undefined;
-      })()}
-      subjectLabel={subjectById(tax.data, subjectId)?.label}
+      key={`${classId}-${subjectId}-${m.saved ? "saved" : "official"}`}
+      initial={m.initial}
+      official={m.official}
+      canReset={m.canReset}
     />
   );
 }
 
-function Editor({ initial, official, canReset, className, levelLabel, subjectLabel }: { initial: Progression; official: boolean; canReset: boolean; className: string; levelLabel?: string; subjectLabel?: { ar: string; fr: string } }) {
+function Editor({ initial, official, canReset }: { initial: Progression; official: boolean; canReset: boolean }) {
   const t = useTranslations("planning");
-  const locale = useLocale() as "ar" | "fr";
   const uid = useUid();
   const queryClient = useQueryClient();
   const cal = useCalendar().data!;
@@ -77,8 +84,6 @@ function Editor({ initial, official, canReset, className, levelLabel, subjectLab
   const [pasting, setPasting] = useState(false);
   const [paste, setPaste] = useState("");
   const [state, setState] = useState<"idle" | "saving" | "saved" | "error">("idle");
-  const [printMode, setPrintMode] = useState<"annual" | "monthly">("annual");
-  const subject = subjectLabel?.[locale] ?? p.subjectId;
   // العربية وبقية المواد من اليمين، والفرنسية والإنجليزية من اليسار
   const dir = subjectDir(p.subjectId);
   const tm = useTranslations("planning.monthlyPlan");
@@ -100,7 +105,6 @@ function Editor({ initial, official, canReset, className, levelLabel, subjectLab
   }
   const currentWeek = schoolWeekOf(todayInAlgiers(), p.startDate, cal.schoolDays, cal.holidays);
   const status = progressStatus(p.rows, currentWeek);
-  const weekDate = (w: number) => weekStart(w, p.startDate, cal.schoolDays, cal.holidays);
 
   async function persist(next: Progression) {
     if (!uid) return;
@@ -124,20 +128,6 @@ function Editor({ initial, official, canReset, className, levelLabel, subjectLab
     setState("idle");
   };
   const parsed = parseProgression(paste);
-
-  function print(mode: "annual" | "monthly") {
-    flushSync(() => setPrintMode(mode));
-    window.print();
-  }
-
-  // تجميع شهري: كل سطر في شهر أحد أسبوعه
-  const months = new Map<string, ProgressionRow[]>();
-  for (const r of p.rows) {
-    const m = weekDate(r.w).slice(0, 7);
-    months.set(m, [...(months.get(m) ?? []), r]);
-  }
-  const monthName = (m: string) =>
-    docLang ? docMonth(m, docLang) : new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ" : "fr-DZ", { month: "long", year: "numeric", numberingSystem: "latn" }).format(new Date(`${m}-15T12:00:00`));
 
   return (
     <>
@@ -171,14 +161,14 @@ function Editor({ initial, official, canReset, className, levelLabel, subjectLab
           </button>
           {p.rows.length > 0 && (
             <>
-              <button type="button" onClick={() => print("annual")} className={buttonClass("secondary")}>
+              <Link href={`/app/planning/${p.classId}/${p.subjectId}/print?mode=annual`} className={buttonClass("secondary")}>
                 <Printer aria-hidden className="size-4" />
                 {t("print")} · {t("annual")}
-              </button>
-              <button type="button" onClick={() => print("monthly")} className={buttonClass("secondary")}>
+              </Link>
+              <Link href={`/app/planning/${p.classId}/${p.subjectId}/print?mode=monthly`} className={buttonClass("secondary")}>
                 <Printer aria-hidden className="size-4" />
                 {t("monthly")}
-              </button>
+              </Link>
             </>
           )}
           {canReset && (
@@ -340,54 +330,6 @@ function Editor({ initial, official, canReset, className, levelLabel, subjectLab
         )}
       </div>
 
-      {/* ── الطباعة ── */}
-      <div dir={docLang ? "ltr" : undefined} lang={docLang ?? undefined} className="hidden text-[10pt] print:block">
-        <style>{"@page { size: A4 portrait; margin: 12mm; }"}</style>
-        <PrintHeader
-          title={D ? `${printMode === "annual" ? D.annualTitle : D.monthlyTitle} — ${D.subject}` : t(printMode === "annual" ? "annualTitle" : "monthlyTitle", { subject })}
-          subtitle={className}
-          lang={docLang}
-          level={levelLabel}
-        />
-        {printMode === "annual" ? (
-          <ProgressionTable rows={p.rows} weekDate={weekDate} labels={D} />
-        ) : (
-          [...months].map(([m, rows]) => (
-            <div key={m} className="mb-4 break-inside-avoid">
-              <p className="mb-1 font-bold">{monthName(m)}</p>
-              <ProgressionTable rows={rows} weekDate={weekDate} labels={D} />
-            </div>
-          ))
-        )}
-      </div>
     </>
-  );
-}
-
-function ProgressionTable({ rows, weekDate, labels: D }: { rows: ProgressionRow[]; weekDate: (w: number) => string; labels: DocLabels | null }) {
-  const t = useTranslations("planning");
-  return (
-    <table className="w-full border-collapse">
-      <thead>
-        <tr className="bg-canvas">
-          <th className="w-16 border border-ink px-1 py-1">{D?.weekCol ?? t("weekCol")}</th>
-          <th className="w-24 border border-ink px-1 py-1" />
-          <th className="w-[28%] border border-ink px-2 py-1">{D?.unitCol ?? t("unit")}</th>
-          <th className="border border-ink px-2 py-1">{D?.content ?? t("content")}</th>
-          <th className="w-12 border border-ink px-1 py-1">{D?.done ?? t("done")}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {rows.map((r, i) => (
-          <tr key={i} className="break-inside-avoid">
-            <td className="border border-ink text-center">{r.w}</td>
-            <td className="border border-ink text-center"><bdi dir="ltr">{weekDate(r.w).split("-").reverse().slice(0, 2).join("/")}</bdi></td>
-            <td className="border border-ink px-2 py-1"><bdi>{r.unit}</bdi></td>
-            <td className="border border-ink px-2 py-1"><bdi>{r.content}</bdi></td>
-            <td className="border border-ink text-center">{r.done ? "✓" : ""}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
   );
 }

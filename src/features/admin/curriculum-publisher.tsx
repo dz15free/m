@@ -7,6 +7,11 @@ import { CheckCircle2, CloudUpload, LoaderCircle, TriangleAlert } from "lucide-r
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils/cn";
+import { useTaxonomy } from "@/features/classes/hooks";
+import { getCurriculum } from "@/features/lessons/repo";
+import { curriculumId } from "@/features/lessons/logic";
+import { levelById } from "@/shared/taxonomy/taxonomy";
+import { REPO_CURRICULA } from "./curriculum-ids";
 import { contentRev, publishCurriculum, publishedRev, type CurriculumFile, type Progress } from "./curriculum-publish";
 
 type Row = { file: CurriculumFile; rev: string; published: string | null; added: number };
@@ -93,6 +98,43 @@ export function CurriculumPublisher() {
           );
         })}
       </ul>
+      <Coverage refresh={rows.dataUpdatedAt} />
     </div>
+  );
+}
+
+/** المواد المقرّرة (التصنيف) التي لا فهرس مذكرات لها في القاعدة: يراها الأستاذ «قريبًا». */
+function Coverage({ refresh }: { refresh: number }) {
+  const t = useTranslations("admin.curriculum");
+  const tax = useTaxonomy("primary");
+  const missing = useQuery({
+    queryKey: ["curriculumCoverage", refresh],
+    enabled: !!tax.data,
+    queryFn: async () => {
+      const ids = tax.data!.subjects.flatMap((s) => s.levels.map((l) => ({ id: curriculumId(l, s.id), level: l, label: s.label.ar })));
+      const docs = await Promise.all(ids.map((x) => getCurriculum(x.id)));
+      return ids.filter((_, i) => !docs[i]);
+    },
+  });
+  if (!missing.data) return null;
+  return (
+    <Card className="space-y-2">
+      <h2 className="font-bold">{t("coverageTitle")}</h2>
+      {missing.data.length === 0 ? (
+        <p className="text-sm text-green-800">{t("coverageNone")}</p>
+      ) : (
+        <>
+          <p className="text-sm text-muted">{t("coverageHint")}</p>
+          <ul className="flex flex-wrap gap-2">
+            {missing.data.map((x) => (
+              <li key={x.id} className="rounded-full bg-amber-50 px-3 py-1 text-sm text-amber-900 ring-1 ring-amber-200">
+                {x.label} · {levelById(tax.data!, x.level)?.short.ar ?? x.level}
+                {!REPO_CURRICULA.includes(x.id) && <span className="text-xs text-amber-700"> — {t("coverageNoFile")}</span>}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </Card>
   );
 }

@@ -693,7 +693,9 @@
       "school": "Établissement",
       "year": "Année scolaire",
       "from": "Du",
-      "to": "au"
+      "to": "au",
+      "republic": "République Algérienne Démocratique et Populaire",
+      "ministry": "Ministère de l'Éducation nationale"
     },
     "back": "Cahiers",
     "prep": {
@@ -1218,7 +1220,8 @@
     "tipTitle": "Vous pouvez modifier cette progression",
     "tipBody": "Touchez « Modifier » pour changer la semaine, la séquence ou le contenu, ajoutez ou supprimez des lignes, ou collez votre propre progression. Cochez ce qui est fait : « Où en suis-je ? » se met à jour. Vos modifications sont personnelles et apparaissent aussi dans la progression mensuelle.",
     "reset": "Rétablir la progression officielle",
-    "resetConfirm": "Votre progression modifiée pour cette matière sera supprimée et la progression officielle des fiches sera rétablie (avec les cases « fait » par défaut). Continuer ?"
+    "resetConfirm": "Votre progression modifiée pour cette matière sera supprimée et la progression officielle des fiches sera rétablie (avec les cases « fait » par défaut). Continuer ?",
+    "datesCol": "Dates"
   },
   "billing": {
     "title": "Abonnement",
@@ -1597,7 +1600,11 @@
         "pages": "Pages des fiches : {done} sur {total}",
         "summaries": "Séances : {done} sur {total}",
         "index": "Terminé"
-      }
+      },
+      "coverageTitle": "Matières affichées « Bientôt » aux enseignants",
+      "coverageNone": "Toutes les matières au programme ont des fiches publiées.",
+      "coverageHint": "Ces matières n'ont pas de fiches publiées dans la base : l'enseignant voit « Bientôt ». Celles sans fichier ont d'abord besoin de leurs fiches ; les autres se publient depuis cette page ou avec le script de publication.",
+      "coverageNoFile": "Pas encore de fiches"
     }
   },
   "legal": {

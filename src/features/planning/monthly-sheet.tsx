@@ -245,7 +245,7 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
           {D ? (
             <PrintHeader title={D.sheetTitle(sheetMonth)} subtitle={cls.displayName} lang={docLang} level={levelLabel} />
           ) : (
-            <PrintHeader title={t("sheetTitle", { month: monthLabel(month) })} subtitle={`${levelLabel} — ${cls.displayName}`} />
+            <PrintHeader title={t("sheetTitle", { month: monthLabel(month) })} subtitle={`${levelLabel} — ${cls.displayName}`} official />
           )}
         </div>
         {weeks.length === 0 ? (
