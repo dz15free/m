@@ -62,7 +62,7 @@ export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
       setRun({ done: i, total: list.length, current: titleOf(entry.title, locale) });
       const files: ContentFile[] = [];
       try {
-        for (const f of entry.files) files.push(await importCatalogFile(f, f.upload ? local.get(f.name) : undefined));
+        for (const [index, f] of entry.files.entries()) files.push(await importCatalogFile(f, f.upload ? local.get(f.name) : undefined, { entry: entry.id, index }));
         try {
           await saveContent(toContentDoc(entry, files), entry.id);
         } catch (e) {
