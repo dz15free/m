@@ -197,9 +197,10 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
         source: c.source,
         updatedAt: now,
       });
-      const newPages = (l.pages ?? []).filter((p) => parsePage(p).key !== "main" && !blank.has(String(p)));
-      if (newPages.length) {
-        batch.set(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample, body: l.body ?? "", pages: newPages.map((p) => pageId(id, p)), quality: "pages", source: c.source, updatedAt: now });
+      // صفحات المصدر الرئيسي (منشورة من قبل) تبقى في أول السير، والمذكرات الملحقة بعدها
+      const pages = (l.pages ?? []).filter((p) => !blank.has(String(p)));
+      if (pages.some((p) => parsePage(p).key !== "main")) {
+        batch.set(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample, body: l.body ?? "", pages: pages.map((p) => pageId(id, p)), quality: "pages", source: c.source, updatedAt: now });
       }
     }
     await batch.commit();

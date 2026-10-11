@@ -21,6 +21,7 @@ const MAT = {
   geography: "كتاب التاريخ والجغرافيا والتربية المدنية، الخرائط، صور",
   art: "أوراق، مقص، غراء، ألوان، خامات متنوعة",
   music: "مسجل صوتي، تسجيلات موسيقية، كلمات النشيد",
+  pe: "الساحة، صافرة، أقماع، أطواق، كرات",
 };
 const TOOLS = "أدوات ومفاهيم المادة";
 
@@ -40,6 +41,8 @@ const ADD = {
       [4, "الأعداد والحساب", "الأعداد الأصغر من 100000 (2)", "مقارنة وترتيب وحصر الأعداد الأصغر من 100000.", "1yjlW_sImHmlA4MAwOxMtLDoFeBKIPvax"],
       [5, "كل الميادين", "أُجنّد معارفي 1", "يسترجع معلومات سابقة ويوظفها، وينجز فرديًا (إدماج جزئي).", "1e9ueFansjhVzivllZPmKOm9BCZmVf9jc"],
       [5, "كل الميادين", "الحصيلة 1", "يسترجع معلومات سابقة ويوظفها في وضعيات تقويمية.", "1_xwxGo2M4ofhaxV7RPHWFoQQluieIure"],
+      // الدرس 06 من نفس السلسلة: لا ملف له في المجلد، فيُدرج عنوانه في أسبوعه (بين الدرسين 05 و07)
+      [3, "الفضاء والهندسة", "الاستقامية", "يتعرف على نقط في استقامية ويتحقق منها باستعمال المسطرة.", null],
     ],
   },
   "4AP_islamic": {
@@ -103,6 +106,91 @@ const ADD = {
       [17, "التذوق الموسيقي والاستماع", "القصة الموسيقية (أنشودة «الأم الحنون»)", "يتعرف على مكونات القصة الموسيقية ويؤدي الأنشودة منسجمًا في مجموعة.", "1DlbWFfVM_wA-0Uv9NvqONYfL0W66JZzS"],
     ],
   },
+  // المدنية في الرابعة: الأسابيع 2–5 لا مذكرات لها في المجلد؛ عناوينها من فهرس الكتاب المدرسي («التربية المدنية —
+  // السنة الرابعة»، الصفحات 7–10) قبل «من تراثنا المادي» (الأسبوع 6)
+  "4AP_civic": {
+    main: MAIN_4AP,
+    lessons: [
+      [2, "الحياة الجماعية", "تراثنا الوطني والمحلي (الوضعية الانطلاقية: تراثنا كنز ثمين)", "يتعرف على أشكال التراث الوطني والمحلي ويعتز به.", null],
+      [3, "الحياة الجماعية", "المعالم الأثرية في وطني", "يتعرف على أهم المعالم الأثرية في الجزائر ومواقعها.", null],
+      [4, "الحياة الجماعية", "من معالمنا الأثرية: حي القصبة العتيق", "يتعرف على حي القصبة العتيق معلمًا أثريًا ويدعو إلى المحافظة عليه.", null],
+      [5, "الحياة الجماعية", "أدمج تعلماتي: تراثنا الوطني ومعالمنا الأثرية", "يوظف ما تعلمه عن التراث الوطني والمعالم الأثرية في وضعية إدماجية.", null],
+    ],
+  },
+  // البدنية في الرابعة: ملف «وضعيات وتنقلات» يغطي الأسابيع 2–11؛ ما بعدها مذكرات من «مذكرات جميع المواد — سنة رابعة»
+  // (صفحاتها بأرقامها في الملف، والميدان من رأس كل مذكرة)
+  "4AP_pe": {
+    segments: { 2: "الحركات القاعدية", 3: "الهيكلة والبناء" },
+    segmentOf: (domain) => (domain === "الحركات القاعدية" ? 2 : 3),
+    lessons: [
+      [14, "الحركات القاعدية", "الوثب", "يؤدي حركات منظمة بالوثب حسب الموقف مع احترام قواعد الأمن.", `${MAIN_4AP}@163`],
+      [15, "الحركات القاعدية", "الوثب", "يختار حركة الوثب المناسبة (طولًا، عاليًا) وينجزها بتوازن.", `${MAIN_4AP}@178`],
+      [19, "الحركات القاعدية", "الوثب: المحافظة على التوازن", "يحافظ على توازنه خلال الوثب والهبوط.", `${MAIN_4AP}@237`],
+      [20, "الحركات القاعدية", "الرمي حسب الموقف (بيد واحدة، باليدين)", "يرمي بيد واحدة أو باليدين حسب الموقف.", `${MAIN_4AP}@256`],
+      [21, "الحركات القاعدية", "الرمي حسب الموقف", "يرمي بدقة نحو هدف ثابت أو متحرك حسب الموقف.", `${MAIN_4AP}@274`],
+      [22, "الحركات القاعدية", "الرمي حسب الموقف", "يربط بين الجري والرمي ويكيّف رميه حسب الموقف.", `${MAIN_4AP}@291`],
+      [24, "الهيكلة والبناء", "استغلال فضاء الممارسة حسب الموقف", "يستغل فضاء الممارسة ويتموضع فيه حسب الموقف.", `${MAIN_4AP}@320`],
+      [25, "الهيكلة والبناء", "استغلال فضاء الممارسة حسب الموقف", "يتنقل في الفضاء ويحتل المواقع المناسبة مع زملائه.", `${MAIN_4AP}@336`],
+      [26, "الهيكلة والبناء", "استغلال فضاء الممارسة حسب الموقف", "ينظم تنقلاته في الفضاء ضمن لعب جماعي.", `${MAIN_4AP}@353`],
+      [27, "الهيكلة والبناء", "اللعب الجماعي: الدفاع والهجوم", "يميز بين دوري الهجوم والدفاع ويقوم بهما في لعب جماعي.", `${MAIN_4AP}@370`],
+      [28, "الهيكلة والبناء", "اللعب الجماعي: الدفاع والهجوم", "يتعاون مع فريقه في الهجوم والدفاع ويحترم قواعد اللعب.", `${MAIN_4AP}@387`],
+    ],
+  },
+  // الخامسة: مذكرات «موقع المنارة» (ملف لكل درس، صفحة واحدة) تُلحق بالحصص الموجودة ذات العنوان نفسه
+  // [الأسبوع، …، الملف، …، ترتيب الحصة]. ملفات Word في المجلد لا تُقرأ في المتصفح فتُترك حتى تُرفع PDF.
+  "5AP_islamic": {
+    lessons: [
+      [7, null, null, null, "1p4PkvNYO6ggzUNt0xiv3X_HGpS9daOSP", null, 6], // من صفات الله العالم
+      [7, null, null, null, "1FH3Tcg4-N6UV0nQSkYW7b6BcIgTvYe4T", null, 7], // التيمم
+      [9, null, null, null, "1OYHKIG61MIk9LEQkLHxAdMbL_PMEBTOb", null, 8], // الحج
+      [10, null, null, null, "1ndZMZZgX4RVbvpkBAkI7V1Eg_5z_lym8", null, 10], // وصايا لقمان
+      [11, null, null, null, "1md_p6nwaMbV2_VwSMvXMDedeqvRkPBGD", null, 11], // استثمار الوقت
+      [11, null, null, null, "1bTzp6NM45pCdM4SJIhteqSW1yQ7OtZIU", null, 12], // الاجتهاد في العمل
+      [12, null, null, null, "1jKzDAwYdEuFjIhe0Q9dTsOyBCsm-exhm", null, 13], // الهجرة النبوية
+      [13, null, null, null, "1XR_C0xPCJ4bNU_pJ1Kr0ao1VZj1ZMPKK", null, 14], // المؤاخاة
+      [13, null, null, null, "1hWOJzdcBSueYHQxVxDzsWvfFzSvryar1", null, 15], // كرم عثمان
+      [16, null, null, null, "16xORWh5gqkCQcWfCPt-U21bJdxU6GeYj", null, 18], // سورة الفجر
+      [17, null, null, null, "1Jh9h957qlIUbQ-DcrkK9KpYkFIlqvInz", null, 19], // الحياء
+      [17, null, null, null, "1OAirMOW3UxVp0cIHCJDfhDDIwAs5ivQ4", null, 20], // من صفات الله القادر
+      [18, null, null, null, "1-22RokAiztKUWAP4VtZRytL2Aw8uAe-V", null, 21], // صلاة المريض
+      [19, null, null, null, "1vnzdwczTxtaKYPT_Q8xpgv8seX3j4OLi", null, 22], // من آثار الإيمان
+      [19, null, null, null, "1j6hOLe6F_9pV8yFPLlMb58Sl3z9cEzVb", null, 23], // التعاون
+      [19, null, null, null, "1b9zxKFrJpS54v9QadxNQV0xd6YnsW0n2", null, 24], // الاستقامة
+      [19, null, null, null, "1QRUz8bl0ql23DQL-_ldJqFmNGlgQ2ZqT", null, 25], // حب الأسرة
+      [20, null, null, null, "1Z0zxkmq1VREX5iLN4O_2cmhFOUlJcNqc", null, 26], // الصلح
+      [21, null, null, null, "1WcdpUd4qNIOC9DGAVixmMyGjWyfbMgC9", null, 27], // تعايش الرسول ﷺ
+      [21, null, null, null, "1pqoCbN9NMi6RJgjGBHscILRMPgXG8nkn", null, 28], // فتح مكة
+      [24, null, null, null, "1pj-yaTVTQPYFv0B6mtRpq1mL541zoQhu", null, 29], // بطولة علي
+      [25, null, null, null, "1OwDYOz42UpjwtEf2KuqSrfZ0mIOiHzow", null, 30], // سورة الغاشية
+      [26, null, null, null, "1tksXyOPz3V1pOkrJBIG1VQ34J1zuRjM9", null, 32], // سورة الأعلى
+      [27, null, null, null, "1ZULAk3m0IDcq94ojTp7Y2CS9nvSpnhSn", null, 33], // ليس المؤمن بالطعان
+      [27, null, null, null, "1mHsGYfAOsfr48cWuenhWSp5qg6U0NGrx", null, 34], // من غشنا فليس منا
+      [29, null, null, null, "19NJfUgGCe6EG_d0sqXazj9o0jERu4Mc7", null, 36], // صلاة السفر
+      [29, null, null, null, "1gkJnaK4nEuEOlB8kJ0PzBUjJRF435I6X", null, 37], // العناية بالمحيط
+      [30, null, null, null, "1i18mFMUfqT6UZ5ANSEWaWghJvRx0lllw", null, 38], // حجة الوداع
+      [30, null, null, null, "1FWDz1UGxplgMY--Xhs2YYE2aXIfunj5f", null, 39], // أسماء ذات النطاقين
+      [31, null, null, null, "1fGeKY7SFJo9VwT_Qj0eiO4Dz2ntsyzss", null, 40], // قصة سليمان
+    ],
+  },
+  "5AP_civic": {
+    lessons: [
+      [2, null, null, null, "1cJzUUZDQHSbQCSmzFONE1aB8b64P_zc6", null, 1], // الوضعية الانطلاقية
+      [2, null, null, null, "1iuroO6ncAxgdBGC6EyVXFT5J3g2-jMbn", null, 1], // المؤسسات العمومية الخدماتية
+      [4, null, null, null, "1f4Z-75zDC2IzDt8j1O_i4iJTqODoVUyc", null, 2], // البريد والمواصلات
+      [5, null, null, null, "1zJAFvtNXLqntpOuTVpGTSf5oO7Ej5j4l", null, 3], // وسائل الإعلام
+      [6, null, null, null, "165PUQwRHG73k1BRivjvyUO_1-jl4F0xF", null, 4], // وسائل الاتصال
+      [7, null, null, null, "1GzvfWmHEnF23tWpdi4Tb8Foa6wjIMOJQ", null, 5], // تعلم الإدماج
+    ],
+  },
+  "5AP_science": {
+    lessons: [
+      [2, null, null, null, "1U0DuOZiY3P00Fg4WBGZhoKmGPhovGHKL", null, 1], // الوضعية المشكلة الأم
+      [2, null, null, null, "12QqvKbbJD8xRKmmFRMeY4AD867y6JMrq", null, 1], // مكونات الهواء ومخاطر بعض الغازات
+      [2, null, null, null, "1Izza4FpE-f9pnvZZIQoM0a-mj4QYHgmf", null, 1], // الهواء والاحتراق
+      [3, null, null, null, "1vpi_SyvcUF55BdwR-BEY9-AEQ0rMo8aP", null, 2], // غازات أخرى غير الهواء
+      [4, null, null, null, "1brvNC7vriAH7DVYigQSLiwm8LP0HRLoh", null, 3], // قواعد الأمن عند التعامل مع الغازات
+    ],
+  },
   // التاريخ في الخامسة: يمتد كل موضوع من المخطط على أسابيع؛ الدروس المفصّلة تملأ أسابيعه الفارغة،
   // ومذكرات المواضيع الموجودة تُلحق بها (attach: ترتيب الحصة الموجودة)
   "5AP_history": {
@@ -141,35 +229,45 @@ for (const [id, spec] of Object.entries(ADD)) {
   const plan = JSON.parse(readFileSync(new URL(`../../content/curriculum/plans/${data.level}.json`, import.meta.url), "utf8"));
   const subject = data.subject;
   const kept = data.lessons.filter((l) => l.added !== MARK);
-  // إعادة التشغيل: نُزيل ما أُلحق سابقًا بالحصص الموجودة
+  // إعادة التشغيل: نُزيل ما أُلحق سابقًا بالحصص الموجودة (صفحات مصدرها الرئيسي تبقى)
   for (const l of kept) if (l.attached === MARK) {
-    l.pages = [];
+    l.pages = (l.pages ?? []).filter((p) => typeof p === "number");
     delete l.attached;
   }
   let next = Math.max(...kept.map((l) => l.order)) + 1;
+  if (spec.segments) Object.assign(data.segments, spec.segments);
 
-  // ترتيب ملفات الوثيقة الإضافية بأول ظهور، وصفحات كل ملف فيها
+  // ترتيب ملفات الوثيقة الإضافية بأول ظهور، وصفحات كل ملف فيها.
+  // «id@163,164»: صفحات بعينها من ملف كبير؛ null: حصة بلا مذكرة (العنوان فقط، من المخطط أو الكتاب المدرسي)
   const key = spec.images ? "c" : "b";
-  const files = [...new Set(spec.lessons.map((l) => l[4]))];
+  const fileOf = (f) => f?.split("@")[0];
+  const files = [...new Set(spec.lessons.map((l) => fileOf(l[4])).filter(Boolean))];
   const pagesOf = new Map();
+  const offsetOf = new Map();
   let offset = 0;
   for (const f of files) {
     const n = spec.images ? 1 : pdfPages(await driveFile(f));
     if (!n) throw new Error(`no pages: ${f}`);
     pagesOf.set(f, Array.from({ length: Math.min(n, 6) }, (_, i) => `${key}:${offset + i + 1}`));
+    offsetOf.set(f, offset);
     offset += n;
   }
+  const lessonPages = (f) => {
+    if (!f) return [];
+    const [id, only] = f.split("@");
+    return only ? only.split(",").map((n) => `${key}:${offsetOf.get(id) + Number(n)}`) : pagesOf.get(id);
+  };
 
   const added = [];
   for (const [week, domain, topic, objective, file, session, attachTo] of spec.lessons) {
     if (attachTo) {
       const target = kept.find((l) => l.order === attachTo);
       if (!target || target.unit !== week) throw new Error(`${id}: attach ${attachTo} ≠ week ${week}`);
-      target.pages = pagesOf.get(file);
+      target.pages = [...(target.pages ?? []), ...lessonPages(file)];
       target.attached = MARK;
       continue;
     }
-    const seg = segmentOfWeek(plan, week);
+    const seg = spec.segmentOf ? spec.segmentOf(domain) : segmentOfWeek(plan, week);
     added.push({
       order: next++,
       unitKind: "week",
@@ -183,15 +281,16 @@ for (const [id, spec] of Object.entries(ADD)) {
       topic,
       materials: MAT[subject] ?? kept[0].materials,
       objectives: [objective],
-      pages: pagesOf.get(file),
-      segmentTitle: `المقطع ${seg}: ${data.segments[seg] ?? plan.segments[seg]?.title ?? ""}`,
+      pages: lessonPages(file),
+      // مقاطع التربية البدنية ميادينها، وعنوانها اسم الميدان وحده (كبقية حصص الملف)
+      segmentTitle: spec.segmentOf ? data.segments[seg] : `المقطع ${seg}: ${data.segments[seg] ?? plan.segments[seg]?.title ?? ""}`,
       added: MARK,
     });
   }
   data.lessons = [...kept, ...added];
   data.sources = {
     ...(spec.main ? { main: { pdf: [spec.main] } } : {}),
-    [key]: spec.images ? { images: files } : { pdf: files },
+    ...(files.length ? { [key]: spec.images ? { images: files } : { pdf: files } } : {}),
   };
   write(id, data);
   console.log(`✓ ${id}: +${added.length} حصة، ${spec.lessons.filter((l) => l[6]).length} مذكرة أُلحقت بحصص موجودة`);

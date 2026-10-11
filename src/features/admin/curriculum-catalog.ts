@@ -9,10 +9,15 @@ import g4 from "../../../content/curriculum/4AP_geography.json";
 import a4 from "../../../content/curriculum/4AP_art.json";
 import mu4 from "../../../content/curriculum/4AP_music.json";
 import ar4 from "../../../content/curriculum/4AP_ar.json";
+import c4 from "../../../content/curriculum/4AP_civic.json";
+import pe4 from "../../../content/curriculum/4AP_pe.json";
 import h5 from "../../../content/curriculum/5AP_history.json";
+import i5 from "../../../content/curriculum/5AP_islamic.json";
+import c5 from "../../../content/curriculum/5AP_civic.json";
+import s5 from "../../../content/curriculum/5AP_science.json";
 import type { CurriculumFile } from "./curriculum-publish";
 
-export const CURRICULA = [m4, i4, s4, h4, g4, a4, mu4, ar4, h5] as unknown as CurriculumFile[];
+export const CURRICULA = [m4, i4, s4, h4, g4, a4, mu4, ar4, c4, pe4, h5, i5, c5, s5] as unknown as CurriculumFile[];
 
 /** معرّفات ملفات Drive المعلنة مصادرَ لهذه المناهج. */
 export const SOURCE_FILE_IDS = new Set(CURRICULA.flatMap((c) => Object.values(c.sources ?? {}).flatMap((s) => [...(s.pdf ?? []), ...(s.images ?? [])])));
