@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { PrintButtons } from "@/components/ui/print-actions";
 import { useLocale, useTranslations } from "next-intl";
-import { ArrowRight, LoaderCircle, Lock, Printer, Sparkles } from "lucide-react";
+import { ArrowRight, LoaderCircle, Lock, Sparkles } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { DOC, docLangOfSubject } from "@/i18n/doc-lang";
@@ -44,10 +45,7 @@ export function LessonView({ id }: { id: string }) {
           {t("back")}
         </Link>
         {can.summary && (
-          <button type="button" onClick={() => window.print()} className={buttonClass("secondary")}>
-            <Printer aria-hidden className="size-4" />
-            {t("print")}
-          </button>
+          <PrintButtons title={() => document.querySelector("article h1, article h2")?.textContent?.trim() || t("print")} />
         )}
       </div>
 

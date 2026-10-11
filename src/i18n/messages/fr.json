@@ -30,8 +30,20 @@
     "backToToday": "Retour à aujourd'hui",
     "skipToContent": "Aller au contenu",
     "printReady": {
-      "body": "Le document est prêt. Touchez le bouton pour ouvrir l'impression, puis choisissez l'imprimante ou « Enregistrer en PDF ».",
-      "button": "Imprimer ou enregistrer en PDF"
+      "body": "Le document est prêt : imprimez-le directement ou enregistrez-le en PDF sur votre appareil."
+    },
+    "print": {
+      "print": "Imprimer",
+      "pdf": "Enregistrer en PDF",
+      "preparing": "Préparation du PDF…",
+      "layout": "Mise en page…",
+      "progress": "Page {done} sur {total}",
+      "downloaded": "Fichier téléchargé",
+      "ready": "Le PDF est prêt",
+      "save": "Enregistrer le fichier",
+      "again": "Télécharger à nouveau",
+      "close": "Fermer",
+      "error": "Impossible de créer le PDF. Réessayez, ou utilisez « Imprimer » puis « Enregistrer en PDF »."
     }
   },
   "landing": {

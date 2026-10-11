@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { PrintButtons } from "@/components/ui/print-actions";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Check, LoaderCircle, Printer, Trash2 } from "lucide-react";
+import { Check, LoaderCircle, Trash2 } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field, SelectField } from "@/components/ui/field";
@@ -192,10 +193,7 @@ function PrepForm({
             {state === "saving" ? <LoaderCircle aria-hidden className="size-4 animate-spin" /> : state === "saved" ? <Check aria-hidden className="size-4" /> : null}
             {state === "saved" ? t("saved") : t("save")}
           </button>
-          <button type="button" onClick={() => window.print()} className={buttonClass("secondary")}>
-            <Printer aria-hidden className="size-4" />
-            {t("print")}
-          </button>
+          <PrintButtons title={() => [draft.activity, draft.content].filter(Boolean).join(" — ") || t("print")} className="contents" />
           {prepId && (
             <button type="button" onClick={remove} className={buttonClass("ghost", "md", "ms-auto text-red-700")}>
               <Trash2 aria-hidden className="size-4" />

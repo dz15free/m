@@ -23,7 +23,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     <AuthProvider>
       <QueryProvider>
         <RequireAuth>
-          <div className="flex min-h-dvh">
+          <div className="flex min-h-dvh print:min-h-0">
             <a
               href="#content"
               className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-surface focus:px-4 focus:py-2"

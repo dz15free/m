@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { PrintButtons } from "@/components/ui/print-actions";
 import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { LoaderCircle, Printer } from "lucide-react";
+import { LoaderCircle } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field, SelectField } from "@/components/ui/field";
@@ -95,10 +96,7 @@ function Preview({ template, pages, children }: { template: TemplateId; pages: n
   return (
     <>
       <div className="flex flex-wrap items-center gap-3 print:hidden">
-        <button type="button" onClick={() => window.print()} disabled={!pages} className={buttonClass("primary")}>
-          <Printer aria-hidden className="size-4" />
-          {t("print")}
-        </button>
+        <PrintButtons title={() => t(`templates.${template}.title`)} disabled={!pages} />
         <span className="text-sm text-muted">{t("pages", { n: pages })}</span>
       </div>
       <style>{`@page { size: A4 ${landscape ? "landscape" : "portrait"}; margin: 0; }`}</style>

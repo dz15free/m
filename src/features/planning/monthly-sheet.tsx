@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { PrintButtons } from "@/components/ui/print-actions";
 import Link from "next/link";
 import { useQueries, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Check, ClipboardCheck, LoaderCircle, Pencil, Plus, Printer, Puzzle, TreePalm } from "lucide-react";
+import { Check, ClipboardCheck, LoaderCircle, Pencil, Plus, Puzzle, TreePalm } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useClasses, useTaxonomy, useTeacher, useUid } from "@/features/classes/hooks";
 import { todayInAlgiers } from "@/features/attendance/logic";
@@ -197,10 +198,7 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
                 {editMode ? <Check aria-hidden className="size-4" /> : <Pencil aria-hidden className="size-4" />}
                 {editMode ? t("doneEditing") : t("edit")}
               </button>
-              <button type="button" onClick={() => window.print()} className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-5 text-sm font-semibold text-brand-900 hover:bg-brand-50">
-                <Printer aria-hidden className="size-4" />
-                {t("print")}
-              </button>
+              <PrintButtons tone="dark" title={() => `${D ? D.sheetTitle(sheetMonth) : t("sheetTitle", { month: monthLabel(month) })} — ${cls.displayName}`} />
             </div>
           </div>
           <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold">

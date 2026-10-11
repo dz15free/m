@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { flushSync } from "react-dom";
+import { PrintButtons } from "@/components/ui/print-actions";
 import Link from "next/link";
 import { useQueries, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
@@ -120,10 +120,6 @@ function ClassGrades({ cls, term, stage, taxonomy }: { cls: ClassDoc; term: Term
   const label = (s: string) => subjectById(taxonomy, s)?.label[locale] ?? s;
   const allTerms = sheets.map((q) => q.data ?? {});
 
-  function print(mode: Exclude<PrintMode, null>) {
-    flushSync(() => setPrintMode(mode));
-    window.print();
-  }
 
   return (
     <>
@@ -153,15 +149,16 @@ function ClassGrades({ cls, term, stage, taxonomy }: { cls: ClassDoc; term: Term
           <Results cls={cls} term={term} stage={stage} subjects={subjects} label={label} sheets={allTerms} />
         )}
 
-        <div className="flex flex-wrap gap-2">
-          <button type="button" onClick={() => print("sheet")} className={buttonClass("secondary")}>
-            <Printer aria-hidden className="size-4" />
-            {t("printSheet")}
-          </button>
-          <button type="button" onClick={() => print("results")} className={buttonClass("secondary")}>
-            <Printer aria-hidden className="size-4" />
-            {t("printResults")}
-          </button>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {(["sheet", "results"] as const).map((mode) => (
+            <div key={mode} className="flex flex-wrap items-center gap-2 rounded-card bg-surface p-3 shadow-card">
+              <p className="flex min-w-0 flex-1 basis-full items-center gap-2 text-sm font-semibold">
+                <Printer aria-hidden className="size-4 text-brand-700" />
+                {t(mode === "sheet" ? "printSheet" : "printResults")}
+              </p>
+              <PrintButtons title={() => `${t(mode === "sheet" ? "printSheet" : "printResults")} — ${cls.displayName}`} prepare={() => setPrintMode(mode)} />
+            </div>
+          ))}
         </div>
       </div>
 

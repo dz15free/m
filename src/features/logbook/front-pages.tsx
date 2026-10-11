@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { PrintButtons } from "@/components/ui/print-actions";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { Check, IdCard, LoaderCircle, Printer } from "lucide-react";
+import { Check, IdCard, LoaderCircle } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field, SelectField } from "@/components/ui/field";
@@ -99,10 +100,7 @@ export function FrontPages() {
             </div>
           </fieldset>
           <div className="flex flex-wrap gap-2">
-            <button type="button" onClick={() => window.print()} disabled={!chosen.length} className={buttonClass("primary")}>
-              <Printer aria-hidden className="size-4" />
-              {t("print")}
-            </button>
+            <PrintButtons title={t("title")} disabled={!chosen.length} className="contents" />
             <button type="button" onClick={() => setEditingCard((v) => !v)} className={buttonClass("secondary")}>
               <IdCard aria-hidden className="size-4" />
               {editingCard ? t("close") : t("edit")}
