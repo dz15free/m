@@ -12,7 +12,10 @@ import {
   EmailAuthProvider,
   reauthenticateWithCredential,
   reauthenticateWithPopup,
+  linkWithCredential,
+  updatePassword,
   updateProfile,
+  verifyBeforeUpdateEmail,
   type User,
 } from "firebase/auth";
 import { clearIndexedDbPersistence, doc, getDoc, serverTimestamp, setDoc, terminate, updateDoc, waitForPendingWrites } from "firebase/firestore";
@@ -99,6 +102,8 @@ export async function ensureUserDoc(user: User, locale: Locale, name?: string): 
   const ref = doc(db, "users", user.uid);
   const snap = await getDoc(ref);
   if (snap.exists()) {
+    // بعد تغيير البريد (رابط التأكيد): نسخة البريد في الملف تُحدَّث من الخادم (القواعد تمنع تعديلها من الجهاز)
+    if (user.email && user.emailVerified && snap.data().email !== user.email) void syncEmail(user);
     if (name && !snap.data().displayName) {
       await updateDoc(ref, { displayName: name.slice(0, 80), updatedAt: serverTimestamp() });
     }
@@ -134,16 +139,51 @@ export function currentProvider(): "password" | "google" | null {
   return user.providerData.some((p) => p.providerId === "password") ? "password" : "google";
 }
 
-/** حذف الحساب نهائيًا: إعادة المصادقة (دخول حديث يطلبه الخادم)، ثم الحذف، ثم مسح الجهاز. */
-export async function deleteMyAccount(password: string, locale: Locale) {
-  const auth = authFor(locale);
-  const user = auth.currentUser;
-  if (!user) throw new Error("signed out");
+async function syncEmail(user: User) {
+  const token = await user.getIdToken(true).catch(() => null);
+  if (token) await fetch("/api/account/email", { method: "POST", headers: { Authorization: `Bearer ${token}` } }).catch(() => {});
+}
+
+/** إعادة المصادقة قبل العمليات الحساسة: كلمة المرور الحالية، أو نافذة Google لمن يدخل بها. */
+async function reauthenticate(user: User, password: string) {
   if (currentProvider() === "password") {
     await reauthenticateWithCredential(user, EmailAuthProvider.credential(user.email ?? "", password));
   } else {
     await reauthenticateWithPopup(user, new GoogleAuthProvider());
   }
+}
+
+/** تغيير كلمة المرور من الإعدادات (بعد التحقق من الحالية). */
+export async function changePassword(current: string, next: string, locale: Locale) {
+  const user = authFor(locale).currentUser;
+  if (!user) throw new Error("signed out");
+  await reauthenticate(user, current);
+  await updatePassword(user, next);
+}
+
+/** إضافة كلمة مرور لحساب يدخل بـ Google، فيمكنه الدخول بالبريد وكلمة المرور أيضًا. */
+export async function addPassword(next: string, locale: Locale) {
+  const user = authFor(locale).currentUser;
+  if (!user?.email) throw new Error("signed out");
+  await reauthenticate(user, "");
+  await linkWithCredential(user, EmailAuthProvider.credential(user.email, next));
+}
+
+/** تغيير البريد: يُرسل رابط تأكيد إلى البريد الجديد، ولا يتغيّر البريد إلا بعد الضغط عليه
+ *  (ويصل إلى البريد القديم إشعار يسمح بالتراجع). */
+export async function changeEmail(password: string, newEmail: string, locale: Locale) {
+  const user = authFor(locale).currentUser;
+  if (!user) throw new Error("signed out");
+  await reauthenticate(user, password);
+  await verifyBeforeUpdateEmail(user, newEmail.trim());
+}
+
+/** حذف الحساب نهائيًا: إعادة المصادقة (دخول حديث يطلبه الخادم)، ثم الحذف، ثم مسح الجهاز. */
+export async function deleteMyAccount(password: string, locale: Locale) {
+  const auth = authFor(locale);
+  const user = auth.currentUser;
+  if (!user) throw new Error("signed out");
+  await reauthenticate(user, password);
   const token = await user.getIdToken(true);
   const res = await fetch("/api/account", { method: "DELETE", headers: { Authorization: `Bearer ${token}` } });
   if (res.status === 409) throw new Error("admin");

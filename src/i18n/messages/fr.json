@@ -312,6 +312,31 @@
       "error": "Suppression impossible, réessayez plus tard ou contactez l'administration.",
       "wrongPassword": "Mot de passe incorrect.",
       "admin": "Un compte administrateur ne peut pas être supprimé ici. Retirez d'abord le rôle admin."
+    },
+    "account": {
+      "title": "Compte et connexion",
+      "email": "Adresse e-mail",
+      "verified": "Vérifiée",
+      "notVerified": "Non vérifiée",
+      "passwordNote": "Vous vous connectez avec votre e-mail et votre mot de passe. Vous pouvez les modifier ici.",
+      "googleNote": "Vous vous connectez avec Google : votre e-mail est celui de Google et se gère chez Google. Vous pouvez ajouter un mot de passe pour vous connecter aussi par e-mail.",
+      "changeEmail": "Changer l'adresse e-mail",
+      "changePassword": "Changer le mot de passe",
+      "addPassword": "Ajouter un mot de passe",
+      "emailHow": "Nous enverrons un lien de confirmation à la nouvelle adresse. Votre e-mail ne change qu'après avoir cliqué sur ce lien ; vous vous connecterez ensuite avec la nouvelle adresse. L'adresse actuelle reçoit un avis permettant d'annuler.",
+      "newEmail": "Nouvelle adresse e-mail",
+      "currentPassword": "Mot de passe actuel",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le nouveau mot de passe",
+      "passwordRule": "8 caractères au moins.",
+      "mismatch": "Les deux mots de passe ne correspondent pas.",
+      "sendLink": "Envoyer le lien de confirmation",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "addPasswordHow": "Une fenêtre Google s'ouvrira pour vous identifier, puis le mot de passe sera ajouté pour vous connecter aussi par e-mail.",
+      "emailSent": "Lien de confirmation envoyé à {email}. Ouvrez votre messagerie et cliquez sur le lien pour terminer, puis connectez-vous avec la nouvelle adresse.",
+      "passwordChanged": "Mot de passe modifié.",
+      "passwordAdded": "Mot de passe ajouté : vous pouvez aussi vous connecter avec votre e-mail et ce mot de passe."
     }
   },
   "classes": {
