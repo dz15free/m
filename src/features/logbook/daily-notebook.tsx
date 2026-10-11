@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { doc, getDoc } from "firebase/firestore";
@@ -8,6 +8,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { BookOpenCheck, CalendarClock, ChevronLeft, ChevronRight, LoaderCircle, NotebookPen, Printer, Sparkles } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { PrintReady } from "@/components/ui/print-ready";
 import { getFirebase } from "@/lib/firebase/client";
 import { useClasses, useTaxonomy, useTeacher, useUid } from "@/features/classes/hooks";
 import type { ClassDoc } from "@/features/classes/repo";
@@ -108,7 +109,6 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
   const tax = useTaxonomy(teacher.data?.profile.stage);
   const [anchor, setAnchor] = useState(() => (initialDate && isIsoDate(initialDate) ? initialDate : todayInAlgiers()));
   const [editing, setEditing] = useState<string | null>(null);
-  const printed = useRef(false);
 
   const days = calendar.data ? weekDates(anchor, calendar.data.schoolDays) : [];
   const lessonsKey = ["lessons", uid ?? "", days.join(",")];
@@ -132,14 +132,6 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
   });
 
   const ready = !!(teacher.data && classes.data && schedule.data && calendar.data && tax.data && lessons.data);
-  // الرابط «?date=…&print=1»: الدفتر يُفتح جاهزًا للطباعة أو الحفظ PDF
-  useEffect(() => {
-    if (!autoPrint || !ready || suggestions.loading || printed.current) return;
-    printed.current = true;
-    const id = window.setTimeout(() => window.print(), 400);
-    return () => window.clearTimeout(id);
-  }, [autoPrint, ready, suggestions.loading]);
-
   if (!ready) {
     return (
       <div role="status" className="grid place-items-center py-16">
@@ -228,6 +220,8 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
 
   return (
     <>
+      {/* «?print=1»: الدفتر جاهز، وزر الطباعة بلمسة مباشرة (الهواتف تمنع الطباعة التلقائية) */}
+      {autoPrint && <PrintReady ready={!suggestions.loading} />}
       {/* ── الشاشة ── */}
       <div className="space-y-4 pb-4 print:hidden">
         <Card className="flex items-center gap-2 p-3">

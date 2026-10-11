@@ -28,7 +28,11 @@
     "comingSoonTitle": "En construction",
     "comingSoonBody": "Cette page fait partie des prochaines étapes et sera bientôt disponible.",
     "backToToday": "Retour à aujourd'hui",
-    "skipToContent": "Aller au contenu"
+    "skipToContent": "Aller au contenu",
+    "printReady": {
+      "body": "Le document est prêt. Touchez le bouton pour ouvrir l'impression, puis choisissez l'imprimante ou « Enregistrer en PDF ».",
+      "button": "Imprimer ou enregistrer en PDF"
+    }
   },
   "landing": {
     "login": "Se connecter",
