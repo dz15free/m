@@ -12,7 +12,7 @@ import { useUid } from "@/features/classes/hooks";
 import { deleteAnnouncement, listAnnouncements, publishAnnouncement, type Kind } from "@/features/notifications/repo";
 import { cn } from "@/lib/utils/cn";
 import { FEEDBACK_REASONS } from "@/features/billing/feedback";
-import { emailsOf, failureKey, inspectOrder, listAudit, listFeedback, listOrders, listPayments, peopleOf, type ChargilyInfo, type OrderRow } from "./repo";
+import { emailsOf, failureKey, getHiddenTestimonials, inspectOrder, listAudit, listFeedback, setTestimonialHidden, listOrders, listPayments, peopleOf, type ChargilyInfo, type OrderRow } from "./repo";
 
 const fmtDate = (locale: "ar" | "fr", at: number) =>
   at ? new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ", { dateStyle: "medium", timeStyle: "short" }).format(at) : "—";
@@ -353,6 +353,18 @@ export function AdminFeedback() {
   const ta = useTranslations("admin");
   const locale = useLocale() as "ar" | "fr";
   const list = useQuery({ queryKey: ["adminFeedback"], queryFn: listFeedback });
+  const hidden = useQuery({ queryKey: ["hiddenTestimonials"], queryFn: getHiddenTestimonials });
+  const qc = useQueryClient();
+  const [toggling, setToggling] = useState<string | null>(null);
+  async function toggle(uid: string, hide: boolean) {
+    setToggling(uid);
+    try {
+      await setTestimonialHidden(uid, hide);
+      await qc.invalidateQueries({ queryKey: ["hiddenTestimonials"] });
+    } finally {
+      setToggling(null);
+    }
+  }
   const people = useQuery({
     queryKey: ["adminFeedbackPeople", list.data?.length],
     queryFn: () => peopleOf(list.data!.map((r) => r.uid)),
@@ -399,6 +411,22 @@ export function AdminFeedback() {
                   </p>
                 )}
                 {r.comment && <p dir="auto" className="whitespace-pre-line">{r.comment}</p>}
+                {/* الصفحة الرئيسية تعرض آراء 4 و5 نجوم بتعليق تلقائيًا، ما لم تُخفَ هنا */}
+                {r.rating >= 4 && r.comment.trim().length >= 12 && hidden.data && (
+                  <p className="flex flex-wrap items-center gap-2 pt-1">
+                    <span className={cn("rounded-full px-2 py-0.5 text-xs font-semibold", hidden.data.includes(r.uid) ? "bg-slate-100 text-slate-700" : "bg-green-50 text-green-800")}>
+                      {hidden.data.includes(r.uid) ? t("hidden") : t("shown")}
+                    </span>
+                    <button
+                      type="button"
+                      disabled={toggling === r.uid}
+                      onClick={() => void toggle(r.uid, !hidden.data!.includes(r.uid))}
+                      className="rounded-full px-3 py-1 text-xs font-semibold text-brand-800 ring-1 ring-line hover:bg-canvas disabled:opacity-50"
+                    >
+                      {hidden.data.includes(r.uid) ? t("show") : t("hide")}
+                    </button>
+                  </p>
+                )}
               </li>
             ))}
           </ul>

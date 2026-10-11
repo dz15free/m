@@ -96,6 +96,7 @@ export function FeedbackForm({ context }: { context: Feedback["context"] }) {
           className="w-full rounded-xl border border-line bg-surface p-3 text-sm"
         />
       </label>
+      <p className="text-xs text-muted">{t("publicNote")}</p>
       {state === "error" && <p role="alert" className="text-sm text-red-700">{t("error")}</p>}
       <button type="submit" disabled={rating < 1 || state === "busy"} className={buttonClass("secondary")}>
         {state === "busy" && <LoaderCircle aria-hidden className="size-4 animate-spin" />}
