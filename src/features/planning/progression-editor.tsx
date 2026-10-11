@@ -14,7 +14,8 @@ import { todayInAlgiers } from "@/features/attendance/logic";
 import { useCalendar } from "@/features/schedule/repo";
 import { PrintHeader } from "@/features/logbook/print-header";
 import { parseAcademicYearId } from "@/shared/academic-year";
-import { subjectById } from "@/shared/taxonomy/taxonomy";
+import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
+import { DOC, docLangOfSubject, docLevel, docMonth, type DocLabels } from "@/i18n/doc-lang";
 import { cn } from "@/lib/utils/cn";
 import { defaultStart, parseProgression, rowsFromCurriculum, progressStatus, ROW_MAX, schoolWeekOf, weekStart, type Progression, type ProgressionRow } from "./logic";
 import { deleteProgression, getProgression, saveProgression } from "./repo";
@@ -55,12 +56,17 @@ export function ProgressionEditor({ classId, subjectId }: { classId: string; sub
       official={official}
       canReset={canReset}
       className={cls.data.displayName}
+      levelLabel={(() => {
+        const lv = levelById(tax.data, cls.data.level);
+        const lang = docLangOfSubject(subjectId);
+        return lang ? docLevel(lv, lang, cls.data.level) : undefined;
+      })()}
       subjectLabel={subjectById(tax.data, subjectId)?.label}
     />
   );
 }
 
-function Editor({ initial, official, canReset, className, subjectLabel }: { initial: Progression; official: boolean; canReset: boolean; className: string; subjectLabel?: { ar: string; fr: string } }) {
+function Editor({ initial, official, canReset, className, levelLabel, subjectLabel }: { initial: Progression; official: boolean; canReset: boolean; className: string; levelLabel?: string; subjectLabel?: { ar: string; fr: string } }) {
   const t = useTranslations("planning");
   const locale = useLocale() as "ar" | "fr";
   const uid = useUid();
@@ -76,6 +82,10 @@ function Editor({ initial, official, canReset, className, subjectLabel }: { init
   // العربية وبقية المواد من اليمين، والفرنسية والإنجليزية من اليسار
   const dir = subjectDir(p.subjectId);
   const tm = useTranslations("planning.monthlyPlan");
+  // الفرنسية والإنجليزية: الأسابيع والحقول والوثيقة المطبوعة بلغة المادة
+  const docLang = docLangOfSubject(p.subjectId);
+  const D = docLang ? DOC[docLang] : null;
+  const weekLabel = (n: number) => D?.week(n) ?? t("week", { n });
 
   async function reset() {
     if (!uid || !window.confirm(t("resetConfirm"))) return;
@@ -127,7 +137,7 @@ function Editor({ initial, official, canReset, className, subjectLabel }: { init
     months.set(m, [...(months.get(m) ?? []), r]);
   }
   const monthName = (m: string) =>
-    new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ" : "fr-DZ", { month: "long", year: "numeric", numberingSystem: "latn" }).format(new Date(`${m}-15T12:00:00`));
+    docLang ? docMonth(m, docLang) : new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ" : "fr-DZ", { month: "long", year: "numeric", numberingSystem: "latn" }).format(new Date(`${m}-15T12:00:00`));
 
   return (
     <>
@@ -246,7 +256,7 @@ function Editor({ initial, official, canReset, className, subjectLabel }: { init
         ) : (
           <>
             {!editing && <p className="text-xs text-muted">{t("markHint")}</p>}
-            <ol className="space-y-2">
+            <ol dir={docLang ? "ltr" : undefined} lang={docLang ?? undefined} className="space-y-2">
               {p.rows.map((r, i) => {
                 const current = r.w === currentWeek;
                 return (
@@ -258,7 +268,7 @@ function Editor({ initial, official, canReset, className, subjectLabel }: { init
                           min={1}
                           max={40}
                           value={r.w}
-                          aria-label={t("weekCol")}
+                          aria-label={D?.weekCol ?? t("weekCol")}
                           onChange={(e) => setRow(i, { w: Number(e.target.value) })}
                           className="h-11 w-full min-w-0 rounded-xl border border-line bg-surface text-center outline-none focus:border-brand-600"
                         />
@@ -266,8 +276,8 @@ function Editor({ initial, official, canReset, className, subjectLabel }: { init
                           value={r.unit}
                           maxLength={ROW_MAX.unit}
                           dir={dir}
-                          placeholder={t("unit")}
-                          aria-label={t("unit")}
+                          placeholder={D?.unitCol ?? t("unit")}
+                          aria-label={D?.unitCol ?? t("unit")}
                           onChange={(e) => setRow(i, { unit: e.target.value })}
                           className="col-span-1 h-11 w-full min-w-0 rounded-xl border border-line bg-surface px-3 outline-none focus:border-brand-600"
                         />
@@ -283,8 +293,8 @@ function Editor({ initial, official, canReset, className, subjectLabel }: { init
                           value={r.content}
                           maxLength={ROW_MAX.content}
                           dir={dir}
-                          placeholder={t("content")}
-                          aria-label={t("content")}
+                          placeholder={D?.content ?? t("content")}
+                          aria-label={D?.content ?? t("content")}
                           onChange={(e) => setRow(i, { content: e.target.value })}
                           className="col-span-3 h-11 w-full min-w-0 rounded-xl border border-line bg-surface px-3 outline-none focus:border-brand-600 sm:col-span-1"
                         />
@@ -298,7 +308,7 @@ function Editor({ initial, official, canReset, className, subjectLabel }: { init
                           className="size-6 shrink-0 accent-brand-700"
                         />
                         <span className={cn("w-16 shrink-0 text-center text-xs font-semibold", current ? "text-brand-700" : "text-muted")}>
-                          {current ? t("thisWeek") : t("week", { n: r.w })}
+                          {current ? (D?.thisWeek ?? t("thisWeek")) : weekLabel(r.w)}
                         </span>
                         <span className={cn("min-w-0 flex-1", r.done && "text-muted")}>
                           {(r.unit || (r.k && r.k !== "all")) && (
@@ -331,19 +341,21 @@ function Editor({ initial, official, canReset, className, subjectLabel }: { init
       </div>
 
       {/* ── الطباعة ── */}
-      <div className="hidden text-[10pt] print:block">
+      <div dir={docLang ? "ltr" : undefined} lang={docLang ?? undefined} className="hidden text-[10pt] print:block">
         <style>{"@page { size: A4 portrait; margin: 12mm; }"}</style>
         <PrintHeader
-          title={t(printMode === "annual" ? "annualTitle" : "monthlyTitle", { subject })}
+          title={D ? `${printMode === "annual" ? D.annualTitle : D.monthlyTitle} — ${D.subject}` : t(printMode === "annual" ? "annualTitle" : "monthlyTitle", { subject })}
           subtitle={className}
+          lang={docLang}
+          level={levelLabel}
         />
         {printMode === "annual" ? (
-          <ProgressionTable rows={p.rows} weekDate={weekDate} />
+          <ProgressionTable rows={p.rows} weekDate={weekDate} labels={D} />
         ) : (
           [...months].map(([m, rows]) => (
             <div key={m} className="mb-4 break-inside-avoid">
               <p className="mb-1 font-bold">{monthName(m)}</p>
-              <ProgressionTable rows={rows} weekDate={weekDate} />
+              <ProgressionTable rows={rows} weekDate={weekDate} labels={D} />
             </div>
           ))
         )}
@@ -352,17 +364,17 @@ function Editor({ initial, official, canReset, className, subjectLabel }: { init
   );
 }
 
-function ProgressionTable({ rows, weekDate }: { rows: ProgressionRow[]; weekDate: (w: number) => string }) {
+function ProgressionTable({ rows, weekDate, labels: D }: { rows: ProgressionRow[]; weekDate: (w: number) => string; labels: DocLabels | null }) {
   const t = useTranslations("planning");
   return (
     <table className="w-full border-collapse">
       <thead>
         <tr className="bg-canvas">
-          <th className="w-16 border border-ink px-1 py-1">{t("weekCol")}</th>
+          <th className="w-16 border border-ink px-1 py-1">{D?.weekCol ?? t("weekCol")}</th>
           <th className="w-24 border border-ink px-1 py-1" />
-          <th className="w-[28%] border border-ink px-2 py-1">{t("unit")}</th>
-          <th className="border border-ink px-2 py-1">{t("content")}</th>
-          <th className="w-12 border border-ink px-1 py-1">{t("done")}</th>
+          <th className="w-[28%] border border-ink px-2 py-1">{D?.unitCol ?? t("unit")}</th>
+          <th className="border border-ink px-2 py-1">{D?.content ?? t("content")}</th>
+          <th className="w-12 border border-ink px-1 py-1">{D?.done ?? t("done")}</th>
         </tr>
       </thead>
       <tbody>

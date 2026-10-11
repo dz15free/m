@@ -15,6 +15,7 @@ import { curriculumId } from "@/features/lessons/logic";
 import { parseAcademicYearId } from "@/shared/academic-year";
 import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
 import { monthName } from "@/i18n/dates";
+import { DOC, docHoliday, docLangOf, docLangOfSubject, docLevel, docMonth, type DocLabels } from "@/i18n/doc-lang";
 import { cn } from "@/lib/utils/cn";
 import { defaultStart, progressionId, rowsFromCurriculum, schoolWeekOf, type Progression, type ProgressionRow } from "./logic";
 import { listProgressions, saveProgression } from "./repo";
@@ -99,7 +100,14 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
   const weeks = monthWeeks(month, start, cal);
   const allWeeks = yearWeeks(start, cal);
   const href = (m: string, c = cls.id) => `/app/planning/monthly?m=${m}&c=${c}`;
-  const levelLabel = levelById(tax.data, cls.level)?.label[locale] ?? cls.level;
+  // قسم الفرنسية أو الإنجليزية وحدها (أستاذ المادة): الجدول كله بلغتها ومن اليسار
+  const docLang = docLangOf(subjects);
+  const D = docLang ? DOC[docLang] : null;
+  const levelLabel = docLang ? docLevel(levelById(tax.data, cls.level), docLang, cls.level) : (levelById(tax.data, cls.level)?.label[locale] ?? cls.level);
+  const sheetMonth = docLang ? docMonth(month, docLang) : monthLabel(month);
+  const holidayName = (h: { label?: { ar: string; fr: string } }) => (docLang ? docHoliday(h.label, docLang) : (h.label?.[locale] ?? t("holidayName")));
+  const examsLabel = (term: number) => D?.exams(term) ?? t("exams", { term });
+  const weekLabel = (n: number) => D?.schoolWeek(n) ?? t("schoolWeek", { n });
 
   // لكل مادة: التوزيع المحفوظ للأستاذ، وإلا الرسمي من المذكرات (نفس «أين أنا الآن؟»)
   const savedById = new Map(progs.data.map((p) => [progressionId(p.classId, p.subjectId), p]));
@@ -112,7 +120,12 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
       return [s, { official, rows, saved }];
     }),
   );
-  const subjectLabel = (s: string) => subjectById(tax.data!, s)?.label[locale] ?? s;
+  // الفرنسية والإنجليزية باسمهما في لغتهما؛ وفي جدول المادة الواحدة عمودها «Séances / Sessions»
+  const subjectLabel = (s: string) => {
+    const lang = docLangOfSubject(s);
+    if (lang) return D ? D.sessions : DOC[lang].subject;
+    return subjectById(tax.data!, s)?.label[locale] ?? s;
+  };
 
   // العطل والاختبارات التي تمسّ الشهر
   const holidays = cal.holidays.filter((h) => h.start.slice(0, 7) <= month && month <= h.end.slice(0, 7));
@@ -165,8 +178,8 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
         <section className="overflow-hidden rounded-3xl bg-linear-to-br from-brand-950 via-brand-800 to-brand-600 p-5 text-white shadow-card">
           <div className="flex flex-wrap items-start gap-4">
             <div className="min-w-[14rem] flex-1">
-              <p className="text-sm text-white/75">{t("eyebrow")}</p>
-              <p className="text-3xl font-bold">{monthLabel(month)}</p>
+              <p className="text-sm text-white/75" lang={docLang ?? undefined}>{D?.monthlyTitle ?? t("eyebrow")}</p>
+              <p className="text-3xl font-bold">{sheetMonth}</p>
               <p className="mt-1 text-white/85">
                 {levelLabel} · <bdi dir="ltr">{cls.displayName}</bdi>
               </p>
@@ -191,17 +204,17 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
             </div>
           </div>
           <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
-            <span className="rounded-full bg-white/15 px-3 py-1">{t("weeksCount", { n: weeks.length })}</span>
+            <span className="rounded-full bg-white/15 px-3 py-1"><bdi>{D?.weeksCount(weeks.length) ?? t("weeksCount", { n: weeks.length })}</bdi></span>
             {exams.map((e) => (
               <span key={e.term} className="inline-flex items-center gap-1 rounded-full bg-rose-200 px-3 py-1 text-rose-950">
                 <ClipboardCheck aria-hidden className="size-3.5" />
-                {t("exams", { term: e.term })}
+                <bdi>{examsLabel(e.term)}</bdi>
               </span>
             ))}
             {holidays.map((h) => (
               <span key={h.start} className="inline-flex items-center gap-1 rounded-full bg-amber-200 px-3 py-1 text-amber-950">
                 <TreePalm aria-hidden className="size-3.5" />
-                {h.label?.[locale] ?? t("holidayName")}
+                <bdi>{holidayName(h)}</bdi>
               </span>
             ))}
           </div>
@@ -227,19 +240,23 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
       </div>
 
       {/* ── الجدول (الشاشة والطباعة) ── */}
-      <div className="text-[9pt] print:text-[7pt] print:leading-tight">
+      <div dir={docLang ? "ltr" : undefined} lang={docLang ?? undefined} className="text-[9pt] print:text-[7pt] print:leading-tight">
         <div className="hidden print:block">
-          <PrintHeader title={t("sheetTitle", { month: monthLabel(month) })} subtitle={`${levelLabel} — ${cls.displayName}`} />
+          {D ? (
+            <PrintHeader title={D.sheetTitle(sheetMonth)} subtitle={cls.displayName} lang={docLang} level={levelLabel} />
+          ) : (
+            <PrintHeader title={t("sheetTitle", { month: monthLabel(month) })} subtitle={`${levelLabel} — ${cls.displayName}`} />
+          )}
         </div>
         {weeks.length === 0 ? (
-          <Card className="py-10 text-center text-muted">{t("noWeeks")}</Card>
+          <Card className="py-10 text-center text-muted">{D?.noWeeks ?? t("noWeeks")}</Card>
         ) : (
           <div className="overflow-x-auto rounded-3xl bg-surface shadow-card ring-1 ring-line print:overflow-visible print:rounded-none print:shadow-none print:ring-0">
             <table className="w-full min-w-max border-separate border-spacing-0 print:min-w-0 print:border-s print:border-t print:border-line">
               <thead>
                 <tr>
                   <th rowSpan={2} scope="col" className="sticky start-0 z-20 w-28 border-e border-b border-line bg-ink px-2 py-2 text-white print:static">
-                    {t("weeks")}
+                    {D?.weeks ?? t("weeks")}
                   </th>
                   {subjects.map((s) => {
                     const tone = toneOf(s);
@@ -275,6 +292,7 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
                     plan={plan}
                     editMode={editMode}
                     subjectLabel={subjectLabel}
+                    labels={{ week: weekLabel, exams: examsLabel, holiday: holidayName, examsShort: D?.examsShort, thisWeek: D?.thisWeek }}
                     onEdit={(e) => {
                       setSaveError(false);
                       setEditing(e);
@@ -290,14 +308,16 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
         <div className="mt-3 flex flex-wrap items-start justify-between gap-3 print:mt-1">
           {(holidays.length > 0 || exams.length > 0) && (
             <div className="break-inside-avoid space-y-0.5">
-              <p className="font-semibold">{t("calendarNote")}</p>
+              <p className="font-semibold">{D?.calendarNote ?? t("calendarNote")}</p>
               {exams.map((e) => (
                 <p key={`e${e.term}`} className="text-rose-800">
-                  • {t("exams", { term: e.term })}: <bdi dir="ltr">{e.days.map(dm).join(" ، ")}</bdi>
+                  • {examsLabel(e.term)}: <bdi dir="ltr">{e.days.map(dm).join(D ? ", " : " ، ")}</bdi>
                 </p>
               ))}
               {holidays.map((h) => (
-                <p key={h.start} className="text-amber-900">• {t("holiday", { name: h.label?.[locale] ?? t("holidayName"), from: dmy(h.start), to: dmy(h.end) })}</p>
+                <p key={h.start} className="text-amber-900">
+                  • {D ? D.holiday(holidayName(h), dmy(h.start), dmy(h.end)) : t("holiday", { name: holidayName(h), from: dmy(h.start), to: dmy(h.end) })}
+                </p>
               ))}
             </div>
           )}
@@ -314,24 +334,35 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
         </div>
         <p className="mt-2 text-xs text-muted print:hidden">{t("source")}</p>
 
+        {/* التوقيعات: الأستاذ في جهة البداية بالعربية، وفي اليمين بالفرنسية والإنجليزية (كالنماذج الرسمية) */}
         <div className="mt-6 hidden break-inside-avoid grid-cols-3 text-center font-semibold print:mt-3 print:grid">
-          <p>{t("signTeacher")}</p>
-          <p>{t("signDirector")}</p>
-          <p>{t("signInspector")}</p>
+          {D ? (
+            <>
+              <p>{D.signInspector}</p>
+              <p>{D.signDirector}</p>
+              <p>{D.signTeacher}</p>
+            </>
+          ) : (
+            <>
+              <p>{t("signTeacher")}</p>
+              <p>{t("signDirector")}</p>
+              <p>{t("signInspector")}</p>
+            </>
+          )}
         </div>
       </div>
 
       {editing && editingEntry && (
         <CellEditor
           key={`${editing.subject}-${editing.n}-${editing.col}`}
-          title={`${subjectLabel(editing.subject)}${editing.col && editing.col !== "all" ? ` — ${t(editing.col)}` : ""}`}
-          subtitle={`${t("schoolWeek", { n: editing.n })}${editingWeek ? ` · ${dm(editingWeek.days[0]!)} – ${dm(editingWeek.days.at(-1)!)}` : ""}`}
+          title={`${(docLangOfSubject(editing.subject) && DOC[docLangOfSubject(editing.subject)!].subject) || subjectLabel(editing.subject)}${editing.col && editing.col !== "all" ? ` — ${t(editing.col)}` : ""}`}
+          subtitle={`${weekLabel(editing.n)}${editingWeek ? ` · ${dm(editingWeek.days[0]!)} – ${dm(editingWeek.days.at(-1)!)}` : ""}`}
           dir={subjectDir(editing.subject)}
           dotClass={toneOf(editing.subject).dot}
           initial={cellItems(editingEntry.rows, editing.n, editing.col)}
           official={cellItems(editingEntry.official, editing.n, editing.col)}
           week={editing.n}
-          weeks={allWeeks.map((w) => ({ n: w.n, label: `${t("schoolWeek", { n: w.n })} · ${dm(w.days[0]!)}` }))}
+          weeks={allWeeks.map((w) => ({ n: w.n, label: `${weekLabel(w.n)} · ${dm(w.days[0]!)}` }))}
           saving={saving}
           error={saveError}
           onSave={(items, target) => void save(editing, items, target)}
@@ -342,17 +373,26 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
   );
 }
 
-function WeekRow({ week: w, current, subjects, plan, editMode, subjectLabel, onEdit }: {
+/** نصوص الجدول بلغة الوثيقة (الفرنسية/الإنجليزية) أو بلغة الواجهة. */
+type RowLabels = {
+  week: (n: number) => string;
+  exams: (term: number) => string;
+  holiday: (h: { label?: { ar: string; fr: string } }) => string;
+  examsShort?: DocLabels["examsShort"];
+  thisWeek?: DocLabels["thisWeek"];
+};
+
+function WeekRow({ week: w, current, subjects, plan, editMode, subjectLabel, labels: L, onEdit }: {
   week: MonthWeek;
   current: boolean;
   subjects: string[];
   plan: Map<string, PlanEntry>;
   editMode: boolean;
   subjectLabel: (s: string) => string;
+  labels: RowLabels;
   onEdit: (e: Editing) => void;
 }) {
   const t = useTranslations("planning.monthlyPlan");
-  const locale = useLocale() as "ar" | "fr";
   const hasContent = subjects.some((s) => plan.get(s)!.rows.some((r) => r.w === w.n));
   const examOnly = w.exams.length > 0 && w.days.every((d) => w.exams.some((e) => e.days.includes(d))) && !hasContent;
   const span = subjects.length + (subjects.includes("ar") ? AR_COLUMNS.length - 1 : 0);
@@ -386,21 +426,21 @@ function WeekRow({ week: w, current, subjects, plan, editMode, subjectLabel, onE
         <span className={cn("mx-auto grid size-9 place-items-center rounded-full text-base font-bold text-white print:size-6 print:text-[9pt]", current ? "bg-brand-700 ring-4 ring-brand-200" : "bg-ink")}>
           {w.index}
         </span>
-        <span className="mt-1 block text-[0.85em] font-semibold">{t("schoolWeek", { n: w.n })}</span>
+        <span className="mt-1 block text-[0.85em] font-semibold">{L.week(w.n)}</span>
         <bdi dir="ltr" className="block text-[0.85em] text-muted">
           {dm(w.days[0]!)} – {dm(w.days.at(-1)!)}
         </bdi>
-        {current && <span className="mt-1 inline-block rounded-full bg-brand-700 px-2 py-0.5 text-[0.8em] font-semibold text-white print:hidden">{t("thisWeek")}</span>}
+        {current && <span className="mt-1 inline-block rounded-full bg-brand-700 px-2 py-0.5 text-[0.8em] font-semibold text-white print:hidden">{L.thisWeek ?? t("thisWeek")}</span>}
         {w.exams.map((e) => (
           <span key={e.term} className="mt-1 flex items-center justify-center gap-1 rounded-md bg-rose-100 px-1 py-0.5 text-[0.8em] font-semibold text-rose-900">
             <ClipboardCheck aria-hidden className="size-3 shrink-0" />
-            {t("examsShort")}
+            {L.examsShort ?? t("examsShort")}
           </span>
         ))}
         {w.holidays.map((h) => (
           <span key={h.start} className="mt-1 flex items-center justify-center gap-1 rounded-md bg-amber-100 px-1 py-0.5 text-[0.8em] font-semibold text-amber-900">
             <TreePalm aria-hidden className="size-3 shrink-0" />
-            {h.label?.[locale] ?? t("holidayName")}
+            {L.holiday(h)}
           </span>
         ))}
       </th>
@@ -408,7 +448,7 @@ function WeekRow({ week: w, current, subjects, plan, editMode, subjectLabel, onE
         <td colSpan={span} className={cn(border, "bg-linear-to-br from-rose-100 to-rose-50 text-center align-middle")}>
           <span className="inline-flex items-center gap-2 text-lg font-bold text-rose-900 print:text-[10pt]">
             <ClipboardCheck aria-hidden className="size-6 print:size-4" />
-            {t("exams", { term: w.exams[0]!.term })}
+            {L.exams(w.exams[0]!.term)}
           </span>
         </td>
       ) : (

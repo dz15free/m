@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils/cn";
 import { useBilling } from "@/features/billing/repo";
 import { useTaxonomy } from "@/features/classes/hooks";
 import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
+import { DOC, docLangOfSubject } from "@/i18n/doc-lang";
 import { groupCurriculum } from "./logic";
 import { useCurriculum, useLessonAccessFor, useMyCurricula } from "./repo";
 
@@ -25,8 +26,12 @@ export function LessonsBrowser({ level }: { level?: string } = {}) {
   const available = mine.list.filter((c) => c.available);
   // من صفحة القسم: نبدأ بأول مادة متاحة لمستواه
   const current = picked ?? available.find((c) => c.level === level)?.id ?? available[0]?.id ?? null;
-  const label = (c: { level: string; subject: string }) =>
-    `${subjectById(tax.data!, c.subject)?.label[locale] ?? c.subject} · ${levelById(tax.data!, c.level)?.short[locale] ?? c.level}`;
+  const label = (c: { level: string; subject: string }) => {
+    // الفرنسية والإنجليزية باسمهما في لغتهما: « Langue française · 4AP »
+    const lang = docLangOfSubject(c.subject);
+    if (lang) return `${DOC[lang].subject} · ${c.level}`;
+    return `${subjectById(tax.data!, c.subject)?.label[locale] ?? c.subject} · ${levelById(tax.data!, c.level)?.short[locale] ?? c.level}`;
+  };
 
   return (
     <div className="space-y-5">
@@ -45,7 +50,7 @@ export function LessonsBrowser({ level }: { level?: string } = {}) {
               !c.available && "cursor-default opacity-60",
             )}
           >
-            {label(c)}
+            <bdi>{label(c)}</bdi>
             {!c.available && <span className="rounded-full bg-amber-100 px-1.5 text-[11px] text-amber-900">{t("soon")}</span>}
           </button>
         ))}
@@ -69,6 +74,9 @@ function CurriculumView({ id }: { id: string }) {
   if (!cur.data) return <Spinner />;
   const groups = groupCurriculum(cur.data);
   const openSeg = open ?? groups[0]?.n;
+  // مذكرات الفرنسية والإنجليزية: المقاطع والأسابيع والحصص بلغة المادة
+  const lang = docLangOfSubject(cur.data.subject);
+  const D = lang ? DOC[lang] : null;
   return (
     <div className="space-y-3">
       {access === "trial" && (
@@ -78,7 +86,7 @@ function CurriculumView({ id }: { id: string }) {
         </p>
       )}
       {groups.map((g) => (
-        <section key={g.n} className="overflow-hidden rounded-card bg-surface shadow-card">
+        <section key={g.n} dir={lang ? "ltr" : undefined} lang={lang ?? undefined} className="overflow-hidden rounded-card bg-surface shadow-card">
           <button
             type="button"
             aria-expanded={openSeg === g.n}
@@ -88,7 +96,7 @@ function CurriculumView({ id }: { id: string }) {
             <span className="grid size-9 shrink-0 place-items-center rounded-full bg-brand-50 font-bold tabular-nums text-brand-800">{g.n}</span>
             <span className="min-w-0 flex-1">
               <span className="block font-semibold">{g.title}</span>
-              <span className="text-xs text-muted">{t("sessions", { n: g.units.reduce((a, u) => a + u.entries.length, 0) })}</span>
+              <span className="text-xs text-muted">{D?.sessionsCount(g.units.reduce((a, u) => a + u.entries.length, 0)) ?? t("sessions", { n: g.units.reduce((a, u) => a + u.entries.length, 0) })}</span>
             </span>
             <ChevronDown aria-hidden className={cn("size-5 text-muted transition-transform", openSeg === g.n && "rotate-180")} />
           </button>
@@ -96,7 +104,7 @@ function CurriculumView({ id }: { id: string }) {
             <div className="space-y-4 border-t border-line px-4 py-3">
               {g.units.map((u) => (
                 <div key={u.key}>
-                  <h3 className="mb-1 text-sm font-semibold text-brand-800">{u.kind === "day" ? t("day", { n: u.n }) : t("week", { n: u.n })}</h3>
+                  <h3 className="mb-1 text-sm font-semibold text-brand-800">{u.kind === "day" ? (D?.day(u.n) ?? t("day", { n: u.n })) : (D?.week(u.n) ?? t("week", { n: u.n }))}</h3>
                   <ul className="divide-y divide-line">
                     {u.entries.map((e) => (
                       <li key={e.id}>
