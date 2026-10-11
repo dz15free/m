@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { ArrowRight, LoaderCircle, Printer } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { PrintHeader } from "@/features/logbook/print-header";
+import { PrintReady } from "@/components/ui/print-ready";
 import { DOC, docLangOfSubject, docMonth } from "@/i18n/doc-lang";
 import { monthName } from "@/i18n/dates";
 import { cn } from "@/lib/utils/cn";
@@ -18,7 +18,7 @@ type Mode = "annual" | "monthly";
 const dm = (iso: string) => `${iso.slice(8, 10)}/${iso.slice(5, 7)}`;
 const addDays = (iso: string, n: number) => new Date(Date.parse(`${iso}T00:00:00Z`) + n * 86_400_000).toISOString().slice(0, 10);
 
-/* صفحة طباعة التوزيع السنوي أو الشهري: الوثيقة نفسها على الشاشة (معاينة A4) ثم نافذة الطباعة.
+/* صفحة طباعة التوزيع السنوي أو الشهري: الوثيقة نفسها على الشاشة (معاينة A4)، وشريط «طباعة أو حفظ PDF» (PrintReady).
    صفحة مستقلة لأن طباعة جزء مخفي من صفحة كبيرة كانت تتأخر أو لا تظهر على iPhone؛ هنا تُرى الوثيقة دائمًا،
    ويمكن طباعتها من زر «طباعة» أو من قائمة المشاركة في Safari. الألوان تُطبع كما هي. */
 export function ProgressionPrint({ classId, subjectId, mode }: { classId: string; subjectId: string; mode: Mode }) {
@@ -26,19 +26,6 @@ export function ProgressionPrint({ classId, subjectId, mode }: { classId: string
   const tm = useTranslations("planning.monthlyPlan");
   const locale = useLocale() as "ar" | "fr";
   const m = useProgressionModel(classId, subjectId);
-  const printed = useRef(false);
-
-  const ready = !!m;
-  useEffect(() => {
-    if (!ready || printed.current) return;
-    // بعد رسم الوثيقة؛ إن منع المتصفح الطباعة التلقائية يبقى زر «طباعة»
-    const id = window.setTimeout(() => {
-      printed.current = true;
-      window.print();
-    }, 700);
-    return () => window.clearTimeout(id);
-  }, [ready]);
-
   if (!m) {
     return (
       <div role="status" className="grid place-items-center py-16">
@@ -104,6 +91,8 @@ export function ProgressionPrint({ classId, subjectId, mode }: { classId: string
           {t("print")}
         </button>
       </div>
+
+      <PrintReady ready />
 
       {/* الورقة: معاينة A4 على الشاشة، وهي نفسها ما يُطبع */}
       <article
