@@ -118,6 +118,149 @@
     321
    ],
    "segmentTitle": "المقطع 6: الحياة الثقافية"
+  },
+  {
+   "order": 6,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 4,
+   "session": "تربية تشكيلية",
+   "domain": "الرسم والتلوين",
+   "topic": "الأشكال المتداخلة",
+   "materials": "أوراق، مقص، غراء، ألوان، خامات متنوعة",
+   "objectives": [
+    "يعرف أنواع التراكيب في الأشكال المتداخلة وينجز أعمالًا فنية باستعمال التداخل."
+   ],
+   "pages": [
+    "c:1"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 7,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 2,
+   "unit": 6,
+   "session": "تربية تشكيلية",
+   "domain": "الرسم والتلوين",
+   "topic": "الأشكال المتداخلة (2)",
+   "materials": "أوراق، مقص، غراء، ألوان، خامات متنوعة",
+   "objectives": [
+    "ينجز أعمالًا فنية باستعمال الأشكال المتداخلة."
+   ],
+   "pages": [
+    "c:2"
+   ],
+   "segmentTitle": "المقطع 2: الحياة الاجتماعية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 8,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 2,
+   "unit": 8,
+   "session": "تربية تشكيلية",
+   "domain": "الرسم والتلوين",
+   "topic": "تقنية الألوان الترابية",
+   "materials": "أوراق، مقص، غراء، ألوان، خامات متنوعة",
+   "objectives": [
+    "يتعرف على تقنيات الألوان الترابية ويوظفها، ويتذوق جمال الأعمال الفنية."
+   ],
+   "pages": [
+    "c:3"
+   ],
+   "segmentTitle": "المقطع 2: الحياة الاجتماعية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 9,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 3,
+   "unit": 10,
+   "session": "تربية تشكيلية",
+   "domain": "الرسم والتلوين",
+   "topic": "الألوان الترابية: تقنية التنقيط",
+   "materials": "أوراق، مقص، غراء، ألوان، خامات متنوعة",
+   "objectives": [
+    "يوظف تقنية التنقيط بالألوان الترابية."
+   ],
+   "pages": [
+    "c:4"
+   ],
+   "segmentTitle": "المقطع 3: الهوية الوطنية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 10,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 4,
+   "unit": 13,
+   "session": "تربية تشكيلية",
+   "domain": "الرسم والتلوين",
+   "topic": "الألوان الترابية: تقنية اللطخ",
+   "materials": "أوراق، مقص، غراء، ألوان، خامات متنوعة",
+   "objectives": [
+    "يوظف تقنية اللطخ بالألوان الترابية."
+   ],
+   "pages": [
+    "c:5"
+   ],
+   "segmentTitle": "المقطع 4: البيئة",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 11,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 5,
+   "unit": 16,
+   "session": "تربية تشكيلية",
+   "domain": "فن الخامات والتصميم",
+   "topic": "تصميم مجسمات فنية",
+   "materials": "أوراق، مقص، غراء، ألوان، خامات متنوعة",
+   "objectives": [
+    "ينجز عملًا فنيًا تشكيليًا باستخدام الخامات والمواد المسترجعة من البيئة."
+   ],
+   "pages": [
+    "c:6"
+   ],
+   "segmentTitle": "المقطع 5: الصحة والرياضة",
+   "added": "drive-2026-10"
   }
- ]
+ ],
+ "sources": {
+  "main": {
+   "pdf": [
+    "17V3WR7qHTQlmVVj5c4Ga-sSQerxNQ8Vj"
+   ]
+  },
+  "c": {
+   "images": [
+    "1T_MsSE8WLrtmv9vZBJORJAB-3GEK6ySx",
+    "17VZdoFTes6GzzvDGHGJH1z_Six6umllE",
+    "1rtxaP_QZWMvrMlctSSaTUv3P8RiPoGO0",
+    "1rA9J_S5SXW1RnI5pWeh_1caCiT3WEW9n",
+    "1e1O0mvWSkj9rvMMF9rXllKUpY-dY8lzz",
+    "10idbwLFCYPyoLDsjgpUWFOAda9VirnrD"
+   ]
+  }
+ }
 }

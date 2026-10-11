@@ -403,6 +403,114 @@
     373
    ],
    "segmentTitle": "المقطع 7: الإبداع والابتكار"
+  },
+  {
+   "order": 20,
+   "unitKind": "week",
+   "activity": "تربية علمية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 2,
+   "session": "تربية علمية",
+   "domain": "الإنسان والصحة",
+   "topic": "مسلك الهواء في الجهاز التنفسي",
+   "materials": "كتاب التلميذ، وسائل التجربة، صور وسندات",
+   "objectives": [
+    "يحدد الأعضاء المتدخلة في عملية التنفس ويصف مسار الهواء في الجهاز التنفسي."
+   ],
+   "pages": [
+    "b:1",
+    "b:2",
+    "b:3"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 21,
+   "unitKind": "week",
+   "activity": "تربية علمية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 3,
+   "session": "تربية علمية",
+   "domain": "الإنسان والصحة",
+   "topic": "التنفس وتغير تركيب الهواء",
+   "materials": "كتاب التلميذ، وسائل التجربة، صور وسندات",
+   "objectives": [
+    "يربط بين عملية التنفس وتغير تركيب الهواء، ويقارن بين هواء الشهيق وهواء الزفير."
+   ],
+   "pages": [
+    "b:4",
+    "b:5",
+    "b:6"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 22,
+   "unitKind": "week",
+   "activity": "تربية علمية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 4,
+   "session": "تربية علمية",
+   "domain": "الإنسان والصحة",
+   "topic": "القواعد الصحية للتنفس",
+   "materials": "كتاب التلميذ، وسائل التجربة، صور وسندات",
+   "objectives": [
+    "يذكر قواعد للمحافظة على صحة التنفس ويسمي أعراضًا ناتجة عن عدم الالتزام بها."
+   ],
+   "pages": [
+    "b:7",
+    "b:8",
+    "b:9",
+    "b:10"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 23,
+   "unitKind": "week",
+   "activity": "تربية علمية",
+   "body": "",
+   "sample": false,
+   "segment": 1,
+   "unit": 5,
+   "session": "تربية علمية",
+   "domain": "الإنسان والصحة",
+   "topic": "الهضم",
+   "materials": "كتاب التلميذ، وسائل التجربة، صور وسندات",
+   "objectives": [
+    "يسمي أقسام الأنبوب الهضمي ويتابع مسار اللقمة الغذائية فيه اعتمادًا على رسم."
+   ],
+   "pages": [
+    "b:11",
+    "b:12",
+    "b:13"
+   ],
+   "segmentTitle": "المقطع 1: القيم الإنسانية",
+   "added": "drive-2026-10"
   }
- ]
+ ],
+ "sources": {
+  "main": {
+   "pdf": [
+    "17V3WR7qHTQlmVVj5c4Ga-sSQerxNQ8Vj"
+   ]
+  },
+  "b": {
+   "pdf": [
+    "1waC3C8p7UcJJYc_nHT7Ndng4V5fWP8et",
+    "1t2uNt5ebELKkwN6xhTbjfwZTjntp7ZYr",
+    "1kiC7zx6bzrCv7b_9HL59Yb3CuI-sbVo7",
+    "1kMDcLwPul7Z_FMDMakJpyXc9WUKjjZ7H"
+   ]
+  }
+ }
 }

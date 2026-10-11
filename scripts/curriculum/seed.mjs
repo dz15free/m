@@ -8,19 +8,23 @@
  *   GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node scripts/curriculum/seed.mjs 1AP_ar
  *
  * --pdf=<الوثيقة الأصلية>: صفحات الحصص التي لا نص سليمًا لها تُنشر صورًا (lessonBodies/<id>_pgNN)
- * بنفس حماية السير المكتوب — تتطلب pdftoppm.
+ * بنفس حماية السير المكتوب — تتطلب pdftoppm. إن أعلن ملف المنهاج «sources» (معرّفات Drive)
+ * فلا حاجة لتمرير الملفات: تُحمَّل تلقائيًا من مجلد المكتبة (scripts/lib/drive-sources.mjs).
  */
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import sharp from "sharp";
 import { putDoc } from "../lib/firestore.mjs";
+import { resolveDocs } from "../lib/drive-sources.mjs";
 
 const id = process.argv[2];
 const pdf = process.argv.find((a) => a.startsWith("--pdf="))?.slice(6) ?? null;
 /** وثائق إضافية: --pdf-b=<ملف> تقابل صفحات «b:N» في البيانات */
 const extraPdf = Object.fromEntries(process.argv.filter((a) => /^--pdf-[a-z]=/.test(a)).map((a) => [a[6], a.slice(8)]));
-const pdfOf = (key) => (key === "main" ? pdf : extraPdf[key]);
+let docs = {};
+const docOf = (key) => docs[key];
 /** صفحة: رقم في الوثيقة الأصلية، أو «b:N» في وثيقة إضافية */
 const parsePage = (p) => (typeof p === "number" ? { key: "main", n: p } : { key: p.split(":")[0], n: Number(p.split(":")[1]) });
 if (!/^(?:PRE|[1-5]AP)_[a-z]+$/.test(id ?? "")) {
@@ -61,11 +65,13 @@ function pickSamples(lessons) {
   return picked;
 }
 
-if (!pdf && data.lessons.some((l) => (Array.isArray(l.pages) && l.pages.length) || l.bodyQuality === "garbled")) {
+docs = await resolveDocs(data.sources, { main: pdf, ...extraPdf });
+const hasDocs = Object.keys(docs).length > 0;
+if (!hasDocs && data.lessons.some((l) => (Array.isArray(l.pages) && l.pages.length) || l.bodyQuality === "garbled")) {
   console.error("هذه المذكرات تحتاج صور صفحات: مرّر --pdf=<الوثيقة الأصلية>");
   process.exit(1);
 }
-const pageMap = pdf ? pagesOf(data.lessons) : new Map();
+const pageMap = hasDocs ? pagesOf(data.lessons) : new Map();
 const pageId = (p) => {
   const { key, n } = parsePage(p);
   return `${id}_${key === "main" ? "pg" : key}${String(n).padStart(3, "0")}`;
@@ -101,18 +107,26 @@ console.log(`✓ curriculum/${id} (${data.lessons.length} حصة، ${samples.siz
 
 // صور الصفحات: الصفحة نموذج للتجربة إن كانت تخص حصة نموذجية
 const blank = new Set();
-if (pdf) {
+if (hasDocs) {
   const pageSample = new Map();
   for (const l of data.lessons) for (const p of pageMap.get(l.order) ?? []) pageSample.set(p, (pageSample.get(p) ?? false) || samples.has(l.order));
   const dir = mkdtempSync(join(tmpdir(), "pages-"));
   let k = 0;
   for (const [page, sample] of [...pageSample].sort((a, b) => String(a[0]).localeCompare(String(b[0]), "en", { numeric: true }))) {
     const { key, n: pn } = parsePage(page);
-    const file = pdfOf(key);
-    if (!file) throw new Error(`مرّر --pdf-${key}=<الملف> لصفحة ${page}`);
+    const doc = docOf(key);
+    if (!doc) throw new Error(`مرّر --pdf-${key}=<الملف> لصفحة ${page}`);
     const base = join(dir, `p${key}${pn}`);
-    execFileSync("pdftoppm", ["-f", String(pn), "-l", String(pn), "-r", "110", "-jpeg", "-jpegopt", "quality=60", "-singlefile", file, base]);
-    const bytes = readFileSync(`${base}.jpg`);
+    let bytes;
+    if (doc.kind === "images") {
+      // وثيقة صور (مذكرة مصوّرة لكل حصة): الصفحة N هي الصورة N، بنفس عرض صفحات PDF تقريبًا وجودتها
+      const src = doc.files[pn - 1];
+      if (!src) throw new Error(`no image ${page}`);
+      bytes = await sharp(src).rotate().resize({ width: 1000, withoutEnlargement: true }).jpeg({ quality: 60 }).toBuffer();
+    } else {
+      execFileSync("pdftoppm", ["-f", String(pn), "-l", String(pn), "-r", "110", "-jpeg", "-jpegopt", "quality=60", "-singlefile", doc.file, base]);
+      bytes = readFileSync(`${base}.jpg`);
+    }
     // صفحة بيضاء (فاصل في الوثيقة): لا تُنشر وتُحذف من قوائم الحصص
     if (bytes.length < 12_000) {
       blank.add(page);

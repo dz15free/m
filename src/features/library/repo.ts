@@ -119,7 +119,7 @@ async function importRequest(driveId: string, init: RequestInit): Promise<{ ok: 
 }
 
 /** تحميل من Drive في المتصفح، مع إعادة المحاولة (Google يحدّ التحميلات المتتالية). */
-async function browserDownload(driveId: string): Promise<Blob> {
+export async function browserDownload(driveId: string): Promise<Blob> {
   let last = "";
   for (const wait of [0, 5_000, 20_000]) {
     if (wait) await sleep(wait);
