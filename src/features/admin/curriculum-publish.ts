@@ -63,14 +63,15 @@ export async function publishedRev(id: string): Promise<string | null> {
   return snap?.exists() ? ((snap.data().rev as string | undefined) ?? "") : null;
 }
 
-/** ملف من مجلد المكتبة: من Drive مباشرة، وإلا عبر الخادم (مفتاح Drive API). */
+/** ملف من مجلد المكتبة عبر الخادم (Drive لا يسمح للمتصفح بتحميل ملفاته مباشرة: CORS)، وإلا مباشرة. */
 async function driveBlob(id: string): Promise<Blob> {
+  const res = await authedFetch(`/api/admin/drive-file?id=${encodeURIComponent(id)}`);
+  if (res.ok) return res.blob();
+  const reason = ((await res.json().catch(() => ({}))) as { error?: string }).error ?? "";
   try {
     return await browserDownload(id);
-  } catch (first) {
-    const res = await authedFetch(`/api/admin/drive-file?id=${encodeURIComponent(id)}`);
-    if (!res.ok) throw new Error(`${first instanceof Error ? first.message : first} / server ${res.status}`);
-    return res.blob();
+  } catch {
+    throw new Error(`Drive ${id}: ${res.status} ${reason}`.trim());
   }
 }
 

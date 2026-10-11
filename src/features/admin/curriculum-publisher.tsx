@@ -9,29 +9,19 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils/cn";
 import { contentRev, publishCurriculum, publishedRev, type CurriculumFile, type Progress } from "./curriculum-publish";
 
-/* المناهج التي تغيّرت في المستودع ولها مصادر Drive (scripts/curriculum/add-drive-memos.mjs).
-   تُحمَّل عند فتح الصفحة فقط. لإضافة منهاج: سطر هنا بنفس الشكل. */
-const FILES: Record<string, () => Promise<{ default: unknown }>> = {
-  "4AP_math": () => import("../../../content/curriculum/4AP_math.json"),
-  "4AP_islamic": () => import("../../../content/curriculum/4AP_islamic.json"),
-  "4AP_science": () => import("../../../content/curriculum/4AP_science.json"),
-  "4AP_history": () => import("../../../content/curriculum/4AP_history.json"),
-  "4AP_geography": () => import("../../../content/curriculum/4AP_geography.json"),
-  "4AP_art": () => import("../../../content/curriculum/4AP_art.json"),
-  "4AP_music": () => import("../../../content/curriculum/4AP_music.json"),
-  "4AP_ar": () => import("../../../content/curriculum/4AP_ar.json"),
-  "5AP_history": () => import("../../../content/curriculum/5AP_history.json"),
-};
-
 type Row = { file: CurriculumFile; rev: string; published: string | null; added: number };
 type RunState = { id: string; progress?: Progress } | null;
 
 async function loadRows(): Promise<Row[]> {
+  // المناهج تُحمَّل مع هذه الصفحة فقط
+  const { CURRICULA } = await import("./curriculum-catalog");
   return Promise.all(
-    Object.entries(FILES).map(async ([id, load]) => {
-      const file = { id, ...((await load()).default as Omit<CurriculumFile, "id">) } as CurriculumFile;
-      return { file, rev: contentRev(file), published: await publishedRev(id), added: file.lessons.filter((l) => (l as { added?: string }).added).length };
-    }),
+    CURRICULA.map(async (file) => ({
+      file,
+      rev: contentRev(file),
+      published: await publishedRev(file.id),
+      added: file.lessons.filter((l) => (l as { added?: string }).added).length,
+    })),
   );
 }
 

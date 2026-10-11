@@ -91,3 +91,12 @@ export async function fetchDriveMedia(id: string): Promise<Response> {
   }
   return res;
 }
+
+/** ملف عام من Drive دون مفتاح (رابط التنزيل المباشر) — لملفات معروفة مسبقًا فقط. */
+export async function fetchPublicDriveFile(id: string): Promise<Response> {
+  const res = await fetch(`https://drive.usercontent.google.com/download?id=${encodeURIComponent(id)}&export=download&confirm=t`);
+  if (!res.ok || !res.body || (res.headers.get("content-type") ?? "").startsWith("text/html")) {
+    throw new HttpError(502, `drive download ${res.status}`);
+  }
+  return res;
+}
