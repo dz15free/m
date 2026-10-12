@@ -3,6 +3,8 @@
  * الأشكال تُقتطع من ملفات المصدر المحلية (pdftoppm)؛ في المنصة يقتطعها النشر من Drive.
  *
  *   node scripts/curriculum/memo-preview.mjs <curriculumId> <out.pdf> --src <dir of source PDFs named by Drive id> [--only b:12,b:30] [--png <prefix>]
+ *   مصدر من الويب («w»): --files <a.pdf,b.pdf> (الملفات المحلية بترتيبها) بدل --src
+ *   جزء قيد الإعداد: --part <k> يقرأ scripts/curriculum/middle/parts/<id>.<k>.json وcontent/memos/parts/<id>.<k>.json
  */
 import { execFileSync } from "node:child_process";
 import { mkdirSync, mkdtempSync, readFileSync, writeFileSync, existsSync } from "node:fs";
@@ -17,15 +19,32 @@ if (!id || !out) throw new Error("usage: memo-preview.mjs <curriculumId> <out.pd
 const srcDir = opt("--src");
 const only = opt("--only")?.split(",");
 
-const cur = JSON.parse(readFileSync(new URL(`content/curriculum/${id}.json`, ROOT), "utf8"));
-const memos = JSON.parse(readFileSync(new URL(`content/memos/${id}.json`, ROOT), "utf8"));
+const part = opt("--part");
+const pageCount = (f) => Number(execFileSync("pdfinfo", [f]).toString().match(/Pages:\s+(\d+)/)[1]);
+let cur, memos;
+if (part) {
+  // منهاج مؤقت من جزء المواصفة: صفحات «w» بإزاحات الملفات
+  const spec = JSON.parse(readFileSync(new URL(`scripts/curriculum/middle/parts/${id}.${part}.json`, ROOT), "utf8"));
+  const offs = [];
+  let acc = 0;
+  for (const f of opt("--files").split(",")) {
+    offs.push(acc);
+    acc += pageCount(f);
+  }
+  const [level, subject] = id.split("_");
+  cur = { level, subject, lessons: spec.lessons.map((l, i) => ({ ...l, unit: i + 1, pages: l.pages.map((p) => `w:${offs[l.file ?? 0] + p}`) })) };
+  memos = JSON.parse(readFileSync(new URL(`content/memos/parts/${id}.${part}.json`, ROOT), "utf8"));
+} else {
+  cur = JSON.parse(readFileSync(new URL(`content/curriculum/${id}.json`, ROOT), "utf8"));
+  memos = JSON.parse(readFileSync(new URL(`content/memos/${id}.json`, ROOT), "utf8"));
+}
 // داخل المستودع ليجد react من node_modules (الحزمة تتركه خارجها)
 mkdirSync(new URL("node_modules/.cache/", ROOT), { recursive: true });
 const work = mkdtempSync(new URL("node_modules/.cache/memo-", ROOT).pathname);
 
-// إزاحات الصفحات في المصدر «b» (ملفاته موصولة بترتيبها)
-const files = (cur.sources?.b?.pdf ?? []).map((f) => join(srcDir ?? ".", f));
-const counts = files.map((f) => (existsSync(f) ? Number(execFileSync("pdfinfo", [f]).toString().match(/Pages:\s+(\d+)/)[1]) : 0));
+// إزاحات الصفحات في المصدر (ملفاته موصولة بترتيبها)
+const files = opt("--files")?.split(",") ?? (cur.sources?.b?.pdf ?? []).map((f) => join(srcDir ?? ".", f));
+const counts = files.map((f) => (existsSync(f) ? pageCount(f) : 0));
 function locate(ref) {
   let n = Number(ref.split(":")[1]);
   for (let i = 0; i < files.length; i++) {

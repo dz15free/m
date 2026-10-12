@@ -30,7 +30,8 @@ type Lesson = {
   /** نموذج مجاني للتجربة (يُعتمد عند أول نشر فقط) */
   sample?: boolean;
 };
-type SourceSpec = { pdf?: string[]; images?: string[] };
+/** pdf/images: ملفات Drive. web: روابط مصدر مذكرات مُنسّقة مضمّنة (للتوثيق؛ لا يُحمَّل). */
+type SourceSpec = { pdf?: string[]; images?: string[]; web?: string[] };
 export type CurriculumFile = {
   id: string;
   level: string;
@@ -114,6 +115,7 @@ async function cropJpeg(page: HTMLCanvasElement, [x, y, w, h]: [number, number, 
 
 /** وثيقة مصدر: صفحاتها مرقّمة تباعًا عبر ملفاتها (كما يدمجها pdfunite في seed.mjs). */
 async function openSource(spec: SourceSpec): Promise<Renderer> {
+  if (spec.web) throw new Error("web source: every lesson needs its re-typeset memo (content/memos)");
   if (spec.images) {
     const ids = spec.images;
     return async (n) => {
@@ -212,7 +214,9 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
   for (const [i, l] of withMemo.entries()) {
     const memo = memoOf(l)!;
     const imgs = memoFigures(memo).map((f) => figures.get(figKey(f.ref, f.box)) ?? "");
-    await setDoc(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample: sampleOf(l), body: "", memo: withImages(memo, imgs), quality: "memo", source: c.source, updatedAt: now });
+    // أشكال مقتطعة الآن من Drive، أو مضمّنة في الملف من قبل (مصادر الويب)
+    const published = imgs.length ? withImages(memo, imgs) : memo;
+    await setDoc(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample: sampleOf(l), body: "", memo: published, quality: "memo", source: c.source, updatedAt: now });
     onProgress({ step: "memos", done: i + 1, total: withMemo.length });
   }
 

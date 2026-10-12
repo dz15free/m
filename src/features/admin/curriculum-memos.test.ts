@@ -23,7 +23,7 @@ for (const f of files) {
   const id = f.slice(0, -5);
   test(`memos of ${id} belong to its lessons and are well-formed`, () => {
     assert.ok(catalog.includes(`content/curriculum/${id}.json"`), `${id} is not in curriculum-catalog.ts`);
-    const cur = JSON.parse(readFileSync(new URL(`../../../content/curriculum/${id}.json`, import.meta.url), "utf8")) as { lessons: { pages?: (string | number)[] }[] };
+    const cur = JSON.parse(readFileSync(new URL(`../../../content/curriculum/${id}.json`, import.meta.url), "utf8")) as { lessons: { pages?: (string | number)[] }[]; sources?: Record<string, { web?: string[] }> };
     const memos = JSON.parse(readFileSync(new URL(f, DIR), "utf8")) as Record<string, Memo>;
     for (const [key, memo] of Object.entries(memos)) {
       const lesson = cur.lessons.find((l) => String(l.pages?.[0]) === key);
@@ -35,7 +35,14 @@ for (const f of files) {
         const [x, y, w, h] = fig.box;
         assert.ok(x >= 0 && y >= 0 && w > 0 && h > 0 && x + w <= 1.001 && y + h <= 1.001, `${id} ${key}: figure box`);
       }
-      assert.ok(!memo.imgs, `${id} ${key}: imgs are filled at publish time only`);
+      // أشكال مصادر Drive تُقتطع عند النشر؛ أشكال مصادر الويب مضمّنة من قبل (memo-embed.mjs)
+      const web = !!cur.sources?.[key.split(":")[0]!]?.web;
+      if (web) assert.equal(memoFigures(memo).length, 0, `${id} ${key}: run memo-embed.mjs (web source)`);
+      else assert.ok(!memo.imgs, `${id} ${key}: imgs are filled at publish time only`);
+      const refs = [...JSON.stringify(memo).matchAll(/\[\[img (\d+)\]\]/g)].map((m) => Number(m[1]));
+      for (const n of refs) assert.ok(n < (memo.imgs?.length ?? 0), `${id} ${key}: missing image ${n}`);
+      // وثيقة Firestore واحدة (الحد 1MiB)
+      assert.ok(JSON.stringify(memo).length < 900_000, `${id} ${key}: memo too large`);
     }
   });
 }
