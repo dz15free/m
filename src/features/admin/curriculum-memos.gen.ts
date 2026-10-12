@@ -4,6 +4,7 @@ import type { Memo } from "@/features/lessons/memo";
 type Entry = { rev: string; count: number; load: () => Promise<{ default: unknown }> };
 
 export const MEMO_FILES: Record<string, Entry> = {
+  "4AM_civic": { rev: "67afd75f", count: 20, load: () => import("../../../content/memos/4AM_civic.json") },
   "4AM_math": { rev: "e790c1ab", count: 1, load: () => import("../../../content/memos/4AM_math.json") },
 };
 

@@ -7,9 +7,9 @@ import s from "./memo-sheet.module.css";
 export type MemoLang = "ar" | "fr" | "en";
 
 const L = {
-  ar: { teacher: "الأستاذ(ة)", school: "المؤسسة", class: "القسم", date: "التاريخ", by: (a: string) => `إعداد: ${a} · تنسيق: مساعد الأستاذ`, own: "مذكرة من إعداد المنصة", brand: "مساعد الأستاذ" },
-  fr: { teacher: "Enseignant(e)", school: "Établissement", class: "Classe", date: "Date", by: (a: string) => `Fiche : ${a} · Mise en forme : Prof Assistant`, own: "Fiche préparée par la plateforme", brand: "مساعد الأستاذ" },
-  en: { teacher: "Teacher", school: "School", class: "Class", date: "Date", by: (a: string) => `Lesson plan: ${a} · Layout: Prof Assistant`, own: "Lesson plan by the platform", brand: "مساعد الأستاذ" },
+  ar: { teacher: "الأستاذ(ة)", school: "المؤسسة", class: "القسم", date: "التاريخ", by: (a: string) => `إعداد: ${a} · تنسيق: مساعد الأستاذ`, own: "مذكرة من إعداد المنصة", shared: "مذكرة أستاذ منشورة للعموم · تنسيق: مساعد الأستاذ", brand: "مساعد الأستاذ" },
+  fr: { teacher: "Enseignant(e)", school: "Établissement", class: "Classe", date: "Date", by: (a: string) => `Fiche : ${a} · Mise en forme : مساعد الأستاذ`, own: "Fiche préparée par la plateforme", shared: "Fiche d'enseignant partagée · Mise en forme : مساعد الأستاذ", brand: "مساعد الأستاذ" },
+  en: { teacher: "Teacher", school: "School", class: "Class", date: "Date", by: (a: string) => `Lesson plan: ${a} · Layout: مساعد الأستاذ`, own: "Lesson plan by the platform", shared: "Teacher's shared lesson plan · Layout: مساعد الأستاذ", brand: "مساعد الأستاذ" },
 } as const;
 
 type Props = {
@@ -119,7 +119,7 @@ export function MemoSheet({ memo, lang, title, tag, meta, teacher, figSrc, asset
           {t.brand}
         </span>
         <span>{tag}</span>
-        <span>{memo.author ? t.by(memo.author) : t.own}</span>
+        <span>{memo.author ? t.by(memo.author) : memo.own ? t.own : t.shared}</span>
       </footer>
     </div>
   );
