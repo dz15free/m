@@ -34,6 +34,13 @@ const SUBJECTS = {
   music: ["التربية الموسيقية", "تربية موسيقية", "آلات موسيقية، تسجيلات صوتية"],
   art: ["التربية التشكيلية", "تربية تشكيلية", "أدوات الرسم والتلوين"],
 };
+/** الحجم الساعي الأسبوعي (القرار رقم 16 المؤرخ في 27 جويلية 2026، دون حصص الأفواج): لتوزيع ملفات لا تغطي البرنامج كله. */
+const HOURS = {
+  "1AM": { ar: 5.5, fr: 2.5, en: 3.5, math: 4.5, science: 2, physics: 2, histgeo: 2, islamic: 1, civic: 1, music: 1, art: 1, informatics: 1 },
+  "2AM": { ar: 5.5, fr: 2.5, en: 3.5, math: 4.5, science: 2, physics: 2, histgeo: 2, islamic: 1, civic: 1, music: 1, art: 1, informatics: 1 },
+  "3AM": { ar: 4.5, fr: 2.5, en: 3.5, math: 4.5, science: 2, physics: 2, histgeo: 2, islamic: 1, civic: 1, music: 1, art: 1, informatics: 1 },
+  "4AM": { ar: 5, fr: 2.5, en: 3.5, math: 5, science: 2, physics: 2, histgeo: 2, islamic: 1, civic: 1, music: 1, art: 1, informatics: 1 },
+};
 const KIND_LABEL = { situation: "وضعية", integration: "إدماج", evaluation: "تقويم", remediation: "معالجة", project: "مشروع" };
 
 /** أسابيع السنة الدراسية لمستوى: رقمها، وهل هي أسبوع اختبارات، وأسبوع المعالجة بعده. */
@@ -72,6 +79,11 @@ function build(spec) {
   const total = real.reduce((n, l) => n + weight(l), 0);
   let done = 0;
   const T = plan.teaching.length;
+  // ملف يغطي البرنامج كله: الحصص موزّعة بالتناسب على أسابيع السنة؛ ملف جزئي: بالحجم الساعي الأسبوعي من أسبوع البداية
+  const perWeek = HOURS[level][subject] ?? 1;
+  const from = Math.max(0, plan.teaching.findIndex((w) => w >= (spec.startWeek ?? 2)));
+  const partial = spec.complete === false && total <= perWeek * (T - from);
+  const slot = (before) => (partial ? Math.min(T - 1, from + Math.floor(before / perWeek + 1e-9)) : Math.min(T - 1, Math.floor((before / total) * T)));
   const lessons = [];
   const segTitle = (n) => spec.segments[String(n)] ?? "";
   let order = 0;
@@ -84,7 +96,7 @@ function build(spec) {
   });
   let samples = 0;
   for (const l of real) {
-    const at = Math.min(T - 1, Math.floor((done / total) * T));
+    const at = slot(done);
     done += weight(l);
     const week = Number.isInteger(l.week) && l.week >= 2 && l.week < plan.last ? l.week : plan.teaching[at];
     const pages = (l.pages ?? []).map((p) => `b:${offsets[l.file ?? 0] + p}`);
