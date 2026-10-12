@@ -98,7 +98,8 @@ function build(spec) {
   for (const l of real) {
     const at = slot(done);
     done += weight(l);
-    const week = Number.isInteger(l.week) && l.week >= 2 && l.week < plan.last ? l.week : plan.teaching[at];
+    // أسبوع مكتوب في المذكرة يُعتمد فقط إن كان رقم أسبوع السنة (absoluteWeeks)؛ أسابيع المقطع (1–4) لا
+    const week = spec.absoluteWeeks && Number.isInteger(l.week) && l.week >= 2 && l.week < plan.last ? l.week : plan.teaching[at];
     const pages = (l.pages ?? []).map((p) => `b:${offsets[l.file ?? 0] + p}`);
     const sample = pages.length > 0 && l.kind === "lesson" && samples < 2;
     if (sample) samples++;
