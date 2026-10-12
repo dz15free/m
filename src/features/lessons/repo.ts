@@ -7,6 +7,7 @@ import { useAuth } from "@/features/auth/auth-provider";
 import { useBilling } from "@/features/billing/repo";
 import { useClasses, useTaxonomy, useTeacher } from "@/features/classes/hooks";
 import { subjectById } from "@/shared/taxonomy/taxonomy";
+import type { Memo } from "./memo";
 import { curriculumId, lessonAccess, type Curriculum, type LessonSummary } from "./logic";
 
 const db = () => getFirebase().db;
@@ -72,7 +73,7 @@ export function useLesson(lessonId: string, can: { summary: boolean; body: boole
   });
   const body = useQuery({
     queryKey: ["lessonBody", lessonId],
-    queryFn: () => getOrNull<{ body: string; pages?: string[] }>(`lessonBodies/${lessonId}`),
+    queryFn: () => getOrNull<{ body: string; pages?: string[]; memo?: Memo }>(`lessonBodies/${lessonId}`),
     enabled: can.body,
     staleTime: 60 * 60_000,
   });
