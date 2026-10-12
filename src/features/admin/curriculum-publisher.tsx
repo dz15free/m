@@ -106,12 +106,14 @@ export function CurriculumPublisher() {
 /** المواد المقرّرة (التصنيف) التي لا فهرس مذكرات لها في القاعدة: يراها الأستاذ «قريبًا». */
 function Coverage({ refresh }: { refresh: number }) {
   const t = useTranslations("admin.curriculum");
-  const tax = useTaxonomy("primary");
+  const primary = useTaxonomy("primary");
+  const middle = useTaxonomy("middle");
+  const levelShort = (l: string) => levelById(primary.data!, l)?.short.ar ?? levelById(middle.data!, l)?.short.ar ?? l;
   const missing = useQuery({
     queryKey: ["curriculumCoverage", refresh],
-    enabled: !!tax.data,
+    enabled: !!primary.data && !!middle.data,
     queryFn: async () => {
-      const ids = tax.data!.subjects.flatMap((s) => s.levels.map((l) => ({ id: curriculumId(l, s.id), level: l, label: s.label.ar })));
+      const ids = [primary.data!, middle.data!].flatMap((tax) => tax.subjects.flatMap((s) => s.levels.map((l) => ({ id: curriculumId(l, s.id), level: l, label: s.label.ar }))));
       const docs = await Promise.all(ids.map((x) => getCurriculum(x.id)));
       return ids.filter((_, i) => !docs[i]);
     },
@@ -128,7 +130,7 @@ function Coverage({ refresh }: { refresh: number }) {
           <ul className="flex flex-wrap gap-2">
             {missing.data.map((x) => (
               <li key={x.id} className="rounded-full bg-amber-50 px-3 py-1 text-sm text-amber-900 ring-1 ring-amber-200">
-                {x.label} · {levelById(tax.data!, x.level)?.short.ar ?? x.level}
+                {x.label} · {levelShort(x.level)}
                 {!REPO_CURRICULA.includes(x.id) && <span className="text-xs text-amber-700"> — {t("coverageNoFile")}</span>}
               </li>
             ))}

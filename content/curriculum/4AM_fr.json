@@ -1,0 +1,923 @@
+{
+ "id": "4AM_fr",
+ "level": "4AM",
+ "subject": "fr",
+ "title": "Langue française — السنة الرابعة متوسط",
+ "source": {
+  "ar": "مذكرات أساتذة منشورة للعموم (مناهج الجيل الثاني) من مجلد «التعليم المتوسط»؛ الأسابيع تقديرية موزّعة على رزنامة 2026-2027 في غياب المخطط السنوي الرسمي",
+  "fr": "Fiches d'enseignants partagées publiquement (programmes de 2e génération) ; semaines estimées sur le calendrier 2026-2027"
+ },
+ "weekMode": "absolute",
+ "segments": {
+  "1": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 1 : Bienvenue dans ma région ! (Inciter à la découverte d’une région)",
+  "2": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 2 : Gloire à nos ancêtres ! (Inciter à la découverte d’un personnage / fait historique)",
+  "3": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+  "4": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 4 : Vivons en harmonie !",
+  "5": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 5 : Non à la violence !",
+  "6": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 6 : Protégeons la nature !",
+  "7": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 7 : Agissons en éco-responsables !"
+ },
+ "sources": {
+  "b": {
+   "pdf": [
+    "1szM9hapUXOoKSNg4WpjVIxJK0B1L-_iL"
+   ]
+  }
+ },
+ "lessons": [
+  {
+   "order": 1,
+   "unitKind": "week",
+   "unit": 1,
+   "segment": 1,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 1 : Bienvenue dans ma région ! (Inciter à la découverte d’une région)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Évaluation diagnostique",
+   "topic": "Évaluation diagnostique",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 2,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 1 : Bienvenue dans ma région ! (Inciter à la découverte d’une région)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Vidéo « Destination Algérie »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Apprendre à se positionner en tant qu’auditeur.",
+    "Sélectionner des informations et les organiser."
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "b:3"
+   ]
+  },
+  {
+   "order": 3,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 1 : Bienvenue dans ma région ! (Inciter à la découverte d’une région)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "S’exprimer oralement pour décrire un lieu (manuel p. 11)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire du sens à partir d’un support iconique.",
+    "S’exprimer oralement pour décrire un lieu."
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "b:4"
+   ]
+  },
+  {
+   "order": 4,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 1 : Bienvenue dans ma région ! (Inciter à la découverte d’une région)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "« À la découverte de l’Algérie » (manuel p. 12)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les caractéristiques d’un texte argumentatif.",
+    "Identifier le thème et la thèse de l’auteur."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:5",
+    "b:6"
+   ]
+  },
+  {
+   "order": 5,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 1 : Bienvenue dans ma région ! (Inciter à la découverte d’une région)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Les verbes d’opinion",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier et employer les verbes d’opinion.",
+    "Employer le vocabulaire de la description (adjectifs, indicateurs de lieux)."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:7",
+    "b:8"
+   ]
+  },
+  {
+   "order": 6,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 1 : Bienvenue dans ma région ! (Inciter à la découverte d’une région)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "La proposition subordonnée complétive",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier la proposition subordonnée complétive.",
+    "Employer la proposition subordonnée complétive."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:9",
+    "b:10"
+   ]
+  },
+  {
+   "order": 7,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 1 : Bienvenue dans ma région ! (Inciter à la découverte d’une région)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Conjugaison",
+   "topic": "Le présent de l’indicatif",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les terminaisons des verbes au présent de l’indicatif.",
+    "Conjuguer des verbes au présent de l’indicatif."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:11",
+    "b:12"
+   ]
+  },
+  {
+   "order": 8,
+   "unitKind": "week",
+   "unit": 5,
+   "segment": 1,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 1 : Bienvenue dans ma région ! (Inciter à la découverte d’une région)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : introduction et conclusion d’un texte argumentatif",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire l’introduction et la conclusion d’un texte argumentatif."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:13"
+   ]
+  },
+  {
+   "order": 9,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 2,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 2 : Gloire à nos ancêtres ! (Inciter à la découverte d’un personnage / fait historique)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Vidéo « El Hadj Ahmed Bey »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Écouter et comprendre un support audio contenant un argumentaire."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:15"
+   ]
+  },
+  {
+   "order": 10,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 2,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 2 : Gloire à nos ancêtres ! (Inciter à la découverte d’un personnage / fait historique)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Formuler des arguments pour appuyer une opinion (manuel p. 29)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Formuler des arguments pour appuyer une opinion par rapport à une situation spécifique."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:16"
+   ]
+  },
+  {
+   "order": 11,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 2,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 2 : Gloire à nos ancêtres ! (Inciter à la découverte d’un personnage / fait historique)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "« Jugurtha contre Metellus » (manuel p. 30)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Analyser et comprendre un texte argumentatif.",
+    "Identifier le point de vue de l’énonciateur."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:17",
+    "b:18"
+   ]
+  },
+  {
+   "order": 12,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 2,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 2 : Gloire à nos ancêtres ! (Inciter à la découverte d’un personnage / fait historique)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Les connecteurs d’énumération",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les connecteurs d’énumération.",
+    "Employer les connecteurs d’énumération."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:19",
+    "b:20"
+   ]
+  },
+  {
+   "order": 13,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 2,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 2 : Gloire à nos ancêtres ! (Inciter à la découverte d’un personnage / fait historique)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "La proposition subordonnée relative avec « qui » et « que »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier et employer la PSR avec « qui / que »."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:21",
+    "b:22"
+   ]
+  },
+  {
+   "order": 14,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 2,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 2 : Gloire à nos ancêtres ! (Inciter à la découverte d’un personnage / fait historique)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Compréhension de l’écrit (2) : texte d’Ahmed Akkache, « La résistance algérienne de 1845 à 1945 » (manuel p. 40)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier le narrateur, son point de vue et ses arguments.",
+    "Réinvestir les points de langue vus durant la séquence."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:23",
+    "b:24"
+   ]
+  },
+  {
+   "order": 15,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 2,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 2 : Gloire à nos ancêtres ! (Inciter à la découverte d’un personnage / fait historique)",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : produire des arguments pour étayer une thèse",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire des arguments pour étayer une thèse."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:25"
+   ]
+  },
+  {
+   "order": 16,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 3,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Vidéo « L’imzad »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Développer des stratégies de compréhension.",
+    "Apprendre à se positionner en tant qu’auditeur."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:27"
+   ]
+  },
+  {
+   "order": 17,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 3,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Argumenter à partir d’un visuel (manuel p. 47)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire à l’oral une argumentation à partir d’un visuel.",
+    "Présenter des arguments pour défendre un point de vue."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:28"
+   ]
+  },
+  {
+   "order": 18,
+   "unitKind": "week",
+   "unit": 11,
+   "segment": 3,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "« Le tapis en fête à Ghardaïa » (manuel p. 48)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier le narrateur, son point de vue et ses arguments.",
+    "Analyser et comprendre un texte à visée argumentative."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:29",
+    "b:30"
+   ]
+  },
+  {
+   "order": 19,
+   "unitKind": "week",
+   "unit": 13,
+   "segment": 3,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Remédiation",
+   "topic": "Correction de l'examen du trimestre 1 et remédiation",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 20,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 3,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Le lexique mélioratif / dépréciatif",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier et employer le lexique mélioratif / dépréciatif."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:31",
+    "b:32"
+   ]
+  },
+  {
+   "order": 21,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 3,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "La cause et la conséquence",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les subordonnées de cause et de conséquence.",
+    "Employer les subordonnées de cause et de conséquence."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:33",
+    "b:34"
+   ]
+  },
+  {
+   "order": 22,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 3,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : texte argumentatif incitant à la découverte d’un patrimoine",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire un texte argumentatif incitant à la découverte d’un patrimoine."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:35"
+   ]
+  },
+  {
+   "order": 23,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 4,
+   "segmentTitle": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 4 : Vivons en harmonie !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Vidéo « C’est quoi le racisme ? »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Apprendre à se positionner en tant qu’auditeur.",
+    "Identifier le thème, la thèse et les arguments du locuteur."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:37"
+   ]
+  },
+  {
+   "order": 24,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 4,
+   "segmentTitle": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 4 : Vivons en harmonie !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Argumenter à partir d’un visuel (manuel p. 69)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire à l’oral une argumentation à partir d’un visuel."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:38"
+   ]
+  },
+  {
+   "order": 25,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 4,
+   "segmentTitle": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 4 : Vivons en harmonie !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "« Le racisme » (manuel p. 70)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Analyser et comprendre un texte à visée argumentative.",
+    "Retrouver le thème, la thèse et les arguments de l’auteur."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:39",
+    "b:40"
+   ]
+  },
+  {
+   "order": 26,
+   "unitKind": "week",
+   "unit": 17,
+   "segment": 4,
+   "segmentTitle": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 4 : Vivons en harmonie !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Les verbes de parole et la ponctuation dans le dialogue",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier et employer les verbes introducteurs de paroles.",
+    "Identifier et employer les signes de ponctuation du dialogue."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:41",
+    "b:42"
+   ]
+  },
+  {
+   "order": 27,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 4,
+   "segmentTitle": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 4 : Vivons en harmonie !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "La proposition subordonnée de but",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier la proposition subordonnée de but.",
+    "Employer la proposition subordonnée de but."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:43",
+    "b:44"
+   ]
+  },
+  {
+   "order": 28,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 4,
+   "segmentTitle": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 4 : Vivons en harmonie !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : dialogue argumenté sur la tolérance",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire un dialogue argumenté sur la tolérance."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:45"
+   ]
+  },
+  {
+   "order": 29,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 5,
+   "segmentTitle": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 5 : Non à la violence !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Vidéo « Violence après le match El Ahly – El Masry »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Apprendre à se positionner en tant qu’auditeur.",
+    "Identifier le thème, la thèse et les arguments du locuteur."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:47"
+   ]
+  },
+  {
+   "order": 30,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 5,
+   "segmentTitle": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 5 : Non à la violence !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Produire une argumentation à l’oral (manuel p. 85)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire à l’oral une argumentation."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:48"
+   ]
+  },
+  {
+   "order": 31,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 5,
+   "segmentTitle": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 5 : Non à la violence !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "« La violence à l’égard des femmes et des filles » (manuel p. 86)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Analyser et comprendre un texte à visée argumentative.",
+    "Retrouver le thème, la thèse et les arguments de l’auteur."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:49",
+    "b:50"
+   ]
+  },
+  {
+   "order": 32,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 5,
+   "segmentTitle": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 5 : Non à la violence !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : rapporter les propos d’une personne",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à rapporter les propos d’une personne."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:51"
+   ]
+  },
+  {
+   "order": 33,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 6,
+   "segmentTitle": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 6 : Protégeons la nature !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Support audio « L’environnement »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Apprendre à se positionner en tant qu’auditeur.",
+    "Identifier le thème, la thèse et les arguments du locuteur."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:53"
+   ]
+  },
+  {
+   "order": 34,
+   "unitKind": "week",
+   "unit": 24,
+   "segment": 3,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Remédiation",
+   "topic": "Correction de l'examen du trimestre 2 et remédiation",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 35,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 6,
+   "segmentTitle": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 6 : Protégeons la nature !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Formuler un argumentaire de sensibilisation (manuel p. 107)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Formuler un argumentaire destiné à sensibiliser sur une cause."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:54"
+   ]
+  },
+  {
+   "order": 36,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 6,
+   "segmentTitle": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 6 : Protégeons la nature !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "La proposition circonstancielle de condition",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier et employer la proposition de condition."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:55",
+    "b:56"
+   ]
+  },
+  {
+   "order": 37,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 6,
+   "segmentTitle": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 6 : Protégeons la nature !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : message de sensibilisation argumenté",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire un message de sensibilisation contenant des arguments."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:57"
+   ]
+  },
+  {
+   "order": 38,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 7,
+   "segmentTitle": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 7 : Agissons en éco-responsables !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "« Une ville modèle »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Apprendre à se positionner en tant qu’auditeur.",
+    "Identifier le thème, la thèse et les arguments du locuteur."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:59"
+   ]
+  },
+  {
+   "order": 39,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 7,
+   "segmentTitle": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 7 : Agissons en éco-responsables !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "S’exprimer oralement pour défendre une cause",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "S’exprimer oralement pour défendre une cause."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:60"
+   ]
+  },
+  {
+   "order": 40,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 7,
+   "segmentTitle": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 7 : Agissons en éco-responsables !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "« Par qui la nourriture est-elle gaspillée ? » (manuel p. 126)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Lire et comprendre un texte contenant un argumentaire structuré."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:61",
+    "b:62"
+   ]
+  },
+  {
+   "order": 41,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 7,
+   "segmentTitle": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 7 : Agissons en éco-responsables !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "La proposition circonstancielle d’opposition",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier la proposition circonstancielle d’opposition."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:63",
+    "b:64"
+   ]
+  },
+  {
+   "order": 42,
+   "unitKind": "week",
+   "unit": 29,
+   "segment": 7,
+   "segmentTitle": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 7 : Agissons en éco-responsables !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : message de sensibilisation argumenté",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire un message de sensibilisation contenant des arguments."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:65"
+   ]
+  },
+  {
+   "order": 43,
+   "unitKind": "week",
+   "unit": 31,
+   "segment": 3,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Révision",
+   "topic": "Révision générale pour le BEM",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 44,
+   "unitKind": "week",
+   "unit": 32,
+   "segment": 3,
+   "segmentTitle": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Révision",
+   "topic": "Révision générale pour le BEM",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  }
+ ]
+}

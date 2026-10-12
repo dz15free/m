@@ -1,6 +1,9 @@
 import { errorResponse, HttpError, requireUser } from "@/lib/server/auth";
 import { driveKey, fetchDriveMedia, fetchPublicDriveFile, libraryFile } from "@/lib/server/drive";
-import { SOURCE_FILE_IDS } from "@/features/admin/curriculum-catalog";
+import sourceIds from "@/features/admin/curriculum-sources.json";
+
+// قائمة خفيفة بدل استيراد ملفات المناهج كلها في حزمة الخادم
+const SOURCE_FILE_IDS = new Set<string>(sourceIds);
 
 /* ملف من مجلد المكتبة على Drive عبر الخادم — للمحرّرين والأدمن فقط، لنشر المذكرات من المتصفح (Drive يمنع
    تحميل ملفاته مباشرة من صفحة أخرى: CORS). المسموح: ملفات المصادر المعلنة في المناهج، أو (بمفتاح Drive API)

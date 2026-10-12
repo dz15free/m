@@ -7,7 +7,7 @@ import { ChevronDown, FileText, Hourglass, LoaderCircle, Lock, Sparkles } from "
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils/cn";
 import { useBilling } from "@/features/billing/repo";
-import { useTaxonomy } from "@/features/classes/hooks";
+import { useTaxonomy, useTeacher } from "@/features/classes/hooks";
 import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
 import { DOC, docLangOfSubject } from "@/i18n/doc-lang";
 import { groupCurriculum } from "./logic";
@@ -17,7 +17,7 @@ import { useCurriculum, useLessonAccessFor, useMyCurricula } from "./repo";
 export function LessonsBrowser({ level }: { level?: string } = {}) {
   const t = useTranslations("lessons");
   const locale = useLocale() as "ar" | "fr";
-  const tax = useTaxonomy("primary");
+  const tax = useTaxonomy(useTeacher().data?.profile.stage ?? "primary");
   const mine = useMyCurricula();
   const [picked, setPicked] = useState<string | null>(null);
 

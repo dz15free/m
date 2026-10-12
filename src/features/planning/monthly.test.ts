@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { arabicWeek, cellItems, inferColumns, monthPublishedAt, monthWeeks, replaceCell, schoolMonths, yearWeeks } from "./monthly.ts";
 import { rowsFromCurriculum, schoolWeekOf, type ProgressionRow } from "./logic.ts";
-import { officialCalendar } from "../../shared/dz/school-calendar.ts";
+import { examsForLevel, officialCalendar } from "../../shared/dz/school-calendar.ts";
 import type { CurriculumEntry } from "../lessons/logic.ts";
 
 const official = officialCalendar("2026-2027")!;
@@ -16,7 +16,17 @@ test("رزنامة 2026-2027: العطل بالأيام المعطّلة فعل�
     ["2026-12-18", "2027-01-02"],
     ["2027-03-19", "2027-04-03"],
   ]);
-  assert.deepEqual(official.exams.map((e) => e.days.length), [5, 5, 5]);
+  assert.deepEqual(official.exams.map((e) => e.days.length), [5, 5, 5, 3]);
+});
+
+test("اختبارات الفصل الثالث: الرابعة متوسط من 9 إلى 11 ماي، وباقي المستويات من 23 إلى 27 ماي", () => {
+  const t3 = (level: string | undefined) => examsForLevel(official.exams, level).filter((e) => e.term === 3).flatMap((e) => e.days);
+  assert.deepEqual(t3("4AM"), ["2027-05-09", "2027-05-10", "2027-05-11"]);
+  assert.deepEqual(t3("3AM"), ["2027-05-23", "2027-05-24", "2027-05-25", "2027-05-26", "2027-05-27"]);
+  assert.deepEqual(t3("5AP"), t3("3AM"));
+  assert.deepEqual(t3(undefined), t3("3AM"));
+  // الفصلان الأول والثاني مشتركان
+  assert.equal(examsForLevel(official.exams, "4AM").filter((e) => e.term !== 3).length, 2);
 });
 
 test("أسابيع أكتوبر 2026: الأسابيع الدراسية 3 إلى 6، والأخير تقطعه عطلة الخريف", () => {

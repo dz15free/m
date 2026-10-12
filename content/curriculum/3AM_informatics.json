@@ -1,0 +1,478 @@
+{
+ "id": "3AM_informatics",
+ "level": "3AM",
+ "subject": "informatics",
+ "title": "الإعلام الآلي — السنة الثالثة متوسط",
+ "source": {
+  "ar": "مذكرات أساتذة منشورة للعموم (مناهج الجيل الثاني) من مجلد «التعليم المتوسط»؛ الأسابيع تقديرية موزّعة على رزنامة 2026-2027 في غياب المخطط السنوي الرسمي",
+  "fr": "Fiches d'enseignants partagées publiquement (programmes de 2e génération) ; semaines estimées sur le calendrier 2026-2027"
+ },
+ "weekMode": "absolute",
+ "segments": {
+  "1": "المقطع 1: استخدام الأصوات (سكراتش)",
+  "2": "المقطع 2: الرسم بالقلم (سكراتش)",
+  "3": "المقطع 3: خاصية التحسس (سكراتش)",
+  "4": "المقطع 4: تقديم المجدول (Excel)",
+  "5": "المقطع 5: الصيغ (Excel)",
+  "6": "المقطع 6: تصميم عرض تقديمي (PowerPoint)",
+  "7": "المقطع 7: التواصل باستعمال الأنترنت (البريد الإلكتروني)"
+ },
+ "sources": {
+  "b": {
+   "pdf": [
+    "1DYjaqUOKl9c3ym7UZwGNdEMV6ciZ4oAH"
+   ]
+  }
+ },
+ "lessons": [
+  {
+   "order": 1,
+   "unitKind": "week",
+   "unit": 1,
+   "segment": 1,
+   "segmentTitle": "المقطع 1: استخدام الأصوات (سكراتش)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "التقويم التشخيصي",
+   "topic": "التقويم التشخيصي",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 2,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "المقطع 1: استخدام الأصوات (سكراتش)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "بناء المشاريع - سكراتش",
+   "topic": "الأصوات في سكراتش",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "استخدام الأصوات",
+    "إضافة صوت من ملف",
+    "إضافة تسجيل صوتي"
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "b:4",
+    "b:5"
+   ]
+  },
+  {
+   "order": 3,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 2,
+   "segmentTitle": "المقطع 2: الرسم بالقلم (سكراتش)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "بناء المشاريع - سكراتش",
+   "topic": "الرسم بالقلم في سكراتش",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "خاصية القلم",
+    "فوائد القلم"
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "b:6",
+    "b:7"
+   ]
+  },
+  {
+   "order": 4,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 3,
+   "segmentTitle": "المقطع 3: خاصية التحسس (سكراتش)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "بناء المشاريع - سكراتش",
+   "topic": "خاصية التحسس في سكراتش",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "خاصية التحسس",
+    "فوائد التحسس"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:8",
+    "b:9",
+    "b:10"
+   ]
+  },
+  {
+   "order": 5,
+   "unitKind": "week",
+   "unit": 5,
+   "segment": 4,
+   "segmentTitle": "المقطع 4: تقديم المجدول (Excel)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "المجدول",
+   "topic": "مدخل إلى المجدول",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "تعريف المجدول",
+    "تشغيل المجدول"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:12"
+   ]
+  },
+  {
+   "order": 6,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 4,
+   "segmentTitle": "المقطع 4: تقديم المجدول (Excel)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "المجدول",
+   "topic": "المصنف وورقة العمل",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "تعريف ورقة العمل",
+    "تعريف المصنف والعمليات عليه"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:13",
+    "b:14"
+   ]
+  },
+  {
+   "order": 7,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 4,
+   "segmentTitle": "المقطع 4: تقديم المجدول (Excel)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "المجدول",
+   "topic": "التعليمة Format وتنسيق الكتابة",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "التعليمة Format",
+    "تنسيق الكتابة في الخلايا"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:15"
+   ]
+  },
+  {
+   "order": 8,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 4,
+   "segmentTitle": "المقطع 4: تقديم المجدول (Excel)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "المجدول",
+   "topic": "نقل ونسخ الخلايا",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "نقل الخلايا",
+    "نسخ الخلايا"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:16"
+   ]
+  },
+  {
+   "order": 9,
+   "unitKind": "week",
+   "unit": 11,
+   "segment": 5,
+   "segmentTitle": "المقطع 5: الصيغ (Excel)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "المجدول",
+   "topic": "الصيغ وكتابتها",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "تعريف الصيغة",
+    "أنواع الصيغ"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:17"
+   ]
+  },
+  {
+   "order": 10,
+   "unitKind": "week",
+   "unit": 13,
+   "segment": 5,
+   "segmentTitle": "المقطع 5: الصيغ (Excel)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "المعالجة البيداغوجية",
+   "topic": "تصحيح اختبار الفصل 1 والمعالجة البيداغوجية",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 11,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 5,
+   "segmentTitle": "المقطع 5: الصيغ (Excel)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "المجدول",
+   "topic": "نسخ الصيغ",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "نسخ الصيغ"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:18"
+   ]
+  },
+  {
+   "order": 12,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 6,
+   "segmentTitle": "المقطع 6: تصميم عرض تقديمي (PowerPoint)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "العروض التقديمية",
+   "topic": "تقديم برنامج العروض التقديمية",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "تعريف برنامج العروض التقديمية",
+    "تشغيل البرنامج"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:20"
+   ]
+  },
+  {
+   "order": 13,
+   "unitKind": "week",
+   "unit": 17,
+   "segment": 6,
+   "segmentTitle": "المقطع 6: تصميم عرض تقديمي (PowerPoint)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "العروض التقديمية",
+   "topic": "عمليات على الشرائح",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "إدراج شريحة جديدة",
+    "نقل شريحة"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:21"
+   ]
+  },
+  {
+   "order": 14,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 6,
+   "segmentTitle": "المقطع 6: تصميم عرض تقديمي (PowerPoint)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "العروض التقديمية",
+   "topic": "إدراج مربعات النص والصور",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "إدراج مربع نص",
+    "إدراج صورة"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:22"
+   ]
+  },
+  {
+   "order": 15,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 6,
+   "segmentTitle": "المقطع 6: تصميم عرض تقديمي (PowerPoint)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "العروض التقديمية",
+   "topic": "إدراج الصوت والفيديو",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "إدراج ملف صوتي",
+    "إدراج فيديو"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:23"
+   ]
+  },
+  {
+   "order": 16,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 6,
+   "segmentTitle": "المقطع 6: تصميم عرض تقديمي (PowerPoint)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "العروض التقديمية",
+   "topic": "مراحل الانتقال بين الشرائح وطرق الحفظ",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "مراحل الانتقال بين الشرائح",
+    "حفظ العرض (Présentation / Diaporama)"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:24",
+    "b:25"
+   ]
+  },
+  {
+   "order": 17,
+   "unitKind": "week",
+   "unit": 24,
+   "segment": 5,
+   "segmentTitle": "المقطع 5: الصيغ (Excel)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "المعالجة البيداغوجية",
+   "topic": "تصحيح اختبار الفصل 2 والمعالجة البيداغوجية",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 18,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 7,
+   "segmentTitle": "المقطع 7: التواصل باستعمال الأنترنت (البريد الإلكتروني)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "الشبكات",
+   "topic": "البريد الإلكتروني",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "تعريف البريد الإلكتروني",
+    "مميزات البريد الإلكتروني"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:27"
+   ]
+  },
+  {
+   "order": 19,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 7,
+   "segmentTitle": "المقطع 7: التواصل باستعمال الأنترنت (البريد الإلكتروني)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "الشبكات",
+   "topic": "إنشاء حساب بريد إلكتروني",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "عناصر عنوان البريد الإلكتروني",
+    "إنشاء حساب بريد إلكتروني"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:28"
+   ]
+  },
+  {
+   "order": 20,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 7,
+   "segmentTitle": "المقطع 7: التواصل باستعمال الأنترنت (البريد الإلكتروني)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "الشبكات",
+   "topic": "إرسال واستقبال الرسائل",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "إرسال الرسائل",
+    "استقبال الرسائل"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:29"
+   ]
+  },
+  {
+   "order": 21,
+   "unitKind": "week",
+   "unit": 29,
+   "segment": 7,
+   "segmentTitle": "المقطع 7: التواصل باستعمال الأنترنت (البريد الإلكتروني)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "الشبكات",
+   "topic": "الملف المرفق",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "إرسال ملف مرفق"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:30"
+   ]
+  },
+  {
+   "order": 22,
+   "unitKind": "week",
+   "unit": 30,
+   "segment": 7,
+   "segmentTitle": "المقطع 7: التواصل باستعمال الأنترنت (البريد الإلكتروني)",
+   "activity": "إعلام آلي",
+   "session": "إعلام آلي",
+   "domain": "الشبكات",
+   "topic": "الرسائل المتعددة الوجهات",
+   "materials": "الحاسوب، الكتاب المدرسي",
+   "objectives": [
+    "إرسال نفس الرسالة لعدة أشخاص",
+    "إرسال نسخة طبق الأصل"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:31"
+   ]
+  }
+ ]
+}

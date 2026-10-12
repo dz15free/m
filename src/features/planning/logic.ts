@@ -99,7 +99,8 @@ export function parseProgression(text: string): ProgressionRow[] {
 /** ميدان حصة العربية ⇐ خانتها: فهم المنطوق والتعبير الشفوي، فهم المكتوب، التعبير الكتابي، وإلا على عرض الميادين. */
 export function arColumnOf(domain: string): ArColumn {
   if (/المنطوق|الشفوي/.test(domain)) return "oral";
-  if (/الكتابي|الكتابة|التخطيط/.test(domain)) return "writing";
+  // «إنتاج المكتوب» (ميدان المتوسط) قبل «المكتوب» حتى لا يُحسب قراءة
+  if (/الكتابي|الكتابة|التخطيط|إنتاج المكتوب|انتاج المكتوب/.test(domain)) return "writing";
   if (/المكتوب|القراءة|المحفوظات/.test(domain)) return "reading";
   return "all";
 }

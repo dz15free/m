@@ -5,19 +5,28 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Hourglass, MessageCircle, Settings } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
+import { useQuery } from "@tanstack/react-query";
+import { useAuth } from "@/features/auth/auth-provider";
+import { getAppConfig } from "@/features/billing/repo";
 import { useTeacher } from "@/features/classes/hooks";
 import { openSupport } from "@/features/support/repo";
+import { stageOpen } from "@/shared/billing/plans";
 
-/** المتوسط والثانوي قيد الإعداد: يسجّلون ويُحفظ ملفهم، ويرون «قريبًا» بدل الأدوات
- *  (عدا الإعدادات والحساب والاشتراك). المحتوى الحالي مبني للابتدائي. */
+/** مرحلة لم يفتحها الأدمن بعد (config/app.openStages): أساتذتها يسجّلون ويُحفظ ملفهم، ويرون «قريبًا» بدل الأدوات
+ *  (عدا الإعدادات والحساب والاشتراك). الأدمن والمحرّرون يمرّون دائمًا لتجربة المرحلة قبل فتحها. */
 const OPEN_PATHS = ["/app/settings", "/app/more", "/app/billing"];
 
 export function StageGate({ children }: { children: React.ReactNode }) {
   const t = useTranslations("comingSoon");
   const teacher = useTeacher().data;
   const pathname = usePathname();
+  const auth = useAuth();
+  const staff = auth.status === "signedIn" && (auth.roles.includes("admin") || auth.roles.includes("contentEditor"));
   const stage = teacher?.profile.stage;
-  if (!stage || stage === "primary" || OPEN_PATHS.some((p) => pathname.startsWith(p))) return <>{children}</>;
+  const config = useQuery({ queryKey: ["appConfig"], queryFn: getAppConfig, enabled: !!stage && stage !== "primary", staleTime: 5 * 60_000 });
+  if (!stage || stage === "primary" || staff || OPEN_PATHS.some((p) => pathname.startsWith(p))) return <>{children}</>;
+  if (config.isLoading) return null;
+  if (stageOpen(stage, config.data)) return <>{children}</>;
   return (
     <section className="mx-auto max-w-lg space-y-5 py-10 text-center">
       <span className="mx-auto grid size-16 place-items-center rounded-full bg-brand-50 text-brand-700">

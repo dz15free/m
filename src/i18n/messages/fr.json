@@ -967,7 +967,7 @@
       "sheetTitle": "Relevé de notes",
       "resultsTitle": "Résultats du {term}",
       "evaluation": "Évaluation : {subject}",
-      "school": "École",
+      "school": "Établissement",
       "teacher": "Enseignant(e)",
       "season": "Année scolaire",
       "level": "Niveau",
@@ -1560,7 +1560,11 @@
       "trialEligible": "Éligible à l'essai",
       "trialDays": "Durée de l'essai gratuit (jours)",
       "save": "Enregistrer",
-      "saved": "Enregistré"
+      "saved": "Enregistré",
+      "stagesTitle": "Cycles ouverts aux enseignants",
+      "stagesHint": "Le primaire est toujours ouvert. Ouvrez un cycle quand son contenu est prêt : ses enseignants accèdent aux outils et à l’essai gratuit. Avant, ils voient « bientôt » (en tant qu’admin, vous voyez tout pour tester).",
+      "stageMiddle": "Enseignement moyen",
+      "stageSecondary": "Enseignement secondaire"
     },
     "payments": {
       "recent": "Paiements confirmés",

@@ -5,7 +5,7 @@ import { useQueries, useQuery } from "@tanstack/react-query";
 import { getFirebase } from "@/lib/firebase/client";
 import { useAuth } from "@/features/auth/auth-provider";
 import { useBilling } from "@/features/billing/repo";
-import { useClasses, useTaxonomy } from "@/features/classes/hooks";
+import { useClasses, useTaxonomy, useTeacher } from "@/features/classes/hooks";
 import { subjectById } from "@/shared/taxonomy/taxonomy";
 import { curriculumId, lessonAccess, type Curriculum, type LessonSummary } from "./logic";
 
@@ -33,7 +33,8 @@ export function useCurriculum(id: string) {
 /** المناهج التي تخصّ أقسام الأستاذ (مستوى × مادة)، متوفرة أو «قريبًا». */
 export function useMyCurricula() {
   const classes = useClasses();
-  const tax = useTaxonomy("primary");
+  // تصنيف مرحلة الأستاذ: مواد المتوسط ومستوياته غير تلك التي في الابتدائي
+  const tax = useTaxonomy(useTeacher().data?.profile.stage ?? "primary");
   const pairs = new Map<string, { level: string; subject: string }>();
   for (const c of classes.data ?? []) {
     if (c.archived) continue;

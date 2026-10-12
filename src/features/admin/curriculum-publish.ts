@@ -25,6 +25,8 @@ type Lesson = {
   body?: string;
   page?: number;
   pages?: (number | string)[];
+  /** نموذج مجاني للتجربة (يُعتمد عند أول نشر فقط) */
+  sample?: boolean;
 };
 type SourceSpec = { pdf?: string[]; images?: string[] };
 export type CurriculumFile = {
@@ -139,7 +141,8 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
   // النماذج المجانية للتجربة تبقى كما نُشرت (لا نعيد كتابة صفحات المصدر الرئيسي)
   const existing = await getDoc(doc(db(), "curriculum", id));
   const prevSample = new Map<string, boolean>(((existing.data()?.entries as { id: string; sm: boolean }[] | undefined) ?? []).map((e) => [e.id, e.sm]));
-  const sampleOf = (l: Lesson) => prevSample.get(lessonId(id, l)) ?? false;
+  // منهاج جديد: النماذج المجانية من الملف («sample»)
+  const sampleOf = (l: Lesson) => prevSample.get(lessonId(id, l)) ?? l.sample ?? false;
 
   // 1) صفحات المصادر الإضافية
   const extra = new Map<string, Set<number>>();

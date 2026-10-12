@@ -4,8 +4,9 @@
 
 export type Label = { ar: string; fr: string };
 export type Holiday = { start: string; end: string; label?: Label };
-/** أيام اختبارات فصل (قد لا تكون متتالية: الفصل الثاني 2، 3، 4، 7، 8 مارس) */
-export type ExamPeriod = { term: 1 | 2 | 3; days: string[] };
+/** أيام اختبارات فصل (قد لا تكون متتالية: الفصل الثاني 2، 3، 4، 7، 8 مارس).
+    levels: فترة خاصة بمستويات معيّنة تحلّ محلّ الفترة العامة لنفس الفصل (الرابعة متوسط في الفصل الثالث). */
+export type ExamPeriod = { term: 1 | 2 | 3; days: string[]; levels?: string[] };
 
 export const HOLIDAY_LABELS = {
   autumn: { ar: "عطلة الخريف", fr: "Vacances d'automne" },
@@ -34,9 +35,19 @@ const OFFICIAL: Record<string, { holidays: Holiday[]; exams: ExamPeriod[] }> = {
       { term: 1, days: range("2026-12-06", "2026-12-10") },
       { term: 2, days: ["2027-03-02", "2027-03-03", "2027-03-04", "2027-03-07", "2027-03-08"] },
       { term: 3, days: range("2027-05-23", "2027-05-27") },
+      // السنة الرابعة متوسط: اختبارات الفصل الثالث من 09 إلى 11 ماي 2027 (قبل شهادة التعليم المتوسط)
+      { term: 3, days: range("2027-05-09", "2027-05-11"), levels: ["4AM"] },
     ],
   },
 };
+
+/** فترات الاختبارات التي تخص مستوى: الخاصة به إن وُجدت لفصلٍ، وإلا العامة. */
+export function examsForLevel<T extends ExamPeriod>(exams: T[], level: string | undefined): T[] {
+  return exams.filter((e) => {
+    if (e.levels) return !!level && e.levels.includes(level);
+    return !exams.some((o) => o.term === e.term && o.levels && !!level && o.levels.includes(level));
+  });
+}
 
 export function officialCalendar(yearId: string): { holidays: Holiday[]; exams: ExamPeriod[] } | null {
   return OFFICIAL[yearId] ?? null;
