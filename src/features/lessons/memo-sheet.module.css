@@ -338,8 +338,16 @@
     box-shadow: none;
     padding: 0;
   }
-  .flow > tbody > tr {
-    break-inside: avoid-page;
+  /* الصفوف الطويلة تنقسم بين الصفحات (لا فراغ كبير)، والأطر والأشكال لا تنقسم */
+  .sit,
+  .key,
+  .fig,
+  .inner tr,
+  .h {
+    break-inside: avoid;
+  }
+  .h {
+    break-after: avoid;
   }
   .band,
   .card,
