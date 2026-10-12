@@ -1,0 +1,1900 @@
+{
+ "id": "1AM_fr",
+ "level": "1AM",
+ "subject": "fr",
+ "language": "fr",
+ "kind": "memos",
+ "files": [
+  "14-miX5CsjJu586zbsjt-sl82_KtNSi74"
+ ],
+ "filePages": [
+  224
+ ],
+ "segments": {
+  "1": "Projet 1 — Séquence 1 : J’explique l’importance de se laver correctement",
+  "2": "Projet 1 — Séquence 2 : J’explique l’importance de manger convenablement",
+  "3": "Projet 1 — Séquence 3 : J’explique l’importance de bouger régulièrement",
+  "4": "Projet 2 — Séquence 1 : J’explique les progrès de la science",
+  "5": "Projet 2 — Séquence 2 : J’explique les différentes pollutions",
+  "6": "Projet 2 — Séquence 3 : J’explique le dérèglement du climat",
+  "7": "Projet 3 — Séquence 1 : J’incite à l’utilisation des énergies renouvelables",
+  "8": "Projet 3 — Séquence 2 : J’agis pour un comportement éco-citoyen"
+ },
+ "lessons": [
+  {
+   "segment": 1,
+   "domain": "Projet",
+   "topic": "Situation problème du projet : « Pour un monde en meilleure santé » (brochure pour vivre sainement)",
+   "objectives": [
+    "Comprendre la situation problème et les niveaux de compétence du projet."
+   ],
+   "kind": "situation",
+   "file": 0,
+   "pages": [
+    2,
+    3
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Projet",
+   "topic": "Négociation et planification du projet",
+   "objectives": [
+    "Comprendre le projet.",
+    "Le négocier et le planifier."
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    4
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Compréhension de l’oral",
+   "topic": "Compréhension orale : « Comment se laver les mains à l’eau et au savon ? »",
+   "objectives": [
+    "Découvrir la situation de communication.",
+    "Repérer des informations sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    5,
+    6
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Production de l’oral",
+   "topic": "Expression orale : comment se laver les mains",
+   "objectives": [
+    "(Re)formuler le document écouté.",
+    "S’exprimer oralement sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    7
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Identification du texte explicatif",
+   "objectives": [
+    "Identifier le texte explicatif parmi d’autres types de textes."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    8
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Compréhension de l’écrit : « Le lavage des mains »",
+   "objectives": [
+    "Repérer les éléments paratextuels.",
+    "Identifier la situation de communication."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    10,
+    11
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : « Le lavage des mains »",
+   "objectives": [
+    "Entraîner les élèves à la lecture.",
+    "Corriger les fautes de prononciation."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    12
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : la nominalisation",
+   "objectives": [
+    "Savoir former des noms à partir des verbes.",
+    "Employer la suffixation pour former des noms."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    13
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Grammaire",
+   "topic": "Grammaire : la phrase déclarative (affirmative / négative)",
+   "objectives": [
+    "Identifier la phrase déclarative.",
+    "Utiliser la phrase déclarative pour expliquer."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    15,
+    16
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Grammaire",
+   "topic": "Grammaire : les substituts grammaticaux",
+   "objectives": [
+    "Identifier les différents substituts grammaticaux (pronoms personnels, démonstratifs, possessifs)."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    17,
+    18
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : les verbes du 1er groupe au présent de l’indicatif",
+   "objectives": [
+    "Savoir conjuguer les verbes du 1er groupe au présent de l’indicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    19,
+    20
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Orthographe",
+   "topic": "Orthographe : l’accord du verbe avec le sujet",
+   "objectives": [
+    "Accorder correctement le verbe avec le sujet."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    21,
+    22
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Production de l’écrit",
+   "topic": "Préparation de l’écrit : « Pour des dents saines et blanches »",
+   "objectives": [
+    "Préparer les élèves à l’écrit.",
+    "S’exprimer à l’écrit en suivant un modèle."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    23
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Production de l’écrit",
+   "topic": "Production écrite : l’importance d’avoir les mains propres",
+   "objectives": [
+    "S’exprimer à l’écrit.",
+    "Rédiger un court texte explicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    24
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : « Le lavage des mains »",
+   "objectives": [
+    "Entraîner les élèves à la lecture.",
+    "Corriger les fautes de prononciation."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    25
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Production de l’écrit",
+   "topic": "Compte-rendu de la production écrite",
+   "objectives": [
+    "Initier les apprenants au code de la correction.",
+    "Identifier et corriger les fautes communes."
+   ],
+   "kind": "remediation",
+   "file": 0,
+   "pages": [
+    26,
+    27
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Projet",
+   "topic": "Station-projet : se documenter",
+   "objectives": [
+    "Guider les élèves dans la réalisation du projet."
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    28
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Compréhension de l’oral",
+   "topic": "Compréhension orale : « Manger et boire convenablement »",
+   "objectives": [
+    "Découvrir la situation de communication.",
+    "Repérer des informations sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    32,
+    33
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Production de l’oral",
+   "topic": "Expression orale : l’importance de manger convenablement",
+   "objectives": [
+    "(Re)formuler le document écouté.",
+    "S’exprimer oralement sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    34
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Identification du texte explicatif",
+   "objectives": [
+    "Identifier le texte explicatif parmi d’autres types de textes."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    35
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Compréhension de l’écrit : « Manger et boire convenablement »",
+   "objectives": [
+    "Repérer les éléments paratextuels.",
+    "Identifier la situation de communication."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    37,
+    38
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : « Manger et boire convenablement »",
+   "objectives": [
+    "Entraîner les élèves à la lecture.",
+    "Corriger les fautes de prononciation."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    39
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : les synonymes",
+   "objectives": [
+    "Utiliser les synonymes pour éviter la répétition.",
+    "Enrichir le lexique."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    40,
+    41
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Grammaire",
+   "topic": "Grammaire : l’expansion du GN : l’adjectif qualificatif",
+   "objectives": [
+    "Identifier l’adjectif qualificatif.",
+    "Utiliser les adjectifs pour enrichir son texte."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    42,
+    43
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Grammaire",
+   "topic": "Grammaire : l’expansion du GN : le complément du nom",
+   "objectives": [
+    "Identifier le complément du nom.",
+    "Rédiger en utilisant les compléments du nom."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    44,
+    45
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : les verbes du 2e groupe au présent de l’indicatif",
+   "objectives": [
+    "Savoir conjuguer les verbes du 2e groupe au présent de l’indicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    46,
+    47
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Orthographe",
+   "topic": "Orthographe : l’accord de l’adjectif qualificatif",
+   "objectives": [
+    "Accorder l’adjectif qualificatif avec le nom qu’il qualifie."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    48,
+    49
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Production de l’écrit",
+   "topic": "Préparation de l’écrit : « Les vitamines »",
+   "objectives": [
+    "Préparer les élèves à l’écrit.",
+    "S’exprimer à l’écrit en suivant un modèle."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    50,
+    51
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Production de l’écrit",
+   "topic": "Production écrite : l’importance des protéines",
+   "objectives": [
+    "S’exprimer à l’écrit.",
+    "Rédiger un court texte explicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    52
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : chansonnette « J’aime les fruits »",
+   "objectives": [
+    "Développer l’écoute chez l’apprenant.",
+    "Entraîner les élèves à la lecture."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    53
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Production de l’écrit",
+   "topic": "Compte-rendu de la production écrite",
+   "objectives": [
+    "Initier les apprenants au code de la correction.",
+    "Identifier et corriger les fautes communes."
+   ],
+   "kind": "remediation",
+   "file": 0,
+   "pages": [
+    54,
+    55
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Projet",
+   "topic": "Station-projet : entamer la rédaction",
+   "objectives": [
+    "Guider les élèves dans la réalisation du projet."
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    56
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Compréhension de l’oral",
+   "topic": "Compréhension orale : « Les bienfaits du sport »",
+   "objectives": [
+    "Découvrir la situation de communication.",
+    "Repérer des informations sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    60,
+    61
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Production de l’oral",
+   "topic": "Expression orale : l’importance de bouger régulièrement",
+   "objectives": [
+    "(Re)formuler le document écouté.",
+    "S’exprimer oralement sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    62
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Identification du texte explicatif",
+   "objectives": [
+    "Identifier le texte explicatif parmi d’autres types de textes."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    63
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Compréhension de l’écrit : « Les bienfaits du sport »",
+   "objectives": [
+    "Repérer les éléments paratextuels.",
+    "Identifier la situation de communication."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    65,
+    66
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : « Les bienfaits du sport » + fiche phonétique",
+   "objectives": [
+    "Entraîner les élèves à la lecture.",
+    "Corriger les fautes de prononciation."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    67
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : les connecteurs d’énumération",
+   "objectives": [
+    "Identifier les connecteurs d’énumération.",
+    "Les employer dans des phrases personnelles."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    68,
+    69
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Grammaire",
+   "topic": "Grammaire : l’expansion du GN : la relative par « qui »",
+   "objectives": [
+    "Identifier le pronom relatif « qui » et la proposition relative.",
+    "Utiliser la relative pour préciser le nom."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    70,
+    71
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : les verbes du 3e groupe au présent de l’indicatif",
+   "objectives": [
+    "Savoir conjuguer les verbes du 3e groupe au présent de l’indicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    72,
+    73
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Orthographe",
+   "topic": "Orthographe : les signes de ponctuation",
+   "objectives": [
+    "Identifier les signes de ponctuation ( : ) ( – ) ( , ) ( . ) et les employer."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    74,
+    75
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Production de l’écrit",
+   "topic": "Préparation de l’écrit : « La marche à pied »",
+   "objectives": [
+    "Préparer les élèves à l’écrit.",
+    "S’exprimer à l’écrit en suivant un modèle."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    76,
+    77
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Production de l’écrit",
+   "topic": "Production écrite : l’importance de pratiquer le football",
+   "objectives": [
+    "S’exprimer à l’écrit.",
+    "Rédiger un court texte explicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    78
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : chanson « La chanson de l’école »",
+   "objectives": [
+    "Développer l’écoute chez l’apprenant.",
+    "Entraîner les élèves à la lecture."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    79,
+    80,
+    81
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Production de l’écrit",
+   "topic": "Compte-rendu de la production écrite",
+   "objectives": [
+    "Initier les apprenants au code de la correction.",
+    "Identifier et corriger les fautes communes."
+   ],
+   "kind": "remediation",
+   "file": 0,
+   "pages": [
+    82,
+    83
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Projet",
+   "topic": "Station-projet : finaliser le projet",
+   "objectives": [
+    "Guider les élèves dans la réalisation du projet."
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    84
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Projet",
+   "topic": "Situation problème du projet : dossier documentaire sur les progrès de la science et leurs conséquences",
+   "objectives": [
+    "Comprendre la situation problème et les niveaux de compétence du projet."
+   ],
+   "kind": "situation",
+   "file": 0,
+   "pages": [
+    88,
+    89
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Projet",
+   "topic": "Négociation et planification du projet",
+   "objectives": [
+    "Comprendre le projet.",
+    "Le négocier et le planifier."
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    90
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Compréhension de l’oral",
+   "topic": "Compréhension orale : vidéo sur le téléphone portable",
+   "objectives": [
+    "Découvrir la situation de communication.",
+    "Repérer des informations sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    91,
+    92
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Production de l’oral",
+   "topic": "Expression orale : « Les bienfaits du téléphone portable »",
+   "objectives": [
+    "(Re)formuler le document écouté.",
+    "S’exprimer oralement sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    93
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Identification du texte explicatif",
+   "objectives": [
+    "Identifier le texte explicatif parmi d’autres types de textes."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    94,
+    95
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Compréhension de l’écrit : « Les bienfaits du téléphone portable »",
+   "objectives": [
+    "Repérer les éléments paratextuels.",
+    "Identifier la situation de communication."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    96,
+    97
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : « Les bienfaits du téléphone portable »",
+   "objectives": [
+    "Entraîner les élèves à la lecture.",
+    "Corriger les fautes de prononciation."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    98
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : les procédés explicatifs : la reformulation (« c’est-à-dire », « autrement dit »)",
+   "objectives": [
+    "Identifier et employer : les procédés explicatifs : la reformulation (« c’est-à-dire », « autrement dit »)"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    99,
+    100
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Grammaire",
+   "topic": "Grammaire : l’expression du but",
+   "objectives": [
+    "Identifier et employer : l’expression du but"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    101,
+    102
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : les verbes du 1er groupe au passé composé",
+   "objectives": [
+    "Identifier et employer : les verbes du 1er groupe au passé composé"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    103,
+    104
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Orthographe",
+   "topic": "Orthographe : l’accord du participe passé avec « être »",
+   "objectives": [
+    "Identifier et employer : l’accord du participe passé avec « être »"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    105,
+    106
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Production de l’écrit",
+   "topic": "Préparation de l’écrit : les bienfaits de la télévision",
+   "objectives": [
+    "Préparer les élèves à l’écrit.",
+    "S’exprimer à l’écrit en suivant un modèle."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    107,
+    108
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Production de l’écrit",
+   "topic": "Production écrite : les bienfaits de l’internet",
+   "objectives": [
+    "S’exprimer à l’écrit.",
+    "Rédiger un court texte explicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    109
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Lecture",
+   "topic": "Lecture-plaisir : film « Le téléphone portable, c’est pas sorcier »",
+   "objectives": [
+    "Développer l’écoute et le plaisir de lire."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    110
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Production de l’écrit",
+   "topic": "Compte-rendu de la production écrite",
+   "objectives": [
+    "Initier les apprenants au code de la correction.",
+    "Identifier et corriger les fautes communes."
+   ],
+   "kind": "remediation",
+   "file": 0,
+   "pages": [
+    111,
+    112
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Projet",
+   "topic": "Station-projet : étape 1 : documentation",
+   "objectives": [
+    "Guider les élèves dans la réalisation du projet."
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    113
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Compréhension de l’oral",
+   "topic": "Compréhension orale : « Les causes de la pollution de l’air »",
+   "objectives": [
+    "Découvrir la situation de communication.",
+    "Repérer des informations sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    119,
+    120
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Production de l’oral",
+   "topic": "Expression orale : « Les causes de la pollution de l’air »",
+   "objectives": [
+    "(Re)formuler le document écouté.",
+    "S’exprimer oralement sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    121
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Compréhension de l’écrit : « La pollution de l’air »",
+   "objectives": [
+    "Repérer les éléments paratextuels.",
+    "Identifier la situation de communication."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    122,
+    123,
+    124
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : « La pollution de l’air » + fiche phonétique",
+   "objectives": [
+    "Entraîner les élèves à la lecture.",
+    "Corriger les fautes de prononciation."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    125
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : la synonymie",
+   "objectives": [
+    "Identifier et employer : la synonymie"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    126,
+    127
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Grammaire",
+   "topic": "Grammaire : l’expression de la cause",
+   "objectives": [
+    "Identifier et employer : l’expression de la cause"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    128,
+    129
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : les verbes du 2e groupe au passé composé",
+   "objectives": [
+    "Identifier et employer : les verbes du 2e groupe au passé composé"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    130,
+    131
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Orthographe",
+   "topic": "Orthographe : l’accord du participe passé avec « avoir »",
+   "objectives": [
+    "Identifier et employer : l’accord du participe passé avec « avoir »"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    132,
+    133
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Production de l’écrit",
+   "topic": "Préparation de l’écrit : la pollution de l’air",
+   "objectives": [
+    "Préparer les élèves à l’écrit.",
+    "S’exprimer à l’écrit en suivant un modèle."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    134,
+    135
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Production de l’écrit",
+   "topic": "Production écrite : la pollution de l’eau",
+   "objectives": [
+    "S’exprimer à l’écrit.",
+    "Rédiger un court texte explicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    136
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Lecture",
+   "topic": "Lecture-plaisir : chansonnette + fiche phonétique",
+   "objectives": [
+    "Développer l’écoute et le plaisir de lire."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    137
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Production de l’écrit",
+   "topic": "Compte-rendu de la production écrite",
+   "objectives": [
+    "Initier les apprenants au code de la correction.",
+    "Identifier et corriger les fautes communes."
+   ],
+   "kind": "remediation",
+   "file": 0,
+   "pages": [
+    138,
+    139
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Projet",
+   "topic": "Station-projet : étape : la rédaction",
+   "objectives": [
+    "Guider les élèves dans la réalisation du projet."
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    140
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Compréhension de l’oral",
+   "topic": "Compréhension orale : « C’est quoi le changement climatique ? »",
+   "objectives": [
+    "Découvrir la situation de communication.",
+    "Repérer des informations sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    146,
+    147,
+    148
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Production de l’oral",
+   "topic": "Expression orale : « C’est quoi le changement climatique ? »",
+   "objectives": [
+    "(Re)formuler le document écouté.",
+    "S’exprimer oralement sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    149
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Compréhension de l’écrit : « Le changement climatique »",
+   "objectives": [
+    "Repérer les éléments paratextuels.",
+    "Identifier la situation de communication."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    150,
+    151,
+    152
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : « Le changement climatique » + fiche phonétique",
+   "objectives": [
+    "Entraîner les élèves à la lecture.",
+    "Corriger les fautes de prononciation."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    153
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : l’antonymie",
+   "objectives": [
+    "Identifier et employer : l’antonymie"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    154,
+    155
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Grammaire",
+   "topic": "Grammaire : l’expression de la conséquence",
+   "objectives": [
+    "Identifier et employer : l’expression de la conséquence"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    156,
+    157
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : les verbes du 3e groupe au passé composé",
+   "objectives": [
+    "Identifier et employer : les verbes du 3e groupe au passé composé"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    158,
+    159
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Orthographe",
+   "topic": "Orthographe : le participe passé des verbes du 3e groupe",
+   "objectives": [
+    "Identifier et employer : le participe passé des verbes du 3e groupe"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    160,
+    161
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Production de l’écrit",
+   "topic": "Préparation de l’écrit : le changement climatique",
+   "objectives": [
+    "Préparer les élèves à l’écrit.",
+    "S’exprimer à l’écrit en suivant un modèle."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    162,
+    163
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Production de l’écrit",
+   "topic": "Production écrite : la désertification",
+   "objectives": [
+    "S’exprimer à l’écrit.",
+    "Rédiger un court texte explicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    164
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Lecture",
+   "topic": "Lecture-plaisir : film documentaire",
+   "objectives": [
+    "Développer l’écoute et le plaisir de lire."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    165
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Production de l’écrit",
+   "topic": "Compte-rendu de la production écrite",
+   "objectives": [
+    "Initier les apprenants au code de la correction.",
+    "Identifier et corriger les fautes communes."
+   ],
+   "kind": "remediation",
+   "file": 0,
+   "pages": [
+    166,
+    167
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Projet",
+   "topic": "Station-projet : finalisation du dossier documentaire",
+   "objectives": [
+    "Guider les élèves dans la réalisation du projet."
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    168
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Projet",
+   "topic": "Situation problème du projet : recueil de consignes pour se comporter en éco-citoyen",
+   "objectives": [
+    "Comprendre la situation problème et les niveaux de compétence du projet."
+   ],
+   "kind": "situation",
+   "file": 0,
+   "pages": [
+    172,
+    173
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Compréhension de l’oral",
+   "topic": "Compréhension orale : « Luttons contre la pollution ! »",
+   "objectives": [
+    "Découvrir la situation de communication.",
+    "Repérer des informations sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    174,
+    175,
+    176
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Production de l’oral",
+   "topic": "Expression orale : « Luttons contre la pollution ! »",
+   "objectives": [
+    "(Re)formuler le document écouté.",
+    "S’exprimer oralement sur le thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    177
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Identification : « L’eau »",
+   "objectives": [
+    "Identifier le type de texte et son thème."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    178,
+    179
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Compréhension de l’écrit : « Les énergies renouvelables »",
+   "objectives": [
+    "Repérer les éléments paratextuels.",
+    "Identifier la situation de communication."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    180,
+    181,
+    182
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : « Les énergies renouvelables » + fiche phonétique",
+   "objectives": [
+    "Entraîner les élèves à la lecture.",
+    "Corriger les fautes de prononciation."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    183
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : la consigne et l’interdiction",
+   "objectives": [
+    "Identifier et employer : la consigne et l’interdiction"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    184,
+    185
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : l’impératif présent",
+   "objectives": [
+    "Identifier et employer : l’impératif présent"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    186,
+    187
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Grammaire",
+   "topic": "Grammaire : la phrase impérative",
+   "objectives": [
+    "Identifier et employer : la phrase impérative"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    188,
+    189
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Orthographe",
+   "topic": "Orthographe : les adverbes en « -ment »",
+   "objectives": [
+    "Identifier et employer : les adverbes en « -ment »"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    190,
+    191
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Production de l’écrit",
+   "topic": "Préparation de l’écrit : « L’énergie éolienne »",
+   "objectives": [
+    "Préparer les élèves à l’écrit.",
+    "S’exprimer à l’écrit en suivant un modèle."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    192,
+    193
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Production de l’écrit",
+   "topic": "Production écrite : rédiger des consignes sur l’utilisation des énergies renouvelables",
+   "objectives": [
+    "S’exprimer à l’écrit.",
+    "Rédiger un court texte explicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    194
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Lecture",
+   "topic": "Lecture-plaisir : film « C’est pas sorcier – Du solaire au pays de l’or noir »",
+   "objectives": [
+    "Développer l’écoute et le plaisir de lire."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    195
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Production de l’écrit",
+   "topic": "Compte-rendu de la production écrite",
+   "objectives": [
+    "Initier les apprenants au code de la correction.",
+    "Identifier et corriger les fautes communes."
+   ],
+   "kind": "remediation",
+   "file": 0,
+   "pages": [
+    196,
+    197
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Projet",
+   "topic": "Station-projet : étape 1 : la documentation et la rédaction",
+   "objectives": [
+    "Guider les élèves dans la réalisation du projet."
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    198
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Compréhension de l’oral",
+   "topic": "Compréhension orale : le recyclage et les énergies renouvelables",
+   "objectives": [
+    "Tester l’écoute de l’élève concernant les énergies renouvelables.",
+    "Repérer le champ lexical des énergies renouvelables."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    200,
+    201
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Production de l’oral",
+   "topic": "Expression orale : le comportement éco-citoyen (images)",
+   "objectives": [
+    "S’exprimer à partir d’images sur un comportement éco-citoyen."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    202,
+    203
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Compréhension de l’écrit : « Comment bien se comporter ? »",
+   "objectives": [
+    "Comprendre le texte et identifier la situation de communication.",
+    "Identifier le champ lexical d’un comportement éco-citoyen."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    204,
+    205,
+    206
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Lecture",
+   "topic": "Lecture-entraînement : « Un guide sur l’écocitoyenneté, pourquoi ? comment ? »",
+   "objectives": [
+    "Correction phonétique.",
+    "Respecter la ponctuation."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    207
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Vocabulaire",
+   "topic": "Vocabulaire : la famille de mots",
+   "objectives": [
+    "Reconnaître la famille de mots.",
+    "Former des phrases à partir des mots de la même famille."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    208,
+    209
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Grammaire",
+   "topic": "Grammaire : la tournure impersonnelle",
+   "objectives": [
+    "Identifier la tournure impersonnelle.",
+    "Produire une phrase avec la tournure impersonnelle."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    210,
+    211
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Conjugaison",
+   "topic": "Conjugaison : le mode infinitif et le mode subjonctif",
+   "objectives": [
+    "Reconnaître la morphologie des verbes à l’infinitif et au subjonctif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    212,
+    213,
+    214
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Orthographe",
+   "topic": "Orthographe : le futur simple et l’infinitif pour exprimer une consigne",
+   "objectives": [
+    "Connaître l’emploi du futur simple et de l’infinitif pour exprimer une consigne."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    215,
+    216
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Orthographe",
+   "topic": "Orthographe : les homophones grammaticaux a/à, est/et, ces/ses",
+   "objectives": [
+    "Connaître, identifier et utiliser les homophones grammaticaux."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    217,
+    218
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Production de l’écrit",
+   "topic": "Préparation de l’écrit : expliquer un comportement éco-citoyen",
+   "objectives": [
+    "Préparer la production écrite pour expliquer un comportement éco-citoyen."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    219,
+    220
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Production de l’écrit",
+   "topic": "Compte-rendu de la production écrite",
+   "objectives": [
+    "Corriger les fautes commises par les apprenants.",
+    "Améliorer le paragraphe d’un élève."
+   ],
+   "kind": "remediation",
+   "file": 0,
+   "pages": [
+    221,
+    222
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 8,
+   "domain": "Projet",
+   "topic": "Mon projet : rédaction et amélioration du premier jet",
+   "objectives": [
+    "Expliquer l’importance d’un comportement éco-citoyen dans un documentaire.",
+    "Améliorer le premier jet d’écriture."
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    223,
+    224
+   ],
+   "hours": null,
+   "week": null
+  }
+ ],
+ "notes": "Recueil de fiches 1AM (224 p.) assemblé à partir de plusieurs livrets : Projet 1 (« brochure pour vivre sainement », 3 séquences, p.1-84, CEM FERG Mohamed – Ouled Maâreuf, 2016) ; Projet 2 (« dossier documentaire sur les progrès de la science et leurs conséquences », 3 séquences, p.85-168, M. SALMI Ahmed, 2017) ; Projet 3 séquence 1 (« recueil de consignes pour se comporter en éco-citoyen », p.169-198, M. SALMI Ahmed) et Projet 3 séquence 2 (p.199-224, Mansour Chakib). Manque : Projet 3 séquence 3. Pages de couverture, citations, sommaires et compétences de chaque livret exclues ; les situations-problèmes des projets sont incluses une seule fois (kind=situation). Le texte des p.85-198 est illisible (polices encodées) : séances et thèmes relevés sur les images, objectifs génériques par type de séance. Erreurs de la source : en P1 les fiches « Préparation de l’écrit » des séquences 2 et 3 portent l’en-tête « Séquence 01 » ; en P3S1 la production écrite porte le thème « la désertification » (copié de P2S3) — remplacé par un intitulé générique ; P3S2 n’a pas de fiche « production écrite » distincte (intégrée à la préparation de l’écrit, p.219-220). Dates indiquées (« Le : /09/2016 », etc.) mais pas de numéro de semaine."
+}

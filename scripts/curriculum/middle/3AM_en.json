@@ -1,0 +1,798 @@
+{
+ "id": "3AM_en",
+ "level": "3AM",
+ "subject": "en",
+ "language": "en",
+ "kind": "memos",
+ "files": [
+  "1L29HHGI8rSqJ58v6MlvGgo-KqpeoE2Zd"
+ ],
+ "filePages": [
+  109
+ ],
+ "segments": {
+  "1": "Sequence 1: Me, my abilities, my interests and my personality",
+  "2": "Sequence 2: Me and lifestyles",
+  "3": "Sequence 3: Me and my scientific world",
+  "4": "Sequence 4: Me and my environment"
+ },
+ "lessons": [
+  {
+   "segment": 1,
+   "domain": "Initial situation",
+   "topic": "Initial situation: the \"Best Personal Profile\" competition",
+   "objectives": [
+    "Present the sequence project: write a personal profile"
+   ],
+   "kind": "situation",
+   "file": 0,
+   "pages": [
+    3
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Talking about interests (adverbs of frequency always/never)",
+   "objectives": [
+    "Talk about their interests using adverbs of frequency (always / never)"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    4,
+    5
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "My grammar tools",
+   "topic": "Abilities and inabilities: can / can't",
+   "objectives": [
+    "Ask and answer questions about abilities and inabilities using can and can't"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    6,
+    7,
+    8
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Asking about personal information and interests",
+   "objectives": [
+    "Ask and answer other people questions about their personal information and interests"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    9,
+    10
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "My grammar tools",
+   "topic": "Describing personality (adjectives)",
+   "objectives": [
+    "Describe his personality and ask and talk about other people's personality using different adjectives"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    11,
+    12
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I pronounce",
+   "topic": "Pronunciation of the final \"s\"",
+   "objectives": [
+    "Write a report about a peer's interests with the right pronunciation of the final \"s\""
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    13,
+    14
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I read and do",
+   "topic": "I read and do 1: famous people",
+   "objectives": [
+    "Read a text and gather information about famous people"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    15,
+    16
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I read and do",
+   "topic": "I read and do 2: Imzad culture and the Touareg",
+   "objectives": [
+    "Read a text and gather information about Imzad culture and the Touareg"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    17,
+    18
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I learn to integrate",
+   "topic": "I learn to integrate: writing Mohamed Farah's profile",
+   "objectives": [
+    "Work in groups to write Mohamed Farah's profile"
+   ],
+   "kind": "integration",
+   "file": 0,
+   "pages": [
+    19,
+    20
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Initial situation",
+   "topic": "Starting-off situation: childhood memories and lifestyles in the past",
+   "objectives": [
+    "Present the sequence project: write about memories for an international blog"
+   ],
+   "kind": "situation",
+   "file": 0,
+   "pages": [
+    22
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "My grammar tools",
+   "topic": "Used to: talking about past habits and memories",
+   "objectives": [
+    "Talk and ask questions about past events, memories and experiences using the semi-modal used to"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    23,
+    24
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I listen and do",
+   "topic": "I listen and do 1: grandparents' old days lifestyles",
+   "objectives": [
+    "Talk about grandparents' old days lifestyles"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    25,
+    26
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I listen and do",
+   "topic": "I listen and do 2: clothing past and present",
+   "objectives": [
+    "Ask and talk about clothing related to past and present daily and special wear and school uniform"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    27,
+    28
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I listen and do",
+   "topic": "I listen and do 3: children's games past and present",
+   "objectives": [
+    "Ask and talk about past and present children's games using used to"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    29
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "My grammar tools",
+   "topic": "Simple past and the time marker \"ago\" (+ consolidation worksheet)",
+   "objectives": [
+    "Ask and talk about past actions/activities using the simple past and \"ago\""
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    30,
+    31,
+    32,
+    33
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "My grammar tools",
+   "topic": "Adverbs of frequency: how often",
+   "objectives": [
+    "Say and ask questions about how often actions and events are repeated using adverbs of frequency"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    34,
+    35
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I pronounce",
+   "topic": "I pronounce 1: vowel sounds /uː/ /ʊ/ /ɜː/ /ə/",
+   "objectives": [
+    "Talk about memories using a correct pronunciation of the vowel sounds /uː/ /ʊ/ /ɜː/ /ə/"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    36,
+    37
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I pronounce",
+   "topic": "I pronounce 2: vowel sounds /æ/ /ʌ/ /e/",
+   "objectives": [
+    "Pronounce correctly the vowel sounds /æ/ /ʌ/ /e/"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    38
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I pronounce",
+   "topic": "I pronounce 3: silent letters t and w",
+   "objectives": [
+    "Identify the silent letters t and w"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    39
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "My grammar tools",
+   "topic": "Describing clothes, costumes and traditional dishes (made of / made in / made with)",
+   "objectives": [
+    "Describe clothes and costumes, the material they are made of and where they are made",
+    "Describe traditional dishes and their ingredients"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    40,
+    41,
+    42
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I read and do",
+   "topic": "I read and do 1: Setif in the past",
+   "objectives": [
+    "Read a text about Setif in the past and gather information"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    43,
+    44
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I read and do",
+   "topic": "I read and do 2: Constantine in the past",
+   "objectives": [
+    "Read a text and gather information about Constantine in the past"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    45,
+    46
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I learn to integrate",
+   "topic": "I learn to integrate: video interview about Grandparents Day",
+   "objectives": [
+    "Work in pairs to make a video interview about Grandparents Day and act it out"
+   ],
+   "kind": "integration",
+   "file": 0,
+   "pages": [
+    47,
+    48
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Initial situation",
+   "topic": "Initial situation: Science Day (biography of a famous scientist)",
+   "objectives": [
+    "Present the sequence project: write biographical information about a famous scientist for the school magazine"
+   ],
+   "kind": "situation",
+   "file": 0,
+   "pages": [
+    49,
+    50
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I listen and do",
+   "topic": "I listen and do 1: from an ID card to a dialogue (Dr Bourouis)",
+   "objectives": [
+    "Transform biographical information from an ID card format to a dialogue format"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    51,
+    52
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I listen and do",
+   "topic": "I listen and do 2: from an ID card to a plain text",
+   "objectives": [
+    "Transform biographical information from an ID card format to a plain text"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    53,
+    54
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "My grammar tools",
+   "topic": "Past continuous (and while) (+ worksheet)",
+   "objectives": [
+    "Talk about past actions using the past continuous tense"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    55,
+    56,
+    57
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I pronounce",
+   "topic": "Pronunciation of /f/ and /v/",
+   "objectives": [
+    "Talk about famous people using correct pronunciation of the sounds /f/ and /v/"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    58,
+    59
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "My grammar tools",
+   "topic": "Making polite requests (can / may)",
+   "objectives": [
+    "Make a polite request using can and may"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    60,
+    61
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I listen and do",
+   "topic": "I listen and do 3: biographical information in chronological order",
+   "objectives": [
+    "Organise biographical information in chronological order",
+    "Ask and answer questions about famous people"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    62,
+    63
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "My grammar tools",
+   "topic": "Relative pronouns who and which: famous people's achievements",
+   "objectives": [
+    "Talk about famous people's achievements using the relative pronouns who and which"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    64,
+    65
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I read and do",
+   "topic": "I read and do: Ibn Sina and Ibn al-Haytham",
+   "objectives": [
+    "Read texts about famous people and gather information"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    66,
+    67,
+    68
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Initial situation",
+   "topic": "Initial situation session: protecting the environment (Greenpeace article)",
+   "objectives": [
+    "Interact orally to suggest solutions to environmental problems",
+    "Present the sequence project"
+   ],
+   "kind": "situation",
+   "file": 0,
+   "pages": [
+    69,
+    70,
+    71,
+    72
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I listen and do",
+   "topic": "I listen and do 1: biodiversity and national parks in Algeria",
+   "objectives": [
+    "Listen to a text and do tasks using lexis related to the environment and Algerian fauna and flora"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    73,
+    74
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I listen and do",
+   "topic": "I listen and do 2: Eco-Schools and the problem of litter",
+   "objectives": [
+    "Discuss the causes and effects of litter in the community and give solutions"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    75,
+    76,
+    77,
+    78
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Tutorial session",
+   "topic": "Tutorial session: using a dictionary – litter and environment lexis",
+   "objectives": [
+    "Use dictionaries to look up the meaning of an English word correctly",
+    "Use topical lexis related to litter and the environment"
+   ],
+   "kind": "other",
+   "file": 0,
+   "pages": [
+    79
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I listen and do",
+   "topic": "I listen and do 3: endangered animals in Algeria",
+   "objectives": [
+    "Identify some endangered animals in Algeria and make a poster to save them"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    80,
+    81
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "My grammar tools",
+   "topic": "Present perfect",
+   "objectives": [
+    "Talk about present activities using the present perfect"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    82,
+    83
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "My grammar tools",
+   "topic": "Present perfect with since / for / how long (+ worksheet)",
+   "objectives": [
+    "Use the present perfect with since, for and how long"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    84,
+    85,
+    86
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I practise",
+   "topic": "I practise: obligation and prohibition (must / mustn't, should / shouldn't)",
+   "objectives": [
+    "Express strong obligation and prohibition using must and mustn't",
+    "Express mild obligation using should and shouldn't"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    87,
+    88
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I practise",
+   "topic": "I practise: recommendations and a school eco-charter (imperative)",
+   "objectives": [
+    "Give recommendations and make a school eco-charter using the imperative"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    89,
+    90
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Tutorial session",
+   "topic": "Tutorial session: Environment Day poster",
+   "objectives": [
+    "Work in groups to make an Environment Day poster"
+   ],
+   "kind": "project",
+   "file": 0,
+   "pages": [
+    91
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I practise",
+   "topic": "I practise: causes and consequences of litter (as/because, so/therefore)",
+   "objectives": [
+    "Talk and write about causes and consequences of litter using as/because and so/therefore"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    97,
+    98
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I practise",
+   "topic": "I practise: comparative of superiority (endangered fauna and flora)",
+   "objectives": [
+    "Compare the danger facing the Algerian fauna and flora using the comparative of superiority"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    99,
+    100
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I pronounce",
+   "topic": "My pronunciation tools 1: the sounds /ʒ/ and /dʒ/",
+   "objectives": [
+    "Pronounce words containing the sounds /ʒ/ and /dʒ/ correctly"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    101,
+    102
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I pronounce",
+   "topic": "My pronunciation tools 2: silent letters w, h, k, t",
+   "objectives": [
+    "Identify the silent letters w, h, k, t"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    103,
+    104
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I pronounce",
+   "topic": "My pronunciation tools 3: intonation in questions",
+   "objectives": [
+    "Ask different questions using a correct intonation"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    105
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "I read and do",
+   "topic": "I read and do: the litter we throw every day",
+   "objectives": [
+    "Read a text and sort out information"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    106,
+    107
+   ],
+   "hours": 1,
+   "week": null
+  }
+ ],
+ "notes": "Lesson plans by Mr Bendoubaba Djamel (Bormadia, Relizane), 109 p., 2nd-generation programme, all 4 sequences of MS3 (Me, my abilities...; Me and lifestyles; Me and my scientific world; Me and my environment). Skipped: cover (p1), Bloom's taxonomy pages (p2, p21). Duplicates skipped: p92-96 repeat p87-91 (two 'I practise' plans + poster tutorial), and p108-109 ('I read and do 2') is an almost identical copy of p106-107. Some plans include worksheets/handouts at the end (p8, p32-33, p57, p66, p85-86) kept with their lesson. Sequence 3 has no 'I learn to integrate' plan and Sequence 4 none either; no evaluation sessions. Several sub-sessions (p38, p39, p84, p103, p105) have no header and were attributed by content. Lesson order follows the file."
+}

@@ -1,0 +1,973 @@
+{
+ "id": "4AM_en",
+ "level": "4AM",
+ "subject": "en",
+ "language": "en",
+ "kind": "memos",
+ "files": [
+  "1mUECoj_PPqVFDgYQWsdrgXjgxecoGD1w"
+ ],
+ "filePages": [
+  155
+ ],
+ "segments": {
+  "1": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+  "2": "Sequence 2: Me, My Personality and Life Experiences",
+  "3": "Sequence 3: Me, My Community and Citizenship"
+ },
+ "lessons": [
+  {
+   "segment": 1,
+   "domain": "Prerequisites review",
+   "topic": "Prerequisites: Simple Past (regular / irregular verbs) worksheets",
+   "objectives": [
+    "Review and consolidate the simple past (all forms)",
+    "Review adjectives and comparatives"
+   ],
+   "kind": "remediation",
+   "file": 0,
+   "pages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Initial situation",
+   "topic": "Initial situation: launching the sequence (famous landmarks; guided tour project)",
+   "objectives": [
+    "Stimulate the learners’ interest and announce the topics of the new sequence"
+   ],
+   "kind": "situation",
+   "file": 0,
+   "pages": [
+    12,
+    13,
+    14,
+    15
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Preparing a guided tour of famous places",
+   "objectives": [
+    "Prepare a guided tour showing famous places in their city, region or country",
+    "Use adjectives and sequencers"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    16,
+    17,
+    18
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Writing about famous monuments",
+   "objectives": [
+    "Write a short paragraph about famous monuments"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    19,
+    20
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I practise",
+   "topic": "The passive voice: describing a famous monument (The Statue of Liberty)",
+   "objectives": [
+    "Write a short paragraph describing a famous monument using the passive voice"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    21,
+    22,
+    23,
+    24
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Biographies of outstanding figures",
+   "objectives": [
+    "Write a short paragraph using biographical information about outstanding figures",
+    "Use the simple past (regular / irregular verbs)"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    25,
+    26
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I practise",
+   "topic": "Discourse markers of chronology",
+   "objectives": [
+    "Organise a series of actions and events using first, then, next…"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    27,
+    28
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I practise",
+   "topic": "Base and strong adjectives: talking about landmarks and figures",
+   "objectives": [
+    "Talk about famous landmarks and outstanding figures using strong adjectives"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    29,
+    30
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I practise",
+   "topic": "Comparing landmarks and famous figures",
+   "objectives": [
+    "Compare landmarks and famous figures"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    31,
+    32
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Describing an itinerary",
+   "objectives": [
+    "Describe an itinerary and identify its components"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    33,
+    34
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Filling in an ID card and a fact file",
+   "objectives": [
+    "Listen to conversations and fill in an ID card and a fact file",
+    "Use the comparative of equality and inferiority"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    35,
+    36
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Asking and answering about historic tourist attractions",
+   "objectives": [
+    "Ask and answer questions to give information about historic tourist attractions"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    37,
+    38
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Asking and answering about an outstanding figure + review and consolidation (comparatives)",
+   "objectives": [
+    "Ask and answer questions about an outstanding figure",
+    "Transform the information of an ID card into a paragraph"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    39,
+    40,
+    41,
+    42
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Comparing landmarks",
+   "objectives": [
+    "Compare landmarks"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    43,
+    44
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I listen and do",
+   "topic": "Describing an itinerary and summarising",
+   "objectives": [
+    "Describe an itinerary",
+    "Summarise the most important points"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    45,
+    46
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I practise",
+   "topic": "Cause and effect (discourse markers)",
+   "objectives": [
+    "Identify cause and effect using discourse markers"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    47,
+    48,
+    49
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I pronounce",
+   "topic": "Consonant clusters",
+   "objectives": [
+    "Give information about famous landmarks",
+    "Recognise consonant clusters"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    50,
+    51
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I pronounce",
+   "topic": "Diphthongs",
+   "objectives": [
+    "Recognise and pronounce diphthongs correctly"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    52,
+    53
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I read and do",
+   "topic": "I read and do 1: a text about an outstanding figure",
+   "objectives": [
+    "Read a text about an outstanding figure and gather information"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    54,
+    55
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I read and do",
+   "topic": "I read and do 2: a text about a famous landmark",
+   "objectives": [
+    "Read a text about a famous landmark and gather information"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    56,
+    57
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "I learn to integrate",
+   "topic": "I learn to integrate: writing a report about a tour",
+   "objectives": [
+    "Work in small groups and write a report about a tour"
+   ],
+   "kind": "integration",
+   "file": 0,
+   "pages": [
+    58,
+    59
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Initial situation",
+   "topic": "Prerequisites and initial situation: launching the sequence",
+   "objectives": [
+    "Announce the communicative intention of the sequence (topic, discourse, structure)",
+    "Stimulate the learners’ curiosity"
+   ],
+   "kind": "situation",
+   "file": 0,
+   "pages": [
+    61,
+    62,
+    63,
+    64
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I listen and do",
+   "topic": "Childhood events and school memories",
+   "objectives": [
+    "Narrate significant childhood events and school memories after developing listening strategies"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    65,
+    66
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I practise",
+   "topic": "Present perfect: memories and experiences (pronunciation of have / has)",
+   "objectives": [
+    "Write about memories and experiences using the present perfect and time markers",
+    "Pronounce have / has correctly"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    67,
+    68,
+    69,
+    70
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I listen and do",
+   "topic": "My dream career (oral presentation)",
+   "objectives": [
+    "Give a short oral presentation about his/her dream career"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    71,
+    72
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I practise",
+   "topic": "Superlatives: people’s personalities and life experiences",
+   "objectives": [
+    "Ask and answer questions about personalities and life experiences using the superlative of superiority"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    73,
+    74,
+    75
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I listen and do",
+   "topic": "Ideal teachers and friends",
+   "objectives": [
+    "Seek information on the web and describe their ideal teachers or friends"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    76,
+    77
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I write",
+   "topic": "Writing a formal letter",
+   "objectives": [
+    "Write a formal letter and identify its format"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    78
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I practise",
+   "topic": "Comparison and contrast markers: comparing personalities",
+   "objectives": [
+    "Compare different personalities expressing similarities and differences"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    79,
+    80
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I practise",
+   "topic": "Past continuous and simple past (pronunciation of was / were)",
+   "objectives": [
+    "Report significant events in people’s lives using the past continuous and the simple past"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    81,
+    82,
+    83
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I pronounce",
+   "topic": "I pronounce 1: pronunciation of final -ed",
+   "objectives": [
+    "Talk about what people did in the past pronouncing final -ed correctly"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    84,
+    85
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I practise",
+   "topic": "Prefixes of opposites: describing ideal friends",
+   "objectives": [
+    "Describe ideal friends and people around them using prefixes of antonyms"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    86,
+    87
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I practise",
+   "topic": "Lexis practice: narrating childhood events and life experiences",
+   "objectives": [
+    "Practise lexis and narrate childhood events using the simple past"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    88,
+    89
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I listen and do",
+   "topic": "Kateb Yacine’s childhood memories",
+   "objectives": [
+    "Write a short narrative paragraph about Kateb Yacine’s childhood memories during French colonialism"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    90,
+    91,
+    92,
+    93
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I pronounce",
+   "topic": "I pronounce 2: triphthongs",
+   "objectives": [
+    "Discriminate and pronounce English triphthongs correctly"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    94,
+    95
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I read and do",
+   "topic": "I read and do 1: feelings, emotions and dreams",
+   "objectives": [
+    "Read a text about someone’s feelings, emotions and dreams and gather information"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    96,
+    97
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I read and do",
+   "topic": "I read and do 2: Zohra Drif’s memories and experiences",
+   "objectives": [
+    "Read a text about Mrs Zohra Drif’s memories and experiences and sort out information"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    98,
+    99
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I learn to integrate",
+   "topic": "I learn to integrate: a web article comparing two outstanding figures’ childhood memories",
+   "objectives": [
+    "Work in small groups and write a web article comparing two outstanding figures’ childhood and school memories"
+   ],
+   "kind": "integration",
+   "file": 0,
+   "pages": [
+    100,
+    101
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I think and write",
+   "topic": "I think and write: a letter to an outstanding figure",
+   "objectives": [
+    "Write a letter to an outstanding figure asking about his/her childhood memories, dreams and experiences"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    102,
+    103
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "I read and do",
+   "topic": "I read and enjoy / I read and do: Moufdi Zakaria, the poet of the Algerian revolution",
+   "objectives": [
+    "Read a text and gather information about Moufdi Zakaria"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    104,
+    105,
+    106,
+    107
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Initial situation",
+   "topic": "Prerequisites and initial situation: launching the sequence",
+   "objectives": [
+    "Announce the communicative intention of the sequence (topic, discourse, structure)",
+    "Stimulate the learners’ curiosity"
+   ],
+   "kind": "situation",
+   "file": 0,
+   "pages": [
+    109,
+    110,
+    111,
+    112
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I listen and do",
+   "topic": "Listening to advice",
+   "objectives": [
+    "Listen to a piece of advice, gather information and give their opinions about it"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    113,
+    114
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Listening and speaking",
+   "topic": "Listening to opinions: class debate and argumentative text",
+   "objectives": [
+    "Listen to others’ opinions and participate in a class debate",
+    "Write an argumentative text giving arguments in order"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    115,
+    116
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I write",
+   "topic": "I write: an argumentative text using sequencers (group work)",
+   "objectives": [
+    "Work with partners to write an argumentative text using sequencers"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    117
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I practise",
+   "topic": "Giving advice: imperatives, should / shouldn’t",
+   "objectives": [
+    "Give advice and recommendations using imperatives and the modals should / shouldn’t"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    118,
+    119
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I practise",
+   "topic": "Conditional type 1",
+   "objectives": [
+    "Listen to a piece of advice, analyse it and give opinions using conditional type 1"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    127,
+    128
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Listening and speaking",
+   "topic": "Oral presentation about something important",
+   "objectives": [
+    "Give an oral presentation before classmates about something important"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    129,
+    130
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I speak",
+   "topic": "I speak: presenting a bio card",
+   "objectives": [
+    "Present orally to the class"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    131
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Listening and speaking",
+   "topic": "Eating habits and table manners",
+   "objectives": [
+    "Talk about family eating habits and table manners"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    132,
+    133
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I practise",
+   "topic": "Giving instructions with the imperative + consolidation",
+   "objectives": [
+    "Give instructions using the imperative"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    134,
+    135,
+    136
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I practise",
+   "topic": "Likes, dislikes and hobbies (pronunciation of /ŋ/)",
+   "objectives": [
+    "Talk about likes, dislikes and hobbies",
+    "Pronounce the /ŋ/ sound correctly"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    137,
+    138,
+    139
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I pronounce",
+   "topic": "Silent letters: sharing opinions",
+   "objectives": [
+    "Share opinions with correct pronunciation",
+    "Identify silent letters"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    140,
+    141
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Tutorial session",
+   "topic": "Tutorial session: sharing opinions on different issues",
+   "objectives": [
+    "Share opinions and give a point of view freely on different issues"
+   ],
+   "kind": "remediation",
+   "file": 0,
+   "pages": [
+    147
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I read and do",
+   "topic": "I read and do 1: globalisation (argumentative text)",
+   "objectives": [
+    "Read an argumentative text about globalisation and sort out information",
+    "Discuss and defend opinions about globalisation"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    148,
+    149
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I read and do",
+   "topic": "I read and do 2: charities",
+   "objectives": [
+    "Read a text about charities and sort out information"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    150,
+    151
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I learn to integrate",
+   "topic": "I learn to integrate: an open letter on cultural globalisation",
+   "objectives": [
+    "Work in small groups and write an open letter weighing up the pros and cons of cultural globalisation"
+   ],
+   "kind": "integration",
+   "file": 0,
+   "pages": [
+    152,
+    153
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "I think and write",
+   "topic": "I think and write: an open letter to the Algerian youth about globalisation",
+   "objectives": [
+    "Write an open letter weighing up the pros and cons of globalisation and expressing their point of view"
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    154,
+    155
+   ],
+   "hours": 1,
+   "week": null
+  }
+ ],
+ "notes": "Lesson plans 4MS, all three sequences, by Mr Bendoubaba Djamel (Bormadia, Relizane). Each sequence opens with a cover page (p. 1, 60, 108 — skipped), prerequisites and an initial-situation session; sequence 1 also has 9 pages of Simple Past review worksheets (p. 3–11, kept as remediation). Duplicated pages skipped: 120–126 (= 113–119), 142–143 (= 140–141) and 144–146 (near-copy of 137–139). Some session headers are mislabeled (p. 106 says “Sequence 1 Me and my personality”, p. 148/150 say “Sequence 2” but belong to sequence 3). Several pages use a broken font in pdftotext (shifted characters); titles were rebuilt from the decoded text and page images. Lesson order follows the file; it is not strictly the textbook order (I listen and do / I pronounce / I read and do / I learn to integrate / I think and write). Duration not stated (1 h assumed)."
+}

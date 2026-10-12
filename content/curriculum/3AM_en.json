@@ -1,0 +1,1087 @@
+{
+ "id": "3AM_en",
+ "level": "3AM",
+ "subject": "en",
+ "title": "English — السنة الثالثة متوسط",
+ "source": {
+  "ar": "مذكرات أساتذة منشورة للعموم (مناهج الجيل الثاني) من مجلد «التعليم المتوسط»؛ الأسابيع تقديرية موزّعة على رزنامة 2026-2027 في غياب المخطط السنوي الرسمي",
+  "fr": "Fiches d'enseignants partagées publiquement (programmes de 2e génération) ; semaines estimées sur le calendrier 2026-2027"
+ },
+ "weekMode": "absolute",
+ "segments": {
+  "1": "Sequence 1: Me, my abilities, my interests and my personality",
+  "2": "Sequence 2: Me and lifestyles",
+  "3": "Sequence 3: Me and my scientific world",
+  "4": "Sequence 4: Me and my environment"
+ },
+ "sources": {
+  "b": {
+   "pdf": [
+    "1L29HHGI8rSqJ58v6MlvGgo-KqpeoE2Zd"
+   ]
+  }
+ },
+ "lessons": [
+  {
+   "order": 1,
+   "unitKind": "week",
+   "unit": 1,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, my abilities, my interests and my personality",
+   "activity": "English",
+   "session": "English",
+   "domain": "Diagnostic assessment",
+   "topic": "Diagnostic assessment",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 2,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, my abilities, my interests and my personality",
+   "activity": "English",
+   "session": "English",
+   "domain": "Initial situation",
+   "topic": "Initial situation: the \"Best Personal Profile\" competition",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Present the sequence project: write a personal profile"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:3"
+   ]
+  },
+  {
+   "order": 3,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, my abilities, my interests and my personality",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Talking about interests (adverbs of frequency always/never)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about their interests using adverbs of frequency (always / never)"
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "b:4",
+    "b:5"
+   ]
+  },
+  {
+   "order": 4,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, my abilities, my interests and my personality",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Abilities and inabilities: can / can't",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Ask and answer questions about abilities and inabilities using can and can't"
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "b:6",
+    "b:7",
+    "b:8"
+   ]
+  },
+  {
+   "order": 5,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, my abilities, my interests and my personality",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Asking about personal information and interests",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Ask and answer other people questions about their personal information and interests"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:9",
+    "b:10"
+   ]
+  },
+  {
+   "order": 6,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, my abilities, my interests and my personality",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Describing personality (adjectives)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Describe his personality and ask and talk about other people's personality using different adjectives"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:11",
+    "b:12"
+   ]
+  },
+  {
+   "order": 7,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, my abilities, my interests and my personality",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "Pronunciation of the final \"s\"",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write a report about a peer's interests with the right pronunciation of the final \"s\""
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:13",
+    "b:14"
+   ]
+  },
+  {
+   "order": 8,
+   "unitKind": "week",
+   "unit": 5,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, my abilities, my interests and my personality",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do 1: famous people",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text and gather information about famous people"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:15",
+    "b:16"
+   ]
+  },
+  {
+   "order": 9,
+   "unitKind": "week",
+   "unit": 5,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, my abilities, my interests and my personality",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do 2: Imzad culture and the Touareg",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text and gather information about Imzad culture and the Touareg"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:17",
+    "b:18"
+   ]
+  },
+  {
+   "order": 10,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, my abilities, my interests and my personality",
+   "activity": "English",
+   "session": "English",
+   "domain": "I learn to integrate",
+   "topic": "I learn to integrate: writing Mohamed Farah's profile",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Work in groups to write Mohamed Farah's profile"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:19",
+    "b:20"
+   ]
+  },
+  {
+   "order": 11,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "Initial situation",
+   "topic": "Starting-off situation: childhood memories and lifestyles in the past",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Present the sequence project: write about memories for an international blog"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:22"
+   ]
+  },
+  {
+   "order": 12,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Used to: talking about past habits and memories",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk and ask questions about past events, memories and experiences using the semi-modal used to"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:23",
+    "b:24"
+   ]
+  },
+  {
+   "order": 13,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "I listen and do 1: grandparents' old days lifestyles",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about grandparents' old days lifestyles"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:25",
+    "b:26"
+   ]
+  },
+  {
+   "order": 14,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "I listen and do 2: clothing past and present",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Ask and talk about clothing related to past and present daily and special wear and school uniform"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:27",
+    "b:28"
+   ]
+  },
+  {
+   "order": 15,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "I listen and do 3: children's games past and present",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Ask and talk about past and present children's games using used to"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:29"
+   ]
+  },
+  {
+   "order": 16,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Simple past and the time marker \"ago\" (+ consolidation worksheet)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Ask and talk about past actions/activities using the simple past and \"ago\""
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:30",
+    "b:31",
+    "b:32",
+    "b:33"
+   ]
+  },
+  {
+   "order": 17,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Adverbs of frequency: how often",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Say and ask questions about how often actions and events are repeated using adverbs of frequency"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:34",
+    "b:35"
+   ]
+  },
+  {
+   "order": 18,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "I pronounce 1: vowel sounds /uː/ /ʊ/ /ɜː/ /ə/",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about memories using a correct pronunciation of the vowel sounds /uː/ /ʊ/ /ɜː/ /ə/"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:36",
+    "b:37"
+   ]
+  },
+  {
+   "order": 19,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "I pronounce 2: vowel sounds /æ/ /ʌ/ /e/",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Pronounce correctly the vowel sounds /æ/ /ʌ/ /e/"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:38"
+   ]
+  },
+  {
+   "order": 20,
+   "unitKind": "week",
+   "unit": 11,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "I pronounce 3: silent letters t and w",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Identify the silent letters t and w"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:39"
+   ]
+  },
+  {
+   "order": 21,
+   "unitKind": "week",
+   "unit": 11,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Describing clothes, costumes and traditional dishes (made of / made in / made with)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Describe clothes and costumes, the material they are made of and where they are made",
+    "Describe traditional dishes and their ingredients"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:40",
+    "b:41",
+    "b:42"
+   ]
+  },
+  {
+   "order": 22,
+   "unitKind": "week",
+   "unit": 13,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "Remedial work",
+   "topic": "Term 1 exam correction and remedial work",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 23,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do 1: Setif in the past",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text about Setif in the past and gather information"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:43",
+    "b:44"
+   ]
+  },
+  {
+   "order": 24,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do 2: Constantine in the past",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text and gather information about Constantine in the past"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:45",
+    "b:46"
+   ]
+  },
+  {
+   "order": 25,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "I learn to integrate",
+   "topic": "I learn to integrate: video interview about Grandparents Day",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Work in pairs to make a video interview about Grandparents Day and act it out"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:47",
+    "b:48"
+   ]
+  },
+  {
+   "order": 26,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my scientific world",
+   "activity": "English",
+   "session": "English",
+   "domain": "Initial situation",
+   "topic": "Initial situation: Science Day (biography of a famous scientist)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Present the sequence project: write biographical information about a famous scientist for the school magazine"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:49",
+    "b:50"
+   ]
+  },
+  {
+   "order": 27,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my scientific world",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "I listen and do 1: from an ID card to a dialogue (Dr Bourouis)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Transform biographical information from an ID card format to a dialogue format"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:51",
+    "b:52"
+   ]
+  },
+  {
+   "order": 28,
+   "unitKind": "week",
+   "unit": 17,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my scientific world",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "I listen and do 2: from an ID card to a plain text",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Transform biographical information from an ID card format to a plain text"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:53",
+    "b:54"
+   ]
+  },
+  {
+   "order": 29,
+   "unitKind": "week",
+   "unit": 17,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my scientific world",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Past continuous (and while) (+ worksheet)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about past actions using the past continuous tense"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:55",
+    "b:56",
+    "b:57"
+   ]
+  },
+  {
+   "order": 30,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my scientific world",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "Pronunciation of /f/ and /v/",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about famous people using correct pronunciation of the sounds /f/ and /v/"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:58",
+    "b:59"
+   ]
+  },
+  {
+   "order": 31,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my scientific world",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Making polite requests (can / may)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Make a polite request using can and may"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:60",
+    "b:61"
+   ]
+  },
+  {
+   "order": 32,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my scientific world",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "I listen and do 3: biographical information in chronological order",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Organise biographical information in chronological order",
+    "Ask and answer questions about famous people"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:62",
+    "b:63"
+   ]
+  },
+  {
+   "order": 33,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my scientific world",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Relative pronouns who and which: famous people's achievements",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about famous people's achievements using the relative pronouns who and which"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:64",
+    "b:65"
+   ]
+  },
+  {
+   "order": 34,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my scientific world",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do: Ibn Sina and Ibn al-Haytham",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read texts about famous people and gather information"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:66",
+    "b:67",
+    "b:68"
+   ]
+  },
+  {
+   "order": 35,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "Initial situation",
+   "topic": "Initial situation session: protecting the environment (Greenpeace article)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Interact orally to suggest solutions to environmental problems",
+    "Present the sequence project"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:69",
+    "b:70",
+    "b:71",
+    "b:72"
+   ]
+  },
+  {
+   "order": 36,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "I listen and do 1: biodiversity and national parks in Algeria",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Listen to a text and do tasks using lexis related to the environment and Algerian fauna and flora"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:73",
+    "b:74"
+   ]
+  },
+  {
+   "order": 37,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "I listen and do 2: Eco-Schools and the problem of litter",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Discuss the causes and effects of litter in the community and give solutions"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:75",
+    "b:76",
+    "b:77",
+    "b:78"
+   ]
+  },
+  {
+   "order": 38,
+   "unitKind": "week",
+   "unit": 24,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and lifestyles",
+   "activity": "English",
+   "session": "English",
+   "domain": "Remedial work",
+   "topic": "Term 2 exam correction and remedial work",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 39,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "Tutorial session",
+   "topic": "Tutorial session: using a dictionary – litter and environment lexis",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Use dictionaries to look up the meaning of an English word correctly",
+    "Use topical lexis related to litter and the environment"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:79"
+   ]
+  },
+  {
+   "order": 40,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "I listen and do 3: endangered animals in Algeria",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Identify some endangered animals in Algeria and make a poster to save them"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:80",
+    "b:81"
+   ]
+  },
+  {
+   "order": 41,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Present perfect",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about present activities using the present perfect"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:82",
+    "b:83"
+   ]
+  },
+  {
+   "order": 42,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "My grammar tools",
+   "topic": "Present perfect with since / for / how long (+ worksheet)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Use the present perfect with since, for and how long"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:84",
+    "b:85",
+    "b:86"
+   ]
+  },
+  {
+   "order": 43,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "I practise: obligation and prohibition (must / mustn't, should / shouldn't)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Express strong obligation and prohibition using must and mustn't",
+    "Express mild obligation using should and shouldn't"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:87",
+    "b:88"
+   ]
+  },
+  {
+   "order": 44,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "I practise: recommendations and a school eco-charter (imperative)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Give recommendations and make a school eco-charter using the imperative"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:89",
+    "b:90"
+   ]
+  },
+  {
+   "order": 45,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "Tutorial session",
+   "topic": "Tutorial session: Environment Day poster",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Work in groups to make an Environment Day poster"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:91"
+   ]
+  },
+  {
+   "order": 46,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "I practise: causes and consequences of litter (as/because, so/therefore)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk and write about causes and consequences of litter using as/because and so/therefore"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:97",
+    "b:98"
+   ]
+  },
+  {
+   "order": 47,
+   "unitKind": "week",
+   "unit": 29,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "I practise: comparative of superiority (endangered fauna and flora)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Compare the danger facing the Algerian fauna and flora using the comparative of superiority"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:99",
+    "b:100"
+   ]
+  },
+  {
+   "order": 48,
+   "unitKind": "week",
+   "unit": 29,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "My pronunciation tools 1: the sounds /ʒ/ and /dʒ/",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Pronounce words containing the sounds /ʒ/ and /dʒ/ correctly"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:101",
+    "b:102"
+   ]
+  },
+  {
+   "order": 49,
+   "unitKind": "week",
+   "unit": 30,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "My pronunciation tools 2: silent letters w, h, k, t",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Identify the silent letters w, h, k, t"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:103",
+    "b:104"
+   ]
+  },
+  {
+   "order": 50,
+   "unitKind": "week",
+   "unit": 30,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "My pronunciation tools 3: intonation in questions",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Ask different questions using a correct intonation"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:105"
+   ]
+  },
+  {
+   "order": 51,
+   "unitKind": "week",
+   "unit": 31,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my environment",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do: the litter we throw every day",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text and sort out information"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:106",
+    "b:107"
+   ]
+  }
+ ]
+}

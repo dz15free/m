@@ -1,0 +1,649 @@
+{
+ "id": "4AM_fr",
+ "level": "4AM",
+ "subject": "fr",
+ "language": "fr",
+ "kind": "memos",
+ "files": [
+  "1szM9hapUXOoKSNg4WpjVIxJK0B1L-_iL"
+ ],
+ "filePages": [
+  65
+ ],
+ "segments": {
+  "1": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 1 : Bienvenue dans ma région ! (Inciter à la découverte d’une région)",
+  "2": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 2 : Gloire à nos ancêtres ! (Inciter à la découverte d’un personnage / fait historique)",
+  "3": "Projet (Tâche) 1 : Créer une page Facebook pour inciter les touristes à venir découvrir notre pays — Séquence 3 : Oui à la culture !",
+  "4": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 4 : Vivons en harmonie !",
+  "5": "Projet (Tâche) 2 : Élaborer un dépliant en faveur du « vivre ensemble en paix » — Séquence 5 : Non à la violence !",
+  "6": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 6 : Protégeons la nature !",
+  "7": "Projet (Tâche) 3 : Produire des podcasts et des affiches pour la protection de l’environnement — Séquence 7 : Agissons en éco-responsables !"
+ },
+ "lessons": [
+  {
+   "segment": 1,
+   "domain": "Compréhension de l’oral",
+   "topic": "Vidéo « Destination Algérie »",
+   "objectives": [
+    "Apprendre à se positionner en tant qu’auditeur.",
+    "Sélectionner des informations et les organiser."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    3
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Production de l’oral",
+   "topic": "S’exprimer oralement pour décrire un lieu (manuel p. 11)",
+   "objectives": [
+    "Produire du sens à partir d’un support iconique.",
+    "S’exprimer oralement pour décrire un lieu."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    4
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Compréhension de l’écrit",
+   "topic": "« À la découverte de l’Algérie » (manuel p. 12)",
+   "objectives": [
+    "Identifier les caractéristiques d’un texte argumentatif.",
+    "Identifier le thème et la thèse de l’auteur."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    5,
+    6
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Vocabulaire",
+   "topic": "Les verbes d’opinion",
+   "objectives": [
+    "Identifier et employer les verbes d’opinion.",
+    "Employer le vocabulaire de la description (adjectifs, indicateurs de lieux)."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    7,
+    8
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Grammaire",
+   "topic": "La proposition subordonnée complétive",
+   "objectives": [
+    "Identifier la proposition subordonnée complétive.",
+    "Employer la proposition subordonnée complétive."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    9,
+    10
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Conjugaison",
+   "topic": "Le présent de l’indicatif",
+   "objectives": [
+    "Identifier les terminaisons des verbes au présent de l’indicatif.",
+    "Conjuguer des verbes au présent de l’indicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    11,
+    12
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : introduction et conclusion d’un texte argumentatif",
+   "objectives": [
+    "Se préparer à produire l’introduction et la conclusion d’un texte argumentatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    13
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Compréhension de l’oral",
+   "topic": "Vidéo « El Hadj Ahmed Bey »",
+   "objectives": [
+    "Écouter et comprendre un support audio contenant un argumentaire."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    15
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Production de l’oral",
+   "topic": "Formuler des arguments pour appuyer une opinion (manuel p. 29)",
+   "objectives": [
+    "Formuler des arguments pour appuyer une opinion par rapport à une situation spécifique."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    16
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Compréhension de l’écrit",
+   "topic": "« Jugurtha contre Metellus » (manuel p. 30)",
+   "objectives": [
+    "Analyser et comprendre un texte argumentatif.",
+    "Identifier le point de vue de l’énonciateur."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    17,
+    18
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Vocabulaire",
+   "topic": "Les connecteurs d’énumération",
+   "objectives": [
+    "Identifier les connecteurs d’énumération.",
+    "Employer les connecteurs d’énumération."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    19,
+    20
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Grammaire",
+   "topic": "La proposition subordonnée relative avec « qui » et « que »",
+   "objectives": [
+    "Identifier et employer la PSR avec « qui / que »."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    21,
+    22
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Compréhension de l’écrit (2) : texte d’Ahmed Akkache, « La résistance algérienne de 1845 à 1945 » (manuel p. 40)",
+   "objectives": [
+    "Identifier le narrateur, son point de vue et ses arguments.",
+    "Réinvestir les points de langue vus durant la séquence."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    23,
+    24
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : produire des arguments pour étayer une thèse",
+   "objectives": [
+    "Se préparer à produire des arguments pour étayer une thèse."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    25
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Compréhension de l’oral",
+   "topic": "Vidéo « L’imzad »",
+   "objectives": [
+    "Développer des stratégies de compréhension.",
+    "Apprendre à se positionner en tant qu’auditeur."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    27
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Production de l’oral",
+   "topic": "Argumenter à partir d’un visuel (manuel p. 47)",
+   "objectives": [
+    "Produire à l’oral une argumentation à partir d’un visuel.",
+    "Présenter des arguments pour défendre un point de vue."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    28
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Compréhension de l’écrit",
+   "topic": "« Le tapis en fête à Ghardaïa » (manuel p. 48)",
+   "objectives": [
+    "Identifier le narrateur, son point de vue et ses arguments.",
+    "Analyser et comprendre un texte à visée argumentative."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    29,
+    30
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Vocabulaire",
+   "topic": "Le lexique mélioratif / dépréciatif",
+   "objectives": [
+    "Identifier et employer le lexique mélioratif / dépréciatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    31,
+    32
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Grammaire",
+   "topic": "La cause et la conséquence",
+   "objectives": [
+    "Identifier les subordonnées de cause et de conséquence.",
+    "Employer les subordonnées de cause et de conséquence."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    33,
+    34
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : texte argumentatif incitant à la découverte d’un patrimoine",
+   "objectives": [
+    "Se préparer à produire un texte argumentatif incitant à la découverte d’un patrimoine."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    35
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Compréhension de l’oral",
+   "topic": "Vidéo « C’est quoi le racisme ? »",
+   "objectives": [
+    "Apprendre à se positionner en tant qu’auditeur.",
+    "Identifier le thème, la thèse et les arguments du locuteur."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    37
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Production de l’oral",
+   "topic": "Argumenter à partir d’un visuel (manuel p. 69)",
+   "objectives": [
+    "Produire à l’oral une argumentation à partir d’un visuel."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    38
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Compréhension de l’écrit",
+   "topic": "« Le racisme » (manuel p. 70)",
+   "objectives": [
+    "Analyser et comprendre un texte à visée argumentative.",
+    "Retrouver le thème, la thèse et les arguments de l’auteur."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    39,
+    40
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Vocabulaire",
+   "topic": "Les verbes de parole et la ponctuation dans le dialogue",
+   "objectives": [
+    "Identifier et employer les verbes introducteurs de paroles.",
+    "Identifier et employer les signes de ponctuation du dialogue."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    41,
+    42
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Grammaire",
+   "topic": "La proposition subordonnée de but",
+   "objectives": [
+    "Identifier la proposition subordonnée de but.",
+    "Employer la proposition subordonnée de but."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    43,
+    44
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : dialogue argumenté sur la tolérance",
+   "objectives": [
+    "Se préparer à produire un dialogue argumenté sur la tolérance."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    45
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Compréhension de l’oral",
+   "topic": "Vidéo « Violence après le match El Ahly – El Masry »",
+   "objectives": [
+    "Apprendre à se positionner en tant qu’auditeur.",
+    "Identifier le thème, la thèse et les arguments du locuteur."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    47
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Production de l’oral",
+   "topic": "Produire une argumentation à l’oral (manuel p. 85)",
+   "objectives": [
+    "Produire à l’oral une argumentation."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    48
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Compréhension de l’écrit",
+   "topic": "« La violence à l’égard des femmes et des filles » (manuel p. 86)",
+   "objectives": [
+    "Analyser et comprendre un texte à visée argumentative.",
+    "Retrouver le thème, la thèse et les arguments de l’auteur."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    49,
+    50
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 5,
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : rapporter les propos d’une personne",
+   "objectives": [
+    "Se préparer à rapporter les propos d’une personne."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    51
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Compréhension de l’oral",
+   "topic": "Support audio « L’environnement »",
+   "objectives": [
+    "Apprendre à se positionner en tant qu’auditeur.",
+    "Identifier le thème, la thèse et les arguments du locuteur."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    53
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Production de l’oral",
+   "topic": "Formuler un argumentaire de sensibilisation (manuel p. 107)",
+   "objectives": [
+    "Formuler un argumentaire destiné à sensibiliser sur une cause."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    54
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Grammaire",
+   "topic": "La proposition circonstancielle de condition",
+   "objectives": [
+    "Identifier et employer la proposition de condition."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    55,
+    56
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 6,
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : message de sensibilisation argumenté",
+   "objectives": [
+    "Se préparer à produire un message de sensibilisation contenant des arguments."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    57
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Compréhension de l’oral",
+   "topic": "« Une ville modèle »",
+   "objectives": [
+    "Apprendre à se positionner en tant qu’auditeur.",
+    "Identifier le thème, la thèse et les arguments du locuteur."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    59
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Production de l’oral",
+   "topic": "S’exprimer oralement pour défendre une cause",
+   "objectives": [
+    "S’exprimer oralement pour défendre une cause."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    60
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Compréhension de l’écrit",
+   "topic": "« Par qui la nourriture est-elle gaspillée ? » (manuel p. 126)",
+   "objectives": [
+    "Lire et comprendre un texte contenant un argumentaire structuré."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    61,
+    62
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Grammaire",
+   "topic": "La proposition circonstancielle d’opposition",
+   "objectives": [
+    "Identifier la proposition circonstancielle d’opposition."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    63,
+    64
+   ],
+   "hours": 1,
+   "week": null
+  },
+  {
+   "segment": 7,
+   "domain": "Production écrite",
+   "topic": "Production écrite (1er jet) : message de sensibilisation argumenté",
+   "objectives": [
+    "Se préparer à produire un message de sensibilisation contenant des arguments."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    65
+   ],
+   "hours": 1,
+   "week": null
+  }
+ ],
+ "notes": "Fiches pédagogiques de 4AM (source eddirasa.com, auteur non nommé) : 3 tâches/projets, 7 séquences ; chaque séquence a une page de garde (p. 2, 14, 26, 36, 46, 52, 58 — ignorées) puis 1 à 2 pages par séance. Séquences 1–4 complètes (CO, PO, CE, vocabulaire, grammaire, [conjugaison seulement en séq. 1], production écrite 1er jet) ; séquence 5 sans vocabulaire ni grammaire ; séquence 6 sans compréhension de l’écrit ni vocabulaire ; séquence 7 sans vocabulaire. Pas de fiches d’évaluation, de compte rendu de l’écrit ni de projet final. Durée non indiquée (1 h par séance supposée)."
+}

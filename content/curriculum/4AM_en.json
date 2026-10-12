@@ -1,0 +1,1337 @@
+{
+ "id": "4AM_en",
+ "level": "4AM",
+ "subject": "en",
+ "title": "English — السنة الرابعة متوسط",
+ "source": {
+  "ar": "مذكرات أساتذة منشورة للعموم (مناهج الجيل الثاني) من مجلد «التعليم المتوسط»؛ الأسابيع تقديرية موزّعة على رزنامة 2026-2027 في غياب المخطط السنوي الرسمي",
+  "fr": "Fiches d'enseignants partagées publiquement (programmes de 2e génération) ; semaines estimées sur le calendrier 2026-2027"
+ },
+ "weekMode": "absolute",
+ "segments": {
+  "1": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+  "2": "Sequence 2: Me, My Personality and Life Experiences",
+  "3": "Sequence 3: Me, My Community and Citizenship"
+ },
+ "sources": {
+  "b": {
+   "pdf": [
+    "1mUECoj_PPqVFDgYQWsdrgXjgxecoGD1w"
+   ]
+  }
+ },
+ "lessons": [
+  {
+   "order": 1,
+   "unitKind": "week",
+   "unit": 1,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "Diagnostic assessment",
+   "topic": "Diagnostic assessment",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 2,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "Prerequisites review",
+   "topic": "Prerequisites: Simple Past (regular / irregular verbs) worksheets",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Review and consolidate the simple past (all forms)",
+    "Review adjectives and comparatives"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:2",
+    "b:3",
+    "b:4",
+    "b:5",
+    "b:6",
+    "b:7",
+    "b:8",
+    "b:9",
+    "b:10",
+    "b:11"
+   ]
+  },
+  {
+   "order": 3,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "Initial situation",
+   "topic": "Initial situation: launching the sequence (famous landmarks; guided tour project)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Stimulate the learners’ interest and announce the topics of the new sequence"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:12",
+    "b:13",
+    "b:14",
+    "b:15"
+   ]
+  },
+  {
+   "order": 4,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Preparing a guided tour of famous places",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Prepare a guided tour showing famous places in their city, region or country",
+    "Use adjectives and sequencers"
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "b:16",
+    "b:17",
+    "b:18"
+   ]
+  },
+  {
+   "order": 5,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Writing about famous monuments",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write a short paragraph about famous monuments"
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "b:19",
+    "b:20"
+   ]
+  },
+  {
+   "order": 6,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "The passive voice: describing a famous monument (The Statue of Liberty)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write a short paragraph describing a famous monument using the passive voice"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:21",
+    "b:22",
+    "b:23",
+    "b:24"
+   ]
+  },
+  {
+   "order": 7,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Biographies of outstanding figures",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write a short paragraph using biographical information about outstanding figures",
+    "Use the simple past (regular / irregular verbs)"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:25",
+    "b:26"
+   ]
+  },
+  {
+   "order": 8,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Discourse markers of chronology",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Organise a series of actions and events using first, then, next…"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:27",
+    "b:28"
+   ]
+  },
+  {
+   "order": 9,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Base and strong adjectives: talking about landmarks and figures",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about famous landmarks and outstanding figures using strong adjectives"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:29",
+    "b:30"
+   ]
+  },
+  {
+   "order": 10,
+   "unitKind": "week",
+   "unit": 5,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Comparing landmarks and famous figures",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Compare landmarks and famous figures"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:31",
+    "b:32"
+   ]
+  },
+  {
+   "order": 11,
+   "unitKind": "week",
+   "unit": 5,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Describing an itinerary",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Describe an itinerary and identify its components"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:33",
+    "b:34"
+   ]
+  },
+  {
+   "order": 12,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Filling in an ID card and a fact file",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Listen to conversations and fill in an ID card and a fact file",
+    "Use the comparative of equality and inferiority"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:35",
+    "b:36"
+   ]
+  },
+  {
+   "order": 13,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Asking and answering about historic tourist attractions",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Ask and answer questions to give information about historic tourist attractions"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:37",
+    "b:38"
+   ]
+  },
+  {
+   "order": 14,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Asking and answering about an outstanding figure + review and consolidation (comparatives)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Ask and answer questions about an outstanding figure",
+    "Transform the information of an ID card into a paragraph"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:39",
+    "b:40",
+    "b:41",
+    "b:42"
+   ]
+  },
+  {
+   "order": 15,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Comparing landmarks",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Compare landmarks"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:43",
+    "b:44"
+   ]
+  },
+  {
+   "order": 16,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Describing an itinerary and summarising",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Describe an itinerary",
+    "Summarise the most important points"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:45",
+    "b:46"
+   ]
+  },
+  {
+   "order": 17,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Cause and effect (discourse markers)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Identify cause and effect using discourse markers"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:47",
+    "b:48",
+    "b:49"
+   ]
+  },
+  {
+   "order": 18,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "Consonant clusters",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Give information about famous landmarks",
+    "Recognise consonant clusters"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:50",
+    "b:51"
+   ]
+  },
+  {
+   "order": 19,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "Diphthongs",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Recognise and pronounce diphthongs correctly"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:52",
+    "b:53"
+   ]
+  },
+  {
+   "order": 20,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do 1: a text about an outstanding figure",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text about an outstanding figure and gather information"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:54",
+    "b:55"
+   ]
+  },
+  {
+   "order": 21,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do 2: a text about a famous landmark",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text about a famous landmark and gather information"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:56",
+    "b:57"
+   ]
+  },
+  {
+   "order": 22,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me, Universal Landmarks and Outstanding Figures in History, Literature and Arts",
+   "activity": "English",
+   "session": "English",
+   "domain": "I learn to integrate",
+   "topic": "I learn to integrate: writing a report about a tour",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Work in small groups and write a report about a tour"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:58",
+    "b:59"
+   ]
+  },
+  {
+   "order": 23,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "Initial situation",
+   "topic": "Prerequisites and initial situation: launching the sequence",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Announce the communicative intention of the sequence (topic, discourse, structure)",
+    "Stimulate the learners’ curiosity"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:61",
+    "b:62",
+    "b:63",
+    "b:64"
+   ]
+  },
+  {
+   "order": 24,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Childhood events and school memories",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Narrate significant childhood events and school memories after developing listening strategies"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:65",
+    "b:66"
+   ]
+  },
+  {
+   "order": 25,
+   "unitKind": "week",
+   "unit": 11,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Present perfect: memories and experiences (pronunciation of have / has)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write about memories and experiences using the present perfect and time markers",
+    "Pronounce have / has correctly"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:67",
+    "b:68",
+    "b:69",
+    "b:70"
+   ]
+  },
+  {
+   "order": 26,
+   "unitKind": "week",
+   "unit": 11,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "My dream career (oral presentation)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Give a short oral presentation about his/her dream career"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:71",
+    "b:72"
+   ]
+  },
+  {
+   "order": 27,
+   "unitKind": "week",
+   "unit": 13,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "Remedial work",
+   "topic": "Term 1 exam correction and remedial work",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 28,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Superlatives: people’s personalities and life experiences",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Ask and answer questions about personalities and life experiences using the superlative of superiority"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:73",
+    "b:74",
+    "b:75"
+   ]
+  },
+  {
+   "order": 29,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Ideal teachers and friends",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Seek information on the web and describe their ideal teachers or friends"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:76",
+    "b:77"
+   ]
+  },
+  {
+   "order": 30,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I write",
+   "topic": "Writing a formal letter",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write a formal letter and identify its format"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:78"
+   ]
+  },
+  {
+   "order": 31,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Comparison and contrast markers: comparing personalities",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Compare different personalities expressing similarities and differences"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:79",
+    "b:80"
+   ]
+  },
+  {
+   "order": 32,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Past continuous and simple past (pronunciation of was / were)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Report significant events in people’s lives using the past continuous and the simple past"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:81",
+    "b:82",
+    "b:83"
+   ]
+  },
+  {
+   "order": 33,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "I pronounce 1: pronunciation of final -ed",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about what people did in the past pronouncing final -ed correctly"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:84",
+    "b:85"
+   ]
+  },
+  {
+   "order": 34,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Prefixes of opposites: describing ideal friends",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Describe ideal friends and people around them using prefixes of antonyms"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:86",
+    "b:87"
+   ]
+  },
+  {
+   "order": 35,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Lexis practice: narrating childhood events and life experiences",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Practise lexis and narrate childhood events using the simple past"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:88",
+    "b:89"
+   ]
+  },
+  {
+   "order": 36,
+   "unitKind": "week",
+   "unit": 17,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Kateb Yacine’s childhood memories",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write a short narrative paragraph about Kateb Yacine’s childhood memories during French colonialism"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:90",
+    "b:91",
+    "b:92",
+    "b:93"
+   ]
+  },
+  {
+   "order": 37,
+   "unitKind": "week",
+   "unit": 17,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "I pronounce 2: triphthongs",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Discriminate and pronounce English triphthongs correctly"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:94",
+    "b:95"
+   ]
+  },
+  {
+   "order": 38,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do 1: feelings, emotions and dreams",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text about someone’s feelings, emotions and dreams and gather information"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:96",
+    "b:97"
+   ]
+  },
+  {
+   "order": 39,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do 2: Zohra Drif’s memories and experiences",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text about Mrs Zohra Drif’s memories and experiences and sort out information"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:98",
+    "b:99"
+   ]
+  },
+  {
+   "order": 40,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I learn to integrate",
+   "topic": "I learn to integrate: a web article comparing two outstanding figures’ childhood memories",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Work in small groups and write a web article comparing two outstanding figures’ childhood and school memories"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:100",
+    "b:101"
+   ]
+  },
+  {
+   "order": 41,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I think and write",
+   "topic": "I think and write: a letter to an outstanding figure",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write a letter to an outstanding figure asking about his/her childhood memories, dreams and experiences"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:102",
+    "b:103"
+   ]
+  },
+  {
+   "order": 42,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and enjoy / I read and do: Moufdi Zakaria, the poet of the Algerian revolution",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text and gather information about Moufdi Zakaria"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:104",
+    "b:105",
+    "b:106",
+    "b:107"
+   ]
+  },
+  {
+   "order": 43,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "Initial situation",
+   "topic": "Prerequisites and initial situation: launching the sequence",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Announce the communicative intention of the sequence (topic, discourse, structure)",
+    "Stimulate the learners’ curiosity"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:109",
+    "b:110",
+    "b:111",
+    "b:112"
+   ]
+  },
+  {
+   "order": 44,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Listening to advice",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Listen to a piece of advice, gather information and give their opinions about it"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:113",
+    "b:114"
+   ]
+  },
+  {
+   "order": 45,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "Listening and speaking",
+   "topic": "Listening to opinions: class debate and argumentative text",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Listen to others’ opinions and participate in a class debate",
+    "Write an argumentative text giving arguments in order"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:115",
+    "b:116"
+   ]
+  },
+  {
+   "order": 46,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I write",
+   "topic": "I write: an argumentative text using sequencers (group work)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Work with partners to write an argumentative text using sequencers"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:117"
+   ]
+  },
+  {
+   "order": 47,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Giving advice: imperatives, should / shouldn’t",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Give advice and recommendations using imperatives and the modals should / shouldn’t"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:118",
+    "b:119"
+   ]
+  },
+  {
+   "order": 48,
+   "unitKind": "week",
+   "unit": 24,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "Remedial work",
+   "topic": "Term 2 exam correction and remedial work",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 49,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Conditional type 1",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Listen to a piece of advice, analyse it and give opinions using conditional type 1"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:127",
+    "b:128"
+   ]
+  },
+  {
+   "order": 50,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "Listening and speaking",
+   "topic": "Oral presentation about something important",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Give an oral presentation before classmates about something important"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:129",
+    "b:130"
+   ]
+  },
+  {
+   "order": 51,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I speak",
+   "topic": "I speak: presenting a bio card",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Present orally to the class"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:131"
+   ]
+  },
+  {
+   "order": 52,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "Listening and speaking",
+   "topic": "Eating habits and table manners",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about family eating habits and table manners"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:132",
+    "b:133"
+   ]
+  },
+  {
+   "order": 53,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Giving instructions with the imperative + consolidation",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Give instructions using the imperative"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:134",
+    "b:135",
+    "b:136"
+   ]
+  },
+  {
+   "order": 54,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Likes, dislikes and hobbies (pronunciation of /ŋ/)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about likes, dislikes and hobbies",
+    "Pronounce the /ŋ/ sound correctly"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:137",
+    "b:138",
+    "b:139"
+   ]
+  },
+  {
+   "order": 55,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "Silent letters: sharing opinions",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Share opinions with correct pronunciation",
+    "Identify silent letters"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:140",
+    "b:141"
+   ]
+  },
+  {
+   "order": 56,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "Tutorial session",
+   "topic": "Tutorial session: sharing opinions on different issues",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Share opinions and give a point of view freely on different issues"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:147"
+   ]
+  },
+  {
+   "order": 57,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do 1: globalisation (argumentative text)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read an argumentative text about globalisation and sort out information",
+    "Discuss and defend opinions about globalisation"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:148",
+    "b:149"
+   ]
+  },
+  {
+   "order": 58,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "I read and do 2: charities",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Read a text about charities and sort out information"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:150",
+    "b:151"
+   ]
+  },
+  {
+   "order": 59,
+   "unitKind": "week",
+   "unit": 29,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I learn to integrate",
+   "topic": "I learn to integrate: an open letter on cultural globalisation",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Work in small groups and write an open letter weighing up the pros and cons of cultural globalisation"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:152",
+    "b:153"
+   ]
+  },
+  {
+   "order": 60,
+   "unitKind": "week",
+   "unit": 29,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me, My Community and Citizenship",
+   "activity": "English",
+   "session": "English",
+   "domain": "I think and write",
+   "topic": "I think and write: an open letter to the Algerian youth about globalisation",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write an open letter weighing up the pros and cons of globalisation and expressing their point of view"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "b:154",
+    "b:155"
+   ]
+  },
+  {
+   "order": 61,
+   "unitKind": "week",
+   "unit": 31,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "Revision",
+   "topic": "General revision for the BEM exam",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 62,
+   "unitKind": "week",
+   "unit": 32,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me, My Personality and Life Experiences",
+   "activity": "English",
+   "session": "English",
+   "domain": "Revision",
+   "topic": "General revision for the BEM exam",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  }
+ ]
+}
