@@ -38,6 +38,7 @@ export const REPO_CURRICULA: readonly string[] = [
   "3AM_histgeo",
   "3AM_informatics",
   "3AM_islamic",
+  "3AM_math",
   "3AM_physics",
   "3AM_science",
   "3AP_ar",
