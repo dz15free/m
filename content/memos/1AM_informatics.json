@@ -1,0 +1,1196 @@
+{
+ "w:4": {
+  "head": [
+   [
+    "الميدان",
+    "استخدام الحاسوب"
+   ],
+   [
+    "المقطع التعلمي",
+    "بيئة التعامل مع الحاسوب"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "تعريف المعلوماتية و الحاسوب."
+   ],
+   [
+    "المعارف المستهدفة",
+    "تعريف المعلوماتية – تعريف الحاسوب – مخطط عمل الحاسوب"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** لقد شهد العالم تطورا غير مسبوق في عالم التكنولوجيا و علوم الحاسوب، فأصبحت الحواسيب مستعملة في العديد من المجالات كالطب و الصيدلة، السفر، المدارس، البنوك و غيرها ... فكيف يستعمل الحاسوب؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** استنادا إلى المخطط المعطى في السبورة (تجده في آخر المذكرة: نشاط مقترح لتسيير الحصة الأولى)\n- ما المقصود بالمعلوماتية؟ ما هو الحاسوب؟ اقترح مخططا لعمل الحاسوب؟\n(يمكن للأستاذ توظيف نشاط آخر ليس شرطا التقيد بهذا النموذج).\n\n**1- تعريف المعلوماتية:** هي علم يسمح بمعالجة المعلومات بطريقة آلية، و تعتمد على عنصرين أساسيين و هما: العتاد و البرمجيات.\n* **أصل الكلمة:** معلومات + آلية ← معلوماتية\n\n**2- الفرق بين العتاد و البرمجيات:**\nأ) **العتاد:** يمثل العناصر المادية و نقصد بها الحاسوب، مكوناته و مختلف الأجهزة التي تتصل به.\nب) **البرمجيات:** و هي العناصر غير المادية، تتمثل في مجموعة من الأوامر و التعليمات التي ينفذها الحاسوب ليشتغل بشكل جيد و ينجز العمل المطلوب.\n\n**3- تعريف الحاسوب:** هو جهاز إلكتروني قابل للبرمجة، يسمح بإدخال المعلومات، تخزينها، معالجتها و كذا إخراجها.\n\n**4- مخطط عمل الحاسوب:**\n! إدخال المعلومات ← التخزين + المعالجة ← إخراج المعلومات"
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** رتب هذه العناصر في جدول يضم العتاد و البرمجيات: لوحة المفاتيح، الفأرة، فوتوشوب، $AVS Video Editor$، كمبيوتر محمول، ميكروسوفت أوفيس وورد.\n|العتاد|البرمجيات|\n|---|---|\n| | |"
+   ]
+  ],
+  "after": "## نشاط مقترح لتسيير الحصة الأولى\n1) ارسم هذا المخطط (الإنسان في الوسط، و حوله: الطب – الرياضيات – الفيزياء – المعلوماتية) و قل لهم: «الإنسان دوما يسعى للاكتشاف و تطوير العلوم حتى يحسن حياته و يسهلها ... و هناك العديد من العلوم التي طورها الإنسان مثل علم الطب، علم الفيزياء، علم الرياضيات ... الخ، و في العصر الحديث قام الإنسان أيضا بتطوير المعلوماتية» و تكتبها معهم.\n2) قل لهم: ما دام الطب علما ... و الفيزياء علما ... و الرياضيات علما ... إذن المعلوماتية هي كذلك ماذا ...؟؟؟ يقولون لك «هي علم». جيد، اكتبها معهم كما في الصورة (المعلوماتية ← علم).\n3) قل لهم: ما هو الجهاز المستعمل في المعلوماتية؟ سيقولون لك الحاسوب، ارسمه. قل لهم: عن ماذا أبحث في الحاسوب؟ سيقولون لك عن المعلومات، جيد. قل لهم: و عندما أجدها ماذا أفعل لها؟ اعمل بيديك حركات كأنك تخرج شيئا ما، سيقولون لك نقوم بإخراجها، جيد، اكتب أمام الحاسوب «إخراج المعلومات».\n4) تحت كلمة علم اكتب: «يسمح بمعالجة المعلومات» و اشرح لهم معنى المعالجة باختصار، و أعطهم مثالا عن حساب المعدل: الحاسوب يطبق عمليات جمع و طرح و ضرب و قسمة الخ ... على علامات الفرض و الاختبار و المراقبة المستمرة لكي يحسب المعدل، تلك العمليات نطلق عليها لفظ «معالجة». قل لهم: هل هذه العمليات تتم يدويا أم عن طريق الآلة؟ سيقولون عن طريق الآلة. قل لهم: بما أن المعالجة تتم عن طريق الآلة ماذا نطلق عليها؟ سيقولون آلية. اكتبها (بطريقة آلية).\n5) قل لهم: قلنا أن الحاسوب يسمح بإخراج المعلومات، ما هو عكس الإخراج؟ سيقولون الإدخال. أضف إلى المخطط «إدخال المعلومات». ثم اشرح لهم أن الحاسوب يمكنه أيضا تخزين و معالجة المعلومات و أضفهما أيضا إلى المخطط.\n6) ببساطة الآن اشرح لهم مباشرة أن المعلوماتية تعتمد على عنصرين أساسيين هما العتاد و البرمجيات، العتاد هو كل العناصر الملموسة مثل الحاسوب و الهاتف، أما البرمجيات فهي تلك العناصر الافتراضية التي لا وجود لها في أرض الواقع فمثلا لا يمكنك الإمساك بلعبة و إخراجها من الحاسوب. في الأخير أطلب منهم استنتاج تعريف المعلوماتية و الحاسوب و الفرق بين العتاد و البرمجيات و مخطط عمل الحاسوب من المخطط المنجز فقط بكل سهولة. هذا النشاط يستغرق من 15 إلى 20 دقيقة.",
+  "author": "MBM Page"
+ },
+ "w:5": {
+  "head": [
+   [
+    "الميدان",
+    "استخدام الحاسوب"
+   ],
+   [
+    "المقطع التعلمي",
+    "بيئة التعامل مع الحاسوب"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "مكونات الحاسوب."
+   ],
+   [
+    "المعارف المستهدفة",
+    "مكونات الحاسوب – المكونات الأساسية – المكونات الثانوية"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** دخل أحمد إلى غرفة والده فوجد الحاسوب مفككا، فراح يحاول تركيب مكوناته بسرعة حتى يتمكن والده من كتابة رسالة إلى زميله في العمل، لكن أحمد احتار حين وجد عددا كبيرا من المكونات في تلك الغرفة، في رأيك ما هي المكونات الأساسية التي تكفي لتشغيل الحاسوب؟ ماذا عن المكونات الأخرى؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** يحتاج أحمد فقط لتركيب الوحدة المركزية مع الشاشة و إيصالها بلوحة المفاتيح.\n- ما هي المكونات الأساسية للحاسوب؟\n- ما هي مكوناته الثانوية؟\n\n**مكونات الحاسوب:** تنقسم إلى نوعين: أساسية و ثانوية.\n**1- المكونات الأساسية:** هي المكونات الضرورية لتشغيل الحاسوب، حيث لا يمكن تشغيله إذا لم تتوفر كلها معا و في آن واحد، و هي:\n1-1 **الوحدة المركزية:** هي ذلك الصندوق الكبير، حيث تتم على مستواه عمليتا تخزين المعلومات و معالجتها.\n1-2 **الشاشة:** و هي التي تضمن عرض المعلومات أمام المستخدم.\n1-3 **لوحة المفاتيح:** و هي لوحة تحتوي على أزرار فيها أحرف و أرقام و رموز تستعمل للكتابة أو للتنقل بين العناصر التي تظهر على الشاشة.\n**2- المكونات الثانوية:** هي المكونات التي نقوم بتركيبها فقط عند الحاجة إليها، نذكر منها:\n2-1 **الفأرة:** و هي أداة تسهل التحكم في العناصر التي تظهر على الشاشة.\n2-2 مكبر الصوت. / 2-3 الميكروفون. / 2-4 السماعات. / 2-5 الطابعة.\n2-6 **مخزن الطاقة:** يخزن بعض الطاقة الكهربائية ليضمن عدم إطفاء الحاسوب مباشرة عند انقطاع التيار الكهربائي، فيزوده بالكهرباء لبعض الدقائق ريثما تقوم بإطفائه."
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** رتب هذه المكونات في الجدول التالي: الشاشة، لوحة المفاتيح، الوحدة المركزية، مكبر الصوت، الميكروفون.\n|وحدات إدخال|وحدات تخزين و معالجة|وحدات إخراج|\n|---|---|---|\n| | | |"
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:6": {
+  "head": [
+   [
+    "الميدان",
+    "استخدام الحاسوب"
+   ],
+   [
+    "المقطع التعلمي",
+    "بيئة التعامل مع الحاسوب"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "وسائط التخزين."
+   ],
+   [
+    "المعارف المستهدفة",
+    "تعريف وسائط التخزين – أمثلة عن وسائط التخزين – وحدة قياس الذاكرة – مضاعفات وحدة قياس الذاكرة"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** وجد أحمد بعض الصور الجميلة لمناظر طبيعية خلابة في حاسوب صديقه، فأراد نقلها إلى حاسوبه المنزلي، فكيف يمكنه القيام بهذه المهمة؟ و هل كل الصور متطابقة من حيث الحجم؟ هل كلها تنتقل من الحاسوب الأول إلى الحاسوب الثاني بنفس السرعة؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** لنقل صورة مثلا من الحاسوب 1 إلى الحاسوب 2، ما الذي نحتاج إليه؟ (==وسيلة، أداة==). بما أن هذه الوسيلة متواجدة في الوسط بين هذين الحاسوبين فماذا نطلق عليها؟ (==وسيط، و جمعها وسائط==). ما هي وظيفة هذا الوسيط؟ (==التخزين==). الاستنتاج: نسميها وسائط التخزين.\nيرافق الأستاذ متعلّميه للتعرف على باقي المعارف في السبورة مباشرة.\n\n**1- تعريف وسائط التخزين:** هي وسائل تسمح بتخزين المعلومات و حفظها بغرض نقلها أو الاطلاع عليها وقت الحاجة.\n**2- أمثلة عن وسائط التخزين:**\n1- القرص الصلب $\"Disque Dur\"$ (متواجد داخل الوحدة المركزية).\n2- القرص فلاش $\"Flash Disque\"$\n3- بطاقة الذاكرة $\"Carte Mémoire\"$\n4- القرص المضغوط $\"CD/DVD\"$\n**3- وحدة قياس الذاكرة:** وحدة قياس الذاكرة هي الأوكتي $octet$ و رمزها هو $Ø$.\n**4- مضاعفات وحدة قياس الذاكرة:** هي الكيلو أوكتي، الميغا أوكتي، الجيغا أوكتي ... الخ. حيث:\n$1 KØ = 1024 Ø$\n$1 MØ = 1024 KØ$\n$1 GØ = 1024 MØ$\n**مثال:** صورة لمنظر طبيعي حجمها: $12288 Ø$، أي: $12 KØ$\n**ملاحظة:** هناك مضاعفات أخرى قد تتعرف عليها مع مرور الزمن إن شاء الله."
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** هل يمكن نقل صورة حجمها $2 MØ$ إلى $Flash Disque$ يتوفر على مساحة تخزين مقدرة بـ $1 MØ$؟\nلنفرض أن مساحة التخزين المتبقية في الـ $Flash Disque$ هي $15 MØ$، هل يمكن نقل الصورة إليه في هذه الحالة؟"
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:7": {
+  "head": [
+   [
+    "الميدان",
+    "استخدام الحاسوب"
+   ],
+   [
+    "المقطع التعلمي",
+    "نظام التشغيل"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "مفهوم نظام التشغيل."
+   ],
+   [
+    "المعارف المستهدفة",
+    "تعريف نظام التشغيل – أمثلة عن أنظمة التشغيل – طريقة تشغيل الحاسوب – طريقة إيقاف الحاسوب"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** تعرفنا سابقا أن تشغيل الحاسوب يستلزم توفير مكوناته الأساسية، لكن عندما نضغط على زر تشغيل الحاسوب، ما الشيء الذي يجعل الحاسوب يشتغل؟ ما الشيء الذي يسمح للصورة بأن تظهر؟ ما الشيء الذي يربط بين المستخدم و الكمبيوتر؟ بعبارة أدق ... ما هو النظام الذي يضمن تشغيل الحاسوب بتلك الدقة و التنظيم؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** عندما تريد الاستماع إلى مقطع صوتي في الحاسوب، فإنك تنقر عليه بالفأرة. أنت بذلك تعطي أمرا للحاسوب. هناك برنامج ينقل هذا الأمر إلى الحاسوب و من ثم يتم تحفيز مكبر الصوت ليصدر الصوت، و هكذا تمت عملية الربط بين المستخدم والحاسوب. نفس الشيء بالنسبة لبقية المكونات (شاشة، طابعة ... الخ) و كل هذا لضمان التشغيل الجيد للحاسوب. لاحظ المخطط التالي ثم استنتج تعريفا لنظام التشغيل:\n[[img 0]]\n- اذكر أمثلة عن أنظمة التشغيل التي تعرفها.\n- كيف يتم تشغيل و إطفاء الحاسوب؟\n\n**1- تعريف نظام التشغيل:** هو مجموعة من البرامج التي تضمن تشغيل المهام الرئيسية للحاسوب، و يمثل همزة وصل بين المستخدم و الكمبيوتر.\n**2- أمثلة عن أنظمة التشغيل:**\n- الويندوز $WINDOWS$\n- لينيكس $LINUX$\n- ماك $MAC$\n**3- طريقة تشغيل الحاسوب:**\n1- اضغط على زر تشغيل مخزن الطاقة (إن وجد المخزن).\n2- اضغط على زر تشغيل الوحدة المركزية.\n3- اضغط على زر تشغيل الشاشة.\n**4- طريقة إيقاف الحاسوب:**\n1- انقر على $Démarrer$\n2- انقر على $Arrêter$\n3- اضغط على زر إطفاء الشاشة.\n4- اضغط على زر إطفاء مخزن الطاقة (إن وجد المخزن)."
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل الحاسوب، شغل برنامج الرسام (بمساعدة الأستاذ)، حاول لوحدك اكتشاف كيفية رسم أشكال جاهزة، ثم قم بإطفاء الحاسوب."
+   ]
+  ],
+  "author": "MBM Page",
+  "imgs": [
+   "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"
+  ]
+ },
+ "w:9": {
+  "head": [
+   [
+    "الميدان",
+    "استخدام الحاسوب"
+   ],
+   [
+    "المقطع التعلمي",
+    "نظام التشغيل"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "واجهة نظام التشغيل ويندوز."
+   ],
+   [
+    "المعارف المستهدفة",
+    "واجهة نظام التشغيل ويندوز $Windows$"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** عند تشغيل الحاسوب تظهر أمامك عدة عناصر على الشاشة، ما هذه العناصر؟ ما فائدتها؟ لماذا وجدت أصلا؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** انتبه رفقة الأستاذ لكل عنصر من العناصر المتواجدة في الشاشة، ثم تعرف على اسم كل عنصر و دوره.\n\n**واجهة نظام التشغيل ويندوز:**\nخلال استخدام الحاسوب تظهر أمام المستخدم عدة عناصر و هي:\n**1- سطح المكتب:** هو المساحة التي تضم مختلف العناصر المتواجدة في الشاشة، و يسمح بإجراء مختلف العمليات عليها.\n**2- الأيقونات:** هي أشكال و رموز صغيرة تمثل عنصرا معينا في سطح المكتب (ملف، مجلد، الخ ...).\n**3- شريط المهام:** يكون عادة في أسفل الشاشة، و يحتوي على زر $Démarrer$، و بعض المعلومات الأخرى كالساعة و التاريخ و اللغة ... الخ.\n**4- النافذة:** تمثل مساحة عمل تُظهر محتويات برنامج ما أو ملف ما ... إلخ.\n**5- علبة الحوار:** هي إطار صغير يظهر فقط عندما يحتاج الكمبيوتر لإدخال أمر معين من طرف المستخدم."
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل الحاسوب، ابحث عن أيقونة برنامج الرسام في سطح المكتب أو في شريط المهام، شغله و ارسم مستطيلا. قم بإغلاق البرنامج ثم انقر على الخيار $Ne pas enregistrer$، و قم بإطفاء الحاسوب."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:10": {
+  "head": [
+   [
+    "الميدان",
+    "استخدام الحاسوب"
+   ],
+   [
+    "المقطع التعلمي",
+    "نظام التشغيل"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "برنامج الرسام."
+   ],
+   [
+    "المعارف المستهدفة",
+    "تعريف برنامج الرسام – تشغيل البرنامج – واجهة البرنامج – حفظ الوثيقة"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** لاحظ كتاب الرياضيات، و انتبه للأشكال الهندسية و الرسومات المتواجدة فيه، ترى هل رسمت باليد؟ بأي جهاز أنجزت؟ بأي برنامج رسمت؟ هل يمكنك إنجاز رسومات مثلها؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** انقر مرتين بالزر الأيسر للفأرة على أيقونة $Paint$ الموجودة في سطح المكتب (أو في شريط المهام)، ما الذي ظهر أمامك؟ استنتج تعريفا له، كيف يتم تشغيله (فتحه)؟ ما العناصر المكونة لواجهته؟ كيف تكتب في تلك الورقة؟\n\n**1- تعريف برنامج الرسام $Paint$:**\nهو برنامج يسمح بإنجاز رسومات بسيطة، و يتيح إمكانية التعديل عليها باستخدام الكمبيوتر.\n**2- تشغيل البرنامج:**\nانقر على اختصاره الموجود في سطح المكتب إن وجد، أو اكتب $Paint$ في الخانة المخصصة للبحث و انقر على الأيقونة الموافقة له عندما تظهر.\n**3- واجهة البرنامج:**\nعند تشغيل برنامج الرسام تظهر أمام المستخدم واجهة من أهم مكوناتها:\n1- مساحة بيضاء مخصصة للرسم.\n2- شريط العنوان.\n3- شريط التبويبات.\n4- شريط الأدوات (الألوان، أدوات الرسم، الأشكال، الخ ...).\n**4- حفظ الوثيقة:**\nيمكن حفظ الوثيقة باتباع هذه الخطوات:\n1- انقر على التبويب $Paint$، (أو $Fichier$ في بعض الإصدارات).\n2- انقر على $Enregistrer$.\n3- اكتب اسما للوثيقة، ثم انقر على $Enregistrer$."
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** ارسم بيتا باستخدام برنامج الرسام حيث تستخدم مستطيلا و مثلثا لإنجازه، حاول رسم شجرة أمام هذا البيت."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:11": {
+  "head": [
+   [
+    "الميدان",
+    "استخدام الحاسوب"
+   ],
+   [
+    "المقطع التعلمي",
+    "نظام التشغيل"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "برنامج الدفتر."
+   ],
+   [
+    "المعارف المستهدفة",
+    "تعريف برنامج الدفتر – تشغيل البرنامج – واجهة البرنامج – حفظ الوثيقة"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** لاحظ كتابا من كتبك المدرسية، و انتبه للكتابات المتواجدة فيه، ترى هل أنجزت باليد؟ بأي جهاز أنجزت؟ بأي برنامج؟ هل يمكنك إنجاز وثائق مثلها؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** انقر مرتين بالزر الأيسر للفأرة على أيقونة $WordPad$ الموجودة في سطح المكتب (أو في شريط المهام)، ما الذي ظهر أمامك؟ استنتج تعريفا له، كيف يتم تشغيله (فتحه)؟ ما العناصر المكونة لواجهته؟ (استعن بدرس الرسام) كيف تكتب في تلك الورقة؟\n\n**1- تعريف برنامج الدفتر $WordPad$:**\nهو برنامج يسمح بإنجاز نصوص بسيطة، كما يتيح إمكانية التعديل عليها باستخدام الكمبيوتر.\n**2- تشغيل البرنامج:**\nانقر على اختصاره الموجود في سطح المكتب إن وجد، أو اكتب $Wordpad$ في الخانة المخصصة للبحث و انقر على الأيقونة الموافقة له عندما تظهر.\n**3- واجهة البرنامج:**\nعند تشغيل برنامج الدفتر تظهر أمام المستخدم واجهة من أهم مكوناتها:\n1- صفحة بيضاء مخصصة للكتابة.\n2- شريط العنوان.\n3- شريط التبويبات.\n4- شريط الأدوات (لون الخط، نوعه، حجمه، الخ ...).\n**4- حفظ الوثيقة:**\nيمكن حفظ الوثيقة باتباع هذه الخطوات:\n1- انقر على التبويب $WordPad$ (أو $Fichier$ في بعض الإصدارات).\n2- انقر على $Enregistrer$.\n3- اكتب اسما للوثيقة، ثم انقر على $Enregistrer$."
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج الدفتر و اكتب هذه الفقرة:\n> يعتبر الأسد ملك الغابة، و هو حيوان يعيش في البرية."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:12": {
+  "head": [
+   [
+    "الميدان",
+    "استخدام الحاسوب"
+   ],
+   [
+    "المقطع التعلمي",
+    "تنظيم المعلومات في الحاسوب"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "مفهوم الملف و المجلد."
+   ],
+   [
+    "المعارف المستهدفة",
+    "تعريف الملف $Fichier$ – تعريف المجلد $Dossier$"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** عند تشغيل الحاسوب ظهرت على الشاشة عدة عناصر بأشكال و بألوان مختلفة، هنالك ما يسمى بالملفات، و هنالك ما يسمى بالمجلدات، فكيف تميز بينهما (بين الملف و المجلد)؟ و كيف تتمكن من معرفة أنواع الملفات؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** شاهد العنصر المتميز بلونه الأصفر (==مجلد==)، ماذا يشبه؟ (==حافظة==) هل لديه اسم؟ (==نعم==)، افتحه، على ماذا يحتوي؟ استنتج تعريفا له؟\nشاهد العناصر الموجودة داخل هذا المجلد (==الملفات==)، اطلع عليها، ما الذي يحتويه كل واحد منها؟ هل لديه اسم؟ استنتج تعريفا لها و صنفها حسب نوعها.\n\n**1- تعريف الملف $Fichier$:** هو عنصر يحتوي على مجموعة من المعلومات، يتميز باسمه، حجمه و بالأيقونة الموافقة له.\n- **أنواع الملفات:** تتواجد الملفات بعدة أنواع، نذكر منها:\n- ملفات الصور (ذات الامتداد $jpeg$ مثلا).\n- الملفات الصوتية (ذات الامتداد $mp3$ مثلا).\n- ملفات الفيديو (ذات الامتداد $mp4$ مثلا).\n- الملفات النصية (ذات الامتداد $docx$ مثلا).\n- الملفات التنفيذية (ذات الامتداد $exe$ مثلا، و هي خاصة بالبرامج و التطبيقات).\n**2- تعريف المجلد $Dossier$:** هو عبارة عن حافظة افتراضية تسمح باحتواء ملفات و مجلدات أخرى، يتميز باسمه، و يكون عادة باللون الأصفر.\n**ملاحظة:**\n- يمكن وضع الملفات داخل المجلدات، و لا يمكن العكس.\n- يمكن للمجلد أن يحتوي مجلدات أخرى."
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** تابع ما يقدمه الأستاذ على السبورة بجهاز العرض و في كل مرة قرر إن كان العنصر المشار إليه يمثل ملفا (مع ذكر نوعه) أو مجلدا."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:13": {
+  "head": [
+   [
+    "الميدان",
+    "استخدام الحاسوب"
+   ],
+   [
+    "المقطع التعلمي",
+    "تنظيم المعلومات في الحاسوب"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "عمليات على الملفات و المجلدات."
+   ],
+   [
+    "المعارف المستهدفة",
+    "عمليات على الملفات و المجلدات"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** لدينا مجلد يحتوي على صور و ملفات صوتية و مقاطع فيديو و ملفات أخرى، نريد وضع كل نوع من الملفات في مجلد خاص ثم حذف الملفات المكررة، كيف يمكننا فعل ذلك؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** انقر بالزر الأيمن للفأرة على ملف أو مجلد ما و حاول استنتاج بعض العمليات التي يمكن إجراؤها عليه.\n\n**- عمليات على الملف و المجلد:** يمكن إجراء عدة عمليات على الملفات و المجلدات، و من بين هذه العمليات نذكر:\n**1- عملية النسخ:**\n- انقر على الملف (أو المجلد) بالزر الأيمن للفأرة.\n- تظهر قائمة اختر منها $Copier$.\n- انقر بالزر الأيمن للفأرة في المكان الذي تريد وضع النسخة فيه.\n- تظهر قائمة اختر منها $Coller$.\n**2- عملية النقل:** نفس الخطوات فقط اختر $Couper$ عوض $Copier$.\n**3- إعادة التسمية:**\n- انقر على الملف (أو المجلد) بالزر الأيمن للفأرة.\n- تظهر قائمة اختر منها $Renommer$.\n- اكتب الاسم المناسب ثم انقر على $Entrée$.\n**4- عملية الحذف:**\n- انقر على الملف (أو المجلد) بالزر الأيمن للفأرة.\n- تظهر قائمة اختر منها $Supprimer$.\n- تظهر علبة حوار، انقر منها على $Oui$.\n**5- إنشاء مجلد جديد:**\n- انقر بالزر الأيمن للفأرة في المكان الذي تريد إنشاء المجلد فيه.\n- تظهر قائمة اختر منها $Nouveau$.\n- تظهر قائمة فرعية اختر منها $Dossier$."
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:**\n- ما الفرق بين نسخ ملف و نقله؟\n- طبق العمليات التي تعلمتها في الدرس على الملفات و المجلدات الموجودة في الحاسوب."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:14": {
+  "head": [
+   [
+    "الميدان",
+    "استخدام الحاسوب"
+   ],
+   [
+    "المقطع التعلمي",
+    "تنظيم المعلومات في الحاسوب"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "مختلف طرق العرض."
+   ],
+   [
+    "المعارف المستهدفة",
+    "مختلف طرق العرض"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** أراد أسامة عرض محتويات مجلد معين بعدة طرق حيث يتمكن من رؤية بعض المعلومات الخاصة بكل ملف أو مجلد، و كذا عرضها بأحجام مختلفة. كيف يتسنى له ذلك؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** افتح المجلد المعين و انقر بالزر الأيمن للفأرة في الفراغ، تظهر قائمة انقر منها على $Affichage$ تظهر عدة خيارات، في كل مرة انقر على خيار معين و لاحظ كيف تتغير طريقة عرض محتويات المجلد. استنتج كيف يمكن ضبط مختلف طرق العرض.\n\n**مختلف طرق العرض:** يمكن ضبط طريقة عرض الملفات و المجلدات المتواجدة داخل مجلد ما و ذلك بتطبيق ما يلي:\n1- انقر بالزر الأيمن للفأرة في الفراغ داخل المجلد.\n2- انقر على $Affichage$.\n3- انقر على طريقة عرض مناسبة حيث:\n1- أيقونات كبيرة جدا: $Très grandes icônes$\n2- أيقونات كبيرة: $Grandes icônes$\n3- أيقونات متوسطة: $Icônes moyennes$\n4- أيقونات صغيرة: $Petites icônes$\n5- قائمة: $Liste$\n6- تفاصيل: $Détails$\n7- موزاييك: $Mosaïques$\n8- المحتوى: $Contenu$"
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** افتح المجلد 1 و غيّر طريقة العرض إلى **أيقونات كبيرة**.\nانقل الآن كل ملف إلى المجلد الخاص به (فيديوهات، صور، نصوص، مقاطع صوتية)."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:16": {
+  "head": [
+   [
+    "الميدان",
+    "معالج النصوص"
+   ],
+   [
+    "المقطع التعلمي",
+    "تقديم معالج النصوص"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "تقديم معالج النصوص."
+   ],
+   [
+    "المعارف المستهدفة",
+    "تعريف معالج النصوص – تشغيل البرنامج – واجهة البرنامج"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** هل سبق لك و أن فكرت في الطريقة التي أنجزت بها كتبك المدرسية؟ هل كتبت باليد؟ لماذا هي متشابهة بشكل دقيق حيث لا فرق بين كتابك و كتاب زميلك؟ مادام هنالك برنامج للرسم يدعى الرسام، ما الذي يلزم لإعداد النصوص و إضافة الصور إليها و تنظيمها على أكمل وجه؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** انقر مرتين بالزر الأيسر للفأرة على أيقونة $Word$ الموجودة في سطح المكتب (أو في شريط المهام)، ما الذي ظهر أمامك؟ استنتج تعريفا له، كيف يتم تشغيله (فتحه)؟ ما العناصر المكونة لواجهته؟ (استعن بدرس الرسام) كيف تكتب في تلك الورقة؟\n\n**1- تعريف معالج النصوص:** هو برنامج إلكتروني يسمح بتحرير وثائق تحتوي على نصوص، صور، مخططات الخ ... و يتيح إمكانية التعديل عليها باستخدام الكمبيوتر، و أشهر معالج للنصوص هو برنامج $Word$.\n\n**2- تشغيل البرنامج:** انقر على اختصاره الموجود في سطح المكتب إن وجد، أو اكتب $Word$ في الخانة المخصصة للبحث و انقر على الأيقونة الموافقة له عندما تظهر.\n\n**3- واجهة البرنامج:** عند تشغيل برنامج $Word$ تظهر أمام المستخدم واجهة من أهم مكوناتها:\n1- ورقة بيضاء مخصصة للكتابة.\n2- شريط العنوان.\n3- شريط التبويبات.\n4- شريط الأدوات (حجم و لون الخط، إعدادات الصفحة، الخ ...)."
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج معالج النصوص و اكتب اسمك، لقبك و قسمك."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:17": {
+  "head": [
+   [
+    "الميدان",
+    "معالج النصوص"
+   ],
+   [
+    "المقطع التعلمي",
+    "عمليات على الوثيقة"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "عمليات عامة على الوثيقة."
+   ],
+   [
+    "المعارف المستهدفة",
+    "عمليات عامة على الوثيقة"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "10 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** بدأ أحد الأولاد بكتابة مذكراته عن عطلة الصيف ببرنامج $Word$، و في اليوم الموالي أراد المواصلة في كتابة هذه المذكرات، كيف يمكنه ذلك؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** بعد تشغيل برنامج $Word$ انقر على $Fichier$ ثم انقر على $Nouveau$، ماذا تلاحظ (ماذا أنشأت؟).\nكيف تحفظ هذه الوثيقة؟ (تذكر درس برنامج الرسام).\nانقر على $Fichier$ ثم $Fermer$، ماذا تلاحظ؟\nكيف نقوم بفتح الوثيقة من جديد؟\n\n**عمليات عامة على الوثيقة:** لإنشاء و حفظ و إغلاق و فتح وثيقة في $Word$ اتبع في كل مرة الخطوات المرفقة بكل حالة مما يلي:\n**1- إنشاء وثيقة:**\n1- انقر على التبويب $Fichier$.\n2- انقر على $Nouveau$.\n3- انقر على نموذج مناسب.\n**2- حفظ وثيقة:**\n1- انقر على التبويب $Fichier$.\n2- انقر على $Enregistrer$.\n3- اكتب اسما للوثيقة ثم انقر على $Enregistrer$.\n**3- إغلاق وثيقة:**\n1- انقر على التبويب $Fichier$.\n2- انقر على $Fermer$.\n**4- فتح وثيقة:**\n1- انقر على التبويب $Fichier$.\n2- انقر على $Ouvrir$.\n3- انقر على الوثيقة المناسبة."
+   ],
+   [
+    "التقويم و المعالجة",
+    "15 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج معالج النصوص و اكتب اسمك، لقبك و قسمك.\nقم بحفظ الوثيقة في سطح المكتب."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:18": {
+  "head": [
+   [
+    "الميدان",
+    "معالج النصوص"
+   ],
+   [
+    "المقطع التعلمي",
+    "عمليات على الوثيقة"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "كتابة نص مع توظيف المدقق الإملائي."
+   ],
+   [
+    "المعارف المستهدفة",
+    "كتابة نص – المدقق الإملائي"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "5 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** بدأ أحد الأولاد بكتابة مذكراته عن عطلة الصيف ببرنامج $Word$، لكنه لاحظ ظهور بعض الخطوط الحمراء و الزرقاء تحت بعض الأجزاء من النص، كيف يمكنه معالجة هذا المشكل؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** بعد تشغيل برنامج $Word$ اكتشف برفقة أستاذك و زملائك كيف تحدد اتجاه النص (يمين - يسار)، كيف تترك مسافة بين كلمتين، كيف تحذف حرفا و كيف تعود إلى السطر.\nتم تسطير بعض الكلمات بخط منكسر أحمر أو أزرق، انقر عليها بالزر الأيمن للفأرة و انقر على أحد الخيارات المقترحة، ماذا تلاحظ؟\n\n**1- كتابة نص:** يتم ذلك بمراعاة هذه الإرشادات:\n1- حدد اتجاه النص.\n- للكتابة من اليمين إلى اليسار انقر على الأداة $¶◂$\n- للكتابة من اليسار إلى اليمين انقر على الأداة $▸¶$\n2- حدد اللغة المناسبة.\n3- ابدأ بالكتابة.\n**2- المدقق الإملائي:** دوره تنبيه المستخدم إلى وجود خطأ في النص و ذلك بوضع خط منكسر أحمر أو أزرق في الجزء الذي يحتوي على الخطأ. و لتصويب هذا الخطأ اتبع ما يلي:\n1- انقر بالزر الأيمن للفأرة على الخطأ.\n2- تظهر قائمة من الخيارات، انقر على الخيار المناسب لتصحيح الخطأ.\n**ملاحظة:** يمكنك النقر على $Ignorer tout$ لإخفاء الخط المنكسر مباشرة."
+   ],
+   [
+    "التقويم و المعالجة",
+    "20 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج معالج النصوص $Word$ و اكتب تعبيرا تصف فيه حلمك في الحياة مستخدما المدقق الإملائي لتصحيح الأخطاء التي من الممكن أن تظهر في النص."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:19": {
+  "head": [
+   [
+    "الميدان",
+    "معالج النصوص"
+   ],
+   [
+    "المقطع التعلمي",
+    "عمليات على الوثيقة"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "البحث عن كلمة و تعويضها."
+   ],
+   [
+    "المعارف المستهدفة",
+    "البحث عن كلمة و تعويضها"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "5 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** كتب بلال تعبيرا عن جده **علي**، ثم اكتشف أن اسمه الحقيقي هو **عبد الباسط**. كيف يمكنه تغيير كلمة علي بعبد الباسط في كل الوثيقة دون تضييع وقت كبير في العمل؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** انقر على الأداة $Remplacer$ ثم اكتب **علي** في الخانة الأولى و **عبد الباسط** في الخانة الثانية. ثم انقر على الأداة $Remplacer$. ماذا تلاحظ؟\n\n**البحث عن كلمة و تعويضها:** يتيح برنامج معالج النصوص إمكانية البحث عن كلمة معينة، ثم تعويضها بكلمة أخرى. و لإنجاز ذلك اتبع ما يلي:\n1- انقر على الأداة $Remplacer$ (داخل التبويب $ACCUEIL$).\n2- تظهر علبة حوار، اكتب الكلمة المراد البحث عنها في الخانة $Rechercher$.\n3- اكتب الكلمة التي ستعوض بها الكلمة الأصلية في الخانة $Remplacer par$.\n4- انقر على $Remplacer$.\n\n**ملاحظة:** انقر على $Remplacer tout$ لتعويض كل ظهور للكلمة الأصلية بالكلمة الجديدة."
+   ],
+   [
+    "التقويم و المعالجة",
+    "20 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج معالج النصوص $Word$ و اكتب تعبيرا تصف فيه يوم تعلمت سياقة الدراجة، ثم عوّض كلمة سياقة بكلمة قيادة في كل الفقرة التي كتبتها."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:20": {
+  "head": [
+   [
+    "الميدان",
+    "معالج النصوص"
+   ],
+   [
+    "المقطع التعلمي",
+    "تنسيق الخط و الفقرة"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "تنسيق الخط."
+   ],
+   [
+    "المعارف المستهدفة",
+    "تنسيق الخط – تحديد جزء من النص لتغيير التنسيق"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "5 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** خلال كتابته لفقرة صغيرة أراد تلميذ تغيير حجم و لون الخط إضافة إلى تغييرات أخرى، فكيف يمكنه ذلك؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** في كل مرة انقر على أداة معينة من الأدوات الخاصة بتنسيق الخط و اكتشف دورها.\n\n**1- تنسيق الخط:** يقصد به تحديد شكل الخط (الحجم، اللون، النوع ... الخ)، و يتم ذلك بالنقر على التبويب $Accueil$ ثم النقر على الأداة المناسبة مثل:\n1- تحديد حجم الخط (القائمة $11$ و أداتا تكبير و تصغير الخط)\n2- تحديد لون الخط (الأداة $A$ بخط أحمر)\n3- تحديد نوع الخط (القائمة $Calibri (Corps)$)\n4- الكتابة بخط غليظ ($G$)\n5- الكتابة بخط مائل ($I$)\n6- الكتابة بخط مسطر ($S$)\n[[img 0]]\nو غيرها من التنسيقات.\n\n**2- تحديد جزء من النص لتغيير التنسيق:** لتحديد جزء من النص اتبع ما يلي:\n1- ابق ضاغطا على الزر الأيسر للفأرة في أحد طرفي الجزء المعين من النص.\n2- اسحب الفأرة إلى الطرف المقابل من الجزء المعين من النص مع الإبقاء على الزر الأيسر لها مضغوطا دوما.\n3- عند الوصول إلى الطرف الآخر أفلت الزر الأيسر للفأرة. (ستلاحظ تلون خلفية الجزء المحدد بلون مغاير)."
+   ],
+   [
+    "التقويم و المعالجة",
+    "20 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج معالج النصوص $Word$ و اكتب فقرة مع مراعاة هذه التنسيقات:\n- حجم الخط 22 للنص العادي و 28 للعناوين.\n- نوع الخط $Calibri$.\n- لون الخط أسود و العناوين بالأحمر."
+   ]
+  ],
+  "author": "MBM Page",
+  "imgs": [
+   "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"
+  ]
+ },
+ "w:21": {
+  "head": [
+   [
+    "الميدان",
+    "معالج النصوص"
+   ],
+   [
+    "المقطع التعلمي",
+    "تنسيق الخط و الفقرة"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "تنسيق الفقرة."
+   ],
+   [
+    "المعارف المستهدفة",
+    "المحاذاة – تباعد الأسطر – المسافة البادئة"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "5 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** أراد تلميذ أن يكتب فقرة في وسط الورقة مع ترك مسافة بين الأسطر إضافة إلى ترك مسافة بين الفقرة و هامش الصفحة، كيف يتسنى له ذلك؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** اكتب فقرة بسيطة ثم حددها و انقر على هذه الأدوات و اكتشف دور كل واحدة منها:\n[[img 0]]\n\n**تنسيق الفقرة:** يقصد به تنظيم الشكل العام للفقرة و يشتمل ذلك على المحاذاة، تباعد الأسطر و المسافة البادئة.\n**1- المحاذاة:** يقصد بها وضع النص في يمين أو يسار أو وسط الورقة.\n- يمين (أداة المحاذاة إلى اليمين)\n- وسط (أداة التوسيط)\n- يسار (أداة المحاذاة إلى اليسار)\n**2- تباعد الأسطر:** يقصد به المسافة بين سطر و آخر. انقر على الأداة (تباعد الأسطر و الفقرات) و اختر المسافة المناسبة.\n**3- المسافة البادئة:** يقصد بها المسافة التي تترك بين الفقرة و هامش الصفحة. لضبط المسافة البادئة انقر على هاتين الأداتين (زيادة المسافة البادئة / إنقاص المسافة البادئة)."
+   ],
+   [
+    "التقويم و المعالجة",
+    "20 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج معالج النصوص $Word$ و اكتب فقرة مراعيا ما يلي:\n- محاذاة العنوان في الوسط.\n- محاذاة النص في اليمين.\n- تباعد الأسطر $1.0$.\n- المسافة البادئة للنص نقرة واحدة بعيدا عن الهامش."
+   ]
+  ],
+  "author": "MBM Page",
+  "imgs": [
+   "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"
+  ]
+ },
+ "w:22": {
+  "head": [
+   [
+    "الميدان",
+    "معالج النصوص"
+   ],
+   [
+    "المقطع التعلمي",
+    "تنسيق الخط و الفقرة"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "التعداد النقطي و الرقمي."
+   ],
+   [
+    "المعارف المستهدفة",
+    "التعداد النقطي – التعداد الرقمي"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "5 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** أراد تلميذ كتابة قائمة مرقمة للصلوات المفروضة في اليوم الواحد، و قائمة أخرى غير مرقمة لعدد من الصلوات الأخرى المشروعة في الإسلام، فكيف يمكنه إنجاز ذلك؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** انقر على هذه الأداة هنا (التعداد النقطي) ثم انقر على رمز من الرموز التي ظهرت لك ثم اكتب كلمة ما و انقر على $Entrée$، ماذا تلاحظ؟ طبق نفس الشيء على الأداة (التعداد الرقمي)، ماذا تلاحظ؟\n\n**1- التعداد النقطي:** يسمح بإنشاء قائمة عناصرها مرتبة على شكل نقاط، و لإنجاز ذلك اتبع ما يلي:\n1- انقر على هذه الأداة هنا:\n[[img 0]]\n2- انقر على نموذج مناسب.\n3- اكتب العنصر الأول من القائمة.\n4- انقر على $Entrée$ للانتقال إلى العنصر الموالي.\n\n**2- التعداد الرقمي:** يسمح بإنشاء قائمة عناصرها مرتبة بأرقام، و لإنجاز ذلك اتبع ما يلي:\n1- انقر على هذه الأداة هنا:\n[[img 1]]\n2- انقر على نموذج مناسب.\n3- اكتب العنصر الأول من القائمة.\n4- انقر على $Entrée$ للانتقال إلى العنصر الموالي."
+   ],
+   [
+    "التقويم و المعالجة",
+    "20 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج معالج النصوص $Word$.\n- اكتب قائمة مرقمة لأيام الأسبوع.\n- اكتب قائمة غير مرقمة لعدد من ماركات السيارات التي تعرفها."
+   ]
+  ],
+  "author": "MBM Page",
+  "imgs": [
+   "/9j/4AAQSkZJRgABAQEAlgCWAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAA4AEoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2DxN418PeDltm17URZi6LCH908hfbjdwinpuHX1rnv+F2/Dz/AKGH/wAkrj/43TPGX/JWvh3/ANxL/wBELXb0AcX/AMLt+Hn/AEMP/klcf/G6P+F2/Dz/AKGH/wAkrj/43XaUUAcX/wALt+Hn/Qw/+SVx/wDG6P8Ahdvw8/6GH/ySuP8A43XaUUAcX/wu34ef9DD/AOSVx/8AG67q0uoL+zgvLWVZbeeNZYpF6OjDII+oNc541RpPAniGNRln0y5VR6kxMBWF4c8eaFo3w40nz7jdc2drHZm2X/WO8aBcgdlOM56c+vFRKpCHxOx00MHiMQr0oOWqWndnoF1d29jayXN1NHDBGMvJI2AB9akR0ljWSNldGAZWU5BB6EGvCJrnxN8UdX8mJfLsomzsBIhgHqx/ib9euABXeQfDCKG3iiPiPWgUQLiOcKvA7DBwPasIYiVRtwjoericooYSMY4mslUe6Svb7uv9LuQ+Mv8AkrXw7/7iX/oha7O4jeWB445WidhgSKASp9cGuM8Zf8la+Hf/AHEv/RC12c6SPA6wy+VIRhX27tp9cd66jwTK/snU/wDoP3P/AH5j/wAKZqmj397pMdrFqTidX3NMw2lh6fKKm+waz/0G1/8AARf8ah1bT9XudJjgtb8falfLS48vcPTjpVw0kiZ6xZrWkTwWcMUknmOigM/qfWpqhtI5YrOGOd98qqA7epqprQ1P7CX0qRFuE52OuQ49PrUvca2OJ+K/iD7Lp0OiwPiW6/eTY7Rg8D8SP/HT615PYrC1/AtxFLLCZF8xIfvsueQvvivXNf8ADqt4L8Ra3q9vDLq502eRZMHMRWJtuOcAjA6AYNdZ4ChiTwD4ekSNFkl0y2eRgoBdjEpJJ7kmvPq4SdWpzSZ9bgOIMPgMIqFKm2+rvbV/f6I1dHtLCz0m3i0y3WC0KBo0ClTgjOSDzn1zz61eooruSsrHys5OcnJ9e5554y/5K18O/wDuJf8Aoha7K4WZreRbd0SYj5GddwB9x3rjfGX/ACVr4d/9xL/0QtdvTJMT7L4k/wCgnYf+Ajf/ABVN1S112XSIo7W7i+2h8vIi7AV9gScdq3aKcXZ3E1dWIbRZks4VuGDTBQHYdz3qaiikxmD44/5J/wCJP+wXdf8AopqteBP+SeeGv+wVa/8Aopaq+OP+Sf8AiT/sF3X/AKKarXgT/knnhr/sFWv/AKKWgDoKKKKAMfWfDGk6/dWV1qEMxubHebaaC6lgeLeAGw0bKeQAKrf8IVpP/Pxrf/g9vf8A47RRQAf8IVpP/Pxrf/g9vf8A47R/whWk/wDPxrf/AIPb3/47RRQAf8IVpP8Az8a3/wCD29/+O0f8IVpP/Pxrf/g9vf8A47RRQBHP4D0O6t5Le4fWJoZUKSRya3eMrqRgggy4II7VvWVnb6dYW1jaRiK2tolhijBJ2ooAUZPPAAoooAnooooA/9k=",
+   "/9j/4AAQSkZJRgABAQEAlgCWAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAA4AEoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3DU9c0nRVjbVdUsrBZSRGbq4SIOR1xuIz1FZ3/Cd+D/8Aoa9D/wDBjD/8VXK+P7G01L4n/D+0v7WC6tpP7R3wzxh0bEKkZU8HkA/hXQf8IP4S/wChW0T/AMF8X/xNAFr/AITvwf8A9DXof/gxh/8AiqP+E78H/wDQ16H/AODGH/4qqv8Awg/hL/oVtE/8F8X/AMTR/wAIP4S/6FbRP/BfF/8AE0AWv+E78H/9DXof/gxh/wDiqP8AhO/B/wD0Neh/+DGH/wCKqr/wg/hL/oVtE/8ABfF/8TVPVfDPgvSNKudQuPC+iCKBC5H2CHk9gPl6k4H40m0ldlQhKclGKu2dXp2q6drFsbnTL+1vYAxQy20yyKGHUZUkZ5HHvSalqtjo9mbvULqO3gBA3Oep9AOpP0ryjw3490Xw7oesT2mnRW8l1fiS2063QRouLaBWbgYVd6v2yfTrjKsNJ8SfE3Vvtt7KY7NCQZiuI4x/djXuf8k1zTxS0jT1bPdwuRVPeq41+zpx3b3fkv8AP7rnu6OsiK6MGVhkMDkEUtUtJ0yHRtKttOt3leK3QIrStuYj3P8AkCrtdKvbU8KaipNRd10PPPGX/JWvh3/3Ev8A0QtdHeasbTWrKyfyViuA2XdwCCAcADPc1znjL/krXw7/AO4l/wCiFrb1i/FrqtjFvtC0rACOVPn69Q2ePbjk1pBXdjObsrlu4vtQindItJkmjB4kE6KG/AnNPtLu9nm2XGmSWyYzvaZG59MA5plxd6nHO6w6WksYPyubkLn8McU+0udQlm23OnLBHjO8XAfn0xioKL1eU/FrxBukg0KB+FxNc4Pf+FT+HP4ivUbmSSK2kkhh86RRkR7sbvxrndEhsNYubi+l8OwwS7zmedVd2cHBGSM8dPwrGvTlUhyxdrno5Vi6OExCr1YuXLsvM8T0Cza41a2d9LutRtUkHnQ26MSy9x8tfTNpHBFaQpbQiGAINkYTZtGOBt7fSsHwuoXVvFSqAANVTAH/AF521dJUYfD+xT1vc6c4zh5lKL5eVR87/wCQUUUV0ninnnjL/krXw7/7iX/oha3tWu5rfU7KOKdArsA8Xk73Iz1B7e/p15rB8Zf8la+Hf/cS/wDRC129VF2dxSV0ZdzPra3DrbWNnJCD8rPcsrEe42HFSWU2rPPi9s7WKLB+aK4LnP0KitCipGFAAHQUUUAZHhj/AJC/iv8A7Cqf+kdtXR1znhj/AJC/iv8A7Cqf+kdtXR0AFFFFAHP+IPCdvr+q6Vqh1C+sb3S/O+zTWpj481Qr5EiMDwPSmf8ACMaj/wBDjrn/AH6sv/keiigA/wCEY1H/AKHHXP8Av1Zf/I9H/CMaj/0OOuf9+rL/AOR6KKAD/hGNR/6HHXP+/Vl/8j0f8IxqP/Q465/36sv/AJHoooAv6Joi6Kl5/p11ezXlx9omnufLDM3lpGOI0VQAsa9q1KKKACiiigD/2Q=="
+  ]
+ },
+ "w:23": {
+  "head": [
+   [
+    "الميدان",
+    "معالج النصوص"
+   ],
+   [
+    "المقطع التعلمي",
+    "إعداد و طباعة وثيقة"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "إعداد الصفحة."
+   ],
+   [
+    "المعارف المستهدفة",
+    "الهوامش – حجم الورق – اتجاه الصفحة"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "5 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** أراد تلميذ إنجاز ملصقات تكون بالعرض و ليس بالطول ليعلقها في القسم، مع ترك هوامش مناسبة و إنجاز وثائق مختلفة الحجم، فكيف يمكنه إنجاز ذلك؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** انقر على التبويب $MISE EN PAGE$ ثم اكتشف ما تقدمه الأدوات $Marges$، $Orientation$ و الأداة $Taille$.\n\n**1- الهوامش:** يقصد بها الفراغ الذي يترك في أعلى، أسفل، يمين و يسار الصفحة، و لإنجاز ذلك:\n1- انقر على التبويب $MISE EN PAGE$.\n2- انقر على الأداة $Marges$.\n3- انقر على نوع الهوامش المناسب.\n**2- اتجاه الصفحة:** عمودي – أفقي، و لإنجاز ذلك:\n1- انقر على التبويب $MISE EN PAGE$.\n2- انقر على الأداة $Orientation$.\n3- انقر على الاتجاه المناسب.\n**3- حجم الورق:** هو مقاس الورق من حيث الطول و العرض، و لإنجاز ذلك:\n1- انقر على التبويب $MISE EN PAGE$.\n2- انقر على الأداة $Taille$.\n3- انقر على الحجم المناسب."
+   ],
+   [
+    "التقويم و المعالجة",
+    "20 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج معالج النصوص $Word$.\n- اضبط اتجاه الورقة $Paysage$.\n- اضبط هوامش الورقة $Moyennes$.\n- اضبط حجم الورقة $A3$.\n- اضبط حجم الكتابة 72 و المحاذاة في الوسط.\n- اكتب عبارة \"تحيا الجزائر\"."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:24": {
+  "head": [
+   [
+    "الميدان",
+    "معالج النصوص"
+   ],
+   [
+    "المقطع التعلمي",
+    "إعداد و طباعة وثيقة"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "كتابة نص على شكل أعمدة."
+   ],
+   [
+    "المعارف المستهدفة",
+    "كتابة نص على شكل أعمدة"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "5 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** أراد تلميذ كتابة مقال لنشره في مجلة المدرسة، بحيث يكون مشابها للمقالات التي يجدها منشورة في الصحف و المجلات، فكيف يمكنه إنجاز ذلك؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** انقر على التبويب $MISE EN PAGE$ ثم انقر على الأداة $Colonnes$ ثم انقر على خيار من الخيارات المتاحة و ابدأ بالكتابة، ماذا تلاحظ؟\n\n**كتابة نص على شكل أعمدة:** يمكن تقسيم النص إلى عدة أعمدة تماما كالمقالات التي توجد في الصحف أو المجلات و غيرها، و لإنجاز ذلك اتبع ما يلي:\n1- انقر على التبويب $MISE EN PAGE$.\n2- انقر على الأداة $Colonnes$.\n3- انقر على $Autres colonnes$.\n4- قم بضبط عدد الأعمدة.\n5- انقر على $OK$.\n\n**ملاحظة:** للانتقال بين الأعمدة انقر على $Ctrl+Shift+Entrée$."
+   ],
+   [
+    "التقويم و المعالجة",
+    "20 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج معالج النصوص $Word$.\n- اكتب مقالا عن مشاريعك في فصل الصيف و نظمه في عمودين اثنين."
+   ]
+  ],
+  "author": "MBM Page"
+ },
+ "w:25": {
+  "head": [
+   [
+    "الميدان",
+    "معالج النصوص"
+   ],
+   [
+    "المقطع التعلمي",
+    "إعداد و طباعة وثيقة"
+   ],
+   [
+    "الحجم الساعي",
+    "01 ساعة"
+   ],
+   [
+    "الكفاءة المستهدفة",
+    "طباعة وثيقة."
+   ],
+   [
+    "المعارف المستهدفة",
+    "معاينة الوثيقة – طباعة الوثيقة"
+   ],
+   [
+    "الوسائل المستعملة",
+    "السبورة – الحواسيب – جهاز العرض"
+   ],
+   [
+    "المراجع",
+    "المنهاج و المخططات – معارف قبلية للأستاذ – أنترنت"
+   ]
+  ],
+  "cols": [
+   "المراحل",
+   "الزمن",
+   "مؤشرات الكفاءة",
+   "النشاطات و المعارف المكتسبة (سير الدرس)"
+  ],
+  "rows": [
+   [
+    "وضعية انطلاق",
+    "5 د",
+    "يستمع و ينتبه",
+    "**الإشكالية:** أراد تلميذ طباعة وثيقة كان قد أنجزها بمعالج النصوص، كيف يتسنى له ذلك؟"
+   ],
+   [
+    "العرض (إرساء الموارد)",
+    "35 د",
+    "يناقش، يتبادل الأفكار و يستنتج.\nيستوعب و يكتب.",
+    "**نشاط:** ما هو التبويب الذي تنقر عليه لحفظ وثيقة معينة؟ انقر عليه.\nابحث عن الأداة التي تسمح بطبع الوثيقة.\nكيف تقوم بطبع وثيقة؟\n\n**1- معاينة الوثيقة:** هو مراقبة الوثيقة قبل طباعتها، و لإنجاز ذلك:\n1- انقر على التبويب $FICHIER$.\n2- انقر على $Imprimer$.\n3- راقب الوثيقة جيدا و تأكد من أن كل شيء على ما يرام.\n\n**2- طباعة الوثيقة:** لإنجاز ذلك:\n1- انقر على التبويب $FICHIER$.\n2- انقر على $Imprimer$.\n3- حدد الطابعة المناسبة و عدد النسخ المراد طبعها ثم انقر على $Imprimer$."
+   ],
+   [
+    "التقويم و المعالجة",
+    "20 د",
+    "يستثمر معلوماته",
+    "**تقويم:** قم بتشغيل برنامج معالج النصوص $Word$، اكتب تعبيرا تصف فيه أحد ذكرياتك ثم قم بطباعته إن أمكن."
+   ]
+  ],
+  "author": "MBM Page"
+ }
+}
