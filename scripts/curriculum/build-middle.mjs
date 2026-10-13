@@ -66,6 +66,8 @@ function build(spec) {
   const [name, activity, materials] = SUBJECTS[subject];
   const lang = spec.language ?? "ar";
   const plan = yearPlan(level);
+  // ملفات من الويب (ليست في Drive): مصدر «w» للتوثيق فقط، والمذكرات المُنسّقة بأشكالها مضمّنة في content/memos
+  const KEY = spec.web ? "w" : "b";
   // إزاحات الصفحات: الملفات موصولة بترتيبها
   const offsets = [];
   let acc = 0;
@@ -100,7 +102,7 @@ function build(spec) {
     done += weight(l);
     // أسبوع مكتوب في المذكرة يُعتمد فقط إن كان رقم أسبوع السنة (absoluteWeeks)؛ أسابيع المقطع (1–4) لا
     const week = spec.absoluteWeeks && Number.isInteger(l.week) && l.week >= 2 && l.week < plan.last ? l.week : plan.teaching[at];
-    const pages = (l.pages ?? []).map((p) => `b:${offsets[l.file ?? 0] + p}`);
+    const pages = (l.pages ?? []).map((p) => `${KEY}:${offsets[l.file ?? 0] + p}`);
     const sample = pages.length > 0 && l.kind === "lesson" && samples < 2;
     if (sample) samples++;
     const kind = KIND_LABEL[l.kind];
@@ -137,12 +139,12 @@ function build(spec) {
     id, level, subject,
     title: `${name} — ${LEVELS[level]}`,
     source: {
-      ar: `مذكرات أساتذة منشورة للعموم (مناهج الجيل الثاني) من مجلد «التعليم المتوسط»؛ الأسابيع تقديرية موزّعة على رزنامة ${YEAR} في غياب المخطط السنوي الرسمي`,
+      ar: `مذكرات أساتذة منشورة للعموم (مناهج الجيل الثاني)${spec.web ? "" : " من مجلد «التعليم المتوسط»"}؛ الأسابيع تقديرية موزّعة على رزنامة ${YEAR} في غياب المخطط السنوي الرسمي`,
       fr: `Fiches d'enseignants partagées publiquement (programmes de 2e génération) ; semaines estimées sur le calendrier ${YEAR}`,
     },
     weekMode: "absolute",
     segments: spec.segments,
-    sources: { b: { pdf: spec.files } },
+    sources: spec.web ? { w: { web: spec.web } } : { b: { pdf: spec.files } },
     lessons,
   };
 }

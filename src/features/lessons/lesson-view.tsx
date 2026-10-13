@@ -7,6 +7,8 @@ import { ArrowRight, LoaderCircle, Lock, Sparkles } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { DOC, docLangOfSubject } from "@/i18n/doc-lang";
+import { useAuth } from "@/features/auth/auth-provider";
+import { MemoSheet } from "./memo-sheet";
 import { useCurriculum, useLesson, useLessonAccessFor, useLessonPages } from "./repo";
 
 /** مذكرة جاهزة: الرأس والأهداف (التجربة) والسير كاملًا (الاشتراك أو النماذج). قابلة للطباعة.
@@ -20,6 +22,7 @@ export function LessonView({ id }: { id: string }) {
   const can = useLessonAccessFor(!!entry?.sm);
   const { summary, body } = useLesson(id, { summary: can.summary && !!entry, body: can.body && !!entry?.b });
   const pages = useLessonPages(body.data?.pages ?? []);
+  const auth = useAuth();
 
   if (cur.isLoading || (can.summary && summary.isLoading)) {
     return (
@@ -36,17 +39,42 @@ export function LessonView({ id }: { id: string }) {
   const label = (k: "segment" | "unit" | "activity" | "domain" | "materials" | "objectives" | "process" | "original") => D?.[k] ?? t(k);
   const unit = entry.k === "day" ? (D?.day(entry.u) ?? t("day", { n: entry.u })) : (D?.week(entry.u) ?? t("week", { n: entry.u }));
   const doc = lang ? { dir: "ltr" as const, lang } : {};
+  const back = (
+    <Link href="/app/lessons" className="inline-flex min-h-10 items-center gap-1 text-sm font-medium text-brand-800">
+      <ArrowRight aria-hidden className="size-4 ltr:rotate-180" />
+      {t("back")}
+    </Link>
+  );
+  const printTitle = () => document.querySelector("article h1, article h2")?.textContent?.trim() || t("print");
+
+  // مذكرة مُنسّقة بقالب المنصة: تغني عن البطاقات وصور الصفحات
+  const memo = can.body ? body.data?.memo : undefined;
+  if (memo) {
+    return (
+      <article className="space-y-4 print:space-y-0">
+        <style>{"@page { size: A4 portrait; margin: 9mm 10mm; }"}</style>
+        <div className="flex flex-wrap items-center justify-between gap-2 print:hidden">
+          {back}
+          <PrintButtons title={printTitle} />
+        </div>
+        <MemoSheet
+          memo={memo}
+          lang={lang ?? "ar"}
+          title={entry.t || entry.a}
+          tag={cur.data!.title.replace(" — ", " · ")}
+          meta={`${label("segment")} ${entry.s} · ${unit}`}
+          teacher={auth.status === "signedIn" ? (auth.user.displayName ?? undefined) : undefined}
+        />
+        <p className="text-xs text-muted print:hidden">{t("source", { source: cur.data!.source[locale] })}</p>
+      </article>
+    );
+  }
 
   return (
     <article className="space-y-4 print:space-y-3">
       <div className="flex flex-wrap items-center justify-between gap-2 print:hidden">
-        <Link href="/app/lessons" className="inline-flex min-h-10 items-center gap-1 text-sm font-medium text-brand-800">
-          <ArrowRight aria-hidden className="size-4 ltr:rotate-180" />
-          {t("back")}
-        </Link>
-        {can.summary && (
-          <PrintButtons title={() => document.querySelector("article h1, article h2")?.textContent?.trim() || t("print")} />
-        )}
+        {back}
+        {can.summary && <PrintButtons title={printTitle} />}
       </div>
 
       <Card {...doc} className="space-y-3 print:shadow-none print:ring-1 print:ring-black/30">

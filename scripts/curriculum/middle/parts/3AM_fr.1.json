@@ -1,0 +1,566 @@
+{
+ "segments": {
+  "1": "Projet 1 — Séquence 1 : Produire une brève",
+  "2": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+  "3": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+  "4": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée"
+ },
+ "lessons": [
+  {
+   "segment": 1,
+   "domain": "Compréhension de l’oral",
+   "topic": "Découvrir la brève : « Un livre au lieu d’un billet pour accéder au Théâtre régional d’Oran »",
+   "objectives": [
+    "Construire du sens à partir d’un support audiovisuel",
+    "Découvrir la brève."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    3
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Production de l’oral",
+   "topic": "Raconter oralement une brève : « Une tortue géante s’échoue sur l’île d’Oléron »",
+   "objectives": [
+    "Produire un énoncé à partir d’un support iconique.",
+    "S’exprimer oralement pour raconter une brève."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    4
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lire et comprendre des brèves (accident, méfait, insolite)",
+   "objectives": [
+    "Lire et comprendre une brève relatant un accident, un méfait et de l’insolite.",
+    "Repérer les caractéristiques de la brève.",
+    "Différencier entre les genres de récits relevant du réel."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    5,
+    6
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Vocabulaire",
+   "topic": "Le champ lexical de l’accident, du méfait et de la catastrophe",
+   "objectives": [
+    "Identifier et employer le champ lexical de l’accident, de la catastrophe et du méfait.",
+    "Enrichir le vocabulaire lié au thème de l’accident, la catastrophe et le méfait."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    7,
+    8
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Grammaire",
+   "topic": "Les indicateurs de temps et de lieu",
+   "objectives": [
+    "Identifier les indicateurs de temps et de lieu.",
+    "Employer les indicateurs de temps et de lieu."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    9,
+    10
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Conjugaison",
+   "topic": "Le passé composé",
+   "objectives": [
+    "Identifier la formation du passé composé.",
+    "Conjuguer des verbes au passé composé."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    11,
+    12
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Production écrite",
+   "topic": "Préparer la rédaction d’une brève relatant un évènement sportif",
+   "objectives": [
+    "Se préparer à produire une brève relatant un évènement sportif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    13
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Production écrite",
+   "topic": "Produire une brève relatant un évènement sportif",
+   "objectives": [
+    "Produire une brève relatant un évènement sportif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    14
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 1,
+   "domain": "Remédiation",
+   "topic": "Remédiation : indicateurs de temps et de lieu, passé composé, accord du participe passé",
+   "objectives": [
+    "Remédier à ses lacunes et les combler."
+   ],
+   "kind": "integration",
+   "file": 0,
+   "pages": [
+    15
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Compréhension de l’oral",
+   "topic": "Titre et chapeau d’un fait divers : « Naufrage d’un navire de croisière en Italie »",
+   "objectives": [
+    "Se positionner en tant qu’auditeur.",
+    "Écouter et comprendre le contenu d’un titre et d’un chapeau de fait divers relatant un …",
+    "Identifier le cadre spatio-temporel du récit."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    17
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Production de l’oral",
+   "topic": "Rapporter oralement un fait divers : « Alger : Incendie près de la rue Didouche Mourad »",
+   "objectives": [
+    "Construire du sens à partir d’un support iconique.",
+    "S’exprimer oralement pour produire une brève."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    18
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Compréhension de l’écrit",
+   "topic": "« Tiferdoud, le village le plus propre de Kabylie » : le titre et le chapeau",
+   "objectives": [
+    "Identifier la structure du titre et du chapeau.",
+    "Repérer le cadre spatio-temporel de l’événement.",
+    "Lire et comprendre un récit de fait réel."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    19,
+    20
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Vocabulaire",
+   "topic": "La nominalisation dans les titres de faits divers",
+   "objectives": [
+    "Identifier le procédé de la nominalisation.",
+    "Transformer des titres de fait divers à la forme nominale."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    21,
+    22
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Conjugaison",
+   "topic": "Le présent de l’indicatif",
+   "objectives": [
+    "Identifier les terminaisons des verbes au présent de l’indicatif.",
+    "Conjuguer des verbes au présent de l’indicatif."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    23,
+    24
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lecture-réinvestissement : « Vaste campagne de reboisement à Naâma » ; fiche « 26e Sila : le Salon ouvre ses portes au public à Alger »",
+   "objectives": [
+    "Réinvestir les points de langue déjà vus durant la séquence."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    25,
+    26,
+    27,
+    28
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Production écrite",
+   "topic": "Préparer la rédaction du titre et du chapeau d’un fait divers",
+   "objectives": [
+    "Se préparer à produire le titre et le chapeau d’un fait divers."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    29
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Production écrite",
+   "topic": "Produire le titre et le chapeau d’un fait divers",
+   "objectives": [
+    "Produire le titre et le chapeau d’un fait divers."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    30
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Compte rendu de la production écrite",
+   "topic": "Compte rendu de la production écrite : titre et chapeau d’un fait divers",
+   "objectives": [
+    "Repérer ses erreurs.",
+    "S’auto-corriger et améliorer sa production écrite."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    31
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 2,
+   "domain": "Remédiation",
+   "topic": "Remédiation : titres nominaux, présent de l’indicatif",
+   "objectives": [
+    "Remédier à ses lacunes et les combler."
+   ],
+   "kind": "integration",
+   "file": 0,
+   "pages": [
+    32
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Compréhension de l’oral",
+   "topic": "Le fait divers insolite : « De la neige à Béchar »",
+   "objectives": [
+    "Construire du sens à partir d’un support audiovisuel.",
+    "Identifier le fait divers insolite."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    34
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Production de l’oral",
+   "topic": "Raconter un fait insolite : « Un chien lutte contre un alligator pour sauver sa maîtresse »",
+   "objectives": [
+    "Construire du sens à partir d’un support iconique.",
+    "S’exprimer oralement pour produire un fait insolite."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    35
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Le fait divers insolite et le témoignage : « Syrie : Incroyable ! Il sauve les chats d’Alep au péril de sa vie. »",
+   "objectives": [
+    "Identifier le fait divers insolite.",
+    "Repérer le cadre spatio-temporel du récit.",
+    "Repérer la structure d’un fait divers."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    36,
+    37
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Vocabulaire",
+   "topic": "Les verbes de perception",
+   "objectives": [
+    "Identifier les verbes de perception.",
+    "Employer les verbes de perception."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    38,
+    39
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Grammaire",
+   "topic": "Le discours direct et le discours indirect",
+   "objectives": [
+    "Identifier le discours direct et le discours indirect.",
+    "Transformer des phrases du discours direct au discours indirect."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    40,
+    41
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Conjugaison",
+   "topic": "Le plus-que-parfait",
+   "objectives": [
+    "Identifier le plus-que-parfait.",
+    "Conjuguer des verbes au plus-que-parfait."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    42,
+    43
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lecture-réinvestissement : « Un garçon de 8 ans casse sa tirelire » ; fiche « New York : une surprenante découverte dans une valise »",
+   "objectives": [
+    "Réinvestir les points de langue déjà vus durant la séquence."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    44,
+    45,
+    46,
+    47
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Production écrite",
+   "topic": "Préparer la rédaction d’un fait divers avec un témoignage",
+   "objectives": [
+    "Se préparer à produire un fait divers et y insérer un témoignage."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    48
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Production écrite",
+   "topic": "Produire un fait divers et y insérer un témoignage",
+   "objectives": [
+    "Produire un fait divers et y insérer un témoignage."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    49
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Compte rendu de la production écrite",
+   "topic": "Compte rendu de la production écrite : fait divers avec témoignage",
+   "objectives": [
+    "Repérer ses erreurs.",
+    "S’auto-corriger et améliorer sa production écrite."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    50
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 3,
+   "domain": "Remédiation",
+   "topic": "Remédiation : discours indirect, verbes de perception",
+   "objectives": [
+    "Remédier à ses lacunes et les combler."
+   ],
+   "kind": "integration",
+   "file": 0,
+   "pages": [
+    51
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Compréhension de l’oral",
+   "topic": "Le récit historique : « Le jour de l’indépendance »",
+   "objectives": [
+    "Construire du sens à partir d’un support audiovisuel.",
+    "Identifier les bienfaits d’internet."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    53
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Production de l’oral",
+   "topic": "Raconter un événement historique : les dates de la guerre de libération et de l’indépendance",
+   "objectives": [
+    "Construire du sens à partir d’un support iconique.",
+    "S’exprimer oralement pour raconter un événement historique."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    54
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Compréhension de l’écrit",
+   "topic": "Le récit historique : « Femmes courage »",
+   "objectives": [
+    "Lire et comprendre un récit historique.",
+    "Identifier les caractéristiques du récit historique."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    55,
+    56
+   ],
+   "hours": null,
+   "week": null
+  },
+  {
+   "segment": 4,
+   "domain": "Vocabulaire",
+   "topic": "Les mots de la même famille",
+   "objectives": [
+    "Identifier les mots de la même famille.",
+    "Employer les mots de la même famille."
+   ],
+   "kind": "lesson",
+   "file": 0,
+   "pages": [
+    57,
+    58
+   ],
+   "hours": null,
+   "week": null
+  }
+ ]
+}

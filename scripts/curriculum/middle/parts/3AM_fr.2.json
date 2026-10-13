@@ -1,0 +1,292 @@
+{
+  "segments": {
+    "4": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+    "5": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+    "6": "Projet 3 — Séquence 6 : Rédiger un souvenir d’enfance, une expérience vécue",
+    "7": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu"
+  },
+  "lessons": [
+    {
+      "segment": 4,
+      "domain": "Grammaire",
+      "topic": "Les connecteurs chronologiques",
+      "objectives": [
+        "Identifier les connecteurs chronologiques.",
+        "Employer les connecteurs chronologiques."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        59,
+        60
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 4,
+      "domain": "Conjugaison",
+      "topic": "L’imparfait et le passé simple",
+      "objectives": [
+        "Identifier les terminaisons des verbes à l’imparfait et au passé simple.",
+        "Conjuguer des verbes à l’imparfait et au passé simple."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        61,
+        62,
+        63
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 4,
+      "domain": "Compréhension de l’écrit",
+      "topic": "Lecture-réinvestissement : « Le Novembre 1954 » ; fiche « Une répression aveugle »",
+      "objectives": [
+        "Réinvestir les points de langue déjà vus durant la séquence."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        64,
+        65,
+        66,
+        67
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 4,
+      "domain": "Production écrite",
+      "topic": "Préparer la rédaction d’un récit historique à partir d’une bande dessinée",
+      "objectives": [
+        "Se préparer à produire un récit historique à partir d’une bande dessinée."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        68
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 4,
+      "domain": "Production écrite",
+      "topic": "Produire un récit historique à partir d’une bande dessinée",
+      "objectives": [
+        "Produire un récit historique à partir d’une bande dessinée."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        69
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 4,
+      "domain": "Compte rendu de la production écrite",
+      "topic": "Compte rendu de la production écrite : récit historique à partir d’une bande dessinée",
+      "objectives": [
+        "Repérer ses erreurs.",
+        "S’auto-corriger et améliorer sa production écrite."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        70
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Compréhension de l’oral",
+      "topic": "Découvrir un patrimoine vestimentaire : « El Haïk »",
+      "objectives": [
+        "Construire du sens à partir d’un support audiovisuel.",
+        "Découvrir un patrimoine vestimentaire."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        72
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Production de l’oral",
+      "topic": "Décrire un patrimoine culinaire : la préparation du couscous",
+      "objectives": [
+        "Produire à l’oral une séquence descriptive relative à un patrimoine culinaire.",
+        "Identifier un type de patrimoine."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        73
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Compréhension de l’écrit",
+      "topic": "Lire un texte descriptif sur un patrimoine : « L’imzad »",
+      "objectives": [
+        "Lire et comprendre un texte descriptif relatif à un patrimoine.",
+        "Identifier un type de patrimoine.",
+        "Enrichir le vocabulaire lié au thème du patrimoine."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        74,
+        75
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Compréhension de l’écrit",
+      "topic": "Lecture entraînement : « L’imzad »",
+      "objectives": [
+        "Améliorer les performances individuelles de lecture orale.",
+        "Corriger ses erreurs au niveau de la phonétique."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        76
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Vocabulaire",
+      "topic": "Les verbes de perception et de localisation",
+      "objectives": [
+        "Identifier et employer les verbes de perception et de localisation.",
+        "Employer le vocabulaire du beau (vocabulaire mélioratif)."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        77,
+        78
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Grammaire",
+      "topic": "Les expansions du nom",
+      "objectives": [
+        "Identifier les expansions du nom.",
+        "Identifier les fonctions des expansions du nom.",
+        "Employer les expansions du nom."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        79,
+        80
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Conjugaison",
+      "topic": "Le présent de l’indicatif dans la description",
+      "objectives": [
+        "Identifier les terminaisons du présent de l’indicatif.",
+        "Employer le présent de l’indicatif dans des passages descriptifs."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        81,
+        82
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Orthographe",
+      "topic": "L’accord de l’adjectif qualificatif avec le nom",
+      "objectives": [
+        "Identifier l’accord de l’adjectif qualificatif avec le nom.",
+        "Accorder correctement les adjectifs qualificatifs avec les noms."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        83,
+        84
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Compréhension de l’écrit",
+      "topic": "Lecture-réinvestissement : « Un travail d’artiste » ; fiche « Le haïk : un vêtement traditionnel en voie de disparition »",
+      "objectives": [
+        "Réinvestir les points de langue déjà vus durant la séquence."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        85,
+        86,
+        87,
+        88
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Production écrite",
+      "topic": "Préparer la rédaction d’un passage descriptif sur un patrimoine",
+      "objectives": [
+        "Se préparer à produire un passage descriptif sur un patrimoine."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        89
+      ],
+      "hours": null,
+      "week": null
+    },
+    {
+      "segment": 5,
+      "domain": "Production écrite",
+      "topic": "Produire un passage descriptif sur un patrimoine",
+      "objectives": [
+        "Produire un passage descriptif sur un patrimoine."
+      ],
+      "kind": "lesson",
+      "file": 0,
+      "pages": [
+        90
+      ],
+      "hours": null,
+      "week": null
+    }
+  ]
+}

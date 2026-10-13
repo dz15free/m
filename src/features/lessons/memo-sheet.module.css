@@ -1,0 +1,373 @@
+/* المذكرة بقالب المنصة (النموذج المعتمد): رأس بالشعار، شريط العنوان، بطاقة الحقول، جدول السير، التذييل.
+   على الشاشة بطاقة مرنة (وعلى الهاتف تتراصّ خلايا الجدول)، وعند الطباعة/حفظ PDF ورقة A4 بخط 10pt. */
+
+.sheet {
+  --brand: #09715b;
+  --brand-2: #0a8670;
+  --ink: #17323a;
+  --line: #cfe0dc;
+  --soft: #effbf8;
+  --muted: #50707a;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  border-radius: 1rem;
+  padding: 1.1rem;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 0.08);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+@media (min-width: 640px) {
+  .sheet {
+    padding: 1.6rem 1.8rem;
+  }
+}
+
+/* الرأس */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 2px solid var(--brand);
+  padding-bottom: 0.7rem;
+}
+.logo {
+  height: 3rem;
+  width: auto;
+}
+.who {
+  font-size: 0.85em;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.who b {
+  color: var(--ink);
+}
+.who .blank {
+  display: inline-block;
+  min-width: 8.5rem;
+  border-bottom: 1px dotted #8aa6ad;
+}
+.who .short {
+  min-width: 4rem;
+}
+
+/* شريط العنوان */
+.band {
+  margin-top: 0.8rem;
+  border-radius: 0.9rem;
+  background: linear-gradient(100deg, var(--brand), var(--brand-2) 60%, #0e9ab8);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1rem;
+}
+.tag {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8em;
+  background: rgb(255 255 255 / 0.18);
+  border-radius: 99px;
+  padding: 0.1rem 0.8rem;
+  max-width: 100%;
+}
+.band h1 {
+  margin: 0;
+  font-size: 1.25em;
+  font-weight: 700;
+  flex: 1 1 14rem;
+  color: #fff;
+}
+.num {
+  font-family: var(--font-display);
+  font-size: 0.8em;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+/* البطاقة */
+.card {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1.4px solid var(--line);
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+.card > div {
+  padding: 0.3rem 0.8rem;
+  border-bottom: 1px solid var(--line);
+}
+.card > div:last-child {
+  border-bottom: 0;
+}
+.card b {
+  color: var(--brand);
+}
+@media (min-width: 640px) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card > div:not(.full):nth-child(odd of :not(.full)) {
+    border-inline-end: 1px solid var(--line);
+  }
+  .card > .full {
+    grid-column: 1 / -1;
+  }
+}
+
+.pre {
+  margin-top: 0.8rem;
+}
+
+/* جدول السير */
+.flow {
+  width: 100%;
+  margin-top: 0.8rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1.4px solid var(--line);
+  border-radius: 0.7rem;
+  overflow: hidden;
+  table-layout: fixed;
+}
+.flow > thead > tr > th {
+  background: var(--soft);
+  color: var(--brand);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.92em;
+  padding: 0.4rem;
+  border-bottom: 1.4px solid var(--line);
+}
+.flow > tbody > tr > td {
+  vertical-align: top;
+  padding: 0.45rem 0.65rem;
+  border-bottom: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+.flow > tbody > tr:last-child > td {
+  border-bottom: 0;
+}
+.flow > tbody > tr > td + td,
+.flow > thead > tr > th + th {
+  border-inline-start: 1px solid var(--line);
+}
+/* العمود الأول (المراحل غالبًا) بخط العناوين */
+.flow > tbody > tr > td:first-child {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--brand);
+}
+.flow .cellLabel {
+  display: none;
+}
+
+/* الهاتف: كل صف بطاقة، وكل خلية بعنوان عمودها */
+@media not print {
+  @media (max-width: 639px) {
+    .flow,
+    .flow > tbody,
+    .flow > tbody > tr,
+    .flow > tbody > tr > td {
+      display: block;
+      width: auto !important;
+    }
+    .flow > thead {
+      display: none;
+    }
+    .flow {
+      border: 0;
+      border-radius: 0;
+    }
+    .flow > tbody > tr {
+      border: 1.4px solid var(--line);
+      border-radius: 0.7rem;
+      margin-bottom: 0.6rem;
+      overflow: hidden;
+    }
+    .flow > tbody > tr > td + td {
+      border-inline-start: 0;
+    }
+    .flow > tbody > tr > td:last-child {
+      border-bottom: 0;
+    }
+    .flow > tbody > tr > td:first-child {
+      background: var(--soft);
+    }
+    /* خلية قصيرة (المدة…): العنوان والقيمة في سطر واحد */
+    .flow > tbody > tr > td.short {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .flow > tbody > tr > td.short .cellLabel {
+      display: inline;
+    }
+    .flow .cellLabel {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.8em;
+      font-weight: 700;
+      color: var(--muted);
+    }
+  }
+}
+
+.after {
+  margin-top: 0.8rem;
+}
+
+/* كتل المحتوى */
+.p {
+  margin: 0.1rem 0;
+}
+.gap {
+  height: 0.45rem;
+}
+.h {
+  font-weight: 700;
+  color: var(--brand-2);
+  margin: 0.3rem 0 0.1rem;
+}
+.ul {
+  margin: 0.15rem 0;
+  padding-inline-start: 1.2rem;
+  list-style: disc;
+}
+.ul li {
+  margin: 0.1rem 0;
+}
+.sit {
+  background: #fff8e6;
+  border: 1px solid #f1d9a0;
+  border-radius: 0.6rem;
+  padding: 0.45rem 0.7rem;
+  margin: 0.35rem 0;
+}
+.key {
+  background: #e9f8f4;
+  border-inline-start: 4px solid var(--brand);
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.7rem;
+  margin: 0.35rem 0;
+}
+.key b {
+  color: var(--brand);
+}
+.hl {
+  color: #c2185b;
+  font-weight: 600;
+}
+.inner {
+  border-collapse: collapse;
+  margin: 0.35rem 0;
+  font-size: 0.95em;
+  max-width: 100%;
+}
+.inner th,
+.inner td {
+  border: 1px solid var(--line);
+  padding: 0.15rem 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.inner th {
+  background: var(--soft);
+  color: var(--brand);
+  font-weight: 700;
+}
+.fig {
+  display: block;
+  max-width: 100%;
+  max-height: 22rem;
+  margin: 0.35rem auto;
+  border-radius: 0.4rem;
+}
+
+/* الرياضيات: من اليسار، معزولة عن اتجاه السطر */
+.math {
+  unicode-bidi: isolate;
+  direction: ltr;
+  white-space: nowrap;
+}
+.frac {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.88em;
+  line-height: 1.15;
+  margin: 0 0.1em;
+}
+.frac > span + span {
+  border-top: 1px solid currentColor;
+}
+.sqrt > span {
+  border-top: 1px solid currentColor;
+  padding-inline: 0.1em;
+}
+
+/* التذييل */
+.foot {
+  margin-top: 1rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3rem 1rem;
+  font-size: 0.78em;
+  color: #6b8790;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  color: var(--brand);
+}
+.brand img {
+  height: 1.2rem;
+  width: auto;
+}
+
+/* الطباعة وحفظ PDF: ورقة A4 */
+@media print {
+  .sheet {
+    font-size: 10pt;
+    line-height: 1.5;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  /* الصفوف الطويلة تنقسم بين الصفحات (لا فراغ كبير)، والأطر والأشكال لا تنقسم */
+  .sit,
+  .key,
+  .fig,
+  .inner tr,
+  .h {
+    break-inside: avoid;
+  }
+  .h {
+    break-after: avoid;
+  }
+  .band,
+  .card,
+  .top {
+    break-inside: avoid;
+  }
+}
+:global([data-printing]) .sheet {
+  font-size: 10pt;
+  line-height: 1.5;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}

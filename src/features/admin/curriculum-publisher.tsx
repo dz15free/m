@@ -13,8 +13,9 @@ import { curriculumId } from "@/features/lessons/logic";
 import { levelById } from "@/shared/taxonomy/taxonomy";
 import { REPO_CURRICULA } from "./curriculum-ids";
 import { contentRev, publishCurriculum, publishedRev, type CurriculumFile, type Progress } from "./curriculum-publish";
+import { MEMO_FILES, type MemoFile } from "./curriculum-memos.gen";
 
-type Row = { file: CurriculumFile; rev: string; published: string | null; added: number };
+type Row = { file: CurriculumFile; rev: string; published: string | null; added: number; memos: number };
 type RunState = { id: string; progress?: Progress } | null;
 
 async function loadRows(): Promise<Row[]> {
@@ -23,9 +24,10 @@ async function loadRows(): Promise<Row[]> {
   return Promise.all(
     CURRICULA.map(async (file) => ({
       file,
-      rev: contentRev(file),
+      rev: contentRev(file, MEMO_FILES[file.id]?.rev),
       published: await publishedRev(file.id),
       added: file.lessons.filter((l) => (l as { added?: string }).added).length,
+      memos: MEMO_FILES[file.id]?.count ?? 0,
     })),
   );
 }
@@ -42,7 +44,9 @@ export function CurriculumPublisher() {
       setRun({ id: r.file.id });
       setErrors((e) => ({ ...e, [r.file.id]: "" }));
       try {
-        await publishCurriculum(r.file, (progress) => setRun({ id: r.file.id, progress }));
+        // المذكرات المُنسّقة تُحمَّل عند نشر منهاجها فقط
+        const memos = MEMO_FILES[r.file.id] ? ((await MEMO_FILES[r.file.id]!.load()).default as MemoFile) : undefined;
+        await publishCurriculum(r.file, (progress) => setRun({ id: r.file.id, progress }), memos);
         await qc.invalidateQueries({ queryKey: ["curriculum", r.file.id] });
       } catch (e) {
         setErrors((x) => ({ ...x, [r.file.id]: e instanceof Error ? e.message : String(e) }));
@@ -82,6 +86,7 @@ export function CurriculumPublisher() {
                 <span className="block text-sm text-muted">
                   <bdi dir="ltr">{r.file.id}</bdi> · {t("lessons", { n: r.file.lessons.length })}
                   {r.added > 0 && ` · ${t("added", { n: r.added })}`}
+                  {r.memos > 0 && ` · ${t("memos", { n: r.memos })}`}
                 </span>
                 {current && p && <span className="block text-sm text-brand-800">{t(`step.${p.step}`, { done: p.done, total: p.total })}</span>}
                 {errors[r.file.id] && <span role="alert" className="block text-sm text-red-700">{errors[r.file.id]}</span>}

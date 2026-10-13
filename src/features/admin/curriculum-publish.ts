@@ -4,6 +4,8 @@ import { doc, getDoc, setDoc, writeBatch } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
 import { authedFetch } from "@/lib/firebase/api";
 import { browserDownload } from "@/features/library/repo";
+import { memoFigures, memoToDoc, withImages, type Memo } from "@/features/lessons/memo";
+import { memoFileRev } from "@/features/lessons/memo-rev";
 
 /* نشر المذكرات من متصفح الأدمن (مكافئ scripts/curriculum/seed.mjs، دون حساب خدمة): قواعد Firestore تسمح للمحرّر
    والأدمن بكتابة curriculum وlessonSummaries وlessonBodies. صفحات المصادر الإضافية («sources» غير main) تُحمَّل
@@ -28,7 +30,8 @@ type Lesson = {
   /** نموذج مجاني للتجربة (يُعتمد عند أول نشر فقط) */
   sample?: boolean;
 };
-type SourceSpec = { pdf?: string[]; images?: string[] };
+/** pdf/images: ملفات Drive. web: روابط مصدر مذكرات مُنسّقة مضمّنة (للتوثيق؛ لا يُحمَّل). */
+type SourceSpec = { pdf?: string[]; images?: string[]; web?: string[] };
 export type CurriculumFile = {
   id: string;
   level: string;
@@ -41,7 +44,7 @@ export type CurriculumFile = {
   sources?: Record<string, SourceSpec>;
 };
 
-export type Progress = { step: "load" | "pages" | "summaries" | "index"; done: number; total: number };
+export type Progress = { step: "load" | "pages" | "memos" | "summaries" | "index"; done: number; total: number };
 
 const db = () => getFirebase().db;
 const pad = (n: number) => String(n).padStart(3, "0");
@@ -52,9 +55,9 @@ const pageId = (id: string, p: number | string) => {
   return `${id}_${key === "main" ? "pg" : key}${pad(n)}`;
 };
 
-/** بصمة المحتوى: تُحفظ في فهرس المنهاج لمعرفة ما إذا كانت النسخة المنشورة هي هذه. */
-export function contentRev(c: CurriculumFile): string {
-  const s = JSON.stringify([c.segments, c.lessons, c.sources ?? null]);
+/** بصمة المحتوى: تُحفظ في فهرس المنهاج لمعرفة ما إذا كانت النسخة المنشورة هي هذه (ومعها بصمة المذكرات المُنسّقة إن وُجدت). */
+export function contentRev(c: CurriculumFile, memoRev?: string | null): string {
+  const s = JSON.stringify([c.segments, c.lessons, c.sources ?? null, ...(memoRev ? [memoRev] : [])]);
   let h = 0x811c9dc5;
   for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 0x01000193);
   return (h >>> 0).toString(16);
@@ -85,8 +88,8 @@ const toBase64 = (blob: Blob) =>
     r.readAsDataURL(blob);
   });
 
-async function canvasJpeg(canvas: HTMLCanvasElement): Promise<{ img: string; bytes: number }> {
-  for (const q of [0.6, 0.45, 0.35]) {
+async function canvasJpeg(canvas: HTMLCanvasElement, qualities = [0.6, 0.45, 0.35]): Promise<{ img: string; bytes: number }> {
+  for (const q of qualities) {
     const blob = await new Promise<Blob>((resolve, reject) => canvas.toBlob((b) => (b ? resolve(b) : reject(new Error("toBlob"))), "image/jpeg", q));
     const img = await toBase64(blob);
     if (img.length <= 900_000) return { img, bytes: blob.size };
@@ -94,10 +97,25 @@ async function canvasJpeg(canvas: HTMLCanvasElement): Promise<{ img: string; byt
   throw new Error("page too large");
 }
 
-type Renderer = (n: number) => Promise<HTMLCanvasElement>;
+type Renderer = (n: number, hiRes?: boolean) => Promise<HTMLCanvasElement>;
+
+/** شكل مقتطع من صفحة (نِسَب من عرضها وطولها)، بعرض 900px على الأكثر. */
+async function cropJpeg(page: HTMLCanvasElement, [x, y, w, h]: [number, number, number, number]): Promise<string> {
+  const sx = Math.round(x * page.width);
+  const sy = Math.round(y * page.height);
+  const sw = Math.max(1, Math.round(w * page.width));
+  const sh = Math.max(1, Math.round(h * page.height));
+  const scale = Math.min(1, 900 / sw);
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(sw * scale);
+  canvas.height = Math.round(sh * scale);
+  canvas.getContext("2d")!.drawImage(page, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
+  return (await canvasJpeg(canvas, [0.8, 0.65, 0.5])).img;
+}
 
 /** وثيقة مصدر: صفحاتها مرقّمة تباعًا عبر ملفاتها (كما يدمجها pdfunite في seed.mjs). */
 async function openSource(spec: SourceSpec): Promise<Renderer> {
+  if (spec.web) throw new Error("web source: every lesson needs its re-typeset memo (content/memos)");
   if (spec.images) {
     const ids = spec.images;
     return async (n) => {
@@ -114,12 +132,12 @@ async function openSource(spec: SourceSpec): Promise<Renderer> {
   pdfjs.GlobalWorkerOptions.workerSrc = `/vendor/pdf/pdf.worker.min.mjs?v=${pdfjs.version}-actualtext1`;
   const docs: Awaited<ReturnType<typeof pdfjs.getDocument>["promise"]>[] = [];
   for (const id of spec.pdf ?? []) docs.push(await pdfjs.getDocument({ data: await (await driveBlob(id)).arrayBuffer() }).promise);
-  return async (n) => {
+  return async (n, hiRes = false) => {
     let k = n;
     for (const d of docs) {
       if (k <= d.numPages) {
         const page = await d.getPage(k);
-        const viewport = page.getViewport({ scale: 110 / 72 });
+        const viewport = page.getViewport({ scale: hiRes ? 170 / 72 : 110 / 72 });
         const canvas = document.createElement("canvas");
         canvas.width = Math.round(viewport.width);
         canvas.height = Math.round(viewport.height);
@@ -135,7 +153,10 @@ async function openSource(spec: SourceSpec): Promise<Renderer> {
   };
 }
 
-export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progress) => void): Promise<void> {
+/** المذكرات المُنسّقة مفتاحها أول صفحة للحصة في مصدرها («b:9»). */
+const memoKey = (l: Lesson) => String(l.pages?.[0] ?? "");
+
+export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progress) => void, memos?: Record<string, Memo>): Promise<void> {
   const id = c.id;
   const now = Date.now();
   // النماذج المجانية للتجربة تبقى كما نُشرت (لا نعيد كتابة صفحات المصدر الرئيسي)
@@ -144,13 +165,21 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
   // منهاج جديد: النماذج المجانية من الملف («sample»)
   const sampleOf = (l: Lesson) => prevSample.get(lessonId(id, l)) ?? l.sample ?? false;
 
-  // 1) صفحات المصادر الإضافية
+  const memoOf = (l: Lesson) => memos?.[memoKey(l)];
+
+  // 1) صفحات المصادر الإضافية: صورًا للحصص بلا مذكرة مُنسّقة، وللاقتطاع منها أشكالَ المذكرات المُنسّقة
   const extra = new Map<string, Set<number>>();
-  for (const l of c.lessons)
-    for (const p of l.pages ?? []) {
-      const { key, n } = parsePage(p);
-      if (key !== "main") extra.set(key, (extra.get(key) ?? new Set()).add(n));
-    }
+  const add = (p: number | string) => {
+    const { key, n } = parsePage(p);
+    if (key !== "main") extra.set(key, (extra.get(key) ?? new Set()).add(n));
+  };
+  for (const l of c.lessons) if (!memoOf(l)) (l.pages ?? []).forEach(add);
+  const figPages = new Set<string>();
+  for (const l of c.lessons) for (const f of memoOf(l) ? memoFigures(memoOf(l)!) : []) figPages.add(f.ref);
+  figPages.forEach(add);
+  const asImage = new Set(c.lessons.filter((l) => !memoOf(l)).flatMap((l) => (l.pages ?? []).map(String)));
+  const figures = new Map<string, string>(); // "ref x y w h" ← JPEG
+  const figKey = (ref: string, b: number[]) => `${ref} ${b.join(" ")}`;
   const total = [...extra.values()].reduce((n, s) => n + s.size, 0);
   const blank = new Set<string>();
   let done = 0;
@@ -161,19 +190,38 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
     const render = await openSource(spec);
     for (const n of [...pages].sort((a, b) => a - b)) {
       const ref = `${key}:${n}`;
-      const { img, bytes } = await canvasJpeg(await render(n));
-      // صفحة بيضاء (فاصل): لا تُنشر وتُحذف من قوائم الحصص — نفس عتبة seed.mjs
-      if (bytes < 12_000) blank.add(ref);
-      else {
-        const sample = c.lessons.some((l) => (l.pages ?? []).includes(ref) && sampleOf(l));
-        await setDoc(doc(db(), "lessonBodies", pageId(id, ref)), { curriculumId: id, sample, page: n, doc: key, img, updatedAt: now });
+      if (figPages.has(ref)) {
+        const canvas = await render(n, true);
+        for (const l of c.lessons)
+          for (const f of memoOf(l) ? memoFigures(memoOf(l)!) : [])
+            if (f.ref === ref && !figures.has(figKey(ref, f.box))) figures.set(figKey(ref, f.box), await cropJpeg(canvas, f.box));
+      }
+      if (asImage.has(ref)) {
+        const { img, bytes } = await canvasJpeg(await render(n));
+        // صفحة بيضاء (فاصل): لا تُنشر وتُحذف من قوائم الحصص — نفس عتبة seed.mjs
+        if (bytes < 12_000) blank.add(ref);
+        else {
+          const sample = c.lessons.some((l) => (l.pages ?? []).includes(ref) && sampleOf(l));
+          await setDoc(doc(db(), "lessonBodies", pageId(id, ref)), { curriculumId: id, sample, page: n, doc: key, img, updatedAt: now });
+        }
       }
       onProgress({ step: "pages", done: ++done, total });
     }
   }
 
-  // 2) الملخّصات، وسير الحصص ذات الصفحات الجديدة (سير حصص المصدر الرئيسي منشور من قبل)
-  const hasBody = (l: Lesson) => !!l.body || (l.pages ?? []).some((p) => !blank.has(String(p)));
+  // 2) المذكرات المُنسّقة (وثيقة لكل حصة، بأشكالها)
+  const withMemo = c.lessons.filter((l) => memoOf(l));
+  for (const [i, l] of withMemo.entries()) {
+    const memo = memoOf(l)!;
+    const imgs = memoFigures(memo).map((f) => figures.get(figKey(f.ref, f.box)) ?? "");
+    // أشكال مقتطعة الآن من Drive، أو مضمّنة في الملف من قبل (مصادر الويب)
+    const published = imgs.length ? withImages(memo, imgs) : memo;
+    await setDoc(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample: sampleOf(l), body: "", memo: memoToDoc(published), quality: "memo", source: c.source, updatedAt: now });
+    onProgress({ step: "memos", done: i + 1, total: withMemo.length });
+  }
+
+  // 3) الملخّصات، وسير الحصص ذات الصفحات الجديدة (سير حصص المصدر الرئيسي منشور من قبل)
+  const hasBody = (l: Lesson) => !!memoOf(l) || !!l.body || (l.pages ?? []).some((p) => !blank.has(String(p)));
   const lessons = [...c.lessons];
   for (let i = 0; i < lessons.length; i += 200) {
     const batch = writeBatch(db());
@@ -202,7 +250,7 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
       });
       // صفحات المصدر الرئيسي (منشورة من قبل) تبقى في أول السير، والمذكرات الملحقة بعدها
       const pages = (l.pages ?? []).filter((p) => !blank.has(String(p)));
-      if (pages.some((p) => parsePage(p).key !== "main")) {
+      if (!memoOf(l) && pages.some((p) => parsePage(p).key !== "main")) {
         batch.set(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample, body: l.body ?? "", pages: pages.map((p) => pageId(id, p)), quality: "pages", source: c.source, updatedAt: now });
       }
     }
@@ -210,7 +258,7 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
     onProgress({ step: "summaries", done: Math.min(i + 200, lessons.length), total: lessons.length });
   }
 
-  // 3) الفهرس (آخر خطوة: لا يُعرض جديد قبل أن تجهز صفحاته)
+  // 4) الفهرس (آخر خطوة: لا يُعرض جديد قبل أن تجهز صفحاته)
   await setDoc(doc(db(), "curriculum", id), {
     level: c.level,
     subject: c.subject,
@@ -231,7 +279,7 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
       b: hasBody(l),
       sm: sampleOf(l),
     })),
-    rev: contentRev(c),
+    rev: contentRev(c, memos ? memoFileRev(memos) : null),
     updatedAt: now,
   });
   onProgress({ step: "index", done: 1, total: 1 });

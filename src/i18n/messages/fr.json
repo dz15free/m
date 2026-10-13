@@ -1718,9 +1718,11 @@
       "pending": "Mise à jour à publier",
       "lessons": "{n} séances",
       "added": "{n} nouvelles séances",
+      "memos": "{n} fiches mises en forme",
       "step": {
         "load": "Téléchargement depuis Drive…",
         "pages": "Pages des fiches : {done} sur {total}",
+        "memos": "Fiches mises en forme : {done} sur {total}",
         "summaries": "Séances : {done} sur {total}",
         "index": "Terminé"
       },

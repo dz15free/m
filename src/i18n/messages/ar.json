@@ -1718,9 +1718,11 @@
       "pending": "تحديث جاهز للنشر",
       "lessons": "{n} حصة",
       "added": "{n} حصة جديدة",
+      "memos": "{n} مذكرة مُنسّقة",
       "step": {
         "load": "تحميل الملفات من Drive…",
         "pages": "صفحات المذكرات: {done} من {total}",
+        "memos": "المذكرات المُنسّقة: {done} من {total}",
         "summaries": "الحصص: {done} من {total}",
         "index": "تم"
       },
