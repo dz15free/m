@@ -74,7 +74,7 @@
   background: rgb(255 255 255 / 0.18);
   border-radius: 99px;
   padding: 0.1rem 0.8rem;
-  white-space: nowrap;
+  max-width: 100%;
 }
 .band h1 {
   margin: 0;
@@ -199,6 +199,15 @@
     }
     .flow > tbody > tr > td:first-child {
       background: var(--soft);
+    }
+    /* خلية قصيرة (المدة…): العنوان والقيمة في سطر واحد */
+    .flow > tbody > tr > td.short {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .flow > tbody > tr > td.short .cellLabel {
+      display: inline;
     }
     .flow .cellLabel {
       display: block;

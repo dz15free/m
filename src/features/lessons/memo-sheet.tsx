@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { columnWidths, parseBlocks, parseInline, type Block, type Inline, type MathNode, type Memo } from "./memo";
+import { columnWidths, parseBlocks, parseInline, plainText, type Block, type Inline, type MathNode, type Memo } from "./memo";
 import s from "./memo-sheet.module.css";
 
 /* المذكرة بقالب المنصة الموحّد: محتوى المذكرة كما هو، والشكل والشعار للمنصة. */
@@ -91,7 +91,7 @@ export function MemoSheet({ memo, lang, title, tag, meta, teacher, figSrc, asset
             {memo.rows.map((row, i) => (
               <tr key={i}>
                 {memo.cols.map((c, j) => (
-                  <td key={j}>
+                  <td key={j} className={plainText(row[j]).trim().length <= 14 && !row[j]?.includes("\n") ? s.short : undefined}>
                     {row[j]?.trim() ? (
                       <>
                         <span className={s.cellLabel}>{c}</span>
