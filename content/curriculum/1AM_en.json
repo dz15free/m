@@ -1,0 +1,894 @@
+{
+ "id": "1AM_en",
+ "level": "1AM",
+ "subject": "en",
+ "title": "English — السنة الأولى متوسط",
+ "source": {
+  "ar": "مذكرات أساتذة منشورة للعموم (مناهج الجيل الثاني)؛ الأسابيع تقديرية موزّعة على رزنامة 2026-2027 في غياب المخطط السنوي الرسمي",
+  "fr": "Fiches d'enseignants partagées publiquement (programmes de 2e génération) ; semaines estimées sur le calendrier 2026-2027"
+ },
+ "weekMode": "absolute",
+ "segments": {
+  "1": "Sequence 1: Me and my friends",
+  "2": "Sequence 2: Me and my family",
+  "3": "Sequence 3: Me and my daily activities",
+  "4": "Sequence 4: Me and my school",
+  "5": "Sequence 5: Me, my country and the world"
+ },
+ "sources": {
+  "w": {
+   "web": [
+    "https://www.h-onec.com/2020/07/1am-modakirat-english.html"
+   ]
+  }
+ },
+ "lessons": [
+  {
+   "order": 1,
+   "unitKind": "week",
+   "unit": 1,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me and my friends",
+   "activity": "English",
+   "session": "English",
+   "domain": "Diagnostic assessment",
+   "topic": "Diagnostic assessment",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 2,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me and my friends",
+   "activity": "English",
+   "session": "English",
+   "domain": "Planning learning",
+   "topic": "Situations of sequence one (initial, learning, integration)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Introduce oneself (name, age, hometown, country)"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:2"
+   ]
+  },
+  {
+   "order": 3,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me and my friends",
+   "activity": "English",
+   "session": "English",
+   "domain": "Lesson one",
+   "topic": "Greeting and introducing oneself — I pronounce /ɪ/, /eɪ/, /aɪ/",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Greet each other",
+    "Introduce oneself"
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "w:3",
+    "w:4",
+    "w:5"
+   ]
+  },
+  {
+   "order": 4,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me and my friends",
+   "activity": "English",
+   "session": "English",
+   "domain": "Practice (PPU) / PIASP",
+   "topic": "Introducing oneself and age — punctuation signs",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Introduce themselves and greet each other",
+    "Use punctuation signs correctly"
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "w:7",
+    "w:8",
+    "w:9"
+   ]
+  },
+  {
+   "order": 5,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me and my friends",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "Reading messages: introducing oneself on Facebook",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Introduce themselves and respond to foreign people's messages"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:10",
+    "w:11",
+    "w:12"
+   ]
+  },
+  {
+   "order": 6,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me and my friends",
+   "activity": "English",
+   "session": "English",
+   "domain": "PIASP teaching grammar",
+   "topic": "Giving information about me, my age, my hometown, my class (I, my, be, live, what)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Respond to questions about name, age, hometown and class"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:13",
+    "w:14",
+    "w:15"
+   ]
+  },
+  {
+   "order": 7,
+   "unitKind": "week",
+   "unit": 5,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me and my friends",
+   "activity": "English",
+   "session": "English",
+   "domain": "I learn to integrate",
+   "topic": "Introducing oneself on a blog",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Introduce themselves on a blog"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:16",
+    "w:17"
+   ]
+  },
+  {
+   "order": 8,
+   "unitKind": "week",
+   "unit": 5,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me and my friends",
+   "activity": "English",
+   "session": "English",
+   "domain": "I think and write",
+   "topic": "Introducing oneself on an international friendship blog",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Introduce themselves on an international friendship blog"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:18",
+    "w:19",
+    "w:20"
+   ]
+  },
+  {
+   "order": 9,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 1,
+   "segmentTitle": "Sequence 1: Me and my friends",
+   "activity": "English",
+   "session": "English",
+   "domain": "Evaluation",
+   "topic": "The evaluation grid of sequence one",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Assess the learners' abilities of sequence one"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:21"
+   ]
+  },
+  {
+   "order": 10,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "Planning learning",
+   "topic": "Situations of sequence two — project: My family profile",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Introduce one's family members"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:23"
+   ]
+  },
+  {
+   "order": 11,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Family members (he, she, his, her)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Name family members",
+    "Use personal pronouns he/she and possessive adjectives his/her"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:24",
+    "w:25",
+    "w:26"
+   ]
+  },
+  {
+   "order": 12,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "The sounds /iː/, /e/, /θ/, /ð/",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Pronounce words containing /iː/, /e/, /θ/, /ð/"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:27",
+    "w:28",
+    "w:29"
+   ]
+  },
+  {
+   "order": 13,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Jobs and articles (a, an, the)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Name jobs",
+    "Use a, an, the"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:30",
+    "w:31",
+    "w:32"
+   ]
+  },
+  {
+   "order": 14,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Numbers 0 to 100, ordinal numbers and age",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Count from 0 to 100",
+    "Use ordinal numbers",
+    "Ask and answer about age"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:33",
+    "w:34"
+   ]
+  },
+  {
+   "order": 15,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Subject pronouns, possessive adjectives and have / has",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Use I, my, he, his, she, her, have, has"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:35",
+    "w:36"
+   ]
+  },
+  {
+   "order": 16,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "Reading Adaku's e-mail and replying",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Respond to an e-mail introducing oneself, likes, food and pets"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:37",
+    "w:38"
+   ]
+  },
+  {
+   "order": 17,
+   "unitKind": "week",
+   "unit": 11,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "I learn to integrate",
+   "topic": "My family tree in an e-mail",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Draw their family tree and introduce family members and jobs in an e-mail"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:39",
+    "w:40"
+   ]
+  },
+  {
+   "order": 18,
+   "unitKind": "week",
+   "unit": 13,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "Remedial work",
+   "topic": "Term 1 exam correction and remedial work",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 19,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "I think and write",
+   "topic": "My blog on an international friendship site",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Introduce themselves on an international friendship blog"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:41",
+    "w:42"
+   ]
+  },
+  {
+   "order": 20,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my daily activities",
+   "activity": "English",
+   "session": "English",
+   "domain": "Planning learning",
+   "topic": "Situations of sequence three — daily activities",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about daily activities"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:44"
+   ]
+  },
+  {
+   "order": 21,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my daily activities",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Daily routines",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about daily routines"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:45",
+    "w:46"
+   ]
+  },
+  {
+   "order": 22,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my daily activities",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Telling the time",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Tell the time",
+    "Ask about time"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:47"
+   ]
+  },
+  {
+   "order": 23,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my daily activities",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "The present simple (positive, negative and interrogative forms)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Use the present simple in its three forms"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:48",
+    "w:49"
+   ]
+  },
+  {
+   "order": 24,
+   "unitKind": "week",
+   "unit": 17,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my daily activities",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "The present simple with he, she, it",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Use the present simple with the third person singular"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:50",
+    "w:51"
+   ]
+  },
+  {
+   "order": 25,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my daily activities",
+   "activity": "English",
+   "session": "English",
+   "domain": "I pronounce",
+   "topic": "The sounds /h/, /s/, /z/, /ɪz/, /ə/",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Identify and pronounce /h/, /s/, /z/, /ɪz/, /ə/"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:52"
+   ]
+  },
+  {
+   "order": 26,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my daily activities",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "Daily activities during 24 hours (Karim's daily routine)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about daily activities during 24 hours"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:53",
+    "w:54"
+   ]
+  },
+  {
+   "order": 27,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my daily activities",
+   "activity": "English",
+   "session": "English",
+   "domain": "I learn to integrate",
+   "topic": "Writing about a mate's daily activities",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write about a mate's daily activities"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:55"
+   ]
+  },
+  {
+   "order": 28,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 3,
+   "segmentTitle": "Sequence 3: Me and my daily activities",
+   "activity": "English",
+   "session": "English",
+   "domain": "I think and write",
+   "topic": "My mom's daily activities (reply to Margaret)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write about their mom's daily activities"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:56",
+    "w:57",
+    "w:58"
+   ]
+  },
+  {
+   "order": 29,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my school",
+   "activity": "English",
+   "session": "English",
+   "domain": "Planning learning",
+   "topic": "Situations of sequence four — project: my school's pupils chart",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about school rules, rights and duties"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:60"
+   ]
+  },
+  {
+   "order": 30,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my school",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "School rules: rights and duties — I pronounce",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about school rules"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:61"
+   ]
+  },
+  {
+   "order": 31,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my school",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Prepositions of place and time (timetable, school map)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Use prepositions of place and time"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:62",
+    "w:63"
+   ]
+  },
+  {
+   "order": 32,
+   "unitKind": "week",
+   "unit": 24,
+   "segment": 2,
+   "segmentTitle": "Sequence 2: Me and my family",
+   "activity": "English",
+   "session": "English",
+   "domain": "Remedial work",
+   "topic": "Term 2 exam correction and remedial work",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 33,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my school",
+   "activity": "English",
+   "session": "English",
+   "domain": "PIASP teaching grammar",
+   "topic": "The present continuous",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Use the present continuous (positive, negative, question)"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:64"
+   ]
+  },
+  {
+   "order": 34,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my school",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "My ideal school",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Talk about their ideal school"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:65",
+    "w:66"
+   ]
+  },
+  {
+   "order": 35,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my school",
+   "activity": "English",
+   "session": "English",
+   "domain": "I learn to integrate",
+   "topic": "Writing about school rules",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Write about school rules and suggest new ones"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:67"
+   ]
+  },
+  {
+   "order": 36,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 4,
+   "segmentTitle": "Sequence 4: Me and my school",
+   "activity": "English",
+   "session": "English",
+   "domain": "I think and write",
+   "topic": "Suggesting new school rules (note to the principal)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Suggest and write new school rules"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:68",
+    "w:69"
+   ]
+  },
+  {
+   "order": 37,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 5,
+   "segmentTitle": "Sequence 5: Me, my country and the world",
+   "activity": "English",
+   "session": "English",
+   "domain": "Planning learning",
+   "topic": "Situations of sequence five — project: My country profile / a tourist brochure",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Describe one's country"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:72"
+   ]
+  },
+  {
+   "order": 38,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 5,
+   "segmentTitle": "Sequence 5: Me, my country and the world",
+   "activity": "English",
+   "session": "English",
+   "domain": "I listen and do",
+   "topic": "Countries, capitals, flags, currencies and dishes — I pronounce",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Locate famous monuments and places using prepositions and be"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:73",
+    "w:74"
+   ]
+  },
+  {
+   "order": 39,
+   "unitKind": "week",
+   "unit": 29,
+   "segment": 5,
+   "segmentTitle": "Sequence 5: Me, my country and the world",
+   "activity": "English",
+   "session": "English",
+   "domain": "I practise",
+   "topic": "Adjectives of nationality",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Give information and ask about one's country using adjectives of nationality"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:75"
+   ]
+  },
+  {
+   "order": 40,
+   "unitKind": "week",
+   "unit": 30,
+   "segment": 5,
+   "segmentTitle": "Sequence 5: Me, my country and the world",
+   "activity": "English",
+   "session": "English",
+   "domain": "I read and do",
+   "topic": "Reading about one's country (skimming and scanning)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Skim and scan a text to talk about one's country"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:76"
+   ]
+  },
+  {
+   "order": 41,
+   "unitKind": "week",
+   "unit": 30,
+   "segment": 5,
+   "segmentTitle": "Sequence 5: Me, my country and the world",
+   "activity": "English",
+   "session": "English",
+   "domain": "I learn to integrate",
+   "topic": "An e-mail about one's country (reply to Margaret)",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Select appropriate resources to write an e-mail about one's country"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:77",
+    "w:78"
+   ]
+  },
+  {
+   "order": 42,
+   "unitKind": "week",
+   "unit": 31,
+   "segment": 5,
+   "segmentTitle": "Sequence 5: Me, my country and the world",
+   "activity": "English",
+   "session": "English",
+   "domain": "I think and write",
+   "topic": "A touristic leaflet about Algeria",
+   "materials": "Textbook, board, flashcards, audio",
+   "objectives": [
+    "Make an attractive leaflet about Algeria"
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:79",
+    "w:80",
+    "w:81"
+   ]
+  }
+ ]
+}
