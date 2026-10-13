@@ -4,6 +4,7 @@
  *
  *   node scripts/curriculum/memo-preview.mjs <curriculumId> <out.pdf> --src <dir of source PDFs named by Drive id> [--only b:12,b:30] [--png <prefix>]
  *   مصدر من الويب («w»): --files <a.pdf,b.pdf> (الملفات المحلية بترتيبها) بدل --src
+ *   ملف مذكرات آخر (جزء من منهاج Drive): --memos <path>
  *   جزء قيد الإعداد: --part <k> يقرأ scripts/curriculum/middle/parts/<id>.<k>.json وcontent/memos/parts/<id>.<k>.json
  */
 import { execFileSync } from "node:child_process";
@@ -36,7 +37,7 @@ if (part) {
   memos = JSON.parse(readFileSync(new URL(`content/memos/parts/${id}.${part}.json`, ROOT), "utf8"));
 } else {
   cur = JSON.parse(readFileSync(new URL(`content/curriculum/${id}.json`, ROOT), "utf8"));
-  memos = JSON.parse(readFileSync(new URL(`content/memos/${id}.json`, ROOT), "utf8"));
+  memos = JSON.parse(readFileSync(opt("--memos") ?? new URL(`content/memos/${id}.json`, ROOT), "utf8"));
 }
 // داخل المستودع ليجد react من node_modules (الحزمة تتركه خارجها)
 mkdirSync(new URL("node_modules/.cache/", ROOT), { recursive: true });
