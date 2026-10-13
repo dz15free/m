@@ -55,6 +55,7 @@ export const REPO_CURRICULA: readonly string[] = [
   "4AM_civic",
   "4AM_en",
   "4AM_fr",
+  "4AM_histgeo",
   "4AM_informatics",
   "4AM_islamic",
   "4AM_math",
