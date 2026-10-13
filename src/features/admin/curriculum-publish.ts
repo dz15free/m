@@ -4,7 +4,7 @@ import { doc, getDoc, setDoc, writeBatch } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
 import { authedFetch } from "@/lib/firebase/api";
 import { browserDownload } from "@/features/library/repo";
-import { memoFigures, withImages, type Memo } from "@/features/lessons/memo";
+import { memoFigures, memoToDoc, withImages, type Memo } from "@/features/lessons/memo";
 import { memoFileRev } from "@/features/lessons/memo-rev";
 
 /* نشر المذكرات من متصفح الأدمن (مكافئ scripts/curriculum/seed.mjs، دون حساب خدمة): قواعد Firestore تسمح للمحرّر
@@ -216,7 +216,7 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
     const imgs = memoFigures(memo).map((f) => figures.get(figKey(f.ref, f.box)) ?? "");
     // أشكال مقتطعة الآن من Drive، أو مضمّنة في الملف من قبل (مصادر الويب)
     const published = imgs.length ? withImages(memo, imgs) : memo;
-    await setDoc(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample: sampleOf(l), body: "", memo: published, quality: "memo", source: c.source, updatedAt: now });
+    await setDoc(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample: sampleOf(l), body: "", memo: memoToDoc(published), quality: "memo", source: c.source, updatedAt: now });
     onProgress({ step: "memos", done: i + 1, total: withMemo.length });
   }
 

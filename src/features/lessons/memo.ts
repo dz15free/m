@@ -191,3 +191,16 @@ export function columnWidths(memo: Memo): number[] {
   const total = w.reduce((a, b) => a + b, 0);
   return w.map((x) => Math.max(7, Math.round((x / total) * 100)));
 }
+
+/** صيغة التخزين في Firestore (لا يقبل مصفوفات متداخلة): الحقول كائنات، والصفوف كائنات خلايا. */
+export type StoredMemo = Omit<Memo, "head" | "rows"> & { head: { l: string; v: string }[]; rows: { c: string[] }[] };
+
+export function memoToDoc(memo: Memo): StoredMemo {
+  // Firestore يرفض الحقول undefined (pre/after الغائبة)
+  const doc = { ...memo, head: memo.head.map(([l, v]) => ({ l, v })), rows: memo.rows.map((c) => ({ c })) };
+  return Object.fromEntries(Object.entries(doc).filter(([, v]) => v !== undefined)) as StoredMemo;
+}
+
+export function memoFromDoc(doc: StoredMemo): Memo {
+  return { ...doc, head: doc.head.map(({ l, v }) => [l, v]), rows: doc.rows.map(({ c }) => c) };
+}

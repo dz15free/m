@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { columnWidths, memoFigures, parseBlocks, parseInline, parseMath, withImages, type Memo } from "./memo.ts";
+import { columnWidths, memoFigures, memoFromDoc, memoToDoc, parseBlocks, parseInline, parseMath, withImages, type Memo } from "./memo.ts";
 
 test("inline: bold, answers and math", () => {
   assert.deepEqual(parseInline("أ **ب** ==ج== $a = 2$"), [
@@ -54,4 +54,13 @@ test("column widths favour the column with the most text", () => {
   const w = columnWidths(memo);
   assert.equal(w.indexOf(Math.max(...w)), 2);
   assert.ok(w.every((x) => x >= 7));
+});
+
+test("stored form has no nested arrays and round-trips", () => {
+  const memo: Memo = { head: [["أ", "ب"]], cols: ["x", "y"], rows: [["1", "2"]], author: "س" };
+  const stored = memoToDoc({ ...withImages(memo, []), imgs: undefined });
+  assert.ok(Object.values(stored).every((v) => v !== undefined));
+  const nested = (v: unknown): boolean => Array.isArray(v) ? v.some((x) => Array.isArray(x) || nested(x)) : !!v && typeof v === "object" && Object.values(v).some(nested);
+  assert.equal(nested(stored), false);
+  assert.deepEqual(memoFromDoc(stored), memo);
 });
