@@ -3,7 +3,7 @@
      سطر «## عنوان» عنوان فرعي · «- » عنصر قائمة · «> » وضعية (إطار) · «! » حوصلة/تعريف (إطار) · «|أ|ب|» جدول
      (سطر «|---|» بعد الأول يجعله رأسًا) · «[[fig b:12 x y w h]]» شكل مقتطع من صفحة المصدر (نِسَب 0–1 من عرضها وطولها)
      يصير بعد النشر «[[img n]]» · داخل السطر: **غامق** و==إجابة== و$رياضيات$ (من اليسار؛ فيها \frac{a}{b} و\sqrt{x}
-     و^{x} و_{x}). */
+     و\vec{AB} و^{x} و_{x}). */
 
 export type Memo = {
   /** حقول البطاقة بترتيبها وتسمياتها في المذكرة: [التسمية، القيمة] */
@@ -27,6 +27,7 @@ export type MathNode =
   | { t: "text"; v: string }
   | { t: "frac"; n: MathNode[]; d: MathNode[] }
   | { t: "sqrt"; c: MathNode[] }
+  | { t: "vec"; c: MathNode[] }
   | { t: "sup"; c: MathNode[] }
   | { t: "sub"; c: MathNode[] };
 
@@ -73,6 +74,11 @@ export function parseMath(s: string): MathNode[] {
       const [d, k] = arg(j);
       out.push({ t: "frac", n: parseMath(n), d: parseMath(d) });
       i = k;
+    } else if (s.startsWith("\\vec", i)) {
+      flush();
+      const [c, j] = arg(i + 4);
+      out.push({ t: "vec", c: parseMath(c) });
+      i = j;
     } else if (s.startsWith("\\sqrt", i)) {
       flush();
       const [c, j] = arg(i + 5);

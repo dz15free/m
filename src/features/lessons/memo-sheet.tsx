@@ -269,6 +269,12 @@ function MathView({ c }: { c: MathNode[] }) {
             </span>
           </span>
         );
+      case "vec":
+        return (
+          <span key={i} className={s.vec}>
+            <MathView c={x.c} />
+          </span>
+        );
       case "sup":
         return (
           <sup key={i}>
