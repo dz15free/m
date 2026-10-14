@@ -1,5 +1,6 @@
 /* كل مناهج المستودع (content/curriculum/*.json) — قائمة خفيفة لصفحة النشر؛ اختبار يتأكد من مطابقتها للملفات. */
 export const REPO_CURRICULA: readonly string[] = [
+  "1AM_ar",
   "1AM_civic",
   "1AM_en",
   "1AM_fr",
@@ -38,6 +39,7 @@ export const REPO_CURRICULA: readonly string[] = [
   "3AM_ar",
   "3AM_civic",
   "3AM_en",
+  "3AM_fr",
   "3AM_histgeo",
   "3AM_informatics",
   "3AM_islamic",

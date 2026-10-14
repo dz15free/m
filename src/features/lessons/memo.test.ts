@@ -64,3 +64,11 @@ test("stored form has no nested arrays and round-trips", () => {
   assert.equal(nested(stored), false);
   assert.deepEqual(memoFromDoc(stored), memo);
 });
+
+test("math: vectors", () => {
+  assert.deepEqual(parseMath("\\vec{AB} = \\vec{DC}"), [
+    { t: "vec", c: [{ t: "text", v: "AB" }] },
+    { t: "text", v: " = " },
+    { t: "vec", c: [{ t: "text", v: "DC" }] },
+  ]);
+});

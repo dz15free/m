@@ -1,0 +1,1522 @@
+{
+ "id": "3AM_fr",
+ "level": "3AM",
+ "subject": "fr",
+ "title": "Langue française — السنة الثالثة متوسط",
+ "source": {
+  "ar": "مذكرات أساتذة منشورة للعموم (مناهج الجيل الثاني)؛ الأسابيع تقديرية موزّعة على رزنامة 2026-2027 في غياب المخطط السنوي الرسمي",
+  "fr": "Fiches d'enseignants partagées publiquement (programmes de 2e génération) ; semaines estimées sur le calendrier 2026-2027"
+ },
+ "weekMode": "absolute",
+ "segments": {
+  "1": "Projet 1 — Séquence 1 : Produire une brève",
+  "2": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+  "3": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+  "4": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+  "5": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+  "6": "Projet 3 — Séquence 6 : Rédiger un souvenir d’enfance, une expérience vécue",
+  "7": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu"
+ },
+ "sources": {
+  "w": {
+   "web": [
+    "https://eddirasa.com/جميع-مذكرات-اللغة-الفرنسية-للسنة-الثالثة-متوسط/"
+   ]
+  }
+ },
+ "lessons": [
+  {
+   "order": 1,
+   "unitKind": "week",
+   "unit": 1,
+   "segment": 1,
+   "segmentTitle": "Projet 1 — Séquence 1 : Produire une brève",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Évaluation diagnostique",
+   "topic": "Évaluation diagnostique",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 2,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Projet 1 — Séquence 1 : Produire une brève",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Découvrir la brève : « Un livre au lieu d’un billet pour accéder au Théâtre régional d’Oran »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Construire du sens à partir d’un support audiovisuel",
+    "Découvrir la brève."
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "w:3"
+   ]
+  },
+  {
+   "order": 3,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Projet 1 — Séquence 1 : Produire une brève",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Raconter oralement une brève : « Une tortue géante s’échoue sur l’île d’Oléron »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire un énoncé à partir d’un support iconique.",
+    "S’exprimer oralement pour raconter une brève."
+   ],
+   "body": "",
+   "sample": true,
+   "pages": [
+    "w:4"
+   ]
+  },
+  {
+   "order": 4,
+   "unitKind": "week",
+   "unit": 2,
+   "segment": 1,
+   "segmentTitle": "Projet 1 — Séquence 1 : Produire une brève",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lire et comprendre des brèves (accident, méfait, insolite)",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Lire et comprendre une brève relatant un accident, un méfait et de l’insolite.",
+    "Repérer les caractéristiques de la brève.",
+    "Différencier entre les genres de récits relevant du réel."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:5",
+    "w:6"
+   ]
+  },
+  {
+   "order": 5,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Projet 1 — Séquence 1 : Produire une brève",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Le champ lexical de l’accident, du méfait et de la catastrophe",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier et employer le champ lexical de l’accident, de la catastrophe et du méfait.",
+    "Enrichir le vocabulaire lié au thème de l’accident, la catastrophe et le méfait."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:7",
+    "w:8"
+   ]
+  },
+  {
+   "order": 6,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Projet 1 — Séquence 1 : Produire une brève",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "Les indicateurs de temps et de lieu",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les indicateurs de temps et de lieu.",
+    "Employer les indicateurs de temps et de lieu."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:9",
+    "w:10"
+   ]
+  },
+  {
+   "order": 7,
+   "unitKind": "week",
+   "unit": 3,
+   "segment": 1,
+   "segmentTitle": "Projet 1 — Séquence 1 : Produire une brève",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Conjugaison",
+   "topic": "Le passé composé",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier la formation du passé composé.",
+    "Conjuguer des verbes au passé composé."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:11",
+    "w:12"
+   ]
+  },
+  {
+   "order": 8,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Projet 1 — Séquence 1 : Produire une brève",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Préparer la rédaction d’une brève relatant un évènement sportif",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire une brève relatant un évènement sportif."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:13"
+   ]
+  },
+  {
+   "order": 9,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Projet 1 — Séquence 1 : Produire une brève",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Produire une brève relatant un évènement sportif",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire une brève relatant un évènement sportif."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:14"
+   ]
+  },
+  {
+   "order": 10,
+   "unitKind": "week",
+   "unit": 4,
+   "segment": 1,
+   "segmentTitle": "Projet 1 — Séquence 1 : Produire une brève",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Remédiation",
+   "topic": "Remédiation : indicateurs de temps et de lieu, passé composé, accord du participe passé",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Remédier à ses lacunes et les combler."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:15"
+   ]
+  },
+  {
+   "order": 11,
+   "unitKind": "week",
+   "unit": 5,
+   "segment": 2,
+   "segmentTitle": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Titre et chapeau d’un fait divers : « Naufrage d’un navire de croisière en Italie »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se positionner en tant qu’auditeur.",
+    "Écouter et comprendre le contenu d’un titre et d’un chapeau de fait divers relatant un …",
+    "Identifier le cadre spatio-temporel du récit."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:17"
+   ]
+  },
+  {
+   "order": 12,
+   "unitKind": "week",
+   "unit": 5,
+   "segment": 2,
+   "segmentTitle": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Rapporter oralement un fait divers : « Alger : Incendie près de la rue Didouche Mourad »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Construire du sens à partir d’un support iconique.",
+    "S’exprimer oralement pour produire une brève."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:18"
+   ]
+  },
+  {
+   "order": 13,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 2,
+   "segmentTitle": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "« Tiferdoud, le village le plus propre de Kabylie » : le titre et le chapeau",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier la structure du titre et du chapeau.",
+    "Repérer le cadre spatio-temporel de l’événement.",
+    "Lire et comprendre un récit de fait réel."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:19",
+    "w:20"
+   ]
+  },
+  {
+   "order": 14,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 2,
+   "segmentTitle": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Vocabulaire",
+   "topic": "La nominalisation dans les titres de faits divers",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier le procédé de la nominalisation.",
+    "Transformer des titres de fait divers à la forme nominale."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:21",
+    "w:22"
+   ]
+  },
+  {
+   "order": 15,
+   "unitKind": "week",
+   "unit": 6,
+   "segment": 2,
+   "segmentTitle": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Conjugaison",
+   "topic": "Le présent de l’indicatif",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les terminaisons des verbes au présent de l’indicatif.",
+    "Conjuguer des verbes au présent de l’indicatif."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:23",
+    "w:24"
+   ]
+  },
+  {
+   "order": 16,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 2,
+   "segmentTitle": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lecture-réinvestissement : « Vaste campagne de reboisement à Naâma » ; fiche « 26e Sila : le Salon ouvre ses portes au public à Alger »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Réinvestir les points de langue déjà vus durant la séquence."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:25",
+    "w:26",
+    "w:27",
+    "w:28"
+   ]
+  },
+  {
+   "order": 17,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 2,
+   "segmentTitle": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Préparer la rédaction du titre et du chapeau d’un fait divers",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire le titre et le chapeau d’un fait divers."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:29"
+   ]
+  },
+  {
+   "order": 18,
+   "unitKind": "week",
+   "unit": 7,
+   "segment": 2,
+   "segmentTitle": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Produire le titre et le chapeau d’un fait divers",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire le titre et le chapeau d’un fait divers."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:30"
+   ]
+  },
+  {
+   "order": 19,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 2,
+   "segmentTitle": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compte rendu de la production écrite",
+   "topic": "Compte rendu de la production écrite : titre et chapeau d’un fait divers",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Repérer ses erreurs.",
+    "S’auto-corriger et améliorer sa production écrite."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:31"
+   ]
+  },
+  {
+   "order": 20,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 2,
+   "segmentTitle": "Projet 1 — Séquence 2 : Produire des titres et des chapeaux de faits divers",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Remédiation",
+   "topic": "Remédiation : titres nominaux, présent de l’indicatif",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Remédier à ses lacunes et les combler."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:32"
+   ]
+  },
+  {
+   "order": 21,
+   "unitKind": "week",
+   "unit": 8,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Le fait divers insolite : « De la neige à Béchar »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Construire du sens à partir d’un support audiovisuel.",
+    "Identifier le fait divers insolite."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:34"
+   ]
+  },
+  {
+   "order": 22,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Raconter un fait insolite : « Un chien lutte contre un alligator pour sauver sa maîtresse »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Construire du sens à partir d’un support iconique.",
+    "S’exprimer oralement pour produire un fait insolite."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:35"
+   ]
+  },
+  {
+   "order": 23,
+   "unitKind": "week",
+   "unit": 9,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Le fait divers insolite et le témoignage : « Syrie : Incroyable ! Il sauve les chats d’Alep au péril de sa vie. »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier le fait divers insolite.",
+    "Repérer le cadre spatio-temporel du récit.",
+    "Repérer la structure d’un fait divers."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:36",
+    "w:37"
+   ]
+  },
+  {
+   "order": 24,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Les verbes de perception",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les verbes de perception.",
+    "Employer les verbes de perception."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:38",
+    "w:39"
+   ]
+  },
+  {
+   "order": 25,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "Le discours direct et le discours indirect",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier le discours direct et le discours indirect.",
+    "Transformer des phrases du discours direct au discours indirect."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:40",
+    "w:41"
+   ]
+  },
+  {
+   "order": 26,
+   "unitKind": "week",
+   "unit": 10,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Conjugaison",
+   "topic": "Le plus-que-parfait",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier le plus-que-parfait.",
+    "Conjuguer des verbes au plus-que-parfait."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:42",
+    "w:43"
+   ]
+  },
+  {
+   "order": 27,
+   "unitKind": "week",
+   "unit": 11,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lecture-réinvestissement : « Un garçon de 8 ans casse sa tirelire » ; fiche « New York : une surprenante découverte dans une valise »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Réinvestir les points de langue déjà vus durant la séquence."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:44",
+    "w:45",
+    "w:46",
+    "w:47"
+   ]
+  },
+  {
+   "order": 28,
+   "unitKind": "week",
+   "unit": 11,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Préparer la rédaction d’un fait divers avec un témoignage",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire un fait divers et y insérer un témoignage."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:48"
+   ]
+  },
+  {
+   "order": 29,
+   "unitKind": "week",
+   "unit": 11,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Produire un fait divers et y insérer un témoignage",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire un fait divers et y insérer un témoignage."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:49"
+   ]
+  },
+  {
+   "order": 30,
+   "unitKind": "week",
+   "unit": 13,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Remédiation",
+   "topic": "Correction de l'examen du trimestre 1 et remédiation",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 31,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compte rendu de la production écrite",
+   "topic": "Compte rendu de la production écrite : fait divers avec témoignage",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Repérer ses erreurs.",
+    "S’auto-corriger et améliorer sa production écrite."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:50"
+   ]
+  },
+  {
+   "order": 32,
+   "unitKind": "week",
+   "unit": 14,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Remédiation",
+   "topic": "Remédiation : discours indirect, verbes de perception",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Remédier à ses lacunes et les combler."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:51"
+   ]
+  },
+  {
+   "order": 33,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 4,
+   "segmentTitle": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Le récit historique : « Le jour de l’indépendance »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Construire du sens à partir d’un support audiovisuel.",
+    "Identifier les bienfaits d’internet."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:53"
+   ]
+  },
+  {
+   "order": 34,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 4,
+   "segmentTitle": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Raconter un événement historique : les dates de la guerre de libération et de l’indépendance",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Construire du sens à partir d’un support iconique.",
+    "S’exprimer oralement pour raconter un événement historique."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:54"
+   ]
+  },
+  {
+   "order": 35,
+   "unitKind": "week",
+   "unit": 15,
+   "segment": 4,
+   "segmentTitle": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Le récit historique : « Femmes courage »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Lire et comprendre un récit historique.",
+    "Identifier les caractéristiques du récit historique."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:55",
+    "w:56"
+   ]
+  },
+  {
+   "order": 36,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 4,
+   "segmentTitle": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Les mots de la même famille",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les mots de la même famille.",
+    "Employer les mots de la même famille."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:57",
+    "w:58"
+   ]
+  },
+  {
+   "order": 37,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 4,
+   "segmentTitle": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "Les connecteurs chronologiques",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les connecteurs chronologiques.",
+    "Employer les connecteurs chronologiques."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:59",
+    "w:60"
+   ]
+  },
+  {
+   "order": 38,
+   "unitKind": "week",
+   "unit": 16,
+   "segment": 4,
+   "segmentTitle": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Conjugaison",
+   "topic": "L’imparfait et le passé simple",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les terminaisons des verbes à l’imparfait et au passé simple.",
+    "Conjuguer des verbes à l’imparfait et au passé simple."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:61",
+    "w:62",
+    "w:63"
+   ]
+  },
+  {
+   "order": 39,
+   "unitKind": "week",
+   "unit": 17,
+   "segment": 4,
+   "segmentTitle": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lecture-réinvestissement : « Le Novembre 1954 » ; fiche « Une répression aveugle »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Réinvestir les points de langue déjà vus durant la séquence."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:64",
+    "w:65",
+    "w:66",
+    "w:67"
+   ]
+  },
+  {
+   "order": 40,
+   "unitKind": "week",
+   "unit": 17,
+   "segment": 4,
+   "segmentTitle": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Préparer la rédaction d’un récit historique à partir d’une bande dessinée",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire un récit historique à partir d’une bande dessinée."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:68"
+   ]
+  },
+  {
+   "order": 41,
+   "unitKind": "week",
+   "unit": 17,
+   "segment": 4,
+   "segmentTitle": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Produire un récit historique à partir d’une bande dessinée",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire un récit historique à partir d’une bande dessinée."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:69"
+   ]
+  },
+  {
+   "order": 42,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 4,
+   "segmentTitle": "Projet 2 — Séquence 4 : Rédiger un récit historique à partir d’une bande dessinée",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compte rendu de la production écrite",
+   "topic": "Compte rendu de la production écrite : récit historique à partir d’une bande dessinée",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Repérer ses erreurs.",
+    "S’auto-corriger et améliorer sa production écrite."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:70"
+   ]
+  },
+  {
+   "order": 43,
+   "unitKind": "week",
+   "unit": 18,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Découvrir un patrimoine vestimentaire : « El Haïk »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Construire du sens à partir d’un support audiovisuel.",
+    "Découvrir un patrimoine vestimentaire."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:72"
+   ]
+  },
+  {
+   "order": 44,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Décrire un patrimoine culinaire : la préparation du couscous",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire à l’oral une séquence descriptive relative à un patrimoine culinaire.",
+    "Identifier un type de patrimoine."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:73"
+   ]
+  },
+  {
+   "order": 45,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lire un texte descriptif sur un patrimoine : « L’imzad »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Lire et comprendre un texte descriptif relatif à un patrimoine.",
+    "Identifier un type de patrimoine.",
+    "Enrichir le vocabulaire lié au thème du patrimoine."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:74",
+    "w:75"
+   ]
+  },
+  {
+   "order": 46,
+   "unitKind": "week",
+   "unit": 19,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lecture entraînement : « L’imzad »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Améliorer les performances individuelles de lecture orale.",
+    "Corriger ses erreurs au niveau de la phonétique."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:76"
+   ]
+  },
+  {
+   "order": 47,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Vocabulaire",
+   "topic": "Les verbes de perception et de localisation",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier et employer les verbes de perception et de localisation.",
+    "Employer le vocabulaire du beau (vocabulaire mélioratif)."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:77",
+    "w:78"
+   ]
+  },
+  {
+   "order": 48,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "Les expansions du nom",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les expansions du nom.",
+    "Identifier les fonctions des expansions du nom.",
+    "Employer les expansions du nom."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:79",
+    "w:80"
+   ]
+  },
+  {
+   "order": 49,
+   "unitKind": "week",
+   "unit": 20,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Conjugaison",
+   "topic": "Le présent de l’indicatif dans la description",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les terminaisons du présent de l’indicatif.",
+    "Employer le présent de l’indicatif dans des passages descriptifs."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:81",
+    "w:82"
+   ]
+  },
+  {
+   "order": 50,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Orthographe",
+   "topic": "L’accord de l’adjectif qualificatif avec le nom",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier l’accord de l’adjectif qualificatif avec le nom.",
+    "Accorder correctement les adjectifs qualificatifs avec les noms."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:83",
+    "w:84"
+   ]
+  },
+  {
+   "order": 51,
+   "unitKind": "week",
+   "unit": 21,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lecture-réinvestissement : « Un travail d’artiste » ; fiche « Le haïk : un vêtement traditionnel en voie de disparition »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Réinvestir les points de langue déjà vus durant la séquence."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:85",
+    "w:86",
+    "w:87",
+    "w:88"
+   ]
+  },
+  {
+   "order": 52,
+   "unitKind": "week",
+   "unit": 24,
+   "segment": 3,
+   "segmentTitle": "Projet 1 — Séquence 3 : Rédiger un fait divers et y insérer un témoignage",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Remédiation",
+   "topic": "Correction de l'examen du trimestre 2 et remédiation",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [],
+   "body": "",
+   "sample": false
+  },
+  {
+   "order": 53,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Préparer la rédaction d’un passage descriptif sur un patrimoine",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire un passage descriptif sur un patrimoine."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:89"
+   ]
+  },
+  {
+   "order": 54,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 5,
+   "segmentTitle": "Projet 2 — Séquence 5 : Insérer la description d’un objet dans une séquence narrative",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Produire un passage descriptif sur un patrimoine",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire un passage descriptif sur un patrimoine."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:90"
+   ]
+  },
+  {
+   "order": 55,
+   "unitKind": "week",
+   "unit": 25,
+   "segment": 6,
+   "segmentTitle": "Projet 3 — Séquence 6 : Rédiger un souvenir d’enfance, une expérience vécue",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Le récit autobiographique : « Deux adolescents évoquant des souvenirs »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Construire du sens à partir d’un support audiovisuel.",
+    "Identifier le récit autobiographique."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:92"
+   ]
+  },
+  {
+   "order": 56,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 6,
+   "segmentTitle": "Projet 3 — Séquence 6 : Rédiger un souvenir d’enfance, une expérience vécue",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Raconter un souvenir de classe à partir d’une photo",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Construire du sens à partir d’un support iconique.",
+    "S’exprimer oralement pour relater une histoire vécue."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:93"
+   ]
+  },
+  {
+   "order": 57,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 6,
+   "segmentTitle": "Projet 3 — Séquence 6 : Rédiger un souvenir d’enfance, une expérience vécue",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Le récit autobiographique : « Mes souvenirs d’enfance »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les caractéristiques du récit autobiographique.",
+    "Repérer les personnages de l’histoire.",
+    "Identifier le narrateur."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:94",
+    "w:95"
+   ]
+  },
+  {
+   "order": 58,
+   "unitKind": "week",
+   "unit": 26,
+   "segment": 6,
+   "segmentTitle": "Projet 3 — Séquence 6 : Rédiger un souvenir d’enfance, une expérience vécue",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "Les déterminants possessifs et démonstratifs",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les déterminants possessifs et démonstratifs.",
+    "Employer les déterminants possessifs et démonstratifs."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:96",
+    "w:97"
+   ]
+  },
+  {
+   "order": 59,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 6,
+   "segmentTitle": "Projet 3 — Séquence 6 : Rédiger un souvenir d’enfance, une expérience vécue",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lecture-réinvestissement : « Enfance du premier cosmonaute »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Réinvestir les points de langue déjà vus durant la séquence."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:98",
+    "w:99"
+   ]
+  },
+  {
+   "order": 60,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 6,
+   "segmentTitle": "Projet 3 — Séquence 6 : Rédiger un souvenir d’enfance, une expérience vécue",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Préparer la rédaction d’un souvenir d’enfance",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire un texte relatant un souvenir d’enfance."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:100"
+   ]
+  },
+  {
+   "order": 61,
+   "unitKind": "week",
+   "unit": 27,
+   "segment": 6,
+   "segmentTitle": "Projet 3 — Séquence 6 : Rédiger un souvenir d’enfance, une expérience vécue",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Produire un texte relatant un souvenir d’enfance",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire un texte relatant un souvenir d’enfance."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:101"
+   ]
+  },
+  {
+   "order": 62,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 6,
+   "segmentTitle": "Projet 3 — Séquence 6 : Rédiger un souvenir d’enfance, une expérience vécue",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Remédiation",
+   "topic": "Remédiation : temps du récit de souvenir, portrait physique et moral",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Remédier à ses lacunes et les combler."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:102"
+   ]
+  },
+  {
+   "order": 63,
+   "unitKind": "week",
+   "unit": 28,
+   "segment": 7,
+   "segmentTitle": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’oral",
+   "topic": "Le récit biographique : « Ahmed Zabana »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Construire du sens à partir d’un support audiovisuel.",
+    "Identifier le récit biographique."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:104"
+   ]
+  },
+  {
+   "order": 64,
+   "unitKind": "week",
+   "unit": 29,
+   "segment": 7,
+   "segmentTitle": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production de l’oral",
+   "topic": "Raconter oralement la biographie d’un footballeur : Rabah Madjer",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire à l’oral une biographie à partir d’une photo et d’une fiche biographique."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:105"
+   ]
+  },
+  {
+   "order": 65,
+   "unitKind": "week",
+   "unit": 29,
+   "segment": 7,
+   "segmentTitle": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "La biographie : « Oscar Niemeyer, un monstre sacré de l’architecture »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les caractéristiques du récit biographique."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:106",
+    "w:107"
+   ]
+  },
+  {
+   "order": 66,
+   "unitKind": "week",
+   "unit": 29,
+   "segment": 7,
+   "segmentTitle": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Grammaire",
+   "topic": "Les substituts lexicaux et grammaticaux",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les substituts lexicaux et grammaticaux.",
+    "Employer les substituts lexicaux et grammaticaux pour éviter la répétition."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:108",
+    "w:109"
+   ]
+  },
+  {
+   "order": 67,
+   "unitKind": "week",
+   "unit": 30,
+   "segment": 7,
+   "segmentTitle": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Orthographe",
+   "topic": "Le nom propre et l’adjectif de nationalité",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Identifier les noms propres et l’adjectif de nationalité.",
+    "Employer les noms propres et l’adjectif de nationalité."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:110",
+    "w:111"
+   ]
+  },
+  {
+   "order": 68,
+   "unitKind": "week",
+   "unit": 30,
+   "segment": 7,
+   "segmentTitle": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Compréhension de l’écrit",
+   "topic": "Lecture-réinvestissement : « Haroun Tazieff : le prince du feu »",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Réinvestir les points de langue déjà vus durant la séquence."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:112",
+    "w:113"
+   ]
+  },
+  {
+   "order": 69,
+   "unitKind": "week",
+   "unit": 30,
+   "segment": 7,
+   "segmentTitle": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Préparer la rédaction de la biographie d’une personne connue",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Se préparer à produire la biographie d’une personne connue."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:114"
+   ]
+  },
+  {
+   "order": 70,
+   "unitKind": "week",
+   "unit": 31,
+   "segment": 7,
+   "segmentTitle": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Production écrite",
+   "topic": "Produire la biographie d’une personne connue",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Produire la biographie d’une personne connue."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:115"
+   ]
+  },
+  {
+   "order": 71,
+   "unitKind": "week",
+   "unit": 31,
+   "segment": 7,
+   "segmentTitle": "Projet 3 — Séquence 7 : Rédiger la biographie d’un personnage connu",
+   "activity": "Français",
+   "session": "Français",
+   "domain": "Remédiation",
+   "topic": "Remédiation : déterminants démonstratifs et possessifs, présent de l’indicatif",
+   "materials": "Manuel, tableau, supports",
+   "objectives": [
+    "Remédier à ses lacunes et les combler."
+   ],
+   "body": "",
+   "sample": false,
+   "pages": [
+    "w:116"
+   ]
+  }
+ ]
+}
