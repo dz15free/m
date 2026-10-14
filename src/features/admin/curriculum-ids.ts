@@ -66,6 +66,7 @@ export const REPO_CURRICULA: readonly string[] = [
   "4AM_islamic",
   "4AM_math",
   "4AM_music",
+  "4AM_physics",
   "4AM_science",
   "4AP_ar",
   "4AP_art",
