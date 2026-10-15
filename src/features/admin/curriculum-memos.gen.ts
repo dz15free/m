@@ -18,6 +18,7 @@ export const MEMO_FILES: Record<string, Entry> = {
   "4AM_histgeo": { rev: "83a99227", count: 42, load: () => import("../../../content/memos/4AM_histgeo.json") },
   "4AM_math": { rev: "9410b7fc", count: 114, load: () => import("../../../content/memos/4AM_math.json") },
   "4AM_physics": { rev: "21412ade", count: 26, load: () => import("../../../content/memos/4AM_physics.json") },
+  "4AM_science": { rev: "219561e5", count: 64, load: () => import("../../../content/memos/4AM_science.json") },
 };
 
 export type MemoFile = Record<string, Memo>;
