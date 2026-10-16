@@ -1116,6 +1116,7 @@
       "importSelected": "Importer la sélection ({n})",
       "selected": "{n} sur {total} sélectionnés",
       "selectAll": "Tout sélectionner",
+      "allStages": "Afficher tous les fichiers du Drive, pas seulement ceux du cycle « {stage} »",
       "selectNone": "Tout désélectionner"
     },
     "search": "Rechercher : titre, matière, type…",
