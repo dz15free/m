@@ -43,6 +43,7 @@ export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
         h: "4. أين تُحفظ البيانات",
         p: [
           "نعتمد على مزوّدين موثوقين: Google Firebase (المصادقة وقاعدة البيانات والإشعارات)، وCloudflare (استضافة الموقع وملفات المكتبة)، وChargily Pay (الدفع الإلكتروني). قد تُحفظ البيانات على خوادم خارج الجزائر لدى هؤلاء المزوّدين، مع التشفير أثناء النقل.",
+          "نستعمل بكسل Meta (فيسبوك) لقياس زيارات الصفحات وفعالية إعلاناتنا: يُرسل عنوان الصفحة ومعلومات المتصفح إلى Meta. لا نرسل إليه بريدك ولا بياناتك داخل التطبيق (أقسامك، تلاميذك، علاماتك).",
           "لتعمل دون إنترنت، يحفظ التطبيق نسخة من بياناتك على جهازك. عند «تسجيل الخروج» نمسح هذه النسخة من الجهاز؛ لذلك سجّل خروجك دائمًا على الأجهزة المشتركة.",
         ],
       },
@@ -118,6 +119,7 @@ export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
         h: "4. Hébergement",
         p: [
           "Prestataires : Google Firebase (authentification, base de données, notifications), Cloudflare (hébergement du site et des fichiers de la bibliothèque), Chargily Pay (paiement). Les données peuvent être hébergées hors d'Algérie chez ces prestataires, chiffrées en transit.",
+          "Nous utilisons le pixel Meta (Facebook) pour mesurer les visites de pages et l'efficacité de nos publicités : l'adresse de la page et des informations du navigateur sont envoyées à Meta. Ni votre e-mail ni vos données dans l'application (classes, élèves, notes) ne lui sont transmis.",
           "Pour fonctionner hors ligne, l'application garde une copie de vos données sur votre appareil. La « Déconnexion » efface cette copie : déconnectez-vous toujours sur un appareil partagé.",
         ],
       },

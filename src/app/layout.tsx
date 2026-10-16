@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getTranslations } from "next-intl/server";
 import { localeDir } from "@/i18n/config";
 import { PwaInit } from "@/features/pwa/install-button";
+import { MetaPixel } from "@/features/analytics/meta-pixel";
 
 import "@fontsource/ibm-plex-sans-arabic/400.css";
 import "@fontsource/ibm-plex-sans-arabic/500.css";
@@ -40,6 +41,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <NextIntlClientProvider>
           <PwaInit />
+          <MetaPixel />
           {children}
         </NextIntlClientProvider>
       </body>
