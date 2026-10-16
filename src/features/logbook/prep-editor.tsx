@@ -14,6 +14,8 @@ import { formatHijri, formatLongDate } from "@/i18n/dates";
 import { levelById, subjectById, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
 import { cleanPrep, emptyPrep, PREP_BODY_FIELDS, PREP_HEAD_FIELDS, PREP_MAX, PREP_PHASES, type PrepEntry } from "./logic";
 import { getPrep, removePrep, savePrep } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const textarea =
   "block w-full resize-y rounded-xl border border-line bg-surface px-3 py-2.5 outline-none focus:border-brand-600 focus:ring-3 focus:ring-brand-100";
@@ -67,7 +69,7 @@ function PrepForm({
   levelIds: string[];
 }) {
   const t = useTranslations("logbook.prep");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const router = useRouter();
   const queryClient = useQueryClient();
   const uid = useUid();
@@ -79,11 +81,11 @@ function PrepForm({
 
   const subjects = (subjectIds.length ? subjectIds : taxonomy.subjects.map((s) => s.id)).map((id) => ({
     id,
-    label: subjectById(taxonomy, id)?.label[locale] ?? id,
+    label: pick(subjectById(taxonomy, id)?.label, locale) ?? id,
   }));
   const levels = (levelIds.length ? levelIds : taxonomy.levels.map((l) => l.id)).map((id) => ({
     id,
-    label: levelById(taxonomy, id)?.label[locale] ?? id,
+    label: pick(levelById(taxonomy, id)?.label, locale) ?? id,
   }));
   const set = <K extends keyof PrepEntry>(k: K, v: PrepEntry[K]) => {
     setDraft((d) => ({ ...d, [k]: v }));
@@ -236,7 +238,7 @@ function PrepForm({
         </table>
         <div className="mb-3 space-y-1 border border-ink px-3 py-2">
           <p className="text-[9pt] text-muted">
-            {[subjectById(taxonomy, draft.subjectId)?.label[locale], levelById(taxonomy, draft.gradeId)?.label[locale]].filter(Boolean).join(" — ")}
+            {[pick(subjectById(taxonomy, draft.subjectId)?.label, locale), pick(levelById(taxonomy, draft.gradeId)?.label, locale)].filter(Boolean).join(" — ")}
           </p>
           {PREP_BODY_FIELDS.map((f) => (
             <p key={f} className="whitespace-pre-line"><b>{t(`fields.${f}`)}:</b> <bdi>{draft[f]}</bdi></p>

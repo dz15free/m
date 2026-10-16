@@ -23,6 +23,8 @@ import { cn } from "@/lib/utils/cn";
 import { absenceGrid, pupilWord } from "./logic";
 import { listMonthSessions } from "./repo";
 import type { TemplateId } from "./templates";
+import { intlLocale, pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const LANDSCAPE: Record<TemplateId, boolean> = { certificates: true, absences: true, convocation: false, classSign: true, nameCards: false };
 
@@ -76,7 +78,7 @@ export function DocumentBuilder({ template }: { template: TemplateId }) {
 // ── مشترك ──
 
 function useIdentity() {
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const { profile, school } = useTeacher().data!;
   return {
     locale,
@@ -231,7 +233,7 @@ function Certificates({ cls, taxonomy }: { cls: ClassDoc; taxonomy: StageTaxonom
                     <p className="text-[15pt]">{t("awardedTo")} {pupilWord(s.gender, id.locale)}:</p>
                     <p className="font-display text-[28pt] font-bold"><bdi>{fullName(s)}</bdi></p>
                     <p className="text-[14pt]">
-                      {t("ofClass")} <bdi dir="ltr" className="font-bold">{cls.displayName}</bdi> ({levelById(taxonomy, cls.level)?.label[id.locale]})
+                      {t("ofClass")} <bdi dir="ltr" className="font-bold">{cls.displayName}</bdi> ({pick(levelById(taxonomy, cls.level)?.label, id.locale)})
                       {" — "}
                       {t(`certBody.${kind}`, { term: t(`terms.${term}`) })}
                       {withAvg && a !== null && (
@@ -272,7 +274,7 @@ function Absences({ cls }: { cls: ClassDoc; taxonomy: StageTaxonomy }) {
   const [month, setMonth] = useState(() => todayInAlgiers().slice(0, 7));
   const sessions = useQuery({ queryKey: ["monthSessions", uid ?? "", cls.id, month], queryFn: () => listMonthSessions(uid!, cls.id, month), enabled: !!uid && /^\d{4}-\d{2}$/.test(month) });
   const grid = sessions.data ? absenceGrid(cls.roster.map((s) => s.id), sessions.data, id.locale) : null;
-  const monthLabel = new Intl.DateTimeFormat(id.locale === "ar" ? "ar-DZ" : "fr-DZ", { month: "long", year: "numeric", numberingSystem: "latn" }).format(new Date(`${month}-15T12:00:00`));
+  const monthLabel = new Intl.DateTimeFormat(intlLocale(id.locale), { month: "long", year: "numeric", numberingSystem: "latn" }).format(new Date(`${month}-15T12:00:00`));
 
   return (
     <>
@@ -406,7 +408,7 @@ function ClassSign({ cls, taxonomy }: { cls: ClassDoc; taxonomy: StageTaxonomy }
         <div className="flex h-full flex-col items-center justify-between rounded-[8mm] border-[3mm] border-[#0b4f4a] px-[10mm] py-[10mm] text-center">
           <p className="text-[18pt] font-bold">{id.school}</p>
           <div>
-            <p className="font-display text-[40pt] font-bold text-[#0b4f4a]">{levelById(taxonomy, cls.level)?.label[id.locale]}</p>
+            <p className="font-display text-[40pt] font-bold text-[#0b4f4a]">{pick(levelById(taxonomy, cls.level)?.label, id.locale)}</p>
             <p className="font-display text-[110pt] font-black leading-none" dir="ltr">{cls.displayName}</p>
           </div>
           <div className="text-[16pt]">

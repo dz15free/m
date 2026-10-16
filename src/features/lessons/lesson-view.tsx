@@ -10,12 +10,14 @@ import { DOC, docLangOfSubject } from "@/i18n/doc-lang";
 import { useAuth } from "@/features/auth/auth-provider";
 import { MemoSheet } from "./memo-sheet";
 import { useCurriculum, useLesson, useLessonAccessFor, useLessonPages } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 /** مذكرة جاهزة: الرأس والأهداف (التجربة) والسير كاملًا (الاشتراك أو النماذج). قابلة للطباعة.
     مذكرات الفرنسية والإنجليزية: عناوين حقولها بلغة المادة ومن اليسار. */
 export function LessonView({ id }: { id: string }) {
   const t = useTranslations("lessons");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const curId = id.replace(/_\d+$/, "");
   const cur = useCurriculum(curId);
   const entry = cur.data?.entries.find((e) => e.id === id);
@@ -65,7 +67,7 @@ export function LessonView({ id }: { id: string }) {
           meta={`${label("segment")} ${entry.s} · ${unit}`}
           teacher={auth.status === "signedIn" ? (auth.user.displayName ?? undefined) : undefined}
         />
-        <p className="text-xs text-muted print:hidden">{t("source", { source: cur.data!.source[locale] })}</p>
+        <p className="text-xs text-muted print:hidden">{t("source", { source: pick(cur.data!.source, locale) })}</p>
       </article>
     );
   }
@@ -138,7 +140,7 @@ export function LessonView({ id }: { id: string }) {
         </Card>
       ) : null}
 
-      <p className="text-xs text-muted">{t("source", { source: cur.data!.source[locale] })}</p>
+      <p className="text-xs text-muted">{t("source", { source: pick(cur.data!.source, locale) })}</p>
     </article>
   );
 }

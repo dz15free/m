@@ -40,6 +40,8 @@ import {
   type LessonStatus,
 } from "./logic";
 import { listLessons, listPreps, saveLesson } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const STATUS_STYLE: Record<LessonStatus, string> = {
   done: "bg-green-50 text-green-800",
@@ -100,7 +102,7 @@ const addMinutes = (t: string, m: number) => {
 
 export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?: string; autoPrint?: boolean }) {
   const t = useTranslations("logbook.daily");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const uid = useUid();
   const queryClient = useQueryClient();
   const teacher = useTeacher();
@@ -271,7 +273,7 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
                 )}
               </div>
               {rows.length === 0 ? (
-                <p className="rounded-card bg-surface p-4 text-sm text-muted shadow-card">{holiday?.label?.[locale] ?? t("dayOff")}</p>
+                <p className="rounded-card bg-surface p-4 text-sm text-muted shadow-card">{pick(holiday?.label, locale) ?? t("dayOff")}</p>
               ) : (
                 <ul className="space-y-2">
                   {rows.map((r) => {
@@ -295,7 +297,7 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
                           <span className="min-w-0 flex-1 space-y-0.5">
                             <span className="flex flex-wrap items-center gap-x-2 text-sm">
                               <bdi dir="ltr" className="font-bold">{classById.get(r.slot.classId)?.displayName}</bdi>
-                              <span className="text-muted">{subjectById(taxonomy, r.slot.subjectId)?.label[locale]}</span>
+                              <span className="text-muted">{pick(subjectById(taxonomy, r.slot.subjectId)?.label, locale)}</span>
                             </span>
                             {isBlank(shown) ? (
                               <span className="block text-sm text-muted/80">{t("empty")}</span>
@@ -359,7 +361,7 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
               <section key={date} dir="ltr" lang={L === EN ? "en" : "fr"} className="break-after-page text-[10pt] last:break-after-auto">
                 <h1 className="mb-1 text-center text-[13pt] font-bold">{L.title}</h1>
                 <div className="mb-2 grid grid-cols-3 gap-4">
-                  <p><b>{L.date} :</b> {formatLongDate(dateObj, "fr")}</p>
+                  <p><b>{L.date}{L === EN ? ":" : " :"}</b> {formatLongDate(dateObj, L === EN ? "en" : "fr")}</p>
                   <p><b>{L.project} :</b> ......................................</p>
                   <p><b>{L.sequence} :</b> {seq || "......................................"}</p>
                 </div>
@@ -401,10 +403,10 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
           }
 
           return (
-            <section key={date} dir="rtl" lang="ar" className="break-after-page text-[10pt] last:break-after-auto">
+            <section key={date} dir={locale === "ar" ? "rtl" : "ltr"} lang={locale} className="break-after-page text-[10pt] last:break-after-auto">
               <div className="mb-2 flex flex-wrap justify-between gap-x-6 gap-y-1">
-                <p><b>{t("day")}:</b> {formatLongDate(dateObj, "ar")}</p>
-                {formatHijri(date) && <p><b>{t("hijri")}:</b> {formatHijri(date)}</p>}
+                <p><b>{t("day")}:</b> {formatLongDate(dateObj, locale)}</p>
+                {locale === "ar" && formatHijri(date) && <p><b>{t("hijri")}:</b> {formatHijri(date)}</p>}
                 <p>
                   <b>
                     {prep
@@ -440,7 +442,7 @@ export function DailyNotebook({ initialDate, autoPrint = false }: { initialDate?
                         <td className={`${cell} w-12 text-center tabular-nums`}><bdi dir="ltr">{start}</bdi></td>
                         <td className={`${cell} w-12 text-center tabular-nums`}><bdi dir="ltr">{end}</bdi></td>
                         {multiClass && <td className={cell}><bdi dir="ltr">{classById.get(slot.classId)?.displayName}</bdi></td>}
-                        <td className={`${cell} w-[12%]`}><bdi>{e.activity || subjectById(taxonomy, slot.subjectId)?.label.ar}</bdi></td>
+                        <td className={`${cell} w-[12%]`}><bdi>{e.activity || pick(subjectById(taxonomy, slot.subjectId)?.label, locale)}</bdi></td>
                         <td className={`${cell} w-[11%]`}><bdi>{e.unit}</bdi></td>
                         <td className={`${cell} w-[15%]`}><bdi>{e.title}</bdi></td>
                         <td className={`${cell} h-12`}><bdi>{e.objective}</bdi></td>
@@ -490,7 +492,7 @@ function LessonEditor({
   onCancel: () => void;
 }) {
   const t = useTranslations("logbook.daily");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const queryClient = useQueryClient();
   const [draft, setDraft] = useState(initial);
   const [state, setState] = useState<"idle" | "saving" | "error">("idle");
@@ -502,7 +504,7 @@ function LessonEditor({
   // حصص أسبوع المنهاج الحالي والمجاور له (للاختيار السريع للموضوع)
   const weeks = sug ? weeksOf(sug.curriculum) : [];
   const nearby = sug ? weeks.slice(Math.max(0, sug.schoolWeek - 2), sug.schoolWeek + 1).flatMap((w) => w.entries) : [];
-  const activities = [...new Set([...(cls?.subjectIds ?? []).map((s) => subjectById(taxonomy, s)?.label[locale] ?? ""), ...(sug?.curriculum.entries.map((e) => e.a) ?? [])])].filter(Boolean);
+  const activities = [...new Set([...(cls?.subjectIds ?? []).map((s) => pick(subjectById(taxonomy, s)?.label, locale) ?? ""), ...(sug?.curriculum.entries.map((e) => e.a) ?? [])])].filter(Boolean);
   const domains = [...new Set(sug?.curriculum.entries.map((e) => e.d) ?? [])];
   const listId = `dl-${row.key}`;
 
@@ -528,7 +530,7 @@ function LessonEditor({
     <Card className="space-y-3 ring-2 ring-brand-200">
       <p className="text-sm">
         <bdi dir="ltr" className="font-semibold tabular-nums">{slot.start}–{slot.end}</bdi> · <bdi dir="ltr" className="font-bold">{cls?.displayName}</bdi> ·{" "}
-        {subjectById(taxonomy, slot.subjectId)?.label[locale]}
+        {pick(subjectById(taxonomy, slot.subjectId)?.label, locale)}
       </p>
       {nearby.length > 0 && (
         <label className="block space-y-1">

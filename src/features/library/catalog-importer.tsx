@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQueries, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
 import { CheckCircle2, DownloadCloud, FileUp, FolderSync, LoaderCircle } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
@@ -10,14 +10,16 @@ import { cn } from "@/lib/utils/cn";
 import catalog from "./catalog.json";
 import { pendingCatalog, toContentDoc, type CatalogEntry } from "./catalog";
 import { ALLOWED_MIME, type ContentFile } from "./logic";
-import { driveContentId, driveToContentDoc, guessMeta, type DriveListing } from "./drive-guess";
-import { getIgnoredDriveIds, importCatalogFile, listDriveLibrary, removeFile, saveContent } from "./repo";
+import { driveContentId, driveToContentDoc, guessMeta, guessStage, type DriveListing } from "./drive-guess";
+import { getIgnoredDriveIds, importCatalogFile, listContentsForEditor, listDriveLibrary, removeFile, saveContent } from "./repo";
+import { STAGES, type Stage } from "@/shared/dz/education";
 import { titleOf } from "./library-browser";
+import type { Locale } from "@/i18n/config";
 
 /** «المكتبة الجاهزة»: الأدمن يحدّد ما يريد نشره مما لم يُستورد بعد من catalog.json، ولا يُنشر غيره. */
 export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
   const t = useTranslations("contentAdmin.catalog");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const qc = useQueryClient();
   const pending = pendingCatalog(catalog as CatalogEntry[], existingIds);
   const [run, setRun] = useState<{ done: number; total: number; current: string } | null>(null);
@@ -182,8 +184,16 @@ const dupKey = (name: string, size: number | null) => `${size ?? 0}:${name.repla
 const CATALOG_KEYS = new Set(CATALOG_FILES.map((f) => dupKey(f.name, f.size)));
 
 /** «ملفات جديدة في الدرايف»: ما أُضيف إلى مجلد المكتبة ولم يُستورد بعد، مصنّفًا تلقائيًا من اسمه. */
-export function DriveImporter({ existingIds }: { existingIds: Set<string> }) {
+/** ملفات مجلد الدرايف للطور المختار: ما يدل اسمه أو مساره على هذا الطور (وما لا يدل على طور يُقترح في الابتدائي)،
+    و«كل الملفات» تعرض الباقي ليستورده الأدمن في هذا الطور. ما استُورد في أي طور لا يُقترح مرة أخرى. */
+export function DriveImporter({ existingIds, stage }: { existingIds: Set<string>; stage: Stage }) {
   const t = useTranslations("contentAdmin.drive");
+  const tp = useTranslations("profile.stages");
+  const [all, setAll] = useState(false);
+  // المحتوى المستورد في الأطوار الأخرى (نفس مفتاح قائمة المحرّر، فهو مخزّن غالبًا)
+  const others = useQueries({
+    queries: STAGES.filter((s) => s !== stage).map((s) => ({ queryKey: ["contentsAdmin", s], queryFn: () => listContentsForEditor(s), staleTime: 60_000 })),
+  });
   const tl = useTranslations("library");
   const qc = useQueryClient();
   const list = useQuery({ queryKey: ["driveLibrary"], queryFn: listDriveLibrary, retry: false, staleTime: 60_000 });
@@ -202,7 +212,8 @@ export function DriveImporter({ existingIds }: { existingIds: Set<string> }) {
     seen.add(k);
     return true;
   });
-  const fresh = files.filter((f) => !existingIds.has(driveContentId(f.id)));
+  const imported = new Set([...existingIds, ...others.flatMap((q) => (q.data ?? []).map((c) => c.id))]);
+  const fresh = files.filter((f) => !imported.has(driveContentId(f.id)) && (all || guessStage(f) === stage));
   const ok = fresh.filter((f) => (ALLOWED_MIME as readonly string[]).includes(f.mime) && f.size > 0 && f.size <= MAX_IMPORT);
   const skipped = fresh.length - ok.length;
   const selected = ok.filter((f) => checked.has(f.id));
@@ -220,12 +231,12 @@ export function DriveImporter({ existingIds }: { existingIds: Set<string> }) {
     setFailed([]);
     for (let i = 0; i < chosen.length; i++) {
       const f = chosen[i]!;
-      const title = guessMeta(f).title;
+      const title = guessMeta(f, stage).title;
       setRun({ done: i, total: chosen.length, current: title });
       let uploaded: ContentFile | null = null;
       try {
         uploaded = await importCatalogFile({ driveId: f.id, mime: f.mime });
-        await saveContent(driveToContentDoc(f, uploaded), driveContentId(f.id));
+        await saveContent(driveToContentDoc(f, uploaded, stage), driveContentId(f.id));
       } catch (e) {
         if (uploaded) await removeFile(uploaded.key);
         setFailed((x) => [...x, { title, reason: e instanceof Error ? e.message : String(e) }]);
@@ -240,7 +251,7 @@ export function DriveImporter({ existingIds }: { existingIds: Set<string> }) {
       <div className="flex flex-wrap items-center gap-3">
         <FolderSync aria-hidden className="size-6 text-brand-700" />
         <div className="min-w-0 flex-1">
-          <h2 className="font-semibold">{t("title")}</h2>
+          <h2 className="font-semibold">{t("title")} · {tp(stage)}</h2>
           <p className="text-sm text-muted">
             {list.isLoading
               ? t("checking")
@@ -251,6 +262,10 @@ export function DriveImporter({ existingIds }: { existingIds: Set<string> }) {
                   : t("none")}
             {skipped > 0 && ` ${t("skipped", { n: skipped })}`}
           </p>
+          <label className="mt-1 flex w-fit cursor-pointer items-center gap-2 text-xs text-muted">
+            <input type="checkbox" checked={all} onChange={(e) => setAll(e.target.checked)} disabled={!!run} className="size-4 accent-brand-600" />
+            {t("allStages", { stage: tp(stage) })}
+          </label>
         </div>
         <button type="button" onClick={() => list.refetch()} disabled={list.isFetching || !!run} className={cn(buttonClass("secondary"), "shrink-0")}>
           {list.isFetching ? <LoaderCircle aria-hidden className="size-4 animate-spin" /> : <FolderSync aria-hidden className="size-4" />}
@@ -283,7 +298,7 @@ export function DriveImporter({ existingIds }: { existingIds: Set<string> }) {
           </div>
           <ul className="max-h-72 space-y-1 overflow-auto text-xs">
             {ok.map((f) => {
-              const g = guessMeta(f);
+              const g = guessMeta(f, stage);
               return (
                 <li key={f.id}>
                   <label className="flex cursor-pointer items-start gap-2 rounded px-1 py-0.5 hover:bg-canvas" dir="auto">

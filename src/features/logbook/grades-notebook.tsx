@@ -32,6 +32,8 @@ import {
   type Term,
 } from "./grades-logic";
 import { getGrades, setMark } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 type Tab = "entry" | "results";
 type PrintMode = "sheet" | "results" | null;
@@ -85,7 +87,7 @@ export function GradesNotebook() {
 
 function ClassGrades({ cls, term, stage, taxonomy }: { cls: ClassDoc; term: Term; stage: Stage; taxonomy: StageTaxonomy }) {
   const t = useTranslations("logbook.grades");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const uid = useUid();
   const scale = scaleFor(stage);
   // الفصول الثلاثة معًا: المعدل السنوي يحتاجها، وهي مستندات صغيرة
@@ -117,7 +119,7 @@ function ClassGrades({ cls, term, stage, taxonomy }: { cls: ClassDoc; term: Term
   }
 
   const subjects = cls.subjectIds.filter((s) => subjectById(taxonomy, s));
-  const label = (s: string) => subjectById(taxonomy, s)?.label[locale] ?? s;
+  const label = (s: string) => pick(subjectById(taxonomy, s)?.label, locale) ?? s;
   const allTerms = sheets.map((q) => q.data ?? {});
 
 
@@ -382,7 +384,7 @@ function Results({
 
 function SheetHeader({ cls, title, taxonomy }: { cls: ClassDoc; title: string; taxonomy: StageTaxonomy }) {
   const t = useTranslations("logbook.grades");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const { profile, school } = useTeacher().data!;
   return (
     <header className="mb-3 text-[10.5pt]">
@@ -394,7 +396,7 @@ function SheetHeader({ cls, title, taxonomy }: { cls: ClassDoc; title: string; t
         <div className="text-end">
           <p><b>{t("season")}:</b> <bdi dir="ltr">{parseAcademicYearId(profile.activeYearId)?.label}</bdi></p>
           <p>
-            <b>{t("level")}:</b> {levelById(taxonomy, cls.level)?.label[locale]} — <bdi dir="ltr">{cls.displayName}</bdi>
+            <b>{t("level")}:</b> {pick(levelById(taxonomy, cls.level)?.label, locale)} — <bdi dir="ltr">{cls.displayName}</bdi>
           </p>
         </div>
       </div>

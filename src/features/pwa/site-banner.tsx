@@ -9,6 +9,8 @@ import { getAppConfig } from "@/features/billing/repo";
 import { cn } from "@/lib/utils/cn";
 import { linkKind } from "@/lib/utils/links";
 import type { Banner } from "@/shared/billing/plans";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const TONE: Record<Banner["tone"], { cls: string; icon: typeof Info }> = {
   info: { cls: "bg-brand-700 text-white", icon: Info },
@@ -21,7 +23,7 @@ const KEY = "bannerDismissed";
 /* شريط أسفل الترويسة يتحكم فيه الأدمن (config/app.banner). الإغلاق يُحفظ لنسخة الإعلان
    الحالية فقط: إعلان جديد يظهر من جديد. */
 export function SiteBanner() {
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const config = useQuery({ queryKey: ["appConfig"], queryFn: getAppConfig, staleTime: 5 * 60_000, refetchOnWindowFocus: true });
   const [dismissed, setDismissed] = useState(() => {
     try {
@@ -31,7 +33,7 @@ export function SiteBanner() {
     }
   });
   const b = config.data?.banner;
-  const text = b ? b.text[locale] || b.text[locale === "ar" ? "fr" : "ar"] : "";
+  const text = b ? pick(b.text, locale) || b.text[locale === "ar" ? "fr" : "ar"] : "";
   if (!b?.enabled || !text || dismissed === String(b.version)) return null;
   return (
     <BannerView
@@ -49,14 +51,14 @@ export function SiteBanner() {
 
 /** معاينة في لوحة الإدارة (بلا إغلاق). */
 export function SiteBannerPreview({ banner }: { banner: Banner }) {
-  const locale = useLocale() as "ar" | "fr";
-  const text = banner.text[locale] || banner.text[locale === "ar" ? "fr" : "ar"] || "…";
+  const locale = useLocale() as Locale;
+  const text = pick(banner.text, locale) || banner.text[locale === "ar" ? "fr" : "ar"] || "…";
   return <BannerView banner={banner} text={text} />;
 }
 
 function BannerView({ banner: b, text, onDismiss }: { banner: Banner; text: string; onDismiss?: () => void }) {
   const t = useTranslations("pwa");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const { cls, icon: Icon } = TONE[b.tone] ?? TONE.info;
   const Chevron = locale === "ar" ? ChevronLeft : ChevronRight;
   const content = (

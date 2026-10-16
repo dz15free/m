@@ -14,7 +14,7 @@ export class CheckoutError extends Error {
   }
 }
 
-export async function startCheckout(planId: string, locale: "ar" | "fr"): Promise<string> {
+export async function startCheckout(planId: string, locale: "ar" | "fr" | "en"): Promise<string> {
   const res = await authedFetch("/api/billing/checkout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

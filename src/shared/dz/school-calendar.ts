@@ -2,16 +2,16 @@
    تُستعمل حين لا يضبط الأدمن عطل السنة في `academicYears/{id}`.
    العطلة «من مساء يوم إلى صباح يوم» ⇐ الأيام المعطّلة من اليوم التالي للأول إلى اليوم السابق للثاني. */
 
-export type Label = { ar: string; fr: string };
+export type Label = { ar: string; fr: string; en?: string };
 export type Holiday = { start: string; end: string; label?: Label };
 /** أيام اختبارات فصل (قد لا تكون متتالية: الفصل الثاني 2، 3، 4، 7، 8 مارس).
     levels: فترة خاصة بمستويات معيّنة تحلّ محلّ الفترة العامة لنفس الفصل (الرابعة متوسط في الفصل الثالث). */
 export type ExamPeriod = { term: 1 | 2 | 3; days: string[]; levels?: string[] };
 
 export const HOLIDAY_LABELS = {
-  autumn: { ar: "عطلة الخريف", fr: "Vacances d'automne" },
-  winter: { ar: "عطلة الشتاء", fr: "Vacances d'hiver" },
-  spring: { ar: "عطلة الربيع", fr: "Vacances de printemps" },
+  autumn: { ar: "عطلة الخريف", fr: "Vacances d'automne", en: "Autumn holidays" },
+  winter: { ar: "عطلة الشتاء", fr: "Vacances d'hiver", en: "Winter holidays" },
+  spring: { ar: "عطلة الربيع", fr: "Vacances de printemps", en: "Spring holidays" },
 } as const satisfies Record<string, Label>;
 
 const range = (from: string, to: string): string[] => {

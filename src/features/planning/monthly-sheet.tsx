@@ -24,13 +24,15 @@ import { listProgressions, saveProgression } from "./repo";
 import { AR_COLUMNS, arabicWeek, cellItems, inferColumns, monthWeeks, replaceCell, schoolMonths, yearWeeks, type CellCol, type MonthWeek } from "./monthly";
 import { CellEditor } from "./cell-editor";
 import { EditTip } from "./edit-tip";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const dm = (iso: string) => `${iso.slice(8, 10)}/${iso.slice(5, 7)}`;
 const dmy = (iso: string) => `${dm(iso)}/${iso.slice(0, 4)}`;
 
 /** «أكتوبر 2026» / « octobre 2026 » */
 export function useMonthLabel() {
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   return (month: string) => `${monthName(Number(month.slice(5, 7)), locale)} ${month.slice(0, 4)}`;
 }
 
@@ -61,7 +63,7 @@ type PlanEntry = { official: ProgressionRow[]; rows: ProgressionRow[]; saved?: P
 
 export function MonthlySheet({ month: monthParam, classId: classParam }: { month?: string; classId?: string }) {
   const t = useTranslations("planning.monthlyPlan");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const monthLabel = useMonthLabel();
   const uid = useUid();
   const queryClient = useQueryClient();
@@ -105,9 +107,9 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
   // قسم الفرنسية أو الإنجليزية وحدها (أستاذ المادة): الجدول كله بلغتها ومن اليسار
   const docLang = docLangOf(subjects);
   const D = docLang ? DOC[docLang] : null;
-  const levelLabel = docLang ? docLevel(levelById(tax.data, cls.level), docLang, cls.level) : (levelById(tax.data, cls.level)?.label[locale] ?? cls.level);
+  const levelLabel = docLang ? docLevel(levelById(tax.data, cls.level), docLang, cls.level) : (pick(levelById(tax.data, cls.level)?.label, locale) ?? cls.level);
   const sheetMonth = docLang ? docMonth(month, docLang) : monthLabel(month);
-  const holidayName = (h: { label?: { ar: string; fr: string } }) => (docLang ? docHoliday(h.label, docLang) : (h.label?.[locale] ?? t("holidayName")));
+  const holidayName = (h: { label?: { ar: string; fr: string } }) => (docLang ? docHoliday(h.label, docLang) : (pick(h.label, locale) ?? t("holidayName")));
   const examsLabel = (term: number) => D?.exams(term) ?? t("exams", { term });
   const weekLabel = (n: number) => D?.schoolWeek(n) ?? t("schoolWeek", { n });
 
@@ -126,7 +128,7 @@ export function MonthlySheet({ month: monthParam, classId: classParam }: { month
   const subjectLabel = (s: string) => {
     const lang = docLangOfSubject(s);
     if (lang) return D ? D.sessions : DOC[lang].subject;
-    return subjectById(tax.data!, s)?.label[locale] ?? s;
+    return pick(subjectById(tax.data!, s)?.label, locale) ?? s;
   };
 
   // العطل والاختبارات التي تمسّ الشهر

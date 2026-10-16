@@ -12,10 +12,12 @@ import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
 import { formatSize, type ContentFile } from "./logic";
 import { fetchFile, getContent, PremiumRequired, previewUrl } from "./repo";
 import { titleOf, TYPE_ICON } from "./library-browser";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 export function ContentView({ contentId }: { contentId: string }) {
   const t = useTranslations("library");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const teacher = useTeacher();
   const content = useQuery({ queryKey: ["content", contentId], queryFn: () => getContent(contentId), staleTime: 10 * 60_000 });
   const tax = useTaxonomy(content.data?.stage ?? teacher.data?.profile.stage);
@@ -34,8 +36,8 @@ export function ContentView({ contentId }: { contentId: string }) {
   const Icon = TYPE_ICON[c.type] ?? FileText;
   const meta = [
     t(`types.${c.type}`),
-    c.level ? levelById(tax.data!, c.level)?.label[locale] : t("allLevelsTag"),
-    c.subject && subjectById(tax.data!, c.subject)?.label[locale],
+    c.level ? pick(levelById(tax.data!, c.level)?.label, locale) : t("allLevelsTag"),
+    c.subject && pick(subjectById(tax.data!, c.subject)?.label, locale),
     c.term ? t("term", { n: c.term }) : null,
   ].filter(Boolean);
   const premium = c.access === "premium";

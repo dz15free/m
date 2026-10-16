@@ -11,6 +11,8 @@ import { cn } from "@/lib/utils/cn";
 import { weekStart, type ProgressionRow } from "./logic";
 import { toneOf } from "./monthly-sheet";
 import { useProgressionModel } from "./progression-editor";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 type Mode = "annual" | "monthly";
 
@@ -23,7 +25,7 @@ const addDays = (iso: string, n: number) => new Date(Date.parse(`${iso}T00:00:00
 export function ProgressionPrint({ classId, subjectId, mode }: { classId: string; subjectId: string; mode: Mode }) {
   const t = useTranslations("planning");
   const tm = useTranslations("planning.monthlyPlan");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const m = useProgressionModel(classId, subjectId);
   if (!m) {
     return (
@@ -38,7 +40,7 @@ export function ProgressionPrint({ classId, subjectId, mode }: { classId: string
   const p = m.initial;
   const cal = m.calendar;
   const tone = toneOf(subjectId);
-  const subject = D?.subject ?? m.subjectLabel?.[locale] ?? subjectId;
+  const subject = D?.subject ?? pick(m.subjectLabel, locale) ?? subjectId;
   const title = D ? `${mode === "annual" ? D.annualTitle : D.monthlyTitle} — ${subject}` : t(mode === "annual" ? "annualTitle" : "monthlyTitle", { subject });
   const weekDate = (w: number) => weekStart(w, p.startDate, cal.schoolDays, cal.holidays);
   const examTerm = (w: number) => {
@@ -95,7 +97,7 @@ export function ProgressionPrint({ classId, subjectId, mode }: { classId: string
         lang={lang ?? undefined}
         className="mx-auto w-full max-w-[210mm] rounded-2xl bg-white p-[8mm] text-[10pt] text-ink shadow-card ring-1 ring-line print:max-w-none print:rounded-none print:p-0 print:shadow-none print:ring-0"
       >
-        <PrintHeader title={title} subtitle={lang ? m.className : `${m.levelLocal?.[locale] ?? ""} — ${m.className}`} lang={lang} level={m.levelLabel} official />
+        <PrintHeader title={title} subtitle={lang ? m.className : `${pick(m.levelLocal, locale) ?? ""} — ${m.className}`} lang={lang} level={m.levelLabel} official />
 
         {p.rows.length === 0 ? (
           <p className="py-10 text-center text-muted">{t("empty")}</p>

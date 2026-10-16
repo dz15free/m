@@ -13,10 +13,12 @@ import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
 import { normalizeArabic } from "@/shared/text/names";
 import { prepTitle } from "./logic";
 import { listPreps, savePrep, type PrepDoc } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 export function PrepList() {
   const t = useTranslations("logbook.prep");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const router = useRouter();
   const uid = useUid();
   const teacher = useTeacher();
@@ -95,7 +97,7 @@ export function PrepList() {
               >
                 <option value="">{t("allSubjects")}</option>
                 {usedSubjects.map((s) => (
-                  <option key={s} value={s}>{subjectById(taxonomy, s)?.label[locale] ?? s}</option>
+                  <option key={s} value={s}>{pick(subjectById(taxonomy, s)?.label, locale) ?? s}</option>
                 ))}
               </select>
             )}
@@ -107,8 +109,8 @@ export function PrepList() {
                   <span className="block font-semibold">{prepTitle(p) || p.domain || t("untitled")}</span>
                   <span className="block text-sm text-muted">
                     {[
-                      subjectById(taxonomy, p.subjectId)?.label[locale],
-                      levelById(taxonomy, p.gradeId)?.short[locale],
+                      pick(subjectById(taxonomy, p.subjectId)?.label, locale),
+                      pick(levelById(taxonomy, p.gradeId)?.short, locale),
                       p.sequence && `${t("fields.sequence")} ${p.sequence}`,
                       p.week && `${t("fields.week")} ${p.week}`,
                     ]

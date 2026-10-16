@@ -12,6 +12,8 @@ import { subjectById } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
 import { attendancePart, currentAndNext, holidayOf, nowMinutesInAlgiers, slotsForDate, toMinutes } from "./logic";
 import { useCalendar, useSchedule } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 /** رابط الحضور لحصة من الجدول (التاريخ والجزء مضبوطان مسبقًا). */
 export function attendanceHref(classId: string, date: string, part: string) {
@@ -21,7 +23,7 @@ export function attendanceHref(classId: string, date: string, part: string) {
 export function TodayBoard() {
   const t = useTranslations("todayBoard");
   const ts = useTranslations("today");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const uid = useUid();
   const teacher = useTeacher();
   const classes = useClasses();
@@ -76,7 +78,7 @@ export function TodayBoard() {
           {daySlots.length === 0 ? (
             <Card className="flex items-center gap-3 text-muted">
               <Coffee aria-hidden className="size-5" />
-              {holiday?.label ? holiday.label[locale] : t("dayOff")}
+              {holiday?.label ? pick(holiday.label, locale) : t("dayOff")}
             </Card>
           ) : (
             <ul className="space-y-2">
@@ -107,7 +109,7 @@ export function TodayBoard() {
                       <span className="min-w-0 flex-1">
                         <bdi dir="ltr" className="block text-lg font-bold">{cls?.displayName ?? "—"}</bdi>
                         <span className={cn("block truncate text-sm", isCurrent ? "text-white/85" : "text-muted")}>
-                          {subjectById(tax.data!, s.subjectId)?.label[locale] ?? s.subjectId}
+                          {pick(subjectById(tax.data!, s.subjectId)?.label, locale) ?? s.subjectId}
                         </span>
                       </span>
                       {counts ? (

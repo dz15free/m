@@ -13,9 +13,11 @@ import { deleteAnnouncement, listAnnouncements, publishAnnouncement, type Kind }
 import { cn } from "@/lib/utils/cn";
 import { FEEDBACK_REASONS } from "@/features/billing/feedback";
 import { emailsOf, failureKey, getHiddenTestimonials, inspectOrder, listAudit, listFeedback, setTestimonialHidden, listOrders, listPayments, peopleOf, type ChargilyInfo, type OrderRow } from "./repo";
+import { pick, intlLocale } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
-const fmtDate = (locale: "ar" | "fr", at: number) =>
-  at ? new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ", { dateStyle: "medium", timeStyle: "short" }).format(at) : "—";
+const fmtDate = (locale: Locale, at: number) =>
+  at ? new Intl.DateTimeFormat(intlLocale(locale), { dateStyle: "medium", timeStyle: "short" }).format(at) : "—";
 
 function Loading() {
   return (
@@ -30,7 +32,7 @@ function Loading() {
 export function AdminNotifications() {
   const t = useTranslations("admin.notif");
   const ta = useTranslations("admin");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const uid = useUid();
   const queryClient = useQueryClient();
   const list = useQuery({ queryKey: ["adminAnnouncements"], queryFn: listAnnouncements });
@@ -101,8 +103,8 @@ export function AdminNotifications() {
                 <Card className="flex items-start gap-3 p-4">
                   <div className="min-w-0 flex-1">
                     <p className="text-xs text-muted">{t(`kinds.${n.kind as Exclude<Kind, "billing" | "message" | "planning">}`)} · {fmtDate(locale, n.createdAt)}</p>
-                    <p dir="auto" className="font-semibold">{n.title[locale] || n.title.ar || n.title.fr}</p>
-                    <p dir="auto" className="line-clamp-2 text-sm text-muted">{n.body[locale] || n.body.ar || n.body.fr}</p>
+                    <p dir="auto" className="font-semibold">{pick(n.title, locale) || n.title.ar || n.title.fr}</p>
+                    <p dir="auto" className="line-clamp-2 text-sm text-muted">{pick(n.body, locale) || n.body.ar || n.body.fr}</p>
                   </div>
                   <button
                     type="button"
@@ -131,7 +133,7 @@ export function AdminNotifications() {
 export function AdminPayments() {
   const t = useTranslations("admin.payments");
   const ta = useTranslations("admin");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const payments = useQuery({ queryKey: ["adminPayments"], queryFn: listPayments });
   const orders = useQuery({ queryKey: ["adminOrders"], queryFn: listOrders });
   const people = useQuery({
@@ -139,7 +141,7 @@ export function AdminPayments() {
     queryFn: () => peopleOf(payments.data!.map((p) => p.uid)),
     enabled: !!payments.data?.length,
   });
-  const nf = new Intl.NumberFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ");
+  const nf = new Intl.NumberFormat(intlLocale(locale));
 
   function csv() {
     const rows = [["date", "email", "method", "plan", "gross", "fees", "net", "until"]];
@@ -224,8 +226,8 @@ export function AdminPayments() {
 /** محاولة دفع لم تكتمل: السبب كما وصل من Chargily مع شرحه، وتفاصيل يُجلبها الأدمن عند الحاجة، ومراسلة الأستاذ. */
 function OrderAttempt({ o }: { o: OrderRow }) {
   const t = useTranslations("admin.payments");
-  const locale = useLocale() as "ar" | "fr";
-  const nf = new Intl.NumberFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ");
+  const locale = useLocale() as Locale;
+  const nf = new Intl.NumberFormat(intlLocale(locale));
   const [info, setInfo] = useState<ChargilyInfo | null>(o.chargily ?? null);
   const [state, setState] = useState<"idle" | "busy" | "error">("idle");
   const key = failureKey(o);
@@ -307,7 +309,7 @@ function OrderAttempt({ o }: { o: OrderRow }) {
 export function AdminAudit() {
   const t = useTranslations("admin.audit");
   const ta = useTranslations("admin");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const list = useQuery({ queryKey: ["adminAudit"], queryFn: listAudit });
   const emails = useQuery({
     queryKey: ["adminAuditEmails", list.data?.length],
@@ -351,7 +353,7 @@ export function AdminFeedback() {
   const t = useTranslations("admin.feedback");
   const tf = useTranslations("feedback");
   const ta = useTranslations("admin");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const list = useQuery({ queryKey: ["adminFeedback"], queryFn: listFeedback });
   const hidden = useQuery({ queryKey: ["hiddenTestimonials"], queryFn: getHiddenTestimonials });
   const qc = useQueryClient();

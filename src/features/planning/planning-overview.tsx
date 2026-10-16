@@ -17,6 +17,8 @@ import { defaultStart, progressionId, progressStatus, rowsFromCurriculum, school
 import { listProgressions } from "./repo";
 import { schoolMonths } from "./monthly";
 import { useMonthLabel } from "./monthly-sheet";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 export const STATUS_STYLE: Record<Status["kind"], string> = {
   empty: "bg-canvas text-muted",
@@ -29,7 +31,7 @@ export const STATUS_STYLE: Record<Status["kind"], string> = {
 export function PlanningOverview() {
   const t = useTranslations("planning");
   const monthLabel = useMonthLabel();
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const uid = useUid();
   const teacher = useTeacher();
   const classes = useClasses();
@@ -97,7 +99,7 @@ export function PlanningOverview() {
                     <Link href={`/app/planning/${c.id}/${s}`} className="flex items-center gap-3 px-4 py-3 hover:bg-brand-50">
                       <span className="min-w-0 flex-1">
                         <span className="block font-medium">
-                          {subjectById(tax.data!, s)?.label[locale] ?? s}
+                          {pick(subjectById(tax.data!, s)?.label, locale) ?? s}
                           {cur?.entries.length ? <span className="ms-2 rounded-full bg-brand-50 px-2 py-0.5 text-[11px] font-semibold text-brand-800">{t("official")}</span> : null}
                         </span>
                         {st.nextRow ? (

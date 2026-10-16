@@ -20,6 +20,8 @@ import { CONTENT_TYPES, formatSize, MAX_FILE_BYTES, type ContentDoc, type Conten
 import { deleteContent, deleteContents, getContent, listContentsForEditor, previewUrl, removeFile, saveContent, uploadFile } from "./repo";
 import { titleOf } from "./library-browser";
 import { CatalogImporter, DriveImporter } from "./catalog-importer";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 export function useIsEditor() {
   const auth = useAuth();
@@ -54,7 +56,7 @@ function AdminList() {
   const t = useTranslations("contentAdmin");
   const tl = useTranslations("library");
   const tp = useTranslations("profile.stages");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const [stage, setStage] = useState<Stage>("primary");
   const tax = useTaxonomy(stage);
   const list = useQuery({ queryKey: ["contentsAdmin", stage], queryFn: () => listContentsForEditor(stage) });
@@ -95,7 +97,7 @@ function AdminList() {
     if (level && c.level !== level) return false;
     if (!words.length) return true;
     const hay = nameKey(
-      [c.title.ar, c.title.fr, c.tags.join(" "), c.unit, tl(`types.${c.type}`), tax.data && c.subject ? subjectById(tax.data, c.subject)?.label[locale] : ""].join(" "),
+      [c.title.ar, c.title.fr, c.tags.join(" "), c.unit, tl(`types.${c.type}`), tax.data && c.subject ? pick(subjectById(tax.data, c.subject)?.label, locale) : ""].join(" "),
     );
     return words.every((w) => hay.includes(w));
   });
@@ -123,7 +125,7 @@ function AdminList() {
         </Link>
       </div>
       {stage === "primary" && list.data && <CatalogImporter existingIds={new Set(list.data.map((c) => c.id))} />}
-      {stage === "primary" && list.data && <DriveImporter existingIds={new Set(list.data.map((c) => c.id))} />}
+      {list.data && <DriveImporter key={stage} stage={stage} existingIds={new Set(list.data.map((c) => c.id))} />}
       {bulkMsg && (
         <p role="status" className={cn("flex items-center gap-2 rounded-xl p-3 text-sm", bulkMsg.ok ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800")}>
           {bulkMsg.ok && <CheckCircle2 aria-hidden className="size-4" />}
@@ -153,7 +155,7 @@ function AdminList() {
             <select value={level} onChange={(e) => setLevel(e.target.value)} aria-label={tl("allLevels")} className="min-h-11 rounded-xl border border-line bg-surface px-3">
               <option value="">{tl("allLevels")}</option>
               {tax.data.levels.map((l) => (
-                <option key={l.id} value={l.id}>{l.label[locale]}</option>
+                <option key={l.id} value={l.id}>{pick(l.label, locale)}</option>
               ))}
             </select>
           </div>
@@ -206,7 +208,7 @@ function AdminList() {
                   <span className="min-w-0 flex-1">
                     <span dir="auto" className="block truncate font-medium">{titleOf(c.title, locale)}</span>
                     <span className="block truncate text-xs text-muted">
-                      {[tl(`types.${c.type}`), c.level && levelById(tax.data, c.level)?.short[locale], c.subject && subjectById(tax.data, c.subject)?.label[locale]]
+                      {[tl(`types.${c.type}`), c.level && pick(levelById(tax.data, c.level)?.short, locale), c.subject && pick(subjectById(tax.data, c.subject)?.label, locale)]
                         .filter(Boolean)
                         .join(" · ")}
                     </span>
@@ -278,7 +280,7 @@ function EditorForm({ id, initial }: { id?: string; initial: ContentDoc }) {
   const t = useTranslations("contentAdmin");
   const tl = useTranslations("library");
   const tp = useTranslations("profile.stages");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const router = useRouter();
   const queryClient = useQueryClient();
   const uid = useUid();
@@ -378,13 +380,13 @@ function EditorForm({ id, initial }: { id?: string; initial: ContentDoc }) {
           <SelectField label={t("level")} value={draft.level} onChange={(e) => set("level", e.target.value)}>
             <option value="">{t("any")}</option>
             {levels.map((l) => (
-              <option key={l.id} value={l.id}>{l.label[locale]}</option>
+              <option key={l.id} value={l.id}>{pick(l.label, locale)}</option>
             ))}
           </SelectField>
           <SelectField label={t("subject")} value={draft.subject} onChange={(e) => set("subject", e.target.value)}>
             <option value="">{t("any")}</option>
             {subjects.map((s) => (
-              <option key={s.id} value={s.id}>{s.label[locale]}</option>
+              <option key={s.id} value={s.id}>{pick(s.label, locale)}</option>
             ))}
           </SelectField>
           <SelectField label={t("type")} value={draft.type} onChange={(e) => set("type", e.target.value as ContentType)}>

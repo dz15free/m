@@ -12,6 +12,7 @@ export type Feedback = {
   reasons: FeedbackReason[];
   comment: string;
   context: "trialEnd" | "trial" | "general";
+  /** لغة الأستاذ كما تقبلها القواعد (الإنجليزية تُحفظ fr) */
   locale: "ar" | "fr";
 };
 

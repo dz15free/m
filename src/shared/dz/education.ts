@@ -1,3 +1,4 @@
+import { pick } from "../../i18n/pick.ts";
 /* الأطوار والرتب. بيانات مرجعية بسيطة للواجهة؛ المستويات والمواد (taxonomy)
    تُدار من لوحة الإدارة في قاعدة البيانات وتصل في Phase 4. */
 export const STAGES = ["primary", "middle", "secondary"] as const;
@@ -35,7 +36,7 @@ export function gradesFor(stage: Stage): Grade[] {
 }
 
 /** نصّ الرتبة المعروض في الوثائق: رتبة من القائمة، أو ما كتبه الأستاذ. */
-export function gradeLabel(stage: Stage, gradeId: string, custom: string | undefined, locale: "ar" | "fr"): string {
+export function gradeLabel(stage: Stage, gradeId: string, custom: string | undefined, locale: "ar" | "fr" | "en"): string {
   if (gradeId === "other") return custom ?? "";
-  return gradesFor(stage).find((g) => g.id === gradeId)?.[locale] ?? "";
+  return pick(gradesFor(stage).find((g) => g.id === gradeId), locale) ?? "";
 }

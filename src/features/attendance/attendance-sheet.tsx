@@ -40,6 +40,7 @@ import {
   type Status,
 } from "./logic";
 import { getSession, saveSession } from "./repo";
+import { pick } from "@/i18n/pick";
 
 const SAVE_DELAY = 700;
 
@@ -214,7 +215,7 @@ function Sheet({ cls, parts, initialDate, initialPart }: { cls: ClassDoc; parts:
                   part === p.id ? "bg-brand-700 text-white ring-brand-700" : "ring-line",
                 )}
               >
-                {p.label ? p.label[locale] : t(p.id as "am" | "pm")}
+                {p.label ? pick(p.label, locale) : t(p.id as "am" | "pm")}
               </button>
             ))}
           </div>

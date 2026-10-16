@@ -16,6 +16,8 @@ import { todayInAlgiers } from "@/features/attendance/logic";
 import { bySlotTime, copyDay, fromMinutes, isValidTime, newSlotId, overlaps, toMinutes, weekdayOf, type Slot } from "./logic";
 import { AR_LEVELS, AR_SESSIONS, arSessionOfLabel, formatMinutes } from "@/features/lessons/week-plan";
 import { saveSchedule, scheduleKey, useCalendar, useSchedule } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 type Draft = Omit<Slot, "id"> & { id: string | null };
 
@@ -58,7 +60,7 @@ function Editor({
   taxonomy: StageTaxonomy;
 }) {
   const t = useTranslations("schedule");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const uid = useUid();
   const queryClient = useQueryClient();
   const days = t.raw("days") as string[];
@@ -178,7 +180,7 @@ function Editor({
                     {cls?.displayName ?? "—"}
                   </bdi>
                   <span className="block truncate text-sm text-muted">
-                    {subjectById(taxonomy, s.subjectId)?.label[locale] ?? s.subjectId}
+                    {pick(subjectById(taxonomy, s.subjectId)?.label, locale) ?? s.subjectId}
                     {s.label ? ` — ${s.label}` : ""}
                   </span>
                 </span>
@@ -225,7 +227,7 @@ function Editor({
           <SelectField label={t("subject")} value={draft.subjectId} onChange={(e) => setDraft({ ...draft, subjectId: e.target.value, label: undefined })}>
             {(classById.get(draft.classId)?.subjectIds ?? []).map((id) => (
               <option key={id} value={id}>
-                {subjectById(taxonomy, id)?.label[locale] ?? id}
+                {pick(subjectById(taxonomy, id)?.label, locale) ?? id}
               </option>
             ))}
           </SelectField>

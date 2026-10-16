@@ -32,7 +32,8 @@ export type OnboardingInput = {
 };
 
 /** مديرية التربية المقترحة افتراضيًا (قابلة للتعديل: بعض الولايات فيها أكثر من مديرية). */
-export function defaultDirectorate(wilayaName: string, locale: "ar" | "fr"): string {
+export function defaultDirectorate(wilayaName: string, locale: "ar" | "fr" | "en"): string {
   if (!wilayaName) return "";
+  if (locale === "en") return `Education Directorate of ${wilayaName}`;
   return locale === "fr" ? `Direction de l'éducation de ${wilayaName}` : `مديرية التربية لولاية ${wilayaName}`;
 }

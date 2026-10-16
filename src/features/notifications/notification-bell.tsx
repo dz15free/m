@@ -13,6 +13,8 @@ import { linkKind } from "@/lib/utils/links";
 import { useMonthlyNotice } from "@/features/planning/monthly-notice";
 import { getNotificationState, listNotices, markAllRead, type Kind, type Notice } from "./repo";
 import { openSupport } from "@/features/support/repo";
+import { pick, intlLocale } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const ICON: Record<Kind, typeof Bell> = { news: Megaphone, update: Sparkles, content: BookOpen, offer: Gift, billing: CreditCard, message: MessagesSquare, planning: CalendarDays };
 
@@ -66,7 +68,7 @@ export function NotificationBell({ className }: { className?: string }) {
 
 function Panel({ uid, readAt, extra, onClose }: { uid: string; readAt: number; extra: Notice | null; onClose: () => void }) {
   const t = useTranslations("notifications");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const list = useQuery({ queryKey: ["notices", uid], queryFn: () => listNotices(uid), staleTime: 60_000 });
   const notices = list.data && [...(extra ? [extra] : []), ...list.data].sort((a, b) => b.createdAt - a.createdAt);
 
@@ -76,8 +78,8 @@ function Panel({ uid, readAt, extra, onClose }: { uid: string; readAt: number; e
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  const date = (at: number) => new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ", { dateStyle: "medium" }).format(at);
-  const text = (v: { ar: string; fr: string }) => v[locale] || v[locale === "ar" ? "fr" : "ar"];
+  const date = (at: number) => new Intl.DateTimeFormat(intlLocale(locale), { dateStyle: "medium" }).format(at);
+  const text = (v: { ar: string; fr: string }) => pick(v, locale) || v[locale === "ar" ? "fr" : "ar"];
 
   return (
     <div className="fixed inset-0 z-50 bg-ink/30 print:hidden" onClick={onClose}>

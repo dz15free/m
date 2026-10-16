@@ -20,6 +20,8 @@ import { gradeLabel, type Stage } from "@/shared/dz/education";
 import { wilayaByCode } from "@/shared/dz/wilayas";
 import { academicYearFor } from "@/shared/academic-year";
 import { cn } from "@/lib/utils/cn";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const PRESETS: { id: PresetType; icon: typeof Users; stage: Stage }[] = [
   { id: "primaryGeneralist", icon: Users, stage: "primary" },
@@ -40,7 +42,7 @@ function splitName(displayName: string | null | undefined): { firstName: string;
 export function OnboardingWizard() {
   const t = useTranslations("onboarding");
   const tp = useTranslations("profile");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const auth = useAuth();
   const user = auth.status === "signedIn" ? auth.user : null;
 
@@ -184,7 +186,7 @@ export function OnboardingWizard() {
               [tp("lastName") + " / " + tp("firstName"), `${profile.lastName} ${profile.firstName}`],
               [tp("grade"), gradeLabel(profile.stage, profile.gradeId, profile.gradeCustom, locale)],
               [tp("schoolName"), school.name],
-              [tp("wilaya"), wilayaByCode(school.wilayaCode)?.[locale] ?? ""],
+              [tp("wilaya"), pick(wilayaByCode(school.wilayaCode), locale) ?? ""],
               [tp("directorate"), school.directorate],
             ].map(([k, v]) => (
               <div key={k} className="flex gap-3 px-4 py-3">

@@ -5,12 +5,26 @@ import type { Stage } from "../dz/education.ts";
    (يعدّلها الأدمن دون نشر جديد)، وهذا الملف قيمة افتراضية لنفس البنية
    تُستعمل قبل رفعها إلى القاعدة (scripts/seed-taxonomy.mjs). */
 
-export type Localized = { ar: string; fr: string };
+export type Localized = { ar: string; fr: string; en?: string };
 export type Level = { id: string; order: number; label: Localized; short: Localized };
 export type Subject = { id: string; label: Localized; levels: string[] };
 export type StageTaxonomy = { levels: Level[]; subjects: Subject[] };
 
 export const DEFAULT_TAXONOMY = defaults as Record<Stage, StageTaxonomy>;
+
+/** التسميات الإنجليزية من القيم الافتراضية لما يأتي من القاعدة دونها (أُضيفت الإنجليزية بعد رفع التصنيف). */
+const addEn = (v: Localized, en: string | undefined): Localized => (v.en || !en ? v : { ...v, en });
+
+export function withEnglish(tax: StageTaxonomy, stage: Stage): StageTaxonomy {
+  const def = DEFAULT_TAXONOMY[stage];
+  return {
+    levels: tax.levels.map((l) => {
+      const d = def.levels.find((x) => x.id === l.id);
+      return { ...l, label: addEn(l.label, d?.label.en), short: addEn(l.short, d?.short.en) };
+    }),
+    subjects: tax.subjects.map((s) => ({ ...s, label: addEn(s.label, def.subjects.find((x) => x.id === s.id)?.label.en) })),
+  };
+}
 
 export function subjectsForLevel(tax: StageTaxonomy, levelId: string): Subject[] {
   return tax.subjects.filter((s) => s.levels.includes(levelId));

@@ -13,11 +13,13 @@ import { parseAcademicYearId } from "@/shared/academic-year";
 import { levelById } from "@/shared/taxonomy/taxonomy";
 import { useCalendar, useSchedule } from "./repo";
 import { slotsForDate } from "./logic";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 /** ترحيب «اليوم»: التاريخ بالتقويمين، المستوى، الأسبوع الدراسي، ودفتر اليوم بلمسة. */
 export function WelcomeCard() {
   const t = useTranslations("welcome");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const teacher = useTeacher();
   const classes = useClasses();
   const calendar = useCalendar();
@@ -27,7 +29,7 @@ export function WelcomeCard() {
   const startYear = parseAcademicYearId(teacher.data?.profile.activeYearId ?? "")?.startYear;
   const week = calendar.data && startYear ? schoolWeekOf(today, defaultStart(startYear), calendar.data.schoolDays, calendar.data.holidays) : 0;
   const levels = [...new Set((classes.data ?? []).map((c) => c.level))]
-    .map((l) => (tax.data ? levelById(tax.data, l)?.label[locale] : l))
+    .map((l) => (tax.data ? pick(levelById(tax.data, l)?.label, locale) : l))
     .filter(Boolean)
     .join("، ");
   const hasToday = !!(schedule.data && calendar.data && slotsForDate(schedule.data, calendar.data, today).length);

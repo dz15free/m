@@ -6,7 +6,7 @@ import { useAuth } from "@/features/auth/auth-provider";
 import { getTeacherBundle } from "@/features/profile/repo";
 import { getFirebase } from "@/lib/firebase/client";
 import type { Stage } from "@/shared/dz/education";
-import { DEFAULT_TAXONOMY, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
+import { DEFAULT_TAXONOMY, withEnglish, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
 import { getClass, listClasses } from "./repo";
 
 /* استعلامات مُكاشة (TanStack Query): الصفحات تتشارك النتيجة بدل قراءة
@@ -44,7 +44,7 @@ export function useTaxonomy(stage: Stage | undefined) {
       try {
         const snap = await getDoc(doc(getFirebase().db, "taxonomy", stage!));
         const data = snap.data() as StageTaxonomy | undefined;
-        if (data?.levels?.length && data.subjects?.length) return data;
+        if (data?.levels?.length && data.subjects?.length) return withEnglish(data, stage!);
       } catch {
         // دون إنترنت أو قبل رفع البيانات: القيم الافتراضية تكفي
       }

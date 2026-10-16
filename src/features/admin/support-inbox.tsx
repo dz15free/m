@@ -20,13 +20,15 @@ import {
   type Thread,
 } from "@/features/support/repo";
 import { adminApi, listUsers, peopleOf } from "./repo";
+import { intlLocale } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 /* صندوق الرسائل: قائمة المحادثات (حيّة) + المحادثة المختارة. على الهاتف شاشة واحدة
    بالتناوب، وعلى الحاسوب عمودان. */
 export function SupportInbox() {
   const t = useTranslations("admin.support");
   const ta = useTranslations("admin");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const router = useRouter();
   const selected = useSearchParams().get("uid");
   const [threads, setThreads] = useState<Thread[] | null>(null);
@@ -44,7 +46,7 @@ export function SupportInbox() {
     (selected && person.data
       ? { uid: selected, name: person.data.name, email: person.data.email, lastMessage: "", lastMessageAt: 0, lastFrom: "admin", unreadAdmin: false, unreadTeacher: false, status: "open" }
       : null);
-  const time = (at: number) => new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ", { dateStyle: "short", timeStyle: "short" }).format(at);
+  const time = (at: number) => new Intl.DateTimeFormat(intlLocale(locale), { dateStyle: "short", timeStyle: "short" }).format(at);
 
   return (
     <div className="space-y-4">
@@ -118,7 +120,7 @@ export function SupportInbox() {
 
 function Conversation({ thread, isNew, onBack }: { thread: Thread; isNew: boolean; onBack: () => void }) {
   const t = useTranslations("admin.support");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const [messages, setMessages] = useState<Message[] | null>(null);
   const [draft, setDraft] = useState("");
   const [busy, setBusy] = useState(false);
@@ -131,7 +133,7 @@ function Conversation({ thread, isNew, onBack }: { thread: Thread; isNew: boolea
     list.current?.scrollTo({ top: list.current.scrollHeight });
   }, [messages]);
   const Back = locale === "ar" ? ChevronRight : ChevronLeft;
-  const time = (at: number) => new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ", { dateStyle: "short", timeStyle: "short" }).format(at);
+  const time = (at: number) => new Intl.DateTimeFormat(intlLocale(locale), { dateStyle: "short", timeStyle: "short" }).format(at);
 
   async function send(e: React.FormEvent) {
     e.preventDefault();

@@ -4,6 +4,8 @@ import { useLocale } from "next-intl";
 import { Check } from "lucide-react";
 import type { Subject } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 /** اختيار متعدد للمواد بأزرار كبيرة سهلة اللمس. */
 export function SubjectChips({
@@ -15,7 +17,7 @@ export function SubjectChips({
   selected: ReadonlySet<string>;
   onToggle: (id: string) => void;
 }) {
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   return (
     <ul className="flex flex-wrap gap-2">
       {subjects.map((s) => {
@@ -32,7 +34,7 @@ export function SubjectChips({
               )}
             >
               {on && <Check aria-hidden className="size-4" />}
-              {s.label[locale]}
+              {pick(s.label, locale)}
             </button>
           </li>
         );

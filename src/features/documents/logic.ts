@@ -7,10 +7,12 @@ export type AbsenceRow = { studentId: string; cells: Record<string, string>; a: 
 
 const SYMBOL = { A: "غ", E: "م", L: "ت" } as const;
 const SYMBOL_FR = { A: "A", E: "J", L: "R" } as const;
+// Absent / Excused / Late
+const SYMBOL_EN = { A: "A", E: "E", L: "L" } as const;
 
 /** شبكة الشهر: أعمدة = أيام سُجّل فيها حضور، الخانة = رموز الفترات غير الحاضرة. */
-export function absenceGrid(studentIds: string[], sessions: MonthSession[], locale: "ar" | "fr" = "ar") {
-  const sym = locale === "fr" ? SYMBOL_FR : SYMBOL;
+export function absenceGrid(studentIds: string[], sessions: MonthSession[], locale: "ar" | "fr" | "en" = "ar") {
+  const sym = locale === "fr" ? SYMBOL_FR : locale === "en" ? SYMBOL_EN : SYMBOL;
   const days = [...new Set(sessions.map((s) => s.date))].sort();
   const ordered = [...sessions].sort((x, y) => x.date.localeCompare(y.date) || x.part.localeCompare(y.part));
   const rows: AbsenceRow[] = studentIds.map((id) => {
@@ -36,7 +38,8 @@ export function monthRange(month: string): { start: string; end: string } {
 }
 
 /** «التلميذ» / «التلميذة» / «التلميذ(ة)» حسب ما هو معروف. */
-export function pupilWord(gender: "M" | "F" | null, locale: "ar" | "fr"): string {
+export function pupilWord(gender: "M" | "F" | null, locale: "ar" | "fr" | "en"): string {
   if (locale === "fr") return "l'élève";
+  if (locale === "en") return "the pupil";
   return gender === "F" ? "التلميذة" : gender === "M" ? "التلميذ" : "التلميذ(ة)";
 }
