@@ -22,6 +22,7 @@ import { clearIndexedDbPersistence, doc, getDoc, serverTimestamp, setDoc, termin
 import { getFirebase } from "@/lib/firebase/client";
 import type { Locale } from "@/i18n/config";
 import { storedLocale } from "@/i18n/pick";
+import { anonKey, trackOnce } from "@/features/analytics/meta-events";
 
 /* كل عمليات المصادقة في مكان واحد. الواجهة لا تستدعي Firebase مباشرة. */
 
@@ -121,6 +122,9 @@ export async function ensureUserDoc(user: User, locale: Locale, name?: string): 
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     });
+    // الحساب الجديد أُنشئ فعلًا الآن (مسار واحد فقط ينجح في الإنشاء): بريد أو Google
+    const method = user.providerData.some((p) => p.providerId === "google.com") ? "google" : "email";
+    void anonKey(user.uid).then((k) => trackOnce("CompleteRegistration", k, { registration_method: method, status: "registered" }));
   } catch (error) {
     // عند التسجيل ينشئ المستندَ مساران في اللحظة نفسها (النموذج ومستمع الجلسة)؛
     // الكتابة الثانية تُرفض لأنها صارت «تعديلًا»، فنقرأ ما أنشأه الأول.

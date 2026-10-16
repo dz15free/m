@@ -12,6 +12,7 @@ import { useRefreshBilling } from "./repo";
 import { getOrder } from "./payments";
 import { openSupport } from "@/features/support/repo";
 import type { Locale } from "@/i18n/config";
+import { trackOnce } from "@/features/analytics/meta-events";
 
 /* العودة من Chargily: التأكيد الحقيقي يأتي من الـ webhook إلى الخادم، فنقرأ حالة الطلب
    بفواصل متزايدة (≤ 10 محاولات). صفحة النجاح وحدها لا تمنح شيئًا. */
@@ -25,7 +26,11 @@ export function PaymentReturn({ orderId, failed }: { orderId: string; failed: bo
     queryFn: async () => {
       attempts.current += 1;
       const o = await getOrder(orderId);
-      if (o?.status === "paid") await refresh();
+      if (o?.status === "paid") {
+        // «paid» يكتبه الخادم وحده بعد webhook موقّع من Chargily والتحقق من المبلغ (القواعد تمنع كتابته من الجهاز)
+        trackOnce("Purchase", orderId, { value: o.amount, currency: "DZD", content_ids: [o.planId], content_type: "product" });
+        await refresh();
+      }
       return { o, attempt: attempts.current };
     },
     refetchInterval: (q) => {
