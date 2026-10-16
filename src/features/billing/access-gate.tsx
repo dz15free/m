@@ -10,6 +10,7 @@ import { useAuth } from "@/features/auth/auth-provider";
 import { openSupport } from "@/features/support/repo";
 import { FeedbackForm } from "./feedback-form";
 import { startTrial, TrialError, useBilling, useRefreshBilling } from "./repo";
+import { anonKey, trackOnce } from "@/features/analytics/meta-events";
 
 /** صفحات تبقى مفتوحة دائمًا: الحساب والإعدادات والاشتراك نفسه. */
 const OPEN_PATHS = ["/app/settings", "/app/more", "/app/billing"];
@@ -42,6 +43,8 @@ function AutoTrial() {
     queryKey: ["autoTrial", uid],
     queryFn: async () => {
       await startTrial();
+      // الخادم أنشأ التجربة فعلًا (يرفض التجربة الثانية برمز خطأ، فلا نصل هنا)
+      void anonKey(uid).then((k) => trackOnce("StartTrial", k));
       await refresh();
       return true;
     },
