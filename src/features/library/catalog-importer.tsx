@@ -14,11 +14,12 @@ import { driveContentId, driveToContentDoc, guessMeta, guessStage, type DriveLis
 import { getIgnoredDriveIds, importCatalogFile, listContentsForEditor, listDriveLibrary, removeFile, saveContent } from "./repo";
 import { STAGES, type Stage } from "@/shared/dz/education";
 import { titleOf } from "./library-browser";
+import type { Locale } from "@/i18n/config";
 
 /** «المكتبة الجاهزة»: الأدمن يحدّد ما يريد نشره مما لم يُستورد بعد من catalog.json، ولا يُنشر غيره. */
 export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
   const t = useTranslations("contentAdmin.catalog");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const qc = useQueryClient();
   const pending = pendingCatalog(catalog as CatalogEntry[], existingIds);
   const [run, setRun] = useState<{ done: number; total: number; current: string } | null>(null);

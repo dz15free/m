@@ -4,8 +4,9 @@ import { chargilyMode, createCheckout } from "@/lib/server/chargily";
 import { siteUrl } from "@/lib/server/env";
 import { adminCommit, adminGet, newId } from "@/lib/server/firestore-admin";
 import type { Plan } from "@/shared/billing/plans";
+import { pick } from "@/i18n/pick";
 
-const Body = z.object({ planId: z.string().regex(/^[a-z0-9_-]{1,32}$/), locale: z.enum(["ar", "fr"]).default("ar") });
+const Body = z.object({ planId: z.string().regex(/^[a-z0-9_-]{1,32}$/), locale: z.enum(["ar", "fr", "en"]).default("ar") });
 const MAX_PER_HOUR = 5;
 const MIN_AMOUNT = 50; // أدنى مبلغ يقبله Chargily بالدينار
 
@@ -50,7 +51,7 @@ export async function POST(req: Request) {
         failureUrl: `${base}/app/billing/return?order=${orderId}&failed=1`,
         webhookUrl: `${base}/api/webhooks/chargily`,
         locale,
-        description: `${plan.name?.[locale] ?? planId} — prof.baczone.app`,
+        description: `${pick(plan.name, locale) ?? planId} — prof.baczone.app`,
         metadata: { orderId, app: "prof" },
       });
       await adminCommit([{ path: `orders/${orderId}`, data: { checkoutId: checkout.id }, merge: true }]);

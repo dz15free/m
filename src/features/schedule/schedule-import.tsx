@@ -50,6 +50,8 @@ import {
   type Slot,
 } from "./logic";
 import { saveSchedule, scheduleKey, useCalendar, useSchedule } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 /* استيراد جدول التوقيت: Excel، PDF، صورة (أو الكاميرا). كل القراءة على جهاز الأستاذ،
    ثم مراجعة حصة حصة (القسم والمادة والوقت) قبل الحفظ. */
@@ -104,7 +106,7 @@ function Importer({
 }) {
   const t = useTranslations("scheduleImport");
   const ts = useTranslations("schedule");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const router = useRouter();
   const uid = useUid();
   const queryClient = useQueryClient();
@@ -254,7 +256,7 @@ function Importer({
     a.href = URL.createObjectURL(
       new Blob([csv], { type: "text/csv;charset=utf-8" }),
     );
-    a.download = locale === "ar" ? "جدول-التوقيت.csv" : "emploi-du-temps.csv";
+    a.download = locale === "ar" ? "جدول-التوقيت.csv" : locale === "fr" ? "emploi-du-temps.csv" : "timetable.csv";
     a.click();
   }
 
@@ -510,7 +512,7 @@ function Importer({
                           <option value="">{t("chooseSubject")}</option>
                           {pool.map((x) => (
                             <option key={x.id} value={x.id}>
-                              {subjectById(taxonomy, x.id)?.label[locale] ??
+                              {pick(subjectById(taxonomy, x.id)?.label, locale) ??
                                 x.id}
                             </option>
                           ))}

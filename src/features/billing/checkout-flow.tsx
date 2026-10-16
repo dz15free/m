@@ -10,6 +10,8 @@ import { openSupport } from "@/features/support/repo";
 import { cn } from "@/lib/utils/cn";
 import { useBilling } from "./repo";
 import { CheckoutError, startCheckout } from "./payments";
+import { pick, intlLocale } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 type Method = "chargily" | "contact";
 
@@ -18,7 +20,7 @@ type Method = "chargily" | "contact";
 export function CheckoutFlow({ planId }: { planId: string }) {
   const t = useTranslations("billing.checkout");
   const ts = useTranslations("support");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const { ready, plans } = useBilling();
   const [method, setMethod] = useState<Method>("chargily");
   const [cardState, setCardState] = useState<"idle" | "busy" | CheckoutError["reason"]>("idle");
@@ -33,12 +35,12 @@ export function CheckoutFlow({ planId }: { planId: string }) {
   const plan = plans.find((p) => p.id === planId && p.active && p.priceDzd > 0);
   if (!plan) return <Card className="py-10 text-center text-muted">{t("unavailable")}</Card>;
   const cur = locale === "ar" ? "دج" : "DA";
-  const price = `${plan.priceDzd.toLocaleString(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ")} ${cur}`;
+  const price = `${plan.priceDzd.toLocaleString(intlLocale(locale))} ${cur}`;
 
   async function payByCard() {
     setCardState("busy");
     try {
-      window.location.href = await startCheckout(plan!.id, locale);
+      window.location.assign(await startCheckout(plan!.id, locale));
     } catch (e) {
       setCardState(e instanceof CheckoutError ? e.reason : "error");
     }
@@ -53,8 +55,8 @@ export function CheckoutFlow({ planId }: { planId: string }) {
     <div className="space-y-4">
       <Card className="flex items-center justify-between gap-3">
         <div>
-          <p className="text-lg font-bold">{plan.name[locale]}</p>
-          <p className="text-sm text-muted">{plan.description?.[locale]}</p>
+          <p className="text-lg font-bold">{pick(plan.name, locale)}</p>
+          <p className="text-sm text-muted">{pick(plan.description, locale)}</p>
         </div>
         <p className="shrink-0 text-2xl font-bold tabular-nums">{price}</p>
       </Card>

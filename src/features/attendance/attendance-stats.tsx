@@ -16,7 +16,7 @@ const MONTHS_DZ = ["جانفي", "فيفري", "مارس", "أفريل", "ماي
 function monthLabel(ym: string, locale: string) {
   const [y, m] = ym.split("-").map(Number);
   if (locale === "ar") return `${MONTHS_DZ[(m ?? 1) - 1]} ${y}`;
-  return new Intl.DateTimeFormat("fr-DZ", { month: "long", year: "numeric" }).format(new Date(y!, (m ?? 1) - 1, 1));
+  return new Intl.DateTimeFormat(locale === "fr" ? "fr-DZ" : "en-GB", { month: "long", year: "numeric" }).format(new Date(y!, (m ?? 1) - 1, 1));
 }
 
 const pct = (r: number | null) => (r === null ? "—" : `${Math.round(r * 100)}%`);

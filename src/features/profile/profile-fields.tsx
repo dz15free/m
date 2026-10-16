@@ -5,6 +5,8 @@ import { Field, SelectField } from "@/components/ui/field";
 import { STAGES, gradesFor, type Stage } from "@/shared/dz/education";
 import { WILAYAS, wilayaByCode } from "@/shared/dz/wilayas";
 import { defaultDirectorate } from "./types";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 /* حقول الملف المهني والمؤسسة — مشتركة بين معالج البداية وصفحة الإعدادات. */
 
@@ -100,7 +102,7 @@ export function ProfileFields({
         </option>
         {gradesFor(value.stage).map((g) => (
           <option key={g.id} value={g.id}>
-            {locale === "fr" ? g.fr : g.ar}
+            {pick(g, locale)}
           </option>
         ))}
         <option value="other">{t("gradeOther")}</option>
@@ -129,18 +131,18 @@ export function SchoolFields({
   errors: Errors;
 }) {
   const t = useTranslations("profile");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const set = <K extends keyof SchoolDraft>(key: K, v: SchoolDraft[K]) => onChange({ ...value, [key]: v });
   const req = (key: string) => (errors[key] ? t("required") : null);
 
   function changeWilaya(code: number) {
-    const previousDefault = defaultDirectorate(wilayaByCode(value.wilayaCode)?.[locale] ?? "", locale);
+    const previousDefault = defaultDirectorate(pick(wilayaByCode(value.wilayaCode), locale) ?? "", locale);
     const untouched = !value.directorate.trim() || value.directorate === previousDefault;
     onChange({
       ...value,
       wilayaCode: code,
       // نقترح المديرية تلقائيًا ما لم يعدّلها الأستاذ بنفسه
-      directorate: untouched ? defaultDirectorate(wilayaByCode(code)?.[locale] ?? "", locale) : value.directorate,
+      directorate: untouched ? defaultDirectorate(pick(wilayaByCode(code), locale) ?? "", locale) : value.directorate,
     });
   }
 
@@ -166,7 +168,7 @@ export function SchoolFields({
           </option>
           {WILAYAS.map((w) => (
             <option key={w.code} value={w.code}>
-              {String(w.code).padStart(2, "0")} — {w[locale]}
+              {String(w.code).padStart(2, "0")} — {pick(w, locale)}
             </option>
           ))}
         </SelectField>

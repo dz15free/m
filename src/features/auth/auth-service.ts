@@ -21,6 +21,7 @@ import {
 import { clearIndexedDbPersistence, doc, getDoc, serverTimestamp, setDoc, terminate, updateDoc, waitForPendingWrites } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
 import type { Locale } from "@/i18n/config";
+import { storedLocale } from "@/i18n/pick";
 
 /* كل عمليات المصادقة في مكان واحد. الواجهة لا تستدعي Firebase مباشرة. */
 
@@ -114,7 +115,8 @@ export async function ensureUserDoc(user: User, locale: Locale, name?: string): 
     await setDoc(ref, {
       displayName: (name ?? user.displayName ?? "").slice(0, 80),
       email: user.email,
-      locale,
+      // القواعد تقبل ar/fr (لغة الإشعارات): الإنجليزية تُحفظ fr
+      locale: storedLocale(locale),
       onboardingDone: false,
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),

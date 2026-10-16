@@ -4,9 +4,9 @@
 export type LegalSection = { h: string; p: string[] };
 export type LegalDoc = { title: string; intro: string; sections: LegalSection[] };
 
-export const LEGAL_UPDATED = "2026-09-27";
+export const LEGAL_UPDATED = "2026-10-16";
 
-export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
+export const PRIVACY: Record<"ar" | "fr" | "en", LegalDoc> = {
   ar: {
     title: "سياسة الخصوصية",
     intro:
@@ -64,7 +64,7 @@ export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
       {
         h: "7. ملفات تعريف الارتباط والتتبّع",
         p: [
-          "لا نستعمل إعلانات ولا أدوات تتبّع من أطراف ثالثة. نستعمل فقط التخزين المحلي الضروري لتسجيل الدخول واللغة والعمل دون إنترنت.",
+          "لا نعرض إعلانات داخل التطبيق. أداة التتبّع الوحيدة من طرف ثالث هي بكسل Meta لقياس زيارات الصفحات (انظر البند 4)، ويمكنك منعها بإعدادات متصفحك أو بمانع الإعلانات. عدا ذلك نستعمل فقط التخزين المحلي الضروري لتسجيل الدخول واللغة والعمل دون إنترنت.",
         ],
       },
       {
@@ -139,7 +139,7 @@ export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
       },
       {
         h: "7. Cookies et traceurs",
-        p: ["Aucune publicité ni traceur tiers. Seul le stockage local nécessaire (session, langue, mode hors ligne) est utilisé."],
+        p: ["Aucune publicité dans l'application. Le seul traceur tiers est le pixel Meta, qui mesure les visites de pages (voir point 4) ; vous pouvez le bloquer via les réglages de votre navigateur ou un bloqueur de publicités. Pour le reste, seul le stockage local nécessaire (session, langue, mode hors ligne) est utilisé."],
       },
       {
         h: "8. Sécurité",
@@ -157,9 +157,85 @@ export const PRIVACY: Record<"ar" | "fr", LegalDoc> = {
       },
     ],
   },
+  en: {
+    title: "Privacy Policy",
+    intro:
+      "This policy explains how baczonedz, the publisher of «مساعد الأستاذ» (prof.baczone.app), processes your data and your pupils' data, in accordance with Algerian Law No. 18-07 of 10 June 2018 on the protection of natural persons in the processing of personal data.",
+    sections: [
+      {
+        h: "1. Data we collect",
+        p: [
+          "Account: email, name and sign-in method (email/password or Google). We never see your password; it is managed by Firebase Authentication.",
+          "Professional profile: first and last name, teaching cycle and grade, wilaya, education directorate, school and the details on your profile.",
+          "Work data you enter: classes, pupils' names and what you record about them (attendance, marks, remarks), timetable, notebooks, lesson plans and progressions.",
+          "Subscription: plan, expiry date and payment history (amount, date, reference). We never receive or store any card number: payment takes place directly on the Chargily page.",
+          "Your messages to the administration and, if you turn on notifications, your devices' identifiers.",
+        ],
+      },
+      {
+        h: "2. Pupils' data",
+        p: [
+          "You enter your pupils' data, for your teaching work only; we process it on your behalf to provide the service. Enter only what is necessary.",
+          "Each teacher's data is technically isolated by the database security rules: no other teacher can access it, and the site administration cannot read your pupils' names, your classes or your marks.",
+          "We do not sell or share this data, and we do not use it for advertising or to train any model.",
+        ],
+      },
+      {
+        h: "3. Purposes",
+        p: [
+          "Running the service: saving and syncing your work, printing your notebooks and documents.",
+          "Managing subscriptions, payments and the free trial, and preventing abuse.",
+          "Communicating with you: replies to your messages and service notifications.",
+          "Aggregated, non-identifying statistics (number of teachers, monthly revenue).",
+        ],
+      },
+      {
+        h: "4. Where data is stored",
+        p: [
+          "We rely on trusted providers: Google Firebase (authentication, database, notifications), Cloudflare (website hosting and library files) and Chargily Pay (online payment). Data may be stored on these providers' servers outside Algeria, encrypted in transit.",
+          "We use the Meta (Facebook) pixel to measure page visits and the effectiveness of our ads: the page address and browser information are sent to Meta. We never send it your email or your data inside the app (classes, pupils, marks).",
+          "To work offline, the app keeps a copy of your data on your device. «Sign out» erases that copy, so always sign out on shared devices.",
+        ],
+      },
+      {
+        h: "5. Retention",
+        p: [
+          "Your data is kept as long as your account exists. An expired subscription deletes nothing: everything is back when you renew.",
+          "Deleting your account from «Settings → Delete account» erases your data immediately and permanently, except payment records that the law requires us to keep. Otherwise, write to us and erasure takes place within 30 days.",
+        ],
+      },
+      {
+        h: "6. Your rights",
+        p: [
+          "You have the right to access, rectify, erase and object. Most of this is available directly in the app (edit your profile, delete pupils and classes, export lists).",
+          "Full account deletion is available in «Settings». For any other request, write to us with the «Contact the administration» button or at baczonedz@gmail.com. You may also refer the matter to the National Authority for the Protection of Personal Data.",
+        ],
+      },
+      {
+        h: "7. Cookies and tracking",
+        p: [
+          "There are no ads in the app. The only third-party tracker is the Meta pixel, which measures page visits (see section 4); you can block it in your browser settings or with an ad blocker. Otherwise, only the local storage needed for sign-in, language and offline use is used.",
+        ],
+      },
+      {
+        h: "8. Security",
+        p: [
+          "Encrypted connection (HTTPS), data access governed by automatically tested security rules, and secret keys kept on the server only. The administration accesses only what is needed to manage accounts and subscriptions.",
+        ],
+      },
+      {
+        h: "9. Changes",
+        p: ["We may update this policy and will let you know in the app about any significant change. The update date is shown at the top of the page."],
+      },
+      {
+        h: "10. Publisher and contact",
+        p: ["The service is published by baczonedz. Contact: the «Contact the administration» button in the app, or baczonedz@gmail.com."],
+      },
+    ],
+  },
 };
 
-export const TERMS: Record<"ar" | "fr", LegalDoc> = {
+export const TERMS: Record<"ar" | "fr" | "en", LegalDoc> = {
   ar: {
     title: "شروط الاستخدام",
     intro: "تنظّم هذه الشروط استعمال «مساعد الأستاذ» (prof.baczone.app) الذي تشغّله شركة baczonedz. باستعمالك التطبيق فإنك توافق عليها. اقرأها مع سياسة الخصوصية.",
@@ -293,6 +369,74 @@ export const TERMS: Record<"ar" | "fr", LegalDoc> = {
       {
         h: "9. Éditeur et contact",
         p: ["Le service est édité par la société baczonedz. Contact : bouton « Contacter l'administration » dans l'application, ou baczonedz@gmail.com."],
+      },
+    ],
+  },
+  en: {
+    title: "Terms of Use",
+    intro: "These terms govern the use of «مساعد الأستاذ» (prof.baczone.app), published by baczonedz. By using the app you accept them, together with the privacy policy.",
+    sections: [
+      {
+        h: "1. The service",
+        p: [
+          "A digital tool that helps teachers organise their work: classes and pupils, attendance, timetable, notebooks and lesson plans, progressions, documents and a library of teaching content.",
+          "The service is an aid and does not replace the official documents and instructions of the Ministry of National Education; you remain responsible for what you print or hand in.",
+        ],
+      },
+      {
+        h: "2. Account",
+        p: [
+          "The service is intended for adult teachers and education staff. You are responsible for the accuracy of your information, the confidentiality of your password and the activity on your account.",
+          "One account per person; sharing an account or creating several accounts to renew the free trial is not allowed.",
+        ],
+      },
+      {
+        h: "3. Your data and your pupils' data",
+        p: [
+          "Your data belongs to you. You agree to enter pupils' data only for legitimate teaching purposes, keeping it to the minimum necessary, and to respect its confidentiality.",
+          "The details of how it is processed are in the privacy policy.",
+        ],
+      },
+      {
+        h: "4. Subscription and payment",
+        p: [
+          "When you sign up, a 7-day free trial starts (after you confirm your email): all tools, with content summaries and a full selection. After that, tools and content are locked until you subscribe, at the price and for the duration shown at the time of payment.",
+          "Payment through Chargily Pay (Edahabia or CIB card) or by arrangement with the administration via the contact button. There is no automatic renewal: when the subscription ends, tools are locked without any loss of data, and everything is back as soon as you renew.",
+          "The free trial is granted only once per account.",
+          "Refunds: you can request a full refund within 7 days of payment, via the «Contact the administration» button or at baczonedz@gmail.com; the subscription is then cancelled. After 7 days there is no refund, unless a technical fault on our side prevented you from using the service.",
+        ],
+      },
+      {
+        h: "5. Library content",
+        p: [
+          "Content is protected by its authors' rights and provided for your personal and classroom use. Republishing, selling or distributing it outside that scope is prohibited.",
+          "If any content infringes your rights, contact us: it will be removed after verification.",
+        ],
+      },
+      {
+        h: "6. Acceptable use",
+        p: [
+          "Prohibited: attempting to access other people's data or bypass protections, posting unlawful or offensive content, overloading the service by automated means, or circumventing plan limits or payment.",
+          "We may suspend an account that breaches these terms, after notice where possible.",
+        ],
+      },
+      {
+        h: "7. Availability and liability",
+        p: [
+          "We do our best to keep the service available and secure, but it is provided «as is» and may be interrupted (maintenance, external causes). Export or print what matters regularly.",
+          "To the extent permitted by law, we are not liable for indirect damage arising from the use or unavailability of the service.",
+        ],
+      },
+      {
+        h: "8. Changes and governing law",
+        p: [
+          "These terms may change; we will let you know in the app about any significant change, and continued use means acceptance.",
+          "These terms are governed by Algerian law.",
+        ],
+      },
+      {
+        h: "9. Publisher and contact",
+        p: ["The service is published by baczonedz. Contact: the «Contact the administration» button in the app, or baczonedz@gmail.com."],
       },
     ],
   },

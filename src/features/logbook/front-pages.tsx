@@ -18,6 +18,8 @@ import { subjectById, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
 import { cn } from "@/lib/utils/cn";
 import { CARD_FIELDS, CARD_GROUPS, CARD_MAX, formatHours, subjectLoad, timetableGrid, type TeacherCard } from "./front-logic";
 import { getCard, saveCard } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const NOTEBOOKS = ["daily", "prep", "grades"] as const;
 type Notebook = (typeof NOTEBOOKS)[number];
@@ -192,7 +194,7 @@ function CardForm({ initial, onDone }: { initial: TeacherCard; onDone: () => voi
 // ── صفحات الطباعة ──
 
 function useIdentity() {
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const { profile, school } = useTeacher().data!;
   return {
     locale,
@@ -324,13 +326,13 @@ function StudentLists({ classes }: { classes: ClassDoc[] }) {
 function Timetable({ slots, cal, taxonomy, classes }: { slots: Slot[]; cal: Calendar; taxonomy: StageTaxonomy; classes: ClassDoc[] }) {
   const t = useTranslations("logbook.front");
   const ts = useTranslations("schedule");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const dayNames = ts.raw("days") as string[];
   const days = [...cal.schoolDays].sort((a, b) => a - b);
   const multiClass = new Set(slots.map((s) => s.classId)).size > 1;
   const classById = new Map(classes.map((c) => [c.id, c]));
   const label = (s: Slot) => {
-    const subject = subjectById(taxonomy, s.subjectId)?.label[locale] ?? s.subjectId;
+    const subject = pick(subjectById(taxonomy, s.subjectId)?.label, locale) ?? s.subjectId;
     return multiClass ? `${subject} (${classById.get(s.classId)?.displayName ?? ""})` : subject;
   };
   return (
@@ -371,7 +373,7 @@ function Timetable({ slots, cal, taxonomy, classes }: { slots: Slot[]; cal: Cale
 
 function Load({ slots, taxonomy }: { slots: Slot[]; taxonomy: StageTaxonomy }) {
   const t = useTranslations("logbook.front");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const load = subjectLoad(slots);
   const total = load.reduce((a, l) => ({ sessions: a.sessions + l.sessions, minutes: a.minutes + l.minutes }), { sessions: 0, minutes: 0 });
   const pad = Math.max(0, 12 - load.length);
@@ -389,7 +391,7 @@ function Load({ slots, taxonomy }: { slots: Slot[]; taxonomy: StageTaxonomy }) {
         <tbody>
           {load.map((l) => (
             <tr key={l.subjectId}>
-              <td className="border border-ink px-2 py-1.5">{subjectById(taxonomy, l.subjectId)?.label[locale] ?? l.subjectId}</td>
+              <td className="border border-ink px-2 py-1.5">{pick(subjectById(taxonomy, l.subjectId)?.label, locale) ?? l.subjectId}</td>
               <td className="border border-ink px-2 py-1.5 text-center">{l.sessions}</td>
               <td className="border border-ink px-2 py-1.5 text-center"><bdi dir="ltr">{formatHours(l.minutes)}</bdi></td>
             </tr>
@@ -414,7 +416,7 @@ function Load({ slots, taxonomy }: { slots: Slot[]; taxonomy: StageTaxonomy }) {
 
 function Holidays({ cal }: { cal: Calendar }) {
   const t = useTranslations("logbook.front");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const known = cal.holidays;
   // بلا رزنامة رسمية بعد: العطل الثلاث الكبرى بنقاط تُكمَل يدويًا
   const blanks = known.length ? [] : [t("autumn"), t("winter"), t("spring")];
@@ -435,7 +437,7 @@ function Holidays({ cal }: { cal: Calendar }) {
           {known.map((h, i) => (
             <tr key={`${h.start}-${i}`}>
               <td className="border border-ink text-center">{String(i + 1).padStart(2, "0")}</td>
-              <td className="border border-ink px-2 py-1.5">{h.label?.[locale] ?? ""}</td>
+              <td className="border border-ink px-2 py-1.5">{pick(h.label, locale) ?? ""}</td>
               <td className="border border-ink text-center"><bdi dir="ltr">{dmy(h.start)}</bdi></td>
               <td className="border border-ink text-center"><bdi dir="ltr">{dmy(h.end)}</bdi></td>
             </tr>

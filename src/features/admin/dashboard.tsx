@@ -8,16 +8,18 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils/cn";
 import { getKpis, getRevenue, type MonthRevenue } from "./repo";
 import { useRoles } from "./admin-shell";
+import { intlLocale } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 export function AdminDashboard() {
   const t = useTranslations("admin.dash");
   const ta = useTranslations("admin");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const roles = useRoles();
   const isAdmin = roles.includes("admin");
   const kpis = useQuery({ queryKey: ["adminKpis"], queryFn: getKpis, enabled: isAdmin });
   const revenue = useQuery({ queryKey: ["adminRevenue"], queryFn: () => getRevenue(12) });
-  const nf = new Intl.NumberFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ");
+  const nf = new Intl.NumberFormat(intlLocale(locale));
   const cur = locale === "ar" ? "دج" : "DA";
 
   const month = revenue.data?.at(-1);
@@ -76,11 +78,11 @@ export function AdminDashboard() {
 
 /* مخطط أعمدة بسلسلة واحدة (لا مفتاح)؛ أعمدة رفيعة بنهاية مدوّرة 4px ملتصقة بالمحور،
    فجوة بين الأعمدة، تلميح عند التمرير/اللمس، وجدول مخفي لقارئات الشاشة. */
-function RevenueBars({ data, locale, format }: { data: MonthRevenue[]; locale: "ar" | "fr"; format: (n: number) => string }) {
+function RevenueBars({ data, locale, format }: { data: MonthRevenue[]; locale: Locale; format: (n: number) => string }) {
   const [hover, setHover] = useState<number | null>(null);
   const max = Math.max(...data.map((m) => m.gross), 1);
   const label = (m: string) =>
-    new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ" : "fr-DZ", { month: "short" }).format(new Date(`${m}-15T12:00:00`));
+    new Intl.DateTimeFormat(intlLocale(locale), { month: "short" }).format(new Date(`${m}-15T12:00:00`));
   const shown = hover !== null ? data[hover] : null;
   return (
     <div>

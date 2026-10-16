@@ -7,11 +7,13 @@ import { buttonClass } from "@/components/ui/button";
 import { cn } from "@/lib/utils/cn";
 import { useUid } from "@/features/classes/hooks";
 import { FEEDBACK_REASONS, saveFeedback, type Feedback, type FeedbackReason } from "./feedback";
+import type { Locale } from "@/i18n/config";
+import { storedLocale } from "@/i18n/pick";
 
 /** «ما رأيك في المنصة؟» — تقييم بالنجوم وأسباب جاهزة وتعليق حر. يصل إلى لوحة الأدمن. */
 export function FeedbackForm({ context }: { context: Feedback["context"] }) {
   const t = useTranslations("feedback");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const uid = useUid();
   const [rating, setRating] = useState(0);
   const [reasons, setReasons] = useState<FeedbackReason[]>([]);
@@ -32,7 +34,7 @@ export function FeedbackForm({ context }: { context: Feedback["context"] }) {
     if (!uid || rating < 1) return;
     setState("busy");
     try {
-      await saveFeedback(uid, { rating, reasons, comment, context, locale });
+      await saveFeedback(uid, { rating, reasons, comment, context, locale: storedLocale(locale) });
       setState("done");
     } catch {
       setState("error");

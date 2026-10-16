@@ -34,6 +34,8 @@ import {
   type StaffRow,
   type UserRow,
 } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 function StaffCard({ onOpen }: { onOpen: (m: StaffRow) => void }) {
   const t = useTranslations("admin.teachers");
@@ -69,7 +71,7 @@ function StaffCard({ onOpen }: { onOpen: (m: StaffRow) => void }) {
 export function AdminTeachers() {
   const t = useTranslations("admin.teachers");
   const ta = useTranslations("admin");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const [q, setQ] = useState("");
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState<UserRow | null>(null);
@@ -185,7 +187,7 @@ function TeacherSheet({
   onClose: () => void;
 }) {
   const t = useTranslations("admin.teachers");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const auth = useAuth();
   const queryClient = useQueryClient();
   const overview = useQuery({
@@ -287,7 +289,7 @@ function TeacherSheet({
         <Card className="space-y-1 text-sm">
           {p?.wilayaCode && (
             <p>
-              <b>{t("wilaya")}:</b> {wilayaByCode(p.wilayaCode)?.[locale]}
+              <b>{t("wilaya")}:</b> {pick(wilayaByCode(p.wilayaCode), locale)}
             </p>
           )}
           <p>

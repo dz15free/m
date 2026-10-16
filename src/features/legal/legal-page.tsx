@@ -3,14 +3,16 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Logo } from "@/components/brand/logo";
 import { LocaleSwitcher } from "@/components/ui/locale-switcher";
 import { LEGAL_UPDATED, type LegalDoc } from "./content";
+import { intlLocale } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 /* صفحة قانونية عامة (بلا تسجيل دخول)، قابلة للطباعة. */
-export async function LegalPage({ docs }: { docs: Record<"ar" | "fr", LegalDoc> }) {
-  const locale = (await getLocale()) === "fr" ? "fr" : "ar";
+export async function LegalPage({ docs }: { docs: Record<Locale, LegalDoc> }) {
+  const locale = (await getLocale()) as Locale;
   const t = await getTranslations("legal");
   const brand = await getTranslations("brand");
   const d = docs[locale];
-  const updated = new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ", { dateStyle: "long" }).format(new Date(LEGAL_UPDATED));
+  const updated = new Intl.DateTimeFormat(intlLocale(locale), { dateStyle: "long" }).format(new Date(LEGAL_UPDATED));
 
   return (
     <div className="min-h-dvh bg-surface">

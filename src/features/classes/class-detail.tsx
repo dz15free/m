@@ -28,6 +28,8 @@ import { keys, useClass, useClasses, useTaxonomy, useUid } from "./hooks";
 import { nextSections } from "./naming";
 import { archiveClass, ClassLimitError, createClasses, deleteClass, renameClass, updateClassSubjects, type ClassDoc } from "./repo";
 import { SubjectChips, SubjectTags } from "./subject-chips";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const TABS = [
   { key: "students", icon: Users },
@@ -44,7 +46,7 @@ const GLOBAL_LINKS = { lessons: (c: ClassDoc) => `/app/lessons?level=${c.level}`
 
 export function ClassDetail({ classId }: { classId: string }) {
   const t = useTranslations("classes.detail");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const cls = useClass(classId);
   const tax = useTaxonomy(cls.data?.stage);
   const Back = locale === "ar" ? ChevronRight : ChevronLeft;
@@ -73,10 +75,10 @@ export function ClassDetail({ classId }: { classId: string }) {
         <h1 className="text-3xl font-bold" dir="ltr">
           <bdi>{c.displayName}</bdi>
         </h1>
-        <p className="text-muted">{levelById(taxonomy, c.level)?.label[locale] ?? c.level}</p>
+        <p className="text-muted">{pick(levelById(taxonomy, c.level)?.label, locale) ?? c.level}</p>
       </div>
 
-      <SubjectsCard cls={c} taxonomy={taxonomy} labels={c.subjectIds.map((s) => subjectById(taxonomy, s)?.label[locale] ?? s)} />
+      <SubjectsCard cls={c} taxonomy={taxonomy} labels={c.subjectIds.map((s) => pick(subjectById(taxonomy, s)?.label, locale) ?? s)} />
 
       {/* أقسام صفحة القسم — تُفعَّل في مراحلها */}
       <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">

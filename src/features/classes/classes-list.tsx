@@ -9,10 +9,12 @@ import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
 import { useClasses, useTaxonomy, useTeacher } from "./hooks";
 import { compareClasses } from "./naming";
 import { SubjectTags } from "./subject-chips";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 export function ClassesList() {
   const t = useTranslations("classes");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const teacher = useTeacher();
   const tax = useTaxonomy(teacher.data?.profile.stage);
   const classes = useClasses();
@@ -54,7 +56,7 @@ export function ClassesList() {
       {levels.map((level) => (
         <section key={level} aria-labelledby={`lvl-${level}`} className="space-y-3">
           <h2 id={`lvl-${level}`} className="text-sm font-semibold text-muted">
-            {levelById(taxonomy, level)?.label[locale] ?? level}
+            {pick(levelById(taxonomy, level)?.label, locale) ?? level}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {sorted
@@ -72,7 +74,7 @@ export function ClassesList() {
                           {t("students", { count: c.studentCount })}
                         </span>
                       </div>
-                      <SubjectTags labels={c.subjectIds.map((s) => subjectById(taxonomy, s)?.label[locale] ?? s)} />
+                      <SubjectTags labels={c.subjectIds.map((s) => pick(subjectById(taxonomy, s)?.label, locale) ?? s)} />
                     </Card>
                   </Link>
                 </li>

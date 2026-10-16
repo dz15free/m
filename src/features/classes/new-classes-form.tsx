@@ -15,6 +15,8 @@ import { ClassLimitError, createClasses, type ClassDoc, type ClassDraft } from "
 import { useBilling } from "@/features/billing/repo";
 import { ClassLimitNotice } from "@/features/billing/class-limit";
 import { SubjectChips } from "./subject-chips";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const MAX_GROUPS_PER_LEVEL = 15;
 const MAX_TOTAL = 40;
@@ -58,7 +60,7 @@ function Form({
 }) {
   const t = useTranslations("classes.new");
   const tb = useTranslations("billing");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const router = useRouter();
   const uid = useUid();
   const queryClient = useQueryClient();
@@ -159,10 +161,10 @@ function Form({
                   >
                     {on && <Check aria-hidden className="size-4" />}
                   </span>
-                  <span className="font-medium">{l.label[locale]}</span>
+                  <span className="font-medium">{pick(l.label, locale)}</span>
                 </button>
                 {on && (
-                  <div className="flex items-center gap-1" role="group" aria-label={`${t("groups")} — ${l.label[locale]}`}>
+                  <div className="flex items-center gap-1" role="group" aria-label={`${t("groups")} — ${pick(l.label, locale)}`}>
                     <button
                       type="button"
                       onClick={() => step(l.id, -1)}

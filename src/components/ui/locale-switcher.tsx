@@ -4,7 +4,7 @@ import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { Languages } from "lucide-react";
-import { locales, localeLabel } from "@/i18n/config";
+import { locales, localeLabel, localeShort } from "@/i18n/config";
 import { setLocale } from "@/i18n/actions";
 import { cn } from "@/lib/utils/cn";
 
@@ -20,7 +20,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
       aria-label={t("language")}
       className={cn("inline-flex items-center gap-1 rounded-full bg-canvas p-1 ring-1 ring-line", className)}
     >
-      <Languages aria-hidden className="mx-2 size-4 text-muted" />
+      <Languages aria-hidden className="mx-2 hidden size-4 text-muted sm:block" />
       {locales.map((locale) => (
         <button
           key={locale}
@@ -35,11 +35,12 @@ export function LocaleSwitcher({ className }: { className?: string }) {
             })
           }
           className={cn(
-            "min-h-9 rounded-full px-3 text-sm font-medium transition-colors",
+            "min-h-9 min-w-9 rounded-full px-2.5 text-sm sm:px-3 font-medium transition-colors",
             current === locale ? "bg-brand-700 text-white" : "text-ink hover:bg-brand-50",
           )}
         >
-          {localeLabel[locale]}
+          <span className="sm:hidden" aria-label={localeLabel[locale]}>{localeShort[locale]}</span>
+          <span className="hidden sm:inline">{localeLabel[locale]}</span>
         </button>
       ))}
     </div>

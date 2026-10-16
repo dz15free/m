@@ -32,6 +32,8 @@ import { CONTENT_TYPES, forMyClasses, inLang, search, type ContentType, type Ind
 
 const LANGS: Lang[] = ["ar", "fr", "en"];
 import { getIndex, previewUrl } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 export const TYPE_ICON: Record<ContentType, typeof FileText> = {
   textbook: BookOpen,
@@ -49,11 +51,11 @@ export const TYPE_ICON: Record<ContentType, typeof FileText> = {
   image: ImageIcon,
 };
 
-export const titleOf = (t: { ar: string; fr: string }, locale: "ar" | "fr") => t[locale] || t[locale === "ar" ? "fr" : "ar"];
+export const titleOf = (t: { ar: string; fr: string }, locale: Locale) => pick(t, locale) || t[locale === "ar" ? "fr" : "ar"];
 
 export function LibraryBrowser() {
   const t = useTranslations("library");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const teacher = useTeacher();
   const stage = teacher.data?.profile.stage;
   const classes = useClasses();
@@ -153,13 +155,13 @@ export function LibraryBrowser() {
         <select value={level} onChange={(e) => setLevel(e.target.value)} aria-label={t("allLevels")} className={select(!!level)}>
           <option value="">{t("allLevels")}</option>
           {taxonomy.levels.map((l) => (
-            <option key={l.id} value={l.id}>{l.label[locale]}</option>
+            <option key={l.id} value={l.id}>{pick(l.label, locale)}</option>
           ))}
         </select>
         <select value={subject} onChange={(e) => setSubject(e.target.value)} aria-label={t("allSubjects")} className={select(!!subject)}>
           <option value="">{t("allSubjects")}</option>
           {taxonomy.subjects.map((s) => (
-            <option key={s.id} value={s.id}>{s.label[locale]}</option>
+            <option key={s.id} value={s.id}>{pick(s.label, locale)}</option>
           ))}
         </select>
       </div>
@@ -216,11 +218,11 @@ const select = (on: boolean) =>
 
 function ResultCard({ entry: e, taxonomy }: { entry: IndexEntry; taxonomy: StageTaxonomy }) {
   const t = useTranslations("library");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const Icon = TYPE_ICON[e.ty] ?? FileText;
   const meta = [
-    e.l ? levelById(taxonomy, e.l)?.short[locale] : t("allLevelsTag"),
-    e.s && subjectById(taxonomy, e.s)?.label[locale],
+    e.l ? pick(levelById(taxonomy, e.l)?.short, locale) : t("allLevelsTag"),
+    e.s && pick(subjectById(taxonomy, e.s)?.label, locale),
     e.tm ? t("term", { n: e.tm }) : null,
   ].filter(Boolean);
   return (

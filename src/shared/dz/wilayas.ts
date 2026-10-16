@@ -1,3 +1,4 @@
+import { pick } from "../../i18n/pick.ts";
 /* الولايات الجزائرية بترميزها الرسمي (69 ولاية). بيانات مرجعية ثابتة،
    وإن أُضيفت ولايات جديدة تُضاف هنا فقط. الرموز لا يُعاد ترقيمها أبدًا:
    ملفات الأساتذة تحفظ الولاية برقمها. */
@@ -79,8 +80,8 @@ export function wilayaByCode(code: number): Wilaya | undefined {
   return WILAYAS.find((w) => w.code === code);
 }
 
-export function wilayaLabel(code: number, locale: "ar" | "fr"): string {
+export function wilayaLabel(code: number, locale: "ar" | "fr" | "en"): string {
   const w = wilayaByCode(code);
   if (!w) return "";
-  return `${String(w.code).padStart(2, "0")} — ${w[locale]}`;
+  return `${String(w.code).padStart(2, "0")} — ${pick(w, locale)}`;
 }

@@ -11,12 +11,13 @@ import { formatLongDate } from "@/i18n/dates";
 import { useRefreshBilling } from "./repo";
 import { getOrder } from "./payments";
 import { openSupport } from "@/features/support/repo";
+import type { Locale } from "@/i18n/config";
 
 /* العودة من Chargily: التأكيد الحقيقي يأتي من الـ webhook إلى الخادم، فنقرأ حالة الطلب
    بفواصل متزايدة (≤ 10 محاولات). صفحة النجاح وحدها لا تمنح شيئًا. */
 export function PaymentReturn({ orderId, failed }: { orderId: string; failed: boolean }) {
   const t = useTranslations("billing.return");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const refresh = useRefreshBilling();
   const attempts = useRef(0);
   const order = useQuery({

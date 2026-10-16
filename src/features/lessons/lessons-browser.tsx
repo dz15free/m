@@ -12,11 +12,13 @@ import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
 import { DOC, docLangOfSubject } from "@/i18n/doc-lang";
 import { groupCurriculum } from "./logic";
 import { useCurriculum, useLessonAccessFor, useMyCurricula } from "./repo";
+import { pick } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 /** المذكرات الجاهزة لأقسام الأستاذ: مادة ← مقطع ← أسبوع ← حصة. */
 export function LessonsBrowser({ level }: { level?: string } = {}) {
   const t = useTranslations("lessons");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const tax = useTaxonomy(useTeacher().data?.profile.stage ?? "primary");
   const mine = useMyCurricula();
   const [picked, setPicked] = useState<string | null>(null);
@@ -30,7 +32,7 @@ export function LessonsBrowser({ level }: { level?: string } = {}) {
     // الفرنسية والإنجليزية باسمهما في لغتهما: « Langue française · 4AP »
     const lang = docLangOfSubject(c.subject);
     if (lang) return `${DOC[lang].subject} · ${c.level}`;
-    return `${subjectById(tax.data!, c.subject)?.label[locale] ?? c.subject} · ${levelById(tax.data!, c.level)?.short[locale] ?? c.level}`;
+    return `${pick(subjectById(tax.data!, c.subject)?.label, locale) ?? c.subject} · ${pick(levelById(tax.data!, c.level)?.short, locale) ?? c.level}`;
   };
 
   return (
@@ -67,7 +69,7 @@ export function LessonsBrowser({ level }: { level?: string } = {}) {
 
 function CurriculumView({ id }: { id: string }) {
   const t = useTranslations("lessons");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const cur = useCurriculum(id);
   const { access } = useBilling();
   const [open, setOpen] = useState<number | null>(null);
@@ -118,7 +120,7 @@ function CurriculumView({ id }: { id: string }) {
           )}
         </section>
       ))}
-      <p className="text-xs text-muted">{t("source", { source: cur.data.source[locale] })}</p>
+      <p className="text-xs text-muted">{t("source", { source: pick(cur.data.source, locale) })}</p>
     </div>
   );
 }

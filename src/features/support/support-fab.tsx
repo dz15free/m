@@ -11,6 +11,8 @@ import { getAppConfig } from "@/features/billing/repo";
 import { authedFetch } from "@/lib/firebase/api";
 import { cn } from "@/lib/utils/cn";
 import { markReadByTeacher, OPEN_SUPPORT, openSupport, sendTeacherMessage, watchMessages, watchThread, type Message, type Thread } from "./repo";
+import { pick, intlLocale } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 /* زر عائم للتواصل مع الإدارة. على الهاتف يرتفع فوق الشريط السفلي (وفوق أشرطة الحفظ
    الثابتة عبر CSS :has)، وعلى الحاسوب في الزاوية. يفتح لوحة محادثة كاملة الشاشة على الهاتف. */
@@ -88,7 +90,7 @@ function SupportPanel({
   onClose: () => void;
 }) {
   const t = useTranslations("support");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const auth = useAuth();
   const teacher = useTeacher().data;
   const config = useQuery({ queryKey: ["appConfig"], queryFn: getAppConfig, staleTime: 10 * 60_000 });
@@ -132,7 +134,7 @@ function SupportPanel({
     }
   }
 
-  const time = (at: number) => new Intl.DateTimeFormat(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ", { dateStyle: "short", timeStyle: "short" }).format(at);
+  const time = (at: number) => new Intl.DateTimeFormat(intlLocale(locale), { dateStyle: "short", timeStyle: "short" }).format(at);
   const wa = contact?.whatsapp?.replace(/[^\d]/g, "");
 
   return (
@@ -148,7 +150,7 @@ function SupportPanel({
           <div className="min-w-0 flex-1">
             <h2 id="support-title" className="text-lg font-bold">{t("title")}</h2>
             <p className="text-sm text-white/85">{t("subtitle")}</p>
-            <p className="mt-1 text-xs text-white/70">{contact?.hours?.[locale] || t("hours")}</p>
+            <p className="mt-1 text-xs text-white/70">{pick(contact?.hours, locale) || t("hours")}</p>
           </div>
           <button type="button" onClick={onClose} aria-label={t("close")} className="grid size-10 place-items-center rounded-full hover:bg-white/10">
             <X aria-hidden className="size-5" />

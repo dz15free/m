@@ -25,10 +25,10 @@ function partsInAlgiers(date: Date) {
   return { year: Number(get("year")), month: Number(get("month")), day: Number(get("day")), weekday };
 }
 
-/** «الخميس 24 سبتمبر 2026» / « jeudi 24 septembre 2026 » — بأرقام لاتينية. */
+/** «الخميس 24 سبتمبر 2026» / « jeudi 24 septembre 2026 » / "Thursday 24 September 2026" — بأرقام لاتينية. */
 export function formatLongDate(date: Date, locale: Locale): string {
-  if (locale === "fr") {
-    return new Intl.DateTimeFormat("fr-DZ", {
+  if (locale !== "ar") {
+    return new Intl.DateTimeFormat(locale === "fr" ? "fr-DZ" : "en-GB", {
       timeZone: TZ,
       weekday: "long",
       day: "numeric",
@@ -64,8 +64,8 @@ export function formatHijri(iso: string): string {
   }
 }
 
-/** اسم الشهر (1 = جانفي): «أكتوبر» / « octobre ». */
+/** اسم الشهر (1 = جانفي): «أكتوبر» / « octobre » / "October". */
 export function monthName(month: number, locale: Locale): string {
   if (locale === "ar") return MONTHS_DZ[month - 1] ?? "";
-  return new Intl.DateTimeFormat("fr-DZ", { month: "long", timeZone: "UTC" }).format(Date.UTC(2000, month - 1, 15));
+  return new Intl.DateTimeFormat(locale === "fr" ? "fr-DZ" : "en-GB", { month: "long", timeZone: "UTC" }).format(Date.UTC(2000, month - 1, 15));
 }

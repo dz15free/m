@@ -5,6 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { Quote, Star } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { useLandingData, type Testimonial } from "./landing-data";
+import { pick, intlLocale } from "@/i18n/pick";
+import type { Locale } from "@/i18n/config";
 
 const MIN_FOR_AVERAGE = 3;
 
@@ -20,9 +22,9 @@ function Stars({ n, className }: { n: number; className?: string }) {
 
 function Card({ t: item, tone }: { t: Testimonial; tone: "dark" | "light" }) {
   const t = useTranslations("testimonials");
-  const locale = useLocale() as "ar" | "fr";
+  const locale = useLocale() as Locale;
   const name = item.firstName || t("teacher");
-  const where = [t(`stage.${item.stage === "middle" || item.stage === "secondary" ? item.stage : "primary"}`), item.wilaya?.[locale]].filter(Boolean).join(" · ");
+  const where = [t(`stage.${item.stage === "middle" || item.stage === "secondary" ? item.stage : "primary"}`), pick(item.wilaya, locale)].filter(Boolean).join(" · ");
   const dark = tone === "dark";
   return (
     <figure
@@ -142,7 +144,7 @@ export function MemoBadge({ label, className }: { label: string; className?: str
   return (
     <div className={className}>
       <p className="text-2xl font-bold tabular-nums">
-        <bdi>+{n.toLocaleString(locale === "ar" ? "ar-DZ-u-nu-latn" : "fr-DZ")}</bdi>
+        <bdi>+{n.toLocaleString(intlLocale(locale))}</bdi>
       </p>
       <p className="text-xs text-white/75">{label}</p>
     </div>

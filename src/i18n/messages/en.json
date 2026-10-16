@@ -1,0 +1,2058 @@
+{
+  "meta": {
+    "title": "مساعد الأستاذ",
+    "description": "The teacher's digital desk: classes, pupils, attendance, lessons, progressions, documents and teaching resources in one place."
+  },
+  "brand": {
+    "name": "مساعد الأستاذ",
+    "tagline": "Your platform for organising your teaching work"
+  },
+  "nav": {
+    "main": "Main navigation",
+    "today": "Today",
+    "classes": "My classes",
+    "session": "Session",
+    "sessionHint": "Open the current session",
+    "library": "Library",
+    "more": "More",
+    "schedule": "Timetable",
+    "logbook": "Notebooks",
+    "planning": "Progressions",
+    "documents": "Documents and posters",
+    "billing": "Subscription",
+    "settings": "Settings",
+    "lessons": "Lesson plans"
+  },
+  "common": {
+    "language": "Language",
+    "comingSoonTitle": "Under construction",
+    "comingSoonBody": "This page is part of the next steps and will be available soon.",
+    "backToToday": "Back to today",
+    "skipToContent": "Skip to content",
+    "printReady": {
+      "body": "The document is ready: print it directly or save it as a PDF on your device."
+    },
+    "print": {
+      "print": "Print",
+      "pdf": "Save as PDF",
+      "preparing": "Preparing the PDF…",
+      "layout": "Laying out…",
+      "progress": "Page {done} of {total}",
+      "downloaded": "File downloaded",
+      "ready": "The PDF is ready",
+      "save": "Save the file",
+      "again": "Download again",
+      "close": "Close",
+      "error": "Could not create the PDF. Try again, or use «Print» then «Save as PDF»."
+    }
+  },
+  "landing": {
+    "login": "Sign in",
+    "start": "7-day free trial",
+    "heroTitle": "Everything a teacher needs, in one place",
+    "heroSubtitle": "Enter your data once… the platform does the rest.",
+    "heroNote": "7-day free trial with no bank card, then an annual subscription of only 2,500 DA.",
+    "featuresTitle": "Everything you need, every day",
+    "features": {
+      "notebook": {
+        "title": "The daily notebook fills itself in",
+        "body": "From your timetable and the lesson plans: activity, domain, topic and objective in their place, in the official Arabic or French template."
+      },
+      "lessons": {
+        "title": "Ready-made lesson plans",
+        "body": "The plan for each session by sequence and week: topic, materials, objectives and procedure, ready to print — French and English plans in their own language."
+      },
+      "import": {
+        "title": "The class list in one minute",
+        "body": "From an Excel file, the official PDF or a photo of the list: you check, then confirm."
+      },
+      "attendance": {
+        "title": "Attendance in seconds",
+        "body": "«All present», then change only the exceptions, even offline."
+      },
+      "schedule": {
+        "title": "Your timetable, entered once",
+        "body": "Typed in or imported from Excel, PDF or a photo: each day's sessions are ready."
+      },
+      "planning": {
+        "title": "Annual and monthly progressions",
+        "body": "Built from the curricula, with official holidays and exams, a reminder at the start of each month and «Where am I?» to track your progress."
+      },
+      "grades": {
+        "title": "Mark book",
+        "body": "Each term's marks by class, with averages and rankings ready to print."
+      },
+      "library": {
+        "title": "Teaching library",
+        "body": "Progressions, exercises, tests and posters sorted by level and subject, in Arabic, French and English."
+      },
+      "documents": {
+        "title": "Print-ready documents",
+        "body": "Notebooks, progressions, lists and certificates filled in with your data and printed in the official template, in colour."
+      }
+    },
+    "importTitle": "A long list?",
+    "importBody": "Take a photo, check it, confirm it. Recognition runs on your phone: the image is never sent to any server.",
+    "importSteps": [
+      "Take a photo",
+      "Check",
+      "Confirm"
+    ],
+    "ctaTitle": "Start the school year well organised",
+    "footer": "مساعد الأستاذ",
+    "problemTitle": "Less time on paperwork, more time with your pupils",
+    "problemBody": "Every day, teachers rewrite the same information: daily notebook, pupil lists, attendance, marks and administrative documents. They hunt for lesson plans in scattered groups and websites. The platform brings everything together and links the tools to each other, so you never write the same thing twice.",
+    "pains": [
+      "The daily notebook handwritten every day",
+      "Lesson plans scattered across groups and files",
+      "Pupil lists copied out name by name",
+      "Administrative documents filled in again and again"
+    ],
+    "spotTitle": "The daily notebook fills itself in",
+    "spotBody": "It is filled from your timetable, linked to the lesson plans and the annual progression. Every morning, open today's notebook ready to go: print it or save it as a PDF for signing. A line to change? One tap is enough.",
+    "spotSteps": [
+      "Enter your timetable once",
+      "Each session is linked to that week's lesson plan",
+      "Open today's notebook ready to print and sign"
+    ],
+    "whyTitle": "Why choose us?",
+    "why": {
+      "local": {
+        "title": "Designed for the Algerian school",
+        "body": "Sequences, domains, the preparatory period and notebook templates exactly as teachers, inspectors and head teachers know them."
+      },
+      "bilingual": {
+        "title": "Arabic, French and English",
+        "body": "Interface in Arabic, French and English; French and English documents and lesson plans in their own language."
+      },
+      "mobile": {
+        "title": "On your phone, even offline",
+        "body": "Installable like an app; attendance is saved offline and synced later."
+      },
+      "private": {
+        "title": "Pupils' data stays private",
+        "body": "Each teacher sees only their own data; the administration cannot access pupils' names or marks."
+      },
+      "support": {
+        "title": "Direct support",
+        "body": "The contact button in the app reaches us directly, and we answer you ourselves."
+      }
+    },
+    "trialTitle": "Try before you subscribe",
+    "trialBody": "When you sign up, your 7-day free trial starts, with no bank card: all the tools, with summaries of every lesson plan and a full selection. Then choose your subscription to continue and unlock everything. Your data is never deleted.",
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "Who is the platform for?",
+        "a": "For any teacher who wants to organise their work in one place: daily notebook, lesson plans, progressions, pupils and documents, in Arabic, French and English. The content is updated and expanded continuously."
+      },
+      {
+        "q": "How is the daily notebook filled in?",
+        "a": "You enter your timetable once; for each session we suggest the topic and objectives from the lesson plans for that week of the year. You check, edit if needed, then print."
+      },
+      {
+        "q": "Do I need a particular computer or printer?",
+        "a": "No. The platform works on phones and computers; printing or saving as PDF is done from the browser."
+      },
+      {
+        "q": "What happens after the trial?",
+        "a": "The tools are locked until you subscribe; all your data is kept and comes back as soon as you subscribe."
+      },
+      {
+        "q": "How much is the subscription?",
+        "a": "2,500 DA for the whole year, after a 7-day free trial with no bank card."
+      },
+      {
+        "q": "How do I pay?",
+        "a": "By Edahabia or CIB card through Chargily, or contact us for another method."
+      },
+      {
+        "q": "Who can see my pupils' data?",
+        "a": "Only you. Nobody else can access it, and it is used for nothing else."
+      }
+    ],
+    "ctaBody": "Sign up and start your free trial. Setting up takes only a few minutes.",
+    "startShort": "Free trial",
+    "heroChips": [
+      "Follows the official plans and calendar",
+      "On your phone, even offline",
+      "Prints in the official template"
+    ],
+    "galleryEyebrow": "Inside the platform",
+    "galleryTitle": "Simple on your phone… and everything in its place",
+    "gallery": [
+      {
+        "src": "home",
+        "title": "Your day at a glance",
+        "body": "Today's sessions, notebook and lesson plans from the first screen."
+      },
+      {
+        "src": "attendance",
+        "title": "Roll call in one tap",
+        "body": "«All present», then only the exceptions."
+      },
+      {
+        "src": "progression",
+        "title": "Where am I?",
+        "body": "Your progress through the progression, week after week."
+      }
+    ],
+    "spotShot": "The daily notebook in the app",
+    "pricingTitle": "One price, everything unlocked",
+    "trialName": "Free trial",
+    "trialPrice": "7 days",
+    "trialPoints": [
+      "All tools unlocked",
+      "Summaries of every lesson plan and full sample plans",
+      "No bank card"
+    ],
+    "yearName": "Annual subscription",
+    "yearPrice": "2,500 DA",
+    "yearPer": "for the whole year",
+    "yearPoints": [
+      "Every full lesson plan with its procedure",
+      "Daily notebook, progressions and documents",
+      "Roll call, marks and all the tools",
+      "Payment by EDAHABIA or CIB card"
+    ],
+    "popular": "Most popular",
+    "demoNote": "Real screenshots of the platform with sample data."
+  },
+  "auth": {
+    "loginTitle": "Sign in",
+    "loginSubtitle": "Good to see you back at your digital desk.",
+    "registerTitle": "Create an account",
+    "registerSubtitle": "Start your 7-day free trial. Signing up takes less than a minute.",
+    "resetTitle": "Forgot password",
+    "resetSubtitle": "Enter your email and we will send you a link to choose a new password.",
+    "google": "Continue with Google",
+    "or": "or",
+    "name": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least 8 characters",
+    "submitLogin": "Sign in",
+    "submitRegister": "Create account",
+    "submitReset": "Send the link",
+    "forgot": "Forgot your password?",
+    "noAccount": "No account yet?",
+    "hasAccount": "Already have an account?",
+    "toRegister": "Create your account and try it free",
+    "toLogin": "Sign in",
+    "backToLogin": "Back to sign in",
+    "resetSent": "If this email is registered, you will receive a message in a few minutes. Remember to check your spam folder.",
+    "terms": "By creating an account, you accept the <terms>terms of use</terms> and the <privacy>privacy policy</privacy>.",
+    "signOut": "Sign out",
+    "loading": "Loading…",
+    "verifyTitle": "Confirm your email",
+    "verifyBody": "We sent a confirmation link to",
+    "verifyResend": "Resend",
+    "verifySent": "Sent",
+    "verifyDone": "Done",
+    "errors": {
+      "invalidCredentials": "Incorrect email or password.",
+      "emailInUse": "This email is already registered. Sign in instead.",
+      "weakPassword": "Password too short: at least 8 characters.",
+      "invalidEmail": "Invalid email address.",
+      "tooManyRequests": "Too many attempts. Wait a moment, then try again.",
+      "network": "Cannot connect. Check your Internet connection, then try again.",
+      "popupClosed": "The Google window was closed before signing in finished.",
+      "accountExists": "This email uses another sign-in method. Try email and password.",
+      "unauthorizedDomain": "This domain is not yet authorised for sign-in.",
+      "notConfigured": "The service is not configured yet.",
+      "generic": "An unexpected error occurred. Try again."
+    },
+    "signOutPending": "Some changes have not been sent yet (no connection) and will be lost. Reconnect and wait for syncing, or press OK to sign out anyway."
+  },
+  "today": {
+    "greeting": "Welcome 👋",
+    "nextSteps": "Let's set up your desk",
+    "steps": {
+      "classes": {
+        "title": "Add your first class",
+        "body": "The level, group and subjects you teach."
+      },
+      "students": {
+        "title": "Add your pupils",
+        "body": "A long list? No need to type the names one by one."
+      },
+      "schedule": {
+        "title": "Enter your timetable",
+        "body": "Just once, to see your sessions here every day."
+      }
+    },
+    "quickActions": "Quick actions",
+    "search": "Search the library",
+    "print": "Print a document",
+    "greetingName": "Hello {name} 👋",
+    "lessons": "Lesson plans"
+  },
+  "more": {
+    "title": "More"
+  },
+  "onboarding": {
+    "title": "Let's set up your desk",
+    "step": "Step {current} of {total}",
+    "back": "Back",
+    "next": "Next",
+    "finish": "Get started",
+    "saving": "Saving…",
+    "preset": {
+      "title": "How do you teach?",
+      "subtitle": "We adapt the platform to the way you work. You can change this later.",
+      "primaryGeneralist": {
+        "title": "Primary class teacher",
+        "body": "I teach most subjects to one class (or more)."
+      },
+      "primarySubject": {
+        "title": "Primary subject teacher",
+        "body": "I teach one subject (French, English…) to several groups."
+      },
+      "middleSecondary": {
+        "title": "Middle or secondary school teacher",
+        "body": "I teach one or more subjects to several groups."
+      }
+    },
+    "profileStep": {
+      "title": "Your professional details",
+      "subtitle": "Entered once, they appear automatically on your documents."
+    },
+    "schoolStep": {
+      "title": "Your school",
+      "subtitle": "The school where you teach this year."
+    },
+    "yearStep": {
+      "title": "School year",
+      "subtitle": "Check your details before you start.",
+      "yearLabel": "School year",
+      "yearHint": "Worked out automatically from today's date.",
+      "summary": "Summary"
+    },
+    "error": "Could not save. Check your Internet connection, then try again.",
+    "soon": "Soon"
+  },
+  "profile": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "stage": "Cycle",
+    "grade": "Grade",
+    "gradeOther": "Other (type it)",
+    "gradeCustom": "Grade as it should appear",
+    "stages": {
+      "primary": "Primary",
+      "middle": "Middle",
+      "secondary": "Secondary"
+    },
+    "wilaya": "Wilaya",
+    "wilayaPlaceholder": "Choose the wilaya",
+    "commune": "Commune",
+    "schoolName": "School name",
+    "schoolNamePlaceholder": "e.g. Chahid … Primary School",
+    "directorate": "Education directorate",
+    "directorateHint": "Suggested automatically; change it if your wilaya has more than one directorate.",
+    "required": "This field is required."
+  },
+  "settings": {
+    "title": "Settings",
+    "profileSection": "Professional profile",
+    "schoolSection": "School",
+    "save": "Save",
+    "saved": "Saved",
+    "error": "Could not save. Try again.",
+    "yearSection": "Current school year",
+    "delete": {
+      "title": "Delete account",
+      "body": "Permanently deletes your account and all your data: classes, pupils, attendance, notebooks, marks and messages. This cannot be undone.",
+      "button": "Permanently delete my account",
+      "confirmTitle": "Are you sure?",
+      "lose1": "Your classes, pupils and notebooks will be deleted immediately and cannot be recovered.",
+      "lose2": "Your current subscription (if any) is cancelled with no automatic refund.",
+      "lose3": "Only payment records are kept, as required by law.",
+      "word": "DELETE",
+      "typeWord": "To confirm, type «{word}»",
+      "password": "Password",
+      "google": "A Google window will open to confirm your identity.",
+      "confirm": "Delete permanently",
+      "cancel": "Cancel",
+      "error": "Could not delete. Try again later or contact the administration.",
+      "wrongPassword": "Incorrect password.",
+      "admin": "An administrator account cannot be deleted here. Remove the admin role first."
+    },
+    "account": {
+      "title": "Account and sign-in",
+      "email": "Email address",
+      "verified": "Verified",
+      "notVerified": "Not verified",
+      "passwordNote": "You sign in with your email and password. You can change them here.",
+      "googleNote": "You sign in with Google: your email is your Google email and is managed by Google. You can add a password to also sign in by email.",
+      "changeEmail": "Change email address",
+      "changePassword": "Change password",
+      "addPassword": "Add a password",
+      "emailHow": "We will send a confirmation link to the new address. Your email only changes after you click that link; you will then sign in with the new address. Your current address receives a notice allowing you to cancel.",
+      "newEmail": "New email address",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm the new password",
+      "passwordRule": "At least 8 characters.",
+      "mismatch": "The two passwords do not match.",
+      "sendLink": "Send the confirmation link",
+      "save": "Save",
+      "cancel": "Cancel",
+      "addPasswordHow": "A Google window will open to identify you, then the password will be added so you can also sign in by email.",
+      "emailSent": "Confirmation link sent to {email}. Open your inbox and click the link to finish, then sign in with the new address.",
+      "passwordChanged": "Password changed.",
+      "passwordAdded": "Password added: you can also sign in with your email and this password."
+    }
+  },
+  "classes": {
+    "title": "My classes",
+    "add": "Add classes",
+    "empty": "No classes yet.",
+    "emptyHint": "Add your classes all at once: choose the levels and the number of groups.",
+    "students": "{count, plural, =0 {No pupils} one {# pupil} other {# pupils}}",
+    "loadError": "Could not load the classes. Check your Internet connection.",
+    "new": {
+      "title": "Add classes",
+      "subtitle": "Choose the levels and the number of groups; we create them all at once.",
+      "levels": "Levels",
+      "groups": "Number of groups",
+      "subjects": "Subjects taught in these classes",
+      "subjectsHintGeneralist": "All the level's subjects are preselected. Remove the ones you don't teach.",
+      "subjectsHintSubject": "Choose the subject(s) you teach to these groups.",
+      "pickLevel": "Choose at least one level.",
+      "pickSubject": "Choose at least one subject.",
+      "preview": "Will be created:",
+      "create": "Create {count, plural, one {# class} other {# classes}}",
+      "creating": "Creating…",
+      "error": "Could not create the classes. Try again.",
+      "decrease": "Decrease",
+      "increase": "Increase"
+    },
+    "detail": {
+      "notFound": "This class does not exist.",
+      "back": "My classes",
+      "subjects": "Subjects",
+      "editSubjects": "Edit subjects",
+      "rename": "Rename",
+      "name": "Class name",
+      "save": "Save",
+      "cancel": "Cancel",
+      "copy": "Duplicate the class",
+      "copyHint": "A new class with the same level and subjects, without the pupils.",
+      "copied": "{name} created",
+      "archive": "Archive the class",
+      "archiveConfirm": "Hide the class from the lists? All its data is kept.",
+      "delete": "Delete the class",
+      "deleteConfirm": "Permanently delete this class?",
+      "actions": "Actions",
+      "saved": "Saved",
+      "error": "Could not save. Try again.",
+      "tabs": {
+        "students": "Pupils",
+        "attendance": "Attendance",
+        "lessons": "Lessons",
+        "schedule": "Timetable",
+        "documents": "Documents",
+        "stats": "Statistics"
+      },
+      "soon": "Soon"
+    }
+  },
+  "students": {
+    "title": "Pupils",
+    "search": "Search for a pupil",
+    "noResults": "No results.",
+    "empty": "No pupils in this class.",
+    "emptyHint": "A long list? No need to type the names one by one.",
+    "quickAdd": "Quick add",
+    "quickAddHint": "Type the last name then Enter, the first name then Enter to add the pupil and move to the next.",
+    "last": "Last name",
+    "first": "First name",
+    "gender": "Sex",
+    "male": "Boy",
+    "female": "Girl",
+    "add": "Add",
+    "import": "Import a list",
+    "importHint": "Photo, PDF, Excel or copy-paste",
+    "sort": "Sort alphabetically",
+    "export": "Export (Excel)",
+    "n": "No.",
+    "select": "Select",
+    "done": "Done",
+    "selected": "{count} selected",
+    "selectAll": "Select all",
+    "delete": "Delete",
+    "deleteConfirm": "Remove {count, plural, one {# pupil} other {# pupils}} from the class?",
+    "move": "Move to…",
+    "moveConfirm": "Move the selected pupils to {name}?",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "deleteOne": "Delete the pupil",
+    "full": "The class has reached the maximum (60 pupils).",
+    "error": "Could not save. Check your Internet connection, then try again.",
+    "duplicates": "{count, plural, one {# possible duplicate} other {# possible duplicates}}",
+    "saving": "Saving…",
+    "saved": "Saved"
+  },
+  "import": {
+    "title": "Add your pupils",
+    "subtitle": "A long list? No need to type the names one by one.",
+    "privacy": "Everything is processed on your device. Images and files are never sent to any server.",
+    "sources": {
+      "camera": {
+        "title": "Photograph the list",
+        "body": "One or more pages with the camera"
+      },
+      "file": {
+        "title": "Image or PDF",
+        "body": "From your files or gallery, several pages"
+      },
+      "excel": {
+        "title": "Excel file",
+        "body": "xlsx or csv — columns detected automatically"
+      },
+      "paste": {
+        "title": "Paste the names",
+        "body": "From Word, WhatsApp or elsewhere"
+      },
+      "manual": {
+        "title": "Type them in",
+        "body": "Quick keyboard entry"
+      }
+    },
+    "listLang": "Language of the list",
+    "langAr": "العربية",
+    "langFr": "Français",
+    "langBoth": "Both",
+    "pages": "Pages",
+    "addPage": "Add a page",
+    "rotate": "Rotate",
+    "removePage": "Remove the page",
+    "startOcr": "Start recognition",
+    "photoTips": "For the best result: good lighting, a flat sheet, and a list that fills the photo.",
+    "pasteTitle": "Paste the list here",
+    "pastePlaceholder": "BENAMAR Yacine\nHAMDANI Nour El Houda\n…",
+    "pasteHint": "One line per pupil. Numbers and symbols are removed automatically.",
+    "analyze": "Analyse",
+    "loadingEngine": "Preparing the recognition engine… (only once)",
+    "reading": "Reading the file…",
+    "page": "Page {current} of {total}",
+    "cancel": "Cancel",
+    "found": "{count, plural, =0 {No names found} one {# pupil found} other {# pupils found}}",
+    "statusOk": "Clear",
+    "statusCheck": "To check",
+    "statusBad": "Not recognised",
+    "needsReview": "{count, plural, one {# name to check} other {# names to check}}",
+    "mostlyOk": "Most names were recognised, but {count, plural, one {# name needs} other {# names need}} checking.",
+    "orderLastFirst": "Last name then first name",
+    "orderFirstLast": "First name then last name",
+    "swap": "Swap last and first names",
+    "reviewFirst": "To check first",
+    "group": "Class in the file",
+    "allGroups": "All classes",
+    "include": "Import",
+    "addRow": "Add a row",
+    "deleteRow": "Delete the row",
+    "reasons": {
+      "lowConfidence": "Uncertain reading",
+      "veryLowConfidence": "Very weak reading",
+      "missingFirst": "First name missing",
+      "missingLast": "Last name missing",
+      "strangeChars": "Numbers or symbols removed",
+      "mixedScripts": "Arabic and Latin letters mixed",
+      "shortWord": "Single letter",
+      "tooLong": "Too long",
+      "duplicate": "Duplicate in the list",
+      "existsInClass": "Already in the class"
+    },
+    "modeAppend": "Add to the current pupils",
+    "modeReplace": "Replace the current list",
+    "confirm": "{count, plural, =0 {Nothing to import} one {Confirm and import # pupil} other {Confirm and import # pupils}}",
+    "saving": "Importing…",
+    "tooMany": "The total exceeds the class maximum (60). Remove rows or split across two classes.",
+    "failTitle": "Some data could not be recognised accurately.",
+    "failBody": "Try a sharper photo, or another method:",
+    "xlsUnsupported": "The old Excel format (.xls) is not supported. Save it as .xlsx, or copy the cells and paste them here.",
+    "readError": "Could not read the file. Check that it is not damaged, or try another method.",
+    "saveError": "Could not save. Check your Internet connection, then try again.",
+    "restore": "You have an unfinished check for this list.",
+    "restoreYes": "Continue",
+    "restoreNo": "Discard",
+    "back": "Back",
+    "startOver": "Start over",
+    "readingAsImage": "The file's text is unreadable; reading from the page image…",
+    "pdfReadAsImage": "This file's text is badly encoded: it was read from the page image. Check the names before confirming.",
+    "pdfWrongNames": "Garbled or incomplete names? Read the file from the page image instead of its text.",
+    "pdfRereadImage": "Read as image"
+  },
+  "attendance": {
+    "title": "Attendance",
+    "today": "Today",
+    "prevDay": "Previous day",
+    "nextDay": "Next day",
+    "date": "Date",
+    "part": "Session",
+    "am": "Morning",
+    "pm": "Afternoon",
+    "allPresent": "All present",
+    "allPresentDone": "All present ✓",
+    "present": "Present",
+    "absent": "Absent",
+    "late": "Late",
+    "excused": "Excused",
+    "summary": "{p} present · {a} absent · {l} late · {e} excused",
+    "notTaken": "The roll has not been taken for this session yet.",
+    "hint": "Press «All present», then change only the exceptions. Saved automatically.",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "offline": "Offline — will be saved when the Internet is back",
+    "error": "Could not save. Try again.",
+    "noStudents": "No pupils in this class.",
+    "addStudents": "Add pupils",
+    "stats": "Statistics",
+    "take": "Take the roll",
+    "statsTitle": "Attendance statistics",
+    "sessions": "Sessions recorded",
+    "rate": "Attendance rate",
+    "absences": "Absences",
+    "lates": "Late arrivals",
+    "excuseds": "Excused absences",
+    "byMonth": "By month",
+    "byStudent": "By pupil",
+    "mostAbsent": "Most absent first",
+    "noStats": "No statistics yet. Take the roll at the first session.",
+    "student": "Pupil"
+  },
+  "schedule": {
+    "title": "Timetable",
+    "subtitle": "Enter your weekly sessions once; each day's sessions appear automatically.",
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "empty": "No sessions on this day.",
+    "add": "Add a session",
+    "edit": "Edit the session",
+    "start": "From",
+    "end": "To",
+    "class": "Class",
+    "subject": "Subject",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "error": "Could not save. Try again.",
+    "overlap": "Overlaps another session on the same day.",
+    "session": "Session",
+    "sessionAuto": "Automatic (by duration)",
+    "invalidTime": "The end time must be after the start.",
+    "copyDay": "Copy this day to…",
+    "copyConfirm": "Replace {day}'s sessions with a copy of this day?",
+    "noClasses": "Add your classes first to build the timetable.",
+    "addClasses": "Add classes",
+    "perWeek": "{count, plural, =0 {No sessions} one {# session} other {# sessions}} per week",
+    "importTitle": "Import from Excel, PDF or a photo",
+    "importHint": "Photograph or upload your timetable: it is turned into sessions for you to check before saving."
+  },
+  "session": {
+    "title": "Session",
+    "now": "Now",
+    "next": "Next",
+    "noneToday": "No sessions today.",
+    "holiday": "Holiday",
+    "noSchedule": "You have not entered your timetable yet.",
+    "setSchedule": "Enter the timetable",
+    "pickClass": "Or choose a class to take the roll:",
+    "opening": "Opening the session…"
+  },
+  "todayBoard": {
+    "sessionsToday": "Today's sessions",
+    "attendanceDone": "Attendance: {p}/{total}",
+    "takeAttendance": "Take the roll",
+    "dayOff": "No classes today.",
+    "ended": "Today's sessions are over.",
+    "current": "Now",
+    "upcoming": "Upcoming",
+    "done": "Finished",
+    "dailyNotebook": "Daily notebook"
+  },
+  "logbook": {
+    "title": "Teacher's notebooks",
+    "subtitle": "Your official notebooks in the primary-school template, filled from your timetable and ready to print.",
+    "notebooks": {
+      "daily": {
+        "title": "Daily notebook",
+        "body": "Each session: activity, domain, content, competency components — morning and afternoon."
+      },
+      "prep": {
+        "title": "Preparation notebook (lesson plans)",
+        "body": "Session plans: starting situation, building the learning, reinvestment."
+      },
+      "grades": {
+        "title": "Mark book",
+        "body": "Marks by component (Arabic, maths), averages, rankings, mark sheets and results for each term."
+      },
+      "soon": "Soon",
+      "front": {
+        "title": "Front pages",
+        "body": "Cover, personal details sheet, pupil lists, timetable, teaching hours, holidays."
+      }
+    },
+    "daily": {
+      "title": "Daily notebook",
+      "week": "Week",
+      "prevWeek": "Previous week",
+      "nextWeek": "Next week",
+      "thisWeek": "This week",
+      "print": "Print the week",
+      "noSchedule": "Enter your timetable first: the notebook's rows are generated from it.",
+      "setSchedule": "Timetable",
+      "dayOff": "No sessions on this day",
+      "empty": "Tap to note what was done",
+      "addHint": "Note the topic and what was done during this session.",
+      "time": "Time",
+      "class": "Class",
+      "subject": "Subject",
+      "fields": {
+        "activity": "Activity",
+        "unit": "Domain",
+        "title": "Topic",
+        "objective": "Objective / competency indicators",
+        "materials": "Materials",
+        "notes": "Remarks"
+      },
+      "placeholders": {
+        "activity": "e.g. reading",
+        "unit": "e.g. written comprehension",
+        "title": "e.g. my family",
+        "objective": "e.g. reads the text fluently",
+        "materials": "e.g. book, board, cards",
+        "notes": ""
+      },
+      "status": "Completion",
+      "statuses": {
+        "done": "Done",
+        "partial": "Partly done",
+        "notDone": "Not done"
+      },
+      "save": "Save",
+      "cancel": "Cancel",
+      "clear": "Clear",
+      "saved": "Saved",
+      "error": "Could not save. Try again.",
+      "fromDay": "Today",
+      "duration": "Duration",
+      "minutes": "{n} min",
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "date": "Date",
+      "hijri": "Corresponding to",
+      "remarks": "Remarks",
+      "reviewedBy": "Seen by Mr/Ms",
+      "fromPrep": "From a lesson plan",
+      "printToday": "Today's notebook ready to print",
+      "printDay": "Print the day",
+      "autoNote": "Rows marked «Suggested» are filled automatically from your timetable and the lesson plans for the week. They print as they are; tap a row to edit it.",
+      "suggested": "Suggested",
+      "pickLesson": "Choose the session from the lesson plans",
+      "openLesson": "Open the lesson plan",
+      "dayN": "Day {n}",
+      "weekN": "Week {n}",
+      "meta": {
+        "seq": "Sequence",
+        "week": "Week",
+        "session": "Session"
+      },
+      "from": "From",
+      "to": "To",
+      "day": "Day",
+      "prepWeek": "Preparatory period: week {w} — day {d}",
+      "schoolWeek": "School week {n}",
+      "directorSeen": "Seen by the head teacher on",
+      "signature": "Signature and stamp"
+    },
+    "print": {
+      "teacher": "Teacher",
+      "school": "School",
+      "year": "School year",
+      "from": "From",
+      "to": "to",
+      "republic": "People's Democratic Republic of Algeria",
+      "ministry": "Ministry of National Education"
+    },
+    "back": "Notebooks",
+    "prep": {
+      "title": "Preparation notebook (lesson plans)",
+      "new": "New lesson plan",
+      "empty": "No lesson plans. Write your first plan and reuse it every year.",
+      "search": "Search for a lesson plan",
+      "allSubjects": "All subjects",
+      "duplicate": "Duplicate",
+      "duplicated": "Copy of a lesson plan",
+      "print": "Print",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteConfirm": "Permanently delete this lesson plan?",
+      "save": "Save",
+      "saved": "Saved",
+      "saving": "Saving…",
+      "error": "Saving failed. Try again.",
+      "notFound": "Lesson plan not found.",
+      "back": "Lesson plans",
+      "untitled": "Untitled lesson plan",
+      "subject": "Subject",
+      "grade": "Level",
+      "date": "Day",
+      "hijri": "Corresponding to",
+      "teacher": "Teacher",
+      "fields": {
+        "domain": "Domain",
+        "sequence": "Sequence",
+        "activity": "Activity",
+        "week": "Week",
+        "content": "Content",
+        "session": "Session",
+        "objective": "Learning objective",
+        "values": "Values",
+        "materials": "Materials"
+      },
+      "phasesTitle": "Procedure",
+      "stages": "Stages",
+      "situation": "Teaching and learning situation",
+      "assessment": "Assessment",
+      "phases": {
+        "launch": "Starting situation",
+        "build": "Building the learning",
+        "invest": "Reinvestment"
+      },
+      "placeholders": {
+        "launch": "The situation that sparks the pupils' interest…",
+        "build": "Activities, questions and progression…",
+        "invest": "Practice and integration exercises…",
+        "assessment": "What you check…"
+      },
+      "updated": "Edited on"
+    },
+    "front": {
+      "title": "Notebook front pages",
+      "intro": "Choose the notebook and the pages: they are filled from your profile, classes and timetable; anything else prints as dotted lines to complete by hand.",
+      "notebook": "Notebook",
+      "pages": "Pages",
+      "print": "Print the chosen pages",
+      "sections": {
+        "cover": "Cover",
+        "card": "Personal details sheet",
+        "students": "Pupil lists",
+        "timetable": "Weekly timetable",
+        "load": "Subjects and teaching hours",
+        "holidays": "School holidays",
+        "surahs": "List of surahs",
+        "songs": "List of songs and recitations"
+      },
+      "cardTitle": "Personal and professional details sheet",
+      "cardHint": "Private data: only you can access it, and it prints only if you choose to.",
+      "cardSave": "Save the sheet",
+      "cardSaved": "Sheet saved",
+      "edit": "Edit the sheet",
+      "close": "Close",
+      "groups": {
+        "personal": "Personal situation",
+        "career": "Professional situation",
+        "inspection": "Inspection",
+        "step": "Step"
+      },
+      "fields": {
+        "lastName": "Last name",
+        "firstName": "First name",
+        "birthDate": "Date of birth",
+        "birthPlace": "Place of birth",
+        "birthWilaya": "Wilaya",
+        "familyStatus": "Family status",
+        "spouseJob": "Spouse's occupation",
+        "address": "Home address",
+        "phone": "Phone",
+        "grade": "Grade",
+        "teachingLanguage": "Teaching language",
+        "firstDay": "Date of first appointment",
+        "schoolAppointment": "Date of assignment to the school",
+        "lastInspection": "Date of last inspection",
+        "inspector": "By the inspector, Mr/Ms",
+        "step": "Current step",
+        "stepDate": "Effective date"
+      },
+      "republic": "People's Democratic Republic of Algeria",
+      "ministry": "Ministry of National Education",
+      "yearLabel": "School year",
+      "coverTitles": {
+        "daily": "Daily notebook",
+        "prep": "Preparation notebook",
+        "grades": "Mark book"
+      },
+      "studentsTitle": "Pupil list",
+      "num": "No.",
+      "fullName": "Full name",
+      "birth": "Date of birth",
+      "remarks": "Remarks",
+      "class": "Class",
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "time": "Time",
+      "noSchedule": "Empty timetable: the grid prints blank.",
+      "subject": "Subject",
+      "sessions": "Sessions",
+      "weekly": "Weekly teaching hours",
+      "total": "Total",
+      "holidaysTitle": "School holidays",
+      "holiday": "Holiday / occasion",
+      "from": "From",
+      "to": "To",
+      "autumn": "Autumn holidays",
+      "winter": "Winter holidays",
+      "spring": "Spring holidays",
+      "surah": "Surah",
+      "song": "Song / recitation",
+      "page": "Page"
+    },
+    "grades": {
+      "title": "Mark book",
+      "class": "Class",
+      "term": "Term",
+      "terms": {
+        "1": "1st term",
+        "2": "2nd term",
+        "3": "3rd term"
+      },
+      "noClasses": "Add a class and its pupils first.",
+      "noStudents": "No pupils in this class.",
+      "addStudents": "Add the pupils",
+      "tabs": {
+        "entry": "Enter marks",
+        "results": "Results"
+      },
+      "column": "Column",
+      "outOf": "out of {n}",
+      "invalid": "Invalid mark (0 to {n})",
+      "saving": "Saving…",
+      "saved": "Saved",
+      "error": "Saving failed",
+      "entryHint": "Type the mark then Enter to move to the next pupil. Each mark is saved immediately.",
+      "filled": "{done}/{total} entered",
+      "components": {
+        "ar_oral": "Oral expression and communication",
+        "ar_reading": "Reading and recitation",
+        "ar_writing": "Writing and dictation",
+        "math_numbers": "Numbers and calculation",
+        "math_measures": "Quantities and measures",
+        "math_data": "Organising data",
+        "math_geometry": "Space and geometry"
+      },
+      "average": "Average",
+      "subjectAvg": "{subject} average",
+      "general": "Overall average",
+      "rank": "Rank",
+      "annual": "Annual average",
+      "remarks": "Remarks",
+      "num": "No.",
+      "student": "Full name",
+      "printSheet": "Print the mark sheet",
+      "printResults": "Print the results",
+      "sheetTitleArMath": "Mark sheet: Arabic and mathematics",
+      "sheetTitle": "Mark sheet",
+      "resultsTitle": "Results of the {term}",
+      "evaluation": "Assessment: {subject}",
+      "school": "School",
+      "teacher": "Teacher",
+      "season": "School year",
+      "level": "Level",
+      "privacy": "Your marks are private: nobody else can see them, not even the platform administration."
+    }
+  },
+  "library": {
+    "title": "Library",
+    "subtitle": "Lesson plans, progressions, tests, posters and templates — sorted by level and subject.",
+    "search": "Search: colours lesson plan, term 1 test…",
+    "myClasses": "My classes",
+    "allLevels": "All levels",
+    "allSubjects": "All subjects",
+    "allTypes": "All",
+    "free": "Included in the trial",
+    "premium": "Subscribers",
+    "results": "{n, plural, =0 {No results} one {# result} other {# results}}",
+    "empty": "The library is filling up with new content. Come back soon!",
+    "noResults": "No results. Try another word or remove filters.",
+    "clear": "Clear filters",
+    "types": {
+      "textbook": "Textbook",
+      "guide": "Guides and official documents",
+      "fiche": "Lesson plan",
+      "progression": "Progression",
+      "exercise": "Exercises and activities",
+      "evaluation": "Test",
+      "exam": "Exam",
+      "poster": "Poster",
+      "template": "Template",
+      "adminDoc": "Administrative document",
+      "audio": "Audio",
+      "video": "Video",
+      "image": "Image"
+    },
+    "term": "Term {n}",
+    "allLevelsTag": "All levels",
+    "unit": "Unit / sequence",
+    "files": "Files",
+    "open": "Open",
+    "download": "Download",
+    "opening": "Opening…",
+    "notFound": "This content is not available.",
+    "back": "Library",
+    "premiumTitle": "Subscribers-only content",
+    "premiumBody": "During the trial you can browse the whole library and open content marked «Included in the trial». Subscribe to unlock everything.",
+    "upgrade": "Subscribe",
+    "fileError": "Could not open the file. Check your connection and try again.",
+    "author": "Created by",
+    "manage": "Manage content",
+    "langs": {
+      "label": "Content language",
+      "all": "All",
+      "ar": "Arabic and subjects",
+      "fr": "Français",
+      "en": "English"
+    }
+  },
+  "contentAdmin": {
+    "title": "Content management",
+    "new": "New content",
+    "edit": "Edit content",
+    "forbidden": "This page is for editors only.",
+    "backToApp": "Back to the app",
+    "stage": "Cycle",
+    "status": {
+      "draft": "Draft",
+      "published": "Published",
+      "archived": "Archived"
+    },
+    "empty": "No content for this cycle.",
+    "titleAr": "Title in Arabic",
+    "titleFr": "Title in French",
+    "level": "Level",
+    "subject": "Subject",
+    "any": "All",
+    "language": "Content language",
+    "languages": {
+      "ar": "Arabic",
+      "fr": "French",
+      "en": "English"
+    },
+    "type": "Type",
+    "term": "Term",
+    "noTerm": "No term",
+    "unit": "Unit / sequence",
+    "tags": "Keywords (comma-separated)",
+    "excerpt": "Short description (public)",
+    "access": "Access",
+    "author": "Author / source",
+    "license": "Licence",
+    "licenses": {
+      "original": "Original content",
+      "licensed": "Licensed by the author",
+      "public": "Public domain / official"
+    },
+    "licenseHint": "Do not publish copied content without its author's permission.",
+    "files": "Files",
+    "addFile": "Add a file",
+    "preview": "Preview image (optional, public)",
+    "addPreview": "Choose an image",
+    "remove": "Remove",
+    "uploading": "Uploading…",
+    "uploadError": "Upload failed: unsupported type or file too large (max {mb} MB).",
+    "save": "Save",
+    "saved": "Saved",
+    "saveError": "Saving failed.",
+    "delete": "Delete permanently",
+    "deleteConfirm": "Delete this content and its files?",
+    "needTitle": "Enter at least one title.",
+    "needFile": "Add at least one file before publishing.",
+    "publishedAt": "Published",
+    "count": "{n} items",
+    "notify": "Notify all teachers",
+    "catalog": {
+      "title": "Ready-made library",
+      "body": "{n} unpublished items ({files} files). Tick only what you want to publish, then «Publish selection».",
+      "button": "Publish selection ({n})",
+      "progress": "{done} of {total} — {title}",
+      "done": "The ready-made library has been fully imported.",
+      "failed": "{n} failed — run again with the same button:",
+      "uploadsTitle": "Our resources: choose the files on your device",
+      "uploadsBody": "{n} file(s) created by the platform are not stored in the public repository. Download the files you received, then choose them here (matched by name):",
+      "choose": "Choose files",
+      "matched": "{n} of {total} ready",
+      "waiting": "{n} item(s) are waiting for their file and stay in the list.",
+      "selectAll": "Tick all",
+      "selectNone": "Untick all",
+      "selected": "{n} of {total} selected — only what is ticked gets published",
+      "srcDrive": "Drive",
+      "srcWeb": "eddirasa",
+      "srcUpload": "Our own",
+      "needsFile": "Choose its file first"
+    },
+    "drive": {
+      "title": "New files on Drive",
+      "checking": "Checking the Drive folder…",
+      "error": "Could not read the Drive folder ({reason}).",
+      "body": "{n} new file(s) in the Drive folder not imported yet. Sorted automatically from their names; you can edit any item after importing.",
+      "none": "No new files in the Drive folder.",
+      "skipped": "({n} file(s) in an unsupported format or over 100 MB hidden.)",
+      "refresh": "Check Drive",
+      "button": "Import new ({n})",
+      "progress": "{done} of {total} — {title}",
+      "failed": "{n} failed, try again:",
+      "importSelected": "Import selection ({n})",
+      "selected": "{n} of {total} selected",
+      "selectAll": "Select all",
+      "allStages": "Show all Drive files, not only those for «{stage}»",
+      "selectNone": "Select none"
+    },
+    "search": "Search: title, subject, type…",
+    "countFiltered": "{n} of {total}",
+    "bulk": {
+      "select": "Select",
+      "selectShown": "Select all shown ({n})",
+      "clear": "Clear selection",
+      "selected": "{n} selected",
+      "delete": "Delete selection ({n})",
+      "confirm": "Yes, permanently delete {n}",
+      "cancel": "Cancel",
+      "warn": "The content and its files will be deleted permanently. Deleted Drive files will no longer be offered for import.",
+      "deleting": "Deleting… {done} of {total}",
+      "deleted": "{n} item(s) deleted.",
+      "error": "Some items could not be deleted. Try again."
+    }
+  },
+  "documents": {
+    "title": "Documents",
+    "subtitle": "Ready-made documents filled from your classes, pupils and profile, to print straight away.",
+    "templates": {
+      "certificates": {
+        "title": "Encouragement and congratulations certificates",
+        "body": "A named certificate for each pupil, with their average if marks are entered."
+      },
+      "absences": {
+        "title": "Monthly absence record",
+        "body": "From the attendance register: day by day, with totals."
+      },
+      "convocation": {
+        "title": "Parent summons",
+        "body": "Two summonses per page, with date, time and reason."
+      },
+      "classSign": {
+        "title": "Class sign",
+        "body": "A large sign for the door: level, group and teacher."
+      },
+      "nameCards": {
+        "title": "Pupil name cards",
+        "body": "Cards to fold and place on the desks."
+      }
+    },
+    "back": "Documents",
+    "print": "Print",
+    "preview": "Preview",
+    "class": "Class",
+    "students": "Pupils",
+    "all": "All",
+    "none": "None",
+    "noClasses": "Add a class and its pupils first.",
+    "noStudents": "No pupils in this class.",
+    "kind": "Certificate type",
+    "kinds": {
+      "encouragement": "Certificate of encouragement",
+      "congratulations": "Certificate of congratulations",
+      "honor": "Honour roll"
+    },
+    "term": "Term",
+    "terms": {
+      "1": "1st term",
+      "2": "2nd term",
+      "3": "3rd term"
+    },
+    "withAverage": "Show the average",
+    "average": "Average",
+    "minAverage": "Auto-select: average ≥",
+    "certBody": {
+      "encouragement": "to encourage the efforts made during the {term}",
+      "congratulations": "in congratulation for the good results of the {term}",
+      "honor": "for outstanding results in the {term}"
+    },
+    "awardedTo": "This certificate is awarded to",
+    "ofClass": "class",
+    "atSchool": "school",
+    "teacherSign": "The teacher",
+    "directorSign": "The head teacher",
+    "doneAt": "Done at",
+    "on": "on",
+    "month": "Month",
+    "absTitle": "Absence record — {month}",
+    "absences": "Absences",
+    "justified": "of which excused",
+    "late": "Late arrivals",
+    "num": "No.",
+    "student": "Full name",
+    "legend": "A: absence — E: excused absence — L: late. Each symbol = one half-day or one session.",
+    "noSessions": "No roll calls recorded for this class this month.",
+    "sessionsCount": "{n, plural, one {# session recorded} other {# sessions recorded}}",
+    "convTitle": "Summons",
+    "convTo": "To the parent of",
+    "convBody": "You are kindly requested to come to the school on {date} at {time}, regarding:",
+    "reason": "Reason",
+    "reasonDefault": "Following up on your child's school results.",
+    "date": "Date",
+    "time": "Time",
+    "pickStudents": "Choose the pupils",
+    "selected": "{n} selected",
+    "signTeacher": "Teacher",
+    "signYear": "School year",
+    "republic": "People's Democratic Republic of Algeria",
+    "ministry": "Ministry of National Education",
+    "pages": "{n, plural, one {# page} other {# pages}}"
+  },
+  "planning": {
+    "title": "Progressions",
+    "subtitle": "Annual and monthly progressions by class and subject, with «Where am I?» tracking week after week.",
+    "whereAmI": "Where am I?",
+    "week": "Week {n}",
+    "currentWeek": "We are in school week {n}",
+    "beforeStart": "The school year has not started yet.",
+    "status": {
+      "empty": "No progression yet",
+      "done": "Progression completed",
+      "onTrack": "On track",
+      "late": "{n, plural, one {# week} other {# weeks}} behind",
+      "ahead": "{n, plural, one {# week} other {# weeks}} ahead"
+    },
+    "next": "Next: {content}",
+    "progress": "{done}/{total} done",
+    "open": "Open",
+    "create": "Create the progression",
+    "noClasses": "Add a class first.",
+    "back": "Progressions",
+    "startDate": "First day of school",
+    "startHint": "Weeks are counted from this date, excluding holidays.",
+    "unit": "Sequence / unit",
+    "content": "Content / topic",
+    "weekCol": "Week",
+    "done": "Done",
+    "addRow": "Add a row",
+    "paste": "Paste a progression",
+    "pasteHint": "One line per topic: «week no. | sequence | content», or copy a Word or Excel table directly.",
+    "pastePlaceholder": "1 | Sequence 1 | My family\n2 | Sequence 1 | At home",
+    "pasteAdd": "Add {n} rows",
+    "pasteReplace": "Replace the progression",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saved": "Saved",
+    "saving": "Saving…",
+    "error": "Saving failed.",
+    "remove": "Delete the row",
+    "print": "Print",
+    "annual": "Annual",
+    "monthly": "Monthly",
+    "annualTitle": "Annual progression — {subject}",
+    "monthlyTitle": "Monthly progression — {subject}",
+    "thisWeek": "This week",
+    "empty": "No rows. Add a row or paste a progression.",
+    "markHint": "Tick what is done: «Where am I?» updates.",
+    "fromLibrary": "Find a progression in the library",
+    "edit": "Edit",
+    "official": "official",
+    "officialHint": "Official progression suggested from the platform's lesson plans; past weeks are ticked. Tick or edit it: it will be saved as your own.",
+    "monthlyPlan": {
+      "title": "Monthly progression",
+      "cardTitle": "Monthly progression — {month}",
+      "cardBody": "Each class's learning plan: the month's weeks and each subject's sessions from the lesson plans, with the holiday and exam calendar — editable.",
+      "sheetTitle": "Monthly progression — {month}",
+      "class": "Class",
+      "prev": "Previous month",
+      "next": "Next month",
+      "print": "Print",
+      "source": "Content taken from the platform's lesson plans by school week; weeks, holidays and exams according to the Ministry of National Education calendar.",
+      "weeks": "Weeks",
+      "weekN": "Week {n}",
+      "schoolWeek": "School week {n}",
+      "oral": "Oral comprehension and expression",
+      "reading": "Written comprehension",
+      "writing": "Written expression",
+      "exams": "{term, select, 1 {1st} 2 {2nd} other {3rd}} term exams",
+      "holiday": "{name}: from {from} to {to}",
+      "holidayName": "Holidays",
+      "calendarNote": "Holidays and exams this month:",
+      "noWeeks": "No school weeks this month.",
+      "noClasses": "Add a class first.",
+      "signTeacher": "Teacher's signature",
+      "signDirector": "Head teacher's signature and stamp",
+      "signInspector": "Inspector's signature and stamp",
+      "eyebrow": "Monthly learning plan",
+      "edit": "Edit the table",
+      "doneEditing": "Done",
+      "weeksCount": "{n, plural, one {# school week} other {# school weeks}}",
+      "months": "Months of the school year",
+      "tipTitle": "This table is editable",
+      "tipBody": "It is filled automatically from the lesson plans, and you can adapt it to your class: tap «Edit the table», then a cell to change its content, add a session, reorder it or move it to another week (for example after the exams). Your changes are personal, also appear in «Where am I?», and the lesson-plan content can always be restored.",
+      "editModeHint": "Edit mode: tap a cell to edit it. Edited cells have an orange dot.",
+      "legendEdited": "Edited cell",
+      "legendCurrent": "Current week",
+      "thisWeek": "This week",
+      "examsShort": "Exams",
+      "add": "Add",
+      "editCell": "Edit {subject} — school week {n}"
+    },
+    "editor": {
+      "close": "Close",
+      "hint": "One item per line. Enter creates a line; Backspace on an empty line deletes it.",
+      "item": "Item {n}",
+      "placeholder": "Write the session or topic…",
+      "up": "Move up",
+      "down": "Move down",
+      "remove": "Delete the item",
+      "add": "Add an item",
+      "tools": "Tools",
+      "restore": "Restore the lesson-plan content",
+      "clear": "Empty the cell",
+      "moveTo": "Week:",
+      "sameWeek": "{label} (this week)",
+      "moveHint": "When saved, this cell's content is moved to the chosen week, after its existing content.",
+      "error": "Saving failed. Check your connection and try again.",
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "tip": {
+      "dismiss": "Hide the tip"
+    },
+    "tipTitle": "You can edit this progression",
+    "tipBody": "Tap «Edit» to change the week, sequence or content, add or delete rows, or paste your own progression. Tick what is done: «Where am I?» updates. Your changes are personal and also appear in the monthly progression.",
+    "reset": "Restore the official progression",
+    "resetConfirm": "Your edited progression for this subject will be deleted and the official progression from the lesson plans restored (with default «done» ticks). Continue?",
+    "datesCol": "Dates"
+  },
+  "billing": {
+    "title": "Subscription",
+    "subtitle": "Your plan and what it includes. Your data belongs to you and is never deleted.",
+    "current": "Your plan",
+    "status": {
+      "free": "Not subscribed",
+      "trial": "Free trial",
+      "active": "Subscribed"
+    },
+    "endsOn": "Ends on {date}",
+    "daysLeft": "{n, plural, one {# day left} other {# days left}}",
+    "classesLimit": "{n, plural, one {# class} other {# classes}}",
+    "plans": "Plans",
+    "perPeriod": "{price} DA / {days, plural, =365 {year} =30 {month} other {# days}}",
+    "yourPlan": "Your plan",
+    "subscribe": "Subscribe",
+    "expiring": "Your subscription ends in {n, plural, one {# day} other {# days}}.",
+    "renew": "Renew",
+    "limitTitle": "Your plan's limit has been reached ({n})",
+    "limitBody": "Your current classes keep working. To add more, see the plans.",
+    "seePlans": "See the plans",
+    "slots": "{used} of {max} classes",
+    "guarantee": "When the trial or subscription ends, nothing is deleted: classes, pupils and notebooks are kept and come back as soon as you subscribe.",
+    "checkout": {
+      "title": "Subscribe to {plan}",
+      "method": "Payment method",
+      "back": "Subscription",
+      "methods": {
+        "chargily": {
+          "title": "Edahabia or CIB card",
+          "body": "Instant secure payment through Chargily, activated automatically within seconds."
+        },
+        "contact": {
+          "title": "Contact the administration",
+          "body": "Write to us for another payment method or any question; we activate your subscription manually."
+        }
+      },
+      "payCard": "Pay by card",
+      "redirecting": "Redirecting to the payment page…",
+      "cardError": "Could not start the payment. Try again or choose another method.",
+      "tooMany": "Too many attempts. Try again in an hour.",
+      "notConfigured": "This method is not available at the moment.",
+      "unavailable": "This plan is not on sale at the moment.",
+      "secure": "Payment takes place on Chargily's secure page; we never see your card.",
+      "contactBody": "Premium at {price}. Write to us: we will tell you how to pay and activate your subscription once confirmed.",
+      "contactCta": "Write to the administration",
+      "agree": "By continuing, you accept the <terms>terms of use</terms>."
+    },
+    "return": {
+      "checking": "Confirming the payment…",
+      "checkingBody": "This may take a moment. Don't close the page.",
+      "paid": "Payment received, subscription activated 🎉",
+      "paidUntil": "Valid until {date}",
+      "failed": "Payment not completed",
+      "failedBody": "Nothing was charged, or the amount will be refunded automatically. You can try again.",
+      "failedWhy": "Common causes: insufficient balance, wrong PIN or CVV2, card not enabled for online payment (enable it with Algérie Poste or your bank), or daily limit exceeded.",
+      "contact": "Write to the administration",
+      "contactText": "My payment failed (order {order}).",
+      "slow": "The confirmation has not arrived yet. Your subscription will be activated automatically once it does; you can carry on.",
+      "toBilling": "Subscription page",
+      "retry": "Try again",
+      "continue": "Continue"
+    },
+    "accessNote": {
+      "full": "All tools, lesson plans and full content.",
+      "trial": "All tools, with summaries of every lesson plan and a full selection. Subscribing unlocks everything.",
+      "locked": "Tools and content are locked. Your data is kept and comes back as soon as you subscribe."
+    },
+    "includes": {
+      "notebook": "Daily notebook filled automatically, ready to print",
+      "lessons": "Every full lesson plan",
+      "tools": "Attendance, marks, documents and all the tools"
+    },
+    "trialLeft": "Free trial: {n, plural, =0 {last day} one {# day left} other {# days left}}.",
+    "subscribeNow": "Subscribe"
+  },
+  "support": {
+    "fab": "Contact the administration",
+    "title": "Contact the administration",
+    "subtitle": "Ask us anything: subscription, how to use the app, or a suggestion.",
+    "hours": "We usually reply within one working day.",
+    "placeholder": "Write your message…",
+    "send": "Send",
+    "empty": "Hello 👋 How can we help you?",
+    "you": "You",
+    "admin": "Administration",
+    "close": "Close",
+    "error": "Sending failed. Try again.",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "newReply": "New reply from the administration",
+    "subscribeText": "Hello, I would like to subscribe to Premium. How do I pay?",
+    "fabShort": "Contact us"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "titleUnread": "Notifications — new",
+    "empty": "No notifications.",
+    "close": "Close",
+    "new": "New",
+    "pushTitle": "Turn on notifications on your phone",
+    "pushBody": "Get announcements, replies from the administration and your subscription activation, even when the app is closed.",
+    "pushEnable": "Turn on",
+    "pushIos": "On iPhone: first install the app on your home screen, then open it from there.",
+    "pushDenied": "Notifications are blocked for this site in your browser settings.",
+    "pushOn": "Notifications on for this device ✓",
+    "pushError": "Could not turn them on; try again later.",
+    "monthlyTitle": "New monthly progression: {month}",
+    "monthlyBody": "The monthly progression for {month} is available: the month's weeks and each subject's sessions, from the lesson plans and the holiday and exam calendar."
+  },
+  "pwa": {
+    "install": "Install the app",
+    "installShort": "Install",
+    "guideTitle": "Install مساعد الأستاذ",
+    "guideBody": "Open it from your home screen like an app — faster and without the browser bar.",
+    "ios1": "Tap the Share button at the bottom of Safari",
+    "ios2": "Choose «Add to Home Screen»",
+    "ios3": "Tap «Add» — the app appears with your other apps",
+    "iosNote": "On iPhone, install it from Safari.",
+    "manual1": "Open the browser menu (⋮)",
+    "manual2": "Choose «Install app» or «Add to Home screen»",
+    "ok": "Got it",
+    "close": "Close",
+    "banner": "Announcement from the administration",
+    "offline": "Offline — your changes are kept on the device and sent when the Internet is back",
+    "syncing": "Back online — sending changes…",
+    "synced": "Synced ✓"
+  },
+  "admin": {
+    "title": "Administration",
+    "backToApp": "Back to the app",
+    "forbidden": "This area is for the administration team only.",
+    "link": "Administration",
+    "nav": {
+      "dashboard": "Home",
+      "teachers": "Teachers",
+      "content": "Content",
+      "plans": "Plans and prices",
+      "payments": "Payments",
+      "notifications": "Notifications",
+      "settings": "Banner and contact",
+      "support": "Messages",
+      "audit": "Log",
+      "feedback": "Teacher feedback",
+      "curriculum": "Lesson plans"
+    },
+    "dash": {
+      "teachers": "Registered teachers",
+      "newWeek": "New this week",
+      "unread": "Unread messages",
+      "monthGross": "Revenue this month",
+      "yearGross": "Revenue over the last 12 months",
+      "net": "Net",
+      "fees": "Payment fees",
+      "revenueChart": "Monthly revenue (DA)",
+      "count": "{n} payments",
+      "noRevenue": "No revenue yet.",
+      "paidActive": "Active paying subscribers",
+      "trialsActive": "Currently on a free trial"
+    },
+    "teachers": {
+      "search": "Search by email (beginning)",
+      "joined": "Joined",
+      "onboarded": "Set up",
+      "notOnboarded": "Not set up",
+      "more": "Load more",
+      "empty": "No results.",
+      "open": "Manage",
+      "plan": "Subscription",
+      "until": "until {date}",
+      "free": "Free",
+      "trial": "Trial",
+      "active": "Premium",
+      "school": "School",
+      "grade": "Grade",
+      "wilaya": "Wilaya",
+      "grant": "Activate Premium manually",
+      "days": "Duration (days)",
+      "amount": "Amount received (DA, 0 = free)",
+      "note": "Note",
+      "grantCta": "Activate",
+      "granted": "Activated until {date}",
+      "revoke": "Cancel the subscription",
+      "revokeConfirm": "Cancel the subscription now? All their data is kept.",
+      "revoked": "Subscription cancelled",
+      "roles": "Roles",
+      "roleNames": {
+        "admin": "Admin (full rights)",
+        "contentEditor": "Content editor",
+        "finance": "Finance"
+      },
+      "saveRoles": "Save roles",
+      "rolesSaved": "Saved ✓",
+      "selfAdmin": "You cannot remove your own admin role.",
+      "message": "Write to them",
+      "privacy": "The teacher's classes, pupils and marks do not appear here: they are private to them.",
+      "teacherRole": "Teacher",
+      "promote": "Make administrator",
+      "promoteConfirm": "Give {email} full administrator rights? They will be able to manage the whole site: teachers, subscriptions, content, settings.",
+      "demote": "Remove administrator role",
+      "demoteConfirm": "Remove administrator rights from {email}?",
+      "limitedRoles": "Limited roles",
+      "roleHints": {
+        "contentEditor": "Adds and edits library content only",
+        "finance": "Sees payments and revenue only"
+      },
+      "rolesNote": "The new role applies after signing out and back in, or automatically within an hour.",
+      "staff": "Administration team",
+      "staffEmpty": "Nobody yet."
+    },
+    "plans": {
+      "free": "Free plan",
+      "premium": "Premium",
+      "name": "Name",
+      "description": "Description",
+      "price": "Price (DA)",
+      "days": "Duration (days)",
+      "maxClasses": "Class limit",
+      "active": "On sale",
+      "trialEligible": "Eligible for trial",
+      "trialDays": "Free trial length (days)",
+      "save": "Save",
+      "saved": "Saved",
+      "stagesTitle": "Cycles open to teachers",
+      "stagesHint": "Primary is always open. Open a cycle when its content is ready: its teachers get the tools and the free trial. Until then they see «soon» (as an admin, you see everything for testing).",
+      "stageMiddle": "Middle school",
+      "stageSecondary": "Secondary school"
+    },
+    "payments": {
+      "recent": "Confirmed payments",
+      "date": "Date",
+      "teacher": "Teacher",
+      "method": "Method",
+      "gross": "Amount",
+      "fees": "Fees",
+      "net": "Net",
+      "until": "Valid until",
+      "methods": {
+        "chargily": "Chargily",
+        "admin": "Manual (admin)"
+      },
+      "csv": "Export CSV",
+      "empty": "No payments.",
+      "status": {
+        "pending": "Pending",
+        "paid": "Paid",
+        "failed": "Failed",
+        "mismatch": "Amount mismatch"
+      },
+      "attempts": "Unfinished payment attempts ({n})",
+      "attemptsHint": "Payment page opened without completing — not counted, no subscription activated. Useful only if a teacher says they paid without activation.",
+      "why": "Reason",
+      "reasons": {
+        "failed": "Transaction declined by the bank (SATIM / Algérie Poste). Common causes: insufficient balance, wrong PIN or CVV2, card not enabled for online payment, expired card or daily limit exceeded.",
+        "canceled": "The teacher cancelled on the Chargily page (cancel or back button).",
+        "expired": "The payment page expired before the operation finished.",
+        "createError": "Could not create the payment page at Chargily (service or configuration error) — the teacher never reached the payment page.",
+        "pending": "No notification from Chargily: the teacher closed the page without finishing, or is still on the payment page.",
+        "unknown": "Failure without details (attempt made before reasons were recorded). Click «Chargily details»."
+      },
+      "noExactReason": "Chargily does not pass on the exact bank reason; also check the Chargily dashboard → Transactions.",
+      "inspect": "Chargily details",
+      "inspecting": "Loading…",
+      "inspectFail": "Could not fetch from Chargily.",
+      "chargilyStatus": "Status at Chargily",
+      "payMethod": "Payment method",
+      "customer": "Entered on the payment page",
+      "providerReason": "Message from Chargily",
+      "paidAtProvider": "Warning: Chargily reports a successful payment but the order is not activated here — activate the subscription manually from the teacher's page.",
+      "message": "Write"
+    },
+    "notif": {
+      "compose": "New notification for everyone",
+      "titleAr": "Title in Arabic",
+      "titleFr": "Title in French",
+      "bodyAr": "Text in Arabic",
+      "bodyFr": "Text in French",
+      "link": "Link (optional, e.g. /app/library)",
+      "kind": "Type",
+      "kinds": {
+        "news": "News",
+        "update": "What's new",
+        "content": "New content",
+        "offer": "Offer"
+      },
+      "publish": "Publish",
+      "published": "Published ✓",
+      "history": "Published notifications",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this notification?",
+      "empty": "No notifications."
+    },
+    "settings": {
+      "banner": "Banner under the header",
+      "enabled": "Enabled",
+      "textAr": "Text in Arabic",
+      "textFr": "Text in French",
+      "link": "Link on click (optional)",
+      "tone": "Colour",
+      "tones": {
+        "info": "Information",
+        "success": "Success",
+        "warning": "Warning",
+        "promo": "Offer"
+      },
+      "preview": "Preview",
+      "contact": "Contact",
+      "whatsapp": "WhatsApp number (international format, e.g. 213555000000)",
+      "email": "Contact email",
+      "hoursAr": "Reply hours (Arabic)",
+      "hoursFr": "Reply hours (French)",
+      "save": "Save",
+      "saved": "Saved"
+    },
+    "support": {
+      "threads": "Conversations",
+      "empty": "No messages.",
+      "pick": "Choose a conversation.",
+      "reply": "Your reply…",
+      "send": "Send",
+      "close": "Close",
+      "reopen": "Reopen",
+      "closed": "Closed",
+      "teacher": "Teacher",
+      "back": "Conversations",
+      "new": "Write to a teacher",
+      "search": "Search by email…",
+      "noResults": "No teacher with this email.",
+      "newThread": "No messages yet — write the first one.",
+      "broadcast": "Message to everyone (each in private)",
+      "broadcastHint": "Each teacher receives it in their private conversation with the administration and can reply. {name} is replaced by each teacher's name.",
+      "audience": "Recipients",
+      "audiences": {
+        "all": "All teachers",
+        "paid": "Subscribers",
+        "trial": "On trial",
+        "free": "No active subscription",
+        "failed": "Unsuccessful payment attempt"
+      },
+      "count": "Recipients: {n}",
+      "preview": "Count recipients",
+      "sendAll": "Send to {n}",
+      "sent": "Sent to {n} teachers ✓",
+      "confirm": "Send this message to {n} teachers?"
+    },
+    "audit": {
+      "empty": "No operations.",
+      "actions": {
+        "support_broadcast": "Group message (private)",
+        "trial_start": "Trial started",
+        "payment_activate": "Activation after payment",
+        "payment_mismatch": "Payment mismatch",
+        "admin_grant": "Manual activation",
+        "admin_revoke": "Cancellation",
+        "admin_roles": "Roles changed"
+      }
+    },
+    "feedback": {
+      "empty": "No feedback yet.",
+      "average": "Average rating {avg}/5 ({n, plural, one {# review} other {# reviews}})",
+      "context": {
+        "trialEnd": "After the trial",
+        "trial": "During the trial",
+        "general": "General"
+      },
+      "hide": "Hide from the home page",
+      "show": "Show on the home page",
+      "shown": "Shown on the home page",
+      "hidden": "Hidden from the home page"
+    },
+    "curriculum": {
+      "title": "Publishing lesson plans",
+      "intro": "Lesson plans added or corrected on the platform and not yet visible to teachers. «Publish» downloads their files from the library's Drive folder, renders their pages in this browser and saves them with the admin account. Keep the page open until it finishes (a few minutes).",
+      "publishAll": "Publish all ({n})",
+      "allPublished": "All lesson plans are published",
+      "publish": "Publish",
+      "published": "Published",
+      "pending": "Update to publish",
+      "lessons": "{n} sessions",
+      "added": "{n} new sessions",
+      "memos": "{n} formatted lesson plans",
+      "step": {
+        "load": "Downloading from Drive…",
+        "pages": "Lesson plan pages: {done} of {total}",
+        "memos": "Formatted lesson plans: {done} of {total}",
+        "summaries": "Sessions: {done} of {total}",
+        "index": "Done"
+      },
+      "coverageTitle": "Subjects shown as «Soon» to teachers",
+      "coverageNone": "Every subject in the programme has published lesson plans.",
+      "coverageHint": "These subjects have no published lesson plans in the database: teachers see «Soon». Those without a file need their lesson plans first; the others can be published from this page or with the publishing script.",
+      "coverageNoFile": "No lesson plans yet"
+    }
+  },
+  "legal": {
+    "terms": "Terms of use",
+    "privacy": "Privacy",
+    "home": "Home",
+    "updated": "Last updated: {date}"
+  },
+  "errors": {
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The link may have changed or the page was deleted.",
+    "errorTitle": "An unexpected error occurred",
+    "errorBody": "Your data is not lost. Try again; if the error persists, contact the administration.",
+    "retry": "Try again",
+    "goApp": "Back to the app",
+    "goHome": "Home"
+  },
+  "scheduleImport": {
+    "title": "Import the timetable",
+    "subtitle": "From an Excel file, a PDF or a photo — then check each session.",
+    "back": "Timetable",
+    "sources": {
+      "camera": {
+        "title": "Take a photo",
+        "hint": "With the phone camera"
+      },
+      "file": {
+        "title": "Image or PDF",
+        "hint": "From files or the gallery"
+      },
+      "excel": {
+        "title": "Excel file",
+        "hint": "xlsx or csv"
+      },
+      "manual": {
+        "title": "Type it in",
+        "hint": "Session by session in the editor"
+      }
+    },
+    "templateHint": "No file? Download a template, fill it in Excel (subject or class in each cell), then import it.",
+    "template": {
+      "download": "Download the template",
+      "day": "Day"
+    },
+    "privacy": "Files and photos are read on your phone only, never sent to a server.",
+    "reading": "Reading the file…",
+    "recognizing": "Recognising… page {current} of {total}",
+    "cancel": "Cancel",
+    "found": "{count, plural, =0 {No sessions} one {# session} other {# sessions}} found",
+    "toCheck": "{count, plural, one {# session needs} other {# sessions need}} a class or subject chosen (outlined in yellow).",
+    "allGood": "All sessions were recognised. Check, then save.",
+    "include": "Include the session",
+    "chooseClass": "Choose the class",
+    "chooseSubject": "Choose the subject",
+    "modeTitle": "Your current timetable has {count} sessions:",
+    "mode": {
+      "add": "Add the imported sessions to the current timetable",
+      "replace": "Replace the current timetable completely"
+    },
+    "save": "Save {count} sessions",
+    "fixFirst": "First complete the sessions outlined in yellow",
+    "restart": "Start over",
+    "errors": {
+      "noDays": "Days of the week not found (Sunday, Monday…). Check that this is a timetable, or use the template.",
+      "noTimes": "Days found but not the times (e.g. 08:00-09:00). Add them as headers or use the template.",
+      "empty": "The table is empty.",
+      "read": "Could not read it. Try a sharper photo or another file.",
+      "xls": "The old Excel format (xls) is not supported: save it as xlsx.",
+      "save": "Could not save. Try again."
+    }
+  },
+  "comingSoon": {
+    "title": "{stage} school tools are coming soon",
+    "stages": {
+      "middle": "Middle",
+      "secondary": "Secondary",
+      "primary": "Primary"
+    },
+    "body": "We are preparing the lesson plans, progressions and notebooks for your cycle according to the Algerian curricula. Your account and profile are saved.",
+    "notify": "You will be notified as soon as your cycle is ready, without signing up again.",
+    "contact": "Contact the administration",
+    "settings": "Settings",
+    "supportText": "Hello, I teach in middle/secondary school and I am waiting for my cycle's tools."
+  },
+  "access": {
+    "starting": "Preparing your free trial…",
+    "startFailed": "Could not start the free trial",
+    "retry": "Try again",
+    "contact": "Contact us",
+    "trialErrors": {
+      "used": "You have already used the free trial.",
+      "unverified": "Confirm your email address first.",
+      "unavailable": "The trial is not available at the moment. Contact us.",
+      "subscribed": "You already have an active subscription.",
+      "network": "Cannot connect. Check your Internet connection and try again."
+    },
+    "verifyTitle": "Confirm your email to start your free trial ({n, plural, one {# day} other {# days}})",
+    "verifyBody": "We sent a confirmation link. Open it, then press «I've confirmed» at the top: the trial starts straight away with all the tools.",
+    "endedTitle": "Your free trial has ended",
+    "lockedTitle": "Your subscription is not active",
+    "endedBody": "We hope the platform has saved you time. Subscribe to continue with all the tools and the full lesson plans:",
+    "perks": {
+      "notebook": "The daily notebook fills itself in from your timetable",
+      "lessons": "Every full lesson plan",
+      "attendance": "Attendance, marks and statistics",
+      "documents": "Pupil lists and administrative documents"
+    },
+    "subscribe": "Choose my subscription",
+    "supportText": "Hello, my trial has ended and I would like information about the subscription.",
+    "dataSafe": "Your data is kept: classes, pupils and notebooks are never deleted and come back as soon as you subscribe."
+  },
+  "feedback": {
+    "title": "Your opinion of the platform",
+    "subtitle": "Your feedback reaches us directly and helps us improve it.",
+    "rating": "Your rating",
+    "stars": "{n, plural, one {# star} other {# stars}}",
+    "reasonsTitle": "What describes your experience? (optional)",
+    "reasons": {
+      "useful": "Useful in my work",
+      "saveTime": "Saves me time",
+      "price": "The price",
+      "missingContent": "Content is missing",
+      "hardToUse": "Hard to use",
+      "noTime": "Didn't have time to try it",
+      "otherLevel": "My level is not available"
+    },
+    "comment": "Comment or suggestion",
+    "commentHint": "What did you like? What should we add or improve?",
+    "send": "Send my feedback",
+    "thanks": "Thank you! Your feedback has been received.",
+    "error": "Could not send. Try again.",
+    "publicNote": "Your review (4 or 5 stars) may be shown on the platform's page with only your first name and wilaya, without your email or last name."
+  },
+  "lessons": {
+    "title": "Lesson plans",
+    "subtitle": "The plan for each session by sequence and week: topic, materials, objectives and procedure.",
+    "subjects": "Subjects",
+    "soon": "Soon",
+    "noClasses": "Add your class and its subjects first to see their lesson plans here.",
+    "preparing": "The lesson plans for your subjects are being prepared and will arrive gradually.",
+    "trialNote": "During the trial: objectives and a summary of every session, and the full procedure of sessions marked «Full lesson plan». Subscribing unlocks every lesson plan.",
+    "sessions": "{n, plural, one {# session} other {# sessions}}",
+    "week": "Week {n}",
+    "day": "Day {n}",
+    "sample": "Full lesson plan",
+    "lockedBody": "The full procedure is for subscribers.",
+    "lockedTitle": "Procedure for subscribers only",
+    "subscribe": "Subscribe to unlock everything",
+    "source": "Source: {source}",
+    "notFound": "This lesson plan cannot be found.",
+    "back": "Lesson plans",
+    "print": "Print",
+    "segment": "Sequence",
+    "unit": "Period",
+    "activity": "Activity",
+    "domain": "Domain",
+    "materials": "Materials",
+    "objectives": "Learning objectives",
+    "process": "Procedure",
+    "original": "The lesson plan as in the ministry's document",
+    "pageAlt": "Page {n}"
+  },
+  "welcome": {
+    "week": "School week {n}",
+    "printToday": "Open today's notebook",
+    "openNotebook": "Daily notebook",
+    "lessons": "Lesson plans"
+  },
+  "tour": {
+    "progress": "Step {n} of {total}",
+    "teacher": "dear teacher",
+    "skip": "Skip the tour",
+    "later": "Later — I'll explore on my own",
+    "begin": "Start the tour",
+    "next": "Next",
+    "back": "Previous",
+    "start": "Start: add my class",
+    "inMore": "On a phone, you will find it under «More».",
+    "trial": "Your free trial is active: {n, plural, one {# day} other {# days}} with all the tools, no commitment.",
+    "replayTitle": "Guided tour of the platform",
+    "replayBody": "Replay the step-by-step explanation at any time.",
+    "replay": "Replay the tour",
+    "steps": {
+      "welcome": {
+        "title": "Welcome {name} to مساعد الأستاذ",
+        "body": "In one minute, discover your digital desk: enter your data once, and the platform takes care of notebooks, lesson plans and documents every day."
+      },
+      "today": {
+        "title": "Today: your dashboard",
+        "body": "Every morning starts here: today's sessions, the current session and the remaining steps to set up your desk.",
+        "tip": "Follow the «Let's set up your desk» cards in order: class, pupils, timetable."
+      },
+      "classes": {
+        "title": "My classes: the starting point",
+        "body": "Create your classes all at once (level, group, subjects), then add each class's pupils.",
+        "tip": "No need to type names one by one: import the list directly from the digitisation file."
+      },
+      "schedule": {
+        "title": "Timetable: just once",
+        "body": "Enter your weekly sessions: each day's sessions and the daily notebook follow automatically.",
+        "tip": "Have it in a file? Import it from Excel, PDF or even a photo, then check."
+      },
+      "session": {
+        "title": "The session: one button in class",
+        "body": "Opens the current session from your timetable: attendance, absences and late arrivals in one gesture.",
+        "tip": "Works offline too: changes are saved on the device and synced later."
+      },
+      "logbook": {
+        "title": "The notebook that writes itself",
+        "body": "The daily notebook in the official template, filled from your timetable and progression: activity, domain, content, components.",
+        "tip": "Check it and print it in one click, or edit a row before printing."
+      },
+      "lessons": {
+        "title": "Ready-made lesson plans",
+        "body": "Each session's plan by sequence and week, for every subject: topic, materials, objectives and procedure.",
+        "tip": "This week's lesson plans are shown for your classes and subjects."
+      },
+      "library": {
+        "title": "The teaching library",
+        "body": "Textbooks, guides, progressions, posters and exercises, sorted by level and subject.",
+        "tip": "Tap «My classes» to see only your levels."
+      },
+      "documents": {
+        "title": "Your documents in seconds",
+        "body": "Encouragement certificates, monthly absence record, summonses, labels… filled with your pupils' data.",
+        "tip": "Every document is ready to print in A4."
+      },
+      "support": {
+        "title": "We're here for you",
+        "body": "A question, a suggestion or a problem? Write to the team with this button; the reply arrives here.",
+        "tip": "Turn on notifications to be alerted to the reply on your phone."
+      },
+      "install": {
+        "title": "Install the platform as an app",
+        "body": "Open it in one tap from your home screen — faster, without the browser bar, and usable even without Internet."
+      },
+      "finish": {
+        "title": "You're all set! 🎉",
+        "body": "Start by adding your first class, then your pupils and your timetable. After that, the notebook writes itself every day."
+      }
+    },
+    "install": {
+      "now": "Install the app",
+      "thanks": "Installed ✓ You will find it among your apps.",
+      "for": {
+        "ios": "On iPhone / iPad (with Safari):",
+        "android": "On Android (with Chrome):",
+        "desktop": "On a computer (Chrome or Edge):"
+      },
+      "ios1": "Tap the Share button at the bottom of the screen",
+      "ios2": "Choose «Add to Home Screen»",
+      "ios3": "Tap «Add» — the app appears with the others",
+      "android1": "Open the browser menu (⋮) at the top",
+      "android2": "Choose «Install app» or «Add to Home screen»",
+      "desktop1": "Click the install icon in the address bar",
+      "desktop2": "Or, in the ⋮ menu, choose «Install مساعد الأستاذ»"
+    }
+  },
+  "authAction": {
+    "pageTitle": "Account actions",
+    "checking": "Checking the link…",
+    "verifiedTitle": "Email address confirmed ✓",
+    "changedTitle": "Email address updated ✓",
+    "verifiedBody": "Thank you! Your account is confirmed and your free trial is ready to start.",
+    "toApp": "Continue to the platform",
+    "toLogin": "Sign in",
+    "resetTitle": "New password",
+    "resetFor": "For the account",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm the password",
+    "hint": "At least 8 characters",
+    "save": "Save and sign in",
+    "short": "Password too short: at least 8 characters.",
+    "mismatch": "The two passwords do not match.",
+    "resetDoneTitle": "Password changed ✓",
+    "resetDoneBody": "You can now sign in with the new password.",
+    "recoveredTitle": "Original address restored",
+    "recoveredBody": "Your account's address has been restored: {email}. If you did not make this change, change your password now.",
+    "sendReset": "Send me a reset link",
+    "resetSent": "Link sent. Remember to check your spam folder.",
+    "newResetLink": "Request a new link",
+    "resendHint": "After signing in, you can request a new confirmation link from the banner at the top.",
+    "errors": {
+      "expired": {
+        "title": "Link expired",
+        "body": "This link is too old. Request a new one and use it quickly."
+      },
+      "invalid": {
+        "title": "Invalid link",
+        "body": "It may already have been used or copied incompletely. If your address is already confirmed, sign in directly."
+      },
+      "disabled": {
+        "title": "Account disabled",
+        "body": "This account is disabled. Contact the administration."
+      },
+      "weakPassword": {
+        "title": "Password too weak",
+        "body": "Password too weak. Choose a longer one."
+      },
+      "network": {
+        "title": "Cannot connect",
+        "body": "Check your connection, then open the link again."
+      },
+      "generic": {
+        "title": "An error occurred",
+        "body": "Could not complete the operation. Try again in a moment."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Teacher reviews",
+    "title": "Your colleagues prepare with us",
+    "compactTitle": "What your colleagues say",
+    "average": "{avg} out of 5 · {n, plural, one {# review} other {# reviews}}",
+    "basedOn": "from {n} reviews",
+    "stars": "{n} stars out of 5",
+    "teacher": "Teacher",
+    "more": "See {n} more reviews",
+    "stage": {
+      "primary": "Primary education",
+      "middle": "Middle school education",
+      "secondary": "Secondary education"
+    }
+  }
+}
