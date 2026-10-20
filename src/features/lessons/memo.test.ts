@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { columnWidths, memoFigures, memoFromDoc, memoToDoc, parseBlocks, parseInline, parseMath, withImages, type Memo } from "./memo.ts";
+import { columnWidths, memoFigures, memoFromDoc, memoKeys, memoToDoc, parseBlocks, parseInline, parseMath, withImages, type Memo } from "./memo.ts";
 
 test("inline: bold, answers and math", () => {
   assert.deepEqual(parseInline("أ **ب** ==ج== $a = 2$"), [
@@ -71,4 +71,8 @@ test("math: vectors", () => {
     { t: "text", v: " = " },
     { t: "vec", c: [{ t: "text", v: "DC" }] },
   ]);
+});
+
+test("مفتاح المذكرة: الدرس الثاني في الصفحة نفسها «~2»", () => {
+  assert.deepEqual(memoKeys([{ pages: ["b:12"] }, { pages: ["b:12", "b:13"] }, {}, { pages: ["b:13"] }]), ["b:12", "b:12~2", "", "b:13"]);
 });

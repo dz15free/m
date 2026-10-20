@@ -17,6 +17,8 @@ export type Write = {
   /** زيادات ذرّية: { "gross": 1500, "byMethod.chargily": 1 } */
   increments?: Record<string, number>;
   precondition?: Precondition;
+  /** حذف الوثيقة (يُتجاهل data) ضمن الدفعة الذرّية نفسها */
+  delete?: boolean;
 };
 
 const projectId = () => process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID!;
@@ -102,7 +104,10 @@ export async function adminCommit(writes: Write[]): Promise<void> {
     method: "POST",
     headers: { Authorization: `Bearer ${await accessToken()}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      writes: writes.map((w) => ({
+      writes: writes.map((w) =>
+        w.delete
+          ? { delete: `${docsRoot()}/${w.path}`, ...(w.precondition ? { currentDocument: w.precondition } : {}) }
+          : {
         update: { name: `${docsRoot()}/${w.path}`, fields: encodeFields(w.data) },
         // مع الزيادات أو الدمج: نحدّث الحقول المذكورة فقط ونترك الباقي
         ...(w.merge || w.increments ? { updateMask: { fieldPaths: Object.keys(w.data) } } : {}),
@@ -110,7 +115,8 @@ export async function adminCommit(writes: Write[]): Promise<void> {
           ? { updateTransforms: Object.entries(w.increments).map(([fieldPath, n]) => ({ fieldPath, increment: encode(n) })) }
           : {}),
         ...(w.precondition ? { currentDocument: w.precondition } : {}),
-      })),
+            },
+      ),
     }),
   });
   if (!res.ok) {

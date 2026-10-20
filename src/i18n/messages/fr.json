@@ -1608,7 +1608,18 @@
       "customer": "Saisi sur la page de paiement",
       "providerReason": "Message de Chargily",
       "paidAtProvider": "Attention : Chargily indique un paiement réussi alors que la commande n'est pas activée ici — activez l'abonnement manuellement depuis la fiche de l'enseignant.",
-      "message": "Écrire"
+      "message": "Écrire",
+      "actions": "Actions",
+      "delete": "Supprimer la transaction",
+      "deleteYes": "Oui, supprimer",
+      "cancel": "Annuler",
+      "add": "Ajouter une transaction",
+      "addHint": "Paiement reçu hors de la plateforme (virement, espèces…) : compté dans les revenus du mois de sa date. N'active aucun abonnement — l'activation se fait depuis la fiche de l'enseignant. Pour corriger une erreur, supprimez la transaction erronée dans le tableau : les revenus de son mois sont diminués automatiquement.",
+      "addEmail": "E-mail de l'enseignant (facultatif)",
+      "addNote": "Note (facultatif)",
+      "addSave": "Enregistrer la transaction",
+      "added": "Ajoutée ✓",
+      "actionError": "Opération impossible, réessayez."
     },
     "notif": {
       "compose": "Nouvelle notification pour tous",

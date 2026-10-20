@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
 import { memoFileRev } from "../lessons/memo-rev.ts";
-import { memoFigures, type Memo } from "../lessons/memo.ts";
+import { memoFigures, memoKeys, type Memo } from "../lessons/memo.ts";
 
 /* content/memos/<id>.json: الفهرس المولَّد مطابق، وكل مذكرة لحصة موجودة في منهاجها المنشور، وجدولها سليم. */
 const DIR = new URL("../../../content/memos/", import.meta.url);
@@ -26,7 +26,7 @@ for (const f of files) {
     const cur = JSON.parse(readFileSync(new URL(`../../../content/curriculum/${id}.json`, import.meta.url), "utf8")) as { lessons: { pages?: (string | number)[] }[]; sources?: Record<string, { web?: string[] }> };
     const memos = JSON.parse(readFileSync(new URL(f, DIR), "utf8")) as Record<string, Memo>;
     for (const [key, memo] of Object.entries(memos)) {
-      const lesson = cur.lessons.find((l) => String(l.pages?.[0]) === key);
+      const lesson = cur.lessons[memoKeys(cur.lessons).indexOf(key)];
       assert.ok(lesson, `${id} ${key}: no lesson starts at this page`);
       assert.ok(memo.cols.length >= 2, `${id} ${key}: table needs columns`);
       for (const row of memo.rows) assert.equal(row.length, memo.cols.length, `${id} ${key}: row width`);
