@@ -5,6 +5,7 @@ type Entry = { rev: string; count: number; load: () => Promise<{ default: unknow
 
 export const MEMO_FILES: Record<string, Entry> = {
   "1AM_ar": { rev: "ec46210f", count: 166, load: () => import("../../../content/memos/1AM_ar.json") },
+  "1AM_civic": { rev: "8468150c", count: 18, load: () => import("../../../content/memos/1AM_civic.json") },
   "1AM_en": { rev: "f9a43d89", count: 39, load: () => import("../../../content/memos/1AM_en.json") },
   "1AM_informatics": { rev: "6097170e", count: 20, load: () => import("../../../content/memos/1AM_informatics.json") },
   "1AM_physics": { rev: "196ab000", count: 39, load: () => import("../../../content/memos/1AM_physics.json") },
