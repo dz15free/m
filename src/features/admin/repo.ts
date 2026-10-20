@@ -129,6 +129,18 @@ export async function listPayments(): Promise<PaymentRow[]> {
   return snap.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<PaymentRow, "id" | "createdAt" | "periodEnd">), createdAt: ms(d.data().createdAt), periodEnd: ms(d.data().periodEnd) }));
 }
 
+/** حذف معاملة مسجّلة خطأً (تُنقص إيرادات شهرها في الخادم؛ الاشتراك لا يتغيّر). */
+export async function deletePayment(id: string) {
+  await adminApi(`/api/admin/payments?id=${encodeURIComponent(id)}`, { method: "DELETE" });
+}
+
+export type NewPayment = { email: string; gross: number; fees: number; date: string; note: string };
+
+/** إضافة معاملة يدوية (دفعة استُلمت خارج المنصة) تُحتسب في إيرادات شهر تاريخها. */
+export async function addPayment(p: NewPayment) {
+  await adminApi("/api/admin/payments", { method: "POST", body: JSON.stringify(p) });
+}
+
 export type ChargilyInfo = {
   status: string;
   paymentMethod: string | null;

@@ -1608,7 +1608,18 @@
       "customer": "Entered on the payment page",
       "providerReason": "Message from Chargily",
       "paidAtProvider": "Warning: Chargily reports a successful payment but the order is not activated here — activate the subscription manually from the teacher's page.",
-      "message": "Write"
+      "message": "Write",
+      "actions": "Actions",
+      "delete": "Delete the transaction",
+      "deleteYes": "Yes, delete",
+      "cancel": "Cancel",
+      "add": "Add a transaction",
+      "addHint": "A payment received outside the platform (transfer, cash…): counted in the revenue of the month of its date. It does not activate a subscription — do that from the teacher's page. To fix a mistake, delete the wrong transaction in the table: its month's revenue is reduced automatically.",
+      "addEmail": "Teacher's email (optional)",
+      "addNote": "Note (optional)",
+      "addSave": "Save the transaction",
+      "added": "Added ✓",
+      "actionError": "Operation failed, try again."
     },
     "notif": {
       "compose": "New notification for everyone",

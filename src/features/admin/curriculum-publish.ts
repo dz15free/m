@@ -4,7 +4,7 @@ import { doc, getDoc, setDoc, writeBatch } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase/client";
 import { authedFetch } from "@/lib/firebase/api";
 import { browserDownload } from "@/features/library/repo";
-import { memoFigures, memoToDoc, withImages, type Memo } from "@/features/lessons/memo";
+import { memoFigures, memoKeys, memoToDoc, withImages, type Memo } from "@/features/lessons/memo";
 import { memoFileRev } from "@/features/lessons/memo-rev";
 
 /* نشر المذكرات من متصفح الأدمن (مكافئ scripts/curriculum/seed.mjs، دون حساب خدمة): قواعد Firestore تسمح للمحرّر
@@ -154,7 +154,6 @@ async function openSource(spec: SourceSpec): Promise<Renderer> {
 }
 
 /** المذكرات المُنسّقة مفتاحها أول صفحة للحصة في مصدرها («b:9»). */
-const memoKey = (l: Lesson) => String(l.pages?.[0] ?? "");
 
 export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progress) => void, memos?: Record<string, Memo>): Promise<void> {
   const id = c.id;
@@ -165,7 +164,8 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
   // منهاج جديد: النماذج المجانية من الملف («sample»)
   const sampleOf = (l: Lesson) => prevSample.get(lessonId(id, l)) ?? l.sample ?? false;
 
-  const memoOf = (l: Lesson) => memos?.[memoKey(l)];
+  const keys = new Map(c.lessons.map((l, i) => [l, memoKeys(c.lessons)[i]!]));
+  const memoOf = (l: Lesson) => memos?.[keys.get(l) ?? ""];
 
   // 1) صفحات المصادر الإضافية: صورًا للحصص بلا مذكرة مُنسّقة، وللاقتطاع منها أشكالَ المذكرات المُنسّقة
   const extra = new Map<string, Set<number>>();

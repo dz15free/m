@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
-import { Download, LoaderCircle, MessagesSquare, Search, Send, Star, Trash2 } from "lucide-react";
+import { Download, LoaderCircle, Plus, MessagesSquare, Search, Send, Star, Trash2 } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field, SelectField } from "@/components/ui/field";
@@ -12,7 +12,7 @@ import { useUid } from "@/features/classes/hooks";
 import { deleteAnnouncement, listAnnouncements, publishAnnouncement, type Kind } from "@/features/notifications/repo";
 import { cn } from "@/lib/utils/cn";
 import { FEEDBACK_REASONS } from "@/features/billing/feedback";
-import { emailsOf, failureKey, getHiddenTestimonials, inspectOrder, listAudit, listFeedback, setTestimonialHidden, listOrders, listPayments, peopleOf, type ChargilyInfo, type OrderRow } from "./repo";
+import { emailsOf, failureKey, getHiddenTestimonials, addPayment, deletePayment, inspectOrder, listAudit, listFeedback, setTestimonialHidden, listOrders, listPayments, peopleOf, type ChargilyInfo, type OrderRow } from "./repo";
 import { pick, intlLocale } from "@/i18n/pick";
 import type { Locale } from "@/i18n/config";
 
@@ -166,6 +166,7 @@ export function AdminPayments() {
           </button>
         )}
       </div>
+      <AddPayment />
       <section className="space-y-2">
         <h2 className="font-semibold">{t("recent")}</h2>
         {!payments.data ? (
@@ -180,6 +181,7 @@ export function AdminPayments() {
                   {["date", "teacher", "method", "gross", "fees", "net", "until"].map((k) => (
                     <th key={k} className="px-3 py-2 text-start font-medium">{t(k as "date")}</th>
                   ))}
+                  <th className="px-3 py-2"><span className="sr-only">{t("actions")}</span></th>
                 </tr>
               </thead>
               <tbody>
@@ -195,6 +197,7 @@ export function AdminPayments() {
                     <td className="px-3 py-2 tabular-nums">{nf.format(p.fees)}</td>
                     <td className="px-3 py-2 tabular-nums">{nf.format(p.net)}</td>
                     <td className="px-3 py-2 whitespace-nowrap">{p.periodEnd ? new Date(p.periodEnd).toISOString().slice(0, 10) : ""}</td>
+                    <td className="px-3 py-2"><DeletePayment id={p.id} /></td>
                   </tr>
                 ))}
               </tbody>
@@ -220,6 +223,87 @@ export function AdminPayments() {
         );
       })()}
     </div>
+  );
+}
+
+/** حذف معاملة بتأكيد (خطأ في التفعيل اليدوي، تكرار…): إيرادات شهرها تُنقص في الخادم. */
+function DeletePayment({ id }: { id: string }) {
+  const t = useTranslations("admin.payments");
+  const qc = useQueryClient();
+  const [state, setState] = useState<"idle" | "confirm" | "busy" | "error">("idle");
+  async function remove() {
+    setState("busy");
+    try {
+      await deletePayment(id);
+      await Promise.all([qc.invalidateQueries({ queryKey: ["adminPayments"] }), qc.invalidateQueries({ queryKey: ["adminRevenue"] })]);
+      setState("idle");
+    } catch {
+      setState("error");
+    }
+  }
+  if (state === "confirm" || state === "busy")
+    return (
+      <span className="flex items-center gap-1 whitespace-nowrap">
+        <button type="button" onClick={remove} disabled={state === "busy"} className="rounded-lg bg-red-700 px-2 py-1 text-xs font-semibold text-white hover:bg-red-800">
+          {state === "busy" ? <LoaderCircle aria-hidden className="size-3.5 animate-spin" /> : t("deleteYes")}
+        </button>
+        <button type="button" onClick={() => setState("idle")} disabled={state === "busy"} className="px-2 py-1 text-xs text-muted hover:underline">{t("cancel")}</button>
+      </span>
+    );
+  return (
+    <button type="button" onClick={() => setState("confirm")} title={t("delete")} aria-label={t("delete")} className={cn("rounded-lg p-1.5 hover:bg-red-50", state === "error" ? "text-red-700" : "text-muted hover:text-red-700")}>
+      <Trash2 aria-hidden className="size-4" />
+    </button>
+  );
+}
+
+/** إضافة معاملة يدوية تُحتسب في إيرادات شهر تاريخها (لا تفعّل اشتراكًا: التفعيل من صفحة الأستاذ). */
+function AddPayment() {
+  const t = useTranslations("admin.payments");
+  const qc = useQueryClient();
+  const [open, setOpen] = useState(false);
+  const [f, setF] = useState({ email: "", gross: "", fees: "0", date: new Date().toISOString().slice(0, 10), note: "" });
+  const [state, setState] = useState<"idle" | "busy" | "done" | "error">("idle");
+  async function save(e: React.FormEvent) {
+    e.preventDefault();
+    setState("busy");
+    try {
+      await addPayment({ email: f.email.trim(), gross: Math.round(Number(f.gross)), fees: Math.round(Number(f.fees) || 0), date: f.date, note: f.note.trim() });
+      await Promise.all([qc.invalidateQueries({ queryKey: ["adminPayments"] }), qc.invalidateQueries({ queryKey: ["adminRevenue"] })]);
+      setF((x) => ({ ...x, email: "", gross: "", note: "" }));
+      setState("done");
+    } catch {
+      setState("error");
+    }
+  }
+  if (!open)
+    return (
+      <button type="button" onClick={() => setOpen(true)} className={buttonClass("secondary")}>
+        <Plus aria-hidden className="size-4" />
+        {t("add")}
+      </button>
+    );
+  return (
+    <Card className="space-y-3">
+      <h2 className="font-semibold">{t("add")}</h2>
+      <p className="text-sm text-muted">{t("addHint")}</p>
+      <form onSubmit={save} className="grid gap-3 sm:grid-cols-2">
+        <Field label={t("addEmail")} type="email" dir="ltr" value={f.email} onChange={(e) => setF({ ...f, email: e.target.value })} />
+        <Field label={t("gross")} type="number" min={1} required dir="ltr" value={f.gross} onChange={(e) => setF({ ...f, gross: e.target.value })} />
+        <Field label={t("fees")} type="number" min={0} dir="ltr" value={f.fees} onChange={(e) => setF({ ...f, fees: e.target.value })} />
+        <Field label={t("date")} type="date" required dir="ltr" value={f.date} onChange={(e) => setF({ ...f, date: e.target.value })} />
+        <Field label={t("addNote")} className="sm:col-span-2" value={f.note} onChange={(e) => setF({ ...f, note: e.target.value })} />
+        <div className="flex flex-wrap items-center gap-2 sm:col-span-2">
+          <button type="submit" disabled={state === "busy" || !(Number(f.gross) > 0)} className={buttonClass("primary")}>
+            {state === "busy" && <LoaderCircle aria-hidden className="size-4 animate-spin" />}
+            {t("addSave")}
+          </button>
+          <button type="button" onClick={() => setOpen(false)} className={buttonClass("secondary")}>{t("cancel")}</button>
+          {state === "done" && <span role="status" className="text-sm text-green-800">{t("added")}</span>}
+          {state === "error" && <span role="alert" className="text-sm text-red-800">{t("actionError")}</span>}
+        </div>
+      </form>
+    </Card>
   );
 }
 

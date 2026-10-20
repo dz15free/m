@@ -198,6 +198,19 @@ export function columnWidths(memo: Memo): number[] {
   return w.map((x) => Math.max(7, Math.round((x / total) * 100)));
 }
 
+/** مفتاح مذكرة كل درس: أول صفحة منه، و«~2»، «~3»… للدرس الثاني فما بعد الذي يبدأ في الصفحة نفسها
+    (مذكرتان قصيرتان في صفحة واحدة). */
+export function memoKeys(lessons: { pages?: (string | number)[] }[]): string[] {
+  const seen = new Map<string, number>();
+  return lessons.map((l) => {
+    const first = String(l.pages?.[0] ?? "");
+    if (!first) return "";
+    const n = (seen.get(first) ?? 0) + 1;
+    seen.set(first, n);
+    return n === 1 ? first : `${first}~${n}`;
+  });
+}
+
 /** صيغة التخزين في Firestore (لا يقبل مصفوفات متداخلة): الحقول كائنات، والصفوف كائنات خلايا. */
 export type StoredMemo = Omit<Memo, "head" | "rows"> & { head: { l: string; v: string }[]; rows: { c: string[] }[] };
 
