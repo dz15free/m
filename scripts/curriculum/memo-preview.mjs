@@ -87,8 +87,13 @@ const SUBJ = { ar: "لغة عربية", fr: "Français", en: "English", math: "�
 const lang = cur.subject === "fr" ? "fr" : cur.subject === "en" ? "en" : "ar";
 const level = cur.level.replace("AM", lang === "ar" ? " متوسط" : "AM");
 const sheets = [];
+const seen = new Map();
 for (const l of cur.lessons) {
-  const key = String(l.pages?.[0] ?? "");
+  // مثل memoKeys: الدرس الثاني الذي يبدأ في الصفحة نفسها مفتاحه «b:12~2»
+  const first = String(l.pages?.[0] ?? "");
+  const n = (seen.get(first) ?? 0) + 1;
+  seen.set(first, n);
+  const key = n === 1 ? first : `${first}~${n}`;
   const memo = memos[key];
   if (!memo || (only && !only.includes(key))) continue;
   const meta = lang === "ar" ? `المقطع ${l.segment} · الأسبوع ${l.unit}` : lang === "fr" ? `Projet/Séq. ${l.segment} · Semaine ${l.unit}` : `Sequence ${l.segment} · Week ${l.unit}`;
