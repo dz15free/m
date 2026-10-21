@@ -113,6 +113,30 @@ async function cropJpeg(page: HTMLCanvasElement, [x, y, w, h]: [number, number, 
   return (await canvasJpeg(canvas, [0.8, 0.65, 0.5])).img;
 }
 
+/** يصغّر صورة JPEG (base64) بنسبة وجودة أقل: لمذكرة كثيرة الأشكال تتجاوز حدّ وثيقة Firestore. */
+async function shrinkJpeg(img: string, scale: number, quality: number): Promise<string> {
+  const bitmap = await createImageBitmap(await (await fetch(`data:image/jpeg;base64,${img}`)).blob());
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+  canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+  canvas.getContext("2d")!.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  return (await canvasJpeg(canvas, [quality])).img;
+}
+
+/** حدّ وثيقة Firestore 1 MiB: نُبقي المذكرة بأشكالها تحت ~950 KB بتصغير الأشكال تدريجيًا. */
+const DOC_BUDGET = 950_000;
+async function fitMemo(memo: Memo, imgs: string[]): Promise<Memo> {
+  const base = imgs.length ? withImages(memo, imgs) : memo;
+  let published = base;
+  // كل مستوى يُحسب من الأشكال الأصلية (لا تصغير فوق تصغير)
+  for (const [scale, q] of [[0.8, 0.6], [0.65, 0.5], [0.5, 0.45], [0.4, 0.4]] as const) {
+    if (JSON.stringify(published).length <= DOC_BUDGET || !base.imgs?.length) break;
+    published = { ...base, imgs: await Promise.all(base.imgs.map((i) => shrinkJpeg(i, scale, q))) };
+  }
+  if (JSON.stringify(published).length > DOC_BUDGET) throw new Error("memo too large");
+  return published;
+}
+
 /** وثيقة مصدر: صفحاتها مرقّمة تباعًا عبر ملفاتها (كما يدمجها pdfunite في seed.mjs). */
 async function openSource(spec: SourceSpec): Promise<Renderer> {
   if (spec.web) throw new Error("web source: every lesson needs its re-typeset memo (content/memos)");
@@ -215,7 +239,7 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
     const memo = memoOf(l)!;
     const imgs = memoFigures(memo).map((f) => figures.get(figKey(f.ref, f.box)) ?? "");
     // أشكال مقتطعة الآن من Drive، أو مضمّنة في الملف من قبل (مصادر الويب)
-    const published = imgs.length ? withImages(memo, imgs) : memo;
+    const published = await fitMemo(memo, imgs);
     await setDoc(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample: sampleOf(l), body: "", memo: memoToDoc(published), quality: "memo", source: c.source, updatedAt: now });
     onProgress({ step: "memos", done: i + 1, total: withMemo.length });
   }

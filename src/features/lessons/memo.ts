@@ -175,11 +175,18 @@ export function memoFigures(memo: Memo): { ref: string; box: [number, number, nu
   }));
 }
 
-/** يستبدل الأشكال بمراجع صورها (بترتيب memoFigures). */
+/** يستبدل الأشكال بمراجع صورها (imgs بترتيب memoFigures). الشكل المكرّر (نفس الصورة) يُخزَّن مرة واحدة. */
 export function withImages(memo: Memo, imgs: string[]): Memo {
+  const unique: string[] = [];
+  const index = imgs.map((img) => {
+    const at = unique.indexOf(img);
+    if (at >= 0) return at;
+    unique.push(img);
+    return unique.length - 1;
+  });
   let n = 0;
-  const swap = (s?: string) => s?.replace(new RegExp(FIG.source.slice(1, -1), "gm"), () => `[[img ${n++}]]`);
-  return { ...memo, pre: swap(memo.pre), rows: memo.rows.map((r) => r.map((c) => swap(c)!)), after: swap(memo.after), imgs };
+  const swap = (s?: string) => s?.replace(new RegExp(FIG.source.slice(1, -1), "gm"), () => `[[img ${index[n++]}]]`);
+  return { ...memo, pre: swap(memo.pre), rows: memo.rows.map((r) => r.map((c) => swap(c)!)), after: swap(memo.after), imgs: unique };
 }
 
 /** نص مجرّد (للبحث وتقدير عرض الأعمدة). */
