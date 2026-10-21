@@ -33,6 +33,8 @@ import mid_2AM_histgeo from "../../../content/curriculum/2AM_histgeo.json";
 import mid_2AM_informatics from "../../../content/curriculum/2AM_informatics.json";
 import mid_2AM_islamic from "../../../content/curriculum/2AM_islamic.json";
 import mid_2AM_math from "../../../content/curriculum/2AM_math.json";
+import mid_2AM_physics from "../../../content/curriculum/2AM_physics.json";
+import mid_2AM_science from "../../../content/curriculum/2AM_science.json";
 import mid_3AM_ar from "../../../content/curriculum/3AM_ar.json";
 import mid_3AM_civic from "../../../content/curriculum/3AM_civic.json";
 import mid_3AM_en from "../../../content/curriculum/3AM_en.json";
@@ -59,7 +61,7 @@ import type { CurriculumFile } from "./curriculum-publish";
 export const CURRICULA = [
   m4, i4, s4, h4, g4, a4, mu4, ar4, c4, pe4, h5, i5, c5, s5,
   // التعليم المتوسط (scripts/curriculum/build-middle.mjs)
-  mid_1AM_ar, mid_1AM_civic, mid_1AM_en, mid_1AM_fr, mid_1AM_histgeo, mid_1AM_informatics, mid_1AM_islamic, mid_1AM_math, mid_1AM_music, mid_1AM_physics, mid_1AM_science, mid_2AM_ar, mid_2AM_civic, mid_2AM_en, mid_2AM_histgeo, mid_2AM_informatics, mid_2AM_islamic, mid_2AM_math, mid_3AM_ar, mid_3AM_civic, mid_3AM_en, mid_3AM_fr, mid_3AM_histgeo, mid_3AM_informatics, mid_3AM_islamic, mid_3AM_math, mid_3AM_physics, mid_3AM_science, mid_4AM_ar, mid_4AM_civic, mid_4AM_en, mid_4AM_fr, mid_4AM_histgeo, mid_4AM_informatics, mid_4AM_islamic, mid_4AM_math, mid_4AM_music, mid_4AM_physics, mid_4AM_science,
+  mid_1AM_ar, mid_1AM_civic, mid_1AM_en, mid_1AM_fr, mid_1AM_histgeo, mid_1AM_informatics, mid_1AM_islamic, mid_1AM_math, mid_1AM_music, mid_1AM_physics, mid_1AM_science, mid_2AM_ar, mid_2AM_civic, mid_2AM_en, mid_2AM_histgeo, mid_2AM_informatics, mid_2AM_islamic, mid_2AM_math, mid_2AM_physics, mid_2AM_science, mid_3AM_ar, mid_3AM_civic, mid_3AM_en, mid_3AM_fr, mid_3AM_histgeo, mid_3AM_informatics, mid_3AM_islamic, mid_3AM_math, mid_3AM_physics, mid_3AM_science, mid_4AM_ar, mid_4AM_civic, mid_4AM_en, mid_4AM_fr, mid_4AM_histgeo, mid_4AM_informatics, mid_4AM_islamic, mid_4AM_math, mid_4AM_music, mid_4AM_physics, mid_4AM_science,
 ] as unknown as CurriculumFile[];
 
 /** معرّفات ملفات Drive المعلنة مصادرَ لهذه المناهج (نسخة خفيفة للخادم في curriculum-sources.json؛ اختبار يتأكد من تطابقهما). */
