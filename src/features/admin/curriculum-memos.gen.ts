@@ -7,6 +7,7 @@ export const MEMO_FILES: Record<string, Entry> = {
   "1AM_ar": { rev: "ec46210f", count: 166, load: () => import("../../../content/memos/1AM_ar.json") },
   "1AM_civic": { rev: "8468150c", count: 18, load: () => import("../../../content/memos/1AM_civic.json") },
   "1AM_en": { rev: "f9a43d89", count: 39, load: () => import("../../../content/memos/1AM_en.json") },
+  "1AM_histgeo": { rev: "e5d9fc8a", count: 45, load: () => import("../../../content/memos/1AM_histgeo.json") },
   "1AM_informatics": { rev: "6097170e", count: 20, load: () => import("../../../content/memos/1AM_informatics.json") },
   "1AM_islamic": { rev: "72db2bb5", count: 22, load: () => import("../../../content/memos/1AM_islamic.json") },
   "1AM_math": { rev: "350689d0", count: 67, load: () => import("../../../content/memos/1AM_math.json") },
