@@ -76,3 +76,11 @@ test("math: vectors", () => {
 test("مفتاح المذكرة: الدرس الثاني في الصفحة نفسها «~2»", () => {
   assert.deepEqual(memoKeys([{ pages: ["b:12"] }, { pages: ["b:12", "b:13"] }, {}, { pages: ["b:13"] }]), ["b:12", "b:12~2", "", "b:13"]);
 });
+
+test("الشكل المكرّر يُخزَّن مرة واحدة", () => {
+  const memo: Memo = { head: [], cols: ["a", "b"], rows: [["[[fig b:1 0 0 1 1]]", "[[fig b:2 0 0 1 1]]"]], after: "[[fig b:1 0 0 1 1]]" };
+  const out = withImages(memo, ["A", "B", "A"]);
+  assert.deepEqual(out.imgs, ["A", "B"]);
+  assert.equal(out.after, "[[img 0]]");
+  assert.deepEqual(out.rows[0], ["[[img 0]]", "[[img 1]]"]);
+});
