@@ -144,7 +144,7 @@ function build(spec) {
     },
     weekMode: "absolute",
     segments: spec.segments,
-    sources: spec.web ? { w: { web: spec.web } } : { b: { pdf: spec.files } },
+    sources: spec.web ? { w: { web: spec.web } } : { b: { pdf: spec.files, ...(spec.embedded ? { embedded: true } : {}) } },
     lessons,
   };
 }
