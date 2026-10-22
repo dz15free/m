@@ -36,7 +36,8 @@ for (const f of files) {
         assert.ok(x >= 0 && y >= 0 && w > 0 && h > 0 && x + w <= 1.001 && y + h <= 1.001, `${id} ${key}: figure box`);
       }
       // أشكال مصادر Drive تُقتطع عند النشر؛ أشكال مصادر الويب مضمّنة من قبل (memo-embed.mjs)
-      const web = !!cur.sources?.[key.split(":")[0]!]?.web;
+      const src = cur.sources?.[key.split(":")[0]!] as { web?: string[]; embedded?: boolean } | undefined;
+      const web = !!src?.web || !!src?.embedded;
       if (web) assert.equal(memoFigures(memo).length, 0, `${id} ${key}: run memo-embed.mjs (web source)`);
       else assert.ok(!memo.imgs, `${id} ${key}: imgs are filled at publish time only`);
       const refs = [...JSON.stringify(memo).matchAll(/\[\[img (\d+)\]\]/g)].map((m) => Number(m[1]));

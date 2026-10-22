@@ -31,7 +31,8 @@ type Lesson = {
   sample?: boolean;
 };
 /** pdf/images: ملفات Drive. web: روابط مصدر مذكرات مُنسّقة مضمّنة (للتوثيق؛ لا يُحمَّل). */
-type SourceSpec = { pdf?: string[]; images?: string[]; web?: string[] };
+/** embedded: ملفات Word في Drive (لا يفتحها المتصفح)؛ أشكال مذكراتها مضمّنة مسبقًا بـ memo-embed.mjs فلا يُفتح المصدر عند النشر. */
+type SourceSpec = { pdf?: string[]; images?: string[]; web?: string[]; embedded?: boolean };
 export type CurriculumFile = {
   id: string;
   level: string;
@@ -139,7 +140,7 @@ async function fitMemo(memo: Memo, imgs: string[]): Promise<Memo> {
 
 /** وثيقة مصدر: صفحاتها مرقّمة تباعًا عبر ملفاتها (كما يدمجها pdfunite في seed.mjs). */
 async function openSource(spec: SourceSpec): Promise<Renderer> {
-  if (spec.web) throw new Error("web source: every lesson needs its re-typeset memo (content/memos)");
+  if (spec.web || spec.embedded) throw new Error("source not readable in the browser: every lesson needs its re-typeset memo (content/memos)");
   if (spec.images) {
     const ids = spec.images;
     return async (n) => {
