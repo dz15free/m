@@ -23,6 +23,7 @@ export const MEMO_FILES: Record<string, Entry> = {
   "2AM_math": { rev: "56d0f6d1", count: 51, load: () => import("../../../content/memos/2AM_math.json") },
   "2AM_physics": { rev: "3e904bc0", count: 36, load: () => import("../../../content/memos/2AM_physics.json") },
   "2AM_science": { rev: "38bae231", count: 29, load: () => import("../../../content/memos/2AM_science.json") },
+  "3AM_ar": { rev: "9c3164d6", count: 55, load: () => import("../../../content/memos/3AM_ar.json") },
   "3AM_civic": { rev: "812a574c", count: 12, load: () => import("../../../content/memos/3AM_civic.json") },
   "3AM_en": { rev: "d098e466", count: 48, load: () => import("../../../content/memos/3AM_en.json") },
   "3AM_fr": { rev: "66379cdb", count: 68, load: () => import("../../../content/memos/3AM_fr.json") },
