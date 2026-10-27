@@ -12,6 +12,7 @@ export const MEMO_FILES: Record<string, Entry> = {
   "1AM_informatics": { rev: "6097170e", count: 20, load: () => import("../../../content/memos/1AM_informatics.json") },
   "1AM_islamic": { rev: "c4c79732", count: 22, load: () => import("../../../content/memos/1AM_islamic.json") },
   "1AM_math": { rev: "1b35f00b", count: 67, load: () => import("../../../content/memos/1AM_math.json") },
+  "1AM_music": { rev: "2b8ce0f7", count: 25, load: () => import("../../../content/memos/1AM_music.json") },
   "1AM_physics": { rev: "196ab000", count: 39, load: () => import("../../../content/memos/1AM_physics.json") },
   "1AM_science": { rev: "d0d555fb", count: 41, load: () => import("../../../content/memos/1AM_science.json") },
   "2AM_ar": { rev: "bde096e2", count: 131, load: () => import("../../../content/memos/2AM_ar.json") },
@@ -41,6 +42,7 @@ export const MEMO_FILES: Record<string, Entry> = {
   "4AM_informatics": { rev: "b5ea0173", count: 24, load: () => import("../../../content/memos/4AM_informatics.json") },
   "4AM_islamic": { rev: "23aea956", count: 21, load: () => import("../../../content/memos/4AM_islamic.json") },
   "4AM_math": { rev: "9410b7fc", count: 114, load: () => import("../../../content/memos/4AM_math.json") },
+  "4AM_music": { rev: "91562f0", count: 25, load: () => import("../../../content/memos/4AM_music.json") },
   "4AM_physics": { rev: "21412ade", count: 26, load: () => import("../../../content/memos/4AM_physics.json") },
   "4AM_science": { rev: "456f24ba", count: 64, load: () => import("../../../content/memos/4AM_science.json") },
 };
