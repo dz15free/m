@@ -4,8 +4,8 @@
  "subject": "fr",
  "title": "Langue française — 5e année primaire",
  "source": {
-  "ar": "بطاقات حصص منشورة للعموم (وفق التدرّج السنوي للسنة الخامسة 2026/2027: 3 ساعات أسبوعيًا، المقطع 11 ساعة)؛ الأسابيع تقديرية",
-  "fr": "Fiches pédagogiques partagées publiquement (selon la progression annuelle 5e AP 2026/2027 : 3 h/semaine, séquence de 11 h) ; semaines estimées"
+  "ar": "بطاقات حصص منشورة للعموم (وفق التدرّج السنوي للسنة الخامسة 2026/2027: 3 ساعات أسبوعيًا، المقطع 11 ساعة)؛ الأسابيع تقديرية؛ المشروع 1 – المقطع 1: بطاقات 2026/2027 لـ REZAK Djillali Abdelkrim",
+  "fr": "Fiches pédagogiques partagées publiquement (selon la progression annuelle 5e AP 2026/2027 : 3 h/semaine, séquence de 11 h) ; semaines estimées ; Projet 1 – Séquence 1 : fiches 2026-2027 de REZAK Djillali Abdelkrim"
  },
  "weekMode": "absolute",
  "segments": {
@@ -21,6 +21,7 @@
  },
  "lessons": [
   {
+   "order": 1,
    "segment": 0,
    "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
    "unitKind": "week",
@@ -38,10 +39,10 @@
     "b:2",
     "b:3"
    ],
-   "sample": true,
-   "order": 1
+   "sample": true
   },
   {
+   "order": 2,
    "segment": 0,
    "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
    "unitKind": "week",
@@ -59,10 +60,10 @@
     "b:4",
     "b:5"
    ],
-   "sample": true,
-   "order": 2
+   "sample": true
   },
   {
+   "order": 3,
    "segment": 0,
    "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
    "unitKind": "week",
@@ -81,10 +82,10 @@
     "b:7",
     "b:8"
    ],
-   "sample": true,
-   "order": 3
+   "sample": true
   },
   {
+   "order": 4,
    "segment": 0,
    "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
    "unitKind": "week",
@@ -101,10 +102,10 @@
    "pages": [
     "b:9"
    ],
-   "sample": true,
-   "order": 4
+   "sample": true
   },
   {
+   "order": 5,
    "segment": 0,
    "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
    "unitKind": "week",
@@ -122,10 +123,10 @@
     "b:10",
     "b:11"
    ],
-   "sample": true,
-   "order": 5
+   "sample": true
   },
   {
+   "order": 6,
    "segment": 0,
    "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
    "unitKind": "week",
@@ -142,10 +143,10 @@
    "pages": [
     "b:12"
    ],
-   "sample": true,
-   "order": 6
+   "sample": true
   },
   {
+   "order": 7,
    "segment": 0,
    "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
    "unitKind": "week",
@@ -164,10 +165,10 @@
     "b:14",
     "b:15"
    ],
-   "sample": true,
-   "order": 7
+   "sample": true
   },
   {
+   "order": 8,
    "segment": 0,
    "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
    "unitKind": "week",
@@ -185,10 +186,10 @@
     "b:16",
     "b:17"
    ],
-   "sample": true,
-   "order": 8
+   "sample": true
   },
   {
+   "order": 9,
    "segment": 0,
    "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
    "unitKind": "week",
@@ -206,10 +207,10 @@
     "b:18",
     "b:19"
    ],
-   "sample": true,
-   "order": 9
+   "sample": true
   },
   {
+   "order": 10,
    "segment": 0,
    "segmentTitle": "Évaluation diagnostique (fiches : REZAK Djillali Abdelkrim)",
    "unitKind": "week",
@@ -226,391 +227,471 @@
    "pages": [
     "b:20"
    ],
-   "sample": true,
-   "order": 10
+   "sample": true
   },
   {
    "order": 11,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 3,
-   "session": "Présentation du projet (45 mn)",
+   "session": "Séance 1/23 (20 min)",
    "activity": "Français",
-   "domain": "Connaître le système graphique du français",
-   "topic": "Présentation du projet — Pauvre petite gazelle !",
-   "materials": "Manuel scolaire page 11– Tableau",
+   "domain": "Exploiter des indices textuels pour accéder progressivement au sens",
+   "topic": "Contrat d’apprentissage — Situation de départ et engagements d’apprentissage",
+   "materials": "Livre scolaire page 11 - Situation de départ (élémentaire)",
    "objectives": [
-    "Impliquer l’apprenant dans le planning de la réalisation des tâches partielles et / ou finales"
+    "À la fin de la séance, l’apprenant serait capable de se repérer dans le projet et d’anticiper les apprentissages de la séquence"
    ],
    "body": "",
    "pages": [
-    3
+    "r:2"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 12,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 3,
-   "session": "Oral compréhension (45 mn)",
+   "session": "Séance 2/23 (20 min)",
    "activity": "Français",
-   "domain": "Identifier la situation de communication",
-   "topic": "Oral compréhension — Pauvre petite gazelle !",
-   "materials": "Illustration – support audio ou audio-visuel",
+   "domain": "Repérer l’intention et les informations utiles du message entendu",
+   "topic": "Oral compréhension — La visite au zoo et la gazelle",
+   "materials": "Livre scolaire page 12 – Illustration - P.L.M",
    "objectives": [
-    "Repérer le thème général, les interlocuteurs et l’objet du message oral"
+    "À la fin de la séance, l’apprenant serait capable d’extraire les informations principales d’un message oral portant sur la gazelle"
    ],
    "body": "",
    "pages": [
-    4
+    "r:3"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 13,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 3,
-   "session": "Compréhension de l’écrit 1 (45 mn)",
+   "session": "Séance 3/23 (20 min)",
    "activity": "Français",
-   "domain": "Construire du sens à l’aide d’éléments du para texte (silhouette, références, illustration)",
-   "topic": "Compréhension de l’écrit 1 : La gazelle — Pauvre petite gazelle !",
-   "materials": "L’illustration de la gazelle – Manuel scolaire page 15",
+   "domain": "Formuler un énoncé compréhensible en réaction à une consigne",
+   "topic": "Oral production — Décrire un animal sauvage",
+   "materials": "Livre scolaire page 12 - Illustration",
    "objectives": [
-    "Bâtir des hypothèses de lecture à partir de l’illustration du texte"
+    "À la fin de la séance, l’apprenant serait capable de présenter oralement un animal sauvage en tenant compte des caractéristiques de la situation d’échange"
    ],
    "body": "",
    "pages": [
-    5
+    "r:4"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 14,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 3,
-   "session": "Vocabulaire (45 mn)",
+   "session": "Séance 4/23 (30 min)",
    "activity": "Français",
-   "domain": "Identifier du lexique thématique",
-   "topic": "Vocabulaire : Lexique thématique : les parties du corps et l'aspect physique de l'animal — Pauvre petite gazelle !",
-   "materials": "Illustration de la gazelle – Manuel scolaire page 15",
+   "domain": "Exploiter la présentation du texte, ses références et ses illustrations pour orienter la compréhension",
+   "topic": "Compréhension de l’écrit 1 — La gazelle",
+   "materials": "Livre scolaire page 15 – Illustration - P.L.M",
    "objectives": [
-    "Enrichir le stock lexical de l'élève pour décrire le physique d'un animal (parties du corps, couleur, taille)"
+    "À la fin de la séance, l’apprenant serait capable de construire le sens d’un texte descriptif à partir de ses indices périphériques et textuels"
    ],
    "body": "",
    "pages": [
-    6
+    "r:5"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 15,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 3,
-   "session": "Oral production 1 (45 mn)",
+   "session": "Séance 5/23 (30 min)",
    "activity": "Français",
-   "domain": "Produire un énoncé intelligible pour communiquer",
-   "topic": "Oral production 1 — Pauvre petite gazelle !",
-   "materials": "Illustrations – Manuel scolaire page 12",
+   "domain": "Sélectionner et exploiter des ressources lexicales et linguistiques pour enrichir la production",
+   "topic": "Vocabulaire — Lexique thématique (parties du corps, pelage, …)",
+   "materials": "Illustration – P.L.M – Cahiers de classe",
    "objectives": [
-    "Participer à une discussion sur un sujet donné."
+    "À la fin de la séance, l’apprenant serait capable de mobiliser le lexique des parties du corps pour caractériser un animal"
    ],
    "body": "",
    "pages": [
-    7
+    "r:6"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 16,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 3,
-   "session": "Grammaire (45 mn)",
+   "session": "Séance 6/23 (30 min)",
    "activity": "Français",
-   "domain": "Identifier et connaître le fonctionnement de la langue",
-   "topic": "Grammaire : L'adjectif qualificatif épithète — Pauvre petite gazelle !",
-   "materials": "Manuel scolaire page 16 – Tableau",
+   "domain": "Exploiter les indices du texte pour en dégager la signification",
+   "topic": "Compréhension de l’écrit 2 — Un animal sauvage",
+   "materials": "Cahier d’activités page 8 - Illustration - P.L.M",
    "objectives": [
-    "Identifier l'adjectif qualificatif épithète et l'accorder avec le nom qu'il qualifie"
+    "À la fin de la séance, l’apprenant serait capable de prélever dans un texte les éléments nécessaires à la description d’un animal sauvage"
    ],
    "body": "",
    "pages": [
-    8
+    "r:7"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 17,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
-   "unit": 4,
-   "session": "Grammaire (45 mn)",
+   "unit": 3,
+   "session": "Séance 7/23 (30 min)",
    "activity": "Français",
-   "domain": "Identifier et connaître le fonctionnement de la langue",
-   "topic": "Grammaire : La pronominalisation (il / elle, ils / elles) — Pauvre petite gazelle !",
-   "materials": "Manuel scolaire page 16 – Ardoises",
+   "domain": "Assurer une lecture orale fluide en tenant compte du sens et de la ponctuation",
+   "topic": "Lecture fluence — Au zoo",
+   "materials": "Texte support & Chronomètre",
    "objectives": [
-    "Remplacer un groupe nominal par le pronom personnel qui convient pour éviter la répétition"
+    "À la fin de la séance, l’apprenant serait capable de lire un texte à voix haute avec fluidité, précision et respect de la ponctuation"
    ],
    "body": "",
    "pages": [
-    9
+    "r:8",
+    "r:9"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 18,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
-   "unit": 4,
-   "session": "Compréhension de l'écrit 2 (45 mn)",
+   "unit": 3,
+   "session": "Séance 8/23 (30 min)",
    "activity": "Français",
-   "domain": "Construire du sens à l'aide d'éléments du para texte (silhouette, références, illustration)",
-   "topic": "Compréhension de l'écrit 2 : Un animal sauvage — Pauvre petite gazelle !",
-   "materials": "Cahier d'activités page 8 – Illustration",
+   "domain": "Choisir des ressources linguistiques pertinentes afin de rendre la production plus précise",
+   "topic": "Grammaire 1 — L’adjectif qualificatif épithète",
+   "materials": "Tableau – P.L.M - Cahiers de classe",
    "objectives": [
-    "Confirmer ou infirmer des hypothèses de lecture et dégager les caractéristiques physiques de l'animal décrit"
+    "À la fin de la séance, l’apprenant serait capable d’employer un adjectif qualificatif épithète pour préciser un groupe nominal"
    ],
    "body": "",
    "pages": [
-    10
+    "r:10"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 19,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
-   "unit": 4,
-   "session": "Oral production 2 (45 mn)",
+   "unit": 3,
+   "session": "Séance 9/23 (30 min)",
    "activity": "Français",
-   "domain": "Produire un énoncé intelligible pour communiquer",
-   "topic": "Oral production 2 : « Je m’exprime » — Pauvre petite gazelle !",
-   "materials": "Illustrations – Manuel scolaire page 13",
+   "domain": "Mettre en œuvre une lecture expressive en respectant le rythme, les sons et la ponctuation",
+   "topic": "Lecture systématique — Les sons : [aj], [εj], [uj], [œj]",
+   "materials": "Tableau -Cahier de classe",
    "objectives": [
-    "Participer à une discussion sur un sujet donné."
+    "À la fin de la séance, l’apprenant serait capable de distinguer les phonèmes [aj], [εj], [uj] et [œj] et leurs principales graphies"
    ],
    "body": "",
    "pages": [
-    11
+    "r:11"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 20,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 4,
-   "session": "Conjugaison (45 mn)",
+   "session": "Séance 10/23 (30 min)",
    "activity": "Français",
-   "domain": "Identifier les points de langue pour mieux écrire",
-   "topic": "Conjugaison : Le verbe être et avoir au présent — Pauvre petite gazelle !",
-   "materials": "Manuel scolaire page 29 – Des affiches de conjugaison",
+   "domain": "Exploiter des moyens linguistiques pour améliorer la qualité de l’écrit produit",
+   "topic": "Grammaire 2 — La pronominalisation : il /elle, ils /elles",
+   "materials": "Livre scolaire page 16 – P.L.M - Cahier de classe",
    "objectives": [
-    "L’emploi correct du verbe être et avoir dans des situations de communication"
+    "À la fin de la séance, l’apprenant serait capable de substituer un groupe nominal par le pronom personnel qui convient"
    ],
    "body": "",
    "pages": [
-    12
+    "r:12"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 21,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 4,
-   "session": "Lecture systématique (45 mn)",
+   "session": "Séance 11/23 (30 min)",
    "activity": "Français",
-   "domain": "Lire de manière expressive",
-   "topic": "Lecture systématique : Les sons : ail, eil, ouil, euil — Pauvre petite gazelle !",
-   "materials": "Tableau – Cahier de classe",
+   "domain": "Contrôler les paramètres sonores et mélodiques nécessaires à une parole intelligible",
+   "topic": "Phonétique articulatoire — Les sons : [o], [u]",
+   "materials": "Tableau - Illustration",
    "objectives": [
-    "Identifier et lire correctement les sons ail, eil, ouil, euil"
+    "À la fin de la séance, l’apprenant serait capable de différencier puis de réaliser de façon correcte les sons [o] et [u]"
    ],
    "body": "",
    "pages": [
-    13
+    "r:13"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 22,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 4,
-   "session": "Orthographe (45 mn)",
+   "session": "Séance 12/23 (30 min)",
    "activity": "Français",
-   "domain": "Identifier les points de langue pour mieux écrire",
-   "topic": "Orthographe : Accord de l'adjectif qualificatif avec le nom (masculin / féminin) — Pauvre petite gazelle !",
-   "materials": "Exercices transcrits au tableau ou photocopiés",
+   "domain": "Utiliser les ressources grammaticales étudiées pour renforcer la qualité de la production",
+   "topic": "Conjugaison — Être et avoir au présent de l’indicatif",
+   "materials": "Livre scolaire page 29 – P.L.M – Cahiers de classe",
    "objectives": [
-    "Accorder correctement l'adjectif qualificatif en genre avec le nom"
+    "À la fin de la séance, l’apprenant serait capable de conjuguer être et avoir au présent de l’indicatif en fonction du sujet"
    ],
    "body": "",
    "pages": [
-    14
+    "r:14"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 23,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 4,
-   "session": "Dictée (45 mn)",
+   "session": "Séance 13/23 (30 min)",
    "activity": "Français",
-   "domain": "Ecrire pour répondre à une consigne d'écriture",
-   "topic": "Dictée — Pauvre petite gazelle !",
-   "materials": "Texte support de la séquence (la gazelle) – Ardoises, cahiers",
+   "domain": "Réinvestir les ressources linguistiques nécessaires à une écriture correcte et cohérente",
+   "topic": "Orthographe — L’accord de l’adjectif qualificatif avec le nom (masculin/féminin)",
+   "materials": "Tableau - P.L.M – Cahiers de classe",
    "objectives": [
-    "Reproduire correctement un passage en respectant l'orthographe et la ponctuation"
+    "À la fin de la séance, l’apprenant serait capable d’appliquer les principales marques du féminin dans des mots et des phrases simples"
    ],
    "body": "",
    "pages": [
-    15
+    "r:15"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 24,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
-   "unit": 5,
-   "session": "Préparation à l’écrit (45 mn)",
+   "unit": 4,
+   "session": "Séance 14/23 (30 min)",
    "activity": "Français",
-   "domain": "Produire des énoncés pour les insérer dans un cadre textuel",
-   "topic": "Préparation à l’écrit — Pauvre petite gazelle !",
-   "materials": "Illustrations -Manuel scolaire page 21 – Ardoises",
+   "domain": "Formuler des énoncés destinés à prendre place dans un cadre textuel et présenter un écrit lisible",
+   "topic": "Dictée — Description physique d’un animal sauvage",
+   "materials": "Tableau - P.L.M – Cahiers de classe",
    "objectives": [
-    "Comprendre les consignes et répondre par écrit aux différents exercices"
+    "À la fin de la séance, l’apprenant serait capable de transcrire un court texte en tenant compte de son orthographe et sa ponctuation"
    ],
    "body": "",
    "pages": [
-    16
+    "r:16"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 25,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
-   "unit": 5,
-   "session": "Production écrite (1er et 2ème jet) (45 mn)",
+   "unit": 4,
+   "session": "Séance 15/23 (30 min)",
    "activity": "Français",
-   "domain": "Produire un texte en fonction d’une situation de communication",
-   "topic": "Production écrite (1er et 2ème jet) — Pauvre petite gazelle !",
-   "materials": "Illustrations – boite à outils (mots)",
+   "domain": "Intervenir de façon pertinente dans un jeu de rôle ou un échange conversationnel",
+   "topic": "Entraînement à la mobilisation — Décrire un animal sauvage",
+   "materials": "Tableau - Illustration",
    "objectives": [
-    "Respecter une consigne d’écriture et organiser des informations pour écrire un texte."
+    "À la fin de la séance, l’apprenant serait capable de réinvestir le lexique et les structures étudiés pour décrire oralement un animal"
    ],
    "body": "",
    "pages": [
-    17
+    "r:17"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 26,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
-   "unit": 5,
-   "session": "Compte rendu (60 mn)",
+   "unit": 4,
+   "session": "Séance 16/23 (30 min)",
    "activity": "Français",
-   "domain": "Produire un texte en fonction d’une situation de communication",
-   "topic": "Compte rendu — Pauvre petite gazelle !",
-   "materials": "-Illustrations – Ardoises",
+   "domain": "Organiser des énoncés courts pour les intégrer à un texte correspondant à la situation proposée",
+   "topic": "Entraînement à l’écrit — Décrire un animal sauvage",
+   "materials": "Tableau - Illustration – Cahier",
    "objectives": [
-    "- Corriger collectivement les erreurs communes les plus Caractéristiques -Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+    "À la fin de la séance, l’apprenant serait capable de rédiger un court paragraphe descriptif en s’appuyant sur une boîte à outils"
    ],
    "body": "",
    "pages": [
-    18
+    "r:18"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 27,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
-   "unit": 5,
-   "session": "Comptine (30 mn)",
+   "unit": 4,
+   "session": "Séance 17/23 (30 min)",
    "activity": "Français",
-   "domain": "Répéter les mots pour les retenir tout en chantant la comptine",
-   "topic": "Comptine : Alouette — Pauvre petite gazelle !",
-   "materials": "Support audio – Illustration d'un oiseau",
+   "domain": "Construire une prise de parole claire pour répondre à une question ou à une consigne",
+   "topic": "Production orale — « Je m’exprime »",
+   "materials": "Livre scolaire page 13 - Illustrations",
    "objectives": [
-    "Mémoriser et chanter la comptine « Alouette » en respectant le rythme"
+    "À la fin de la séance, l’apprenant serait capable de décrire oralement un animal sauvage avec une articulation et une intonation adaptée"
    ],
    "body": "",
    "pages": [
-    19
+    "r:19"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 28,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 5,
-   "session": "Réalisation partielle du projet (30 mn)",
+   "session": "Séance 18/23 (30 min)",
    "activity": "Français",
-   "domain": "Ecrire pour répondre à une consigne d’écriture",
-   "topic": "Réalisation partielle du projet — Pauvre petite gazelle !",
-   "materials": "Illustrations -Manuel scolaire page 22 – Les dessins des animaux",
+   "domain": "Construire un texte en tenant compte du contexte, du destinataire et de l’intention de communication",
+   "topic": "Production écrite (1er jet) — Description d’un animal sauvage",
+   "materials": "",
    "objectives": [
-    "Amener l’élève à écrire des devinettes illustrées pour décrire des animaux"
+    "À la fin de la séance, l’apprenant serait capable de rédiger un premier jet décrivant le portrait physique d’un animal sauvage. Outil dactique : Illustrations – Boîte à outils - Cahiers de production écrite"
    ],
    "body": "",
    "pages": [
-    20
+    "r:20"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 29,
    "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
    "unitKind": "week",
    "unit": 5,
-   "session": "Evaluation (60 mn)",
+   "session": "Séance 19/23 (30 min)",
    "activity": "Français",
-   "domain": "Ecrire pour répondre à une consigne d’écriture",
-   "topic": "Evaluation — Pauvre petite gazelle !",
-   "materials": "-Tableau – Doubles feuilles",
+   "domain": "Réviser et enrichir un texte en fonction des exigences de la situation de communication",
+   "topic": "Production écrite (2ème jet) — Amélioration d’une description",
+   "materials": "Illustrations – Boîte à outils - Cahier",
    "objectives": [
-    "Renforcer les acquis des apprenants par des exercices variés"
+    "À la fin de la séance, l’apprenant serait capable d’améliorer son premier jet en corrigeant et en enrichissant sa description"
    ],
    "body": "",
    "pages": [
-    21
+    "r:21"
    ],
-   "sample": true,
-   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !"
+   "sample": true
   },
   {
    "order": 30,
+   "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Séance 20/23 (30 min)",
+   "activity": "Français",
+   "domain": "Examiner une production écrite et la réorganiser en fonction de la situation de communication",
+   "topic": "Compte rendu — Retour sur la production écrite",
+   "materials": "Tableau – Cahier",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable d’identifier ses erreurs et de réviser sa production écrite à partir d’une correction guidée"
+   ],
+   "body": "",
+   "pages": [
+    "r:22"
+   ],
+   "sample": true
+  },
+  {
+   "order": 31,
+   "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Séance 21/23 (30 min)",
+   "activity": "Français",
+   "domain": "Exploiter les ressources phonologiques et prosodiques pour mieux comprendre et restituer l’oral",
+   "topic": "Comptine — Alouette",
+   "materials": "Illustration - Support audio",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de restituer une comptine en tenant compte de son rythme et son intonation"
+   ],
+   "body": "",
+   "pages": [
+    "r:23"
+   ],
+   "sample": true
+  },
+  {
+   "order": 32,
+   "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Séance 22/23 (60 min)",
+   "activity": "Français",
+   "domain": "Rédiger pour répondre de façon pertinente à une consigne d’écriture",
+   "topic": "Évaluation — Bilan des apprentissages de la séquence",
+   "materials": "Tableau – Doubles feuilles",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de mobiliser les acquis de la séquence dans des situations de compréhension et de production"
+   ],
+   "body": "",
+   "pages": [
+    "r:24"
+   ],
+   "sample": true
+  },
+  {
+   "order": 33,
+   "segment": 1,
+   "segmentTitle": "Projet 1 : Au zoo ! — Séquence 1 : Pauvre petite gazelle !",
+   "unitKind": "week",
+   "unit": 5,
+   "session": "Séance 23/23 (60 min)",
+   "activity": "Français",
+   "domain": "Organiser un texte en fonction du contexte et de l’objectif de communication",
+   "topic": "Tâche 1 — Réalisation d’une description d’animal sauvage",
+   "materials": "Dessins des animaux – Fiches cartonnées",
+   "objectives": [
+    "À la fin de la séance, l’apprenant serait capable de réaliser une tâche intégrant les ressources langagières étudiées pour décrire un animal"
+   ],
+   "body": "",
+   "pages": [
+    "r:25"
+   ],
+   "sample": true
+  },
+  {
+   "order": 34,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -630,7 +711,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 31,
+   "order": 35,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -650,7 +731,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 32,
+   "order": 36,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -670,7 +751,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 33,
+   "order": 37,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -690,7 +771,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 34,
+   "order": 38,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -710,7 +791,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 35,
+   "order": 39,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -730,7 +811,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 36,
+   "order": 40,
    "segment": 2,
    "unitKind": "week",
    "unit": 6,
@@ -750,7 +831,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 37,
+   "order": 41,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -770,7 +851,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 38,
+   "order": 42,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -790,7 +871,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 39,
+   "order": 43,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -810,7 +891,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 40,
+   "order": 44,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -830,7 +911,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 41,
+   "order": 45,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -850,7 +931,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 42,
+   "order": 46,
    "segment": 2,
    "unitKind": "week",
    "unit": 7,
@@ -870,7 +951,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 43,
+   "order": 47,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -890,7 +971,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 44,
+   "order": 48,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -910,7 +991,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 45,
+   "order": 49,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -930,7 +1011,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 46,
+   "order": 50,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -950,7 +1031,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 47,
+   "order": 51,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -970,7 +1051,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 48,
+   "order": 52,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -990,7 +1071,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 49,
+   "order": 53,
    "segment": 2,
    "unitKind": "week",
    "unit": 8,
@@ -1010,7 +1091,7 @@
    "segmentTitle": "Projet 1 : Au zoo ! — Séquence 2 : C'est un vrai fennec ?"
   },
   {
-   "order": 50,
+   "order": 54,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -1030,7 +1111,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 51,
+   "order": 55,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -1050,7 +1131,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 52,
+   "order": 56,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -1070,7 +1151,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 53,
+   "order": 57,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -1090,7 +1171,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 54,
+   "order": 58,
    "segment": 3,
    "unitKind": "week",
    "unit": 9,
@@ -1110,7 +1191,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 55,
+   "order": 59,
    "segment": 3,
    "unitKind": "week",
    "unit": 10,
@@ -1130,7 +1211,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 56,
+   "order": 60,
    "segment": 3,
    "unitKind": "week",
    "unit": 10,
@@ -1150,7 +1231,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 57,
+   "order": 61,
    "segment": 3,
    "unitKind": "week",
    "unit": 10,
@@ -1170,7 +1251,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 58,
+   "order": 62,
    "segment": 3,
    "unitKind": "week",
    "unit": 10,
@@ -1190,7 +1271,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 59,
+   "order": 63,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -1210,7 +1291,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 60,
+   "order": 64,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -1230,7 +1311,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 61,
+   "order": 65,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -1250,7 +1331,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 62,
+   "order": 66,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -1270,7 +1351,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 63,
+   "order": 67,
    "segment": 3,
    "unitKind": "week",
    "unit": 11,
@@ -1290,7 +1371,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 64,
+   "order": 68,
    "segment": 3,
    "unitKind": "week",
    "unit": 12,
@@ -1310,7 +1391,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 65,
+   "order": 69,
    "segment": 3,
    "unitKind": "week",
    "unit": 12,
@@ -1330,7 +1411,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 66,
+   "order": 70,
    "segment": 3,
    "unitKind": "week",
    "unit": 12,
@@ -1350,7 +1431,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 67,
+   "order": 71,
    "segment": 3,
    "unitKind": "week",
    "unit": 12,
@@ -1370,7 +1451,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 68,
+   "order": 72,
    "segment": 3,
    "unitKind": "week",
    "unit": 12,
@@ -1390,7 +1471,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 1 : Nous allons au musée"
   },
   {
-   "order": 69,
+   "order": 73,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1410,7 +1491,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 70,
+   "order": 74,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1430,7 +1511,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 71,
+   "order": 75,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1450,7 +1531,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 72,
+   "order": 76,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1470,7 +1551,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 73,
+   "order": 77,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1490,7 +1571,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 74,
+   "order": 78,
    "segment": 4,
    "unitKind": "week",
    "unit": 13,
@@ -1510,7 +1591,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 75,
+   "order": 79,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1530,7 +1611,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 76,
+   "order": 80,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1550,7 +1631,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 77,
+   "order": 81,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1570,7 +1651,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 78,
+   "order": 82,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1590,7 +1671,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 79,
+   "order": 83,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1610,7 +1691,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 80,
+   "order": 84,
    "segment": 4,
    "unitKind": "week",
    "unit": 14,
@@ -1630,7 +1711,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 81,
+   "order": 85,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1650,7 +1731,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 82,
+   "order": 86,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1670,7 +1751,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 83,
+   "order": 87,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1690,7 +1771,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 84,
+   "order": 88,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1710,7 +1791,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 85,
+   "order": 89,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1730,7 +1811,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 86,
+   "order": 90,
    "segment": 4,
    "unitKind": "week",
    "unit": 16,
@@ -1750,7 +1831,7 @@
    "segmentTitle": "Projet 2 : C'est un lieu exceptionnel ! — Séquence 2 : J'aime voyager en famille"
   },
   {
-   "order": 87,
+   "order": 91,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1770,7 +1851,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 88,
+   "order": 92,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1790,7 +1871,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 89,
+   "order": 93,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1810,7 +1891,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 90,
+   "order": 94,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1830,7 +1911,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 91,
+   "order": 95,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1850,7 +1931,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 92,
+   "order": 96,
    "segment": 5,
    "unitKind": "week",
    "unit": 17,
@@ -1870,7 +1951,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 93,
+   "order": 97,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1890,7 +1971,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 94,
+   "order": 98,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1910,7 +1991,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 95,
+   "order": 99,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1930,7 +2011,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 96,
+   "order": 100,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1950,7 +2031,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 97,
+   "order": 101,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1970,7 +2051,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 98,
+   "order": 102,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -1990,7 +2071,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 99,
+   "order": 103,
    "segment": 5,
    "unitKind": "week",
    "unit": 18,
@@ -2010,7 +2091,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 100,
+   "order": 104,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -2030,7 +2111,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 101,
+   "order": 105,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -2050,7 +2131,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 102,
+   "order": 106,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -2070,7 +2151,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 103,
+   "order": 107,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -2090,7 +2171,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 104,
+   "order": 108,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -2110,7 +2191,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 105,
+   "order": 109,
    "segment": 5,
    "unitKind": "week",
    "unit": 19,
@@ -2130,7 +2211,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 1 : Quand je serai grand (les secouristes)"
   },
   {
-   "order": 106,
+   "order": 110,
    "segment": 6,
    "unitKind": "week",
    "unit": 20,
@@ -2150,7 +2231,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 107,
+   "order": 111,
    "segment": 6,
    "unitKind": "week",
    "unit": 20,
@@ -2170,7 +2251,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 108,
+   "order": 112,
    "segment": 6,
    "unitKind": "week",
    "unit": 20,
@@ -2190,7 +2271,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 109,
+   "order": 113,
    "segment": 6,
    "unitKind": "week",
    "unit": 20,
@@ -2210,7 +2291,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 110,
+   "order": 114,
    "segment": 6,
    "unitKind": "week",
    "unit": 20,
@@ -2230,7 +2311,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 111,
+   "order": 115,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -2250,7 +2331,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 112,
+   "order": 116,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -2270,7 +2351,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 113,
+   "order": 117,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -2290,7 +2371,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 114,
+   "order": 118,
    "segment": 6,
    "unitKind": "week",
    "unit": 21,
@@ -2310,7 +2391,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 115,
+   "order": 119,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -2330,7 +2411,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 116,
+   "order": 120,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -2350,7 +2431,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 117,
+   "order": 121,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -2370,7 +2451,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 118,
+   "order": 122,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -2390,7 +2471,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 119,
+   "order": 123,
    "segment": 6,
    "unitKind": "week",
    "unit": 22,
@@ -2410,7 +2491,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 120,
+   "order": 124,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -2430,7 +2511,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 121,
+   "order": 125,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -2450,7 +2531,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 122,
+   "order": 126,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -2470,7 +2551,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 123,
+   "order": 127,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -2490,7 +2571,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 124,
+   "order": 128,
    "segment": 6,
    "unitKind": "week",
    "unit": 24,
@@ -2510,7 +2591,7 @@
    "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
   },
   {
-   "order": 125,
+   "order": 129,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2530,7 +2611,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 126,
+   "order": 130,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2550,7 +2631,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 127,
+   "order": 131,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2570,7 +2651,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 128,
+   "order": 132,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2590,7 +2671,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 129,
+   "order": 133,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2610,7 +2691,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 130,
+   "order": 134,
    "segment": 7,
    "unitKind": "week",
    "unit": 25,
@@ -2630,7 +2711,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 131,
+   "order": 135,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2650,7 +2731,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 132,
+   "order": 136,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2670,7 +2751,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 133,
+   "order": 137,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2690,7 +2771,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 134,
+   "order": 138,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2710,7 +2791,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 135,
+   "order": 139,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2730,7 +2811,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 136,
+   "order": 140,
    "segment": 7,
    "unitKind": "week",
    "unit": 26,
@@ -2750,7 +2831,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 137,
+   "order": 141,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2770,7 +2851,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 138,
+   "order": 142,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2790,7 +2871,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 139,
+   "order": 143,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2810,7 +2891,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 140,
+   "order": 144,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2830,7 +2911,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 141,
+   "order": 145,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2850,7 +2931,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 142,
+   "order": 146,
    "segment": 7,
    "unitKind": "week",
    "unit": 27,
@@ -2870,7 +2951,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
   },
   {
-   "order": 143,
+   "order": 147,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -2890,7 +2971,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 144,
+   "order": 148,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -2910,7 +2991,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 145,
+   "order": 149,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -2930,7 +3011,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 146,
+   "order": 150,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -2950,7 +3031,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 147,
+   "order": 151,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -2970,7 +3051,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 148,
+   "order": 152,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -2990,7 +3071,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 149,
+   "order": 153,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -3010,7 +3091,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 150,
+   "order": 154,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -3030,7 +3111,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 151,
+   "order": 155,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -3050,7 +3131,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 152,
+   "order": 156,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -3070,7 +3151,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 153,
+   "order": 157,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -3090,7 +3171,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 154,
+   "order": 158,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -3110,7 +3191,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 155,
+   "order": 159,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -3130,7 +3211,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 156,
+   "order": 160,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -3150,7 +3231,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 157,
+   "order": 161,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -3170,7 +3251,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 158,
+   "order": 162,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -3190,7 +3271,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 159,
+   "order": 163,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -3210,7 +3291,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 160,
+   "order": 164,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -3229,5 +3310,12 @@
    "sample": false,
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   }
- ]
+ ],
+ "sources": {
+  "r": {
+   "pdf": [
+    "1Cib_m6Hw1GjawCREZoWkVPyTjO5yR4OZ"
+   ]
+  }
+ }
 }

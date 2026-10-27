@@ -916,8 +916,8 @@
  {
   "id": "cat-fr-4ap",
   "title": {
-   "ar": "Fiches pédagogiques de français — 4e AP",
-   "fr": "بطاقات حصص الفرنسية — السنة الرابعة"
+   "ar": "بطاقات حصص الفرنسية — السنة الرابعة",
+   "fr": "Fiches pédagogiques de français — 4e AP"
   },
   "level": "4AP",
   "subject": "fr",
@@ -3271,6 +3271,699 @@
     "name": "3AP-EN-Term1-Exam.pdf",
     "mime": "application/pdf",
     "size": 364114
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-4ap-p3s3-fiches-2026",
+  "title": {
+   "ar": "بطاقات حصص الفرنسية 2026/2027 — السنة الرابعة: المشروع 3 المقطع 3",
+   "fr": "Fiches pédagogiques 2026-2027 — 4e AP : Projet 3, Séquence 3 « Qu’est-ce que tu fais ? »"
+  },
+  "level": "4AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "fiche",
+  "term": 1,
+  "unit": "Projet 3 – Séquence 3",
+  "tags": [
+   "fiches",
+   "2026-2027"
+  ],
+  "excerpt": "14 fiches : comptine, oral réception/production, écrit, mots illustrés, copie, dictée, lecture, phonétique.",
+  "access": "premium",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1enBC-_4SrtKVT9U1RsTpy6eC6ty-i43V",
+    "name": "Fiches 4AP P3 S3 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 1235885
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-4ap-p3s3-journal-2026",
+  "title": {
+   "ar": "دفتر يومي للفرنسية 2026/2027 — السنة الرابعة: المشروع 3 المقطع 3",
+   "fr": "Cahier journal 2026-2027 — 4e AP : Projet 3, Séquence 3"
+  },
+  "level": "4AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "guide",
+  "term": 1,
+  "unit": "Projet 3 – Séquence 3",
+  "tags": [
+   "cahier journal",
+   "2026-2027"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1bPZtZY8c17WHRq4cNLq_kMHGEatUIidc",
+    "name": "Cahier journal 4AP P3 S3 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 301289
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-4ap-p3s3-deroulement-2026",
+  "title": {
+   "ar": "سير المقطع للفرنسية 2026/2027 — السنة الرابعة: المشروع 3 المقطع 3",
+   "fr": "Déroulement de séquence 2026-2027 — 4e AP : Projet 3, Séquence 3"
+  },
+  "level": "4AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "progression",
+  "term": 1,
+  "unit": "Projet 3 – Séquence 3",
+  "tags": [
+   "déroulement",
+   "2026-2027"
+  ],
+  "excerpt": "Répartition des activités sur trois semaines, avec les pages du manuel.",
+  "access": "free",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1gBp8YviCLoYi36EcMTg6pFbRN3gxhPUs",
+    "name": "Déroulement 4AP P3 S3 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 144462
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-4ap-diagnostique-2026",
+  "title": {
+   "ar": "التقويم التشخيصي في الفرنسية — السنة الرابعة",
+   "fr": "Évaluation diagnostique de français — 4e AP"
+  },
+  "level": "4AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "evaluation",
+  "term": 1,
+  "unit": "",
+  "tags": [
+   "évaluation diagnostique"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "183qGyvbyl53-Po5Zm2Y-zxKH_3JRD8zf",
+    "name": "Évaluation diagnostique 4AP.pdf",
+    "mime": "application/pdf",
+    "size": 743993
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-4ap-conjugaison-poster",
+  "title": {
+   "ar": "ملصقات التصريف للفرنسية — السنة الرابعة (كامل السنة)",
+   "fr": "Affiches de conjugaison — 4e AP (toute l’année)"
+  },
+  "level": "4AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "conjugaison",
+   "affichage"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1dp48dwAwuW90H5hm11QjZfD7RSueF3tu",
+    "name": "Affiches conjugaison 4AP.pdf",
+    "mime": "application/pdf",
+    "size": 3756503
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-tableau-syllabique",
+  "title": {
+   "ar": "جدول المقاطع الصوتية بالفرنسية (للقراءة)",
+   "fr": "Tableau syllabique (lecture)"
+  },
+  "level": "4AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "lecture",
+   "syllabes",
+   "affichage"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1OUU3KlE8jCTDqf8LU_r8avwouwguV0WW",
+    "name": "Tableau syllabique.pdf",
+    "mime": "application/pdf",
+    "size": 330884
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-p1s1-fiches-2026",
+  "title": {
+   "ar": "بطاقات حصص الفرنسية 2026/2027 — السنة الخامسة: المشروع 1 المقطع 1",
+   "fr": "Fiches pédagogiques 2026-2027 — 5e AP : Projet 1, Séquence 1 « Pauvre petite gazelle ! »"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "fiche",
+  "term": 1,
+  "unit": "Projet 1 – Séquence 1",
+  "tags": [
+   "fiches",
+   "2026-2027"
+  ],
+  "excerpt": "23 fiches, du contrat d’apprentissage à la tâche 1.",
+  "access": "premium",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Cib_m6Hw1GjawCREZoWkVPyTjO5yR4OZ",
+    "name": "Fiches 5AP P1 S1 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 1177698
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-p1s1-journal-2026",
+  "title": {
+   "ar": "دفتر يومي للفرنسية 2026/2027 — السنة الخامسة: المشروع 1 المقطع 1",
+   "fr": "Cahier journal 2026-2027 — 5e AP : Projet 1, Séquence 1"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "guide",
+  "term": 1,
+  "unit": "Projet 1 – Séquence 1",
+  "tags": [
+   "cahier journal",
+   "2026-2027"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1krtg7yr9sgVcOf_pF58gZNX7T3G__Fcf",
+    "name": "Cahier journal 5AP P1 S1 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 413204
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-p1-progression-2026",
+  "title": {
+   "ar": "تدرّج المشروع الأول للفرنسية 2026/2027 — السنة الخامسة",
+   "fr": "Progression du 1er projet 2026-2027 — 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "progression",
+  "term": 1,
+  "unit": "Projet 1",
+  "tags": [
+   "progression",
+   "2026-2027"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1y2_RPXD9k6oi9tfe3uY4l56vlIVc6mi8",
+    "name": "Progression projet 1 5AP 2026-2027.pdf",
+    "mime": "application/pdf",
+    "size": 186439
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-diagnostique-2026",
+  "title": {
+   "ar": "التقويم التشخيصي في الفرنسية — السنة الخامسة",
+   "fr": "Évaluation diagnostique de français — 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "evaluation",
+  "term": 1,
+  "unit": "",
+  "tags": [
+   "évaluation diagnostique"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Ldn9fiOgOScFvdyd88jaPfsCKrXpoinE",
+    "name": "Évaluation diagnostique 5AP.pdf",
+    "mime": "application/pdf",
+    "size": 710887
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-situations-depart",
+  "title": {
+   "ar": "الوضعيات الانطلاقية للمشاريع الأربعة — الفرنسية، السنة الخامسة",
+   "fr": "Situations de départ des 4 projets — 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "situation de départ",
+   "projets"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1d7RnZIesrMT8R14lxoi4ohYBAwg-rA_W",
+    "name": "Situations de départ 5AP.pdf",
+    "mime": "application/pdf",
+    "size": 189632
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-conjugaison-poster",
+  "title": {
+   "ar": "ملصقات التصريف للفرنسية — السنة الخامسة (كامل السنة)",
+   "fr": "Affiches de conjugaison — 5e AP (toute l’année)"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "conjugaison",
+   "affichage"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1eObUbNUtp5WPOG8uWmiMNvaDm75tCeLm",
+    "name": "Affiches conjugaison 5AP.pdf",
+    "mime": "application/pdf",
+    "size": 5835608
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-passe-compose-poster",
+  "title": {
+   "ar": "ملصق: الماضي المركب — الفرنسية، السنة الخامسة",
+   "fr": "Affiche : le passé composé — 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "conjugaison",
+   "passé composé",
+   "affichage"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1ZrMcpDbUd9CHsiah4F7E8bf3_sXwDsNW",
+    "name": "Affiche passé composé 5AP.pdf",
+    "mime": "application/pdf",
+    "size": 3784405
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-p2-langue-poster",
+  "title": {
+   "ar": "ملصقات نقاط اللغة — الفرنسية، السنة الخامسة، المشروع 2",
+   "fr": "Affichage des points de langue — 5e AP, Projet 2"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 2,
+  "unit": "Projet 2",
+  "tags": [
+   "points de langue",
+   "affichage"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Qi85BHO-LyMu71Mxb8GA2A4hST7099Og",
+    "name": "Affichage points de langue 5AP projet 2.pdf",
+    "mime": "application/pdf",
+    "size": 1196798
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-p3s2-affichage",
+  "title": {
+   "ar": "ملصقات المقطع «C’est une inondation» — الفرنسية، السنة الخامسة",
+   "fr": "Affichage — 5e AP : Projet 3, Séquence 2 « C’est une inondation »"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 2,
+  "unit": "Projet 3 – Séquence 2",
+  "tags": [
+   "affichage"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1meVU_giBvXt7fYlWViniEt9-4HWH01_c",
+    "name": "Affichage 5AP P3 S2.pdf",
+    "mime": "application/pdf",
+    "size": 818818
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-p4s2-a-retenir",
+  "title": {
+   "ar": "«À retenir» — الفرنسية، السنة الخامسة: Ne gaspillons pas l’eau !",
+   "fr": "À retenir — 5e AP : Projet 4, Séquence 2 « Ne gaspillons pas l’eau ! »"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "poster",
+  "term": 3,
+  "unit": "Projet 4 – Séquence 2",
+  "tags": [
+   "à retenir",
+   "affichage"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "REZAK Djillali Abdelkrim",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1s4VDc4KKik8ofBG3s-FoKiq0v6Z_c5Ba",
+    "name": "À retenir 5AP P4 S2.pdf",
+    "mime": "application/pdf",
+    "size": 275778
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-productions-ecrites",
+  "title": {
+   "ar": "نماذج إنتاج كتابي — الفرنسية، السنة الخامسة",
+   "fr": "Des productions écrites en 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "exercise",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "production écrite"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1kNXmwaa4jonDVh0YB5vzq8fpa6gQ19QV",
+    "name": "Productions écrites 5AP.pdf",
+    "mime": "application/pdf",
+    "size": 965709
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-grilles-acquis",
+  "title": {
+   "ar": "شبكات تقويم المكتسبات (القراءة) — الفرنسية، السنة الخامسة",
+   "fr": "Grilles d’évaluation des acquis (lecture) — 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "evaluation",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "évaluation des acquis",
+   "grille"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "13ISCUpj9l2SOttEkaXDekBlPHcP46nZ0",
+    "name": "Grilles évaluation des acquis 2025.pdf",
+    "mime": "application/pdf",
+    "size": 634627
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-acquis-2025",
+  "title": {
+   "ar": "تقويم المكتسبات 2024/2025 — الفرنسية، السنة الخامسة",
+   "fr": "Évaluation des acquis 2024-2025 — 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "evaluation",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "évaluation des acquis"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1P7vn8xOVukg0jUoFlA1p4HAQSe0lqpq-",
+    "name": "Évaluation des acquis 5AP 2024-2025.pdf",
+    "mime": "application/pdf",
+    "size": 1226821
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-acquis-les-ours",
+  "title": {
+   "ar": "تقويم المكتسبات (فهم المكتوب): Les ours — السنة الخامسة",
+   "fr": "Évaluation des acquis — compréhension de l’écrit : « Les ours » — 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "evaluation",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "évaluation des acquis",
+   "compréhension de l’écrit"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "M. Saadaoui",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1MxPc2gu8bTWPvnddIpFBIYsjrEiXjAzv",
+    "name": "Les ours — évaluation des acquis.pdf",
+    "mime": "application/pdf",
+    "size": 1013160
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-compo-t1",
+  "title": {
+   "ar": "اختبار الفصل الأول في الفرنسية — السنة الخامسة (La girafe)",
+   "fr": "Composition du 1er trimestre — 5e AP (« La girafe »)"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "exam",
+  "term": 1,
+  "unit": "",
+  "tags": [
+   "composition",
+   "1er trimestre"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "10uU0l0hL1jXRZDtomAhKoConx1c51sBx",
+    "name": "Composition 1er trimestre 5AP.pdf",
+    "mime": "application/pdf",
+    "size": 814703
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-compo-t2",
+  "title": {
+   "ar": "اختبار الفصل الثاني في الفرنسية — السنة الخامسة",
+   "fr": "Composition du 2e trimestre — 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "exam",
+  "term": 2,
+  "unit": "",
+  "tags": [
+   "composition",
+   "2e trimestre"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1bU5fddCNDapznLIOYhSM1xn71XeBKtm6",
+    "name": "Composition 2e trimestre 5AP.pdf",
+    "mime": "application/pdf",
+    "size": 966873
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-compo-sauvetage",
+  "title": {
+   "ar": "مواضيع اختبارات: مهن الإنقاذ — الفرنسية، السنة الخامسة",
+   "fr": "Sujets de compositions : les métiers de sauvetage — 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "exam",
+  "term": 3,
+  "unit": "Projet 3",
+  "tags": [
+   "composition",
+   "sujets"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "19trMfuLOVdFkZU0bSYDwtJdDqRRtoUZo",
+    "name": "Sujets compositions métiers de sauvetage 5AP.pdf",
+    "mime": "application/pdf",
+    "size": 1465581
+   }
+  ]
+ },
+ {
+  "id": "cat-fr-5ap-compo-catastrophes",
+  "title": {
+   "ar": "مواضيع اختبارات: الكوارث الطبيعية — الفرنسية، السنة الخامسة",
+   "fr": "Sujets de compositions : les catastrophes naturelles — 5e AP"
+  },
+  "level": "5AP",
+  "subject": "fr",
+  "language": "fr",
+  "type": "exam",
+  "term": 3,
+  "unit": "Projet 3",
+  "tags": [
+   "composition",
+   "sujets"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1JACrUCeovTzu4qgt7DIVSWylY6zJpzWD",
+    "name": "Sujets compositions catastrophes naturelles 5AP.pdf",
+    "mime": "application/pdf",
+    "size": 602280
    }
   ]
  }
