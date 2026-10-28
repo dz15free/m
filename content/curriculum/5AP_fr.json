@@ -4,8 +4,8 @@
  "subject": "fr",
  "title": "Langue française — 5e année primaire",
  "source": {
-  "ar": "بطاقات حصص منشورة للعموم (وفق التدرّج السنوي للسنة الخامسة 2026/2027: 3 ساعات أسبوعيًا، المقطع 11 ساعة)؛ الأسابيع تقديرية؛ المشروع 1 – المقطع 1: بطاقات 2026/2027 لـ REZAK Djillali Abdelkrim",
-  "fr": "Fiches pédagogiques partagées publiquement (selon la progression annuelle 5e AP 2026/2027 : 3 h/semaine, séquence de 11 h) ; semaines estimées ; Projet 1 – Séquence 1 : fiches 2026-2027 de REZAK Djillali Abdelkrim"
+  "ar": "بطاقات حصص منشورة للعموم (وفق التدرّج السنوي للسنة الخامسة 2026/2027: 3 ساعات أسبوعيًا، المقطع 11 ساعة)؛ الأسابيع تقديرية؛ بطاقات REZAK Djillali Abdelkrim للمشروع 1 المقطع 1 (2026/2027) وللمشروع 3 المقطع 2 والمشروع 4 المقطع 1 (2025/2026)",
+  "fr": "Fiches pédagogiques partagées publiquement (selon la progression annuelle 5e AP 2026/2027 : 3 h/semaine, séquence de 11 h) ; semaines estimées ; fiches de REZAK Djillali Abdelkrim pour Projet 1 Séq. 1 (2026-2027), Projet 3 Séq. 2 et Projet 4 Séq. 1 (2025-2026)"
  },
  "weekMode": "absolute",
  "segments": {
@@ -2213,745 +2213,785 @@
   {
    "order": 110,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 20,
-   "session": "Présentation du projet (45 mn)",
+   "session": "Séance 1/19 (25 min)",
    "activity": "Français",
-   "domain": "Connaître le système graphique du français",
-   "topic": "Présentation du projet — C'est une inondation",
-   "materials": "Manuel scolaire page 78 – Tableau",
+   "domain": "Maîtriser le fonctionnement du système d’écriture français",
+   "topic": "Contrat d’apprentissage",
+   "materials": "Livre scolaire page 78 – Tableau",
    "objectives": [
-    "Impliquer l’apprenant dans le planning de la réalisation d’un projet"
+    "à la fin de la séance l’apprenant serait capable de : -Découvrir la situation élémentaire 2 -Prendre connaissance des apprentissages visés et des activités à accomplir"
    ],
    "body": "",
    "pages": [
-    107
+    "s:2"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 111,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 20,
-   "session": "Oral compréhension (45 mn)",
+   "session": "Séance 2/19 (35 min)",
    "activity": "Français",
-   "domain": "Identifier la situation de communication",
-   "topic": "Oral compréhension — C'est une inondation",
-   "materials": "Illustration – support audio ou audio-visuel – Manuel page 68",
+   "domain": "Repérer la situation de communication",
+   "topic": "Oral compréhension",
+   "materials": "Illustration, support audio ou audiovisuel, manuel p. 68",
    "objectives": [
-    "Repérer le thème général et comprendre un message oral en réception."
+    "à la fin de la séance l’apprenant serait capable de : -Identifier le thème principal. -Extraire l’essentiel d’un message oral"
    ],
    "body": "",
    "pages": [
-    108
+    "s:3"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 112,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 20,
-   "session": "Compréhension de l’écrit 1 (45 mn)",
+   "session": "Séance 3/19 (30 min)",
    "activity": "Français",
-   "domain": "Construire du sens à l’aide d’éléments du para texte (silhouette, références, illustration)",
-   "topic": "Compréhension de l’écrit 1 : L’inondation. — C'est une inondation",
-   "materials": "L’illustration des sauveteurs – Manuel scolaire page 71",
+   "domain": "Dégager le sens à partir des éléments du paratexte",
+   "topic": "Compréhension de l’écrit 1 — L’inondation",
+   "materials": "L’illustration de l’inondation – Livre scolaire page 71",
    "objectives": [
-    "Bâtir des hypothèses de lecture à partir de l’illustration du texte"
+    "à la fin de la séance l’apprenant serait capable de : -Formuler des hypothèses à partir des indices du texte. -Reconnaître l’acte de parole informatif"
    ],
    "body": "",
    "pages": [
-    109
+    "s:4"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 113,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 20,
-   "session": "Vocabulaire (45 mn)",
+   "session": "Séance 4/19 (30 min)",
    "activity": "Français",
-   "domain": "Identifier du lexique thématique",
-   "topic": "Vocabulaire : L’adverbe en « ment / emment » — C'est une inondation",
-   "materials": "Manuel scolaire page 70 - Ardoises",
+   "domain": "Repérer le vocabulaire lié au thème",
+   "topic": "Vocabulaire — L’adverbe en « ment / emment »",
+   "materials": "Livre scolaire page 70- PLM",
    "objectives": [
-    "- Augmenter le stock lexical de l’élève -Identifier et connaître les adverbes en « ment / emment »"
+    "à la fin de la séance l’apprenant serait capable de : - Enrichir son vocabulaire. -Reconnaître les adverbes en -ment / -emment"
    ],
    "body": "",
    "pages": [
-    110
+    "s:5"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 114,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
-   "unit": 20,
-   "session": "Oral production 1 (45 mn)",
+   "unit": 21,
+   "session": "Séance 5/19 (30 min)",
    "activity": "Français",
-   "domain": "Produire un énoncé intelligible pour communiquer",
-   "topic": "Oral production 1 — C'est une inondation",
-   "materials": "Illustrations – Manuel scolaire page 69",
+   "domain": "Dégager le sens à partir d’indices du texte",
+   "topic": "Lecture compréhension 2 — Je lis et je comprends",
+   "materials": "illustration – Le cahier d’activités p.73",
    "objectives": [
-    "Restituer un énoncé oral en respectant le schéma intonatif"
+    "à l’a fin de la séance l’apprenant serait capable de : -Formuler des hypothèses à partir des éléments visibles du texte. -Lire le texte de façon expressive"
    ],
    "body": "",
    "pages": [
-    111
+    "s:6"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 115,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 21,
-   "session": "Grammaire (45 mn)",
+   "session": "Séance 6/19 (30 min)",
    "activity": "Français",
-   "domain": "Identifier et connaître le fonctionnement de la langue",
-   "topic": "Grammaire : Le complément du but — C'est une inondation",
-   "materials": "Manuel scolaire page 62 – Tableau",
+   "domain": "Lire de manière expressive",
+   "topic": "Lecture systématique — Les lettres muettes",
+   "materials": "Livre scolaire page 76 – PLM",
    "objectives": [
-    "Identifier le complément circonstanciel de but dans une phrase"
+    "à la fin de la séance l’apprenant serait capable de : -Consolider les sons et reconnaître les lettres muettes. -Améliorer la fluidité de lecture"
    ],
    "body": "",
    "pages": [
-    112
+    "s:7"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 116,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 21,
-   "session": "Grammaire (45 mn)",
+   "session": "Séance 7/19 (30 min)",
    "activity": "Français",
    "domain": "Identifier et connaître le fonctionnement de la langue",
-   "topic": "Grammaire : La forme négative (phrase déclarative) — C'est une inondation",
-   "materials": "Manuel scolaire page 73 – Tableau",
+   "topic": "Grammaire 1 — Le complément de but",
+   "materials": "Livre scolaire page 62 - Cahier - PLM",
    "objectives": [
-    "Transformer une phrase déclarative affirmative en phrase négative"
+    "à la fin de la séance l’apprenant serait capable de : Comprendre le fonctionnement de la langue. Identifier le complément de but"
    ],
    "body": "",
    "pages": [
-    113
+    "s:8"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 117,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 21,
-   "session": "Compréhension de l’écrit 2 (45 mn)",
+   "session": "Séance 8/19 (30 min)",
    "activity": "Français",
-   "domain": "Construire du sens à l’aide d’indices textuels",
-   "topic": "Compréhension de l’écrit 2 : Je lis et je comprends — C'est une inondation",
-   "materials": "L’illustration de l’inondation – Cahier d’activités page 73",
+   "domain": "Identifier et connaître le fonctionnement de la langue",
+   "topic": "Grammaire 2 — La forme négative",
+   "materials": "Livre scolaire page 62 - Cahier de classe - Ardoises",
    "objectives": [
-    "Identifier les actes de parole dans des textes de lecture"
+    "à la fin de la séance l’apprenant serait capable de : -Comprendre le fonctionnement de la langue. -Reconnaître la forme négative"
    ],
    "body": "",
    "pages": [
-    114
+    "s:9"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 118,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
-   "unit": 21,
-   "session": "Oral production 2 (45 mn)",
+   "unit": 22,
+   "session": "Séance 9/19 (30 min)",
    "activity": "Français",
-   "domain": "Savoir prendre sa place dans un jeu de rôle",
-   "topic": "Oral production 2 : « Je m’exprime » — C'est une inondation",
-   "materials": "Illustrations – Manuel scolaire page 69",
+   "domain": "Identifier les points de langue pour mieux écrire",
+   "topic": "Conjugaison — Emploi du mode infinitif",
+   "materials": "Illustrations - Tableau",
    "objectives": [
-    "Intervenir dans une discussion en respectant les règles de prise de parole"
+    "à la fin de la séance l’apprenant serait capable de : -Utiliser correctement l’infinitif à la forme affirmative et négative. -Identifier l’infinitif employé pour donner un conseil"
    ],
    "body": "",
    "pages": [
-    115
+    "s:10"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 119,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 22,
-   "session": "Conjugaison (45 mn)",
+   "session": "Séance 10/19 (30 min)",
    "activity": "Français",
-   "domain": "Identifier les points de langue pour mieux écrire",
-   "topic": "Conjugaison : Emploi du mode infinitif pour donner des conseils en cas de catastrophe naturelle (forme affirmative et négative) — C'est une inondation",
-   "materials": "Manuel scolaire – Tableau",
+   "domain": "Identifier les points de la langue pour mieux écrire",
+   "topic": "Orthographe — Emploi de l’infinitif après une préposition / un verbe conjugué",
+   "materials": "Livre scolaire page 75 – PLM",
    "objectives": [
-    "Employer le mode infinitif pour donner des conseils, à la forme affirmative et négative"
+    "à la fin de la séance l’apprenant serai capable de : -Renforcer sa vigilance orthographique. -Repérer l’infinitif après une préposition ou un verbe conjugué"
    ],
    "body": "",
    "pages": [
-    116
+    "s:11"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 120,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 22,
-   "session": "Lecture systématique (45 mn)",
+   "session": "Séance 11/19 (30 min)",
    "activity": "Français",
-   "domain": "Lire de manière expressive",
-   "topic": "Lecture systématique : Les sons : ouil / euil / ui — C'est une inondation",
-   "materials": "Tableau – Cahier de classe",
+   "domain": "Maitriser le système phonologique",
+   "topic": "Phonétique articulatoire — Les sons : [eu], [o]",
+   "materials": "Tableau- Illustration",
    "objectives": [
-    "Identifier et lire correctement les sons ouil, euil et ui"
+    "à la fin de la séance l’apprenant serait capable de : Discriminer les phonèmes de la langue. Distinguer les différentes intonations"
    ],
    "body": "",
    "pages": [
-    117
+    "s:12"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 121,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 22,
-   "session": "Orthographe (45 mn)",
+   "session": "Séance 12/19 (30 min)",
    "activity": "Français",
-   "domain": "Identifier les points de langue pour mieux écrire",
-   "topic": "Orthographe : Emploi de l'infinitif après une préposition / après un verbe conjugué — C'est une inondation",
-   "materials": "Exercices transcrits au tableau ou photocopiés",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
+   "topic": "Dictée",
+   "materials": "PLM – Cahiers - Illustration",
    "objectives": [
-    "Reconnaître et écrire correctement l'infinitif après une préposition ou un verbe conjugué"
+    "à la fin de la séance l’apprenant serait capable de : - Renforcer la maîtrise de l’écrit en respectant la relation phonie/graphie. -Améliorer la prononciation grâce à l’écoute d’une lecture modèle"
    ],
    "body": "",
    "pages": [
-    118
+    "s:13"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 122,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
-   "unit": 22,
-   "session": "Dictée (45 mn)",
+   "unit": 23,
+   "session": "Séance 13/19 (30 min)",
    "activity": "Français",
-   "domain": "Ecrire pour répondre à une consigne d’écriture",
-   "topic": "Dictée — C'est une inondation",
-   "materials": "Manuel scolaire page 76 – Ardoises – Cahiers de classe",
+   "domain": "Produire des énoncés pour les insérer dans un cadre textuel",
+   "topic": "Entrainement à la mobilisation",
+   "materials": "Illustration – Tableau",
    "objectives": [
-    "Consolider sa maîtrise de l’écriture en faisant attention à la relation « phonie-graphie »"
+    "à la fin de la séance l’apprenant serait capable de : -Comprendre les consignes et répondre oralement. - Renforcer ses acquis par des activités orales"
    ],
    "body": "",
    "pages": [
-    119
+    "s:14"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 123,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
-   "unit": 22,
-   "session": "Préparation à l’écrit (45 mn)",
+   "unit": 23,
+   "session": "Séance 14/19 (30 min)",
    "activity": "Français",
-   "domain": "Produire des énoncés pour les insérer dans un cadre textuel",
-   "topic": "Préparation à l’écrit — C'est une inondation",
-   "materials": "Illustrations –Manuel scolaire page 77 – Ardoises",
+   "domain": "Participer correctement à un jeu de rôle",
+   "topic": "Production orale — « Je m’exprime »",
+   "materials": "Illustration – livre scolaire page 69",
    "objectives": [
-    "Comprendre les consignes et répondre par écrit aux exercices"
+    "à la fin de la séance l’apprenant serait capable de : Participer à une discussion en respectant les règles de prise de parole. Produire un énoncé à l’oral"
    ],
    "body": "",
    "pages": [
-    120
+    "s:15"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 124,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
-   "unit": 24,
-   "session": "Production écrite (1er jet) (45 mn)",
+   "unit": 23,
+   "session": "Séance 15/19 (30 min)",
    "activity": "Français",
    "domain": "Produire un texte en fonction d’une situation de communication",
-   "topic": "Production écrite (1er jet) — C'est une inondation",
-   "materials": "Illustration de l’inondation – boite à outils (mots)",
+   "topic": "Production écrite (1er jet)",
+   "materials": "Illustration – boite à mots",
    "objectives": [
-    "Respecter une consigne d’écriture et organiser des informations."
+    "à la fin de la séance l’apprenant serait capable de : -Respecter la consigne d’écriture. -Mobiliser les ressources linguistiques adaptées"
    ],
    "body": "",
    "pages": [
-    121
+    "s:16"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 125,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
-   "unit": 24,
-   "session": "Compte rendu (60 mn)",
+   "unit": 23,
+   "session": "Séance 16/19 (30 min)",
    "activity": "Français",
    "domain": "Produire un texte en fonction d’une situation de communication",
-   "topic": "Compte rendu — C'est une inondation",
-   "materials": "-Illustration de l’inondation – Ardoises",
+   "topic": "Production écrite (2ème jet)",
+   "materials": "Illustration – boite à mots",
    "objectives": [
-    "Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+    "à la fin de la séance l’apprenant serait capable de : -Respecter la consigne d’écriture. -Rédiger un texte selon la situation de communication"
    ],
    "body": "",
    "pages": [
-    122
+    "s:17"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 126,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 24,
-   "session": "Comptine (30 mn)",
+   "session": "Séance 17/19 (30 min)",
    "activity": "Français",
-   "domain": "Répéter les mots pour les retenir tout en chantant la comptine",
-   "topic": "Comptine : Gouttes, gouttelettes de pluie — C'est une inondation",
-   "materials": "Support audio – Illustration de la pluie",
+   "domain": "Produire un texte en fonction d’une situation de communication",
+   "topic": "Compte rendu",
+   "materials": "Illustration – PLM",
    "objectives": [
-    "Mémoriser et chanter la comptine « Gouttes, gouttelettes de pluie » en respectant le rythme"
+    "à la fin de la séance l’apprenant serait capable de : -Développer son autonomie. -S’autocorriger"
    ],
    "body": "",
    "pages": [
-    123
+    "s:18"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 127,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 24,
-   "session": "Réalisation de la tâche partielle (30 mn)",
+   "session": "Séance 18/19 (30 min)",
    "activity": "Français",
-   "domain": "Ecrire pour répondre à une consigne d’écriture ; Produire un texte en fonction d’une situation de communication",
-   "topic": "Réalisation de la tâche partielle — C'est une inondation",
-   "materials": "Manuel scolaire page 78 – Illustrations de catastrophes naturelles",
+   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine",
+   "topic": "Comptine — Gouttes, Gouttelettes",
+   "materials": "Illustration – livre scolaire p.77",
    "objectives": [
-    "Amener l’élève à fabriquer un poster pour décrire un animal sauvage"
+    "à la fin de la séance l’apprenant serait capable de : - Mémoriser un texte poétique. -S’initier à la création de courts textes poétiques"
    ],
    "body": "",
    "pages": [
-    124
+    "s:19"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 128,
    "segment": 6,
+   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation",
    "unitKind": "week",
    "unit": 24,
-   "session": "Evaluation (60 mn)",
+   "session": "Séance 19/19 (30 min)",
    "activity": "Français",
-   "domain": "Écrire pour répondre à une consigne d’écriture",
-   "topic": "Evaluation — C'est une inondation",
-   "materials": "-Tableau – Doubles feuilles",
+   "domain": "Ecrire pour répondre à une consigne d’écriture",
+   "topic": "Tâche 2",
+   "materials": "Illustrations",
    "objectives": [
-    "-Renforcer les acquis des apprenants par des exercices -Contrôler les acquis des apprenants à travers des activités variées"
+    "à la fin de la séance l’apprenant serait capable de : -Concevoir une affiche présentant les actions des secouristes. -S’impliquer dans la réalisation de la tâche finale du projet"
    ],
    "body": "",
    "pages": [
-    125
+    "s:20"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 3 : Les catastrophes naturelles ! — Séquence 2 : C'est une inondation"
+   "sample": false
   },
   {
    "order": 129,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 25,
-   "session": "Présentation du projet (45 mn)",
+   "session": "Séance 1/20 (20 min)",
    "activity": "Français",
-   "domain": "Connaître le système graphique du français",
-   "topic": "Présentation du projet — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Manuel scolaire page 73 – Tableau",
+   "domain": "Maîtriser le système graphique du français",
+   "topic": "Contrat d’apprentissage",
+   "materials": "Livre scolaire page 73 – Tableau - illustration",
    "objectives": [
-    "Impliquer l’apprenant dans le planning de la réalisation d’un projet"
+    "À la fin de la séance, l’apprenant sera capable de découvrir la situation de départ et la situation élémentaire 1, et de s’informer sur les apprentissages et les tâches à réaliser"
    ],
    "body": "",
    "pages": [
-    128
+    "t:2"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 130,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 25,
-   "session": "Oral compréhension (45 mn)",
+   "session": "Séance 2/20 (20 min)",
    "activity": "Français",
    "domain": "Identifier la situation de communication",
-   "topic": "Oral compréhension — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Illustration – support audio ou audio-visuel – Manuel page 80",
+   "topic": "Oral compréhension",
+   "materials": "Support audio – Livre p.80",
    "objectives": [
-    "Repérer le thème général et comprendre un message oral en réception."
+    "Repérer le thème général et comprendre un message oral en réception"
    ],
    "body": "",
    "pages": [
-    129
+    "t:3"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 131,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 25,
-   "session": "Compréhension de l’écrit 1 (45 mn)",
+   "session": "Séance 3/20 (20 min)",
    "activity": "Français",
-   "domain": "Construire du sens à l’aide d’éléments du para texte (silhouette, références, illustration)",
-   "topic": "Compréhension de l’écrit 1 : Pourquoi les déchets sont-ils dangereux ? — Pourquoi notre terre est-elle en danger ?",
-   "materials": "L’illustration – Manuel scolaire page 83",
+   "domain": "Produire un énoncé intelligible pour communiquer",
+   "topic": "Oral production",
+   "materials": "Livre scolaire p.80 – illustration",
    "objectives": [
-    "Bâtir des hypothèses de lecture à partir de l’illustration du texte"
+    "À la fin de la séance, l’apprenant sera capable de réutiliser les actes de parole en situation de communication"
    ],
    "body": "",
    "pages": [
-    130
+    "t:4"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 132,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 25,
-   "session": "Vocabulaire (45 mn)",
+   "session": "Séance 4/20 (30 min)",
    "activity": "Français",
-   "domain": "Identifier du lexique thématique",
-   "topic": "Vocabulaire : Le lexique relatif à la pollution et à l'environnement — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Illustrations – Manuel scolaire page 83",
+   "domain": "Construire le sens à partir du paratexte",
+   "topic": "Compréhension de l’écrit 1 — Pourquoi les déchets sont-ils dangereux ?",
+   "materials": "illustration– Livre scolaire p.83",
    "objectives": [
-    "Enrichir le lexique relatif à la pollution et à la protection de l'environnement"
+    "À la fin de la séance, l’apprenant sera capable d’identifier l’acte de parole informatif"
    ],
    "body": "",
    "pages": [
-    131
+    "t:5"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 133,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 25,
-   "session": "Oral production 1 (45 mn)",
+   "session": "Séance 5/20 (30 min)",
    "activity": "Français",
-   "domain": "Produire un énoncé intelligible pour communiquer",
-   "topic": "Oral production 1 — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Illustration – Manuel scolaire page 80",
+   "domain": "Repérer le lexique thématique",
+   "topic": "Vocabulaire — Lexique lié à la pollution et à l’environnement",
+   "materials": "Livre scolaire page 82- PLM-illustrations",
    "objectives": [
-    "Restituer un énoncé oral en respectant le schéma intonatif"
+    "À la fin de la séance, l’apprenant sera capable d’enrichir son lexique et d’identifier le vocabulaire lié à la pollution et à l’environnement"
    ],
    "body": "",
    "pages": [
-    132
+    "t:6"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 134,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 25,
-   "session": "Grammaire (45 mn)",
+   "session": "Séance 6/20 (30 min)",
    "activity": "Français",
-   "domain": "Identifier et connaître le fonctionnement de la langue",
-   "topic": "Grammaire : La coordination et la subordination par l'emploi de « car » et de « parce que » — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Manuel scolaire page 85 – Tableau",
+   "domain": "Construire le sens à partir d’indices du texte",
+   "topic": "Compréhension de l’écrit 2 — Je lis et je comprends",
+   "materials": "L’illustration– Livre d’activités p.85",
    "objectives": [
-    "Exprimer la cause en employant car et parce que"
+    "À la fin de la séance, l’apprenant sera capable de : Formuler des hypothèses à partir des éléments visibles du texte et de lire de manière expressive"
    ],
    "body": "",
    "pages": [
-    133
+    "t:7"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 135,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
-   "unit": 26,
-   "session": "Compréhension de l’écrit 2 (45 mn)",
+   "unit": 25,
+   "session": "Séance 7/20 (30 min)",
    "activity": "Français",
-   "domain": "Construire du sens à l’aide d’indices textuels",
-   "topic": "Compréhension de l’écrit 2 : Je lis et je comprends — Pourquoi notre terre est-elle en danger ?",
-   "materials": "L’illustration de la terre – Cahier d’activités page 85",
+   "domain": "Identifier et comprendre le fonctionnement de la langue",
+   "topic": "Grammaire — Coordination et subordination avec « car » et « parce que »",
+   "materials": "Livre scolaire p.85 - Cahier - PLM",
    "objectives": [
-    "Identifier les actes de parole dans des textes de lecture"
+    "À la fin de la séance, l’apprenant sera capable de comprendre le fonctionnement de la langue et d’identifier la phrase complexe avec « car » et « parce que »"
    ],
    "body": "",
    "pages": [
-    134
+    "t:8"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 136,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
-   "unit": 26,
-   "session": "Oral production 2 (45 mn)",
+   "unit": 25,
+   "session": "Séance 8/20 (30 min)",
    "activity": "Français",
-   "domain": "Savoir prendre sa place dans un jeu de rôle",
-   "topic": "Oral production 2 : « Je m’exprime » — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Illustrations – Manuel scolaire page 81",
+   "domain": "Lire de manière expressive",
+   "topic": "Lecture systématique — Les sons : eil / iel / io / ia",
+   "materials": "Livre page.88 – PLM",
    "objectives": [
-    "Amener l’apprenant à produire un énoncé pour expliquer pourquoi les déchets sont dangereux"
+    "À la fin de la séance, l’apprenant sera capable de consolider les sons, d’adopter une bonne vitesse de lecture et de reconnaître les sons : eil / iel / io / ia"
    ],
    "body": "",
    "pages": [
-    135
+    "t:9"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 137,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 26,
-   "session": "Conjugaison (45 mn)",
+   "session": "Séance 9/20 (30 min)",
    "activity": "Français",
-   "domain": "Identifier les points de langue pour mieux écrire",
-   "topic": "Conjugaison : Le verbe « être » et le verbe « avoir » au futur simple — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Manuel scolaire page 63 – Tableau de conjugaison",
+   "domain": "Repérer les éléments de langue pour améliorer l’écriture",
+   "topic": "Conjugaison — Le verbe « être » au futur simple",
+   "materials": "Livre scolaire p.63 – affichage de conjugaison",
    "objectives": [
-    "Conjuguer être et avoir au futur simple de l'indicatif"
+    "À la fin de la séance, l’apprenant sera capable de comprendre les règles de transformation (temps, personne, nombre) et d’utiliser correctement le verbe « être » au futur simple"
    ],
    "body": "",
    "pages": [
-    136
+    "t:10"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 138,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 26,
-   "session": "Lecture systématique (45 mn)",
+   "session": "Séance 10/20 (30 min)",
    "activity": "Français",
-   "domain": "Lire de manière expressive",
-   "topic": "Lecture systématique : Les sons : eil, iel, io, ia — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Tableau – Cahier de classe",
+   "domain": "Maîtriser les sons de la langue",
+   "topic": "Phonétique articulatoire — Le son : [ɲ]",
+   "materials": "Illustrations - Tableau",
    "objectives": [
-    "Identifier et lire correctement les sons eil, iel, io, ia"
+    "À la fin de la séance, l’apprenant sera capable de distinguer les phonèmes de la langue et de reconnaître les différentes intonations"
    ],
    "body": "",
    "pages": [
-    137
+    "t:11"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 139,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 26,
-   "session": "Orthographe (45 mn)",
+   "session": "Séance 11/20 (30 min)",
    "activity": "Français",
-   "domain": "Identifier les points de langue pour mieux écrire",
-   "topic": "Orthographe : Le pluriel des noms en « al », « ail » — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Exercices transcrits au tableau ou photocopiés",
+   "domain": "Repérer les éléments de langue pour améliorer l’écriture",
+   "topic": "Conjugaison 2 — Le verbe « avoir » au futur simple",
+   "materials": "Livre p.63 – affichage de conjugaison",
    "objectives": [
-    "Former correctement le pluriel des noms terminés par -al et -ail"
+    "À la fin de la séance, l’apprenant sera capable de comprendre les règles de transformation (temps, personne, nombre) et d’utiliser correctement le verbe « avoir » au futur simple"
    ],
    "body": "",
    "pages": [
-    138
+    "t:12"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 140,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 26,
-   "session": "Dictée (45 mn)",
+   "session": "Séance 12/20 (30 min)",
    "activity": "Français",
-   "domain": "Ecrire pour répondre à une consigne d’écriture",
-   "topic": "Dictée — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Manuel scolaire page 88 – Ardoises – Cahiers de classe",
+   "domain": "Identifier les points de la langue pour mieux écrire",
+   "topic": "Orthographe — Le pluriel des noms en « al », « ail »",
+   "materials": "Livre scolaire page 98 – PLM",
    "objectives": [
-    "Consolider sa maîtrise de l’écriture en faisant attention à la relation « phonie-graphie »"
+    "À la fin de la séance, l’apprenant sera capable d’identifier et de reconnaître le pluriel des noms en « al » et « ail »"
    ],
    "body": "",
    "pages": [
-    139
+    "t:13"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 141,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
-   "unit": 27,
-   "session": "Préparation à l’écrit (45 mn)",
+   "unit": 26,
+   "session": "Séance 13/20 (30 min)",
    "activity": "Français",
-   "domain": "Produire des énoncés pour les insérer dans un cadre textuel",
-   "topic": "Préparation à l’écrit — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Illustrations –Manuel scolaire page 89 – Ardoises",
+   "domain": "Écrire pour répondre à une consigne donnée",
+   "topic": "Dictée",
+   "materials": "Livre p.88 – PLM – Cahiers",
    "objectives": [
-    "Comprendre les consignes et répondre par écrit aux exercices"
+    "À la fin de la séance, l’apprenant sera capable de transcrire correctement un court texte dicté en lien avec la séquence"
    ],
    "body": "",
    "pages": [
-    140
+    "t:14"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 142,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
-   "unit": 27,
-   "session": "Production écrite (1er jet) (45 mn)",
+   "unit": 26,
+   "session": "Séance 14/20 (30 min)",
    "activity": "Français",
-   "domain": "Produire un texte en fonction d’une situation de communication",
-   "topic": "Production écrite (1er jet) — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Illustration – boite à outils (mots)",
+   "domain": "Formuler des phrases à insérer dans un texte",
+   "topic": "Entraînement à la mobilisation",
+   "materials": "Illustration – Livre page 89 – PLM",
    "objectives": [
-    "Respecter une consigne d’écriture et organiser des informations."
+    "À la fin de la séance, l’apprenant sera capable de comprendre les consignes et de répondre oralement aux exercices"
    ],
    "body": "",
    "pages": [
-    141
+    "t:15"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 143,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
-   "unit": 27,
-   "session": "Compte rendu (60 mn)",
+   "unit": 26,
+   "session": "Séance 15/20 (30 min)",
    "activity": "Français",
-   "domain": "Produire un texte en fonction d’une situation de communication",
-   "topic": "Compte rendu — Pourquoi notre terre est-elle en danger ?",
-   "materials": "-Illustration – Ardoises",
+   "domain": "S’intégrer et tenir son rôle dans un jeu de rôle. Compétence transversale : -Maintenir un effort constant dans les tâches et exprimer sa créativité personnelle",
+   "topic": "Production orale — « Je m’exprime »",
+   "materials": "Illustration – Livre page 81",
    "objectives": [
-    "Entraîner les apprenants à se corriger et à réécrire (autocorrection)."
+    "À la fin de la séance, l’apprenant sera capable de produire un énoncé à l’oral"
    ],
    "body": "",
    "pages": [
-    142
+    "t:16"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 144,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 27,
-   "session": "Comptine (30 mn)",
+   "session": "Séance 16/20 (30 min)",
    "activity": "Français",
-   "domain": "Répéter les mots pour les retenir, tout en chantant la comptine ; Produire un texte en fonction d’une situation de communication",
-   "topic": "Comptine : Sauvons le monde — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Illustration – Support audio- visuel (youtube)",
+   "domain": "Produire un texte en fonction d’une situation de communication",
+   "topic": "Production écrite (1er jet)",
+   "materials": "Illustration – tableau",
    "objectives": [
-    "Amener l’apprenant à mémoriser une chanson"
+    "À la fin de la séance, l’apprenant sera capable d’écrire un texte pour citer les dangers qui menacent la Terre"
    ],
    "body": "",
    "pages": [
-    143
+    "t:17"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 145,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 27,
-   "session": "Réalisation de la tâche partielle (30 mn)",
+   "session": "Séance 17/20 (30 min)",
    "activity": "Français",
-   "domain": "Ecrire pour répondre à une consigne d’écriture ; Produire un texte en fonction d’une situation de communication",
-   "topic": "Réalisation de la tâche partielle — Pourquoi notre terre est-elle en danger ?",
-   "materials": "Manuel scolaire page 90 – Illustrations",
+   "domain": "Rédiger un texte adapté à une situation de communication",
+   "topic": "Production écrite (2ème jet)",
+   "materials": "Illustration – boite à mots",
    "objectives": [
-    "Amener l’élève à fabriquer une affiche avec des conseils et des dessins"
+    "À la fin de la séance, l’apprenant sera capable de respecter la consigne d’écriture"
    ],
    "body": "",
    "pages": [
-    144
+    "t:18"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 146,
    "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
    "unitKind": "week",
    "unit": 27,
-   "session": "Evaluation (60 mn)",
+   "session": "Séance 18/20 (30 min)",
    "activity": "Français",
-   "domain": "Écrire pour répondre à une consigne d’écriture",
-   "topic": "Evaluation — Pourquoi notre terre est-elle en danger ?",
-   "materials": "-Tableau – Doubles feuilles",
+   "domain": "Rédiger un texte adapté à la situation de communication. Compétence transversale : - Maintenir un effort constant dans les tâches et exprimer sa créativité personnelle",
+   "topic": "Compte rendu",
+   "materials": "Illustration – PLM",
    "objectives": [
-    "-Renforcer les acquis des apprenants par des exercices"
+    "À la fin de la séance, l’apprenant sera capable de développer son autonomie et d’autocorriger les erreurs de sa production écrite"
    ],
    "body": "",
    "pages": [
-    145
+    "t:19"
    ],
-   "sample": false,
-   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?"
+   "sample": false
   },
   {
    "order": 147,
+   "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Séance 19/20 (30 min)",
+   "activity": "Français",
+   "domain": "Répéter les mots en chantant la comptine pour mieux les mémoriser",
+   "topic": "Comptine — Sauvons le monde",
+   "materials": "Illustration – Support audio",
+   "objectives": [
+    "À la fin de la séance, l’apprenant sera capable de mémoriser une chanson"
+   ],
+   "body": "",
+   "pages": [
+    "t:20"
+   ],
+   "sample": false
+  },
+  {
+   "order": 148,
+   "segment": 7,
+   "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 1 : Pourquoi notre terre est-elle en danger ?",
+   "unitKind": "week",
+   "unit": 27,
+   "session": "Séance 20/20 (60 min)",
+   "activity": "Français",
+   "domain": "Écrire en réponse à une consigne donnée",
+   "topic": "Tâche 1",
+   "materials": "Livre P.90 – illustration",
+   "objectives": [
+    "À la fin de la séance, l’apprenant sera capable de réaliser une affiche sur les gestes qui protègent la Terre et de participer à une tâche partielle du projet"
+   ],
+   "body": "",
+   "pages": [
+    "t:21"
+   ],
+   "sample": false
+  },
+  {
+   "order": 149,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -2971,7 +3011,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 148,
+   "order": 150,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -2991,7 +3031,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 149,
+   "order": 151,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -3011,7 +3051,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 150,
+   "order": 152,
    "segment": 8,
    "unitKind": "week",
    "unit": 28,
@@ -3031,7 +3071,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 151,
+   "order": 153,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -3051,7 +3091,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 152,
+   "order": 154,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -3071,7 +3111,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 153,
+   "order": 155,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -3091,7 +3131,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 154,
+   "order": 156,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -3111,7 +3151,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 155,
+   "order": 157,
    "segment": 8,
    "unitKind": "week",
    "unit": 29,
@@ -3131,7 +3171,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 156,
+   "order": 158,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -3151,7 +3191,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 157,
+   "order": 159,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -3171,7 +3211,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 158,
+   "order": 160,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -3191,7 +3231,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 159,
+   "order": 161,
    "segment": 8,
    "unitKind": "week",
    "unit": 30,
@@ -3211,7 +3251,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 160,
+   "order": 162,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -3231,7 +3271,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 161,
+   "order": 163,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -3251,7 +3291,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 162,
+   "order": 164,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -3271,7 +3311,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 163,
+   "order": 165,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -3291,7 +3331,7 @@
    "segmentTitle": "Projet 4 : Protégeons la nature ! — Séquence 2 : Ne gaspillons pas l'eau !"
   },
   {
-   "order": 164,
+   "order": 166,
    "segment": 8,
    "unitKind": "week",
    "unit": 31,
@@ -3315,6 +3355,16 @@
   "r": {
    "pdf": [
     "1Cib_m6Hw1GjawCREZoWkVPyTjO5yR4OZ"
+   ]
+  },
+  "s": {
+   "pdf": [
+    "1vXIvlI6r1xvrvcG57g4CX33MX0-jLrnS"
+   ]
+  },
+  "t": {
+   "pdf": [
+    "1Ts8TYQNJhYIFqawg2ArL5AczuMqEjIli"
    ]
   }
  }

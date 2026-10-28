@@ -16,8 +16,14 @@ const file = new URL(`../../content/curriculum/${id}.json`, import.meta.url);
 const data = JSON.parse(readFileSync(file, "utf8"));
 const squash = (s) => s.replace(/\s+/g, " ").trim();
 const nPages = Number(/Pages:\s+(\d+)/.exec(execFileSync("pdfinfo", [pdf]).toString())[1]);
-const LABELS = String.raw`(?=Classe\s*:|Cours\s*:|Projet\s*\d|Séquence\s*\d|Activité\s*:|Durée\s*:|Thème\s*:|Actes? de parole\s*:|Compétence terminale\s*:|Composantes? de la compétence\s*:|Objectifs? d.apprentissage\s*:|Outils? didactiques?\s*:|Déroulement|$)`;
-const field = (t, label) => squash(new RegExp(`${label}\\s*:\\s*(.*?)\\s*${LABELS}`).exec(t)?.[1] ?? "").replace(/[.\s]+$/, "");
+const LABELS = String.raw`(?=Classe\s*:|Cours\s*:|Projet\s*\d|Séquence\s*\d|Activité\s*:|Durée\s*:|Thème\s*:|Actes? de parole\s*:|Compétence (?:terminale|visée)\s*:|Composantes? de la compétence\s*:|Compétences transversales\s*:|Valeurs mises en œuvre\s*:|Objectifs? (?:d.apprentissage|à atteindre)\s*:|Outils? didactiques?\s*:|Déroulement|$)`;
+const field = (t, label) => squash(new RegExp(`${label}\\s*:\\s*(.*?)\\s*${LABELS}`).exec(t)?.[1] ?? "").replace(/^[-–\s]+/, "").replace(/[.\s]+$/, "");
+
+// أخطاء نسخ في البطاقات الأصلية (هدف بطاقة أخرى منسوخ كما هو)، حسب المرجع «<key>:<page>»
+const FIXES = {
+  "t:14": "À la fin de la séance, l’apprenant sera capable de transcrire correctement un court texte dicté en lien avec la séquence",
+  "t:21": "À la fin de la séance, l’apprenant sera capable de réaliser une affiche sur les gestes qui protègent la Terre et de participer à une tâche partielle du projet",
+};
 
 const fiches = [];
 for (let n = 2; n <= nPages; n++) {
@@ -34,8 +40,8 @@ for (let n = 2; n <= nPages; n++) {
     activity,
     min,
     theme: field(t, "Thème"),
-    domain: field(t, "Composantes? de la compétence") || field(t, "Compétence terminale"),
-    objective: field(t, "Objectifs? d.apprentissage"),
+    domain: field(t, "Composantes? de la compétence") || field(t, "Compétence (?:terminale|visée)"),
+    objective: FIXES[`${key}:${n}`] ?? field(t, "Objectifs? (?:d.apprentissage|à atteindre)"),
     tools: field(t, "Outils? didactiques?"),
     pages: [`${key}:${n}`],
   });
