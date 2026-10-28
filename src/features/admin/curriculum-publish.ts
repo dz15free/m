@@ -185,9 +185,12 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
   const now = Date.now();
   // النماذج المجانية للتجربة تبقى كما نُشرت (لا نعيد كتابة صفحات المصدر الرئيسي)
   const existing = await getDoc(doc(db(), "curriculum", id));
-  const prevSample = new Map<string, boolean>(((existing.data()?.entries as { id: string; sm: boolean }[] | undefined) ?? []).map((e) => [e.id, e.sm]));
-  // منهاج جديد: النماذج المجانية من الملف («sample»)
-  const sampleOf = (l: Lesson) => prevSample.get(lessonId(id, l)) ?? l.sample ?? false;
+  const prevSample = new Map<string, { sm: boolean; t: string }>(((existing.data()?.entries as { id: string; sm: boolean; t: string }[] | undefined) ?? []).map((e) => [e.id, e]));
+  // منهاج جديد، أو حصة تغيّر موضوعها تحت المعرّف نفسه (حصص أُضيفت قبلها فتغيّر ترقيمها): النماذج المجانية من الملف («sample»)
+  const sampleOf = (l: Lesson) => {
+    const prev = prevSample.get(lessonId(id, l));
+    return prev && prev.t === l.topic ? prev.sm : (l.sample ?? false);
+  };
 
   const keys = new Map(c.lessons.map((l, i) => [l, memoKeys(c.lessons)[i]!]));
   const memoOf = (l: Lesson) => memos?.[keys.get(l) ?? ""];
@@ -199,6 +202,8 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
     if (key !== "main") extra.set(key, (extra.get(key) ?? new Set()).add(n));
   };
   for (const l of c.lessons) if (!memoOf(l)) (l.pages ?? []).forEach(add);
+  // مصادر بلا ملف معلن (نشرها seed.mjs من ملفات محلية): صفحاتها منشورة من قبل، مثل المصدر الرئيسي
+  for (const key of [...extra.keys()]) if (!c.sources?.[key]) extra.delete(key);
   const figPages = new Set<string>();
   for (const l of c.lessons) for (const f of memoOf(l) ? memoFigures(memoOf(l)!) : []) figPages.add(f.ref);
   figPages.forEach(add);
@@ -234,6 +239,16 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
     }
   }
 
+  // صفحات منشورة من قبل (المصدر الرئيسي وما لا ملف له): تُعتمد الموجودة فقط — seed.mjs لا ينشر الصفحات البيضاء
+  const prepublished = [...new Set(c.lessons.filter((l) => !memoOf(l)).flatMap((l) => (l.pages ?? []).filter((p) => !c.sources?.[parsePage(p).key]).map(String)))];
+  for (let i = 0; i < prepublished.length; i += 50)
+    await Promise.all(
+      prepublished.slice(i, i + 50).map(async (ref) => {
+        const p = /^\d+$/.test(ref) ? Number(ref) : ref;
+        if (!(await getDoc(doc(db(), "lessonBodies", pageId(id, p)))).exists()) blank.add(ref);
+      }),
+    );
+
   // 2) المذكرات المُنسّقة (وثيقة لكل حصة، بأشكالها)
   const withMemo = c.lessons.filter((l) => memoOf(l));
   for (const [i, l] of withMemo.entries()) {
@@ -245,7 +260,7 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
     onProgress({ step: "memos", done: i + 1, total: withMemo.length });
   }
 
-  // 3) الملخّصات، وسير الحصص ذات الصفحات الجديدة (سير حصص المصدر الرئيسي منشور من قبل)
+  // 3) الملخّصات، وسير الحصص المصوّرة (يُعاد لكل حصة: قد يتغيّر ترقيم الحصص فتتغيّر معرّفاتها)
   const hasBody = (l: Lesson) => !!memoOf(l) || !!l.body || (l.pages ?? []).some((p) => !blank.has(String(p)));
   const lessons = [...c.lessons];
   for (let i = 0; i < lessons.length; i += 200) {
@@ -273,9 +288,9 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
         source: c.source,
         updatedAt: now,
       });
-      // صفحات المصدر الرئيسي (منشورة من قبل) تبقى في أول السير، والمذكرات الملحقة بعدها
       const pages = (l.pages ?? []).filter((p) => !blank.has(String(p)));
-      if (!memoOf(l) && pages.some((p) => parsePage(p).key !== "main")) {
+      // سير مكتوب مع صفحات المصدر الرئيسي وحدها: منشور من قبل بجودته (seed.mjs)
+      if (!memoOf(l) && pages.length && (!l.body || pages.some((p) => parsePage(p).key !== "main"))) {
         batch.set(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample, body: l.body ?? "", pages: pages.map((p) => pageId(id, p)), quality: "pages", source: c.source, updatedAt: now });
       }
     }
