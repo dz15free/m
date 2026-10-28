@@ -197,15 +197,15 @@ export async function listFeedback(): Promise<FeedbackRow[]> {
   });
 }
 
-/** الآراء التي أخفاها الأدمن من الصفحة الرئيسية (config/testimonials.hidden). */
-export async function getHiddenTestimonials(): Promise<string[]> {
+/** اختيارات الأدمن للصفحة الرئيسية (config/testimonials): hidden تُخفى دائمًا، shown تُعرض ولو لم تستوفِ شرط العرض التلقائي. */
+export async function getTestimonialChoices(): Promise<{ hidden: string[]; shown: string[] }> {
   const snap = await getDoc(doc(db(), "config", "testimonials")).catch(() => null);
-  const hidden = snap?.data()?.hidden;
-  return Array.isArray(hidden) ? hidden.filter((x): x is string => typeof x === "string") : [];
+  const ids = (v: unknown) => (Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : []);
+  return { hidden: ids(snap?.data()?.hidden), shown: ids(snap?.data()?.shown) };
 }
 
-export async function setTestimonialHidden(uid: string, hide: boolean) {
-  await setDoc(doc(db(), "config", "testimonials"), { hidden: hide ? arrayUnion(uid) : arrayRemove(uid) }, { merge: true });
+export async function setTestimonialShown(uid: string, show: boolean) {
+  await setDoc(doc(db(), "config", "testimonials"), { hidden: show ? arrayRemove(uid) : arrayUnion(uid), shown: show ? arrayUnion(uid) : arrayRemove(uid) }, { merge: true });
 }
 
 export async function emailsOf(uids: string[]): Promise<Map<string, string>> {
