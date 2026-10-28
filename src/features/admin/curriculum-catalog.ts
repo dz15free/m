@@ -11,6 +11,8 @@ import mu4 from "../../../content/curriculum/4AP_music.json";
 import ar4 from "../../../content/curriculum/4AP_ar.json";
 import c4 from "../../../content/curriculum/4AP_civic.json";
 import pe4 from "../../../content/curriculum/4AP_pe.json";
+import fr4 from "../../../content/curriculum/4AP_fr.json";
+import fr5 from "../../../content/curriculum/5AP_fr.json";
 import h5 from "../../../content/curriculum/5AP_history.json";
 import i5 from "../../../content/curriculum/5AP_islamic.json";
 import c5 from "../../../content/curriculum/5AP_civic.json";
@@ -59,7 +61,7 @@ import mid_4AM_science from "../../../content/curriculum/4AM_science.json";
 import type { CurriculumFile } from "./curriculum-publish";
 
 export const CURRICULA = [
-  m4, i4, s4, h4, g4, a4, mu4, ar4, c4, pe4, h5, i5, c5, s5,
+  m4, i4, s4, h4, g4, a4, mu4, ar4, c4, pe4, fr4, h5, i5, c5, s5, fr5,
   // التعليم المتوسط (scripts/curriculum/build-middle.mjs)
   mid_1AM_ar, mid_1AM_civic, mid_1AM_en, mid_1AM_fr, mid_1AM_histgeo, mid_1AM_informatics, mid_1AM_islamic, mid_1AM_math, mid_1AM_music, mid_1AM_physics, mid_1AM_science, mid_2AM_ar, mid_2AM_civic, mid_2AM_en, mid_2AM_histgeo, mid_2AM_informatics, mid_2AM_islamic, mid_2AM_math, mid_2AM_physics, mid_2AM_science, mid_3AM_ar, mid_3AM_civic, mid_3AM_en, mid_3AM_fr, mid_3AM_histgeo, mid_3AM_informatics, mid_3AM_islamic, mid_3AM_math, mid_3AM_physics, mid_3AM_science, mid_4AM_ar, mid_4AM_civic, mid_4AM_en, mid_4AM_fr, mid_4AM_histgeo, mid_4AM_informatics, mid_4AM_islamic, mid_4AM_math, mid_4AM_music, mid_4AM_physics, mid_4AM_science,
 ] as unknown as CurriculumFile[];

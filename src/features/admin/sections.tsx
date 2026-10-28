@@ -12,7 +12,7 @@ import { useUid } from "@/features/classes/hooks";
 import { deleteAnnouncement, listAnnouncements, publishAnnouncement, type Kind } from "@/features/notifications/repo";
 import { cn } from "@/lib/utils/cn";
 import { FEEDBACK_REASONS } from "@/features/billing/feedback";
-import { emailsOf, failureKey, getHiddenTestimonials, addPayment, deletePayment, inspectOrder, listAudit, listFeedback, setTestimonialHidden, listOrders, listPayments, peopleOf, type ChargilyInfo, type OrderRow } from "./repo";
+import { emailsOf, failureKey, getTestimonialChoices, addPayment, deletePayment, inspectOrder, listAudit, listFeedback, setTestimonialShown, listOrders, listPayments, peopleOf, type ChargilyInfo, type OrderRow } from "./repo";
 import { pick, intlLocale } from "@/i18n/pick";
 import type { Locale } from "@/i18n/config";
 
@@ -439,14 +439,17 @@ export function AdminFeedback() {
   const ta = useTranslations("admin");
   const locale = useLocale() as Locale;
   const list = useQuery({ queryKey: ["adminFeedback"], queryFn: listFeedback });
-  const hidden = useQuery({ queryKey: ["hiddenTestimonials"], queryFn: getHiddenTestimonials });
+  const choices = useQuery({ queryKey: ["testimonialChoices"], queryFn: getTestimonialChoices });
   const qc = useQueryClient();
   const [toggling, setToggling] = useState<string | null>(null);
-  async function toggle(uid: string, hide: boolean) {
+  // نفس قاعدة الصفحة الرئيسية (src/lib/server/landing-data.ts)
+  const isShown = (r: { uid: string; rating: number; comment: string }) =>
+    !choices.data!.hidden.includes(r.uid) && (choices.data!.shown.includes(r.uid) || (r.rating >= 4 && r.comment.trim().length >= 12));
+  async function toggle(uid: string, show: boolean) {
     setToggling(uid);
     try {
-      await setTestimonialHidden(uid, hide);
-      await qc.invalidateQueries({ queryKey: ["hiddenTestimonials"] });
+      await setTestimonialShown(uid, show);
+      await qc.invalidateQueries({ queryKey: ["testimonialChoices"] });
     } finally {
       setToggling(null);
     }
@@ -497,19 +500,19 @@ export function AdminFeedback() {
                   </p>
                 )}
                 {r.comment && <p dir="auto" className="whitespace-pre-line">{r.comment}</p>}
-                {/* الصفحة الرئيسية تعرض آراء 4 و5 نجوم بتعليق تلقائيًا، ما لم تُخفَ هنا */}
-                {r.rating >= 4 && r.comment.trim().length >= 12 && hidden.data && (
+                {/* الصفحة الرئيسية تعرض آراء 4 و5 نجوم بتعليق تلقائيًا؛ وللأدمن عرض أي رأي أو إخفاؤه */}
+                {choices.data && (
                   <p className="flex flex-wrap items-center gap-2 pt-1">
-                    <span className={cn("rounded-full px-2 py-0.5 text-xs font-semibold", hidden.data.includes(r.uid) ? "bg-slate-100 text-slate-700" : "bg-green-50 text-green-800")}>
-                      {hidden.data.includes(r.uid) ? t("hidden") : t("shown")}
+                    <span className={cn("rounded-full px-2 py-0.5 text-xs font-semibold", isShown(r) ? "bg-green-50 text-green-800" : "bg-slate-100 text-slate-700")}>
+                      {isShown(r) ? t("shown") : t("hidden")}
                     </span>
                     <button
                       type="button"
                       disabled={toggling === r.uid}
-                      onClick={() => void toggle(r.uid, !hidden.data!.includes(r.uid))}
+                      onClick={() => void toggle(r.uid, !isShown(r))}
                       className="rounded-full px-3 py-1 text-xs font-semibold text-brand-800 ring-1 ring-line hover:bg-canvas disabled:opacity-50"
                     >
-                      {hidden.data.includes(r.uid) ? t("show") : t("hide")}
+                      {isShown(r) ? t("hide") : t("show")}
                     </button>
                   </p>
                 )}

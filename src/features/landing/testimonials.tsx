@@ -22,6 +22,7 @@ function Stars({ n, className }: { n: number; className?: string }) {
 
 function Card({ t: item, tone }: { t: Testimonial; tone: "dark" | "light" }) {
   const t = useTranslations("testimonials");
+  const tf = useTranslations("feedback");
   const locale = useLocale() as Locale;
   const name = item.firstName || t("teacher");
   const where = [t(`stage.${item.stage === "middle" || item.stage === "secondary" ? item.stage : "primary"}`), pick(item.wilaya, locale)].filter(Boolean).join(" · ");
@@ -39,7 +40,8 @@ function Card({ t: item, tone }: { t: Testimonial; tone: "dark" | "light" }) {
       </div>
       <span className="sr-only">{t("stars", { n: item.rating })}</span>
       <blockquote dir="auto" className={cn("flex-1 text-[1.05rem] leading-relaxed", dark ? "text-white/90" : "text-ink")}>
-        «{item.comment}»
+        {/* رأي بلا تعليق عرضه الأدمن: أسباب التقييم */}
+        «{item.comment || item.reasons.filter((k) => tf.has(`reasons.${k as "useful"}`)).map((k) => tf(`reasons.${k as "useful"}`)).join(" · ")}»
       </blockquote>
       <figcaption className="flex items-center gap-3">
         <span className={cn("grid size-11 shrink-0 place-items-center rounded-full text-lg font-bold", dark ? "bg-brand-400 text-brand-950" : "bg-brand-100 text-brand-800")}>

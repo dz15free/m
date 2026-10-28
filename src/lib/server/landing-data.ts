@@ -21,10 +21,13 @@ async function load(): Promise<LandingData> {
     adminGet("config/testimonials").catch(() => null),
     adminListAll("curriculum", ["entries"]).catch(() => []),
   ]);
-  const hidden = new Set(Array.isArray(config?.data.hidden) ? (config!.data.hidden as string[]) : []);
+  const ids = (v: unknown) => new Set(Array.isArray(v) ? (v as string[]) : []);
+  const hidden = ids(config?.data.hidden);
+  // يعرض الأدمن أي رأي (shown) أو يخفيه (hidden)؛ وإلا تُعرض تلقائيًا آراء 4 و5 نجوم بتعليق
+  const shown = ids(config?.data.shown);
   const good = feedback
     .map((f) => ({ id: f.id, rating: Number(f.data.rating) || 0, comment: String(f.data.comment ?? "").trim(), reasons: (f.data.reasons as string[] | undefined) ?? [], at: millis(f.data.updatedAt) }))
-    .filter((f) => f.rating >= 4 && f.comment.length >= 12 && !hidden.has(f.id))
+    .filter((f) => !hidden.has(f.id) && (shown.has(f.id) || (f.rating >= 4 && f.comment.length >= 12)))
     .sort((a, b) => b.rating - a.rating || b.at - a.at)
     .slice(0, MAX_SHOWN);
 
