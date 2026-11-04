@@ -443,7 +443,7 @@
       "archive": "Archiver la classe",
       "archiveConfirm": "Masquer la classe des listes ? Toutes ses données restent conservées.",
       "delete": "Supprimer la classe",
-      "deleteConfirm": "Supprimer définitivement cette classe ?",
+      "deleteConfirm": "Supprimer définitivement cette classe avec ses élèves, absences, notes, leçons et progressions ? Cette action est irréversible.",
       "actions": "Actions",
       "saved": "Enregistré",
       "error": "Enregistrement impossible. Réessayez.",

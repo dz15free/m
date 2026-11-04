@@ -25,6 +25,8 @@ type Lesson = {
   objectives?: string[];
   objectiveParts?: string[][];
   body?: string;
+  /** جودة السير المكتوب كما يحفظها seed.mjs */
+  bodyQuality?: string;
   page?: number;
   pages?: (number | string)[];
   /** نموذج مجاني للتجربة (يُعتمد عند أول نشر فقط) */
@@ -289,9 +291,9 @@ export async function publishCurriculum(c: CurriculumFile, onProgress: (p: Progr
         updatedAt: now,
       });
       const pages = (l.pages ?? []).filter((p) => !blank.has(String(p)));
-      // سير مكتوب مع صفحات المصدر الرئيسي وحدها: منشور من قبل بجودته (seed.mjs)
-      if (!memoOf(l) && pages.length && (!l.body || pages.some((p) => parsePage(p).key !== "main"))) {
-        batch.set(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample, body: l.body ?? "", pages: pages.map((p) => pageId(id, p)), quality: "pages", source: c.source, updatedAt: now });
+      // سير مكتوب مع صفحات المصدر الرئيسي وحدها: منشور من قبل بجودته (seed.mjs)؛ والسير المكتوب وحده يُعاد كما ينشره seed.mjs
+      if (!memoOf(l) && (pages.length ? !l.body || pages.some((p) => parsePage(p).key !== "main") : !!l.body)) {
+        batch.set(doc(db(), "lessonBodies", lessonId(id, l)), { curriculumId: id, sample, body: l.body ?? "", pages: pages.map((p) => pageId(id, p)), quality: pages.length ? "pages" : (l.bodyQuality ?? "pages"), source: c.source, updatedAt: now });
       }
     }
     await batch.commit();

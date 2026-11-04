@@ -145,24 +145,29 @@ export async function renameClass(uid: string, classId: string, displayName: str
   await batch.commit();
 }
 
-/** الأرشفة تُبقي كل شيء (للسنوات السابقة والإحصائيات) وتخفي القسم من القوائم. */
-export async function archiveClass(uid: string, classId: string, yearId: string) {
-  const batch = writeBatch(db());
-  batch.update(doc(classesCol(uid), classId), { archived: true, updatedAt: serverTimestamp() });
-  await releaseSlot(batch, uid, yearId, classId);
-  await batch.commit();
-}
-
 /** إخراج قسم من الفهرس (يحرّر مكانه ضمن حدّ الخطة). */
 async function releaseSlot(batch: WriteBatch, uid: string, yearId: string, classId: string) {
   const idx = await getDoc(yearIndexRef(uid, yearId)).catch(() => null);
   if (idx?.exists()) batch.update(yearIndexRef(uid, yearId), { classIds: arrayRemove(classId), updatedAt: serverTimestamp() });
 }
 
-/** الحذف النهائي متاح فقط لقسم بلا تلاميذ (القواعد تفرض ذلك أيضًا). */
+/** الحذف النهائي للقسم مع كل ما يخصّه: الحصص والغيابات، الدروس، كشوف العلامات، التوزيعات والإسنادات. */
 export async function deleteClass(uid: string, cls: ClassDoc) {
+  const sub = (name: string) => collection(db(), "teachers", uid, name);
+  const linked = await Promise.all(["sessions", "lessons", "progressions"].map((c) => getDocs(query(sub(c), where("classId", "==", cls.id)))));
+  const refs = [
+    ...linked.flatMap((snap) => snap.docs.map((d) => d.ref)),
+    ...[1, 2, 3].map((term) => doc(sub("grades"), `${cls.id}__t${term}`)),
+    ...cls.subjectIds.map((s) => assignmentRef(uid, cls.id, s)),
+  ];
+  for (let i = 0; i < refs.length; i += 400) {
+    const batch = writeBatch(db());
+    refs.slice(i, i + 400).forEach((r) => batch.delete(r));
+    await batch.commit();
+  }
+  // القواعد لا تحذف إلا قسمًا فارغًا: تُفرَّغ قائمة التلاميذ أولًا
+  if (cls.studentCount > 0) await writeBatch(db()).update(doc(classesCol(uid), cls.id), { roster: [], studentCount: 0, updatedAt: serverTimestamp() }).commit();
   const batch = writeBatch(db());
-  cls.subjectIds.forEach((s) => batch.delete(assignmentRef(uid, cls.id, s)));
   batch.delete(doc(classesCol(uid), cls.id));
   await releaseSlot(batch, uid, cls.yearId, cls.id);
   await batch.commit();
