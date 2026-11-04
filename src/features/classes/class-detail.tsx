@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
 import {
-  Archive,
   BarChart3,
   CalendarClock,
   ChevronLeft,
@@ -26,7 +25,7 @@ import { Field } from "@/components/ui/field";
 import { levelById, subjectById, subjectsForLevel, type StageTaxonomy } from "@/shared/taxonomy/taxonomy";
 import { keys, useClass, useClasses, useTaxonomy, useUid } from "./hooks";
 import { nextSections } from "./naming";
-import { archiveClass, ClassLimitError, createClasses, deleteClass, renameClass, updateClassSubjects, type ClassDoc } from "./repo";
+import { ClassLimitError, createClasses, deleteClass, renameClass, updateClassSubjects, type ClassDoc } from "./repo";
 import { SubjectChips, SubjectTags } from "./subject-chips";
 import { pick } from "@/i18n/pick";
 import type { Locale } from "@/i18n/config";
@@ -260,24 +259,6 @@ function ActionsCard({ cls }: { cls: ClassDoc }) {
             {t("copy")}
           </button>
           <button
-            type="button"
-            disabled={busy}
-            onClick={() =>
-              uid &&
-              confirm(t("archiveConfirm")) &&
-              run(async () => {
-                await archiveClass(uid, cls.id, cls.yearId);
-                await refresh();
-                router.push("/app/classes");
-              })
-            }
-            className={buttonClass("secondary", "md", "justify-start")}
-          >
-            <Archive aria-hidden className="size-4" />
-            {t("archive")}
-          </button>
-          {cls.studentCount === 0 && (
-            <button
               type="button"
               disabled={busy}
               onClick={() =>
@@ -294,7 +275,6 @@ function ActionsCard({ cls }: { cls: ClassDoc }) {
               <Trash2 aria-hidden className="size-4" />
               {t("delete")}
             </button>
-          )}
         </div>
       )}
       {message && (

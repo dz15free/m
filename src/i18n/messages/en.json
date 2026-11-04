@@ -443,7 +443,7 @@
       "archive": "Archive the class",
       "archiveConfirm": "Hide the class from the lists? All its data is kept.",
       "delete": "Delete the class",
-      "deleteConfirm": "Permanently delete this class?",
+      "deleteConfirm": "Permanently delete this class with its pupils, absences, marks, lessons and progressions? This cannot be undone.",
       "actions": "Actions",
       "saved": "Saved",
       "error": "Could not save. Try again.",
