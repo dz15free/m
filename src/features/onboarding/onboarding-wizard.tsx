@@ -5,6 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { BookOpenText, CalendarCheck2, ChevronLeft, ChevronRight, GraduationCap, LoaderCircle, School, Users } from "lucide-react";
 import { buttonClass } from "@/components/ui/button";
 import { useAuth } from "@/features/auth/auth-provider";
+import { registrationMethod } from "@/features/auth/auth-service";
+import { anonKey, trackOnce } from "@/features/analytics/meta-events";
 import { completeOnboarding } from "@/features/profile/repo";
 import {
   ProfileFields,
@@ -96,6 +98,8 @@ export function OnboardingWizard() {
         school: { ...school, stage: profile.stage },
         year: { id: year.id, label: year.label },
       });
+      // التسجيل اكتمل كليًا (الحساب + الملف + المدرسة + السنة): التحويل الذي تُحسَّن عليه الحملات
+      void anonKey(user.uid).then((k) => trackOnce("CompleteRegistration", k, { registration_method: registrationMethod(user), content_category: profile.stage, status: "completed" }));
       auth.markOnboarded(); // RequireAuth يحوّل إلى /app
     } catch {
       setSaveError(true);

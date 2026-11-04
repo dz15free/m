@@ -97,6 +97,9 @@ export async function signOut({ force = false } = {}): Promise<"ok" | "pending">
 
 export type AccountInfo = { onboardingDone: boolean };
 
+/** طريقة التسجيل لأحداث Meta: Google أو البريد. */
+export const registrationMethod = (user: User) => (user.providerData.some((p) => p.providerId === "google.com") ? "google" : "email");
+
 /** ينشئ `users/{uid}` عند أول دخول ويعيد حالة الحساب. قراءة واحدة (من الكاش غالبًا).
  *  عند التسجيل بالبريد قد يسبق مستمعُ الجلسة حفظَ الاسم، فنكمل الاسم إن كان فارغًا. */
 export async function ensureUserDoc(user: User, locale: Locale, name?: string): Promise<AccountInfo> {
@@ -122,9 +125,9 @@ export async function ensureUserDoc(user: User, locale: Locale, name?: string): 
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     });
-    // الحساب الجديد أُنشئ فعلًا الآن (مسار واحد فقط ينجح في الإنشاء): بريد أو Google
-    const method = user.providerData.some((p) => p.providerId === "google.com") ? "google" : "email";
-    void anonKey(user.uid).then((k) => trackOnce("CompleteRegistration", k, { registration_method: method, status: "registered" }));
+    // الحساب أُنشئ فعلًا الآن (مسار واحد فقط ينجح في الإنشاء): مرحلة أولى فقط، والتحويل CompleteRegistration
+    // يُرسل حين يكمل الأستاذ معالج التسجيل (onboarding-wizard.tsx)
+    void anonKey(user.uid).then((k) => trackOnce("AccountCreated", k, { registration_method: registrationMethod(user) }));
   } catch (error) {
     // عند التسجيل ينشئ المستندَ مساران في اللحظة نفسها (النموذج ومستمع الجلسة)؛
     // الكتابة الثانية تُرفض لأنها صارت «تعديلًا»، فنقرأ ما أنشأه الأول.

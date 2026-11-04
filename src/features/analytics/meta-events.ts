@@ -7,6 +7,9 @@ const enabled = process.env.NODE_ENV === "production";
 const SENT_KEY = "metaEventsSent";
 
 type MetaEvent = "CompleteRegistration" | "StartTrial" | "Purchase";
+/** أحداث مخصّصة للتشخيص فقط (ليست تحويلات): مراحل القمع قبل اكتمال التسجيل */
+type CustomEvent = "AccountCreated";
+const CUSTOM = new Set<string>(["AccountCreated"]);
 
 function sentSet(): Set<string> {
   try {
@@ -29,7 +32,7 @@ function markSent(id: string) {
 const inFlight = new Set<string>();
 
 /** يرسل الحدث مرة واحدة. `key` يميّز الحالة (معرّف عشوائي غير شخصي: رقم الطلب، أو تجزئة الحساب). */
-export function trackOnce(event: MetaEvent, key: string, params?: Record<string, string | number | string[]>) {
+export function trackOnce(event: MetaEvent | CustomEvent, key: string, params?: Record<string, string | number | string[]>) {
   if (!enabled || typeof window === "undefined") return;
   const id = `${event}:${key}`;
   if (inFlight.has(id) || sentSet().has(id)) return;
@@ -38,7 +41,7 @@ export function trackOnce(event: MetaEvent, key: string, params?: Record<string,
   const send = () => {
     const fbq = (window as { fbq?: (...a: unknown[]) => void }).fbq;
     if (fbq) {
-      fbq("track", event, params ?? {}, { eventID: id });
+      fbq(CUSTOM.has(event) ? "trackCustom" : "track", event, params ?? {}, { eventID: id });
       markSent(id);
     } else if (++tries < 20) setTimeout(send, 500);
     else inFlight.delete(id);
