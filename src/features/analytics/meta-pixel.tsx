@@ -7,7 +7,8 @@ import { useEffect, useRef } from "react";
 /* بكسل فيسبوك (Meta Pixel): زيارة الصفحة الأولى من سكربت التهيئة، وكل تنقّل داخل التطبيق
    (دون إعادة تحميل) يُرسل PageView جديدًا. لا يعمل أثناء التطوير. */
 
-const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "1830587071526627";
+// بكسل الحساب الإعلاني الحالي (يحلّ محل 1830587071526627)
+const PIXEL_ID = "3264306567100386";
 const enabled = process.env.NODE_ENV === "production";
 
 declare global {
