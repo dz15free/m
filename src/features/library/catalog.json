@@ -3966,5 +3966,98 @@
     "size": 602280
    }
   ]
+ },
+ {
+  "id": "cat-ed-5ap-sci-acquis-11",
+  "title": {
+   "ar": "تقييم المكتسبات في التربية العلمية — السنة الخامسة ابتدائي (نموذج 11 مع التصحيح)",
+   "fr": "Évaluation des acquis — éducation scientifique 5e AP (modèle 11 avec corrigé)"
+  },
+  "level": "5AP",
+  "subject": "science",
+  "language": "ar",
+  "type": "evaluation",
+  "term": 3,
+  "unit": "",
+  "tags": [
+   "تقييم المكتسبات",
+   "امتحان نهاية المرحلة",
+   "مع التصحيح",
+   "eddirasa"
+  ],
+  "excerpt": "الميدان الثاني: حفظ الصحة — الحركة والعضلات والمفاصل، التنفس والنبض أثناء الجهد العضلي، قواعد الوقاية من الإصابات. مع الحل. 2 صفحات. المصدر: eddirasa.com (منشور للعموم، 2026).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/uploads/2026/09/%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86-%D8%AA%D9%82%D9%8A%D9%8A%D9%85-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%B3%D8%A8%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%D8%A9-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%B1%D9%82%D9%85-11-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf",
+    "name": "تقييم المكتسبات تربية علمية 5AP — نموذج 11.pdf",
+    "mime": "application/pdf",
+    "size": 709894
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-5ap-sci-acquis-15",
+  "title": {
+   "ar": "تقييم المكتسبات في التربية العلمية — السنة الخامسة ابتدائي (نموذج 15 مع التصحيح)",
+   "fr": "Évaluation des acquis — éducation scientifique 5e AP (modèle 15 avec corrigé)"
+  },
+  "level": "5AP",
+  "subject": "science",
+  "language": "ar",
+  "type": "evaluation",
+  "term": 3,
+  "unit": "",
+  "tags": [
+   "تقييم المكتسبات",
+   "امتحان نهاية المرحلة",
+   "مع التصحيح",
+   "eddirasa"
+  ],
+  "excerpt": "كفاءة حماية المحيط: التنوع البيولوجي، الأوساط وتكيّف الكائنات، أنماط التكاثر، أنواع التلوث وطرق التخلص من النفايات. مع شبكة تصحيح مفصّلة. 4 صفحات. المصدر: eddirasa.com (منشور للعموم، 2026).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/uploads/2026/09/%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86-%D8%AA%D9%82%D9%8A%D9%8A%D9%85-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%B3%D8%A8%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%D8%A9-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%B1%D9%82%D9%85-15-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf",
+    "name": "تقييم المكتسبات تربية علمية 5AP — نموذج 15.pdf",
+    "mime": "application/pdf",
+    "size": 852107
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-5ap-sci-acquis-17",
+  "title": {
+   "ar": "تقييم المكتسبات في التربية العلمية — السنة الخامسة ابتدائي (نموذج 17 مع التصحيح)",
+   "fr": "Évaluation des acquis — éducation scientifique 5e AP (modèle 17 avec corrigé)"
+  },
+  "level": "5AP",
+  "subject": "science",
+  "language": "ar",
+  "type": "evaluation",
+  "term": 3,
+  "unit": "",
+  "tags": [
+   "تقييم المكتسبات",
+   "امتحان نهاية المرحلة",
+   "مع التصحيح",
+   "eddirasa"
+  ],
+  "excerpt": "تكيّف النباتات مع الوسط الجاف، أنواع التلوث وأخطاره، توجيهات للحفاظ على البيئة. مع التصحيح وشبكة التقويم. 3 صفحات. المصدر: eddirasa.com (منشور للعموم، 2026).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/uploads/2026/09/%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86-%D8%AA%D9%82%D9%8A%D9%8A%D9%85-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%B3%D8%A8%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%D8%A9-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%B1%D9%82%D9%85-17-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf",
+    "name": "تقييم المكتسبات تربية علمية 5AP — نموذج 17.pdf",
+    "mime": "application/pdf",
+    "size": 318488
+   }
+  ]
  }
 ]
