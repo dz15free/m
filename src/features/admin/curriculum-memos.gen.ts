@@ -45,6 +45,7 @@ export const MEMO_FILES: Record<string, Entry> = {
   "4AM_music": { rev: "91562f0", count: 25, load: () => import("../../../content/memos/4AM_music.json") },
   "4AM_physics": { rev: "21412ade", count: 26, load: () => import("../../../content/memos/4AM_physics.json") },
   "4AM_science": { rev: "456f24ba", count: 64, load: () => import("../../../content/memos/4AM_science.json") },
+  "4AP_art": { rev: "1189ea4c", count: 4, load: () => import("../../../content/memos/4AP_art.json") },
 };
 
 export type MemoFile = Record<string, Memo>;

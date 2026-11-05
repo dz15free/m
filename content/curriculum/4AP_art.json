@@ -4,8 +4,8 @@
  "subject": "art",
  "title": "التربية التشكيلية — السنة الرابعة ابتدائي",
  "source": {
-  "ar": "مذكرات منشورة للعموم (ملف «مذكرات جميع المواد — سنة رابعة»)؛ العناوين والأسابيع مستخرجة منها",
-  "fr": "Fiches partagées publiquement (4e année, toutes matières)"
+  "ar": "مذكرات منشورة للعموم (ملف «مذكرات جميع المواد — سنة رابعة»)؛ العناوين والأسابيع مستخرجة منها؛ وأُكملت الحصص الناقصة وفق «المخطط السنوي لبناء التعلمات» (مذكرات من إعداد فريق مساعد الأستاذ)",
+  "fr": "Fiches partagées publiquement (4e année, toutes matières) ; séances manquantes complétées selon le plan annuel officiel (fiches de l’équipe Assistant du professeur)"
  },
  "weekMode": "absolute",
  "segments": {
@@ -244,6 +244,111 @@
    ],
    "segmentTitle": "المقطع 5: الصحة والرياضة",
    "added": "drive-2026-10"
+  },
+  {
+   "order": 12,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 6,
+   "unit": 20,
+   "session": "تربية تشكيلية",
+   "domain": "الرسم والتلوين",
+   "topic": "رسم لوحة بسيطة (1)",
+   "materials": "ورق رسم، أقلام رصاص، ممحاة، ألوان مائية أو أقلام تلوين، صور لمناظر.",
+   "objectives": [
+    "يرسم لوحة بسيطة لمنظر من محيطه، ينظّم فيها المساحة ويلوّنها بانسجام."
+   ],
+   "pages": [
+    "o:1"
+   ],
+   "segmentTitle": "المقطع 6: الحياة الثقافية",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 13,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 7,
+   "unit": 25,
+   "session": "تربية تشكيلية",
+   "domain": "الرسم والتلوين",
+   "topic": "رسم لوحة بسيطة (2)",
+   "materials": "ورق رسم، أقلام رصاص، ألوان، فرشاة، أعواد قطنية للتنقيط.",
+   "objectives": [
+    "يُنجز لوحة بسيطة من خياله موظّفًا تقنيات التلوين المكتسبة."
+   ],
+   "pages": [
+    "o:2"
+   ],
+   "segmentTitle": "المقطع 7: الإبداع والابتكار",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 14,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 7,
+   "unit": 27,
+   "session": "تربية تشكيلية",
+   "domain": "فن التصميم",
+   "topic": "تقنيات تركيب المواد المختلفة",
+   "materials": "أوراق، مقص، غراء، ألوان، خامات متنوعة",
+   "objectives": [
+    "يتعرّف على تقنية التركيب باستعمال مواد مختلفة وينجز بها عملًا فنيًا."
+   ],
+   "pages": [
+    "c:7"
+   ],
+   "segmentTitle": "المقطع 7: الإبداع والابتكار",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 15,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 8,
+   "unit": 29,
+   "session": "تربية تشكيلية",
+   "domain": "فن التصميم",
+   "topic": "تقنيات تركيب المواد المختلفة (2)",
+   "materials": "ورق مقوّى، بقايا قماش، خيوط، بذور، أغطية، غراء، مقص.",
+   "objectives": [
+    "يُنجز عملًا فنيًا بارزًا بتركيب مواد مختلفة مع مراعاة التوازن والإتقان."
+   ],
+   "pages": [
+    "o:3"
+   ],
+   "segmentTitle": "المقطع 8: الرحلات والأسفار",
+   "added": "drive-2026-10"
+  },
+  {
+   "order": 16,
+   "unitKind": "week",
+   "activity": "تربية تشكيلية",
+   "body": "",
+   "sample": false,
+   "segment": 8,
+   "unit": 30,
+   "session": "تربية تشكيلية",
+   "domain": "الرسم والتلوين / فن التصميم",
+   "topic": "تعلّم الإدماج والتقويم",
+   "materials": "بطاقة من ورق مقوّى، ألوان، مواد للتركيب، غراء، شبكة التقويم.",
+   "objectives": [
+    "يدمج مكتسباته في الرسم والتلوين وتركيب المواد لإنجاز عمل فني متكامل."
+   ],
+   "pages": [
+    "o:4"
+   ],
+   "segmentTitle": "المقطع 8: الرحلات والأسفار",
+   "added": "drive-2026-10"
   }
  ],
  "sources": {
@@ -259,8 +364,12 @@
     "1rtxaP_QZWMvrMlctSSaTUv3P8RiPoGO0",
     "1rA9J_S5SXW1RnI5pWeh_1caCiT3WEW9n",
     "1e1O0mvWSkj9rvMMF9rXllKUpY-dY8lzz",
-    "10idbwLFCYPyoLDsjgpUWFOAda9VirnrD"
+    "10idbwLFCYPyoLDsjgpUWFOAda9VirnrD",
+    "1FyjL7l9UIsXMSVTfyVu3yOmL_oMBh3md"
    ]
+  },
+  "o": {
+   "web": []
   }
  }
 }
