@@ -21,7 +21,8 @@
     "documents": "Documents and posters",
     "billing": "Subscription",
     "settings": "Settings",
-    "lessons": "Lesson plans"
+    "lessons": "Lesson plans",
+    "guide": "Guide"
   },
   "common": {
     "language": "Language",
@@ -2064,6 +2065,71 @@
       "primary": "Primary education",
       "middle": "Middle school education",
       "secondary": "Secondary education"
+    }
+  },
+  "guide": {
+    "title": "Platform guide",
+    "subtitle": "Every section step by step: from creating your account to printing the notebook.",
+    "startTitle": "Start here: 6 steps and your desk is ready",
+    "startBody": "Follow them once in order; after that the platform works by itself every day.",
+    "search": "Search the guide: pupil list, printing, subscription…",
+    "noResults": "No results. Try another word or write to us with “Contact us”.",
+    "tips": "Tips",
+    "open": "Open this section",
+    "footer": "Didn’t find your answer? Write to us with “Contact us”.",
+    "cardBody": "Every section explained, with search.",
+    "cardCta": "Open the guide"
+  },
+  "aiMemo": {
+    "title": "Write a lesson plan with AI",
+    "subtitle": "A new plan for any lesson, following the second-generation curriculum, in the format you choose.",
+    "cta": "Write a lesson plan with AI",
+    "ctaBody": "For any lesson, in the format and length you choose.",
+    "classSubject": "Class and subject",
+    "noClasses": "Add a class first.",
+    "addClass": "Add a class",
+    "lesson": "Lesson",
+    "freeTopic": "— Free topic (I’ll type it) —",
+    "topic": "Lesson topic",
+    "topicPlaceholder": "e.g. Addition with carrying, Daily routines…",
+    "week": "Week {n}",
+    "day": "Day {n}",
+    "format": "Plan format",
+    "formats": {
+      "official": {
+        "title": "Official format",
+        "body": "Stages, situations and assessment, as the cycle expects."
+      },
+      "detailed": {
+        "title": "Detailed",
+        "body": "With timing, expected answers and differentiation."
+      },
+      "brief": {
+        "title": "Short",
+        "body": "One page with the essentials."
+      },
+      "remedial": {
+        "title": "Remedial",
+        "body": "Common errors and remedial activities by group."
+      }
+    },
+    "duration": "Session length",
+    "minutes": "{n} min",
+    "notes": "Notes (optional)",
+    "notesPlaceholder": "Class level, available materials, a situation you want…",
+    "write": "Write the plan",
+    "rewrite": "Another version",
+    "writing": "Writing…",
+    "wait": "Writing takes about a minute. Keep this page open.",
+    "remaining": "Left today: {n} of {limit}",
+    "review": "Draft plan: review and adapt it before class.",
+    "errors": {
+      "subscription": "For subscribers: subscribe to turn it on.",
+      "limit": "Daily limit reached. It renews tomorrow.",
+      "unavailable": "AI writing is not available right now. Try later.",
+      "refused": "This plan could not be written. Rephrase the topic.",
+      "busy": "The service is busy. Try again shortly.",
+      "generic": "Something went wrong. Try again."
     }
   }
 }
