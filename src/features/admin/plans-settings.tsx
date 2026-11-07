@@ -8,6 +8,7 @@ import { buttonClass } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Field, SelectField } from "@/components/ui/field";
 import { getAppConfig } from "@/features/billing/repo";
+import { authedFetch } from "@/lib/firebase/api";
 import { SiteBannerPreview } from "@/features/pwa/site-banner";
 import type { AppConfig, Banner, Plan } from "@/shared/billing/plans";
 import { getPlansAdmin, saveAppConfig, savePlan } from "./repo";
@@ -167,6 +168,7 @@ export function AdminSettings() {
       <h1 className="text-2xl font-bold">{ta("nav.settings")}</h1>
       <BannerCard initial={config.data.banner ?? emptyBanner} />
       <ContactCard initial={config.data.contact ?? {}} />
+      <GeminiKeyCard />
     </div>
   );
 }
@@ -240,6 +242,63 @@ function ContactCard({ initial }: { initial: NonNullable<AppConfig["contact"]> }
           await queryClient.invalidateQueries({ queryKey: ["appConfig"] });
         }}
       />
+    </Card>
+  );
+}
+
+// ── مفتاح Gemini (كتابة المذكرات بالذكاء الاصطناعي) ──
+
+type AiKeyStatus = { configured: boolean; source: "cloudflare" | "admin" | null; hint: string | null };
+
+function GeminiKeyCard() {
+  const t = useTranslations("admin.settings.ai");
+  const status = useQuery({
+    queryKey: ["adminAiKey"],
+    queryFn: async () => (await (await authedFetch("/api/admin/ai-key")).json()) as AiKeyStatus,
+  });
+  const [key, setKey] = useState("");
+  const [state, setState] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const [error, setError] = useState("");
+  async function save() {
+    setState("saving");
+    setError("");
+    const res = await authedFetch("/api/admin/ai-key", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ key }) }).catch(() => null);
+    const data = (await res?.json().catch(() => ({}))) as { error?: string };
+    if (!res?.ok) {
+      setState("error");
+      setError(data.error === "key rejected" ? t("rejected") : data.error === "invalid key" ? t("invalid") : t("error"));
+      return;
+    }
+    setKey("");
+    setState("saved");
+    await status.refetch();
+  }
+  const s = status.data;
+  return (
+    <Card className="space-y-3">
+      <h2 className="text-lg font-bold">{t("title")}</h2>
+      <p className="text-sm text-muted">{t("body")}</p>
+      {s && (
+        <p className={`rounded-xl p-3 text-sm ring-1 ${s.configured ? "bg-green-50 text-green-900 ring-green-200" : "bg-amber-50 text-amber-950 ring-amber-200"}`}>
+          {s.configured ? t(s.source === "cloudflare" ? "fromCloudflare" : "fromAdmin", { hint: s.hint ?? "" }) : t("missing")}
+        </p>
+      )}
+      <Field
+        label={t("key")}
+        type="password"
+        dir="ltr"
+        autoComplete="off"
+        value={key}
+        onChange={(e) => {
+          setKey(e.target.value);
+          setState("idle");
+        }}
+        placeholder="AIza…"
+      />
+      <div className="flex flex-wrap items-center gap-3">
+        <SaveButton state={state} onClick={() => void save()} label={t("save")} />
+        {error && <span className="text-sm text-red-700">{error}</span>}
+      </div>
     </Card>
   );
 }

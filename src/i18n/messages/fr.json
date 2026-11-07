@@ -1663,7 +1663,19 @@
       "hoursAr": "Horaires de réponse (arabe)",
       "hoursFr": "Horaires de réponse (français)",
       "save": "Enregistrer",
-      "saved": "Enregistré"
+      "saved": "Enregistré",
+      "ai": {
+        "title": "Clé Google Gemini (fiches rédigées par l’IA)",
+        "body": "Collez la clé Gemini ici une seule fois. Elle est vérifiée auprès de Google, puis gardée sur le serveur et n’est plus jamais affichée.",
+        "missing": "Aucune clé : la rédaction par IA est indisponible pour les enseignants.",
+        "fromCloudflare": "Clé configurée dans Cloudflare ({hint}) : la fonction est active.",
+        "fromAdmin": "Clé enregistrée ({hint}) : la fonction est active.",
+        "key": "Clé",
+        "save": "Vérifier et enregistrer",
+        "rejected": "Google a refusé cette clé. Vérifiez-la ou créez-en une nouvelle.",
+        "invalid": "Format de clé invalide.",
+        "error": "Échec de l’enregistrement. Réessayez."
+      }
     },
     "support": {
       "threads": "Conversations",
