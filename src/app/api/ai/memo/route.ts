@@ -1,5 +1,5 @@
 import { errorResponse, HttpError, requireUser, type AuthUser } from "@/lib/server/auth";
-import { serverEnv } from "@/lib/server/env";
+import { geminiEnv } from "@/lib/server/gemini-env";
 import { adminCommit, adminGet } from "@/lib/server/firestore-admin";
 import { effectivePlan, type Entitlement } from "@/shared/billing/plans";
 import { aiMemoRequest, languageOf, MEMO_SCHEMA, pickExample, SYSTEM_PROMPT, toMemo, userPrompt, type LessonContext } from "@/features/ai-memo/prompt";
@@ -69,7 +69,7 @@ export async function GET(req: Request) {
   try {
     const user = await requireUser(req);
     const { limit, usage } = await quotaOf(user);
-    return Response.json({ available: !!serverEnv().GEMINI_API_KEY, limit, remaining: Math.max(0, limit - usage.n) });
+    return Response.json({ available: !!(await geminiEnv()).key, limit, remaining: Math.max(0, limit - usage.n) });
   } catch (error) {
     return errorResponse(error);
   }
@@ -78,7 +78,7 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   try {
     const user = await requireUser(req);
-    const { GEMINI_API_KEY: apiKey, GEMINI_MODEL: model } = serverEnv();
+    const { key: apiKey, model } = await geminiEnv();
     if (!apiKey) throw new HttpError(503, "ai unavailable");
     const parsed = aiMemoRequest.safeParse(await req.json().catch(() => null));
     if (!parsed.success) throw new HttpError(400, "invalid request");
