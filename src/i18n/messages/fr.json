@@ -2142,6 +2142,30 @@
       "refused": "Impossible de rédiger cette fiche. Reformulez le thème.",
       "busy": "Service occupé. Réessayez dans un instant.",
       "generic": "Une erreur est survenue. Réessayez."
+    },
+    "editor": {
+      "edit": "Modifier la fiche",
+      "done": "Terminer",
+      "hint": "Cliquez sur n’importe quel texte de la fiche et tapez directement.",
+      "toolbar": "Outils de mise en forme",
+      "undo": "Annuler",
+      "redo": "Rétablir",
+      "bold": "Gras",
+      "italic": "Italique",
+      "underline": "Souligné",
+      "highlight": "Surligner",
+      "red": "Couleur rouge",
+      "bigger": "Agrandir le texte",
+      "smaller": "Réduire le texte",
+      "bullets": "Liste à puces",
+      "numbers": "Liste numérotée",
+      "right": "Aligner à droite",
+      "center": "Centrer",
+      "left": "Aligner à gauche",
+      "addRow": "Ajouter une ligne au tableau (après la ligne actuelle)",
+      "deleteRow": "Supprimer la ligne actuelle",
+      "reset": "Rétablir l’original",
+      "resetConfirm": "Annuler toutes vos modifications et revenir à la fiche d’origine ?"
     }
   }
 }
