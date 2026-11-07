@@ -12,6 +12,7 @@ import { authedFetch } from "@/lib/firebase/api";
 import { useAuth } from "@/features/auth/auth-provider";
 import { useTaxonomy, useTeacher } from "@/features/classes/hooks";
 import { MemoSheet } from "@/features/lessons/memo-sheet";
+import { EditableMemo } from "./memo-editor";
 import { getCurriculum, useMyCurricula } from "@/features/lessons/repo";
 import type { Memo } from "@/features/lessons/memo";
 import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
@@ -47,6 +48,8 @@ export function AiMemoWriter({ lesson }: { lesson?: string }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<Result | null>(null);
+  // كل مذكرة جديدة تُركَّب من جديد في المحرّر
+  const [version, setVersion] = useState(0);
 
   // أول قسم/مادة افتراضيًا
   const curId = picked || mine.list[0]?.id || "";
@@ -84,6 +87,7 @@ export function AiMemoWriter({ lesson }: { lesson?: string }) {
         return;
       }
       setResult(data as Result);
+      setVersion((v) => v + 1);
       status.refetch();
       window.setTimeout(() => document.getElementById("ai-memo-result")?.scrollIntoView({ behavior: "smooth" }), 50);
     } catch {
@@ -216,14 +220,16 @@ export function AiMemoWriter({ lesson }: { lesson?: string }) {
               <PrintButtons title={() => result.title} />
             </div>
           </div>
-          <MemoSheet
-            memo={result.memo}
-            lang={result.lang}
-            title={result.title}
-            tag={choice ? label(choice) : ""}
-            meta={entry ? `${t("week", { n: entry.u })}` : undefined}
-            teacher={auth.status === "signedIn" ? (auth.user.displayName ?? undefined) : undefined}
-          />
+          <EditableMemo version={version}>
+            <MemoSheet
+              memo={result.memo}
+              lang={result.lang}
+              title={result.title}
+              tag={choice ? label(choice) : ""}
+              meta={entry ? `${t("week", { n: entry.u })}` : undefined}
+              teacher={auth.status === "signedIn" ? (auth.user.displayName ?? undefined) : undefined}
+            />
+          </EditableMemo>
         </article>
       )}
     </div>

@@ -2142,6 +2142,30 @@
       "refused": "This plan could not be written. Rephrase the topic.",
       "busy": "The service is busy. Try again shortly.",
       "generic": "Something went wrong. Try again."
+    },
+    "editor": {
+      "edit": "Edit the plan",
+      "done": "Done editing",
+      "hint": "Click any text in the plan and type directly.",
+      "toolbar": "Formatting tools",
+      "undo": "Undo",
+      "redo": "Redo",
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "highlight": "Highlight",
+      "red": "Red text",
+      "bigger": "Larger text",
+      "smaller": "Smaller text",
+      "bullets": "Bulleted list",
+      "numbers": "Numbered list",
+      "right": "Align right",
+      "center": "Center",
+      "left": "Align left",
+      "addRow": "Add a table row (after the current one)",
+      "deleteRow": "Delete the current table row",
+      "reset": "Restore the original",
+      "resetConfirm": "Discard all your edits and go back to the original plan?"
     }
   }
 }
