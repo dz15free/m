@@ -1663,7 +1663,19 @@
       "hoursAr": "Reply hours (Arabic)",
       "hoursFr": "Reply hours (French)",
       "save": "Save",
-      "saved": "Saved"
+      "saved": "Saved",
+      "ai": {
+        "title": "Google Gemini key (AI lesson plans)",
+        "body": "Paste the Gemini key here once. It is checked with Google, then kept on the server and never shown again.",
+        "missing": "No key: AI writing is unavailable to teachers.",
+        "fromCloudflare": "Key set in Cloudflare ({hint}): the feature is on.",
+        "fromAdmin": "Key saved ({hint}): the feature is on.",
+        "key": "Key",
+        "save": "Check and save",
+        "rejected": "Google rejected this key. Check it or create a new one.",
+        "invalid": "Invalid key format.",
+        "error": "Could not save. Try again."
+      }
     },
     "support": {
       "threads": "Conversations",
