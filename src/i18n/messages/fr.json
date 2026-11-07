@@ -21,7 +21,8 @@
     "documents": "Documents et affiches",
     "billing": "Abonnement",
     "settings": "Paramètres",
-    "lessons": "Fiches"
+    "lessons": "Fiches",
+    "guide": "Guide"
   },
   "common": {
     "language": "Langue",
@@ -2064,6 +2065,71 @@
       "primary": "Enseignement primaire",
       "middle": "Enseignement moyen",
       "secondary": "Enseignement secondaire"
+    }
+  },
+  "guide": {
+    "title": "Guide de la plateforme",
+    "subtitle": "Toutes les sections pas à pas : de la création du compte à l’impression du cahier.",
+    "startTitle": "Commencez ici : 6 étapes et votre bureau est prêt",
+    "startBody": "Suivez-les une fois dans l’ordre ; ensuite la plateforme travaille seule chaque jour.",
+    "search": "Rechercher : liste des élèves, impression, abonnement…",
+    "noResults": "Aucun résultat. Essayez un autre mot ou écrivez-nous via « Contactez-nous ».",
+    "tips": "Conseils",
+    "open": "Ouvrir cette section",
+    "footer": "Pas de réponse ? Écrivez-nous via « Contactez-nous ».",
+    "cardBody": "Toutes les sections expliquées, avec recherche.",
+    "cardCta": "Ouvrir le guide"
+  },
+  "aiMemo": {
+    "title": "Rédiger une fiche avec l’IA",
+    "subtitle": "Une nouvelle fiche pour n’importe quelle leçon, selon les programmes de 2e génération, au modèle de votre choix.",
+    "cta": "Rédiger une fiche avec l’IA",
+    "ctaBody": "Pour toute leçon, au modèle et à la durée choisis.",
+    "classSubject": "Classe et matière",
+    "noClasses": "Ajoutez d’abord une classe.",
+    "addClass": "Ajouter une classe",
+    "lesson": "Leçon",
+    "freeTopic": "— Thème libre (je l’écris) —",
+    "topic": "Thème de la leçon",
+    "topicPlaceholder": "Ex. : L’addition avec retenue, Le présent de l’indicatif…",
+    "week": "Semaine {n}",
+    "day": "Jour {n}",
+    "format": "Modèle de fiche",
+    "formats": {
+      "official": {
+        "title": "Modèle officiel",
+        "body": "Étapes, situations et évaluation, comme le prévoit le cycle."
+      },
+      "detailed": {
+        "title": "Détaillée",
+        "body": "Avec minutage, réponses attendues et différenciation."
+      },
+      "brief": {
+        "title": "Abrégée",
+        "body": "Une page avec l’essentiel."
+      },
+      "remedial": {
+        "title": "Remédiation",
+        "body": "Erreurs fréquentes et activités de remédiation par groupes."
+      }
+    },
+    "duration": "Durée de la séance",
+    "minutes": "{n} min",
+    "notes": "Remarques (facultatif)",
+    "notesPlaceholder": "Niveau de la classe, matériel disponible, situation souhaitée…",
+    "write": "Rédiger la fiche",
+    "rewrite": "Autre version",
+    "writing": "Rédaction…",
+    "wait": "La rédaction prend environ une minute. Ne fermez pas la page.",
+    "remaining": "Restant aujourd’hui : {n} sur {limit}",
+    "review": "Fiche proposée : relisez-la et adaptez-la avant la classe.",
+    "errors": {
+      "subscription": "Fonction réservée aux abonnés : abonnez-vous pour l’activer.",
+      "limit": "Limite quotidienne atteinte. Elle se renouvelle demain.",
+      "unavailable": "La rédaction par IA n’est pas disponible pour le moment.",
+      "refused": "Impossible de rédiger cette fiche. Reformulez le thème.",
+      "busy": "Service occupé. Réessayez dans un instant.",
+      "generic": "Une erreur est survenue. Réessayez."
     }
   }
 }

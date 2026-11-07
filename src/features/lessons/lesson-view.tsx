@@ -17,6 +17,7 @@ import type { Locale } from "@/i18n/config";
     مذكرات الفرنسية والإنجليزية: عناوين حقولها بلغة المادة ومن اليسار. */
 export function LessonView({ id }: { id: string }) {
   const t = useTranslations("lessons");
+  const ta = useTranslations("aiMemo");
   const locale = useLocale() as Locale;
   const curId = id.replace(/_\d+$/, "");
   const cur = useCurriculum(curId);
@@ -57,7 +58,13 @@ export function LessonView({ id }: { id: string }) {
         <style>{"@page { size: A4 portrait; margin: 9mm 10mm; }"}</style>
         <div className="flex flex-wrap items-center justify-between gap-2 print:hidden">
           {back}
-          <PrintButtons title={printTitle} />
+          <div className="flex flex-wrap gap-2">
+            <Link href={`/app/lessons/write?lesson=${id}`} className={buttonClass("secondary", "md")}>
+              <Sparkles aria-hidden className="size-4" />
+              {ta("rewrite")}
+            </Link>
+            <PrintButtons title={printTitle} />
+          </div>
         </div>
         <MemoSheet
           memo={memo}

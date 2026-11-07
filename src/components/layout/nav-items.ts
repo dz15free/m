@@ -4,6 +4,7 @@ import {
   ClipboardCheck,
   CreditCard,
   House,
+  LifeBuoy,
   LayoutGrid,
   LibraryBig,
   ListChecks,
@@ -26,7 +27,8 @@ export type NavKey =
   | "planning"
   | "documents"
   | "billing"
-  | "settings";
+  | "settings"
+  | "guide";
 
 export type NavItem = { key: NavKey; href: string; icon: LucideIcon };
 
@@ -45,6 +47,7 @@ export const NAV = {
   documents: item("documents", "/app/documents", Printer),
   billing: item("billing", "/app/billing", CreditCard),
   settings: item("settings", "/app/settings", Settings),
+  guide: item("guide", "/app/guide", LifeBuoy),
 } satisfies Record<NavKey, NavItem>;
 
 /** الهاتف: خمس خانات، والحصة في الوسط كزرّ بارز. */
@@ -61,10 +64,10 @@ export const SIDEBAR_PRIMARY = [
   NAV.library,
   NAV.documents,
 ];
-export const SIDEBAR_SECONDARY = [NAV.billing, NAV.settings];
+export const SIDEBAR_SECONDARY = [NAV.billing, NAV.settings, NAV.guide];
 
 /** صفحة «المزيد» على الهاتف: كل ما لا يتّسع له الشريط السفلي. */
-export const MORE_ITEMS = [NAV.lessons, NAV.schedule, NAV.logbook, NAV.planning, NAV.documents, NAV.billing, NAV.settings];
+export const MORE_ITEMS = [NAV.lessons, NAV.schedule, NAV.logbook, NAV.planning, NAV.documents, NAV.billing, NAV.settings, NAV.guide];
 
 export function isActive(pathname: string, href: string) {
   return href === "/app" ? pathname === "/app" : pathname === href || pathname.startsWith(`${href}/`);
