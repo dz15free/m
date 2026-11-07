@@ -15,8 +15,9 @@ const schema = z.object({
   R2_ACCESS_KEY_ID: z.string().min(1).optional(),
   R2_SECRET_ACCESS_KEY: z.string().min(1).optional(),
   R2_BUCKET: z.string().min(1).optional(),
-  // كاتب المذكرات بالذكاء الاصطناعي (/api/ai/memo): سرّ Cloudflare، دونه تعرض الواجهة «غير متاح»
-  ANTHROPIC_API_KEY: z.string().trim().min(1).optional(),
+  // كاتب المذكرات بالذكاء الاصطناعي (/api/ai/memo، Google Gemini): سرّ Cloudflare، دونه تعرض الواجهة «غير متاح»
+  GEMINI_API_KEY: z.string().trim().min(1).optional(),
+  GEMINI_MODEL: z.string().trim().min(1).default("gemini-2.5-flash"),
 });
 
 type ServerEnv = z.infer<typeof schema>;
