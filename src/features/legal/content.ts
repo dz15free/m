@@ -4,7 +4,7 @@
 export type LegalSection = { h: string; p: string[] };
 export type LegalDoc = { title: string; intro: string; sections: LegalSection[] };
 
-export const LEGAL_UPDATED = "2026-10-16";
+export const LEGAL_UPDATED = "2026-11-07";
 
 export const PRIVACY: Record<"ar" | "fr" | "en", LegalDoc> = {
   ar: {
@@ -44,6 +44,7 @@ export const PRIVACY: Record<"ar" | "fr" | "en", LegalDoc> = {
         p: [
           "نعتمد على مزوّدين موثوقين: Google Firebase (المصادقة وقاعدة البيانات والإشعارات)، وCloudflare (استضافة الموقع وملفات المكتبة)، وChargily Pay (الدفع الإلكتروني). قد تُحفظ البيانات على خوادم خارج الجزائر لدى هؤلاء المزوّدين، مع التشفير أثناء النقل.",
           "نستعمل بكسل Meta (فيسبوك) لقياس زيارات الصفحات وفعالية إعلاناتنا: يُرسل عنوان الصفحة ومعلومات المتصفح إلى Meta. لا نرسل إليه بريدك ولا بياناتك داخل التطبيق (أقسامك، تلاميذك، علاماتك).",
+          "عند استعمال «كتابة مذكرة بالذكاء الاصطناعي» يُرسل موضوع الدرس والمستوى والمادة وملاحظاتك المكتوبة إلى خدمة Google Gemini لتكتب المذكرة. لا يُرسل اسمك ولا بريدك ولا بيانات تلاميذك.",
           "لتعمل دون إنترنت، يحفظ التطبيق نسخة من بياناتك على جهازك. عند «تسجيل الخروج» نمسح هذه النسخة من الجهاز؛ لذلك سجّل خروجك دائمًا على الأجهزة المشتركة.",
         ],
       },
@@ -120,6 +121,7 @@ export const PRIVACY: Record<"ar" | "fr" | "en", LegalDoc> = {
         p: [
           "Prestataires : Google Firebase (authentification, base de données, notifications), Cloudflare (hébergement du site et des fichiers de la bibliothèque), Chargily Pay (paiement). Les données peuvent être hébergées hors d'Algérie chez ces prestataires, chiffrées en transit.",
           "Nous utilisons le pixel Meta (Facebook) pour mesurer les visites de pages et l'efficacité de nos publicités : l'adresse de la page et des informations du navigateur sont envoyées à Meta. Ni votre e-mail ni vos données dans l'application (classes, élèves, notes) ne lui sont transmis.",
+          "Lorsque vous utilisez « Rédiger une fiche avec l’IA », le thème de la leçon, le niveau, la matière et vos remarques sont envoyés au service Google Gemini pour rédiger la fiche. Ni votre nom, ni votre e-mail, ni les données de vos élèves ne sont envoyés.",
           "Pour fonctionner hors ligne, l'application garde une copie de vos données sur votre appareil. La « Déconnexion » efface cette copie : déconnectez-vous toujours sur un appareil partagé.",
         ],
       },
@@ -194,6 +196,7 @@ export const PRIVACY: Record<"ar" | "fr" | "en", LegalDoc> = {
         p: [
           "We rely on trusted providers: Google Firebase (authentication, database, notifications), Cloudflare (website hosting and library files) and Chargily Pay (online payment). Data may be stored on these providers' servers outside Algeria, encrypted in transit.",
           "We use the Meta (Facebook) pixel to measure page visits and the effectiveness of our ads: the page address and browser information are sent to Meta. We never send it your email or your data inside the app (classes, pupils, marks).",
+          "When you use “Write a lesson plan with AI”, the lesson topic, grade, subject and your notes are sent to the Google Gemini service to write the plan. Your name, email and pupils’ data are never sent.",
           "To work offline, the app keeps a copy of your data on your device. «Sign out» erases that copy, so always sign out on shared devices.",
         ],
       },
