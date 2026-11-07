@@ -2166,6 +2166,24 @@
       "deleteRow": "Supprimer la ligne actuelle",
       "reset": "Rétablir l’original",
       "resetConfirm": "Annuler toutes vos modifications et revenir à la fiche d’origine ?"
+    },
+    "saved": {
+      "title": "Mes fiches enregistrées",
+      "subtitle": "Les fiches rédigées avec l’IA puis modifiées : rouvrez-les, modifiez-les, imprimez-les.",
+      "save": "Enregistrer dans mes fiches",
+      "update": "Enregistrer les modifications",
+      "done": "Enregistré",
+      "error": "Échec de l’enregistrement. Réessayez.",
+      "tooMany": "Nombre maximal de fiches atteint. Supprimez-en d’abord.",
+      "inMine": "Enregistrée dans « Mes fiches ».",
+      "notSavedHint": "Enregistrez-la pour ne pas perdre vos modifications en rechargeant la page.",
+      "empty": "Aucune fiche enregistrée.",
+      "writeFirst": "Rédiger ma première fiche",
+      "writeNew": "Nouvelle fiche",
+      "count": "{n} sur {max} fiches",
+      "notFound": "Fiche introuvable.",
+      "delete": "Supprimer",
+      "deleteConfirm": "Supprimer définitivement cette fiche ?"
     }
   }
 }

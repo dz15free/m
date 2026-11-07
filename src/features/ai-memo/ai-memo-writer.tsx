@@ -13,6 +13,7 @@ import { useAuth } from "@/features/auth/auth-provider";
 import { useTaxonomy, useTeacher } from "@/features/classes/hooks";
 import { MemoSheet } from "@/features/lessons/memo-sheet";
 import { EditableMemo } from "./memo-editor";
+import { SaveMemoButton } from "./save-button";
 import { getCurriculum, useMyCurricula } from "@/features/lessons/repo";
 import type { Memo } from "@/features/lessons/memo";
 import { levelById, subjectById } from "@/shared/taxonomy/taxonomy";
@@ -50,6 +51,8 @@ export function AiMemoWriter({ lesson }: { lesson?: string }) {
   const [result, setResult] = useState<Result | null>(null);
   // كل مذكرة جديدة تُركَّب من جديد في المحرّر
   const [version, setVersion] = useState(0);
+  // المذكرة الحالية محفوظة في «مذكراتي»؟ (الحفظ التالي يحدّثها)
+  const [savedId, setSavedId] = useState<string | undefined>();
 
   // أول قسم/مادة افتراضيًا
   const curId = picked || mine.list[0]?.id || "";
@@ -88,6 +91,7 @@ export function AiMemoWriter({ lesson }: { lesson?: string }) {
       }
       setResult(data as Result);
       setVersion((v) => v + 1);
+      setSavedId(undefined);
       status.refetch();
       window.setTimeout(() => document.getElementById("ai-memo-result")?.scrollIntoView({ behavior: "smooth" }), 50);
     } catch {
@@ -211,12 +215,29 @@ export function AiMemoWriter({ lesson }: { lesson?: string }) {
         <article id="ai-memo-result" className="space-y-4 print:space-y-0">
           <style>{"@page { size: A4 portrait; margin: 9mm 10mm; }"}</style>
           <div className="flex flex-wrap items-center justify-between gap-2 print:hidden">
-            <p className="text-sm font-semibold text-amber-800">{t("review")}</p>
+            <p className="text-sm font-semibold text-amber-800">
+              {t("review")}{" "}
+              {savedId ? (
+                <Link href="/app/lessons/mine" className="text-brand-800 underline">
+                  {t("saved.inMine")}
+                </Link>
+              ) : (
+                <span className="font-normal text-muted">{t("saved.notSavedHint")}</span>
+              )}
+            </p>
             <div className="flex flex-wrap gap-2">
               <button type="button" disabled={!canWrite} onClick={() => void write()} className={buttonClass("secondary", "md")}>
                 <RefreshCw aria-hidden className="size-4" />
                 {t("rewrite")}
               </button>
+              {choice && (
+                <SaveMemoButton
+                  key={version}
+                  id={savedId}
+                  meta={{ title: result.title, level: choice.level, subject: choice.subject, lang: result.lang }}
+                  onSaved={setSavedId}
+                />
+              )}
               <PrintButtons title={() => result.title} />
             </div>
           </div>
