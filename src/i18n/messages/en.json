@@ -2166,6 +2166,24 @@
       "deleteRow": "Delete the current table row",
       "reset": "Restore the original",
       "resetConfirm": "Discard all your edits and go back to the original plan?"
+    },
+    "saved": {
+      "title": "My saved plans",
+      "subtitle": "Plans you wrote with AI and edited: reopen, edit and print them anytime.",
+      "save": "Save to my plans",
+      "update": "Save changes",
+      "done": "Saved",
+      "error": "Could not save. Try again.",
+      "tooMany": "You reached the maximum number of saved plans. Delete some first.",
+      "inMine": "Saved in “My plans”.",
+      "notSavedHint": "Save it so your edits are not lost when the page reloads.",
+      "empty": "No saved plans yet.",
+      "writeFirst": "Write your first plan",
+      "writeNew": "New plan",
+      "count": "{n} of {max} plans",
+      "notFound": "Plan not found.",
+      "delete": "Delete",
+      "deleteConfirm": "Permanently delete this plan?"
     }
   }
 }
