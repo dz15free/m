@@ -53,7 +53,7 @@
     "start": "7-day free trial",
     "heroTitle": "Everything a teacher needs, in one place",
     "heroSubtitle": "Enter your data once… the platform does the rest.",
-    "heroNote": "7-day free trial with no bank card, then an annual subscription of only 2,500 DA.",
+    "heroNote": "7-day free trial with no bank card, then an annual subscription of only 2,000 DA.",
     "featuresTitle": "Everything you need, every day",
     "features": {
       "notebook": {
@@ -162,7 +162,7 @@
       },
       {
         "q": "How much is the subscription?",
-        "a": "2,500 DA for the whole year, after a 7-day free trial with no bank card."
+        "a": "2,000 DA for the whole year, after a 7-day free trial with no bank card."
       },
       {
         "q": "How do I pay?",
@@ -209,7 +209,7 @@
       "No bank card"
     ],
     "yearName": "Annual subscription",
-    "yearPrice": "2,500 DA",
+    "yearPrice": "2,000 DA",
     "yearPer": "for the whole year",
     "yearPoints": [
       "Every full lesson plan with its procedure",
