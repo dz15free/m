@@ -40,7 +40,15 @@ type RawFile = { id: string; name: string; mimeType: string; size?: string; pare
 
 /** كل الملفات تحت المجلد الجذر (مع المجلدات الفرعية)، بمسار نسبي. */
 export async function listLibraryFolder(): Promise<DriveFile[]> {
-  const { folder } = await env();
+  return listFolder((await env()).folder);
+}
+
+/** معرّف مجلد Drive صالح (من رابط يلصقه الأدمن). */
+export const isDriveId = (id: string) => /^[A-Za-z0-9_-]{10,80}$/.test(id);
+
+/** كل الملفات تحت أي مجلد Drive عام (مع المجلدات الفرعية حتى 4 مستويات)، بمسار نسبي. */
+export async function listFolder(folder: string): Promise<DriveFile[]> {
+  if (!isDriveId(folder)) throw new HttpError(400, "bad folder");
   const key = await driveKey();
   const out: DriveFile[] = [];
   const queue: { id: string; path: string; depth: number }[] = [{ id: folder, path: "", depth: 0 }];
@@ -80,6 +88,15 @@ export async function libraryFile(id: string): Promise<{ name: string; mime: str
   }
   if (!file) throw new HttpError(404, "not in library folder");
   return { name: file.name, mime: file.mime, size: file.size };
+}
+
+/** بيانات ملف عام على Drive بمعرّفه (لملف من مجلد ألصقه الأدمن، خارج مجلد المكتبة). */
+export async function driveFileMeta(id: string): Promise<{ name: string; mime: string; size: number }> {
+  if (!isDriveId(id)) throw new HttpError(400, "bad id");
+  const key = await driveKey();
+  const f = await driveJson<RawFile>(`${API}/${encodeURIComponent(id)}?fields=id,name,mimeType,size&supportsAllDrives=true&key=${key}`);
+  if (f.mimeType === FOLDER_MIME) throw new HttpError(400, "is a folder");
+  return { name: f.name, mime: f.mimeType, size: Number(f.size ?? 0) };
 }
 
 export async function fetchDriveMedia(id: string): Promise<Response> {

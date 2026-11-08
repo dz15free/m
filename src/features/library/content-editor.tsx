@@ -124,7 +124,7 @@ function AdminList() {
           {t("new")}
         </Link>
       </div>
-      {stage === "primary" && list.data && <CatalogImporter existingIds={new Set(list.data.map((c) => c.id))} />}
+      {list.data && <CatalogImporter key={`cat-${stage}`} stage={stage} existingIds={new Set(list.data.map((c) => c.id))} />}
       {list.data && <DriveImporter key={stage} stage={stage} existingIds={new Set(list.data.map((c) => c.id))} />}
       {bulkMsg && (
         <p role="status" className={cn("flex items-center gap-2 rounded-xl p-3 text-sm", bulkMsg.ok ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800")}>

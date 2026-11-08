@@ -168,7 +168,7 @@ export async function browserDownload(driveId: string): Promise<Blob> {
 /** استيراد ملف من «المكتبة الجاهزة»: الخادم يجلبه عبر Drive API إن كان مفتاحه مضبوطًا،
     وإلا يحمّله المتصفح ويرسله. الخطأ يحمل المرحلة والسبب ليُعرض للأدمن. */
 export async function importCatalogFile(
-  file: { driveId?: string; url?: string; upload?: boolean; mime: string },
+  file: { driveId?: string; url?: string; upload?: boolean; mime: string; anyFolder?: boolean },
   local?: Blob,
   ref?: { entry: string; index: number },
 ): Promise<ContentFile> {
@@ -183,18 +183,20 @@ export async function importCatalogFile(
   }
   if (!file.driveId) throw new Error("no source");
   const driveId = file.driveId;
-  const server = await importRequest(`driveId=${encodeURIComponent(driveId)}`, {});
+  // ملف من مجلد Drive آخر ألصق الأدمن رابطه (خارج مجلد المكتبة)
+  const any = file.anyFolder ? "&any=1" : "";
+  const server = await importRequest(`driveId=${encodeURIComponent(driveId)}${any}`, {});
   if (server.ok) return server.file;
   if (!(server.status === 503 && server.error === "drive key missing")) throw new Error(`server ${server.status} ${server.error}`.trim());
   const blob = await browserDownload(driveId);
-  const res = await importRequest(`driveId=${encodeURIComponent(driveId)}`, { headers: { "Content-Type": file.mime }, body: blob });
+  const res = await importRequest(`driveId=${encodeURIComponent(driveId)}${any}`, { headers: { "Content-Type": file.mime }, body: blob });
   if (!res.ok) throw new Error(`upload ${res.status} ${res.error}`.trim());
   return res.file;
 }
 
-/** محتويات مجلد المكتبة على Drive (للأدمن): لعرض الملفات الجديدة. */
-export async function listDriveLibrary(): Promise<{ id: string; name: string; path: string; mime: string; size: number }[]> {
-  const res = await authedFetch("/api/admin/library-drive");
+/** محتويات مجلد المكتبة على Drive (أو مجلد عام آخر بمعرّفه) للأدمن: لعرض الملفات الجديدة. */
+export async function listDriveLibrary(folder?: string): Promise<{ id: string; name: string; path: string; mime: string; size: number }[]> {
+  const res = await authedFetch(`/api/admin/library-drive${folder ? `?folder=${encodeURIComponent(folder)}` : ""}`);
   if (!res.ok) {
     const error = ((await res.json().catch(() => ({}))) as { error?: string }).error ?? "";
     throw new Error(`${res.status} ${error}`.trim());

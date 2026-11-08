@@ -1120,7 +1120,13 @@
       "selected": "{n} sur {total} sélectionnés",
       "selectAll": "Tout sélectionner",
       "allStages": "Afficher tous les fichiers du Drive, pas seulement ceux du cycle « {stage} »",
-      "selectNone": "Tout désélectionner"
+      "selectNone": "Tout désélectionner",
+      "folderLabel": "Lien d’un dossier Drive",
+      "folderPlaceholder": "Collez le lien d’un dossier Drive public (ou laissez vide pour le dossier bibliothèque)",
+      "folderOpen": "Afficher les fichiers",
+      "folderReset": "Revenir au dossier bibliothèque",
+      "folderHint": "Fichiers du dossier bibliothèque. Pour un autre dossier, collez son lien (partagé : « Tous les utilisateurs disposant du lien »).",
+      "folderActive": "Fichiers du dossier collé, importés dans « {stage} » ; ajustez niveau et matière après l’import si besoin."
     },
     "search": "Rechercher : titre, matière, type…",
     "countFiltered": "{n} sur {total}",

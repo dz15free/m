@@ -4059,5 +4059,4353 @@
     "size": 318488
    }
   ]
+ },
+ {
+  "id": "cat-mid-1am-fr",
+  "title": {
+   "ar": "مذكرات اللغة الفرنسية — السنة الأولى متوسط",
+   "fr": "Fiches — Français — 1AM"
+  },
+  "level": "1AM",
+  "subject": "fr",
+  "language": "fr",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "14-miX5CsjJu586zbsjt-sl82_KtNSi74",
+    "name": "les-fiches-du-1am-Francais-dans-un-seul-fichier.pdf",
+    "mime": "application/pdf",
+    "size": 22408583
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-civic",
+  "title": {
+   "ar": "دليل الأستاذ التربية المدنية — السنة الأولى متوسط",
+   "fr": "Guide du professeur — Éducation civique — 1AM"
+  },
+  "level": "1AM",
+  "subject": "civic",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "دليل الأستاذ"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1aSrKaxwVrQ3A88QXZ8BpJENumJ3cPZj4",
+    "name": "دليل-الأستاذ-مادة-التربية-المدنية-السنة-الأولى-متوسط-الجيل-الثاني.pdf",
+    "mime": "application/pdf",
+    "size": 9548639
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-science",
+  "title": {
+   "ar": "مذكرات علوم الطبيعة والحياة — السنة الأولى متوسط",
+   "fr": "Fiches — Sciences naturelles — 1AM"
+  },
+  "level": "1AM",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1UbZu1qStEmIQ79ZY6hMyKxp7kfr5XL0u",
+    "name": "مذكرات-الأستاذ-العلوم-الطبيعية-1-متوسط-الجيل-الثاني.pdf",
+    "mime": "application/pdf",
+    "size": 5219108
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-histgeo",
+  "title": {
+   "ar": "مذكرات التاريخ والجغرافيا (التاريخ) — نموذج 1 — السنة الأولى متوسط",
+   "fr": "Fiches — Histoire-géographie — 1AM"
+  },
+  "level": "1AM",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "18RH3p3BHfqyZ1jFYCBOdxh16YbYfGXsj",
+    "name": "مذكرات-التاريخ-1-متوسط-النموذج-الأول.pdf",
+    "mime": "application/pdf",
+    "size": 1584044
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-histgeo-2",
+  "title": {
+   "ar": "مذكرات التاريخ والجغرافيا — نموذج 1 — السنة الأولى متوسط",
+   "fr": "Fiches — Histoire-géographie — 1AM"
+  },
+  "level": "1AM",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1cZ6oLTuvYMwyq5q3n1_7dFPZ4Crrytpj",
+    "name": "مذكرات-التاريخ-و-الجغرافيا-سنة-1-متوسط-وفق-مناهج-الجيل-الثاني-النموذج-الأول.pdf",
+    "mime": "application/pdf",
+    "size": 1005433
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-civic-2",
+  "title": {
+   "ar": "مذكرات التربية المدنية — السنة الأولى متوسط",
+   "fr": "Fiches — Éducation civique — 1AM"
+  },
+  "level": "1AM",
+  "subject": "civic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1SCzPrUCwHh-3yi8jQYceY_iCQ4uYnZ-l",
+    "name": "مذكرات-التربية-المدنية-سنة-1-متوسط-وفق-مناهج-الجيل-الثاني.pdf",
+    "mime": "application/pdf",
+    "size": 2513489
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-physics",
+  "title": {
+   "ar": "مذكرات العلوم الفيزيائية والتكنولوجيا (الظواهر الضوئية) — السنة الأولى متوسط",
+   "fr": "Fiches — Sciences physiques — 1AM"
+  },
+  "level": "1AM",
+  "subject": "physics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "غنيسة كمال",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1o1Kr0ChRxywxkUyE-fsHKf1fJYPmiJwo",
+    "name": "مذكرات-الظواهر-الضوئية-الجيل-الثاني-الأستاذ-غنيسة-كمال-علوم-فيزيائية-1-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 7916602
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-physics-2",
+  "title": {
+   "ar": "مذكرات العلوم الفيزيائية والتكنولوجيا (الظواهر الكهربائية) — السنة الأولى متوسط",
+   "fr": "Fiches — Sciences physiques — 1AM"
+  },
+  "level": "1AM",
+  "subject": "physics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "غنيسة كمال",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1RAyxl64sdMmC3xLqGweLx_Tf_WzGkq4M",
+    "name": "مذكرات-الظواهر-الكهربائية-الجيل-الثاني-الأستاذ-غنيسة-كمال-علوم-فيزيائية-1-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 3378946
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-music",
+  "title": {
+   "ar": "مذكرات التربية الموسيقية — السنة الأولى متوسط",
+   "fr": "Fiches — Éducation musicale — 1AM"
+  },
+  "level": "1AM",
+  "subject": "music",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "12hCCvKnFHD2avwjo_CDOOiG-sWJo64zx",
+    "name": "مذكرات-دروس-مادة-التربية-الموسيقية-الجيل-الثاني-1-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 6576744
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-math",
+  "title": {
+   "ar": "مذكرات الرياضيات — السنة الأولى متوسط",
+   "fr": "Fiches — Mathématiques — 1AM"
+  },
+  "level": "1AM",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1BGf8-vTPv1AgiIPPwtYIGWexYyqQ_lNT",
+    "name": "مذكرات-مادة-الرياضيات-سنة-1-متوسط-eddirasa.com.pdf",
+    "mime": "application/pdf",
+    "size": 10682052
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-physics-3",
+  "title": {
+   "ar": "مذكرات العلوم الفيزيائية والتكنولوجيا (المادة وتحولاتها) — السنة الأولى متوسط",
+   "fr": "Fiches — Sciences physiques — 1AM"
+  },
+  "level": "1AM",
+  "subject": "physics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1T9haXvfIVY8SyqgcvND63V42MEShYlq8",
+    "name": "مذكرات-ميدان-المادة-و-تحولاتها-وفق-مناهج-الجيل-الثاني.pdf",
+    "mime": "application/pdf",
+    "size": 4432139
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-1am-islamic",
+  "title": {
+   "ar": "مذكرات التربية الإسلامية — السنة الأولى متوسط",
+   "fr": "Fiches — Éducation islamique — 1AM"
+  },
+  "level": "1AM",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1wmwyiaxK6-OnSzX-e0J8Mb4xco-HEF3v",
+    "name": "مذكرات_التربية_الإسلامية_س1_متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 784814
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-math",
+  "title": {
+   "ar": "دليل الأستاذ الرياضيات — السنة الثالثة متوسط",
+   "fr": "Guide du professeur — Mathématiques — 3AM"
+  },
+  "level": "3AM",
+  "subject": "math",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "دليل الأستاذ"
+  ],
+  "excerpt": "",
+  "access": "free",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "12NKgM27p1zWEKIxEZMI_yg1LCsZFfaNv",
+    "name": "دليل-الأستاذ-في-مادة-الرياضيات-3-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 4364941
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-islamic",
+  "title": {
+   "ar": "مذكرات التربية الإسلامية — السنة الثالثة متوسط",
+   "fr": "Fiches — Éducation islamique — 3AM"
+  },
+  "level": "3AM",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1KfuhlA7rMKeD2QS2FXxTC6NSPqd5WJ6u",
+    "name": "مذكرات التربية اسلامية ثالثة متوسط (20).pdf",
+    "mime": "application/pdf",
+    "size": 518266
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-science",
+  "title": {
+   "ar": "مذكرات علوم الطبيعة والحياة — السنة الثالثة متوسط",
+   "fr": "Fiches — Sciences naturelles — 3AM"
+  },
+  "level": "3AM",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1bHpzPpB0ohZGY0KC6qj9AubIQKKxzOF5",
+    "name": "مذكرات العلوم طبيعية ثالثة متوسط (18).pdf",
+    "mime": "application/pdf",
+    "size": 20210408
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-physics",
+  "title": {
+   "ar": "مذكرات العلوم الفيزيائية والتكنولوجيا — السنة الثالثة متوسط",
+   "fr": "Fiches — Sciences physiques — 3AM"
+  },
+  "level": "3AM",
+  "subject": "physics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1FSyEjq69ME9cQaeC5AvqzWtX-K4J7_1M",
+    "name": "مذكرات العلوم فيزيائية ثالثة متوسط (19).pdf",
+    "mime": "application/pdf",
+    "size": 4541884
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-en",
+  "title": {
+   "ar": "مذكرات اللغة الإنجليزية — السنة الثالثة متوسط",
+   "fr": "Fiches — Anglais — 3AM"
+  },
+  "level": "3AM",
+  "subject": "en",
+  "language": "en",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1L29HHGI8rSqJ58v6MlvGgo-KqpeoE2Zd",
+    "name": "مذكرات اللغة انجليزية ثالثة متوسط (17).pdf",
+    "mime": "application/pdf",
+    "size": 4094281
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-ar",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الثالثة متوسط",
+   "fr": "Fiches — Langue arabe — 3AM"
+  },
+  "level": "3AM",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1UTeQQbp0TG0rx3S2P8jB4e0tNL2x2hJm",
+    "name": "مذكرات اللغة عربية ثالثة متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 8701536
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-histgeo",
+  "title": {
+   "ar": "مذكرات التاريخ والجغرافيا (التاريخ) — السنة الثالثة متوسط",
+   "fr": "Fiches — Histoire-géographie — 3AM"
+  },
+  "level": "3AM",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1gqTgnp9nsgN_sk9FrggPaY0Kwi9_cWmI",
+    "name": "مذكرات تاريخ ثالثة متوسط (21).pdf",
+    "mime": "application/pdf",
+    "size": 430312
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-histgeo-2",
+  "title": {
+   "ar": "مذكرات التاريخ والجغرافيا (الجغرافيا) — السنة الثالثة متوسط",
+   "fr": "Fiches — Histoire-géographie — 3AM"
+  },
+  "level": "3AM",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1CsAJeUkIk4JruCpcJ6eIt13obsR68oV-",
+    "name": "مذكرات جغرافيا ثالثة متوسط (22).pdf",
+    "mime": "application/pdf",
+    "size": 1349337
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-civic",
+  "title": {
+   "ar": "مذكرات التربية المدنية — السنة الثالثة متوسط",
+   "fr": "Fiches — Éducation civique — 3AM"
+  },
+  "level": "3AM",
+  "subject": "civic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1m75Bjc31Khrbd_SRsb_ZHuF1tTOG4UVz",
+    "name": "مذكرات-جميع-مقاطع-التربية-المدنية-الجيل-الثاني-سنة-3-متوسط-eddirasa.com.pdf",
+    "mime": "application/pdf",
+    "size": 3131823
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-fr",
+  "title": {
+   "ar": "مذكرات اللغة الفرنسية — السنة الثالثة متوسط",
+   "fr": "Fiches — Français — 3AM"
+  },
+  "level": "3AM",
+  "subject": "fr",
+  "language": "fr",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1aaCrRhNdwCi-mh5xwhkLjSQAQyWvXEwH",
+    "name": "مذكرات-دروس-اللغة-الفرنسية-سنة-3-متوسط-eddirasa.com.pdf",
+    "mime": "application/pdf",
+    "size": 8083948
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-3am-informatics",
+  "title": {
+   "ar": "مذكرات المعلوماتية — السنة الثالثة متوسط",
+   "fr": "Fiches — Informatique — 3AM"
+  },
+  "level": "3AM",
+  "subject": "informatics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1DYjaqUOKl9c3ym7UZwGNdEMV6ciZ4oAH",
+    "name": "مذكرات-مادة-المعلوماتية-للسنة-3-متوسط-pdf-eddirasa.com.pdf",
+    "mime": "application/pdf",
+    "size": 4497052
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-2am-histgeo",
+  "title": {
+   "ar": "مذكرات التاريخ والجغرافيا (التاريخ) — السنة الثانية متوسط",
+   "fr": "Fiches — Histoire-géographie — 2AM"
+  },
+  "level": "2AM",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1QfSzm2fAjruu2n4nhbFqJA6F9F17g3y0",
+    "name": "مذكرات التاريخ س2 متوسط (12).pdf",
+    "mime": "application/pdf",
+    "size": 1319934
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-2am-islamic",
+  "title": {
+   "ar": "مذكرات التربية الإسلامية — السنة الثانية متوسط",
+   "fr": "Fiches — Éducation islamique — 2AM"
+  },
+  "level": "2AM",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1WXQrPrcI-z3jJzWSQdqwIo9jOYQohdXV",
+    "name": "مذكرات التربية اسلامية س2 متوسط (14).pdf",
+    "mime": "application/pdf",
+    "size": 2022090
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-2am-civic",
+  "title": {
+   "ar": "مذكرات التربية المدنية — السنة الثانية متوسط",
+   "fr": "Fiches — Éducation civique — 2AM"
+  },
+  "level": "2AM",
+  "subject": "civic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1wpfCGKDpE1KmjWyizTf39vERtTAIiCH8",
+    "name": "مذكرات التربية مدنية س2 متوسط (13).pdf",
+    "mime": "application/pdf",
+    "size": 1373202
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-2am-histgeo-2",
+  "title": {
+   "ar": "مذكرات التاريخ والجغرافيا (الجغرافيا) — نموذج 2 — السنة الثانية متوسط",
+   "fr": "Fiches — Histoire-géographie — 2AM"
+  },
+  "level": "2AM",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "18SfCDNj7P-xHEWPhFZH6MNZIUsvLPqlC",
+    "name": "مذكرات الجغرافيا 2 متوسط نموذج 02.pdf",
+    "mime": "application/pdf",
+    "size": 2542303
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-2am-histgeo-3",
+  "title": {
+   "ar": "مذكرات التاريخ والجغرافيا (الجغرافيا) — نموذج 3 — السنة الثانية متوسط",
+   "fr": "Fiches — Histoire-géographie — 2AM"
+  },
+  "level": "2AM",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "19JWTCkPc3I4CC7vqgSrSytsDK-CgZZJm",
+    "name": "مذكرات الجغرافيا 2 متوسط نموذج 03.pdf",
+    "mime": "application/pdf",
+    "size": 2181451
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-2am-en",
+  "title": {
+   "ar": "مذكرات اللغة الإنجليزية — السنة الثانية متوسط",
+   "fr": "Fiches — Anglais — 2AM"
+  },
+  "level": "2AM",
+  "subject": "en",
+  "language": "en",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1MpWYqUvr3fJY_Y3t27LWMGirlTl4XYXL",
+    "name": "مذكرات انجليزية س2 متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 1831747
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-2am-math",
+  "title": {
+   "ar": "مذكرات الرياضيات — السنة الثانية متوسط",
+   "fr": "Fiches — Mathématiques — 2AM"
+  },
+  "level": "2AM",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1o-dNanM4uLaq4uPJWT7zX9rBq0drQh6m",
+    "name": "مذكرات رياضيات س2 متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 53458277
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-2am-fr",
+  "title": {
+   "ar": "مذكرات اللغة الفرنسية — السنة الثانية متوسط",
+   "fr": "Fiches — Français — 2AM"
+  },
+  "level": "2AM",
+  "subject": "fr",
+  "language": "fr",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "105c_MUwTbx8pCZLJ5Eqf8j1yoazqv9y2",
+    "name": "مذكرات فرنسية س2 متوسط (15).pdf",
+    "mime": "application/pdf",
+    "size": 864378
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-2am-ar",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الثانية متوسط",
+   "fr": "Fiches — Langue arabe — 2AM"
+  },
+  "level": "2AM",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1VD5VnB74LsUAc1kNRv6LorAbwucHksBh",
+    "name": "مذكرات لغة عربية س2 متوسط .pdf",
+    "mime": "application/pdf",
+    "size": 5210176
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-2am-informatics",
+  "title": {
+   "ar": "مذكرات المعلوماتية — السنة الثانية متوسط",
+   "fr": "Fiches — Informatique — 2AM"
+  },
+  "level": "2AM",
+  "subject": "informatics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1UJ67eDpp0zJxE7hZ1J0hQOWDAogsmQmP",
+    "name": "مذكرات-مادة-الإعلام-الآلي-سنة-2-متوسط-eddirasa.com.pdf",
+    "mime": "application/pdf",
+    "size": 4401533
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-4am-fr",
+  "title": {
+   "ar": "مذكرات اللغة الفرنسية — السنة الرابعة متوسط",
+   "fr": "Fiches — Français — 4AM"
+  },
+  "level": "4AM",
+  "subject": "fr",
+  "language": "fr",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1szM9hapUXOoKSNg4WpjVIxJK0B1L-_iL",
+    "name": "جميع-المذكرات-البيداغوجية-للغة-الفرنسية-سنة-4-متوسط-.pdf",
+    "mime": "application/pdf",
+    "size": 10659010
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-4am-islamic",
+  "title": {
+   "ar": "مذكرات التربية الإسلامية — السنة الرابعة متوسط",
+   "fr": "Fiches — Éducation islamique — 4AM"
+  },
+  "level": "4AM",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "درادرة لبنى",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1VaCl1LmkTLiPAxS2SR0G2-saql_51K9R",
+    "name": "جميع-مذكرات-مادة-التربية-الاسلامية-للاستاذة-درادرة-لبنى-4-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 772070
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-4am-science",
+  "title": {
+   "ar": "مذكرات علوم الطبيعة والحياة — السنة الرابعة متوسط",
+   "fr": "Fiches — Sciences naturelles — 4AM"
+  },
+  "level": "4AM",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "سعادة مليكة",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1OGfvYlBhv0pFuRwqfh0Dv0DlaNcAV3Mv",
+    "name": "جميع-مذكرات-مادة-العلوم-الطبيعية-للاستاذة-سعادة-مليكة-4-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 6899143
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-4am-en",
+  "title": {
+   "ar": "مذكرات اللغة الإنجليزية — السنة الرابعة متوسط",
+   "fr": "Fiches — Anglais — 4AM"
+  },
+  "level": "4AM",
+  "subject": "en",
+  "language": "en",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1mUECoj_PPqVFDgYQWsdrgXjgxecoGD1w",
+    "name": "جميع-مذكرات-مادة-اللغة-الانجليزية-4-متوسط-4MS-all-sequences.pdf",
+    "mime": "application/pdf",
+    "size": 4089987
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-4am-ar",
+  "title": {
+   "ar": "مذكرات اللغة العربية — السنة الرابعة متوسط",
+   "fr": "Fiches — Langue arabe — 4AM"
+  },
+  "level": "4AM",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "طبال ايوب",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1QR1NUVCKyzZyzEJND1-w7-uVh-BeIrwC",
+    "name": "جميع-مذكرات-مادة-اللغة-العربية-للاستاذ-طبال-ايوب-4-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 4848844
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-4am-math",
+  "title": {
+   "ar": "مذكرات الرياضيات — السنة الرابعة متوسط",
+   "fr": "Fiches — Mathématiques — 4AM"
+  },
+  "level": "4AM",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "شعيب قبايلي",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Be8ylC8lcjpATQQ6WvNCLA5RR-QjgDd1",
+    "name": "كتاب-مذكرات-جميع-المقاطع-التعليمية-في-الرياضيات-150-تمرين-للاستاذ-شعيب-قبايلي-4-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 10216680
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-4am-science-2",
+  "title": {
+   "ar": "مذكرات علوم الطبيعة والحياة — السنة الرابعة متوسط",
+   "fr": "Fiches — Sciences naturelles — 4AM"
+  },
+  "level": "4AM",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "عوشت عمر",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1E5QUiy-FZBSN5q2ML4vBeI6FTsnhknXY",
+    "name": "مذكرات-العلوم-الطبيعية-للأستاذ-عوشت-عمر-4-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 3439698
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-4am-music",
+  "title": {
+   "ar": "مذكرات التربية الموسيقية — السنة الرابعة متوسط",
+   "fr": "Fiches — Éducation musicale — 4AM"
+  },
+  "level": "4AM",
+  "subject": "music",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1luNI_3TsdnAV_WITYLuxHRA87J6Mz9vL",
+    "name": "مذكرات-دروس-مادة-التربية-الموسيقية-الجيل-الثاني-4-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 7034688
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-4am-informatics",
+  "title": {
+   "ar": "مذكرات المعلوماتية — السنة الرابعة متوسط",
+   "fr": "Fiches — Informatique — 4AM"
+  },
+  "level": "4AM",
+  "subject": "informatics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1AnXnwp45dkrSFtzEzL0y8lI6BUkLSz4U",
+    "name": "مذكرات-شاملة-في-مادة-الإعلام-الآلي-الجيل-الثاني-4-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 3195175
+   }
+  ]
+ },
+ {
+  "id": "cat-mid-4am-civic",
+  "title": {
+   "ar": "مذكرات التربية المدنية — السنة الرابعة متوسط",
+   "fr": "Fiches — Éducation civique — 4AM"
+  },
+  "level": "4AM",
+  "subject": "civic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الجيل الثاني"
+  ],
+  "excerpt": "",
+  "access": "premium",
+  "author": "",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1hKkOlO5HRtTUcbdH82SrZxp7i_sc3ogt",
+    "name": "مذكرات-مادة-التربية-المدنية-4-متوسط.pdf",
+    "mime": "application/pdf",
+    "size": 247280
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-science-book",
+  "title": {
+   "ar": "كتاب علوم الطبيعة و الحياة سنة أولى ثانوي ج م ع",
+   "fr": "Manuel scolaire — Sciences naturelles — 1AS"
+  },
+  "level": "1AS",
+  "subject": "science",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/sciences_scientifique_1as.pdf",
+    "name": "sciences_scientifique_1as.pdf",
+    "mime": "application/pdf",
+    "size": 38905430
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-science-book-2",
+  "title": {
+   "ar": "كتاب علوم الطبيعة و الحياة سنة أولى ثانوي ج م آ",
+   "fr": "Manuel scolaire — Sciences naturelles — 1AS"
+  },
+  "level": "1AS",
+  "subject": "science",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/02/%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D8%AB%D8%A7%D9%86%D9%88%D9%8A.pdf",
+    "name": "الكتاب-المدرسي-في-الرياضيات-ثانية-ثانوي.pdf",
+    "mime": "application/pdf",
+    "size": 15329795
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-islamic-book",
+  "title": {
+   "ar": "كتاب العلوم الإسلامية سنة أولى ثانوي",
+   "fr": "Manuel scolaire — Sciences islamiques — 1AS"
+  },
+  "level": "1AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/sci_islamique_1as.pdf",
+    "name": "sci_islamique_1as.pdf",
+    "mime": "application/pdf",
+    "size": 27813575
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-physics-book",
+  "title": {
+   "ar": "كتاب العلوم الفيزيائية سنة أولى ثانوي ج م آ",
+   "fr": "Manuel scolaire — Sciences physiques — 1AS"
+  },
+  "level": "1AS",
+  "subject": "physics",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/physiques_lt_1as.pdf",
+    "name": "physiques_lt_1as.pdf",
+    "mime": "application/pdf",
+    "size": 30564404
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-physics-book-2",
+  "title": {
+   "ar": "كتاب العلوم الفيزيائية سنة أولى ثانوي ج م ع",
+   "fr": "Manuel scolaire — Sciences physiques — 1AS"
+  },
+  "level": "1AS",
+  "subject": "physics",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/physique_scientifique_1as.pdf",
+    "name": "physique_scientifique_1as.pdf",
+    "mime": "application/pdf",
+    "size": 38284775
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-math-book",
+  "title": {
+   "ar": "كتاب الرياضيات سنة أولى ثانوي ج م ع",
+   "fr": "Manuel scolaire — Mathématiques — 1AS"
+  },
+  "level": "1AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/math_scientifique_1as.pdf",
+    "name": "math_scientifique_1as.pdf",
+    "mime": "application/pdf",
+    "size": 42500975
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-math-book-2",
+  "title": {
+   "ar": "كتاب الرياضيات سنة أولى ثانوي ج م آ",
+   "fr": "Manuel scolaire — Mathématiques — 1AS"
+  },
+  "level": "1AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/math_litteraire_1as.pdf",
+    "name": "math_litteraire_1as.pdf",
+    "mime": "application/pdf",
+    "size": 28415591
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-histgeo-book",
+  "title": {
+   "ar": "كتاب التاريخ سنة أولى ثانوي",
+   "fr": "Manuel scolaire — Histoire-géographie — 1AS"
+  },
+  "level": "1AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/histoire_1as.pdf",
+    "name": "histoire_1as.pdf",
+    "mime": "application/pdf",
+    "size": 21274391
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-histgeo-book-2",
+  "title": {
+   "ar": "كتاب الجغرافيا سنة أولى ثانوي",
+   "fr": "Manuel scolaire — Histoire-géographie — 1AS"
+  },
+  "level": "1AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/geo_1as.pdf",
+    "name": "geo_1as.pdf",
+    "mime": "application/pdf",
+    "size": 19701044
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-fr-book",
+  "title": {
+   "ar": "كتاب اللغة الفرنسية سنة أولى ثانوي",
+   "fr": "Manuel scolaire — Français — 1AS"
+  },
+  "level": "1AS",
+  "subject": "fr",
+  "language": "fr",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/francais_1as.pdf",
+    "name": "francais_1as.pdf",
+    "mime": "application/pdf",
+    "size": 33239959
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-en-book",
+  "title": {
+   "ar": "كتاب اللغة الإنجليزية سنة أولى ثانوي",
+   "fr": "Manuel scolaire — Anglais — 1AS"
+  },
+  "level": "1AS",
+  "subject": "en",
+  "language": "en",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/english_1as.pdf",
+    "name": "english_1as.pdf",
+    "mime": "application/pdf",
+    "size": 33643019
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-ar-book",
+  "title": {
+   "ar": "كتاب اللغة العربية المشوق سنة أولى ثانوي ج م ع",
+   "fr": "Manuel scolaire — Langue arabe — 1AS"
+  },
+  "level": "1AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/arabes_tct_1as.pdf",
+    "name": "arabes_tct_1as.pdf",
+    "mime": "application/pdf",
+    "size": 31693134
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-ar-book-2",
+  "title": {
+   "ar": "كتاب اللغة العربية المشوق سنة أولى ثانوي ج م آ",
+   "fr": "Manuel scolaire — Langue arabe — 1AS"
+  },
+  "level": "1AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/arabe_tcl_1as.pdf",
+    "name": "arabe_tcl_1as.pdf",
+    "mime": "application/pdf",
+    "size": 34555796
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-economics-book",
+  "title": {
+   "ar": "كتاب التكنولوجيا في مجال التسيير والاقتصاد سنة أولى ثانوي ج م ع",
+   "fr": "Manuel scolaire — Économie et management — 1AS"
+  },
+  "level": "1AS",
+  "subject": "economics",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2022/11/book-technologi-gestion-1as.pdf",
+    "name": "book-technologi-gestion-1as.pdf",
+    "mime": "application/pdf",
+    "size": 22589650
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-science-guide",
+  "title": {
+   "ar": "منهاج العلوم الطبيعية جذع مشترك علوم أولى ثانوي",
+   "fr": "Livre du professeur — Sciences naturelles — 1AS"
+  },
+  "level": "1AS",
+  "subject": "science",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2022/10/Programme-1AS-S.pdf",
+    "name": "Programme-1AS-S.pdf",
+    "mime": "application/pdf",
+    "size": 392430
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-science-guide-2",
+  "title": {
+   "ar": "الوثيقة المرافقة لمنهاج العلوم الطبيعية أولى ثانوي",
+   "fr": "Livre du professeur — Sciences naturelles — 1AS"
+  },
+  "level": "1AS",
+  "subject": "science",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2022/10/documents-daccompagnement-1AS.pdf",
+    "name": "documents-daccompagnement-1AS.pdf",
+    "mime": "application/pdf",
+    "size": 954722
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-math-guide",
+  "title": {
+   "ar": "كتاب الأستاذ في الرياضيات أولى ثانوي آداب",
+   "fr": "Livre du professeur — Mathématiques — 1AS"
+  },
+  "level": "1AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/math-1al-teacherbook.pdf",
+    "name": "math-1al-teacherbook.pdf",
+    "mime": "application/pdf",
+    "size": 1436747
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-math-guide-2",
+  "title": {
+   "ar": "كتاب الأستاذ في الرياضيات أولى ثانوي علوم",
+   "fr": "Livre du professeur — Mathématiques — 1AS"
+  },
+  "level": "1AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/math-1as-teacherbook.pdf",
+    "name": "math-1as-teacherbook.pdf",
+    "mime": "application/pdf",
+    "size": 1331856
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-physics-guide",
+  "title": {
+   "ar": "دليل الأستاذ في العلوم الفيزيائية أولى ثانوي",
+   "fr": "Livre du professeur — Sciences physiques — 1AS"
+  },
+  "level": "1AS",
+  "subject": "physics",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/physics-1as-teacherbook.pdf",
+    "name": "physics-1as-teacherbook.pdf",
+    "mime": "application/pdf",
+    "size": 1894386
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-science-guide-3",
+  "title": {
+   "ar": "دليل الأستاذ في العلوم الطبيعية أولى ثانوي آداب",
+   "fr": "Livre du professeur — Sciences naturelles — 1AS"
+  },
+  "level": "1AS",
+  "subject": "science",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/SCIENNATLE.pdf",
+    "name": "SCIENNATLE.pdf",
+    "mime": "application/pdf",
+    "size": 1372810
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-science-guide-4",
+  "title": {
+   "ar": "دليل الأستاذ في العلوم الطبيعية أولى ثانوي",
+   "fr": "Livre du professeur — Sciences naturelles — 1AS"
+  },
+  "level": "1AS",
+  "subject": "science",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/Guide-science-1AS.pdf",
+    "name": "Guide-science-1AS.pdf",
+    "mime": "application/pdf",
+    "size": 616185
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-en-guide",
+  "title": {
+   "ar": "دليل الأستاذ في اللغة الإنجليزية 1 ثانوي",
+   "fr": "Livre du professeur — Anglais — 1AS"
+  },
+  "level": "1AS",
+  "subject": "en",
+  "language": "en",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/ANGLAIS.pdf",
+    "name": "ANGLAIS.pdf",
+    "mime": "application/pdf",
+    "size": 2715318
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-fr-guide",
+  "title": {
+   "ar": "دليل الأستاذ في اللغة الفرنسية 1 ثانوي آداب",
+   "fr": "Livre du professeur — Français — 1AS"
+  },
+  "level": "1AS",
+  "subject": "fr",
+  "language": "fr",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/FRANCAISLETTRE.pdf",
+    "name": "FRANCAISLETTRE.pdf",
+    "mime": "application/pdf",
+    "size": 556583
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-fr-guide-2",
+  "title": {
+   "ar": "دليل الأستاذ في اللغة الفرنسية 1 ثانوي علمي",
+   "fr": "Livre du professeur — Français — 1AS"
+  },
+  "level": "1AS",
+  "subject": "fr",
+  "language": "fr",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/FRANCAISST.pdf",
+    "name": "FRANCAISST.pdf",
+    "mime": "application/pdf",
+    "size": 376341
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-islamic-guide",
+  "title": {
+   "ar": "دليل الأستاذ في العلوم الإسلامية 1 ثانوي",
+   "fr": "Livre du professeur — Sciences islamiques — 1AS"
+  },
+  "level": "1AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/islamic-1as-teacherbook.pdf",
+    "name": "islamic-1as-teacherbook.pdf",
+    "mime": "application/pdf",
+    "size": 356421
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-economics-guide",
+  "title": {
+   "ar": "دليل الأستاذ في التسيير و الاقتصاد 1 ثانوي و 2 ثانوي",
+   "fr": "Livre du professeur — Économie et management — 1AS"
+  },
+  "level": "1AS",
+  "subject": "economics",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/gestion1as_2as-book_guide.pdf",
+    "name": "gestion1as_2as-book_guide.pdf",
+    "mime": "application/pdf",
+    "size": 8470443
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-engineering-guide",
+  "title": {
+   "ar": "دليل الهندسة المدنية أولى ثانوي",
+   "fr": "Livre du professeur — Génie (technologie) — 1AS"
+  },
+  "level": "1AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/genie-civil_1as_teacherbook.pdf",
+    "name": "genie-civil_1as_teacherbook.pdf",
+    "mime": "application/pdf",
+    "size": 1031333
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-engineering-guide-2",
+  "title": {
+   "ar": "دليل الهندسة الميكانيكية أولى ثانوي",
+   "fr": "Livre du professeur — Génie (technologie) — 1AS"
+  },
+  "level": "1AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/genie-mecanique_1as_teacherbook.pdf",
+    "name": "genie-mecanique_1as_teacherbook.pdf",
+    "mime": "application/pdf",
+    "size": 490638
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-math-book",
+  "title": {
+   "ar": "الكتاب المدرسي في الرياضيات ثانية ثانوي",
+   "fr": "Manuel scolaire — Mathématiques — 2AS"
+  },
+  "level": "2AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/02/%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D8%AB%D8%A7%D9%86%D9%88%D9%8A.pdf",
+    "name": "الكتاب-المدرسي-في-الرياضيات-ثانية-ثانوي.pdf",
+    "mime": "application/pdf",
+    "size": 15329795
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-math-book-2",
+  "title": {
+   "ar": "كتاب الرياضيات سنة ثانية ثانوي شعب أدبية",
+   "fr": "Manuel scolaire — Mathématiques — 2AS"
+  },
+  "level": "2AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/math_ec_lp_le_2as.pdf",
+    "name": "math_ec_lp_le_2as.pdf",
+    "mime": "application/pdf",
+    "size": 39742332
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-ar-book",
+  "title": {
+   "ar": "كتاب اللغة العربية سنة ثانية ثانوي شعب علمية",
+   "fr": "Manuel scolaire — Langue arabe — 2AS"
+  },
+  "level": "2AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/arabe_sci_2as.pdf",
+    "name": "arabe_sci_2as.pdf",
+    "mime": "application/pdf",
+    "size": 24428293
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-ar-book-2",
+  "title": {
+   "ar": "كتاب اللغة العربية سنة ثانية ثانوي شعب أدبية",
+   "fr": "Manuel scolaire — Langue arabe — 2AS"
+  },
+  "level": "2AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/arabe_lple_2as.pdf",
+    "name": "arabe_lple_2as.pdf",
+    "mime": "application/pdf",
+    "size": 31872990
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-physics-book",
+  "title": {
+   "ar": "كتاب العلوم الفيزيائية المدرسي ثانية ثانوي",
+   "fr": "Manuel scolaire — Sciences physiques — 2AS"
+  },
+  "level": "2AS",
+  "subject": "physics",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/02/livre_scolaire_2as_physique_sci_PDF.pdf",
+    "name": "livre_scolaire_2as_physique_sci_PDF.pdf",
+    "mime": "application/pdf",
+    "size": 37511679
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-philosophy-book",
+  "title": {
+   "ar": "كتاب علوم الطبيعة و الحياة سنة ثانية ثانوي آداب و فلسفة",
+   "fr": "Manuel scolaire — Philosophie — 2AS"
+  },
+  "level": "2AS",
+  "subject": "philosophy",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/sciences_l_2as.pdf",
+    "name": "sciences_l_2as.pdf",
+    "mime": "application/pdf",
+    "size": 35260146
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-philosophy-book-2",
+  "title": {
+   "ar": "كتاب العلوم الفيزيائية سنة ثانية ثانوي آداب و فلسفة",
+   "fr": "Manuel scolaire — Philosophie — 2AS"
+  },
+  "level": "2AS",
+  "subject": "philosophy",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/physiques_lp_2as.pdf",
+    "name": "physiques_lp_2as.pdf",
+    "mime": "application/pdf",
+    "size": 39259220
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-philosophy-book-3",
+  "title": {
+   "ar": "كتاب نصوص فلسفية مختارة سنة ثانية ثانوي",
+   "fr": "Manuel scolaire — Philosophie — 2AS"
+  },
+  "level": "2AS",
+  "subject": "philosophy",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/philosophie_textes_lp_2as.pdf",
+    "name": "philosophie_textes_lp_2as.pdf",
+    "mime": "application/pdf",
+    "size": 30338488
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-philosophy-book-4",
+  "title": {
+   "ar": "كتاب الفلسفة سنة ثانية ثانوي شعب أدبية",
+   "fr": "Manuel scolaire — Philosophie — 2AS"
+  },
+  "level": "2AS",
+  "subject": "philosophy",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/philosophie_lp_2as.pdf",
+    "name": "philosophie_lp_2as.pdf",
+    "mime": "application/pdf",
+    "size": 50448504
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-islamic-book",
+  "title": {
+   "ar": "كتاب العلوم الإسلامية سنة ثانية ثانوي",
+   "fr": "Manuel scolaire — Sciences islamiques — 2AS"
+  },
+  "level": "2AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/islamique_2as.pdf",
+    "name": "islamique_2as.pdf",
+    "mime": "application/pdf",
+    "size": 22912536
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-histgeo-book",
+  "title": {
+   "ar": "كتاب التاريخ سنة ثانية ثانوي",
+   "fr": "Manuel scolaire — Histoire-géographie — 2AS"
+  },
+  "level": "2AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/histoire_2as.pdf",
+    "name": "histoire_2as.pdf",
+    "mime": "application/pdf",
+    "size": 24105560
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-histgeo-book-2",
+  "title": {
+   "ar": "كتاب الجغرافيا سنة ثانية ثانوي",
+   "fr": "Manuel scolaire — Histoire-géographie — 2AS"
+  },
+  "level": "2AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/geographie_2as.pdf",
+    "name": "geographie_2as.pdf",
+    "mime": "application/pdf",
+    "size": 23512725
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-fr-book",
+  "title": {
+   "ar": "كتاب اللغة الفرنسية سنة ثانية ثانوي",
+   "fr": "Manuel scolaire — Français — 2AS"
+  },
+  "level": "2AS",
+  "subject": "fr",
+  "language": "fr",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/francais_2as.pdf",
+    "name": "francais_2as.pdf",
+    "mime": "application/pdf",
+    "size": 38765373
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-en-book",
+  "title": {
+   "ar": "كتاب اللغة الإنجليزية سنة ثانية ثانوي",
+   "fr": "Manuel scolaire — Anglais — 2AS"
+  },
+  "level": "2AS",
+  "subject": "en",
+  "language": "en",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/english_2as.pdf",
+    "name": "english_2as.pdf",
+    "mime": "application/pdf",
+    "size": 36896211
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-economics-book",
+  "title": {
+   "ar": "كتاب الإقتصاد و المناجمنت و القانون سنة ثانية ثانوي",
+   "fr": "Manuel scolaire — Économie et management — 2AS"
+  },
+  "level": "2AS",
+  "subject": "economics",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/economie_comptabilite_2as.pdf",
+    "name": "economie_comptabilite_2as.pdf",
+    "mime": "application/pdf",
+    "size": 11673115
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-engineering-book",
+  "title": {
+   "ar": "كتاب الهندسة الكهربائية سنة ثانية ثانوي تقني رياضي",
+   "fr": "Manuel scolaire — Génie (technologie) — 2AS"
+  },
+  "level": "2AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/11/%D9%83%D8%AA%D8%A7%D8%A8-%D9%85%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D8%A9-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9-%D9%84%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D8%AA%D9%82%D9%86%D9%8A-%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A.pdf",
+    "name": "كتاب-مادة-الهندسة-الكهربائية-للسنة-الثانية-تقني-رياضي.pdf",
+    "mime": "application/pdf",
+    "size": 88325809
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-engineering-book-2",
+  "title": {
+   "ar": "كتاب الهندسة المدنية سنة ثانية ثانوي تقني رياضي",
+   "fr": "Manuel scolaire — Génie (technologie) — 2AS"
+  },
+  "level": "2AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/11/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D8%A9-%D8%A7%D9%84%D9%85%D8%AF%D9%86%D9%8A%D8%A9-%D8%B3%D9%86%D8%A9-%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D8%AB%D8%A7%D9%86%D9%88%D9%8A.pdf",
+    "name": "كتاب-الهندسة-المدنية-سنة-ثانية-ثانوي.pdf",
+    "mime": "application/pdf",
+    "size": 8970000
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-engineering-book-3",
+  "title": {
+   "ar": "كتاب الهندسة الميكانيكية سنة ثانية ثانوي تقني رياضي",
+   "fr": "Manuel scolaire — Génie (technologie) — 2AS"
+  },
+  "level": "2AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/11/%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D9%8A-2-%D9%87%D9%85%D9%83.pdf",
+    "name": "الكتاب-المدرسي-2-همك.pdf",
+    "mime": "application/pdf",
+    "size": 5339092
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-engineering-book-4",
+  "title": {
+   "ar": "كتاب هندسة الطرائق سنة ثانية ثانوي تقني رياضي",
+   "fr": "Manuel scolaire — Génie (technologie) — 2AS"
+  },
+  "level": "2AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/11/%D9%83%D8%AA%D8%A7%D8%A8-%D9%87%D9%86%D8%AF%D8%B3%D8%A9-%D8%A7%D9%84%D8%B7%D8%B1%D8%A7%D8%A6%D9%82-%D9%84%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D8%AB%D8%A7%D9%86%D9%88%D9%8A.pdf",
+    "name": "كتاب-هندسة-الطرائق-للسنة-الثانية-ثانوي.pdf",
+    "mime": "application/pdf",
+    "size": 9616710
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-accounting-book",
+  "title": {
+   "ar": "كتاب التسيير المحاسبي والمالي سنة ثانية ثانوي",
+   "fr": "Manuel scolaire — Gestion comptable et financière — 2AS"
+  },
+  "level": "2AS",
+  "subject": "accounting",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/11/comptabilite_2as.pdf",
+    "name": "comptabilite_2as.pdf",
+    "mime": "application/pdf",
+    "size": 29189359
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-math-guide",
+  "title": {
+   "ar": "كتاب الأستاذ في الرياضيات ثانية ثانوي",
+   "fr": "Livre du professeur — Mathématiques — 2AS"
+  },
+  "level": "2AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/02/Math-2ST.pdf",
+    "name": "Math-2ST.pdf",
+    "mime": "application/pdf",
+    "size": 44331177
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-physics-guide",
+  "title": {
+   "ar": "كتاب الأستاذ في الفيزياء ثانية ثانوي أدبي",
+   "fr": "Livre du professeur — Sciences physiques — 2AS"
+  },
+  "level": "2AS",
+  "subject": "physics",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/02/book_prof_physic_2AS_LP.pdf",
+    "name": "book_prof_physic_2AS_LP.pdf",
+    "mime": "application/pdf",
+    "size": 9705297
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-physics-guide-2",
+  "title": {
+   "ar": "كتاب الأستاذ في الفيزياء ثانية ثانوي علمي",
+   "fr": "Livre du professeur — Sciences physiques — 2AS"
+  },
+  "level": "2AS",
+  "subject": "physics",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/02/book_prof_physic_2AS.pdf",
+    "name": "book_prof_physic_2AS.pdf",
+    "mime": "application/pdf",
+    "size": 9184759
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-science-guide",
+  "title": {
+   "ar": "كتاب الأستاذ في العلوم الطبيعية ثانية ثانوي",
+   "fr": "Livre du professeur — Sciences naturelles — 2AS"
+  },
+  "level": "2AS",
+  "subject": "science",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/02/sciences-2as-corrections.pdf",
+    "name": "sciences-2as-corrections.pdf",
+    "mime": "application/pdf",
+    "size": 5810548
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-fr-guide",
+  "title": {
+   "ar": "كتاب تحضير دروس اللغة الفرنسية للثانية ثانوي",
+   "fr": "Livre du professeur — Français — 2AS"
+  },
+  "level": "2AS",
+  "subject": "fr",
+  "language": "fr",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/02/Tous-les-projets-en-PDF-By-Islam-Benmahammed.pdf",
+    "name": "Tous-les-projets-en-PDF-By-Islam-Benmahammed.pdf",
+    "mime": "application/pdf",
+    "size": 2798121
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-spanish-guide",
+  "title": {
+   "ar": "كتاب الأستاذ في اللغة الإسبانية ثانية ثانوي",
+   "fr": "Livre du professeur — Espagnol — 2AS"
+  },
+  "level": "2AS",
+  "subject": "spanish",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/spanish2as-prof_guide.pdf",
+    "name": "spanish2as-prof_guide.pdf",
+    "mime": "application/pdf",
+    "size": 868411
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-histgeo-guide",
+  "title": {
+   "ar": "كتاب الأستاذ في التاريخ للثانية ثانوي",
+   "fr": "Livre du professeur — Histoire-géographie — 2AS"
+  },
+  "level": "2AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/Histoire.pdf",
+    "name": "Histoire.pdf",
+    "mime": "application/pdf",
+    "size": 935783
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-histgeo-guide-2",
+  "title": {
+   "ar": "كتاب الأستاذ في الجغرافيا للثانية ثانوي",
+   "fr": "Livre du professeur — Histoire-géographie — 2AS"
+  },
+  "level": "2AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/geography2as-book_guide.pdf",
+    "name": "geography2as-book_guide.pdf",
+    "mime": "application/pdf",
+    "size": 5800583
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-islamic-guide",
+  "title": {
+   "ar": "كتاب الأستاذ في العلوم الإسلامية ثانية ثانوي",
+   "fr": "Livre du professeur — Sciences islamiques — 2AS"
+  },
+  "level": "2AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/Eduislamique.pdf",
+    "name": "Eduislamique.pdf",
+    "mime": "application/pdf",
+    "size": 990988
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-philosophy-guide",
+  "title": {
+   "ar": "دليل الأستاذ في الفلسفة ثانية ثانوي",
+   "fr": "Livre du professeur — Philosophie — 2AS"
+  },
+  "level": "2AS",
+  "subject": "philosophy",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/Philosophie.pdf",
+    "name": "Philosophie.pdf",
+    "mime": "application/pdf",
+    "size": 1731018
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-engineering-guide",
+  "title": {
+   "ar": "كتاب الأستاذ في الهندسة المدنية ثانية ثانوي",
+   "fr": "Livre du professeur — Génie (technologie) — 2AS"
+  },
+  "level": "2AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/GenieCivil.pdf",
+    "name": "GenieCivil.pdf",
+    "mime": "application/pdf",
+    "size": 1874001
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-engineering-guide-2",
+  "title": {
+   "ar": "كتاب الأستاذ للهندسة الكهربائية ثانية ثانوي",
+   "fr": "Livre du professeur — Génie (technologie) — 2AS"
+  },
+  "level": "2AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/GenieElectrique.pdf",
+    "name": "GenieElectrique.pdf",
+    "mime": "application/pdf",
+    "size": 715984
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-engineering-guide-3",
+  "title": {
+   "ar": "كتاب الأستاذ لهندسة الطرائق للثانية ثانوي",
+   "fr": "Livre du professeur — Génie (technologie) — 2AS"
+  },
+  "level": "2AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/GenieProcedes.pdf",
+    "name": "GenieProcedes.pdf",
+    "mime": "application/pdf",
+    "size": 233022
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-italian-guide",
+  "title": {
+   "ar": "الوثيقة المرافقة لمنهاج اللغة الإيطالية 2 ثانوي",
+   "fr": "Livre du professeur — Italien — 2AS"
+  },
+  "level": "2AS",
+  "subject": "italian",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/italian2as-document_acc_program.pdf",
+    "name": "italian2as-document_acc_program.pdf",
+    "mime": "application/pdf",
+    "size": 478081
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-italian-guide-2",
+  "title": {
+   "ar": "منهاج اللغة الإيطالية للثانية ثانوي",
+   "fr": "Livre du professeur — Italien — 2AS"
+  },
+  "level": "2AS",
+  "subject": "italian",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/01/italian2as-program.pdf",
+    "name": "italian2as-program.pdf",
+    "mime": "application/pdf",
+    "size": 244191
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-math-book",
+  "title": {
+   "ar": "كتاب الرياضيات المدرسي للثالثة ثانوي شعب علمية",
+   "fr": "Manuel scolaire — Mathématiques — 3AS"
+  },
+  "level": "3AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/08/%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D9%8A-%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%B3%D9%86%D8%A9-3-%D8%AB%D8%A7%D9%86%D9%88%D9%8A-%D8%B4%D8%B9%D8%A8-%D8%B9%D9%84%D9%85%D9%8A%D8%A9.pdf",
+    "name": "الكتاب-المدرسي-رياضيات-سنة-3-ثانوي-شعب-علمية.pdf",
+    "mime": "application/pdf",
+    "size": 82707186
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-physics-book",
+  "title": {
+   "ar": "كتاب العلوم الفيزيائية المدرسي للثالثة ثانوي شعب علمية",
+   "fr": "Manuel scolaire — Sciences physiques — 3AS"
+  },
+  "level": "3AS",
+  "subject": "physics",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/08/livre_scolaire_3as_physique_sci.pdf",
+    "name": "livre_scolaire_3as_physique_sci.pdf",
+    "mime": "application/pdf",
+    "size": 82531967
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-science-book",
+  "title": {
+   "ar": "كتاب العلوم الطبيعية المدرسي للثالثة ثانوي شعبة علوم تجريبية",
+   "fr": "Manuel scolaire — Sciences naturelles — 3AS"
+  },
+  "level": "3AS",
+  "subject": "science",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/08/livre_scolaire_3as_sciences_se.pdf",
+    "name": "livre_scolaire_3as_sciences_se.pdf",
+    "mime": "application/pdf",
+    "size": 55839213
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-spanish-book",
+  "title": {
+   "ar": "كتاب اللغة الإسبانية سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Espagnol — 3AS"
+  },
+  "level": "3AS",
+  "subject": "spanish",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/Spanish_3as.pdf",
+    "name": "Spanish_3as.pdf",
+    "mime": "application/pdf",
+    "size": 38123496
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-islamic-book",
+  "title": {
+   "ar": "كتاب العلوم الإسلامية سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Sciences islamiques — 3AS"
+  },
+  "level": "3AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/sciences_islamique_3as.pdf",
+    "name": "sciences_islamique_3as.pdf",
+    "mime": "application/pdf",
+    "size": 28870122
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-philosophy-book",
+  "title": {
+   "ar": "كتاب الفلسفة سنة ثالثة ثانوي شعب علمية",
+   "fr": "Manuel scolaire — Philosophie — 3AS"
+  },
+  "level": "3AS",
+  "subject": "philosophy",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/philo_m_mt_sc_ec_3as.pdf",
+    "name": "philo_m_mt_sc_ec_3as.pdf",
+    "mime": "application/pdf",
+    "size": 66669113
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-philosophy-book-2",
+  "title": {
+   "ar": "كتاب الفلسفة سنة ثالثة ثانوي آداب و فلسفة",
+   "fr": "Manuel scolaire — Philosophie — 3AS"
+  },
+  "level": "3AS",
+  "subject": "philosophy",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/philisophie_litt%C3%A9raire_cours_3as.pdf",
+    "name": "philisophie_littéraire_cours_3as.pdf",
+    "mime": "application/pdf",
+    "size": 58741687
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-math-book-2",
+  "title": {
+   "ar": "كتاب الرياضيات المدرسي سنة ثالثة ثانوي شعب أدبية",
+   "fr": "Manuel scolaire — Mathématiques — 3AS"
+  },
+  "level": "3AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/math_lp_le_3as.pdf",
+    "name": "math_lp_le_3as.pdf",
+    "mime": "application/pdf",
+    "size": 19941216
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-economics-book",
+  "title": {
+   "ar": "كتاب الرياضيات سنة ثالثة ثانوي شعبة تسيير و اقتصاد",
+   "fr": "Manuel scolaire — Économie et management — 3AS"
+  },
+  "level": "3AS",
+  "subject": "economics",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/math_economi_3as.pdf",
+    "name": "math_economi_3as.pdf",
+    "mime": "application/pdf",
+    "size": 41713589
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-ar-book",
+  "title": {
+   "ar": "كتاب اللغة العربية سنة ثالثة ثانوي شعب علمية",
+   "fr": "Manuel scolaire — Langue arabe — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/arabe_scient_3as.pdf",
+    "name": "arabe_scient_3as.pdf",
+    "mime": "application/pdf",
+    "size": 34649510
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-ar-book-2",
+  "title": {
+   "ar": "كتاب اللغة العربية سنة ثالثة ثانوي شعب أدبية",
+   "fr": "Manuel scolaire — Langue arabe — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/litterature_arabe_le_lp_3as.pdf",
+    "name": "litterature_arabe_le_lp_3as.pdf",
+    "mime": "application/pdf",
+    "size": 40136261
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-economics-book-2",
+  "title": {
+   "ar": "كتاب الاقتصاد والمناجمنت والقانون سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Économie et management — 3AS"
+  },
+  "level": "3AS",
+  "subject": "economics",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/11/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF-%D9%88%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%AC%D9%85%D9%86%D8%AA-%D9%88%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%B3%D9%86%D8%A9-%D8%AB%D8%A7%D9%84%D8%AB%D8%A9-%D8%AB%D8%A7%D9%86%D9%88%D9%8A.pdf",
+    "name": "كتاب-الاقتصاد-والمناجمنت-والقانون-سنة-ثالثة-ثانوي.pdf",
+    "mime": "application/pdf",
+    "size": 3516401
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-histgeo-book",
+  "title": {
+   "ar": "كتاب التاريخ سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Histoire-géographie — 3AS"
+  },
+  "level": "3AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/histoire_3as.pdf",
+    "name": "histoire_3as.pdf",
+    "mime": "application/pdf",
+    "size": 37636490
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-histgeo-book-2",
+  "title": {
+   "ar": "كتاب الجغرافيا سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Histoire-géographie — 3AS"
+  },
+  "level": "3AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/geo_3as.pdf",
+    "name": "geo_3as.pdf",
+    "mime": "application/pdf",
+    "size": 33184746
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-engineering-book",
+  "title": {
+   "ar": "كتاب الهندسة الميكانيكية سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Génie (technologie) — 3AS"
+  },
+  "level": "3AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/geniemecanique_mt_3as.pdf",
+    "name": "geniemecanique_mt_3as.pdf",
+    "mime": "application/pdf",
+    "size": 32508569
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-engineering-book-2",
+  "title": {
+   "ar": "كتاب الهندسة المدنية سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Génie (technologie) — 3AS"
+  },
+  "level": "3AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/geniecivil_mt_3as.pdf",
+    "name": "geniecivil_mt_3as.pdf",
+    "mime": "application/pdf",
+    "size": 21955872
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-fr-book",
+  "title": {
+   "ar": "كتاب اللغة الفرنسية سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Français — 3AS"
+  },
+  "level": "3AS",
+  "subject": "fr",
+  "language": "fr",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/francais_3as.pdf",
+    "name": "francais_3as.pdf",
+    "mime": "application/pdf",
+    "size": 46199103
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-en-book",
+  "title": {
+   "ar": "كتاب اللغة الإنجليزية سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Anglais — 3AS"
+  },
+  "level": "3AS",
+  "subject": "en",
+  "language": "en",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/anglais_3as.pdf",
+    "name": "anglais_3as.pdf",
+    "mime": "application/pdf",
+    "size": 49696886
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-engineering-book-3",
+  "title": {
+   "ar": "كتاب هندسة الطرائق سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Génie (technologie) — 3AS"
+  },
+  "level": "3AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2022/11/procedes-3as-livre_scolaire.pdf",
+    "name": "procedes-3as-livre_scolaire.pdf",
+    "mime": "application/pdf",
+    "size": 73136023
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-philosophy-book-3",
+  "title": {
+   "ar": "كتاب الفلسفة سنة ثالثة ثانوي لغات أجنبية",
+   "fr": "Manuel scolaire — Philosophie — 3AS"
+  },
+  "level": "3AS",
+  "subject": "philosophy",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/3AS/philisophie_litt%C3%A9raire_cours_3as.pdf",
+    "name": "philisophie_littéraire_cours_3as.pdf",
+    "mime": "application/pdf",
+    "size": 58741687
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-accounting-book",
+  "title": {
+   "ar": "كتاب التسيير المحاسبي والمالي سنة ثالثة ثانوي",
+   "fr": "Manuel scolaire — Gestion comptable et financière — 3AS"
+  },
+  "level": "3AS",
+  "subject": "accounting",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2024/10/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%AA%D8%B3%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%20%D8%B3%D9%86%D8%A9%20%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A.pdf",
+    "name": "كتاب التسيير المحاسبي والمالي سنة ثالثة ثانوي.pdf",
+    "mime": "application/pdf",
+    "size": 58744673
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-science-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة العلوم الطبيعية للثالثة ثانوي",
+   "fr": "Livre du professeur — Sciences naturelles — 3AS"
+  },
+  "level": "3AS",
+  "subject": "science",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/10/Book_Prof_Science_3AS.pdf",
+    "name": "Book_Prof_Science_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 3722008
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-engineering-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة هندسة الطرائق للثالثة ثانوي شعبة تقني رياضي",
+   "fr": "Livre du professeur — Génie (technologie) — 3AS"
+  },
+  "level": "3AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_GenieProcedes_3AS.pdf",
+    "name": "Book_Pro_GenieProcedes_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 4428757
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-engineering-guide-2",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة الهندسة الميكانيكية للثالثة ثانوي شعبة تقني رياضي",
+   "fr": "Livre du professeur — Génie (technologie) — 3AS"
+  },
+  "level": "3AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_GenieMecanique_3AS.pdf",
+    "name": "Book_Pro_GenieMecanique_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 7293079
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-engineering-guide-3",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة الهندسة المدنية للثالثة ثانوي شعبة تقني رياضي",
+   "fr": "Livre du professeur — Génie (technologie) — 3AS"
+  },
+  "level": "3AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_GenieCivile_3AS.pdf",
+    "name": "Book_Pro_GenieCivile_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 2001991
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-engineering-guide-4",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة الهندسة الكهربائية للثالثة ثانوي شعبة تقني رياضي",
+   "fr": "Livre du professeur — Génie (technologie) — 3AS"
+  },
+  "level": "3AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_GenieElectrique_3AS.pdf",
+    "name": "Book_Pro_GenieElectrique_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 2085372
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-economics-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة الرياضيات للثالثة ثانوي شعبة تسيير و اقتصاد",
+   "fr": "Livre du professeur — Économie et management — 3AS"
+  },
+  "level": "3AS",
+  "subject": "economics",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Mathematique_GE_3AS.pdf",
+    "name": "Book_Pro_Mathematique_GE_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 3917510
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-accounting-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة التسيير المحاسبي و المالي للثالثة ثانوي شعبة تسيير و اقتصاد",
+   "fr": "Livre du professeur — Gestion comptable et financière — 3AS"
+  },
+  "level": "3AS",
+  "subject": "accounting",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Comptabilite_3AS.pdf",
+    "name": "Book_Pro_Comptabilite_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 7245769
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-economics-guide-2",
+  "title": {
+   "ar": "كتاب الأستاذ في الإقتصاد و المناجمنت و القانون سنة ثالثة ثانوي",
+   "fr": "Livre du professeur — Économie et management — 3AS"
+  },
+  "level": "3AS",
+  "subject": "economics",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Eco-managt_3AS.pdf",
+    "name": "Book_Pro_Eco-managt_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 3304349
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-tamazight-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة اللغة الأمازيغية للثالثة ثانوي جميع الشعب",
+   "fr": "Livre du professeur — Tamazight — 3AS"
+  },
+  "level": "3AS",
+  "subject": "tamazight",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Tamazight_3AS.pdf",
+    "name": "Book_Pro_Tamazight_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 3859665
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-spanish-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة اللغة الإسبانية للثالثة ثانوي شعبة لغات أجنبية",
+   "fr": "Livre du professeur — Espagnol — 3AS"
+  },
+  "level": "3AS",
+  "subject": "spanish",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Espagnol.pdf",
+    "name": "Book_Pro_Espagnol.pdf",
+    "mime": "application/pdf",
+    "size": 796807
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-german-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة اللغة الألمانية للثالثة ثانوي شعبة لغات أجنبية",
+   "fr": "Livre du professeur — Allemand — 3AS"
+  },
+  "level": "3AS",
+  "subject": "german",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Allemand_3AS.pdf",
+    "name": "Book_Pro_Allemand_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 310567
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-en-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة اللغة الإنجليزية للثالثة ثانوي جميع الشعب",
+   "fr": "Livre du professeur — Anglais — 3AS"
+  },
+  "level": "3AS",
+  "subject": "en",
+  "language": "en",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Anglais_3AS.pdf",
+    "name": "Book_Pro_Anglais_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 1577638
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-fr-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة اللغة الفرنسية للثالثة ثانوي جميع الشعب",
+   "fr": "Livre du professeur — Français — 3AS"
+  },
+  "level": "3AS",
+  "subject": "fr",
+  "language": "fr",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Francais_3AS.pdf",
+    "name": "Book_Pro_Francais_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 216888
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-islamic-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة العلوم الإسلامية للثالثة ثانوي جميع الشعب",
+   "fr": "Livre du professeur — Sciences islamiques — 3AS"
+  },
+  "level": "3AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_SceIslamique_3AS.pdf",
+    "name": "Book_Pro_SceIslamique_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 1087808
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-histgeo-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة الجغرافيا للثالثة ثانوي جميع الشعب",
+   "fr": "Livre du professeur — Histoire-géographie — 3AS"
+  },
+  "level": "3AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Geographie_3AS.pdf",
+    "name": "Book_Pro_Geographie_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 10057455
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-histgeo-guide-2",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة التاريخ للثالثة ثانوي جميع الشعب",
+   "fr": "Livre du professeur — Histoire-géographie — 3AS"
+  },
+  "level": "3AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Histoire_3AS.pdf",
+    "name": "Book_Pro_Histoire_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 1032275
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-philosophy-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة الفلسفة للثالثة ثانوي شعبة آداب و فلسفة",
+   "fr": "Livre du professeur — Philosophie — 3AS"
+  },
+  "level": "3AS",
+  "subject": "philosophy",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Philosophie_L_3AS.pdf",
+    "name": "Book_Pro_Philosophie_L_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 1622995
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-ar-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة اللغة العربية للثالثة ثانوي جميع الشعب",
+   "fr": "Livre du professeur — Langue arabe — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Arabe_3AS.pdf",
+    "name": "Book_Pro_Arabe_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 11977008
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-physics-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة الفيزياء للثالثة ثانوي علمي",
+   "fr": "Livre du professeur — Sciences physiques — 3AS"
+  },
+  "level": "3AS",
+  "subject": "physics",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Physique_3AS.pdf",
+    "name": "Book_Pro_Physique_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 13342998
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-3as-math-guide",
+  "title": {
+   "ar": "كتاب الأستاذ لمادة الرياضيات للثالثة ثانوي علمي",
+   "fr": "Livre du professeur — Mathématiques — 3AS"
+  },
+  "level": "3AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "guide",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب الأستاذ",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2013/09/Book_Pro_Mathematique_SE_3AS.pdf",
+    "name": "Book_Pro_Mathematique_SE_3AS.pdf",
+    "mime": "application/pdf",
+    "size": 2472250
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-engineering-book",
+  "title": {
+   "ar": "كتاب التكنولوجيا سنة أولى ثانوي ج م ع",
+   "fr": "Manuel scolaire — Technologie — 1AS"
+  },
+  "level": "1AS",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/tech_1as.pdf",
+    "name": "tech_1as.pdf",
+    "mime": "application/pdf",
+    "size": 21769596
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-1as-informatics-book",
+  "title": {
+   "ar": "كتاب الإعلام الآلي سنة أولى ثانوي",
+   "fr": "Manuel scolaire — Informatique — 1AS"
+  },
+  "level": "1AS",
+  "subject": "informatics",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/informatique_1as.pdf",
+    "name": "informatique_1as.pdf",
+    "mime": "application/pdf",
+    "size": 12823598
+   }
+  ]
+ },
+ {
+  "id": "cat-sec-2as-law-book",
+  "title": {
+   "ar": "كتاب القانون سنة ثانية ثانوي",
+   "fr": "Manuel scolaire — Droit — 2AS"
+  },
+  "level": "2AS",
+  "subject": "law",
+  "language": "ar",
+  "type": "textbook",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "كتاب مدرسي",
+   "الثانوي"
+  ],
+  "excerpt": "المصدر: eddirasa.com (منشور للعموم).",
+  "access": "free",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2014/books/2AS/Law_economie_comptabilite_2as.pdf",
+    "name": "Law_economie_comptabilite_2as.pdf",
+    "mime": "application/pdf",
+    "size": 14283915
+   }
+  ]
  }
 ]
