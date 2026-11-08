@@ -44,6 +44,7 @@ export function AdminPlans() {
       {plans.data.map((p) => (
         <PlanCard key={p.id} plan={p} />
       ))}
+      <NewPlanCard plans={plans.data} />
     </div>
   );
 }
@@ -118,7 +119,7 @@ function PlanCard({ plan }: { plan: Plan }) {
   const free = p.id === "free";
   return (
     <Card className="space-y-3">
-      <h2 className="text-lg font-bold">{free ? t("free") : t("premium")} <span className="text-sm font-normal text-muted" dir="ltr">({p.id})</span></h2>
+      <h2 className="text-lg font-bold">{free ? t("free") : plan.name.ar || t("premium")} <span className="text-sm font-normal text-muted" dir="ltr">({p.id})</span></h2>
       <div className="grid gap-3 sm:grid-cols-2">
         <Field label={`${t("name")} (ar)`} value={p.name.ar} onChange={(e) => set({ name: { ...p.name, ar: e.target.value } })} />
         <Field label={`${t("name")} (fr)`} dir="ltr" value={p.name.fr} onChange={(e) => set({ name: { ...p.name, fr: e.target.value } })} />
@@ -142,6 +143,55 @@ function PlanCard({ plan }: { plan: Plan }) {
         onClick={async () => {
           setState("saving");
           await savePlan(p).then(() => setState("saved"), () => setState("error"));
+          await queryClient.invalidateQueries({ queryKey: ["plans"] });
+        }}
+      />
+    </Card>
+  );
+}
+
+/** باقة مدفوعة جديدة (شهرية افتراضيًا): نفس صلاحيات Premium وحدوده، بسعر ومدة أخرى. */
+function NewPlanCard({ plans }: { plans: Plan[] }) {
+  const t = useTranslations("admin.plans");
+  const queryClient = useQueryClient();
+  const base = plans.find((p) => p.id === "premium") ?? plans.find((p) => p.id !== "free");
+  const [name, setName] = useState({ ar: t("newName"), fr: "Mensuel" });
+  const [price, setPrice] = useState("500");
+  const [days, setDays] = useState("30");
+  const [state, setState] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const id = !plans.some((p) => p.id === "monthly") ? "monthly" : `plan-${plans.length + 1}`;
+  return (
+    <Card className="space-y-3 border-2 border-dashed border-brand-200">
+      <h2 className="text-lg font-bold">{t("newTitle")}</h2>
+      <p className="text-sm text-muted">{t("newHint")}</p>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <Field label={`${t("name")} (ar)`} value={name.ar} onChange={(e) => (setName({ ...name, ar: e.target.value }), setState("idle"))} />
+        <Field label={`${t("name")} (fr)`} dir="ltr" value={name.fr} onChange={(e) => (setName({ ...name, fr: e.target.value }), setState("idle"))} />
+        <Field label={t("price")} inputMode="numeric" dir="ltr" value={price} onChange={(e) => (setPrice(e.target.value), setState("idle"))} />
+        <Field label={t("days")} inputMode="numeric" dir="ltr" value={days} onChange={(e) => (setDays(e.target.value), setState("idle"))} />
+      </div>
+      <SaveButton
+        state={state}
+        label={t("newCta")}
+        onClick={async () => {
+          const priceDzd = Math.round(Number(price));
+          const durationDays = Math.round(Number(days));
+          if (!base || !name.ar.trim() || !(priceDzd > 0) || !(durationDays > 0)) return setState("error");
+          setState("saving");
+          await savePlan({
+            id,
+            name: { ar: name.ar.trim(), fr: name.fr.trim() || name.ar.trim() },
+            description: { ar: "", fr: "" },
+            priceDzd,
+            durationDays,
+            limits: base.limits,
+            features: base.features ?? [],
+            contentAccess: base.contentAccess ?? "premium",
+            trialEligible: false,
+            active: true,
+            order: Math.max(0, ...plans.map((p) => p.order ?? 0)) + 1,
+          }).then(() => setState("saved"), () => setState("error"));
+          await queryClient.invalidateQueries({ queryKey: ["adminPlans"] });
           await queryClient.invalidateQueries({ queryKey: ["plans"] });
         }}
       />

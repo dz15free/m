@@ -162,7 +162,7 @@
       },
       {
         "q": "How much is the subscription?",
-        "a": "2,000 DA for the whole year, after a 7-day free trial with no bank card."
+        "a": "2,000 DA for the whole year, or 500 DA a month, after a 7-day free trial with no bank card."
       },
       {
         "q": "How do I pay?",
@@ -200,7 +200,7 @@
       }
     ],
     "spotShot": "The daily notebook in the app",
-    "pricingTitle": "One price, everything unlocked",
+    "pricingTitle": "Simple prices, everything included",
     "trialName": "Free trial",
     "trialPrice": "7 days",
     "trialPoints": [
@@ -218,7 +218,8 @@
       "Payment by EDAHABIA or CIB card"
     ],
     "popular": "Most popular",
-    "demoNote": "Real screenshots of the platform with sample data."
+    "demoNote": "Real screenshots of the platform with sample data.",
+    "monthNote": "or 500 DA a month with the monthly plan"
   },
   "auth": {
     "loginTitle": "Sign in",
@@ -1567,7 +1568,11 @@
       "stagesTitle": "Cycles open to teachers",
       "stagesHint": "Primary is always open. Open a cycle when its content is ready: its teachers get the tools and the free trial. Until then they see «soon» (as an admin, you see everything for testing).",
       "stageMiddle": "Middle school",
-      "stageSecondary": "Secondary school"
+      "stageSecondary": "Secondary school",
+      "newTitle": "Add a plan",
+      "newHint": "A paid plan with the same access as Premium (every tool and lesson plan) at another price and length, e.g. monthly. It shows on the subscription page right away; you can edit it or take it off sale afterwards.",
+      "newName": "الاشتراك الشهري",
+      "newCta": "Add the plan"
     },
     "payments": {
       "recent": "Confirmed payments",

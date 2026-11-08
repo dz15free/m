@@ -272,6 +272,7 @@ export default async function LandingPage() {
                 <bdi className="text-4xl font-bold">{t("yearPrice")}</bdi>
                 <span className="text-white/75">{t("yearPer")}</span>
               </p>
+              <p className="mt-1 text-sm text-white/75">{t("monthNote")}</p>
               <ul className="mt-6 flex-1 space-y-3">
                 {(t.raw("yearPoints") as string[]).map((x) => (
                   <li key={x} className="flex items-start gap-2.5">
