@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import { FacebookLink } from "@/components/ui/facebook-link";
 import {
   BookOpenCheck,
   CalendarClock,
@@ -54,6 +55,7 @@ export default async function LandingPage() {
   const t = await getTranslations("landing");
   const brand = await getTranslations("brand");
   const legal = await getTranslations("legal");
+  const common = await getTranslations("common");
   const steps = t.raw("importSteps") as string[];
   const pains = t.raw("pains") as string[];
   const spotSteps = t.raw("spotSteps") as string[];
@@ -337,9 +339,10 @@ export default async function LandingPage() {
               © {new Date().getFullYear()} {t("footer")}
             </span>
           </div>
-          <nav className="flex gap-5 text-sm text-muted">
+          <nav className="flex flex-wrap items-center justify-center gap-5 text-sm text-muted">
             <Link href="/terms" className="hover:underline">{legal("terms")}</Link>
             <Link href="/privacy" className="hover:underline">{legal("privacy")}</Link>
+            <FacebookLink label={common("facebook")} showLabel />
           </nav>
           <div className="sm:hidden">
             <LocaleSwitcher />
