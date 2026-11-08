@@ -77,6 +77,12 @@ export async function POST(req: Request) {
         body = res.body!;
         // الملفات الكبيرة تأتي مقطّعة بلا Content-Length: نعتمد الحجم المعروف (يتحقق منه FixedLengthStream)
         length = Number(res.headers.get("content-length") ?? 0) || (file.size ?? 0);
+        // حجم غير معروف (نسخة PDF مصدَّرة من ملف Google، أو اختصار بلا حجم): نقرأ الملف كاملًا
+        if (!(length > 0)) {
+          const buf = await new Response(body).arrayBuffer();
+          length = buf.byteLength;
+          body = new Response(buf).body!;
+        }
       }
     }
     if (!(ALLOWED_MIME as readonly string[]).includes(file.mime) || !EXT[file.mime]) throw new HttpError(415, "unsupported type");
