@@ -15,6 +15,7 @@ import { getNotificationState, listNotices, markAllRead, type Kind, type Notice 
 import { openSupport } from "@/features/support/repo";
 import { pick, intlLocale } from "@/i18n/pick";
 import type { Locale } from "@/i18n/config";
+import { Linkify } from "@/components/ui/linkify";
 
 const ICON: Record<Kind, typeof Bell> = { news: Megaphone, update: Sparkles, content: BookOpen, offer: Gift, billing: CreditCard, message: MessagesSquare, planning: CalendarDays };
 
@@ -119,7 +120,12 @@ function Panel({ uid, readAt, extra, onClose }: { uid: string; readAt: number; e
                         <span dir="auto" className="font-semibold">{text(n.title)}</span>
                         {isNew && <span className="rounded-full bg-red-50 px-1.5 text-[11px] font-bold text-red-700">{t("new")}</span>}
                       </span>
-                      {text(n.body) && <span dir="auto" className="mt-0.5 block whitespace-pre-line text-sm text-muted">{text(n.body)}</span>}
+                      {text(n.body) && (
+                        <span dir="auto" className="mt-0.5 block whitespace-pre-line text-sm text-muted">
+                          {/* عنصر كامل رابطٌ أصلًا: لا روابط داخله */}
+                          {linkKind(n.link) ? text(n.body) : <Linkify text={text(n.body)!} />}
+                        </span>
+                      )}
                       <span className="mt-1 block text-xs text-muted">{date(n.createdAt)}</span>
                     </span>
                   </>
