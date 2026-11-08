@@ -8,6 +8,7 @@ import { HttpError } from "./auth";
 /** المجلد الجذر لملفات المكتبة (يمكن تغييره بالمتغير DRIVE_LIBRARY_FOLDER). */
 const DEFAULT_FOLDER = "1VFFlwa0aaWthRobn1CX0dQlFpZx-aPse";
 const FOLDER_MIME = "application/vnd.google-apps.folder";
+const SHORTCUT_MIME = "application/vnd.google-apps.shortcut";
 const API = "https://www.googleapis.com/drive/v3/files";
 
 export type DriveFile = { id: string; name: string; path: string; mime: string; size: number };
@@ -99,14 +100,28 @@ export async function driveFileMeta(id: string): Promise<{ name: string; mime: s
   return { name: f.name, mime: f.mimeType, size: Number(f.size ?? 0) };
 }
 
-export async function fetchDriveMedia(id: string): Promise<Response> {
+/** ملفات Google (مستندات، عروض، جداول، رسومات) تُصدَّر PDF؛ لا محتوى ثنائيًا لها لتُنزَّل كما هي. */
+const EXPORTABLE = /^application\/vnd\.google-apps\.(document|presentation|spreadsheet|drawing)$/;
+
+/** محتوى ملف Drive: الملف نفسه، أو أصلُه إن كان اختصارًا (shortcut)، أو نسخة PDF إن كان ملف Google. */
+export async function fetchDriveMedia(id: string, depth = 0): Promise<Response> {
   const key = await driveKey();
   const res = await fetch(`${API}/${encodeURIComponent(id)}?alt=media&supportsAllDrives=true&key=${key}`);
-  if (!res.ok || !res.body) {
-    const reason = ((await res.json().catch(() => ({}))) as { error?: { message?: string } }).error?.message ?? "";
-    throw new HttpError(502, `drive api ${res.status} ${reason}`.trim().slice(0, 200));
+  if (res.ok && res.body) return res;
+  const reason = ((await res.json().catch(() => ({}))) as { error?: { message?: string } }).error?.message ?? "";
+  if (res.status === 403 && depth === 0 && /binary content|Export/i.test(reason)) {
+    const meta = await driveJson<{ mimeType: string; shortcutDetails?: { targetId?: string } }>(
+      `${API}/${encodeURIComponent(id)}?fields=mimeType,shortcutDetails&supportsAllDrives=true&key=${key}`,
+    );
+    // اختصار في المجلد: نجلب الملف الذي يشير إليه
+    if (meta.mimeType === SHORTCUT_MIME && meta.shortcutDetails?.targetId) return fetchDriveMedia(meta.shortcutDetails.targetId, 1);
+    if (EXPORTABLE.test(meta.mimeType)) {
+      const pdf = await fetch(`${API}/${encodeURIComponent(id)}/export?mimeType=application%2Fpdf&key=${key}`);
+      if (pdf.ok && pdf.body) return pdf;
+      throw new HttpError(502, `drive export ${pdf.status}`);
+    }
   }
-  return res;
+  throw new HttpError(502, `drive api ${res.status} ${reason}`.trim().slice(0, 200));
 }
 
 /** ملف عام من Drive دون مفتاح (رابط التنزيل المباشر) — لملفات معروفة مسبقًا فقط. */
