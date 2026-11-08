@@ -17,11 +17,11 @@ import { titleOf } from "./library-browser";
 import type { Locale } from "@/i18n/config";
 
 /** «المكتبة الجاهزة»: الأدمن يحدّد ما يريد نشره مما لم يُستورد بعد من catalog.json، ولا يُنشر غيره. */
-export function CatalogImporter({ existingIds }: { existingIds: Set<string> }) {
+export function CatalogImporter({ existingIds, stage }: { existingIds: Set<string>; stage: Stage }) {
   const t = useTranslations("contentAdmin.catalog");
   const locale = useLocale() as Locale;
   const qc = useQueryClient();
-  const pending = pendingCatalog(catalog as CatalogEntry[], existingIds);
+  const pending = pendingCatalog(catalog as CatalogEntry[], existingIds, stage);
   const [run, setRun] = useState<{ done: number; total: number; current: string } | null>(null);
   const [failed, setFailed] = useState<{ title: string; reason: string }[]>([]);
   const [finished, setFinished] = useState(false);
@@ -186,17 +186,27 @@ const CATALOG_KEYS = new Set(CATALOG_FILES.map((f) => dupKey(f.name, f.size)));
 /** «ملفات جديدة في الدرايف»: ما أُضيف إلى مجلد المكتبة ولم يُستورد بعد، مصنّفًا تلقائيًا من اسمه. */
 /** ملفات مجلد الدرايف للطور المختار: ما يدل اسمه أو مساره على هذا الطور (وما لا يدل على طور يُقترح في الابتدائي)،
     و«كل الملفات» تعرض الباقي ليستورده الأدمن في هذا الطور. ما استُورد في أي طور لا يُقترح مرة أخرى. */
+/** معرّف مجلد Drive من رابط ملصوق (…/folders/<id>، ?id=<id>) أو من المعرّف نفسه. */
+function folderIdOf(link: string): string {
+  const s = link.trim();
+  const m = /\/folders\/([A-Za-z0-9_-]{10,80})/.exec(s) ?? /[?&]id=([A-Za-z0-9_-]{10,80})/.exec(s) ?? /^([A-Za-z0-9_-]{10,80})$/.exec(s);
+  return m?.[1] ?? "";
+}
+
 export function DriveImporter({ existingIds, stage }: { existingIds: Set<string>; stage: Stage }) {
   const t = useTranslations("contentAdmin.drive");
   const tp = useTranslations("profile.stages");
   const [all, setAll] = useState(false);
+  // مجلد Drive آخر (رابط يلصقه الأدمن)؛ فارغ = مجلد المكتبة
+  const [link, setLink] = useState("");
+  const [folder, setFolder] = useState("");
   // المحتوى المستورد في الأطوار الأخرى (نفس مفتاح قائمة المحرّر، فهو مخزّن غالبًا)
   const others = useQueries({
     queries: STAGES.filter((s) => s !== stage).map((s) => ({ queryKey: ["contentsAdmin", s], queryFn: () => listContentsForEditor(s), staleTime: 60_000 })),
   });
   const tl = useTranslations("library");
   const qc = useQueryClient();
-  const list = useQuery({ queryKey: ["driveLibrary"], queryFn: listDriveLibrary, retry: false, staleTime: 60_000 });
+  const list = useQuery({ queryKey: ["driveLibrary", folder], queryFn: () => listDriveLibrary(folder || undefined), retry: false, staleTime: 60_000 });
   // ما حذفه الأدمن من المكتبة لا يُقترح مرة أخرى
   const ignored = useQuery({ queryKey: ["driveIgnored"], queryFn: getIgnoredDriveIds, staleTime: 60_000 });
   const [run, setRun] = useState<{ done: number; total: number; current: string } | null>(null);
@@ -213,7 +223,8 @@ export function DriveImporter({ existingIds, stage }: { existingIds: Set<string>
     return true;
   });
   const imported = new Set([...existingIds, ...others.flatMap((q) => (q.data ?? []).map((c) => c.id))]);
-  const fresh = files.filter((f) => !imported.has(driveContentId(f.id)) && (all || guessStage(f) === stage));
+  // مجلد ألصقه الأدمن: كل ملفاته للطور المختار (لا تخمين للطور من الأسماء)
+  const fresh = files.filter((f) => !imported.has(driveContentId(f.id)) && (all || !!folder || guessStage(f) === stage));
   const ok = fresh.filter((f) => (ALLOWED_MIME as readonly string[]).includes(f.mime) && f.size > 0 && f.size <= MAX_IMPORT);
   const skipped = fresh.length - ok.length;
   const selected = ok.filter((f) => checked.has(f.id));
@@ -235,7 +246,7 @@ export function DriveImporter({ existingIds, stage }: { existingIds: Set<string>
       setRun({ done: i, total: chosen.length, current: title });
       let uploaded: ContentFile | null = null;
       try {
-        uploaded = await importCatalogFile({ driveId: f.id, mime: f.mime });
+        uploaded = await importCatalogFile({ driveId: f.id, mime: f.mime, anyFolder: !!folder });
         await saveContent(driveToContentDoc(f, uploaded, stage), driveContentId(f.id));
       } catch (e) {
         if (uploaded) await removeFile(uploaded.key);
@@ -262,6 +273,40 @@ export function DriveImporter({ existingIds, stage }: { existingIds: Set<string>
                   : t("none")}
             {skipped > 0 && ` ${t("skipped", { n: skipped })}`}
           </p>
+          <form
+            className="mt-2 flex flex-wrap items-center gap-2"
+            onSubmit={(e) => {
+              e.preventDefault();
+              setChecked(new Set());
+              setFolder(folderIdOf(link));
+            }}
+          >
+            <input
+              value={link}
+              onChange={(e) => setLink(e.target.value)}
+              dir="ltr"
+              placeholder={t("folderPlaceholder")}
+              aria-label={t("folderLabel")}
+              className="h-9 min-w-0 flex-1 rounded-lg border border-line bg-surface px-3 text-sm"
+            />
+            <button type="submit" disabled={!folderIdOf(link) || !!run} className={buttonClass("secondary")}>
+              {t("folderOpen")}
+            </button>
+            {folder && (
+              <button
+                type="button"
+                onClick={() => {
+                  setFolder("");
+                  setLink("");
+                  setChecked(new Set());
+                }}
+                className="text-xs font-medium text-brand-700 hover:underline"
+              >
+                {t("folderReset")}
+              </button>
+            )}
+          </form>
+          <p className="mt-1 text-xs text-muted">{folder ? t("folderActive", { stage: tp(stage) }) : t("folderHint")}</p>
           <label className="mt-1 flex w-fit cursor-pointer items-center gap-2 text-xs text-muted">
             <input type="checkbox" checked={all} onChange={(e) => setAll(e.target.checked)} disabled={!!run} className="size-4 accent-brand-600" />
             {t("allStages", { stage: tp(stage) })}

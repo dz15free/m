@@ -1,6 +1,6 @@
 import { errorResponse, HttpError, requireUser } from "@/lib/server/auth";
 import { contentBucket } from "@/lib/server/storage";
-import { fetchDriveMedia, libraryFile } from "@/lib/server/drive";
+import { driveFileMeta, fetchDriveMedia, libraryFile } from "@/lib/server/drive";
 import { ALLOWED_MIME, safeFileName } from "@/features/library/logic";
 import catalog from "@/features/library/catalog.json";
 import { isAllowedCatalogUrl, type CatalogFile } from "@/features/library/catalog";
@@ -66,8 +66,8 @@ export async function POST(req: Request) {
       const driveId = params.get("driveId") ?? "";
       if (!/^[A-Za-z0-9_-]{10,80}$/.test(driveId)) throw new HttpError(400, "bad id");
       const known = CATALOG.get(driveId);
-      // ملف خارج القائمة الجاهزة: نتحقق من Drive أنه داخل مجلد المكتبة (ويلزم المفتاح)
-      file = known ?? { driveId, ...(await libraryFile(driveId)) };
+      // ملف خارج القائمة الجاهزة: من مجلد المكتبة، أو من مجلد عام آخر ألصق الأدمن رابطه (?any=1؛ يلزم المفتاح)
+      file = known ?? { driveId, ...(params.get("any") === "1" ? await driveFileMeta(driveId) : await libraryFile(driveId)) };
       if (!(ALLOWED_MIME as readonly string[]).includes(file.mime)) throw new HttpError(415, "unsupported type");
       if (uploaded) {
         body = req.body!;

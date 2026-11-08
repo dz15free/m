@@ -1120,7 +1120,13 @@
       "selected": "{n} of {total} selected",
       "selectAll": "Select all",
       "allStages": "Show all Drive files, not only those for «{stage}»",
-      "selectNone": "Select none"
+      "selectNone": "Select none",
+      "folderLabel": "Drive folder link",
+      "folderPlaceholder": "Paste a public Drive folder link (or leave empty for the library folder)",
+      "folderOpen": "Show folder files",
+      "folderReset": "Back to the library folder",
+      "folderHint": "Showing the library folder. To pick files from another folder, paste its link (shared: “Anyone with the link”).",
+      "folderActive": "Showing the pasted folder; files are imported into “{stage}”. Adjust grade and subject after import if needed."
     },
     "search": "Search: title, subject, type…",
     "countFiltered": "{n} of {total}",

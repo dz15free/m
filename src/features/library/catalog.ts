@@ -39,12 +39,16 @@ export const isAllowedCatalogUrl = (url: string) => {
 export const catalogSource = (f: CatalogFile): { kind: "driveId" | "url" | "upload"; value: string } =>
   f.driveId ? { kind: "driveId", value: f.driveId } : f.url ? { kind: "url", value: f.url } : { kind: "upload", value: f.name };
 
-export const pendingCatalog = (entries: CatalogEntry[], existing: Set<string>) => entries.filter((e) => !existing.has(e.id));
+/** طور المحتوى من مستواه: 1AM–4AM متوسط، 1AS–3AS ثانوي، وغيرها ابتدائي (والتحضيري). */
+export const stageOfLevel = (level: string): ContentDoc["stage"] => (/^[1-4]AM$/.test(level) ? "middle" : /^[1-3]AS$/.test(level) ? "secondary" : "primary");
+
+export const pendingCatalog = (entries: CatalogEntry[], existing: Set<string>, stage?: ContentDoc["stage"]) =>
+  entries.filter((e) => !existing.has(e.id) && (!stage || stageOfLevel(e.level) === stage));
 
 export function toContentDoc(e: CatalogEntry, files: ContentFile[]): ContentDoc {
   return {
     title: e.title,
-    stage: "primary",
+    stage: stageOfLevel(e.level),
     level: e.level,
     subject: e.subject,
     language: e.language,
