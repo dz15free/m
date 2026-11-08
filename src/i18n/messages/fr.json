@@ -53,7 +53,7 @@
     "start": "Essai gratuit de 7 jours",
     "heroTitle": "Tout ce dont l'enseignant a besoin, au même endroit",
     "heroSubtitle": "Saisissez vos données une seule fois… la plateforme fait le reste.",
-    "heroNote": "7 jours d'essai gratuit sans carte bancaire, puis un abonnement annuel de 2 500 DA seulement.",
+    "heroNote": "7 jours d'essai gratuit sans carte bancaire, puis un abonnement annuel de 2 000 DA seulement.",
     "featuresTitle": "Tout ce qu'il faut pour votre quotidien",
     "features": {
       "notebook": {
@@ -162,7 +162,7 @@
       },
       {
         "q": "Combien coûte l'abonnement ?",
-        "a": "2 500 DA pour toute l'année, après un essai gratuit de 7 jours sans carte bancaire."
+        "a": "2 000 DA pour toute l'année, après un essai gratuit de 7 jours sans carte bancaire."
       },
       {
         "q": "Comment payer ?",
@@ -209,7 +209,7 @@
       "Sans carte bancaire"
     ],
     "yearName": "Abonnement annuel",
-    "yearPrice": "2 500 DA",
+    "yearPrice": "2 000 DA",
     "yearPer": "pour toute l'année",
     "yearPoints": [
       "Toutes les fiches complètes avec leur déroulement",
