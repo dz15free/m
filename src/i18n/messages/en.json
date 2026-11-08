@@ -45,7 +45,8 @@
       "again": "Download again",
       "close": "Close",
       "error": "Could not create the PDF. Try again, or use «Print» then «Save as PDF»."
-    }
+    },
+    "facebook": "Our Facebook page"
   },
   "landing": {
     "login": "Sign in",

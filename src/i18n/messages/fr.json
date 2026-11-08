@@ -45,7 +45,8 @@
       "again": "Télécharger à nouveau",
       "close": "Fermer",
       "error": "Impossible de créer le PDF. Réessayez, ou utilisez « Imprimer » puis « Enregistrer en PDF »."
-    }
+    },
+    "facebook": "Notre page Facebook"
   },
   "landing": {
     "login": "Se connecter",

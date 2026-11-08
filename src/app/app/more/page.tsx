@@ -6,6 +6,7 @@ import { LocaleSwitcher } from "@/components/ui/locale-switcher";
 import { localeDir } from "@/i18n/config";
 import { AccountCard } from "@/features/auth/account";
 import { AdminLink } from "@/features/admin/admin-shell";
+import { FacebookLink } from "@/components/ui/facebook-link";
 
 export async function generateMetadata() {
   const t = await getTranslations("more");
@@ -44,9 +45,10 @@ export default async function MorePage() {
         <LocaleSwitcher />
       </div>
 
-      <nav className="flex justify-center gap-5 text-sm text-muted">
+      <nav className="flex flex-wrap items-center justify-center gap-5 text-sm text-muted">
         <Link href="/terms" className="hover:underline">{t("legal.terms")}</Link>
         <Link href="/privacy" className="hover:underline">{t("legal.privacy")}</Link>
+        <FacebookLink label={t("common.facebook")} showLabel />
       </nav>
     </div>
   );
