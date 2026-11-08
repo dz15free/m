@@ -8,9 +8,11 @@ import { NotificationBell } from "@/features/notifications/notification-bell";
 import { InstallButton } from "@/features/pwa/install-button";
 import { NAV, SIDEBAR_PRIMARY, SIDEBAR_SECONDARY, type NavItem } from "./nav-items";
 import { NavLink } from "./nav-link";
+import { FacebookLink } from "@/components/ui/facebook-link";
 
 export async function Sidebar() {
   const t = await getTranslations("nav");
+  const tc = await getTranslations("common");
   const SessionIcon = NAV.session.icon;
 
   const renderItems = (items: NavItem[]) =>
@@ -50,6 +52,7 @@ export async function Sidebar() {
           <ul className="space-y-1">{renderItems(SIDEBAR_SECONDARY)}</ul>
           <InstallButton />
           <LocaleSwitcher />
+          <FacebookLink label={tc("facebook")} showLabel className="px-3" />
           <AccountCard compact />
         </div>
       </nav>

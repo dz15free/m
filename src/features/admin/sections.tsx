@@ -15,6 +15,7 @@ import { FEEDBACK_REASONS } from "@/features/billing/feedback";
 import { emailsOf, failureKey, getTestimonialChoices, addPayment, deletePayment, inspectOrder, listAudit, listFeedback, setTestimonialShown, listOrders, listPayments, peopleOf, type ChargilyInfo, type OrderRow } from "./repo";
 import { pick, intlLocale } from "@/i18n/pick";
 import type { Locale } from "@/i18n/config";
+import { Linkify } from "@/components/ui/linkify";
 
 const fmtDate = (locale: Locale, at: number) =>
   at ? new Intl.DateTimeFormat(intlLocale(locale), { dateStyle: "medium", timeStyle: "short" }).format(at) : "—";
@@ -499,7 +500,7 @@ export function AdminFeedback() {
                     {r.reasons.filter((k) => (FEEDBACK_REASONS as readonly string[]).includes(k)).map((k) => tf(`reasons.${k}` as "reasons.price")).join(" · ")}
                   </p>
                 )}
-                {r.comment && <p dir="auto" className="whitespace-pre-line">{r.comment}</p>}
+                {r.comment && <p dir="auto" className="whitespace-pre-line"><Linkify text={r.comment} /></p>}
                 {/* الصفحة الرئيسية تعرض آراء 4 و5 نجوم بتعليق تلقائيًا؛ وللأدمن عرض أي رأي أو إخفاؤه */}
                 {choices.data && (
                   <p className="flex flex-wrap items-center gap-2 pt-1">

@@ -14,6 +14,7 @@ import { fetchFile, getContent, PremiumRequired, previewUrl } from "./repo";
 import { titleOf, TYPE_ICON } from "./library-browser";
 import { pick } from "@/i18n/pick";
 import type { Locale } from "@/i18n/config";
+import { Linkify } from "@/components/ui/linkify";
 
 export function ContentView({ contentId }: { contentId: string }) {
   const t = useTranslations("library");
@@ -71,7 +72,7 @@ export function ContentView({ contentId }: { contentId: string }) {
           </div>
         </div>
         {c.unit && <p className="text-sm"><b>{t("unit")}:</b> <bdi>{c.unit}</bdi></p>}
-        {c.excerpt && <p dir="auto" className="whitespace-pre-line text-muted">{c.excerpt}</p>}
+        {c.excerpt && <p dir="auto" className="whitespace-pre-line text-muted"><Linkify text={c.excerpt} /></p>}
         {c.tags.length > 0 && (
           <ul className="flex flex-wrap gap-1.5">
             {c.tags.map((tag) => (

@@ -22,6 +22,7 @@ import {
 import { adminApi, listUsers, peopleOf } from "./repo";
 import { intlLocale } from "@/i18n/pick";
 import type { Locale } from "@/i18n/config";
+import { Linkify } from "@/components/ui/linkify";
 
 /* صندوق الرسائل: قائمة المحادثات (حيّة) + المحادثة المختارة. على الهاتف شاشة واحدة
    بالتناوب، وعلى الحاسوب عمودان. */
@@ -180,7 +181,7 @@ function Conversation({ thread, isNew, onBack }: { thread: Thread; isNew: boolea
           messages.map((m) => (
             <div key={m.id} className={cn("flex", m.from === "admin" ? "justify-start" : "justify-end")}>
               <div className={cn("max-w-[85%] rounded-2xl px-3.5 py-2 shadow-card", m.from === "admin" ? "bg-brand-700 text-white" : "bg-surface")}>
-                <p dir="auto" className="whitespace-pre-wrap break-words">{m.text}</p>
+                <p dir="auto" className="whitespace-pre-wrap break-words"><Linkify text={m.text} /></p>
                 <p className={cn("mt-0.5 text-[11px]", m.from === "admin" ? "text-white/70" : "text-muted")}>{time(m.at)}</p>
               </div>
             </div>
