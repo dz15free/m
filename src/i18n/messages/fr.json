@@ -162,7 +162,7 @@
       },
       {
         "q": "Combien coûte l'abonnement ?",
-        "a": "2 000 DA pour toute l'année, après un essai gratuit de 7 jours sans carte bancaire."
+        "a": "2 000 DA pour toute l'année, ou 500 DA par mois, après un essai gratuit de 7 jours sans carte bancaire."
       },
       {
         "q": "Comment payer ?",
@@ -200,7 +200,7 @@
       }
     ],
     "spotShot": "Le cahier journal dans l'application",
-    "pricingTitle": "Un seul prix, tout est ouvert",
+    "pricingTitle": "Des prix simples, tout est ouvert",
     "trialName": "Essai gratuit",
     "trialPrice": "7 jours",
     "trialPoints": [
@@ -218,7 +218,8 @@
       "Paiement par carte EDAHABIA ou CIB"
     ],
     "popular": "Le plus choisi",
-    "demoNote": "Captures réelles de la plateforme avec des données d'exemple."
+    "demoNote": "Captures réelles de la plateforme avec des données d'exemple.",
+    "monthNote": "ou 500 DA par mois avec la formule mensuelle"
   },
   "auth": {
     "loginTitle": "Connexion",
@@ -1567,7 +1568,11 @@
       "stagesTitle": "Cycles ouverts aux enseignants",
       "stagesHint": "Le primaire est toujours ouvert. Ouvrez un cycle quand son contenu est prêt : ses enseignants accèdent aux outils et à l’essai gratuit. Avant, ils voient « bientôt » (en tant qu’admin, vous voyez tout pour tester).",
       "stageMiddle": "Enseignement moyen",
-      "stageSecondary": "Enseignement secondaire"
+      "stageSecondary": "Enseignement secondaire",
+      "newTitle": "Ajouter une formule",
+      "newHint": "Une formule payante avec les mêmes accès que Premium (tous les outils et fiches), à un autre prix et une autre durée, par exemple mensuelle. Elle apparaît aussitôt sur la page d’abonnement ; vous pourrez la modifier ou la retirer de la vente.",
+      "newName": "الاشتراك الشهري",
+      "newCta": "Ajouter la formule"
     },
     "payments": {
       "recent": "Paiements confirmés",
