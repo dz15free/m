@@ -33,7 +33,7 @@ for (const u of units) {
   const meta = JSON.parse(readFileSync(`${dir}/files.json`, "utf8"));
   const res = JSON.parse(readFileSync(`${dir}/result.json`, "utf8"));
   segments[String(u)] = res.segmentTitle;
-  const use = (F) => {
+  const addFile = (F) => {
     const key = `${u}:${F}`;
     if (!fileIndex.has(key)) {
       const f = meta.files[F];
@@ -44,9 +44,9 @@ for (const u of units) {
     return fileIndex.get(key);
   };
   for (const l of res.lessons) {
-    const file = use(l.file);
+    const file = addFile(l.file);
     // ملفات الأشكال من ملفات أخرى في الوحدة
-    for (const m of JSON.stringify(l.memo).matchAll(/\[\[fig (\d+):(\d+) /g)) use(Number(m[1]));
+    for (const m of JSON.stringify(l.memo).matchAll(/\[\[fig (\d+):(\d+) /g)) addFile(Number(m[1]));
     const lesson = { segment: u, domain: l.domain, topic: l.topic, objectives: (l.objectives ?? []).slice(0, 3), kind: l.kind === "lab" ? "lesson" : l.kind, file, pages: l.pages, hours: l.hours ?? null, week: null };
     lessons.push(lesson);
     pending.push([lesson, l.memo, u]);
