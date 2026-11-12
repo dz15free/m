@@ -73,7 +73,7 @@ export async function POST(req: Request) {
     const level = str(body.level, 8);
     const subject = str(body.subject, 32);
     if (
-      !/^(?:PRE|[1-5]AP|[1-4]AM)$/.test(level) ||
+      !/^(?:PRE|[1-5]AP|[1-4]AM|[1-3]AS-[A-Z]{1,2})$/.test(level) ||
       !/^[a-z]{2,16}$/.test(subject)
     )
       throw new HttpError(400, "invalid request");

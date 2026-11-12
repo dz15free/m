@@ -3,6 +3,7 @@
    والبحث والتصفية يجريان على الجهاز — فوري ويعمل دون إنترنت. */
 
 import { nameKey } from "../../shared/text/names.ts";
+import { baseLevel, programLevel } from "../../shared/dz/secondary.ts";
 
 export const CONTENT_TYPES = [
   "textbook",
@@ -119,15 +120,16 @@ export const langOf = (e: Pick<IndexEntry, "lang">): Lang => (e.lang === "fr" ||
 export const inLang = (e: Pick<IndexEntry, "lang" | "s">, lang: Lang): boolean =>
   lang === "ar" ? langOf(e) === "ar" && e.s !== "fr" && e.s !== "en" : langOf(e) === lang || e.s === lang;
 /** «لأقسامي»: ما نُشر لمستوى أحد أقسام الأستاذ ولمادة يدرّسها (أو عامًّا لكل مواد المستوى). */
+/** محتوى السنة («2AS») يخصّ كل شعبها، ومحتوى الشعبة («2AS-SE») يخصّها ويخصّ الشعب التي تتشارك معها برنامج المادة. */
 export const forMyClasses = (e: Pick<IndexEntry, "l" | "s">, levels: Set<string>, subjects: Set<string>): boolean =>
-  !!e.l && levels.has(e.l) && (!e.s || subjects.has(e.s));
+  !!e.l && (levels.has(e.l) || [...levels].some((l) => baseLevel(l) === e.l || (!!e.s && programLevel(l, e.s) === e.l))) && (!e.s || subjects.has(e.s));
 
 /** كل كلمة في الطلب يجب أن تطابق بداية كلمة في العنوان/الوسوم/الوحدة. */
 export function search(entries: IndexEntry[], query: string, f: Filters = {}): IndexEntry[] {
   const q = tokenize(query);
   const matches = entries.filter(
     (e) =>
-      (!f.level || !e.l || e.l === f.level) &&
+      (!f.level || !e.l || e.l === f.level || e.l === baseLevel(f.level)) &&
       (!f.subject || !e.s || e.s === f.subject) &&
       (!f.type || e.ty === f.type) &&
       (!f.lang || inLang(e, f.lang)) &&

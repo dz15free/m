@@ -113,12 +113,15 @@ function Coverage({ refresh }: { refresh: number }) {
   const t = useTranslations("admin.curriculum");
   const primary = useTaxonomy("primary");
   const middle = useTaxonomy("middle");
-  const levelShort = (l: string) => levelById(primary.data!, l)?.short.ar ?? levelById(middle.data!, l)?.short.ar ?? l;
+  const secondary = useTaxonomy("secondary");
+  const levelShort = (l: string) => levelById(primary.data!, l)?.short.ar ?? levelById(middle.data!, l)?.short.ar ?? levelById(secondary.data!, l)?.short.ar ?? l;
   const missing = useQuery({
     queryKey: ["curriculumCoverage", refresh],
-    enabled: !!primary.data && !!middle.data,
+    enabled: !!primary.data && !!middle.data && !!secondary.data,
     queryFn: async () => {
-      const ids = [primary.data!, middle.data!].flatMap((tax) => tax.subjects.flatMap((s) => s.levels.map((l) => ({ id: curriculumId(l, s.id), level: l, label: s.label.ar }))));
+      // شعب الثانوي المتشاركة في منهاج واحد تُعدّ مرة واحدة (بمستوى صاحب المنهاج)
+      const all = [primary.data!, middle.data!, secondary.data!].flatMap((tax) => tax.subjects.flatMap((s) => s.levels.map((l) => ({ id: curriculumId(l, s.id), level: l, label: s.label.ar }))));
+      const ids = all.filter((x, i) => all.findIndex((y) => y.id === x.id) === i);
       const docs = await Promise.all(ids.map((x) => getCurriculum(x.id)));
       return ids.filter((_, i) => !docs[i]);
     },

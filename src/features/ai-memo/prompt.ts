@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { parseSecondary, STREAMS } from "../../shared/dz/secondary.ts";
 import type { Memo } from "../lessons/memo.ts";
 
 /* كاتب المذكرات بالذكاء الاصطناعي: الطلب، التعليمات، ومخطط الإجابة. منطق صرف (بلا شبكة) ليُختبر. */
@@ -7,12 +8,12 @@ export const AI_FORMATS = ["official", "detailed", "brief", "remedial"] as const
 export type AiFormat = (typeof AI_FORMATS)[number];
 
 export const aiMemoRequest = z.object({
-  level: z.string().regex(/^(?:PRE|[1-5]AP|[1-4]AM)$/),
+  level: z.string().regex(/^(?:PRE|[1-5]AP|[1-4]AM|[1-3]AS-[A-Z]{1,2})$/),
   subject: z.string().regex(/^[a-z]{2,16}$/),
   /** حصة من مذكرات المنصة (يُقرأ ملخّصها من الخادم) */
   lessonId: z
     .string()
-    .regex(/^(?:PRE|[1-5]AP|[1-4]AM)_[a-z]{2,16}_\d{3}$/)
+    .regex(/^(?:PRE|[1-5]AP|[1-4]AM|[1-3]AS-[A-Z]{1,2})_[a-z]{2,16}_\d{3}$/)
     .optional(),
   topic: z.string().trim().min(2).max(200),
   segment: z.string().trim().max(200).optional(),
@@ -30,7 +31,8 @@ export type LessonContext = { topic?: string; domain?: string; activity?: string
 
 export type MemoLanguage = "ar" | "fr" | "en";
 export const languageOf = (subject: string): MemoLanguage => (subject === "fr" ? "fr" : subject === "en" ? "en" : "ar");
-export const stageOf = (level: string): "preschool" | "primary" | "middle" => (level === "PRE" ? "preschool" : level.endsWith("AM") ? "middle" : "primary");
+export const stageOf = (level: string): "preschool" | "primary" | "middle" | "secondary" =>
+  level === "PRE" ? "preschool" : level.endsWith("AM") ? "middle" : parseSecondary(level) ? "secondary" : "primary";
 
 const SUBJECTS: Record<string, string> = {
   ar: "اللغة العربية",
@@ -49,6 +51,14 @@ const SUBJECTS: Record<string, string> = {
   music: "التربية الموسيقية",
   pe: "التربية البدنية والرياضية",
   tamazight: "اللغة الأمازيغية",
+  philosophy: "الفلسفة",
+  economics: "الاقتصاد والمناجمنت",
+  accounting: "التسيير المحاسبي والمالي",
+  law: "القانون",
+  engineering: "التكنولوجيا (الهندسة)",
+  german: "Deutsch",
+  spanish: "Español",
+  italian: "Italiano",
 };
 const LEVELS: Record<string, string> = {
   PRE: "التربية التحضيرية",
@@ -62,6 +72,14 @@ const LEVELS: Record<string, string> = {
   "3AM": "السنة الثالثة متوسط",
   "4AM": "السنة الرابعة متوسط",
 };
+
+/** اسم المستوى بالعربية: الثانوي بسنته وشعبته. */
+function levelName(level: string): string {
+  const s = parseSecondary(level);
+  if (!s) return LEVELS[level] ?? level;
+  const year = ["الأولى", "الثانية", "الثالثة"][s.year - 1];
+  return `السنة ${year} ثانوي — ${STREAMS[s.stream].ar}`;
+}
 
 const FORMAT_RULES: Record<AiFormat, string> = {
   official:
@@ -78,7 +96,7 @@ const STRUCTURE: Record<MemoLanguage | "middle-ar" | "preschool", string> = {
 - head: المادة/النشاط، المستوى، المقطع، الأسبوع (إن عُرف)، الميدان، المحتوى المعرفي، مركبات الكفاءة (إن كانت معروفة)، الهدف التعلمي (مؤشر الكفاءة)، الوسائل، المدة.
 - cols: ["المراحل", "الوضعيات التعلمية والنشاطات المقترحة", "التقويم"].
 - rows بالترتيب: «مرحلة الانطلاق» (وضعية انطلاقية أو تمهيد يثير الاهتمام)، «بناء التعلمات» (أنشطة الاكتشاف والملاحظة والاستنتاج، مع الحوصلة)، «التدريب والاستثمار» (تمارين تطبيقية وتقويم).`,
-  "middle-ar": `المتوسط (بالعربية):
+  "middle-ar": `المتوسط والثانوي (بالعربية):
 - head: المادة، المستوى، المقطع التعلمي، الميدان، المورد المعرفي (عنوان الدرس)، الكفاءة الختامية (إن عُرفت)، مركبات الكفاءة، مؤشرات الكفاءة/الأهداف التعلمية، الوسائل، المدة.
 - pre: الوضعية الانطلاقية/الإشكالية في إطار «> ».
 - cols: ["المراحل", "سير الحصة (نشاط الأستاذ والمتعلم)", "التقويم"].
@@ -185,7 +203,7 @@ export function toMemo(json: unknown, lang: MemoLanguage): { title: string; memo
 export function userPrompt(req: AiMemoRequest, ctx: LessonContext | null, example: Memo | null): string {
   const lang = languageOf(req.subject);
   const lines = [
-    `المستوى: ${LEVELS[req.level] ?? req.level} (${req.level})`,
+    `المستوى: ${levelName(req.level)} (${req.level})`,
     `المادة: ${SUBJECTS[req.subject] ?? req.subject}`,
     `لغة المذكرة: ${lang === "ar" ? "العربية" : lang === "fr" ? "الفرنسية" : "الإنجليزية"}`,
     `الموضوع/الدرس: ${ctx?.topic || req.topic}`,
@@ -212,7 +230,8 @@ export function userPrompt(req: AiMemoRequest, ctx: LessonContext | null, exampl
 
 /** المثال الأنسب: نفس المرحلة والمادة، ثم نفس المادة في مرحلة أخرى، ثم مادة بنفس اللغة. */
 export function pickExample(examples: Record<string, { memo: Memo }>, level: string, subject: string): Memo | null {
-  const stage = stageOf(level) === "middle" ? "middle" : "primary";
+  // الثانوي أقرب إلى مذكرات المتوسط
+  const stage = stageOf(level) === "primary" || stageOf(level) === "preschool" ? "primary" : "middle";
   const other = stage === "middle" ? "primary" : "middle";
   const lang = languageOf(subject);
   const sameLang = lang === "ar" ? ["ar", "islamic", "civic"] : [lang];
