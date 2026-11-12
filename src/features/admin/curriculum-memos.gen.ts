@@ -15,6 +15,7 @@ export const MEMO_FILES: Record<string, Entry> = {
   "1AM_music": { rev: "2b8ce0f7", count: 25, load: () => import("../../../content/memos/1AM_music.json") },
   "1AM_physics": { rev: "196ab000", count: 39, load: () => import("../../../content/memos/1AM_physics.json") },
   "1AM_science": { rev: "d0d555fb", count: 41, load: () => import("../../../content/memos/1AM_science.json") },
+  "1AS-ST_physics": { rev: "1769231f", count: 31, load: () => import("../../../content/memos/1AS-ST_physics.json") },
   "2AM_ar": { rev: "bde096e2", count: 131, load: () => import("../../../content/memos/2AM_ar.json") },
   "2AM_civic": { rev: "87976e6d", count: 15, load: () => import("../../../content/memos/2AM_civic.json") },
   "2AM_en": { rev: "9f99f0b8", count: 39, load: () => import("../../../content/memos/2AM_en.json") },
