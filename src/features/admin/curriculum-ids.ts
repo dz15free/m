@@ -13,6 +13,7 @@ export const REPO_CURRICULA: readonly string[] = [
   "1AM_science",
   "1AS-L_physics",
   "1AS-ST_physics",
+  "2AS-LP_physics",
   "2AS-SE_physics",
   "1AP_ar",
   "1AP_art",
