@@ -57,6 +57,22 @@ function group(s: string, from: number): [string, number] {
   return [s.slice(from), s.length];
 }
 
+/** رموز LaTeX الشائعة في المذكرات ⇐ حروفها (يونيكود). أمر غير معروف يُكتب اسمه دون «\\». */
+const SYMBOLS: Record<string, string> = {
+  alpha: "α", beta: "β", gamma: "γ", delta: "δ", epsilon: "ε", varepsilon: "ε", theta: "θ", lambda: "λ", mu: "μ", nu: "ν", pi: "π",
+  rho: "ρ", sigma: "σ", tau: "τ", phi: "φ", varphi: "φ", omega: "ω", eta: "η", chi: "χ", psi: "ψ", xi: "ξ", kappa: "κ", zeta: "ζ",
+  Delta: "Δ", Gamma: "Γ", Theta: "Θ", Lambda: "Λ", Sigma: "Σ", Phi: "Φ", Omega: "Ω", Pi: "Π", Psi: "Ψ",
+  times: "×", cdot: "·", div: "÷", pm: "±", mp: "∓", approx: "≈", simeq: "≃", neq: "≠", ne: "≠", equiv: "≡", propto: "∝",
+  le: "≤", leq: "≤", ge: "≥", geq: "≥", ll: "≪", gg: "≫", infty: "∞", circ: "°", degree: "°", partial: "∂", sum: "Σ", prod: "∏",
+  rightarrow: "→", to: "→", leftarrow: "←", Rightarrow: "⇒", Leftarrow: "⇐", Leftrightarrow: "⇔", leftrightarrow: "↔",
+  rightleftharpoons: "⇌", longrightarrow: "⟶", xrightarrow: "→", parallel: "∥", perp: "⊥", odot: "⊙", otimes: "⊗", frown: "⌢",
+  dots: "…", ldots: "…", cdots: "⋯", lvert: "|", rvert: "|", vert: "|", lbrace: "{", rbrace: "}", quad: " ", qquad: "  ",
+  cos: "cos", sin: "sin", tan: "tan", ln: "ln", log: "log", exp: "exp", lim: "lim", max: "max", min: "min",
+};
+/** حرف مركّب فوق كل حرف من النص (خط أفقي أو قبعة). */
+const accent = (nodes: MathNode[], mark: string): MathNode[] =>
+  nodes.map((n) => (n.t === "text" ? { t: "text", v: [...n.v].map((c) => (c === " " ? c : c + mark)).join("") } : n));
+
 export function parseMath(s: string): MathNode[] {
   const out: MathNode[] = [];
   let text = "";
@@ -84,6 +100,53 @@ export function parseMath(s: string): MathNode[] {
       const [c, j] = arg(i + 5);
       out.push({ t: "sqrt", c: parseMath(c) });
       i = j;
+    } else if (s[i] === "\\" && i + 1 < s.length) {
+      // أوامر أخرى: \overline{AB}، \left(، رموز يونانية وعلاقات، \, (مسافة)…
+      const name = /^[A-Za-z]+/.exec(s.slice(i + 1))?.[0];
+      if (!name) {
+        const c = s[i + 1]!;
+        text += ",;: ".includes(c) ? " " : c === "!" ? "" : c;
+        i += 2;
+        continue;
+      }
+      const j = i + 1 + name.length;
+      if (name === "left" || name === "right") {
+        i = j;
+        if (s[i] === ".") i++;
+        continue;
+      }
+      if (name === "overline" || name === "widehat" || name === "hat" || name === "bar") {
+        flush();
+        const [c, k] = arg(j);
+        out.push(...accent(parseMath(c), name === "overline" || name === "bar" ? "\u0305" : "\u0302"));
+        i = k;
+        continue;
+      }
+      if (name === "text" || name === "mathrm" || name === "mathbf" || name === "operatorname" || name === "mathit") {
+        flush();
+        const [c, k] = arg(j);
+        out.push(...parseMath(c));
+        i = k;
+        continue;
+      }
+      if (name === "overset") {
+        flush();
+        const [over, k] = arg(j);
+        const [base, k2] = arg(k);
+        out.push(...parseMath(base), { t: "sup", c: parseMath(over) });
+        i = k2;
+        continue;
+      }
+      if (name === "xrightarrow") {
+        flush();
+        const [over, k] = s[j] === "{" ? arg(j) : ["", j];
+        out.push({ t: "text", v: "→" }, ...(over ? [{ t: "sup" as const, c: parseMath(over) }] : []));
+        i = k;
+        continue;
+      }
+      text += SYMBOLS[name] ?? name;
+      // كما في LaTeX: المسافة بعد الأمر فاصل لا يُكتب (عدا أسماء الدوال: «\\cos x»)
+      i = j + (s[j] === " " && !/^(?:cos|sin|tan|ln|log|exp|lim|max|min)$/.test(name) ? 1 : 0);
     } else if ((s[i] === "^" || s[i] === "_") && i + 1 < s.length) {
       flush();
       const [c, j] = arg(i + 1);

@@ -84,3 +84,15 @@ test("الشكل المكرّر يُخزَّن مرة واحدة", () => {
   assert.equal(out.after, "[[img 0]]");
   assert.deepEqual(out.rows[0], ["[[img 0]]", "[[img 1]]"]);
 });
+
+test("parseMath renders common LaTeX commands as symbols", () => {
+  const flat = (nodes: ReturnType<typeof parseMath>): string =>
+    nodes.map((n) => (n.t === "text" ? n.v : n.t === "sup" ? `^(${flat(n.c)})` : n.t === "sub" ? `_(${flat(n.c)})` : n.t)).join("");
+  assert.equal(flat(parseMath("0,5\\times10^{-2}\\,N")), "0,5×10^(-2) N");
+  assert.equal(flat(parseMath("\\Delta\\theta\\approx\\pi")), "Δθ≈π");
+  assert.equal(flat(parseMath("\\left(a\\right)\\Rightarrow b")), "(a)⇒b");
+  assert.equal(flat(parseMath("\\overline{OA}")), "O̅A̅");
+  assert.equal(flat(parseMath("\\text{mol}\\cdot L^{-1}")), "mol·L^(-1)");
+  assert.equal(flat(parseMath("A\\xrightarrow{h}B")), "A→^(h)B");
+  assert.equal(flat(parseMath("30^{\\circ}C")), "30^(°)C");
+});
