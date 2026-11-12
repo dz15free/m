@@ -4,6 +4,7 @@ import { adminCommit, adminGet } from "@/lib/server/firestore-admin";
 import { effectivePlan, type Entitlement } from "@/shared/billing/plans";
 import { aiMemoRequest, languageOf, MEMO_SCHEMA, pickExample, SYSTEM_PROMPT, toMemo, userPrompt, type LessonContext } from "@/features/ai-memo/prompt";
 import type { Memo } from "@/features/lessons/memo";
+import { curriculumId } from "@/features/lessons/logic";
 import examples from "@/features/ai-memo/examples.gen.json";
 
 /* كاتب المذكرات بالذكاء الاصطناعي (Google Gemini): للمشتركين (والتجربة بعدد أقل)، بحصة يومية في aiUsage/{uid}.
@@ -83,7 +84,7 @@ export async function POST(req: Request) {
     const parsed = aiMemoRequest.safeParse(await req.json().catch(() => null));
     if (!parsed.success) throw new HttpError(400, "invalid request");
     const input = parsed.data;
-    if (input.lessonId && !input.lessonId.startsWith(`${input.level}_${input.subject}_`)) throw new HttpError(400, "invalid request");
+    if (input.lessonId && !input.lessonId.startsWith(`${curriculumId(input.level, input.subject)}_`)) throw new HttpError(400, "invalid request");
 
     // حجز الحصة اليومية (شرط مسبق على النسخة: طلبان متزامنان لا يتجاوزان الحد)
     const { limit, usage, updateTime } = await quotaOf(user);

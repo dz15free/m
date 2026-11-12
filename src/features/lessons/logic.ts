@@ -1,5 +1,6 @@
 /* المذكرات الجاهزة: منطق مشترك (بلا Firebase) — التجميع والوصول. */
 import type { Access } from "@/shared/billing/plans";
+import { programLevel } from "../../shared/dz/secondary.ts";
 
 export type CurriculumEntry = {
   id: string;
@@ -90,8 +91,9 @@ export function lessonAccess(access: Access, sample: boolean, staff = false): Le
   return { summary: false, body: false };
 }
 
-/** معرّف المنهاج لمستوى ومادة (1AP + ar ⇐ 1AP_ar). */
-export const curriculumId = (level: string, subject: string) => `${level}_${subject}`;
+/** معرّف المنهاج لمستوى ومادة (1AP + ar ⇐ 1AP_ar). شعب الثانوي التي تتشارك برنامج المادة تتشارك منهاجه
+    (2AS-TM + math ⇐ 2AS-M_math). */
+export const curriculumId = (level: string, subject: string) => `${programLevel(level, subject)}_${subject}`;
 
 /** أسابيع المنهاج بالترتيب: كل (مقطع، أسبوع) أسبوعٌ، وأيام الفترة التمهيدية تُجمع خمسةً خمسة. */
 export function curriculumWeeks(entries: CurriculumEntry[], daysPerWeek = 5): { kind: "day" | "week"; entries: CurriculumEntry[] }[] {

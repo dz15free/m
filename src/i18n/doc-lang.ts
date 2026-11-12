@@ -119,7 +119,7 @@ export function docLevel(level: { id: string; order: number; label: { fr: string
   if (!level) return fallback;
   if (lang === "fr") return level.label.fr;
   if (level.id === "PRE") return "Preschool";
-  return `${ordinal(level.order)} Grade — ${/AM$/.test(level.id) ? "Middle School" : /AS$/.test(level.id) ? "Secondary School" : "Primary School"}`;
+  return `${ordinal(level.order)} Grade — ${/AM$/.test(level.id) ? "Middle School" : /AS(?:-|$)/.test(level.id) ? "Secondary School" : "Primary School"}`;
 }
 
 /** اسم العطلة بلغة الوثيقة (أسماء الرزنامة عربية/فرنسية؛ الإنجليزية من الفرنسية). */

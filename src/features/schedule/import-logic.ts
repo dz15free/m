@@ -1,4 +1,5 @@
 import { nameKey, similarity } from "../../shared/text/names.ts";
+import { baseLevel } from "../../shared/dz/secondary.ts";
 import { fromMinutes, toMinutes, type Slot } from "./logic.ts";
 
 /* استيراد جدول التوقيت من جدول مقروء (Excel، PDF، صورة): دوال نقية مختبرة.
@@ -161,7 +162,7 @@ export function matchClass(text: string, classes: ImportClass[]): string | null 
   const compact = t.replace(/[\s-]/g, "");
   const hits = classes.filter((c) => {
     const n = c.level.match(/^\d/)?.[0] ?? "";
-    const stage = STAGE_OF_LEVEL[c.level.slice(1)]?.[1] ?? [];
+    const stage = STAGE_OF_LEVEL[baseLevel(c.level).slice(1)]?.[1] ?? [];
     const sec = String(Number.parseInt(c.section, 10));
     if (compact.includes(nameKey(c.displayName).replace(/[\s-]/g, ""))) return true;
     // التحضيري: «تحضيري»، «تحضيري 2»، «التحضيري-01»
