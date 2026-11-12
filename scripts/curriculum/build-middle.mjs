@@ -15,11 +15,18 @@
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { officialCalendar, examsForLevel } from "../../src/shared/dz/school-calendar.ts";
 import { defaultStart, schoolWeekOf } from "../../src/features/planning/logic.ts";
+import { parseSecondary, secondaryLevels } from "../../src/shared/dz/secondary.ts";
 
-const DIR = new URL("./middle/", import.meta.url);
+// مواصفات المتوسط (middle/) والثانوي (secondary/، مستوياته بالشعبة: 1AS-ST…)
+const DIRS = [new URL("./middle/", import.meta.url), new URL("./secondary/", import.meta.url)];
 const OUT = new URL("../../content/curriculum/", import.meta.url);
 const YEAR = "2026-2027";
-const LEVELS = { "1AM": "السنة الأولى متوسط", "2AM": "السنة الثانية متوسط", "3AM": "السنة الثالثة متوسط", "4AM": "السنة الرابعة متوسط" };
+const LEVELS = {
+  "1AM": "السنة الأولى متوسط", "2AM": "السنة الثانية متوسط", "3AM": "السنة الثالثة متوسط", "4AM": "السنة الرابعة متوسط",
+  ...Object.fromEntries(secondaryLevels().map((l) => [l.id, l.label.ar])),
+};
+/** تسمية المادة في الثانوي إن اختلفت عن المتوسط */
+const SECONDARY_NAMES = { physics: ["العلوم الفيزيائية", "علوم فيزيائية"], ar: ["اللغة العربية وآدابها", "لغة عربية"], islamic: ["العلوم الإسلامية", "علوم إسلامية"] };
 const SUBJECTS = {
   ar: ["اللغة العربية", "لغة عربية", "أدوات المادة: الكتاب المدرسي، السبورة، سندات"],
   fr: ["Langue française", "Français", "Manuel, tableau, supports"],
@@ -41,7 +48,7 @@ const HOURS = {
   "3AM": { ar: 4.5, fr: 2.5, en: 3.5, math: 4.5, science: 2, physics: 2, histgeo: 2, islamic: 1, civic: 1, music: 1, art: 1, informatics: 1 },
   "4AM": { ar: 5, fr: 2.5, en: 3.5, math: 5, science: 2, physics: 2, histgeo: 2, islamic: 1, civic: 1, music: 1, art: 1, informatics: 1 },
 };
-const KIND_LABEL = { situation: "وضعية", integration: "إدماج", evaluation: "تقويم", remediation: "معالجة", project: "مشروع" };
+const KIND_LABEL = { situation: "وضعية", integration: "إدماج", evaluation: "تقويم", remediation: "معالجة", project: "مشروع", lab: "عمل مخبري" };
 
 /** أسابيع السنة الدراسية لمستوى: رقمها، وهل هي أسبوع اختبارات، وأسبوع المعالجة بعده. */
 function yearPlan(level) {
@@ -63,7 +70,8 @@ function yearPlan(level) {
 
 function build(spec) {
   const { id, level, subject } = spec;
-  const [name, activity, materials] = SUBJECTS[subject];
+  const [baseName, baseActivity, materials] = SUBJECTS[subject] ?? [spec.subjectName, spec.subjectName, spec.materials ?? ""];
+  const [name, activity] = (parseSecondary(level) && SECONDARY_NAMES[subject]) || [baseName, baseActivity];
   const lang = spec.language ?? "ar";
   const plan = yearPlan(level);
   // ملفات من الويب (ليست في Drive): مصدر «w» للتوثيق فقط، والمذكرات المُنسّقة بأشكالها مضمّنة في content/memos
@@ -82,7 +90,7 @@ function build(spec) {
   let done = 0;
   const T = plan.teaching.length;
   // ملف يغطي البرنامج كله: الحصص موزّعة بالتناسب على أسابيع السنة؛ ملف جزئي: بالحجم الساعي الأسبوعي من أسبوع البداية
-  const perWeek = HOURS[level][subject] ?? 1;
+  const perWeek = spec.hoursPerWeek ?? HOURS[level]?.[subject] ?? 1;
   const from = Math.max(0, plan.teaching.findIndex((w) => w >= (spec.startWeek ?? 2)));
   const partial = spec.complete === false && total <= perWeek * (T - from);
   const slot = (before) => (partial ? Math.min(T - 1, from + Math.floor(before / perWeek + 1e-9)) : Math.min(T - 1, Math.floor((before / total) * T)));
@@ -139,7 +147,7 @@ function build(spec) {
     id, level, subject,
     title: `${name} — ${LEVELS[level]}`,
     source: {
-      ar: `مذكرات أساتذة منشورة للعموم (مناهج الجيل الثاني)${spec.web ? "" : " من مجلد «التعليم المتوسط»"}؛ الأسابيع تقديرية موزّعة على رزنامة ${YEAR} في غياب المخطط السنوي الرسمي`,
+      ar: `مذكرات أساتذة منشورة للعموم (مناهج الجيل الثاني)${spec.web || parseSecondary(level) ? "" : " من مجلد «التعليم المتوسط»"}؛ الأسابيع تقديرية موزّعة على رزنامة ${YEAR} في غياب المخطط السنوي الرسمي`,
       fr: `Fiches d'enseignants partagées publiquement (programmes de 2e génération) ; semaines estimées sur le calendrier ${YEAR}`,
     },
     weekMode: "absolute",
@@ -150,7 +158,7 @@ function build(spec) {
 }
 
 const only = process.argv.slice(2);
-for (const f of readdirSync(DIR).filter((f) => f.endsWith(".json")).sort()) {
+for (const [DIR, f] of DIRS.flatMap((d) => { try { return readdirSync(d).filter((f) => f.endsWith(".json")).sort().map((f) => [d, f]); } catch { return []; } })) {
   const spec = JSON.parse(readFileSync(new URL(f, DIR), "utf8"));
   if (only.length && !only.includes(spec.id)) continue;
   const out = build(spec);
