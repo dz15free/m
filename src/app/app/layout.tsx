@@ -10,7 +10,6 @@ import { BillingBanner } from "@/features/billing/billing-banner";
 import { SupportFab } from "@/features/support/support-fab";
 import { SiteBanner } from "@/features/pwa/site-banner";
 import { ConnectionStatus } from "@/features/pwa/connection-status";
-import { StageGate } from "@/features/onboarding/stage-gate";
 import { AccessGate } from "@/features/billing/access-gate";
 import { WelcomeTour } from "@/features/onboarding/welcome-tour";
 
@@ -42,9 +41,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
               >
                 <VerifyEmailBanner />
                 <BillingBanner />
-                <StageGate>
-                  <AccessGate>{children}</AccessGate>
-                </StageGate>
+                <AccessGate>{children}</AccessGate>
               </main>
             </div>
             <BottomNav />

@@ -46,13 +46,10 @@ export type AppConfig = {
   trialPlanId: string;
   contact?: { whatsapp?: string; email?: string; hours?: { ar: string; fr: string } };
   banner?: Banner;
-  /** المراحل التي فتحها الأدمن للأساتذة إلى جانب الابتدائي (المتوسط/الثانوي حين يجهز محتواها) */
-  openStages?: string[];
 };
 
-/** هل أدوات المرحلة متاحة لأساتذتها؟ الابتدائي دائمًا، وغيره حين يفتحه الأدمن. */
-export const stageOpen = (stage: string | undefined, config: Partial<AppConfig> | null | undefined) =>
-  stage === "primary" || (!!stage && !!config?.openStages?.includes(stage));
+/** هل أدوات المرحلة متاحة لأساتذتها؟ كل المراحل مفتوحة (الابتدائي والمتوسط والثانوي). */
+export const stageOpen = (stage: string | undefined) => stage === "primary" || stage === "middle" || stage === "secondary";
 
 /** قيم احتياطية إن لم تُضبط وثيقة `plans/free` بعد (القرار المعتمد: قسمان). */
 export const FREE_FALLBACK: Pick<Plan, "limits" | "features" | "contentAccess"> = {

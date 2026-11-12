@@ -150,9 +150,6 @@ export function OnboardingWizard() {
                 <span>
                   <span className="flex items-center gap-2 font-semibold">
                     {t(`preset.${p.id}.title`)}
-                    {p.id === "middleSecondary" && (
-                      <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-bold text-amber-900">{t("soon")}</span>
-                    )}
                   </span>
                   <span className="mt-0.5 block text-sm text-muted">{t(`preset.${p.id}.body`)}</span>
                 </span>
