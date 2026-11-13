@@ -77,6 +77,8 @@ export const ALLOWED_MIME = [
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
   // مذكرات Word القديمة (.doc) المنشورة كثيرًا في مواقع الأساتذة
   "application/msword",
+  // مجموعات مذكرات كاملة مضغوطة كما ينشرها الأساتذة (تحميل فقط)
+  "application/vnd.rar",
   "application/vnd.openxmlformats-officedocument.presentationml.presentation",
   "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
 ] as const;

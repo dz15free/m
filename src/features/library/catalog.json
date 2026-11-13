@@ -31076,5 +31076,839 @@
     "size": 262144
    }
   ]
+ },
+ {
+  "id": "cat-mo-3as-se-math-e01df8-1",
+  "title": {
+   "ar": "مذكرات الرياضيات السنة الثالثة ثانوي شعبة العلوم التجريبية (1)",
+   "fr": "Fiches de mathématiques — 3AS-SE"
+  },
+  "level": "3AS-SE",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1y-jTrPCvDJKw-b3LDTTOnYQsqQJqxrW6",
+    "name": "مذكرات رياضيات سنة ثالثة ثانوي شعبة علوم تجريبية.pdf",
+    "mime": "application/pdf",
+    "size": 4066153
+   },
+   {
+    "driveId": "1d5rdbiigSLJeK9EbufXa2qT0IkuizCbm",
+    "name": "النهايات و الاستمرار.rar",
+    "mime": "application/vnd.rar",
+    "size": 1332468
+   },
+   {
+    "driveId": "1XoNIjJGJqFbmaBoBQTon20WU5Eq6Z_NV",
+    "name": "الاشتقاقية.rar",
+    "mime": "application/vnd.rar",
+    "size": 1218114
+   },
+   {
+    "driveId": "1lMzwQ8INxAqwLhodWjnoo4yclyX0ihUq",
+    "name": "التزايد المقارن.rar",
+    "mime": "application/vnd.rar",
+    "size": 251048
+   },
+   {
+    "driveId": "1_30OxKh7uj45gRw4hvHE_UD9RWg1q_H_",
+    "name": "الدالة الاسية.rar",
+    "mime": "application/vnd.rar",
+    "size": 334714
+   },
+   {
+    "driveId": "1SA8rim4NwiU_2jHRgIUbw5j8iIbsfwKR",
+    "name": "الدالة اللوغاريتمية.rar",
+    "mime": "application/vnd.rar",
+    "size": 315587
+   },
+   {
+    "driveId": "1_3T8_lT26br4fK2GjNoaUqPHG2rI0Cdb",
+    "name": "الجداء السلمي في الفضاء.rar",
+    "mime": "application/vnd.rar",
+    "size": 150834
+   },
+   {
+    "driveId": "1zpInCFMuhWsxYXRtp1pw1EvlZAeKSGHC",
+    "name": "المستقيم و المستوي في الفضاء.rar",
+    "mime": "application/vnd.rar",
+    "size": 131683
+   },
+   {
+    "driveId": "1-LmPCYnAdbvpYnc1tuuMyQTBKQXmbXc8",
+    "name": "المقاطع المستوية للسطوح.rar",
+    "mime": "application/vnd.rar",
+    "size": 485684
+   },
+   {
+    "driveId": "179qhzQ3hH82XdJIPYUJ7OGLE9uYv-n3Q",
+    "name": "الاعداد المركبة.rar",
+    "mime": "application/vnd.rar",
+    "size": 9519538
+   }
+  ]
+ },
+ {
+  "id": "cat-mo-3as-se-math-e01df8-2",
+  "title": {
+   "ar": "مذكرات الرياضيات السنة الثالثة ثانوي شعبة العلوم التجريبية (2)",
+   "fr": "Fiches de mathématiques — 3AS-SE"
+  },
+  "level": "3AS-SE",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Fjp7DsHPnOMZOLg_2loOkUKTxioXTh2Y",
+    "name": "التشابه المباشر.rar",
+    "mime": "application/vnd.rar",
+    "size": 3561521
+   },
+   {
+    "driveId": "1gTzN6l8AD97dGeALaItvffM2M_4bPBsd",
+    "name": "المتتاليات العددية.rar",
+    "mime": "application/vnd.rar",
+    "size": 249222
+   },
+   {
+    "driveId": "1wOW13X-lCqU_nCDvRYvz_0ED27blt4QN",
+    "name": "لقسمة فـيZ.rar",
+    "mime": "application/vnd.rar",
+    "size": 169808
+   },
+   {
+    "driveId": "1_LdpXFel55QsIxyLgQOZJUIcSHUh2Zul",
+    "name": "لموافقات فـيZ.rar",
+    "mime": "application/vnd.rar",
+    "size": 194459
+   },
+   {
+    "driveId": "1u6qYHTo2mZrVjd3FD3CIBZ5tUMVn3S_P",
+    "name": "الاعداد الاولية.rar",
+    "mime": "application/vnd.rar",
+    "size": 148132
+   },
+   {
+    "driveId": "1tBcfe0qGoeq0NqrkWsHPfxmEg927lxDO",
+    "name": "الحساب التكاملي.rar",
+    "mime": "application/vnd.rar",
+    "size": 983953
+   },
+   {
+    "driveId": "1uHrWKjPCHoQaV-ATtiF4gePbMfgEeNo-",
+    "name": "الدوال الاصلية.rar",
+    "mime": "application/vnd.rar",
+    "size": 714667
+   },
+   {
+    "driveId": "1aLfxP4Yc0l62rSFI_UeP4PL3nMWb0Efp",
+    "name": "قوانين الاحتمال.rar",
+    "mime": "application/vnd.rar",
+    "size": 104032
+   },
+   {
+    "driveId": "18I8HhGGSClORE_CGqg8vX-thyJCBd2er",
+    "name": "الاحتمالات الشرطية.rar",
+    "mime": "application/vnd.rar",
+    "size": 1256463
+   }
+  ]
+ },
+ {
+  "id": "cat-mo-3as-m-math-2fa6f5-1",
+  "title": {
+   "ar": "مذكرات الرياضيات السنة الثالثة ثانوي شعبة رياضيات (1)",
+   "fr": "Fiches de mathématiques — 3AS-M"
+  },
+  "level": "3AS-M",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1jvrAsI9T776aAm9yWR_762tYqmfxeHJP",
+    "name": "مذكرات رياضيات سنة ثالثة ثانوي شعبة رياضيات.pdf",
+    "mime": "application/pdf",
+    "size": 19311568
+   },
+   {
+    "driveId": "1d5rdbiigSLJeK9EbufXa2qT0IkuizCbm",
+    "name": "النهايات و الاستمرار.rar",
+    "mime": "application/vnd.rar",
+    "size": 1332468
+   },
+   {
+    "driveId": "1XoNIjJGJqFbmaBoBQTon20WU5Eq6Z_NV",
+    "name": "الاشتقاقية.rar",
+    "mime": "application/vnd.rar",
+    "size": 1218114
+   },
+   {
+    "driveId": "1lMzwQ8INxAqwLhodWjnoo4yclyX0ihUq",
+    "name": "التزايد المقارن.rar",
+    "mime": "application/vnd.rar",
+    "size": 251048
+   },
+   {
+    "driveId": "1_30OxKh7uj45gRw4hvHE_UD9RWg1q_H_",
+    "name": "الدالة الاسية.rar",
+    "mime": "application/vnd.rar",
+    "size": 334714
+   },
+   {
+    "driveId": "1SA8rim4NwiU_2jHRgIUbw5j8iIbsfwKR",
+    "name": "الدالة اللوغاريتمية.rar",
+    "mime": "application/vnd.rar",
+    "size": 315587
+   },
+   {
+    "driveId": "1_3T8_lT26br4fK2GjNoaUqPHG2rI0Cdb",
+    "name": "الجداء السلمي في الفضاء.rar",
+    "mime": "application/vnd.rar",
+    "size": 150834
+   },
+   {
+    "driveId": "1zpInCFMuhWsxYXRtp1pw1EvlZAeKSGHC",
+    "name": "المستقيم و المستوي في الفضاء.rar",
+    "mime": "application/vnd.rar",
+    "size": 131683
+   },
+   {
+    "driveId": "1-LmPCYnAdbvpYnc1tuuMyQTBKQXmbXc8",
+    "name": "المقاطع المستوية للسطوح.rar",
+    "mime": "application/vnd.rar",
+    "size": 485684
+   },
+   {
+    "driveId": "179qhzQ3hH82XdJIPYUJ7OGLE9uYv-n3Q",
+    "name": "الاعداد المركبة.rar",
+    "mime": "application/vnd.rar",
+    "size": 9519538
+   }
+  ]
+ },
+ {
+  "id": "cat-mo-3as-m-math-2fa6f5-2",
+  "title": {
+   "ar": "مذكرات الرياضيات السنة الثالثة ثانوي شعبة رياضيات (2)",
+   "fr": "Fiches de mathématiques — 3AS-M"
+  },
+  "level": "3AS-M",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Fjp7DsHPnOMZOLg_2loOkUKTxioXTh2Y",
+    "name": "التشابه المباشر.rar",
+    "mime": "application/vnd.rar",
+    "size": 3561521
+   },
+   {
+    "driveId": "1gTzN6l8AD97dGeALaItvffM2M_4bPBsd",
+    "name": "المتتاليات العددية.rar",
+    "mime": "application/vnd.rar",
+    "size": 249222
+   },
+   {
+    "driveId": "1wOW13X-lCqU_nCDvRYvz_0ED27blt4QN",
+    "name": "لقسمة فـيZ.rar",
+    "mime": "application/vnd.rar",
+    "size": 169808
+   },
+   {
+    "driveId": "1_LdpXFel55QsIxyLgQOZJUIcSHUh2Zul",
+    "name": "لموافقات فـيZ.rar",
+    "mime": "application/vnd.rar",
+    "size": 194459
+   },
+   {
+    "driveId": "1u6qYHTo2mZrVjd3FD3CIBZ5tUMVn3S_P",
+    "name": "الاعداد الاولية.rar",
+    "mime": "application/vnd.rar",
+    "size": 148132
+   },
+   {
+    "driveId": "1tBcfe0qGoeq0NqrkWsHPfxmEg927lxDO",
+    "name": "الحساب التكاملي.rar",
+    "mime": "application/vnd.rar",
+    "size": 983953
+   },
+   {
+    "driveId": "1uHrWKjPCHoQaV-ATtiF4gePbMfgEeNo-",
+    "name": "الدوال الاصلية.rar",
+    "mime": "application/vnd.rar",
+    "size": 714667
+   },
+   {
+    "driveId": "1aLfxP4Yc0l62rSFI_UeP4PL3nMWb0Efp",
+    "name": "قوانين الاحتمال.rar",
+    "mime": "application/vnd.rar",
+    "size": 104032
+   },
+   {
+    "driveId": "18I8HhGGSClORE_CGqg8vX-thyJCBd2er",
+    "name": "الاحتمالات الشرطية.rar",
+    "mime": "application/vnd.rar",
+    "size": 1256463
+   }
+  ]
+ },
+ {
+  "id": "cat-mo-3as-tm-math-59e735-1",
+  "title": {
+   "ar": "مذكرات الرياضيات السنة الثالثة ثانوي شعبة تقني رياضي (1)",
+   "fr": "Fiches de mathématiques — 3AS-TM"
+  },
+  "level": "3AS-TM",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1uf-UFWcyNe2ro-9m3AzNdtq5Frxxzk90",
+    "name": "مذكرات رياضيات سنة ثالثة ثانوي شعبة  تقنيرياضي.pdf",
+    "mime": "application/pdf",
+    "size": 555306
+   },
+   {
+    "driveId": "1d5rdbiigSLJeK9EbufXa2qT0IkuizCbm",
+    "name": "النهايات و الاستمرار.rar",
+    "mime": "application/vnd.rar",
+    "size": 1332468
+   },
+   {
+    "driveId": "1XoNIjJGJqFbmaBoBQTon20WU5Eq6Z_NV",
+    "name": "الاشتقاقية.rar",
+    "mime": "application/vnd.rar",
+    "size": 1218114
+   },
+   {
+    "driveId": "1lMzwQ8INxAqwLhodWjnoo4yclyX0ihUq",
+    "name": "التزايد المقارن.rar",
+    "mime": "application/vnd.rar",
+    "size": 251048
+   },
+   {
+    "driveId": "1_30OxKh7uj45gRw4hvHE_UD9RWg1q_H_",
+    "name": "الدالة الاسية.rar",
+    "mime": "application/vnd.rar",
+    "size": 334714
+   },
+   {
+    "driveId": "1SA8rim4NwiU_2jHRgIUbw5j8iIbsfwKR",
+    "name": "الدالة اللوغاريتمية.rar",
+    "mime": "application/vnd.rar",
+    "size": 315587
+   },
+   {
+    "driveId": "1_3T8_lT26br4fK2GjNoaUqPHG2rI0Cdb",
+    "name": "الجداء السلمي في الفضاء.rar",
+    "mime": "application/vnd.rar",
+    "size": 150834
+   },
+   {
+    "driveId": "1zpInCFMuhWsxYXRtp1pw1EvlZAeKSGHC",
+    "name": "المستقيم و المستوي في الفضاء.rar",
+    "mime": "application/vnd.rar",
+    "size": 131683
+   },
+   {
+    "driveId": "1-LmPCYnAdbvpYnc1tuuMyQTBKQXmbXc8",
+    "name": "المقاطع المستوية للسطوح.rar",
+    "mime": "application/vnd.rar",
+    "size": 485684
+   },
+   {
+    "driveId": "179qhzQ3hH82XdJIPYUJ7OGLE9uYv-n3Q",
+    "name": "الاعداد المركبة.rar",
+    "mime": "application/vnd.rar",
+    "size": 9519538
+   }
+  ]
+ },
+ {
+  "id": "cat-mo-3as-tm-math-59e735-2",
+  "title": {
+   "ar": "مذكرات الرياضيات السنة الثالثة ثانوي شعبة تقني رياضي (2)",
+   "fr": "Fiches de mathématiques — 3AS-TM"
+  },
+  "level": "3AS-TM",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Fjp7DsHPnOMZOLg_2loOkUKTxioXTh2Y",
+    "name": "التشابه المباشر.rar",
+    "mime": "application/vnd.rar",
+    "size": 3561521
+   },
+   {
+    "driveId": "1gTzN6l8AD97dGeALaItvffM2M_4bPBsd",
+    "name": "المتتاليات العددية.rar",
+    "mime": "application/vnd.rar",
+    "size": 249222
+   },
+   {
+    "driveId": "1wOW13X-lCqU_nCDvRYvz_0ED27blt4QN",
+    "name": "لقسمة فـيZ.rar",
+    "mime": "application/vnd.rar",
+    "size": 169808
+   },
+   {
+    "driveId": "1_LdpXFel55QsIxyLgQOZJUIcSHUh2Zul",
+    "name": "لموافقات فـيZ.rar",
+    "mime": "application/vnd.rar",
+    "size": 194459
+   },
+   {
+    "driveId": "1u6qYHTo2mZrVjd3FD3CIBZ5tUMVn3S_P",
+    "name": "الاعداد الاولية.rar",
+    "mime": "application/vnd.rar",
+    "size": 148132
+   },
+   {
+    "driveId": "1tBcfe0qGoeq0NqrkWsHPfxmEg927lxDO",
+    "name": "الحساب التكاملي.rar",
+    "mime": "application/vnd.rar",
+    "size": 983953
+   },
+   {
+    "driveId": "1uHrWKjPCHoQaV-ATtiF4gePbMfgEeNo-",
+    "name": "الدوال الاصلية.rar",
+    "mime": "application/vnd.rar",
+    "size": 714667
+   },
+   {
+    "driveId": "1aLfxP4Yc0l62rSFI_UeP4PL3nMWb0Efp",
+    "name": "قوانين الاحتمال.rar",
+    "mime": "application/vnd.rar",
+    "size": 104032
+   },
+   {
+    "driveId": "18I8HhGGSClORE_CGqg8vX-thyJCBd2er",
+    "name": "الاحتمالات الشرطية.rar",
+    "mime": "application/vnd.rar",
+    "size": 1256463
+   }
+  ]
+ },
+ {
+  "id": "cat-mo-3as-ge-math-c74d48-1",
+  "title": {
+   "ar": "مذكرات الرياضيات السنة الثالثة ثانوي شعبة تسيير و اقتصاد (1)",
+   "fr": "Fiches de mathématiques — 3AS-GE"
+  },
+  "level": "3AS-GE",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1Jsu16AYIvrmjDFDymWBnSn1iJHjpg218",
+    "name": "مذكرات مادة الرياضيات للسنة الثانية تسيير و اقتصاد.pdf",
+    "mime": "application/pdf",
+    "size": 2456304
+   },
+   {
+    "driveId": "10w13xMEHWHArcp-UF1QXh3RJxGs8mFX_",
+    "name": "مذكرات 3 تسيير وإق.rar",
+    "mime": "application/vnd.rar",
+    "size": 1716061
+   },
+   {
+    "driveId": "1-nz8DebnkYsep5W-4J8R0XEC1XTS_qz9",
+    "name": "مذكرات رياضيات سنة ثالثة ثانوي شعبة تسيير و اقتصاد.pdf",
+    "mime": "application/pdf",
+    "size": 7355674
+   },
+   {
+    "driveId": "1Hau9Ww4kkdxANdM0rXwWUV2my5ON5s2u",
+    "name": "مذكرات تسيير واقتصاد سنة ثالثة رياضيات.rar",
+    "mime": "application/vnd.rar",
+    "size": 6674452
+   },
+   {
+    "driveId": "1asmWzKc6MrPGlR9lcytddbEnLBEx8deK",
+    "name": "01 مذكرةالمتتاليات الحسابية.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 83944
+   },
+   {
+    "driveId": "1HIwIdldvsg8vuejrlf9yll-cY_bysW1p",
+    "name": "02 مذكرة المتتاليات الهندسية.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 125806
+   },
+   {
+    "driveId": "11C3P6CTPLgdxNXHy69NXddMLXRtCTZ0X",
+    "name": "03 مذكرة متتالية محدودة.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 84922
+   },
+   {
+    "driveId": "1j2wD6IQdm5NHIw7GfjUfKXJgGAuAanlE",
+    "name": "04 مذكرة متتالية رتيبة ــ متتقاربة.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 114154
+   },
+   {
+    "driveId": "1UY6SC2rF7IRlj96dhOdKN-DBMjz9eY3i",
+    "name": "05 مذكرة تعرف على متتالية معرفة بعلاقة.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 203595
+   },
+   {
+    "driveId": "1JMc6aJsMUujZgJdW8ynIlCxnG3hwxMKm",
+    "name": "06 مذكرة التمثيل البياني لمتتالية عددية.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 212172
+   }
+  ]
+ },
+ {
+  "id": "cat-mo-3as-ge-math-c74d48-2",
+  "title": {
+   "ar": "مذكرات الرياضيات السنة الثالثة ثانوي شعبة تسيير و اقتصاد (2)",
+   "fr": "Fiches de mathématiques — 3AS-GE"
+  },
+  "level": "3AS-GE",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "14_o1ANPYjOG-hauiyzRCMvwGavWfbjLi",
+    "name": "07 مذكرة الاستدلال بالتراجع.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 106527
+   },
+   {
+    "driveId": "1GWV0TaFqCu0YIFwjc_Yf0QROMicyY7J_",
+    "name": "08 السلاسل الإحصائية ذات متغيرين.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 93422
+   },
+   {
+    "driveId": "1eVq87T-0S1cyeQakduMAaVlk_Ra29eC7",
+    "name": "09 مذكرةالاستمرارية.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 84588
+   },
+   {
+    "driveId": "1iehF6Ra3JRkXf2j_3sN01tKOGXiiSjnN",
+    "name": "10 مذكرة مبرهنة القيم المتوسطة و المعادلات.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 164917
+   },
+   {
+    "driveId": "1H7jw_jkBenRIQZexGhP3gxasDckMF-wc",
+    "name": "11 مذكرة الدالة المركبة و مشتقتها.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 153630
+   },
+   {
+    "driveId": "19CG6f7140iOn5mCsUyMXmpvU_k8DIx_b",
+    "name": "12 مذكرة النهايات.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 151348
+   },
+   {
+    "driveId": "1AzyDldwJBab1QAdjYipYNOhnMuT77ebM",
+    "name": "13 مذكرة النهايات بالمقاربة.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 144042
+   },
+   {
+    "driveId": "1MWQRMFwE-M7a6QBC_KU7_KQZLt8eZ1JM",
+    "name": "14 مذكرة المستقيمات المقاربة.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 148429
+   },
+   {
+    "driveId": "1hxi2o_Fzqmh3nX6MUB-DQaNYYHZprQLv",
+    "name": "15 مذكرة الدوال الاصلية على مجال.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 251159
+   },
+   {
+    "driveId": "1paPsG8yjJtipisUrUsbhE3yJsW5qWIAB",
+    "name": "16 مذكرة العمليات على الدوال الاصلية.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 234745
+   }
+  ]
+ },
+ {
+  "id": "cat-mo-3as-lp-math-ba8b34",
+  "title": {
+   "ar": "مذكرات الرياضيات السنة الثالثة ثانوي شعبة آداب و فلسفة ولغات أجنبية",
+   "fr": "Fiches de mathématiques — 3AS-LP"
+  },
+  "level": "3AS-LP",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "1OJu-6J08Rf-liE1sqdxE_IOvQAG6W-KZ",
+    "name": "مذكرات رياضيات سنة ثالثة ثانوي الشعب الادبية.pdf",
+    "mime": "application/pdf",
+    "size": 6158465
+   },
+   {
+    "driveId": "1YMoyYGQCa269ookFulJXHqieweOaGNDj",
+    "name": "مذكرات الرياضيات اداب 3فلسفة.rar",
+    "mime": "application/vnd.rar",
+    "size": 3089698
+   },
+   {
+    "driveId": "1hAbc4FyVlQUYztgPU7SvGe_JEH048Iwg",
+    "name": "مذكرات سنة ثالثة أداب وفلسفة رياضيات.rar",
+    "mime": "application/vnd.rar",
+    "size": 7459124
+   },
+   {
+    "driveId": "1aVLAe6npQ9dSvcheuOHJ02Td8qGPhzJT",
+    "name": "1-القسمة الاقليدية.rar",
+    "mime": "application/vnd.rar",
+    "size": 227556
+   },
+   {
+    "driveId": "1GorqSmMP-nck7ImjandhNuUuM4lpEX-N",
+    "name": "2-المتتاليات.rar",
+    "mime": "application/vnd.rar",
+    "size": 270760
+   },
+   {
+    "driveId": "1GLALrHDhA2cCbgnt-IWtsayfM8aLUIfm",
+    "name": "3-الدوال كثيرات الجدود.rar",
+    "mime": "application/vnd.rar",
+    "size": 618042
+   },
+   {
+    "driveId": "1Ayv3KwMcwCfmyEIG9UBxGeber0_64QOj",
+    "name": "4-اتجاه تغير دالة.rar",
+    "mime": "application/vnd.rar",
+    "size": 213516
+   },
+   {
+    "driveId": "1YkItYDGbYswcQV0SYSbMna-JIKobulIn",
+    "name": "5-الدوال التناظرية.rar",
+    "mime": "application/vnd.rar",
+    "size": 1708840
+   },
+   {
+    "driveId": "1s3Gepe8Yl8Dq10vcuH1oAslMIVrnzvup",
+    "name": "6-الاحتمالات.rar",
+    "mime": "application/vnd.rar",
+    "size": 52072
+   }
+  ]
+ },
+ {
+  "id": "cat-mo-2as-math-57eb69",
+  "title": {
+   "ar": "مذكرات الرياضيات السنة الثانية ثانوي جميع الشعب",
+   "fr": "Fiches de mathématiques — 2AS"
+  },
+  "level": "2AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "13gwoSJngLAKWJt0vFs_T92Bicte9cXGP",
+    "name": "مذكرات 2 علوم تجريبية.rar",
+    "mime": "application/vnd.rar",
+    "size": 3209256
+   },
+   {
+    "driveId": "1MMvyZFDfEnvxfLO6CaAhFKRc8Shpzk4a",
+    "name": "مذكرات سنة 2 ادب.pdf",
+    "mime": "application/pdf",
+    "size": 1068345
+   },
+   {
+    "driveId": "19gGOGViWi0jx7_9uebNhs7mS5qq-FmnG",
+    "name": "مذكرات الرياضيات 2 ثانوي تسيير اقتصاد.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 741963
+   }
+  ]
+ },
+ {
+  "id": "cat-mo-1as-math-9213a3",
+  "title": {
+   "ar": "مذكرات الرياضيات أولى ثانوي جذع مشترك علوم و تكنولوجيا وأداب وفلسفة",
+   "fr": "Fiches de mathématiques — 1AS"
+  },
+  "level": "1AS",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي",
+   "رياضيات"
+  ],
+  "excerpt": "مذكرات رياضيات كاملة حسب الوحدات (Word وPDF، وبعضها ملفات مضغوطة RAR). المصدر: mathonec.com (روابط Drive منشورة للعموم).",
+  "access": "premium",
+  "author": "mathonec.com",
+  "license": "public",
+  "files": [
+   {
+    "driveId": "15NOSofd-PreDGXXYx8qY5rEfmItAEaAW",
+    "name": "النموذج رقم 01.rar",
+    "mime": "application/vnd.rar",
+    "size": 12525579
+   },
+   {
+    "driveId": "1pR3IzrffQgVSnrZt6xXN6j3dEwEJzLhn",
+    "name": "النموذج رقم 02.pdf",
+    "mime": "application/pdf",
+    "size": 4740188
+   },
+   {
+    "driveId": "1B6VlazpAbq1fyoDTARmpMkmubSLL6jiu",
+    "name": "النموذج رقم 03.pdf",
+    "mime": "application/pdf",
+    "size": 19367030
+   },
+   {
+    "driveId": "1fDFMNM4EUNd51yvFSNu6GjrBFqbcecOG",
+    "name": "النموذج رقم 04.pdf",
+    "mime": "application/pdf",
+    "size": 5313352
+   },
+   {
+    "driveId": "1nf7WzIFoWOwXPMti6LsyRQVt__C1LuBI",
+    "name": "الاستاذ مومنة عبد الكريم.rar",
+    "mime": "application/vnd.rar",
+    "size": 6658254
+   },
+   {
+    "driveId": "1fibv5KPWx7L9X6ZRLHk7vSk5pgaEJc9_",
+    "name": "الاستاذ دهيمي.docx",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 6600975
+   }
+  ]
  }
 ]
