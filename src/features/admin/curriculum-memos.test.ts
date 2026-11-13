@@ -11,7 +11,7 @@ const gen = readFileSync(new URL("./curriculum-memos.gen.ts", import.meta.url), 
 const catalog = readFileSync(new URL("./curriculum-catalog.ts", import.meta.url), "utf8");
 
 test("the generated memo index is up to date (node scripts/curriculum/memo-index.mjs)", () => {
-  const listed = [...gen.matchAll(/^ {2}"([^"]+)": \{ rev: "([0-9a-f]+)", count: (\d+),/gm)].map(([, id, rev, n]) => [id, rev, Number(n)]);
+  const listed = [...gen.matchAll(/^ {2}"([^"]+)": \{ rev: "([0-9a-f]+)", count: (\d+) \}/gm)].map(([, id, rev, n]) => [id, rev, Number(n)]);
   const actual = files.map((f) => {
     const memos = JSON.parse(readFileSync(new URL(f, DIR), "utf8")) as Record<string, unknown>;
     return [f.slice(0, -5), memoFileRev(memos), Object.keys(memos).length];

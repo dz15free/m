@@ -5,7 +5,7 @@
  * - pdf.js: عامل قراءة PDF
  * يعمل تلقائيًا قبل dev وbuild. الملفات الناتجة غير مرفوعة إلى git.
  */
-import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 
 const out = "public/vendor";
 const files = [
@@ -41,3 +41,15 @@ await mkdir(`${out}/pdf`, { recursive: true });
 await writeFile(`${out}/pdf/pdf.worker.min.mjs`, patched);
 
 console.log(`✓ ${files.length + 1} vendor assets → ${out} (pdf.js worker patched for ActualText)`);
+
+/* ملفات المذكرات المُنسّقة (content/memos، عشرات الميغابايت بصورها) تُنسخ أصولًا ثابتة: خارج حزمة الخادم (حدّ حجم
+   Worker) وحزمة المتصفح. مجلدها باسم سري (src/lib/server/memo-assets.json، لا يعرفه إلا الخادم ومستودع الكود الذي
+   يحوي المذكرات أصلًا)، فلا يصل إليها إلا مسار الإدارة /api/admin/memo-file للأدمن والمحرّر. */
+const { dir: memoDir } = JSON.parse(await readFile("src/lib/server/memo-assets.json", "utf8"));
+const memoOut = `public/${memoDir}`;
+await rm("public/memo-data", { recursive: true, force: true });
+await rm(memoOut, { recursive: true, force: true });
+await mkdir(memoOut, { recursive: true });
+const memoFiles = (await readdir("content/memos")).filter((f) => /^[\w-]+\.json$/.test(f));
+for (const f of memoFiles) await copyFile(`content/memos/${f}`, `${memoOut}/${f}`);
+console.log(`✓ ${memoFiles.length} memo files → public/<private dir> (served to staff only)`);
