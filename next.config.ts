@@ -29,6 +29,11 @@ const nextConfig: NextConfig = {
     // فلا نحتاج خدمة تحسين صور على الخادم — يبقى النشر محمولًا ومجانيًا.
     unoptimized: true,
   },
+  // نسخة Firestore الخاصة بـ Node (gRPC + protobufjs) تولّد كودًا بـ new Function عند تحميلها، وهذا ممنوع في Cloudflare
+  // Workers فتسقط الصفحات المصيّرة على الخادم (500). نستعمل نسخة المتصفح (fetch/WebChannel) في كل مكان.
+  turbopack: {
+    resolveAlias: { "@firebase/firestore": "./node_modules/@firebase/firestore/dist/index.esm.js" },
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
