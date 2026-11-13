@@ -27841,5 +27841,3240 @@
     "size": null
    }
   ]
+ },
+ {
+  "id": "cat-ed-1as-histgeo-2995ad76",
+  "title": {
+   "ar": "مذكرات التاريخ سنة أولى ثانوي",
+   "fr": "Fiches — histgeo — 1AS"
+  },
+  "level": "1AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE_%D8%B31_%D8%AB%D8%A7%D9%86%D9%88%D9%8A.doc",
+    "name": "مذكرات_التاريخ_س1_ثانوي.doc",
+    "mime": "application/msword",
+    "size": 352768
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-histgeo-073697b9",
+  "title": {
+   "ar": "مذكرات الجغرافيا سنة أولى ثانوي",
+   "fr": "Fiches — histgeo — 1AS"
+  },
+  "level": "1AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%AF%D9%83%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%AC%D8%BA%D8%B1%D8%A7%D9%81%D9%8A%D8%A7-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-1.doc",
+    "name": "مدكرات-الجغرافيا-السنة-1.doc",
+    "mime": "application/msword",
+    "size": 169472
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-l-math-aba68a58",
+  "title": {
+   "ar": "مذكرات دروس الرياضيات في الحساب سنة أولى ثانوي آداب",
+   "fr": "Fiches — math — 1AS-L"
+  },
+  "level": "1AS-L",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA-1-%D8%A3%D8%AF%D8%A8%D9%8A-%D8%AD%D8%B3%D8%A7%D8%A8.pdf",
+    "name": "مذكرات-1-أدبي-حساب.pdf",
+    "mime": "application/pdf",
+    "size": 1512152
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-l-math-33feb12b",
+  "title": {
+   "ar": "مذكرات دروس الرياضيات في الهندسة سنة أولى ثانوي آداب",
+   "fr": "Fiches — math — 1AS-L"
+  },
+  "level": "1AS-L",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA-1-%D8%A3%D8%AF%D8%A8%D9%8A-%D8%AD%D8%B3%D8%A7%D8%A8-1.pdf",
+    "name": "مذكرات-1-أدبي-حساب-1.pdf",
+    "mime": "application/pdf",
+    "size": 1512152
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-l-math-c0382b0a",
+  "title": {
+   "ar": "مذكرات دروس الرياضيات في الإحصاء سنة أولى ثانوي آداب",
+   "fr": "Fiches — math — 1AS-L"
+  },
+  "level": "1AS-L",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA-1-%D8%A3%D8%AF%D8%A8%D9%8A-%D8%A5%D8%AD%D8%B5%D8%A7%D8%A1.pdf",
+    "name": "مذكرات-1-أدبي-إحصاء.pdf",
+    "mime": "application/pdf",
+    "size": 613996
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-math-bc432b2d",
+  "title": {
+   "ar": "مذكرات الرياضيات سنة أولى ثانوي علمي حساب وجبر",
+   "fr": "Fiches — math — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA-1%D8%B9-%D8%AD%D8%B3%D8%A7%D8%A8-%D9%88%D8%AC%D8%A8%D8%B1.pdf",
+    "name": "مذكرات-1ع-حساب-وجبر.pdf",
+    "mime": "application/pdf",
+    "size": 1163014
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-math-6281b42b",
+  "title": {
+   "ar": "مذكرات الرياضيات سنة أولى ثانوي علمي تحليل",
+   "fr": "Fiches — math — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA-1%D8%B9-%D8%AA%D8%AD%D9%84%D9%8A%D9%84.pdf",
+    "name": "مذكرات-1ع-تحليل.pdf",
+    "mime": "application/pdf",
+    "size": 1170358
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-math-8e8aec1d",
+  "title": {
+   "ar": "مذكرات الرياضيات سنة أولى ثانوي علمي هندسة",
+   "fr": "Fiches — math — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA-1%D8%B9-%D9%87%D9%86%D8%AF%D8%B3%D8%A9.pdf",
+    "name": "مذكرات-1ع-هندسة.pdf",
+    "mime": "application/pdf",
+    "size": 1378771
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-math-46338478",
+  "title": {
+   "ar": "مذكرات الرياضيات سنة أولى ثانوي علمي إحصاء",
+   "fr": "Fiches — math — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA-1%D8%B9-%D8%A5%D8%AD%D8%B5%D8%A7%D8%A1.pdf",
+    "name": "مذكرات-1ع-إحصاء.pdf",
+    "mime": "application/pdf",
+    "size": 702295
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-ar-8ce84ef6",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة أولى ثانوي علمي",
+   "fr": "Fiches — ar — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%B9%D9%84%D9%88%D9%85-%D8%AA.doc",
+    "name": "مذكرات-السنة-الأولى-علوم-ت.doc",
+    "mime": "application/msword",
+    "size": 219648
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-ar-0fbb02c5",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة أولى ثانوي علمي 2",
+   "fr": "Fiches — ar — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%AF%D9%83%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-1-%D8%A7%D9%84%D8%B4%D8%B9%D8%A8%D8%A9-%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9.doc",
+    "name": "مدكرات-السنة-1-الشعبة-العلمية.doc",
+    "mime": "application/msword",
+    "size": 536064
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-l-ar-0bd7007e",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة أولى ثانوي آداب",
+   "fr": "Fiches — ar — 1AS-L"
+  },
+  "level": "1AS-L",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%A2%D8%AF%D8%A7%D8%A8.doc",
+    "name": "مذكرات-السنة-الأولى-آداب.doc",
+    "mime": "application/msword",
+    "size": 1287168
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-l-ar-f041b8ea",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة أولى ثانوي آداب 2",
+   "fr": "Fiches — ar — 1AS-L"
+  },
+  "level": "1AS-L",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D8%A3%D9%88%D9%84%D9%89-%D8%AC%D8%B0%D8%B9-%D9%85%D8%B4%D8%AA%D8%B1%D9%83-%D8%A2%D8%AF%D8%A7%D8%A8-%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A9-02.doc",
+    "name": "أولى-جذع-مشترك-آداب-الوحدة-02.doc",
+    "mime": "application/msword",
+    "size": 124416
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-math-b07623e9",
+  "title": {
+   "ar": "مذكرات دروس الرياضيات سنة أولى ثانوي علمي",
+   "fr": "Fiches — math — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D8%A7%D9%84%D8%A8%D8%A7%D8%A8-01-06.pdf",
+    "name": "الباب-01-06.pdf",
+    "mime": "application/pdf",
+    "size": 10787199
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-math-7bd1c6c7",
+  "title": {
+   "ar": "مذكرات الحساب الشعاعي والهندسة التحليلية رياضيات أولى ثانوي علمي",
+   "fr": "Fiches — math — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D8%A7%D9%84%D8%A8%D8%A7%D8%A8-7.pdf",
+    "name": "الباب-7.pdf",
+    "mime": "application/pdf",
+    "size": 2637983
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-math-bb256997",
+  "title": {
+   "ar": "مذكرات الهندسة الفضائية رياضيات أولى ثانوي علمي",
+   "fr": "Fiches — math — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D8%A7%D9%84%D8%A8%D8%A7%D8%A8-8.pdf",
+    "name": "الباب-8.pdf",
+    "mime": "application/pdf",
+    "size": 2018240
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-math-d33df6cc",
+  "title": {
+   "ar": "مذكرات الهندسة المستوية رياضيات أولى ثانوي علمي",
+   "fr": "Fiches — math — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "math",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D8%A7%D9%84%D8%A8%D8%A7%D8%A8-09.pdf",
+    "name": "الباب-09.pdf",
+    "mime": "application/pdf",
+    "size": 2869396
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-science-da2f1392",
+  "title": {
+   "ar": "مذكرات دروس العلوم للسنة الأولى ثانوي علمي 2",
+   "fr": "Fiches — science — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%B9.%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9_%D8%B31_%D8%AB%D8%A7%D9%86%D9%88%D9%8A_%D8%B9%D9%84%D9%85%D9%8A.pdf",
+    "name": "مذكرات_ع.طبيعية_س1_ثانوي_علمي.pdf",
+    "mime": "application/pdf",
+    "size": 415926
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-science-35fa3a5d",
+  "title": {
+   "ar": "مذكرات دروس العلوم للسنة الأولى ثانوي علمي 3",
+   "fr": "Fiches — science — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9_%D8%B31_%D8%AB%D8%A7%D9%86%D9%88%D9%8A_%D8%B9%D9%84%D9%88%D9%85.pdf",
+    "name": "مذكرات_العلوم_الطبيعية_س1_ثانوي_علوم.pdf",
+    "mime": "application/pdf",
+    "size": 7149824
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-science-f35f8b2a",
+  "title": {
+   "ar": "مذكرات دروس العلوم للسنة الأولى ثانوي علمي 4",
+   "fr": "Fiches — science — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0_%D9%81%D9%8A_%D9%85%D8%A7%D8%AF%D8%A9_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9_%D8%B3%D9%86%D8%A9_%D8%A3%D9%88%D9%84%D9%89_%D8%AB%D8%A7%D9%86%D9%88%D9%8A-.pdf",
+    "name": "مذكرات_الأستاذ_في_مادة_العلوم_الطبيعية_سنة_أولى_ثانوي-.pdf",
+    "mime": "application/pdf",
+    "size": 7337722
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-l-science-c53514e3",
+  "title": {
+   "ar": "مذكرات دروس العلوم للسنة الأولى ثانوي آداب",
+   "fr": "Fiches — science — 1AS-L"
+  },
+  "level": "1AS-L",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%B9.%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9_%D8%B31_%D8%AB%D8%A7%D9%86%D9%88%D9%8A_%D8%B4%D8%B9%D8%A8%D8%A9_%D8%A2%D8%AF%D8%A7%D8%A8.doc",
+    "name": "مذكرات_ع.طبيعية_س1_ثانوي_شعبة_آداب.doc",
+    "mime": "application/msword",
+    "size": 782848
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-science-a3720d21",
+  "title": {
+   "ar": "مذكرات دروس العلوم للسنة الأولى ثانوي جذع مشترك علوم",
+   "fr": "Fiches — science — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2022/10/%D9%85%D8%B0%D9%83%D8%B1%D8%A9-%D8%B1%D9%82%D9%85-1.pdf",
+    "name": "مذكرة-رقم-1.pdf",
+    "mime": "application/pdf",
+    "size": 7149824
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-st-science-929dc63c",
+  "title": {
+   "ar": "مذكرات دروس العلوم للسنة الأولى ثانوي علمي",
+   "fr": "Fiches — science — 1AS-ST"
+  },
+  "level": "1AS-ST",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA2011AS.doc",
+    "name": "مذكرات2011AS.doc",
+    "mime": "application/msword",
+    "size": 452096
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-histgeo-cf439205",
+  "title": {
+   "ar": "مذكرات التاريخ سنة ثانية ثانوي 2",
+   "fr": "Fiches — histgeo — 2AS"
+  },
+  "level": "2AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE_%D8%B32_%D8%AB%D8%A7%D9%86%D9%88%D9%8A_%D8%AC%D9%85%D9%8A%D8%B9_%D8%A7%D9%84%D8%B4%D8%B9%D8%A8.pdf",
+    "name": "مذكرات_التاريخ_س2_ثانوي_جميع_الشعب.pdf",
+    "mime": "application/pdf",
+    "size": 4480538
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-histgeo-e3ef6bcd",
+  "title": {
+   "ar": "مذكرات التاريخ سنة ثانية ثانوي",
+   "fr": "Fiches — histgeo — 2AS"
+  },
+  "level": "2AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE_%D8%A7%D9%84%D8%B3%D9%86%D8%A9_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9_%D8%AB%D8%A7%D9%86%D9%88%D9%8A.doc",
+    "name": "مذكرات_التاريخ_السنة_الثانية_ثانوي.doc",
+    "mime": "application/msword",
+    "size": 394752
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-histgeo-e2084ee8",
+  "title": {
+   "ar": "مذكرات الجغرافيا سنة ثانية ثانوي 2",
+   "fr": "Fiches — histgeo — 2AS"
+  },
+  "level": "2AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%AC%D8%BA%D8%B1%D8%A7%D9%81%D9%8A%D8%A7_%D8%B32_%D8%AB%D8%A7%D9%86%D9%88%D9%8A_%D8%AC%D9%85%D9%8A%D8%B9_%D8%A7%D9%84%D8%B4%D8%B9%D8%A8.pdf",
+    "name": "مذكرات_الجغرافيا_س2_ثانوي_جميع_الشعب.pdf",
+    "mime": "application/pdf",
+    "size": 5411485
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-histgeo-b0f87401",
+  "title": {
+   "ar": "مذكرات الجغرافيا سنة ثانية ثانوي",
+   "fr": "Fiches — histgeo — 2AS"
+  },
+  "level": "2AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%AC%D8%BA%D8%B1%D8%A7%D9%81%D9%8A%D8%A7_%D8%B32_%D8%AB%D8%A7%D9%86%D9%88%D9%8A.doc",
+    "name": "مذكرات_الجغرافيا_س2_ثانوي.doc",
+    "mime": "application/msword",
+    "size": 235520
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-islamic-e930cf04",
+  "title": {
+   "ar": "مذكرات العلوم الإسلامية سنة أولى ثانوي 2",
+   "fr": "Fiches — islamic — 1AS"
+  },
+  "level": "1AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%A7%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9_%D8%B3%D9%86%D8%A9_1%D8%AB%D8%A7%D9%86%D9%88%D9%8A.doc",
+    "name": "مذكرات_العلوم_الاسلامية_سنة_1ثانوي.doc",
+    "mime": "application/msword",
+    "size": 4192768
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-1as-islamic-01848b12",
+  "title": {
+   "ar": "مذكرات العلوم الإسلامية سنة أولى ثانوي 1",
+   "fr": "Fiches — islamic — 1AS"
+  },
+  "level": "1AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%A7%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9_%D9%84%D9%84%D8%B3%D9%86%D8%A9_%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89.doc",
+    "name": "مذكرات_العلوم_الاسلامية_للسنة_الأولى.doc",
+    "mime": "application/msword",
+    "size": 7896064
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-islamic-2e7b8d3a",
+  "title": {
+   "ar": "مذكرات العلوم الإسلامية سنة ثانية ثانوي 2",
+   "fr": "Fiches — islamic — 2AS"
+  },
+  "level": "2AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%A7%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9_%D8%B32_%D8%AB%D8%A7%D9%86%D9%88%D9%8A.doc",
+    "name": "مذكرات_العلوم_الاسلامية_س2_ثانوي.doc",
+    "mime": "application/msword",
+    "size": 1295360
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-islamic-f6fc63a7",
+  "title": {
+   "ar": "مذكرات العلوم الإسلامية سنة ثانية ثانوي 1",
+   "fr": "Fiches — islamic — 2AS"
+  },
+  "level": "2AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%A7%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9_%D8%B3%D9%86%D8%A9_%D8%AB%D8%A7%D9%86%D9%8A%D8%A9_%D8%AB%D8%A7%D9%86%D9%88%D9%8A.doc",
+    "name": "مذكرات_العلوم_الاسلامية_سنة_ثانية_ثانوي.doc",
+    "mime": "application/msword",
+    "size": 573440
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-lp-ar-4f01991d-1",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثانية ثانوي آداب (1)",
+   "fr": "Fiches — ar — 2AS-LP"
+  },
+  "level": "2AS-LP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A3%D8%A8%D9%88%20%D8%AA%D9%85%D8%A7%D9%85%20%D9%88%D8%A7%D9%84%D9%85%D8%AA%D9%86%D8%A8%D9%8A%20%D8%AD%D9%83%D9%8A%D9%85%D8%A7%D9%86%20%D8%A3%D9%85%D8%A7%20%D8%A7%D9%84%D8%B4%D8%A7%D8%B9%D8%B1%20%D9%81%D8%A7%D9%84%D8%A8%D8%AD%D8%AA%D8%B1%D9%8A.doc",
+    "name": "أبو تمام والمتنبي حكيمان أما الشاعر فالبحتري.doc",
+    "mime": "application/msword",
+    "size": 33792
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A3%D8%A8%D9%88%20%D9%86%D9%88%D8%A7%D8%B3.doc",
+    "name": "أبو نواس.doc",
+    "mime": "application/msword",
+    "size": 25600
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A3%D8%AB%D8%B1%20%D8%A7%D9%84%D8%AA%D9%86%D8%A7%D9%82%D8%B6%D8%A7%D8%AA.doc",
+    "name": "أثر التناقضات.doc",
+    "mime": "application/msword",
+    "size": 28672
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A3%D9%87%D9%85%20%D8%A7%D9%84%D8%B4%D8%B9%D8%B1%D8%A7%D8%A1%20%D9%88%20%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8%20%D9%88%20%D8%A7%D9%84%D9%81%D9%84%D8%A7%D8%B3%D9%81%D8%A9%20%D9%88%20%D8%A3%D8%B5%D8%AD%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D9%82%D8%A7%D9%85%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B5%D8%B1%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%B3%D9%8A.doc",
+    "name": "أهم الشعراء و الكتاب و الفلاسفة و أصحاب المقامات في العصر العباسي.doc",
+    "mime": "application/msword",
+    "size": 56320
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B5%D8%B1%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%B3%D9%8A.doc",
+    "name": "الأدب في العصر العباسي.doc",
+    "mime": "application/msword",
+    "size": 51200
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AA%D9%82%D9%84%D9%8A%D8%AF%20%D9%88%20%D8%A7%D9%84%D8%AA%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%86%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D8%B4%D9%91%D8%B9%D8%B1%D9%8A.doc",
+    "name": "التقليد و التجديد في النتاج الشّعري.doc",
+    "mime": "application/msword",
+    "size": 57344
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AD%D8%B1%D9%83%D8%A9%20%D8%A7%D9%84%D8%B9%D9%82%D9%84%D9%8A%D8%A9%20%D9%88%20%D8%A7%D9%84%D9%81%D9%84%D8%B3%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AD%D9%88%D8%A7%D8%B6%D8%B1%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9.2%D8%B9%D9%84%D9%85%D9%8A.doc",
+    "name": "الحركة العقلية و الفلسفية في الحواضر العربية.2علمي.doc",
+    "mime": "application/msword",
+    "size": 177664
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AD%D8%B1%D9%83%D8%A9%20%D8%A7%D9%84%D8%B9%D9%82%D9%84%D9%8A%D8%A9%20%D9%88%20%D8%A7%D9%84%D9%81%D9%84%D8%B3%D9%81%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AD%D9%88%D8%A7%D8%B6%D8%B1%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9.doc",
+    "name": "الحركة العقلية و الفلسفية في الحواضر العربية.doc",
+    "mime": "application/msword",
+    "size": 100864
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AD%D8%B1%D9%83%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B5%D8%B1%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%B3%D9%8A.doc",
+    "name": "الحركة العلمية في العصر العباسي.doc",
+    "mime": "application/msword",
+    "size": 56832
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AD%D9%83%D9%85%D8%A9%20%D9%88%20%D8%A7%D9%84%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B4%D9%91%D8%B9%D8%B1-%D8%A3%D9%81%D9%84.doc",
+    "name": "الحكمة و الفلسفة في الشّعر-أفل.doc",
+    "mime": "application/msword",
+    "size": 85504
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-lp-ar-4f01991d-2",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثانية ثانوي آداب (2)",
+   "fr": "Fiches — ar — 2AS-LP"
+  },
+  "level": "2AS-LP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AD%D9%83%D9%85%D8%A9%20%D9%88%20%D8%A7%D9%84%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B4%D9%91%D8%B9%D8%B1-%D8%B9%D9%84%D9%85%D9%8Adoc.doc",
+    "name": "الحكمة و الفلسفة في الشّعر-علميdoc.doc",
+    "mime": "application/msword",
+    "size": 81920
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AE%D9%84%D8%A7%D9%81%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%B3%D9%8A%D8%A9.doc",
+    "name": "الخلافة العباسية.doc",
+    "mime": "application/msword",
+    "size": 40448
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AE%D9%84%D8%A7%D9%81%D8%A9.doc",
+    "name": "الخلافة.doc",
+    "mime": "application/msword",
+    "size": 169984
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%B3%D9%8A%D9%88%D9%86%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82.doc",
+    "name": "الخلفاء العباسيون في العراق.doc",
+    "mime": "application/msword",
+    "size": 75776
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%B3%D9%8A%D9%88%D9%86%20%D9%81%D9%8A%20%D9%85%D8%B5%D8%B1.doc",
+    "name": "الخلفاء العباسيون في مصر.doc",
+    "mime": "application/msword",
+    "size": 61952
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%A5%D8%B5%D9%84%D8%A7%D8%AD%20%D9%88%20%D8%A7%D9%84%D9%85%D9%8A%D9%84%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%B2%D9%91%D9%87%D8%AF.doc",
+    "name": "الدعوة إلى الإصلاح و الميل إلى الزّهد.doc",
+    "mime": "application/msword",
+    "size": 57856
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%AA%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%88%20%D8%A7%D9%84%D8%B3%D8%AE%D8%B1%D9%8A%D8%A9%20%D9%85%D9%86%20%D8%A7%D9%84%D9%82%D8%AF%D9%8A%D9%85.doc",
+    "name": "الدعوة إلى التجديد و السخرية من القديم.doc",
+    "mime": "application/msword",
+    "size": 61952
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D8%A5%D9%84%D9%89%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF.doc",
+    "name": "الدعوة إلىالجديد.doc",
+    "mime": "application/msword",
+    "size": 27136
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%B3%D8%A7%D8%A8%D8%B9%20-%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9%20%D8%A3%D8%AF%D8%A8%20%D9%88%D9%81%D9%84%D8%B3%D9%81%D8%A9%20%2B%20%D9%84%D8%BA%D8%A7%D8%AA.doc",
+    "name": "السابع - الثانية أدب وفلسفة + لغات.doc",
+    "mime": "application/msword",
+    "size": 141312
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%B4%D8%B9%D9%88%D8%A8%D9%8A%D8%A9%20%D9%88%20%D8%A3%D8%AB%D8%B1%D9%87%D8%A7%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%AF%D8%A8.doc",
+    "name": "الشعوبية و أثرها في الادب.doc",
+    "mime": "application/msword",
+    "size": 62464
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-lp-ar-4f01991d-3",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثانية ثانوي آداب (3)",
+   "fr": "Fiches — ar — 2AS-LP"
+  },
+  "level": "2AS-LP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%B4%D8%B9%D9%88%D8%A8%D9%8A%D8%A9%20%D9%88%20%D8%B5%D8%B1%D8%A7%D8%B9%20%D8%A7%D9%84%D8%AD%D8%B6%D8%A7%D8%B1%D8%A7%D8%AA%20-%20%D8%B7%D9%87%20%D8%AD%D8%B3%D9%8A%D9%86-.doc",
+    "name": "الشعوبية و صراع الحضارات - طه حسين-.doc",
+    "mime": "application/msword",
+    "size": 79872
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%B4%D9%83%D9%88%D9%89%20%D9%88%20%D8%A7%D8%B6%D8%B7%D8%B1%D8%A7%D8%A8%20%D8%A3%D8%AD%D9%88%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D8%AC%D8%AA%D9%85%D8%B9%20%28%D8%A7%D8%A8%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D9%85%D9%8A%29.doc",
+    "name": "الشكوى و اضطراب أحوال المجتمع (ابن الرومي).doc",
+    "mime": "application/msword",
+    "size": 143360
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%B4%D9%83%D9%88%D9%89%20%D9%88%20%D8%A7%D8%B6%D8%B7%D8%B1%D8%A7%D8%A8-%20%D8%A7%D8%A8%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D9%85%D9%8A.DOC",
+    "name": "الشكوى و اضطراب- ابن الرومي.DOC",
+    "mime": "application/msword",
+    "size": 178176
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%B5%D8%B1%D8%A7%D8%B9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%82%D8%AF%D9%85%D8%A7%D8%A1%20%D9%88%20%D8%A7%D9%84%D9%85%D8%AD%D8%AF%D8%AB%D9%8A%D9%86.doc",
+    "name": "الصراع بين القدماء و المحدثين.doc",
+    "mime": "application/msword",
+    "size": 69632
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%B3%20%D8%A8%D9%86%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%85%D8%B7%D9%84%D8%A8%20%D8%A8%D9%86%20%D9%87%D8%A7%D8%B4%D9%85.doc",
+    "name": "العباس بن عبد المطلب بن هاشم.doc",
+    "mime": "application/msword",
+    "size": 70656
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%85%D8%A7%D8%A1.doc",
+    "name": "الماء.doc",
+    "mime": "application/msword",
+    "size": 264704
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%85%D8%A8%D9%86%D9%8A%20%D9%88%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D8%A8.doc",
+    "name": "المبني و المعرب.doc",
+    "mime": "application/msword",
+    "size": 27648
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%85%D8%AC%D9%88%D9%86%20%D9%88%20%D8%A7%D9%84%D8%B2%D9%86%D8%AF%D9%82%D8%A9.doc",
+    "name": "المجون و الزندقة.doc",
+    "mime": "application/msword",
+    "size": 57344
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%85%D8%AD%D9%88%D8%B1%20%D8%A7%D9%84%D8%AA%D8%A7%D8%B3%D8%B99.doc",
+    "name": "المحور التاسع9.doc",
+    "mime": "application/msword",
+    "size": 290304
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%203.doc",
+    "name": "المشروع رقم 3.doc",
+    "mime": "application/msword",
+    "size": 59392
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-lp-ar-4f01991d-4",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثانية ثانوي آداب (4)",
+   "fr": "Fiches — ar — 2AS-LP"
+  },
+  "level": "2AS-LP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%86%D8%B2%D8%B9%D8%A9%20%D8%A7%D9%84%D8%B9%D9%82%D9%84%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A.doc",
+    "name": "النزعة العقلية في الشعر العربي.doc",
+    "mime": "application/msword",
+    "size": 82432
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%86%D8%B2%D8%B9%D8%A9%20%D8%A7%D9%84%D8%B9%D9%82%D9%84%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D8%B9%D8%AA%D8%AC.doc",
+    "name": "النزعة العقلية في القصيد العربية-عتج.doc",
+    "mime": "application/msword",
+    "size": 71680
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%86%D8%B2%D8%B9%D8%A9%20%D8%A7%D9%84%D8%B9%D9%82%D9%84%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%AF%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9.doc",
+    "name": "النزعة العقلية في القصيدة العربية.doc",
+    "mime": "application/msword",
+    "size": 75776
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%86%D8%B2%D8%B9%D8%A9%20%D8%A7%D9%84%D8%B9%D9%82%D9%84%D9%8A%D8%A9-%20%D8%A8%D8%B4%D8%A7%D8%B1%20%D8%A8%D9%86%20%D8%A8%D8%B1%D8%AF.doc",
+    "name": "النزعة العقلية- بشار بن برد.doc",
+    "mime": "application/msword",
+    "size": 98816
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%86%D8%B2%D8%B9%D8%A9%20%D8%A7%D9%84%D8%B9%D9%82%D9%84%D9%8A%D8%A9-%D8%A3%D8%A8%D9%88%20%D8%AA%D9%85%D8%A7%D9%85.doc",
+    "name": "النزعة العقلية-أبو تمام.doc",
+    "mime": "application/msword",
+    "size": 74752
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%88%D8%B6%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9%20%D8%A8%D8%A7%D9%84%D9%85%D8%AD%D9%88%D8%B1%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%20%D8%B5%D9%81%202%20%D8%A3%D8%AF%D8%A7%D8%A8%20%D9%88%D9%84%D8%BA%D8%A7%D8%AA.doc",
+    "name": "الوضعية التعلمية الخاصة بالمحور الأول صف 2 أداب ولغات.doc",
+    "mime": "application/msword",
+    "size": 127488
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%A8%D9%86%D8%A7%D8%A1%20%D9%88%D8%B6%D8%B9%D9%8A%D8%A9%20%D9%85%D8%B3%D8%AA%D9%87%D8%AF%D9%81%D8%A9%20%D8%B1%D9%82%D9%85%203.doc",
+    "name": "بناء وضعية مستهدفة رقم 3.doc",
+    "mime": "application/msword",
+    "size": 33792
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%AC%D8%AF%D9%88%D9%84%20%D8%AA%D9%81%D8%B5%D9%8A%D9%84%D9%8A%20%D9%8A%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%81%D8%B1%D9%82%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%86%D8%B5%20%D8%A7%D9%84%D8%B3%D8%B1%D8%AF%D9%8A%20%D9%88%D8%A7%D9%84%D9%86%D8%B5%20%D8%A7%D9%84%D9%82%D8%B5%D8%B5%D9%8A.doc",
+    "name": "جدول تفصيلي يبين الفرق بين النص السردي والنص القصصي.doc",
+    "mime": "application/msword",
+    "size": 37888
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D9%8A%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%20%D9%84%D9%85%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%84%D8%BA%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9%20%D9%88%D8%A2%D8%AF%D8%A7%D8%A8%D9%87%D8%A7.doc",
+    "name": "ختبار الثلاثي الأول لمادة اللغة العربية وآدابها.doc",
+    "mime": "application/msword",
+    "size": 33792
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D9%85%D8%AB%D8%A7%D9%84-%202%D8%A3%D9%81%D9%84.doc",
+    "name": "مثال- 2أفل.doc",
+    "mime": "application/msword",
+    "size": 55808
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-lp-ar-4f01991d-5",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثانية ثانوي آداب (5)",
+   "fr": "Fiches — ar — 2AS-LP"
+  },
+  "level": "2AS-LP",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D9%85%D8%AB%D8%A7%D9%84-%20%D8%B9%D8%AA%D8%AC%20%2B%20%D8%AA%D9%82%D8%B1%20%2B%20%D8%AA%D9%82.doc",
+    "name": "مثال- عتج + تقر + تق.doc",
+    "mime": "application/msword",
+    "size": 53248
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D9%85%D8%AD%D9%88%D8%B1%20%D8%A7%D9%84%D9%88%D8%B6%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9.doc",
+    "name": "محور الوضعية التعلمية الثانية.doc",
+    "mime": "application/msword",
+    "size": 112128
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D9%85%D8%B3%D9%84%D9%85%20%D8%A8%D9%86%20%D8%A7%D9%84%D9%88%D9%84%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A3%D9%86%D8%B5%D8%A7%D8%B1%D9%8A.doc",
+    "name": "مسلم بن الوليد الأنصاري.doc",
+    "mime": "application/msword",
+    "size": 22016
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%84%D9%81%20%D9%84%D9%8A%D9%84%D8%A9%20%D9%88%20%D9%84%D9%8A%D9%84%D8%A9.doc",
+    "name": "مشروع ألف ليلة و ليلة.doc",
+    "mime": "application/msword",
+    "size": 223232
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D9%85%D9%86%20%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D8%B2%D9%87%D8%AF.2%D8%A3%D9%81%D9%84.doc",
+    "name": "من شعر الزهد.2أفل.doc",
+    "mime": "application/msword",
+    "size": 69120
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D9%85%D9%86%20%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D8%B2%D9%87%D8%AF.doc",
+    "name": "من شعر الزهد.doc",
+    "mime": "application/msword",
+    "size": 62976
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D9%86%D8%B4%D8%A7%D8%B7%20%D8%A7%D9%84%D9%86%D8%AB%D8%B1%20%D8%A7%D9%84%D8%AC%D8%A7%D8%AD%D8%B8-%D8%B9%D9%84%D9%85%D9%8A.doc",
+    "name": "نشاط النثر الجاحظ-علمي.doc",
+    "mime": "application/msword",
+    "size": 75264
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9/%D9%86%D8%B4%D8%A7%D8%B7%20%D8%A7%D9%84%D9%86%D8%AB%D8%B1-%D9%84%D9%84%D8%AC%D8%A7%D8%AD%D8%B8.doc",
+    "name": "نشاط النثر-للجاحظ.doc",
+    "mime": "application/msword",
+    "size": 83968
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-se-ar-8ebce557",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثانية ثانوي شعب علمية",
+   "fr": "Fiches — ar — 2AS-SE"
+  },
+  "level": "2AS-SE",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D8%A7%D9%84%D9%85%D8%AD%D9%88%D8%B1-01-%D8%A7%D9%84%D9%89-12.doc",
+    "name": "المحور-01-الى-12.doc",
+    "mime": "application/msword",
+    "size": 1613824
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-lp-science-5bebccc9",
+  "title": {
+   "ar": "مذكرات دروس العلوم الطبيعية للسنة الثانية ثانوي آداب",
+   "fr": "Fiches — science — 2AS-LP"
+  },
+  "level": "2AS-LP",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%B9.%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9_%D8%B32_%D8%AB%D8%A7%D9%86%D9%88%D9%8A_%D8%B4%D8%B9%D8%A8%D8%A9_%D8%A2%D8%AF%D8%A7%D8%A8_%D9%88%D9%81%D9%84%D8%B3%D9%81%D8%A9.pdf",
+    "name": "مذكرات_ع.طبيعية_س2_ثانوي_شعبة_آداب_وفلسفة.pdf",
+    "mime": "application/pdf",
+    "size": 2286808
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-se-science-a4944faf",
+  "title": {
+   "ar": "مذكرات دروس العلوم الطبيعية للسنة الثانية ثانوي علمي 3",
+   "fr": "Fiches — science — 2AS-SE"
+  },
+  "level": "2AS-SE",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%B9%D9%84%D9%88%D9%85_%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9_%D8%B3%D9%86%D8%A9_%D8%AB%D8%A7%D9%86%D9%8A%D8%A9_%D8%AB%D8%A7%D9%86%D9%88%D9%8A_%D8%B4%D8%B9%D8%A8%D8%A9_%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA.doc",
+    "name": "مذكرات_علوم_طبيعية_سنة_ثانية_ثانوي_شعبة_رياضيات.doc",
+    "mime": "application/msword",
+    "size": 552960
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-lp-science-65c1f6b6",
+  "title": {
+   "ar": "مذكرات دروس العلوم الطبيعية للسنة الثانية ثانوي آداب 2",
+   "fr": "Fiches — science — 2AS-LP"
+  },
+  "level": "2AS-LP",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9_%D8%B3%D9%86%D8%A9_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9_%D8%A7%D8%AF%D8%A7%D8%A8__.pdf",
+    "name": "مذكرات_العلوم_الطبيعية_سنة_الثانية_اداب__.pdf",
+    "mime": "application/pdf",
+    "size": 1823898
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-se-science-6b7e704c-1",
+  "title": {
+   "ar": "مذكرات دروس العلوم الطبيعية للسنة الثانية ثانوي علمي 4 (1)",
+   "fr": "Fiches — science — 2AS-SE"
+  },
+  "level": "2AS-SE",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A9%201%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A/%D8%A7%D9%84%D8%A7%D8%AF%D9%85%D8%A7%D8%AC%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A..doc",
+    "name": "الادماج العصبي..doc",
+    "mime": "application/msword",
+    "size": 41472
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A9%201%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A/%D8%A7%D9%84%D8%AF%D8%B9%D8%A7%D9%85%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B4%D8%B1%D9%8A%D8%AD%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D9%86%D8%B9%D9%83%D8%B3%20%D8%A7%D9%84%D8%B9%D8%B6%D9%84%D9%8A.doc",
+    "name": "الدعامة التشريحية للمنعكس العضلي.doc",
+    "mime": "application/msword",
+    "size": 35481088
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A9%201%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A/%D8%A7%D9%84%D9%85%D9%86%D8%B9%D9%83%D8%B3%20%D8%A7%D9%84%D8%B9%D8%B6%D9%84%D9%8A.doc",
+    "name": "المنعكس العضلي.doc",
+    "mime": "application/msword",
+    "size": 32768
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A9%201%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A/%D8%A7%D9%84%D9%86%D9%82%D9%84%20%D8%A7%D9%84%D9%85%D8%B4%D8%A8%D9%83%D9%8A.doc",
+    "name": "النقل المشبكي.doc",
+    "mime": "application/msword",
+    "size": 44032
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A9%201%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%AA%D8%B1%D8%A8%D9%88%D9%8A%D8%A9%20%D9%84%D9%84%D9%88%D8%AD%D8%AF%D8%A9%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A.doc",
+    "name": "مذكرات تقنية تربوية للوحدة التنظيم العصبي.doc",
+    "mime": "application/msword",
+    "size": 98816
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A92%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D8%A7%D9%84%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A7%D9%84%D9%85%D9%86%D8%B8%D9%85%20%D9%84%D9%84%D9%82%D8%B5%D9%88%D8%B1%20%D8%A7%D9%84%D8%B3%D9%83%D8%B1%D9%8A.doc",
+    "name": "الجهاز المنظم للقصور السكري.doc",
+    "mime": "application/msword",
+    "size": 32256
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A92%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D8%AE%D9%84%D8%B7%D9%8A.doc",
+    "name": "جهاز التنظيم الخلطي.doc",
+    "mime": "application/msword",
+    "size": 32256
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A92%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D8%AD%D9%84%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85.doc",
+    "name": "حلقات التنظيم.doc",
+    "mime": "application/msword",
+    "size": 30720
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A92%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D8%AF%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%83%D8%B1%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A.doc",
+    "name": "داء السكر التجريبي.doc",
+    "mime": "application/msword",
+    "size": 34816
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A92%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D8%B9%D9%85%D9%84%20%D8%A7%D9%84%D8%A7%D9%86%D8%B3%D9%88%D9%84%D9%8A%D9%86.doc",
+    "name": "عمل الانسولين.doc",
+    "mime": "application/msword",
+    "size": 92160
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-se-science-6b7e704c-2",
+  "title": {
+   "ar": "مذكرات دروس العلوم الطبيعية للسنة الثانية ثانوي علمي 4 (2)",
+   "fr": "Fiches — science — 2AS-SE"
+  },
+  "level": "2AS-SE",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A92%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D8%B9%D9%85%D9%84%20%D8%A7%D9%84%D8%BA%D9%84%D9%88%D9%83%D8%A7%D8%BA%D9%88%D9%86.doc",
+    "name": "عمل الغلوكاغون.doc",
+    "mime": "application/msword",
+    "size": 35840
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A92%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%AA%D8%B1%D8%A8%D9%88%D9%8A%D8%A9.doc",
+    "name": "مذكرات تقنية تربوية.doc",
+    "mime": "application/msword",
+    "size": 150528
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A92%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D9%86%D8%B3%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D9%83%D8%B1%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AF%D9%85.doc",
+    "name": "نسبة السكر في الدم.doc",
+    "mime": "application/msword",
+    "size": 31744
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A92%20%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D9%87%D8%B1%D9%85%D9%88%D9%86%20%D8%A7%D9%84%D9%82%D8%B5%D9%88%D8%B1%20%D8%A7%D9%84%D8%B3%D9%83%D8%B1%D9%8A.doc",
+    "name": "هرمون القصور السكري.doc",
+    "mime": "application/msword",
+    "size": 40960
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A93%20%D8%A7%D9%84%D8%AA%D9%86%D8%B3%D9%8A%D9%82%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D8%AA%D8%BA%D9%8A%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%83%D9%85%D9%8A%D8%A9%20%D9%84%D9%84%D8%A7%D8%A7%D9%81%D8%B1%D8%A7%D8%B2%D8%A7%D8%AA%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A%D8%A9%20%D9%88%D8%B9%D9%88%D8%A7%D9%82%D8%A8%D9%87%D8%A7%20%D8%B9%D9%84%D9%89%20%D9%86%D8%B4%D8%A7%D8%B7%20%D8%A7%D9%84%D8%AC%D8%B1%D9%8A%D8%A8.doc",
+    "name": "العلاقة بين التغيرات الكمية للاافرازات الهرمونية وعواقبها على نشاط الجريب.doc",
+    "mime": "application/msword",
+    "size": 38912
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A93%20%D8%A7%D9%84%D8%AA%D9%86%D8%B3%D9%8A%D9%82%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%B6%20%D9%88%D8%A7%D9%84%D9%85%D8%B9%D9%82%D8%AF%20%D8%AA%D8%AD%D8%AA%20%D8%A7%D9%84%D8%B3%D8%B1%D9%8A%D8%B1%D9%8A%20%D8%A7%D9%84%D9%86%D8%AE%D8%A7%D9%85%D9%8A.doc",
+    "name": "العلاقة بين المبيض والمعقد تحت السريري النخامي.doc",
+    "mime": "application/msword",
+    "size": 48128
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A93%20%D8%A7%D9%84%D8%AA%D9%86%D8%B3%D9%8A%D9%82%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D9%82%D8%A8%D8%A9%20%D8%AA%D8%AD%D8%AA%20%D8%A7%D9%84%D8%B3%D8%B1%D9%8A%D8%B1%D9%8A%D8%A9%20%D8%A7%D9%84%D9%86%D8%AE%D8%A7%D9%85%D9%8A%D8%A9%20%D9%84%D9%84%D8%A7%D9%81%D8%B1%D8%A7%D8%B2%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%B6%D9%8A%D8%A9.doc",
+    "name": "المراقبة تحت السريرية النخامية للافرازات المبيضية.doc",
+    "mime": "application/msword",
+    "size": 39936
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A93%20%D8%A7%D9%84%D8%AA%D9%86%D8%B3%D9%8A%D9%82%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D8%B9%D9%86%D8%A7%D8%B5%D8%B1%20%D8%A7%D9%84%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A7%D9%84%D9%85%D9%86%D8%B8%D9%85%20%D9%84%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%B6%D9%8A%D8%A9.doc",
+    "name": "عناصر الجهاز المنظم للهرمونات المبيضية.doc",
+    "mime": "application/msword",
+    "size": 36352
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%841/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A93%20%D8%A7%D9%84%D8%AA%D9%86%D8%B3%D9%8A%D9%82%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A%20%D8%A7%D9%84%D9%87%D8%B1%D9%85%D9%88%D9%86%D9%8A/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%AA%D8%B1%D8%A8%D9%88%D9%8A%D8%A9.doc",
+    "name": "مذكرات تقنية تربوية.doc",
+    "mime": "application/msword",
+    "size": 108032
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%842/ADN%20%D8%A8%D9%86%D9%8A%D8%A9%20%D8%AC%D8%B2%D9%8A%D8%A6%D8%A9%20%D8%A7%D9%84%D9%80%D9%80%D9%80%D9%80.doc",
+    "name": "ADN بنية جزيئة الــــ.doc",
+    "mime": "application/msword",
+    "size": 128512
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-se-science-6b7e704c-3",
+  "title": {
+   "ar": "مذكرات دروس العلوم الطبيعية للسنة الثانية ثانوي علمي 4 (3)",
+   "fr": "Fiches — science — 2AS-SE"
+  },
+  "level": "2AS-SE",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%842/ADN%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%20%D8%A7%D9%84%D9%83%D9%8A%D9%85%D9%8A%D8%A7%D8%A6%D9%8A%20%D9%84%D9%84.doc",
+    "name": "ADNالتركيب الكيميائي لل.doc",
+    "mime": "application/msword",
+    "size": 59904
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%842/ADN%D8%AA%D9%85%D8%A7%D8%AB%D9%84%20%D8%A8%D9%86%D9%8A%D8%A9%20%D8%AC%D8%B2%D9%8A%D8%A6%D8%A9%20%D8%A7%D9%84%D9%80%D9%80%D9%80%D9%80.doc",
+    "name": "ADNتماثل بنية جزيئة الــــ.doc",
+    "mime": "application/msword",
+    "size": 47616
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%842/%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D8%A9%20%D8%A7%D9%84%D9%83%D9%8A%D9%85%D9%8A%D8%A7%D8%A6%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D9%88%D8%B1%D8%AB%D8%A9.doc",
+    "name": "الطبيعة الكيميائية للمورثة.doc",
+    "mime": "application/msword",
+    "size": 55808
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%842/%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9%20%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D8%A9%20%D8%A8%D8%A7%D9%84%D9%85%D8%AC%D9%87%D8%B1%20%D8%A7%D9%84%D8%B6%D9%88%D8%A6%D9%8A.doc",
+    "name": "دراسة الخلية بالمجهر الضوئي.doc",
+    "mime": "application/msword",
+    "size": 59904
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%842/%D8%AF%D8%B1%D8%B3%D8%A9%20%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D8%A9%20%D8%A8%D8%A7%D9%84%D9%85%D8%AC%D9%87%D8%B1%20%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A.doc",
+    "name": "درسة الخلية بالمجهر الالكتروني.doc",
+    "mime": "application/msword",
+    "size": 64512
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%842/%D9%88%D8%AD%D8%AF%D8%A9%20%D9%85%D9%83%D9%88%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AF%D8%B9%D8%A7%D9%85%D8%A9%20%D8%A7%D9%84%D9%88%D8%B1%D8%A7%D8%AB%D9%8A%D8%A9.doc",
+    "name": "وحدة مكونات الدعامة الوراثية.doc",
+    "mime": "application/msword",
+    "size": 55296
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%843/%D8%A7%D9%84%D8%A7%D9%84%D9%82%D8%A7%D8%AD.doc",
+    "name": "الالقاح.doc",
+    "mime": "application/msword",
+    "size": 70144
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%843/%D8%A7%D9%84%D8%A7%D9%86%D9%82%D8%B3%D8%A7%D9%85%20%D8%A7%D9%84%D9%85%D9%86%D8%B5%D9%81.doc",
+    "name": "الانقسام المنصف.doc",
+    "mime": "application/msword",
+    "size": 59904
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%843/%D8%A7%D9%84%D8%B7%D9%81%D8%B1%D8%A9.doc",
+    "name": "الطفرة.doc",
+    "mime": "application/msword",
+    "size": 70144
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/science/%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%843/%D8%A7%D9%84%D9%86%D9%85%D8%B7%20%D8%A7%D9%84%D8%B8%D8%A7%D9%87%D8%B1%D9%8A.doc",
+    "name": "النمط الظاهري.doc",
+    "mime": "application/msword",
+    "size": 79872
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-se-science-72c2c047",
+  "title": {
+   "ar": "مذكرات دروس العلوم الطبيعية للسنة الثانية ثانوي علمي",
+   "fr": "Fiches — science — 2AS-SE"
+  },
+  "level": "2AS-SE",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA-%D8%AA%D8%B1%D8%A8%D9%88%D9%8A%D8%A9-%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9-2011.pdf",
+    "name": "مذكرات-تربوية-جديدة-2011.pdf",
+    "mime": "application/pdf",
+    "size": 1728826
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-lp-physics-db5d3eca",
+  "title": {
+   "ar": "مذكرات دروس الفيزياء للسنة الثانية ثانوي آداب",
+   "fr": "Fiches — physics — 2AS-LP"
+  },
+  "level": "2AS-LP",
+  "subject": "physics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%AB%D8%A7%D9%86%D9%8A%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%B1%D9%82%D9%85%2001%20%D9%85%D8%AF%D8%AE%D9%84%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D9%83%D9%8A%D9%85%D9%8A%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B9%D8%B6%D9%88%D9%8A%D8%A9%20%20.doc",
+    "name": "مذكرة رقم 01 مدخل إلى الكيمياء العضوية  .doc",
+    "mime": "application/msword",
+    "size": 45056
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%AB%D8%A7%D9%86%D9%8A%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%B1%D9%82%D9%85%2002%20%D8%A7%D9%84%D9%83%D9%8A%D9%85%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B9%D8%B6%D9%88%D9%8A%D8%A9%20.doc",
+    "name": "مذكرة رقم 02 الكيماء العضوية .doc",
+    "mime": "application/msword",
+    "size": 44032
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%AB%D8%A7%D9%86%D9%8A%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%B1%D9%82%D9%85%2003%20%D8%A7%D9%84%D9%81%D8%AD%D9%88%D9%85%20%D8%A7%D9%84%D9%87%D9%8A%D8%AF%D8%B1%D9%88%D8%AC%D9%8A%D9%86%D9%8A%D8%A9%20%20.doc",
+    "name": "مذكرة رقم 03 الفحوم الهيدروجينية  .doc",
+    "mime": "application/msword",
+    "size": 46592
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%AB%D8%A7%D9%86%D9%8A%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%B1%D9%82%D9%85%2004%20%D8%AD%D8%AA%D8%B1%D8%A7%D9%82%20%D8%A7%D9%84%D9%81%D8%AD%D9%88%D9%85%20%D8%A7%D9%84%D9%87%D9%8A%D8%AF%D8%B1%D9%88%D8%AC%D9%8A%D9%86%D9%8A%D8%A9%20%20%20.doc",
+    "name": "مذكرة رقم 04 حتراق الفحوم الهيدروجينية   .doc",
+    "mime": "application/msword",
+    "size": 87040
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%AB%D8%A7%D9%86%D9%8A%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%B1%D9%82%D9%85%2005%20%D8%A7%D9%84%D9%81%D8%AD%D9%88%D9%85%20%D8%A7%D9%84%D9%87%D8%AF%D8%B1%D9%88%D8%AC%D9%8A%D9%86%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D8%AA%D8%B4%D8%A8%D8%B9%D8%A9%20%20%20.doc",
+    "name": "مذكرة رقم 05 الفحوم الهدروجينية المتشبعة   .doc",
+    "mime": "application/msword",
+    "size": 52736
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%AB%D8%A7%D9%86%D9%8A%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%B1%D9%82%D9%85%2006%20%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%20%D9%88%D8%A7%D8%B3%D8%AA%D8%AE%D9%84%D8%A7%D8%B5%20%D8%A8%D8%B9%D8%B6%20%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%A8%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B9%D8%B6%D9%88%D9%8A%D8%A9%20%20.doc",
+    "name": "مذكرة رقم 06 تركيب واستخلاص بعض المركبات العضوية  .doc",
+    "mime": "application/msword",
+    "size": 555008
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%AB%D8%A7%D9%86%D9%8A%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%B1%D9%82%D9%85%2007%20%D8%A7%D9%84%D9%81%D8%B5%D9%84%20%D8%A7%D9%84%D9%83%D8%B1%D9%88%D9%85%D8%A7%D8%AA%D9%88%D8%BA%D8%B1%D8%A7%D9%81%D9%8A%20%20.doc",
+    "name": "مذكرة رقم 07 الفصل الكروماتوغرافي  .doc",
+    "mime": "application/msword",
+    "size": 136704
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-se-physics-d63192ff",
+  "title": {
+   "ar": "مذكرات دروس الفيزياء للسنة الثانية ثانوي علمي",
+   "fr": "Fiches — physics — 2AS-SE"
+  },
+  "level": "2AS-SE",
+  "subject": "physics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1_%D8%B32_%D8%AB%D8%A7%D9%86%D9%88%D9%8A_%D8%B4%D8%B9%D8%A8%D8%A9_%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA.pdf",
+    "name": "مذكرات_الفيزياء_س2_ثانوي_شعبة_رياضيات.pdf",
+    "mime": "application/pdf",
+    "size": 3676702
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-se-physics-78e4e198",
+  "title": {
+   "ar": "مذكرات دروس الفيزياء للسنة الثانية ثانوي",
+   "fr": "Fiches — physics — 2AS-SE"
+  },
+  "level": "2AS-SE",
+  "subject": "physics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%83%D8%A7%D9%85%D9%84-%D8%AF%D8%B1%D9%88%D8%B3-%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1-%D9%85%D8%B9-%D8%AD%D9%84%D9%88%D9%84-%D8%AA%D9%85%D8%A7%D8%B1%D9%8A%D9%86-%D9%84%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D8%AB%D8%A7%D9%86%D9%88%D9%8A.pdf",
+    "name": "كامل-دروس-فيزياء-مع-حلول-تمارين-للسنة-الثانية-ثانوي.pdf",
+    "mime": "application/pdf",
+    "size": 3877999
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-2as-tm-engineering-a44d3169",
+  "title": {
+   "ar": "مذكرات لجميع دروس الهندسة المدنية للسنة الثانية 2 ثانوي",
+   "fr": "Fiches — engineering — 2AS-TM"
+  },
+  "level": "2AS-TM",
+  "subject": "engineering",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2022/11/genie_civil2as-modakirat.pdf",
+    "name": "genie_civil2as-modakirat.pdf",
+    "mime": "application/pdf",
+    "size": 179068
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-histgeo-8b28fa6f",
+  "title": {
+   "ar": "مذكرات التاريخ سنة ثالثة ثانوي",
+   "fr": "Fiches — histgeo — 3AS"
+  },
+  "level": "3AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D9%84%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE_%D8%B33_%D8%AB%D8%A7%D9%86%D9%88%D9%8A.doc",
+    "name": "مذكرات_للتاريخ_س3_ثانوي.doc",
+    "mime": "application/msword",
+    "size": 470016
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-histgeo-4c95b9ee",
+  "title": {
+   "ar": "مذكرات الجغرافيا سنة ثالثة ثانوي",
+   "fr": "Fiches — histgeo — 3AS"
+  },
+  "level": "3AS",
+  "subject": "histgeo",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%AC%D8%BA%D8%B1%D8%A7%D9%81%D9%8A%D8%A7_%D8%B33.doc",
+    "name": "مذكرات_الجغرافيا_س3.doc",
+    "mime": "application/msword",
+    "size": 228864
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-islamic-e3502e28",
+  "title": {
+   "ar": "مذكرات العلوم الإسلامية سنة ثالثة ثانوي 2",
+   "fr": "Fiches — islamic — 3AS"
+  },
+  "level": "3AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D8%AF%D8%B1%D9%88%D8%B3_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%A7%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9_2016_%D9%84%D9%84%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0_%D8%AC%D9%85%D8%A7%D9%84_%D9%85%D8%B1%D8%B3%D9%84%D9%8A.pdf",
+    "name": "دروس_العلوم_الاسلامية_2016_للأستاذ_جمال_مرسلي.pdf",
+    "mime": "application/pdf",
+    "size": 5943743
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-islamic-44a5d044",
+  "title": {
+   "ar": "مذكرات العلوم الإسلامية سنة ثالثة ثانوي 3",
+   "fr": "Fiches — islamic — 3AS"
+  },
+  "level": "3AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%A7%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9_%D9%84%D9%84%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0_%D8%B1%D8%A8%D8%A7%D8%AD_%D8%B33_%D8%AB%D8%A7%D9%86%D9%88%D9%8A.pdf",
+    "name": "مذكرات_العلوم_الاسلامية_للأستاذ_رباح_س3_ثانوي.pdf",
+    "mime": "application/pdf",
+    "size": 2512340
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-islamic-9d2cb631",
+  "title": {
+   "ar": "مذكرات العلوم الإسلامية سنة ثالثة ثانوي",
+   "fr": "Fiches — islamic — 3AS"
+  },
+  "level": "3AS",
+  "subject": "islamic",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%B3%D9%86%D8%A9_%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9_%D8%AB%D8%A7%D9%86%D9%88%D9%8A_%D9%84%D9%84%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0_%D9%87%D8%B1%D8%AF%D9%88%D9%84%D9%8A_%D9%85%D8%AD%D9%85%D8%AF.pdf",
+    "name": "مذكرات_السنة_الثالثة_ثانوي_للأستاذ_هردولي_محمد.pdf",
+    "mime": "application/pdf",
+    "size": 1110819
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-se-science-330d7690",
+  "title": {
+   "ar": "مذكرات العلوم الطبيعية سنة ثالثة ثانوي 2",
+   "fr": "Fiches — science — 3AS-SE"
+  },
+  "level": "3AS-SE",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%B9.%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9_%D8%B33_%D8%AB%D8%A7%D9%86%D9%88%D9%8A.doc",
+    "name": "مذكرات_ع.طبيعية_س3_ثانوي.doc",
+    "mime": "application/msword",
+    "size": 3515392
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-se-science-eb777e6f",
+  "title": {
+   "ar": "مذكرات العلوم الطبيعية سنة ثالثة ثانوي 3",
+   "fr": "Fiches — science — 3AS-SE"
+  },
+  "level": "3AS-SE",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/az/FT%20-1-%20synthese%20des%20proteine.pdf",
+    "name": "FT -1- synthese des proteine.pdf",
+    "mime": "application/pdf",
+    "size": 189470
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/az/FT-2-.Relation%20entre%20structure%20et%20fonction%20des%20proteines%281%29.pdf",
+    "name": "FT-2-.Relation entre structure et fonction des proteines(1).pdf",
+    "mime": "application/pdf",
+    "size": 128112
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/az/FT-3-.Activit%C3%A9%20catalytique%20des%20proteines.pdf.pdf",
+    "name": "FT-3-.Activité catalytique des proteines.pdf.pdf",
+    "mime": "application/pdf",
+    "size": 149991
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/az/FT-5-Roles%20des%20proteines%20dans%20la%20communication%20nerveuse2.pdf",
+    "name": "FT-5-Roles des proteines dans la communication nerveuse2.pdf",
+    "mime": "application/pdf",
+    "size": 284808
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/az/FT1Transformation%20de%20l%27energie%20photonique%20en%20energie%20chimique%20potentielle.pdf",
+    "name": "FT1Transformation de l'energie photonique en energie chimique potentielle.pdf",
+    "mime": "application/pdf",
+    "size": 308777
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/az/FT2Transformation%20de%20l%27energie%20chim%20pot%20en%20energie%20chimique%20utilisab.pdf",
+    "name": "FT2Transformation de l'energie chim pot en energie chimique utilisab.pdf",
+    "mime": "application/pdf",
+    "size": 168520
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/az/FT4-Role%20des%20proteines%20dans%20la%20d%C3%A9fence%20de%20l%27organisme.pdf",
+    "name": "FT4-Role des proteines dans la défence de l'organisme.pdf",
+    "mime": "application/pdf",
+    "size": 418494
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-se-science-c57aae28",
+  "title": {
+   "ar": "مذكرات العلوم الطبيعية سنة ثالثة ثانوي",
+   "fr": "Fiches — science — 3AS-SE"
+  },
+  "level": "3AS-SE",
+  "subject": "science",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/04/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9_%D9%84%D9%84%D8%B3%D9%86%D8%A9_3_%D8%AB%D8%A7%D9%86%D9%88%D9%8A.doc",
+    "name": "مذكرات_العلوم_الطبيعية_للسنة_3_ثانوي.doc",
+    "mime": "application/msword",
+    "size": 7351296
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-se-philosophy-116468fb",
+  "title": {
+   "ar": "مذكرات الفلسفة سنة ثالثة ثانوي علوم",
+   "fr": "Fiches — philosophy — 3AS-SE"
+  },
+  "level": "3AS-SE",
+  "subject": "philosophy",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/05/%D9%85%D8%B0%D9%83%D8%B1%D8%A9_%D8%A7%D9%84%D8%B3%D8%A4%D8%A7%D9%84_%D8%A8%D9%8A%D9%86_%D8%A7%D9%84%D9%85%D8%B4%D9%83%D9%84%D8%A9_%D9%88%D8%A7%D9%84%D8%A5%D8%B4%D9%83%D8%A7%D9%84%D9%8A%D8%A9_2015.doc",
+    "name": "مذكرة_السؤال_بين_المشكلة_والإشكالية_2015.doc",
+    "mime": "application/msword",
+    "size": 62464
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-se-physics-0f477cd3",
+  "title": {
+   "ar": "مذكرات الفيزياء سنة ثالثة ثانوي",
+   "fr": "Fiches — physics — 3AS-SE"
+  },
+  "level": "3AS-SE",
+  "subject": "physics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A9%203%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D8%A7%D9%84%D8%AA%D8%AD%D9%80%D9%80%D9%88%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D9%86%D9%88%D9%88%D9%8A%D9%80%D9%80%D9%80%D8%A9.doc",
+    "name": "التحــولات النوويـــة.doc",
+    "mime": "application/msword",
+    "size": 3475968
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A9%203%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%A8%D8%B9%D8%A9%20%D8%A7%D9%84%D8%B2%D9%85%D9%86%D9%8A%D8%A9%20%D9%84%D8%AA%D8%AD%D9%88%D9%84%20%D9%83%D9%8A%D9%85%D9%8A%D8%A7%D8%A6%D9%8A%20%D9%81%D9%8A%20%D9%88%D8%B3%D8%B7%20%D9%85%D8%A7%D8%A6%D9%8A%20%20.doc",
+    "name": "المتابعة الزمنية لتحول كيميائي في وسط مائي  .doc",
+    "mime": "application/msword",
+    "size": 345088
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A9%203%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A9%2003%20%D9%85%D9%83%D8%AB%D9%81%D8%A9%20%D9%88%D8%A7%D9%84%D9%88%D8%B4%D9%8A%D8%B9%D8%A9%20%D8%AB%D9%86%D8%A7%D8%A6%D9%8A%20%D9%82%D8%B7%D8%A8%20.doc",
+    "name": "الوحدة 03 مكثفة والوشيعة ثنائي قطب .doc",
+    "mime": "application/msword",
+    "size": 648192
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A9%203%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D8%AA%D8%B7%D9%88%D8%B1%20%D8%AC%D9%85%D9%84%D8%A9%20%D9%83%D9%8A%D9%85%D9%8A%D8%A7%D8%A6%D9%8A%D8%A9%20%D9%86%D8%AD%D9%88%20%D8%AD%D8%A7%D9%84%D8%A9%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B2%D9%86%20.doc",
+    "name": "تطور جملة كيميائية نحو حالة التوازن .doc",
+    "mime": "application/msword",
+    "size": 482816
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A9%203%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D8%AA%D8%B7%D9%88%D8%B1%20%D8%AC%D9%85%D9%84%D8%A9%20%D9%85%D9%8A%D9%83%D8%A7%D9%86%D9%8A%D9%83%D9%8A%D8%A9.doc",
+    "name": "تطور جملة ميكانيكية.doc",
+    "mime": "application/msword",
+    "size": 1360896
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A9%203%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/%D9%85%D8%B1%D8%A7%D9%82%D8%A8%D8%A9%20%D8%AA%D8%B7%D9%88%D8%B1%20%D8%AC%D9%85%D9%84%D8%A9%20%D9%83%D9%8A%D9%85%D9%8A%D8%A7%D8%A6%D9%8A%D8%A9%20.doc",
+    "name": "مراقبة تطور جملة كيميائية .doc",
+    "mime": "application/msword",
+    "size": 694272
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-1",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (1)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A3%D8%A8%D9%88%20%D8%AA%D9%85%D8%A7%D9%85.doc",
+    "name": "أبو تمام.doc",
+    "mime": "application/msword",
+    "size": 50176
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A3%D8%AD%D9%85%D8%AF%20%D8%B4%D9%88%D9%82%D9%8A.doc",
+    "name": "أحمد شوقي.doc",
+    "mime": "application/msword",
+    "size": 36352
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A3%D8%BA%D9%86%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A3%D9%84%D9%85%20%D9%84%D9%86%D8%A7%D8%B2%D9%83%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A6%D9%83%D8%A9.doc",
+    "name": "أغنية الألم لنازك الملائكة.doc",
+    "mime": "application/msword",
+    "size": 52224
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A3%D8%BA%D9%86%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A3%D9%84%D9%85%20%D9%86%D8%A7%D8%B2%D9%83%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A6%D9%83%D8%A9.pdf",
+    "name": "أغنية الألم نازك الملائكة.pdf",
+    "mime": "application/pdf",
+    "size": 75419
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A3%D9%86%D8%A7%20%D9%84%D8%A5%D9%8A%D9%84%D9%8A%D8%A7%20%D8%A3%D8%A8%D9%8A%20%D9%85%D8%A7%D8%B6%D9%8A.doc",
+    "name": "أنا لإيليا أبي ماضي.doc",
+    "mime": "application/msword",
+    "size": 54784
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D8%A8%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D9%85%D9%8A.doc",
+    "name": "ابن الرومي.doc",
+    "mime": "application/msword",
+    "size": 43520
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%84%D8%BA%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9%20%D9%88%20%D8%A2%D8%AF%D8%A7%D8%A8%D9%87%D8%A7%20%D9%84%D9%84%D8%B3%D9%86%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%B9%D9%84%D9%88%D9%85.doc",
+    "name": "ادة اللغة العربية و آدابها للسنوات الثالثة علوم.doc",
+    "mime": "application/msword",
+    "size": 28160
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9%20-%D8%A3%D8%AD%D9%85%D8%AF%20%D8%B4%D9%88%D9%82%D9%8A%20-%20%D8%A7%D9%84%D9%85%D8%B3%D8%B1%D8%AD%D9%8A%D8%A7%D8%AA.pdf",
+    "name": "الأعمال الكاملة -أحمد شوقي - المسرحيات.pdf",
+    "mime": "application/pdf",
+    "size": 11073935
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D8%A3%D9%88%D8%B1%D8%A7%D8%B3%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A.DOC",
+    "name": "الأوراس في الشعر العربي.DOC",
+    "mime": "application/msword",
+    "size": 44032
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B1.doc",
+    "name": "الإنسان الكبير.doc",
+    "mime": "application/msword",
+    "size": 28160
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-2",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (2)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D8%A8%D8%AF%D9%84%20%D9%88%20%D8%B9%D8%B7%D9%81%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86.doc",
+    "name": "البدل و عطف البيان.doc",
+    "mime": "application/msword",
+    "size": 47104
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D8%AB%D9%82%D8%A7%D9%81%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9%20%20%20%D9%84%D8%AA%D9%88%D9%81%D9%8A%D9%82%20%D8%A7%D9%84%D8%AD%D9%83%D9%8A%D9%85.DOC",
+    "name": "الثقافة العربية   لتوفيق الحكيم.DOC",
+    "mime": "application/msword",
+    "size": 83456
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D8%AC%D8%B1%D8%AD%20%D9%88%D8%A7%D9%84%D8%A3%D9%85%D9%80%D9%80%D9%84.DOC",
+    "name": "الجرح والأمــل.DOC",
+    "mime": "application/msword",
+    "size": 101376
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D8%B4%D8%A7%D8%B9%D8%B1%20%D8%AC%D9%8A%D9%84%D9%8A%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86.doc",
+    "name": "الشاعر جيلي عبد الرحمن.doc",
+    "mime": "application/msword",
+    "size": 32256
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D8%B5%D8%B1%D8%A7%D8%B9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D8%AA%D9%82%D9%84%D9%8A%D8%AF%20%D9%88%20%D8%A7%D9%84%D8%AA%D8%AC%D8%AF%D9%8A%D8%AF.DOC",
+    "name": "الصراع بين التقليد و التجديد.DOC",
+    "mime": "application/msword",
+    "size": 85504
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D8%B7%D8%B1%D9%8A%D9%82%20%D8%A5%D9%84%D9%89%20%D9%82%D8%B1%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B7%D9%88%D8%A8%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B4%D9%86%D9%88%D9%81%D9%8A.DOC",
+    "name": "الطريق إلى قرية الطوب محمد شنوفي.DOC",
+    "mime": "application/msword",
+    "size": 96256
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D9%81%D8%B1%D8%A7%D8%BA%20%20%D9%84%D8%A3%D8%AF%D9%88%D9%86%D9%8A%D8%B3.DOC",
+    "name": "الفراغ  لأدونيس.DOC",
+    "mime": "application/msword",
+    "size": 110080
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D9%85%D8%A7%D8%AF%D8%A9%20%D8%A5%D8%AD%D9%83%D8%A7%D9%85%20%D9%85%D9%88%D8%A7%D8%B1%D8%AF%20%D8%A7%D9%84%D9%85%D8%AA%D8%B9%D9%84%D9%85.doc",
+    "name": "المادة إحكام موارد المتعلم.doc",
+    "mime": "application/msword",
+    "size": 26624
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%84%D9%85%D8%AD%D9%80%D9%80%D9%80%D9%88%D8%B1%20%D8%A7%D9%84%D8%AB%D8%A7%D9%85%D9%86%20%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B1.DOC",
+    "name": "المحـــور الثامن الإنسان الكبير.DOC",
+    "mime": "application/msword",
+    "size": 104448
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%A8%D8%AC%D8%A7%D9%88%D9%8A%20%D8%A8%D8%B3%D9%83%D8%B1%D8%A9.doc",
+    "name": "انوية محمد بجاوي بسكرة.doc",
+    "mime": "application/msword",
+    "size": 24064
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-3",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (3)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%A8%D9%86%D8%A7%D8%A1%20%D9%88%D8%B6%D8%B9%D9%8A%D8%A7%D8%AA%20%D9%85%D8%B3%D8%AA%D9%87%D8%AF%D9%81%D8%A9.doc",
+    "name": "بناء وضعيات مستهدفة.doc",
+    "mime": "application/msword",
+    "size": 60416
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%AC%D9%85%D9%8A%D9%84%D8%A9%20%D9%84%D8%B4%D9%81%D9%8A%D9%82%20%D8%A7%D9%84%D9%83%D9%85%D8%A7%D9%84%D9%8A.doc",
+    "name": "جميلة لشفيق الكمالي.doc",
+    "mime": "application/msword",
+    "size": 49664
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%AC%D9%85%D9%8A%D9%84%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D8%A9%20%20%D8%B4%D9%81%D9%8A%D9%82%20%D8%A7%D9%84%D9%83%D9%85%D8%A7%D9%84%D9%8A.DOC",
+    "name": "جميلـــــــــــة  شفيق الكمالي.DOC",
+    "mime": "application/msword",
+    "size": 49152
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%AE%D8%B7%D8%A7%D8%A8%20%D8%BA%D9%8A%D8%B1%20%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%D9%8A%20%D8%B9%D9%84%D9%89%20%D9%82%D8%A8%D8%B1%20%D8%B5%D9%84%D8%A7%D8%AD%20%D8%A7%D9%84%D8%AF%D9%8A%D9%86.doc",
+    "name": "خطاب غير تاريخي على قبر صلاح الدين.doc",
+    "mime": "application/msword",
+    "size": 49152
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%AE%D8%B7%D8%A7%D8%A8%20%D8%BA%D9%8A%D8%B1%20%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%D9%8A.doc",
+    "name": "خطاب غير تاريخي.doc",
+    "mime": "application/msword",
+    "size": 69120
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%AF%D8%B1%D9%88%D8%B3%20%20%D8%A7%D9%84%D8%A3%D8%AF%D8%A8.doc",
+    "name": "دروس  الأدب.doc",
+    "mime": "application/msword",
+    "size": 30720
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%B1%D9%88%D8%A7%D8%A8%D8%B7%20%D8%A7%D9%84%D8%AC%D9%85%D9%84.doc",
+    "name": "روابط الجمل.doc",
+    "mime": "application/msword",
+    "size": 23040
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%B5%D9%84%D8%A7%D8%AD%20%D8%B9%D8%A8%D8%AF%20%20%D8%A7%D9%84%D8%B5%D8%A8%D9%88%D8%B1.doc",
+    "name": "صلاح عبد  الصبور.doc",
+    "mime": "application/msword",
+    "size": 32768
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D8%B5%D9%84%D8%A7%D8%AD%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B5%D8%A8%D9%88%D8%B1.DOC",
+    "name": "صلاح عبد الصبور.DOC",
+    "mime": "application/msword",
+    "size": 33280
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%81%D8%A7%D8%B7%D9%85%D8%A9%20%D9%86%D8%B3%D9%88%D9%85%D8%B1.doc",
+    "name": "فاطمة نسومر.doc",
+    "mime": "application/msword",
+    "size": 64000
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-4",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (4)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%81%D9%8A%20%D8%A7%D9%84%D8%B2%D9%87%D8%AF%20%D9%84%D8%A7%D8%A8%D9%86%20%D9%86%D8%A8%D8%A7%D8%AA%D8%A9.doc",
+    "name": "في الزهد لابن نباتة.doc",
+    "mime": "application/msword",
+    "size": 43520
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%81%D9%8A%20%D8%A7%D9%84%D8%B2%D9%87%D8%AF%20%D9%84%D8%A7%D8%A8%D9%86%20%D9%86%D8%A8%D8%A7%D8%AA%D9%87.DOC",
+    "name": "في الزهد لابن نباته.DOC",
+    "mime": "application/msword",
+    "size": 43520
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%81%D9%8A%20%D9%85%D8%AF%D8%AD%20%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%84-%20%D8%B5%D9%84%D9%89-.DOC",
+    "name": "في مدح الرسول- صلى-.DOC",
+    "mime": "application/msword",
+    "size": 282112
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%82%D8%B5%D9%8A%D8%AF%D8%A9%20%D9%85%D9%8A%D8%AE%D8%A7%D8%A6%D9%8A%D9%84%20%D9%86%D8%B9%D9%8A%D9%85%D8%A9.doc",
+    "name": "قصيدة ميخائيل نعيمة.doc",
+    "mime": "application/msword",
+    "size": 24064
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%83%D8%A7%D8%A8%D9%88%D8%B3%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B8%D9%87%D9%8A%D8%B1%D8%A9.DOC",
+    "name": "كابوس في الظهيرة.DOC",
+    "mime": "application/msword",
+    "size": 259584
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%83%D8%AA%D8%A7%D8%A8%D8%A9%20%D9%86%D8%B5%20%D9%82%D8%B5%D8%B5%D9%8A%20%D8%AD%D9%88%D8%A7%D8%B1%D9%8A.DOC",
+    "name": "كتابة نص قصصي حواري.DOC",
+    "mime": "application/msword",
+    "size": 51200
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%84%D8%A7%D9%84%D8%A7%20%D9%81%D8%A7%D8%B7%D9%85%D8%A9%20%D9%86%D8%B3%D9%88%D9%85%D8%B1.DOC",
+    "name": "لالا فاطمة نسومر.DOC",
+    "mime": "application/msword",
+    "size": 223744
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AD%D9%8A%D8%A7%D8%A1%20%D9%88%20%D8%A7%D9%84%D8%A8%D8%B9%D8%AB.doc",
+    "name": "مدرسة الإحياء و البعث.doc",
+    "mime": "application/msword",
+    "size": 65536
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A2%D9%84%D8%A7%D9%85%20%D8%A7%D9%84%D8%A5%D8%BA%D8%AA%D8%B1%D8%A7%D8%A8.pdf",
+    "name": "مذكرات آلام الإغتراب.pdf",
+    "mime": "application/pdf",
+    "size": 304200
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%203%20%D8%A2%D8%AF%D8%A7%D8%A8%20%D9%88%D9%84%D8%BA%D8%A7%D8%AA.doc",
+    "name": "مذكرات السنة 3 آداب ولغات.doc",
+    "mime": "application/msword",
+    "size": 171520
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-5",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (5)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D8%A9%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A9%D8%A7%D9%84%D8%B1%D8%A7%D8%A8%D8%B9%D8%A9%20%D8%A7%D9%84%D9%86%D8%B2%D8%B9%D8%A9%20%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%D9%8A%D8%A9.pdf",
+    "name": "مذكرات السنة النهائيةالوحدةالرابعة النزعة الإنسانية.pdf",
+    "mime": "application/pdf",
+    "size": 289462
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%AA%D8%B1%D8%A8%D9%88%D9%8A%D8%A9_%D9%84%D9%84%D9%85%D8%AD%D9%88%D8%B1_%D8%A7%D9%84%D8%A3%D9%88%D9%84.pdf",
+    "name": "مذكرات_تربوية_للمحور_الأول.pdf",
+    "mime": "application/pdf",
+    "size": 270968
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA_%D8%AA%D8%B1%D8%A8%D9%88%D9%8A%D8%A9_%D9%84%D9%84%D9%85%D8%AD%D9%88%D8%B1_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.pdf",
+    "name": "مذكرات_تربوية_للمحور_الثاني.pdf",
+    "mime": "application/pdf",
+    "size": 320139
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%A3%D9%86%D8%A7%20%D9%84%D8%A5%D9%84%D9%8A%D8%A7%20%D8%A3%D8%A8%D9%8A%20%D9%85%D8%A7%D8%B6%D9%8A.DOC",
+    "name": "مذكرة أنا لإليا أبي ماضي.DOC",
+    "mime": "application/msword",
+    "size": 104960
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A8%D9%88%D8%B5%D9%8A%D8%B1%D9%8A.doc",
+    "name": "مذكرة البوصيري.doc",
+    "mime": "application/msword",
+    "size": 129536
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AC%D8%B1%D8%AD%20%D9%88%D8%A7%D9%84%D8%A3%D9%85%D9%84.doc",
+    "name": "مذكرة الجرح والأمل.doc",
+    "mime": "application/msword",
+    "size": 98304
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B7%D8%B1%D9%8A%D9%82%20%D8%A5%D9%84%D9%89%20%20%20%D9%88%D8%B1%D9%88%D8%A7%D9%81%D8%AF%D9%87%D8%A7.doc",
+    "name": "مذكرة الطريق إلى   وروافدها.doc",
+    "mime": "application/msword",
+    "size": 96256
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%81%D8%B6%D9%84%D8%A9%20%D9%88%D8%A5%D8%B9%D8%B1%D8%A7%D8%A8%D9%87%D8%A7%20%D9%88%D8%A7%D9%84%D9%87%D9%85%D8%B2%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%D8%A9.doc",
+    "name": "مذكرة الفضلة وإعرابها والهمزة المزيدة.doc",
+    "mime": "application/msword",
+    "size": 49664
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AD%D9%88%D8%B1%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%D8%A2%D8%AF%D8%A7%D8%A8%20%D9%88%D9%81.doc",
+    "name": "مذكرة المحور الثاني آداب وف.doc",
+    "mime": "application/msword",
+    "size": 195072
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%86%D8%B5%20%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%D9%8A%20%D9%85%D9%86%20%D9%85%D8%B3%D8%B1%D8%AD%D9%8A%D8%A9%20%D9%84%D9%84%D8%A7%20%D9%81%D8%A7%D8%B7%D9%85%D8%A9.doc",
+    "name": "مذكرة النص الأدبي من مسرحية للا فاطمة.doc",
+    "mime": "application/msword",
+    "size": 32768
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-6",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (6)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%86%D8%B5%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D9%8A%20%D8%A7%D9%84%D8%AB%D9%82%D8%A7%D9%81%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9%20%D8%AA%D9%88%D9%81%D9%8A%D9%82%20%D8%A7%D9%84%D8%AD%D9%83%D9%8A%D9%85.doc",
+    "name": "مذكرة النص التواصلي الثقافة العربية توفيق الحكيم.doc",
+    "mime": "application/msword",
+    "size": 82432
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%88%D8%AD%D9%80%D9%80%D9%80%D8%AF%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D8%B4%D8%B1%D8%A9%20%20%20%D8%A7%D9%84%D8%AC%D8%B1%D8%AD%20%D9%88%D8%A7%D9%84%D8%A3%D9%85%D9%84.doc",
+    "name": "مذكرة الوحـــدة العاشرة   الجرح والأمل.doc",
+    "mime": "application/msword",
+    "size": 84480
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%AE%D8%B7%D8%A7%D8%A8%20%D8%BA%D9%8A%D8%B1%20%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%D9%8A.doc",
+    "name": "مذكرة خطاب غير تاريخي.doc",
+    "mime": "application/msword",
+    "size": 48128
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%B1%D9%85%D8%B2%20%D9%88%D8%A7%D9%84%D8%A3%D8%B3%D8%B7%D9%88%D8%B1%D8%A9.doc",
+    "name": "مذكرة عن الرمز والأسطورة.doc",
+    "mime": "application/msword",
+    "size": 51200
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D9%83%D8%A7%D8%A8%D9%88%D8%B3%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B8%D9%87%D9%8A%D8%B1%D8%A9%201.doc",
+    "name": "مذكرة كابوس في الظهيرة 1.doc",
+    "mime": "application/msword",
+    "size": 68096
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D9%85%D9%86%20%D9%85%D8%B3%D8%B1%D8%AD%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D8%BA%D8%B5.doc",
+    "name": "مذكرة من مسرحية المغص.doc",
+    "mime": "application/msword",
+    "size": 74752
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D9%85%D9%86%D8%B2%D9%84%D8%A9%20%D8%A7%D9%84%D9%85%D8%AB%D9%82%D9%81%D9%8A%D9%86%20%D8%A7%D9%84%D8%A5%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85%D9%8A.doc",
+    "name": "مذكرة منزلة المثقفين الإبراهيمي.doc",
+    "mime": "application/msword",
+    "size": 75776
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D9%85%D9%86%D8%B4%D9%88%D8%B1%D8%A7%D8%AA%20%D9%81%D8%AF%D8%A7%D8%A6%D9%8A%D8%A9.doc",
+    "name": "مذكرة منشورات فدائية.doc",
+    "mime": "application/msword",
+    "size": 59904
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D9%86%D8%B5%20%20%D8%A3%D8%A8%D9%88%D8%AA%D9%85%D8%A7%D9%85%20%D9%84%D8%B5%D9%84%D8%A7%D8%AD%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B5%D8%A8%D9%88%D8%B1.doc",
+    "name": "مذكرة نص  أبوتمام لصلاح عبد الصبور.doc",
+    "mime": "application/msword",
+    "size": 35840
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D9%86%D8%B5%20%D8%A7%D9%84%D8%AA%D8%B3%D8%A7%D9%85%D8%AD%20%D8%A7%D9%84%D8%AF%D9%8A%D9%86%D9%8A%20%D9%85%D8%B7%D9%84%D8%A8%20%D8%A7%D9%86%D8%B3%D8%A7%D9%86%D9%8A.doc",
+    "name": "مذكرة نص التسامح الديني مطلب انساني.doc",
+    "mime": "application/msword",
+    "size": 43008
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-7",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (7)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D9%86%D8%B5%20%D8%AA%D9%88%D9%81%D9%8A%D9%82%20%D8%A7%D9%84%D8%AD%D9%83%D9%8A%D9%85%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D9%8A%20%D8%B9%D9%84%D9%85%D9%8A.doc",
+    "name": "مذكرة نص توفيق الحكيم التواصلي علمي.doc",
+    "mime": "application/msword",
+    "size": 82432
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D9%86%D8%B5%20%D8%AC%D9%85%D9%8A%D9%84%D8%A9%20%D8%B4%D9%81%D9%8A%D9%82%20%D8%A7%D9%84%D9%83%D9%85%D8%A7%D9%84%D9%8A.doc",
+    "name": "مذكرة نص جميلة شفيق الكمالي.doc",
+    "mime": "application/msword",
+    "size": 46080
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%20%D9%86%D8%B5%20%D8%B4%D9%87%D8%B1%D8%B2%D8%A7%D8%AF%20%D9%88%D8%B1%D9%88%D8%A7%D9%81%D8%AF%D9%87.doc",
+    "name": "مذكرة نص شهرزاد وروافده.doc",
+    "mime": "application/msword",
+    "size": 258048
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%D8%A7%D9%84%D8%B5%D8%B1%D8%A7%D8%B9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D8%AA%D9%82%D9%84%D9%8A%D8%AF%20%D9%88%D8%A7%D9%84%D8%AA%D8%AC%D8%AF%D9%8A%D8%AF%20%D8%B7%D9%87%20%D8%AD%D8%B3%D9%8A%D9%86.doc",
+    "name": "مذكرةالصراع بين التقليد والتجديد طه حسين.doc",
+    "mime": "application/msword",
+    "size": 85504
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B0%D9%83%D8%B1%D8%A9%D8%AE%D8%B7%D8%A7%D8%A8%20%D8%BA%D9%8A%D8%B1%20%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%D9%8A%20%D8%A3%D9%85%D9%84%20%D8%AF%D9%86%D9%82%D9%84.doc",
+    "name": "مذكرةخطاب غير تاريخي أمل دنقل.doc",
+    "mime": "application/msword",
+    "size": 48128
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B3%D8%B1%D8%AD%D9%8A%D8%A9%20%D9%83%D8%A7%D8%A8%D9%88%D8%B3%20%D8%A7%D9%84%D8%B8%D9%87%D9%8A%D8%B1%D8%A9.doc",
+    "name": "مسرحية كابوس الظهيرة.doc",
+    "mime": "application/msword",
+    "size": 43008
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B8%D8%A7%D9%87%D8%B1%D8%B6%D8%B9%D9%81%20%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B5%D8%B1%20%D8%A7%D9%84%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%8A.doc",
+    "name": "مظاهرضعف الأدب في العصر العثماني.doc",
+    "mime": "application/msword",
+    "size": 38912
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D8%B9%20%D9%86%D8%B5%20%D8%A3%D8%AD%D8%B2%D8%A7%D9%86%20%D8%A7%D9%84%D8%BA%D8%B1%D8%A8%D8%A9%20%D9%80%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86%20%D8%AC%D9%8A%D9%84%D9%8A.doc",
+    "name": "مع نص أحزان الغربة ـ عبد الرحمن جيلي.doc",
+    "mime": "application/msword",
+    "size": 50688
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%81%D9%87%D9%88%D9%85%20%D8%A7%D9%84%D9%86%D8%B2%D8%B9%D8%A9%20%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%D9%8A%D8%A9.doc",
+    "name": "مفهوم النزعة الإنسانية.doc",
+    "mime": "application/msword",
+    "size": 35840
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%82%D8%A7%D8%B1%D9%86%D8%A9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D8%AD%D8%B1%20%D9%88%D8%A7%D9%84%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D8%B9%D9%85%D9%88%D8%AF%D9%8A.doc",
+    "name": "مقارنة بين الشعر الحر والشعر العمودي.doc",
+    "mime": "application/msword",
+    "size": 74752
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-8",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (8)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%A3%D8%AF%D8%A8%D8%A7%D8%A1%20%D8%A7%D9%84%D9%85%D9%82%D8%B1%D8%B1%20%20%20%D8%B3%203.doc",
+    "name": "من أدباء المقرر   س 3.doc",
+    "mime": "application/msword",
+    "size": 115712
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%A3%D8%AF%D8%A8%D8%A7%D8%A1%20%D8%A7%D9%84%D9%85%D9%82%D8%B1%D8%B1.doc",
+    "name": "من أدباء المقرر.doc",
+    "mime": "application/msword",
+    "size": 115712
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%A3%D8%B9%D9%84%D8%A7%D9%85%20%D8%A7%D9%84%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D8%AD%D8%B1.doc",
+    "name": "من أعلام الشعر الحر.doc",
+    "mime": "application/msword",
+    "size": 106496
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%A3%D9%86%D9%92%D8%AF%D9%8E%D9%84%D9%8F%D8%B3%D9%90%D9%8A%D9%91%D9%8E%D8%A7%D8%AA%20%D9%8C%20%20%D8%A3%D8%AD%D9%85%D8%AF%20%D8%B4%D9%88%D9%82%D9%8A.doc",
+    "name": "من أنْدَلُسِيَّات ٌ  أحمد شوقي.doc",
+    "mime": "application/msword",
+    "size": 110592
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%A7%D9%84%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D9%85%D9%84%D8%AD%D9%85%D9%8A%20%D9%85%D9%81%D8%AF%D9%8A%20%D8%B2%D9%83%D8%B1%D9%8A%D8%A7.doc",
+    "name": "من الشعر الملحمي مفدي زكريا.doc",
+    "mime": "application/msword",
+    "size": 36352
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%A7%D9%84%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%88%D9%83%D9%8A%20%20%20%D9%84%D9%80%D9%80%D8%B5%D9%81%D9%8A%20%D8%A7%D9%84%D8%AF%D9%8A%D9%86%20%D8%A7%D9%84%D8%AD%D9%84%D9%8A.doc",
+    "name": "من الشعر المملوكي   لــصفي الدين الحلي.doc",
+    "mime": "application/msword",
+    "size": 30720
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%AD%D8%B1%D9%88%D9%81%20%D8%A7%D9%84%D8%AC%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D8%B1.doc",
+    "name": "من حروف الجـــــــــر.doc",
+    "mime": "application/msword",
+    "size": 64000
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D8%A8%D8%A7%D8%B1%D9%88%D8%AF%D9%8A.doc",
+    "name": "من شعر البارودي.doc",
+    "mime": "application/msword",
+    "size": 60416
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%84%D8%AA%D8%A3%D9%85%D9%84%20%D8%A7%D9%84%D9%81%D9%84%D8%B3%D9%81%D9%8A%20%D8%A5%D9%8A%D9%84%D9%8A%D8%A7%20%D8%A3%D8%A8%D9%88%D9%85%D8%A7%D8%B6%D9%8A.doc",
+    "name": "من شعر التأمل الفلسفي إيليا أبوماضي.doc",
+    "mime": "application/msword",
+    "size": 108544
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%B4%D8%B9%D8%B1%20%D8%B4%D9%88%D9%82%D9%8A.doc",
+    "name": "من شعر شوقي.doc",
+    "mime": "application/msword",
+    "size": 30720
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-9",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (9)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%B4%D8%B9%D8%B1%20%D9%85%D8%AD%D9%85%D9%88%D8%AF%20%D8%B3%D8%A7%D9%85%D9%8A%20%D8%A7%D9%84%D8%A8%D8%A7%D8%B1%D9%88%D8%AF%D9%8A.doc",
+    "name": "من شعر محمود سامي البارودي.doc",
+    "mime": "application/msword",
+    "size": 38400
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%B4%D8%B9%D8%B1%20%D9%85%D9%81%D8%AF%D9%8A%20%D8%B2%D9%83%D8%B1%D9%8A%D8%A7.doc",
+    "name": "من شعر مفدي زكريا.doc",
+    "mime": "application/msword",
+    "size": 29696
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D8%B9%D9%88%D8%A7%D9%85%D9%84%20%D8%A7%D9%84%D9%86%D9%87%D8%B6%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9.doc",
+    "name": "من عوامل النهضة العربية.doc",
+    "mime": "application/msword",
+    "size": 42496
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D9%85%D8%B3%D9%80%D9%80%D9%80%D9%80%D8%B1%D8%AD%D9%8A%D8%A9%20%D8%B4%D9%87%D9%80%D9%80%D9%80%D9%80%D9%80%D8%B1%D8%A7%D8%B2%D8%A7%D8%AF.DOC",
+    "name": "من مســــرحية شهـــــرازاد.DOC",
+    "mime": "application/msword",
+    "size": 255488
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D9%85%D9%81%D9%83%D8%B1%D8%A9%20%D8%B9%D8%A7%D8%B4%D9%82%20%D8%AF%D9%85%D8%B4%D9%82%D9%8A%20%D9%86%D8%B2%D8%A7%D8%B1%20%D9%82.doc",
+    "name": "من مفكرة عاشق دمشقي نزار ق.doc",
+    "mime": "application/msword",
+    "size": 31232
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D9%88%D8%AD%D9%8A%20%D8%A7%D9%84%D9%85%D9%86%D9%81%D9%89%20%D9%84%D8%A3%D8%AD%D9%85%D8%AF%20%D8%B4%D9%88%D9%82%D9%8A.DOC",
+    "name": "من وحي المنفى لأحمد شوقي.DOC",
+    "mime": "application/msword",
+    "size": 49152
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%20%D9%88%D8%AD%D9%8A%20%D8%A7%D9%84%D9%85%D9%86%D9%81%D9%89%20%D9%84%D8%B4%D9%88%D9%82%D9%8A.doc",
+    "name": "من وحي المنفى لشوقي.doc",
+    "mime": "application/msword",
+    "size": 59392
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%D8%B2%D9%84%D8%A9%20%D8%A7%D9%84%D9%85%D8%AB%D9%82%D9%81%D9%8A%D9%86%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A3%D9%85%D8%A9%20%D9%84%D9%84%D8%A5%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85%D9%8A.doc",
+    "name": "منزلة المثقفين في الأمة للإبراهيمي.doc",
+    "mime": "application/msword",
+    "size": 76288
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%D8%B2%D9%84%D8%A9%20%D8%A7%D9%84%D9%85%D8%AB%D9%82%D9%81%D9%8A%D9%86%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A3%D9%85%D8%A9.DOC",
+    "name": "منزلة المثقفين في الأمة.DOC",
+    "mime": "application/msword",
+    "size": 76288
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%D8%B2%D9%84%D8%A9%20%D8%A7%D9%84%D9%85%D8%AB%D9%82%D9%81%D9%8A%D9%86.DOC",
+    "name": "منزلة المثقفين.DOC",
+    "mime": "application/msword",
+    "size": 32256
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-10",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (10)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%D8%B4%D9%88%D8%B1%D8%A7%D8%AA%20%D9%81%D8%AF%D8%A7%D8%A6%D9%8A%D8%A9%D9%88%D9%85%D8%AD%D9%88%D8%B1%D9%87%D8%A7.pdf",
+    "name": "منشورات فدائيةومحورها.pdf",
+    "mime": "application/pdf",
+    "size": 154397
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%86%D9%87%D8%AC%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D9%84%D8%AE%D9%8A%D8%B5.doc",
+    "name": "منهجية التلخيص.doc",
+    "mime": "application/msword",
+    "size": 41472
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%85%D9%88%D8%A7%D8%B6%D8%B9%20%D9%81%D8%AA%D8%AD%20%D9%87%D9%85%D8%B2%D8%A9.doc",
+    "name": "مواضع فتح همزة.doc",
+    "mime": "application/msword",
+    "size": 38400
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D8%A7%D8%B2%D9%83%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A6%D9%83%D8%A9%20%D8%AD%D9%8A%D8%A7%D8%AA%D9%87%D8%A7%20%D9%88%D8%B4%D8%B9%D8%B1%D9%87%D8%A7.doc",
+    "name": "نازك الملائكة حياتها وشعرها.doc",
+    "mime": "application/msword",
+    "size": 101888
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D8%A7%D8%B2%D9%83%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A6%D9%83%D8%A9.doc",
+    "name": "نازك الملائكة.doc",
+    "mime": "application/msword",
+    "size": 51200
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D8%AD%D9%88%203%20%20%D8%AB%20%D8%A8%20%D8%AE.doc",
+    "name": "نحو 3  ث ب خ.doc",
+    "mime": "application/msword",
+    "size": 6191104
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D8%B5%20%D8%A3%D8%AF%D8%A8%D9%8A%20%D9%85%D9%86%20%D9%85%D8%B3%D8%B1%D8%AD%D9%8A%D8%A9%20%D9%84%D9%84%D8%A7%20%D9%81%D8%A7%D8%B7%D9%85%D8%A9.doc",
+    "name": "نص أدبي من مسرحية للا فاطمة.doc",
+    "mime": "application/msword",
+    "size": 36864
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D8%B5%20%D8%A3%D9%86%D8%A7%20%D9%84%D8%A5%D9%8A%D9%84%D9%8A%D8%A7%20%D8%A3%D8%A8%D9%8A%20%D9%85%D8%A7%D8%B6%D9%8A.doc",
+    "name": "نص أنا لإيليا أبي ماضي.doc",
+    "mime": "application/msword",
+    "size": 44544
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D8%B5%20%D8%A3%D9%86%D8%A7.doc",
+    "name": "نص أنا.doc",
+    "mime": "application/msword",
+    "size": 48128
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D8%B5%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D9%8A%20%D8%A7%D9%84%D9%85%D9%82%D8%A7%D9%84%D8%A9%20%D9%88%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9%20%D9%88%D8%AF%D9%88%D8%B1%D9%87%D9%85%D8%A7.doc",
+    "name": "نص تواصلي المقالة والصحافة ودورهما.doc",
+    "mime": "application/msword",
+    "size": 29184
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-ar-89e9ad49-11",
+  "title": {
+   "ar": "مذكرات اللغة العربية سنة ثالثة ثانوي (11)",
+   "fr": "Fiches — ar — 3AS"
+  },
+  "level": "3AS",
+  "subject": "ar",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D8%B5%20%D8%B5%D9%84%D8%A7%D8%AD%20%D8%A7%D9%84%D8%AF%D9%8A%D9%86.doc",
+    "name": "نص صلاح الدين.doc",
+    "mime": "application/msword",
+    "size": 69120
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D9%83%D8%A8%D8%A9%20%D8%AF%D9%85%D8%B4%D9%82%20%D9%84%D8%A3%D8%AD%D9%85.doc",
+    "name": "نكبة دمشق لأحم.doc",
+    "mime": "application/msword",
+    "size": 45056
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D9%83%D8%A8%D8%A9%20%D8%AF%D9%85%D8%B4%D9%82.doc",
+    "name": "نكبة دمشق.doc",
+    "mime": "application/msword",
+    "size": 45056
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%86%D9%85%D9%88%D8%B0%D8%AC%20%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD.doc",
+    "name": "نموذج اختبار مع التصحيح.doc",
+    "mime": "application/msword",
+    "size": 107520
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%88%D9%82%D9%81%D8%A9%20%D8%A7%D9%84%D9%82%D8%B1%D9%88%D9%8A.doc",
+    "name": "وقفة القروي.doc",
+    "mime": "application/msword",
+    "size": 46080
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%88%D9%82%D9%81%D8%A9%20%D9%85%D8%B9%20%D9%86%D8%B5%20%D8%A3%D8%AD%D8%B2%D8%A7%D9%86%20%D8%A7%D9%84%D8%BA%D8%B1%D8%A8%D8%A9%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86%20%D8%AC.doc",
+    "name": "وقفة مع نص أحزان الغربة عبد الرحمن ج.doc",
+    "mime": "application/msword",
+    "size": 33792
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%88%D9%82%D9%81%D8%A9%20%D9%85%D8%B9%20%D9%86%D8%B5%20%D8%A3%D8%AD%D8%B2%D8%A7%D9%86%20%D8%A7%D9%84%D8%BA%D8%B1%D8%A8%D8%A9.doc",
+    "name": "وقفة مع نص أحزان الغربة.doc",
+    "mime": "application/msword",
+    "size": 32768
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%88%D9%82%D9%81%D8%A9%20%D9%85%D8%B9%20%D9%86%D8%B5%20%D8%A7%D8%A8%D9%86%20%D8%AE%D9%84%D8%AF%D9%88%D9%86%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D9%81%D8%B3.doc",
+    "name": "وقفة مع نص ابن خلدون في الطبيعة والنفس.doc",
+    "mime": "application/msword",
+    "size": 39936
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%88%D9%82%D9%81%D8%A9%20%D9%85%D8%B9%20%D9%86%D8%B5%20%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B1%20%D8%B5%D8%A7%D9%84%D8%AD%20%D8%A8%D8%A7%D9%88%D9%8A%D8%A9.doc",
+    "name": "وقفة مع نص الإنسان الكبير صالح باوية.doc",
+    "mime": "application/msword",
+    "size": 32256
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A/3%20annee/%D9%8A%D8%A7%D8%A8%D9%84%D8%A7%D8%AF%D9%8A%20%D8%A5%D9%8A%D9%84%D9%8A%D8%A7%20%D8%A3%D8%A8%D9%88%20%D9%85%D8%A7%D8%B6%D9%8A.doc",
+    "name": "يابلادي إيليا أبو ماضي.doc",
+    "mime": "application/msword",
+    "size": 31232
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-se-physics-d95ec1b5-1",
+  "title": {
+   "ar": "مذكرات دروس الفيزياء للسنة الثالثة ثانوي (1)",
+   "fr": "Fiches — physics — 3AS-SE"
+  },
+  "level": "3AS-SE",
+  "subject": "physics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/Fich1SM.pdf",
+    "name": "Fich1SM.pdf",
+    "mime": "application/pdf",
+    "size": 233071
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/Fich_M3S3.pdf",
+    "name": "Fich_M3S3.pdf",
+    "mime": "application/pdf",
+    "size": 262144
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/Fich_S2.pdf",
+    "name": "Fich_S2.pdf",
+    "mime": "application/pdf",
+    "size": 362560
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/Fich_S3.pdf",
+    "name": "Fich_S3.pdf",
+    "mime": "application/pdf",
+    "size": 258467
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/Fich_S5.pdf",
+    "name": "Fich_S5.pdf",
+    "mime": "application/pdf",
+    "size": 327680
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/Fich_S6.pdf",
+    "name": "Fich_S6.pdf",
+    "mime": "application/pdf",
+    "size": 173093
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/%D8%A7%D9%84%D8%AA%D8%AD%D9%88%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D9%86%D9%88%D9%88%D9%8A%D8%A9.pdf",
+    "name": "التحولات النووية.pdf",
+    "mime": "application/pdf",
+    "size": 292339
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/%D8%A7%D9%84%D8%B8%D9%88%D8%A7%D9%87%D8%B1%20%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9.pdf",
+    "name": "الظواهر الكهربائية.pdf",
+    "mime": "application/pdf",
+    "size": 262144
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/%D8%AA%D8%B7%D9%88%D8%B1%20%D8%AC%D9%85%D9%84%D8%A9%20%D9%83%D9%8A%D9%85%D9%8A%D8%A7%D8%A6%D9%8A%D8%A9%20%D9%86%D8%AD%D9%88%20%D8%AD%D8%A7%D9%84%D8%A9%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B2%D9%86.pdf",
+    "name": "تطور جملة كيميائية نحو حالة التوازن.pdf",
+    "mime": "application/pdf",
+    "size": 309235
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/%D8%AA%D8%B7%D9%88%D8%B1%20%D8%AC%D9%85%D9%84%D8%A9%20%D9%85%D9%8A%D9%83%D8%A7%D9%86%D9%8A%D9%83%D9%8A%D8%A9.pdf",
+    "name": "تطور جملة ميكانيكية.pdf",
+    "mime": "application/pdf",
+    "size": 377969
+   }
+  ]
+ },
+ {
+  "id": "cat-ed-3as-se-physics-d95ec1b5-2",
+  "title": {
+   "ar": "مذكرات دروس الفيزياء للسنة الثالثة ثانوي (2)",
+   "fr": "Fiches — physics — 3AS-SE"
+  },
+  "level": "3AS-SE",
+  "subject": "physics",
+  "language": "ar",
+  "type": "fiche",
+  "term": 0,
+  "unit": "",
+  "tags": [
+   "مذكرات",
+   "الثانوي"
+  ],
+  "excerpt": "مذكرات أساتذة جاهزة للتحميل (Word أو PDF). المصدر: eddirasa.com (منشور للعموم).",
+  "access": "premium",
+  "author": "eddirasa.com",
+  "license": "public",
+  "files": [
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/%D8%AA%D8%B7%D9%88%D8%B1%20%D9%83%D9%85%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AA%D9%81%D8%A7%D8%B9%D9%84%D8%A7%D8%AA%20%D9%88%20%D8%A7%D9%84%D9%86%D9%88%D8%A7%D8%AA%D8%AC%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%AA%D8%AD%D9%88%D9%84%20%D9%83%D9%8A%D9%85%D9%8A%D8%A7%D8%A6%D9%8A%20%D9%81%D9%8A%20%D9%85%D8%AD%D9%84%D9%88%D9%84%20%D9%85%D8%A7%D8%A6%D9%8A.pdf",
+    "name": "تطور كميات المتفاعلات و النواتج خلال تحول كيميائي في محلول مائي.pdf",
+    "mime": "application/pdf",
+    "size": 321518
+   },
+   {
+    "url": "https://eddirasa.com/wp-content/uploads/2016/%D9%85%D8%B0%D9%83%D8%B1%D8%A7%D8%AA%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1%20%D8%B3%D9%86%D8%A93/%D8%B4%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9/%D9%85%D8%B1%D8%A7%D9%82%D8%A8%D8%A9%20%D8%AA%D8%B7%D9%88%D8%B1%20%D8%AC%D9%85%D9%84%D8%A9%20%D9%83%D9%8A%D9%85%D9%8A%D8%A7%D8%A6%D9%8A%D8%A9.pdf",
+    "name": "مراقبة تطور جملة كيميائية.pdf",
+    "mime": "application/pdf",
+    "size": 262144
+   }
+  ]
  }
 ]

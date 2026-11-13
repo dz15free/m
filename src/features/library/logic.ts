@@ -75,6 +75,8 @@ export const ALLOWED_MIME = [
   "audio/mp4",
   "video/mp4",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  // مذكرات Word القديمة (.doc) المنشورة كثيرًا في مواقع الأساتذة
+  "application/msword",
   "application/vnd.openxmlformats-officedocument.presentationml.presentation",
   "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
 ] as const;
