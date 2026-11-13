@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { CurriculumPublisher } from "@/features/admin/curriculum-publisher";
+import { CurriculumPublisher } from "@/features/admin/curriculum-publisher-lazy";
 
 export default async function Page() {
   const t = await getTranslations("admin.curriculum");
