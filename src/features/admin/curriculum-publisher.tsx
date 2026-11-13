@@ -14,6 +14,14 @@ import { levelById } from "@/shared/taxonomy/taxonomy";
 import { REPO_CURRICULA } from "./curriculum-ids";
 import { contentRev, publishCurriculum, publishedRev, type CurriculumFile, type Progress } from "./curriculum-publish";
 import { MEMO_FILES, type MemoFile } from "./curriculum-memos.gen";
+import { authedFetch } from "@/lib/firebase/api";
+
+/** ملف المذكرات المُنسّقة من الخادم (للأدمن والمحرّر فقط؛ لا يُحزَم في الموقع). */
+async function loadMemoFile(id: string): Promise<MemoFile> {
+  const res = await authedFetch(`/api/admin/memo-file?id=${encodeURIComponent(id)}`);
+  if (!res.ok) throw new Error(`memo file ${id}: ${res.status}`);
+  return (await res.json()) as MemoFile;
+}
 
 type Row = { file: CurriculumFile; rev: string; published: string | null; added: number; memos: number };
 type RunState = { id: string; progress?: Progress } | null;
@@ -45,7 +53,7 @@ export function CurriculumPublisher() {
       setErrors((e) => ({ ...e, [r.file.id]: "" }));
       try {
         // المذكرات المُنسّقة تُحمَّل عند نشر منهاجها فقط
-        const memos = MEMO_FILES[r.file.id] ? ((await MEMO_FILES[r.file.id]!.load()).default as MemoFile) : undefined;
+        const memos = MEMO_FILES[r.file.id] ? await loadMemoFile(r.file.id) : undefined;
         await publishCurriculum(r.file, (progress) => setRun({ id: r.file.id, progress }), memos);
         await qc.invalidateQueries({ queryKey: ["curriculum", r.file.id] });
       } catch (e) {

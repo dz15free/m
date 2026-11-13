@@ -26,5 +26,6 @@ ui-debug.log
 
 # محرّكات مولّدة (npm run vendor)
 public/vendor/
+public/md-*/
 *.traineddata
 cloudflare-env.d.ts
