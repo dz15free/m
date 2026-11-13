@@ -21,6 +21,7 @@ const EXT: Record<string, string> = {
   "audio/mp4": "m4a",
   "video/mp4": "mp4",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document": "docx",
+  "application/msword": "doc",
   "application/vnd.openxmlformats-officedocument.presentationml.presentation": "pptx",
   "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": "xlsx",
 };
