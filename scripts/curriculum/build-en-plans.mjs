@@ -133,7 +133,9 @@ for (const [level, L] of Object.entries(LEVELS)) {
   let slot = 0; // بالحصص من بداية السنة
   L.terms.forEach((seqs, t) => {
     slot = Math.max(slot, (TERM_STARTS[t] - 1) * PER_WEEK);
-    for (const l of parsed.filter((x) => seqs.includes(x.seqN))) {
+    // 4AP: حصص المهن (jobs/occupations) حُذفت من مقطع «Family & Friends» في برنامج 2026/2027 (صارت في الخامسة)
+    const removed = (x) => level === "4AP" && /\bjobs?\b|workplace/i.test(`${x.objective} ${x.title ?? ""}`);
+    for (const l of parsed.filter((x) => seqs.includes(x.seqN) && !removed(x))) {
       const segTitle = l.seqN === 0 ? (level === "3AP" ? "My first English class" : "Back to School — Diagnostic Assessment") : `Sequence ${l.seqN}: ${l.seqTitle}`;
       const head = level === "5AP" ? l.type : l.domain || "Oral";
       const title = level === "5AP" ? l.title : gist(l.objective);
